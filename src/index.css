@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-800 antialiased;
+  font-family: 'Nunito', system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+button {
+  font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif;
+}

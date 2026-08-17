@@ -1,0 +1,2046 @@
+[
+  {
+    "id": "REF-ASS-001",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Você está parametrizando o cadastro de um cliente pessoa jurídica que contrata serviços recorrentes da empresa e precisa decidir se a operação exige retenção de tributo na fonte.",
+    "question": "Em quais situações a legislação prevê a retenção do IBS/CBS na fonte pelo tomador/comprador?",
+    "options": [
+      "Em operações específicas definidas em lei, como determinadas prestações de serviço",
+      "Em toda e qualquer operação comercial",
+      "Apenas em vendas internacionais",
+      "Nunca, o novo modelo não permite retenção"
+    ],
+    "correctAnswer": "Em operações específicas definidas em lei, como determinadas prestações de serviço",
+    "explanation": "A retenção na fonte do IBS/CBS não é genérica: aplica-se apenas às hipóteses previstas em lei, geralmente ligadas a certos tipos de serviço ou operação.",
+    "pacciTip": "Retenção não é regra geral, tesoro! Só entra em cena quando a lei manda especificamente."
+  },
+  {
+    "id": "REF-ASS-002",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Ao configurar o cadastro de um novo fornecedor no ERP, você precisa indicar corretamente qual órgão administra o novo tributo estadual/municipal.",
+    "question": "Qual órgão foi criado para administrar o IBS de forma compartilhada entre Estados e Municípios?",
+    "options": [
+      "Comitê Gestor do IBS",
+      "Receita Federal do Brasil",
+      "Confaz",
+      "Secretaria do Tesouro Nacional"
+    ],
+    "correctAnswer": "Comitê Gestor do IBS",
+    "explanation": "O Comitê Gestor do IBS é o órgão criado especificamente para administrar, arrecadar e distribuir o IBS entre Estados e Municípios.",
+    "pacciTip": "Comitê Gestor cuida do IBS. A CBS fica com a Receita Federal. Não troca essas duas, hein!"
+  },
+  {
+    "id": "REF-ASS-003",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Você está parametrizando no sistema a alíquota aplicável aos itens da cesta básica nacional, que terão tratamento diferenciado.",
+    "question": "O que caracteriza a 'alíquota zero' da Reforma para itens da cesta básica nacional?",
+    "options": [
+      "Não há cobrança de IBS/CBS sobre esses itens, mas o vendedor mantém direito a crédito",
+      "Os itens ficam totalmente fora do sistema tributário",
+      "O comprador paga o tributo depois, em outro momento",
+      "Só se aplica a produtos importados"
+    ],
+    "correctAnswer": "Não há cobrança de IBS/CBS sobre esses itens, mas o vendedor mantém direito a crédito",
+    "explanation": "A alíquota zero difere da isenção: não há cobrança na saída, mas o vendedor continua com direito ao crédito das etapas anteriores da cadeia.",
+    "pacciTip": "Zero na cobrança, mas o crédito continua vivo! É diferente de isenção, presta atenção nesse detalhe."
+  },
+  {
+    "id": "REF-ASS-004",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Você cuida do fluxo de compras e vendas entre uma filial em São Paulo e uma filial em Minas Gerais e precisa entender para onde vai a arrecadação do tributo.",
+    "question": "No fluxo de compras e vendas interestaduais do novo modelo, para qual local vai a maior parte da arrecadação do IBS?",
+    "options": [
+      "Para o local de destino da mercadoria/serviço",
+      "Para o local de origem da mercadoria/serviço",
+      "Metade para origem, metade para destino, sempre",
+      "Para a União, que depois redistribui"
+    ],
+    "correctAnswer": "Para o local de destino da mercadoria/serviço",
+    "explanation": "O novo modelo adota o princípio do destino: a arrecadação do IBS vai, principalmente, para onde o bem ou serviço é efetivamente consumido.",
+    "pacciTip": "Segue o consumidor, não o fabricante! Destino é quem manda no novo modelo."
+  },
+  {
+    "id": "REF-ASS-005",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Ao configurar a retenção de IBS/CBS para um serviço tomado pela empresa, você percebe que o sistema exige regras diferentes conforme o tipo de operação.",
+    "question": "A retenção do IBS/CBS na fonte, quando aplicável, segue regras específicas definidas para cada tipo de operação, e não uma regra genérica única?",
+    "correctAnswer": true,
+    "explanation": "Correto! Cada hipótese de retenção tem regras próprias, definidas em lei conforme o tipo de operação ou serviço envolvido.",
+    "pacciTip": "Sì! Cada operação tem sua regrinha própria. Não existe fórmula única pra todas."
+  },
+  {
+    "id": "REF-ASS-006",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Um colega, revisando o cadastro de um cliente, afirma: 'O Comitê Gestor do IBS é responsável apenas pela CBS, e a Receita Federal cuida do IBS.'",
+    "question": "Essa afirmação do colega está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado, está invertido! O Comitê Gestor administra o IBS (estadual/municipal), enquanto a Receita Federal administra a CBS (federal).",
+    "pacciTip": "Inverteu tudo, amico! Comitê Gestor = IBS. Receita Federal = CBS. Corrige essa antes de salvar o cadastro!"
+  },
+  {
+    "id": "REF-ASS-007",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Ao parametrizar a alíquota zero para itens da cesta básica, um colega comenta que o vendedor perde o direito de aproveitar os créditos das etapas anteriores.",
+    "question": "Um produto com alíquota zero faz o vendedor perder o direito de aproveitar os créditos das etapas anteriores?",
+    "correctAnswer": false,
+    "explanation": "Errado! Na alíquota zero, o vendedor não cobra o tributo na saída, mas mantém o direito de se creditar dos tributos pagos nas etapas anteriores.",
+    "pacciTip": "Alíquota zero não é punição, tesoro! O crédito continua garantido, só a cobrança que some."
+  },
+  {
+    "id": "REF-ASS-008",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Durante a apuração de uma operação interestadual no período de transição, você percebe que uma parte do IBS ainda fica com o Estado de origem.",
+    "question": "No período de transição, parte da arrecadação do IBS ainda pode ficar com o Estado de origem, diminuindo gradualmente até desaparecer?",
+    "correctAnswer": true,
+    "explanation": "Correto! Durante a transição, uma parcela residual da arrecadação ainda é destinada à origem, mas essa parcela é reduzida ano a ano até sumir.",
+    "pacciTip": "É um adeus lento, piccolo! A origem ainda ganha um pouquinho, mas cada ano fica menor."
+  },
+  {
+    "id": "REF-ASS-009",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "A empresa passou a tomar um novo tipo de serviço que se enquadra em hipótese legal de retenção de IBS/CBS, e você precisa parametrizar o processo corretamente.",
+    "question": "Ordene o fluxo correto de parametrização e aplicação da retenção:",
+    "options": [
+      "Recolher o valor retido ao ente competente",
+      "Identificar se o serviço se enquadra em hipótese legal de retenção",
+      "Calcular o valor a reter no momento do pagamento",
+      "Parametrizar o cadastro do fornecedor para aplicar a retenção"
+    ],
+    "correctAnswer": [
+      "Identificar se o serviço se enquadra em hipótese legal de retenção",
+      "Parametrizar o cadastro do fornecedor para aplicar a retenção",
+      "Calcular o valor a reter no momento do pagamento",
+      "Recolher o valor retido ao ente competente"
+    ],
+    "explanation": "Primeiro identifica-se se há previsão legal, depois parametriza-se o cadastro, calcula-se o valor e, por fim, recolhe-se o tributo retido.",
+    "pacciTip": "Sem identificar a lei primeiro, nada de reter, amico! A ordem certa evita retenção indevida."
+  },
+  {
+    "id": "REF-ASS-010",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Você cuida da transferência de mercadorias entre a filial de origem e a filial de destino, situadas em Estados diferentes, e precisa organizar o fluxo de apuração.",
+    "question": "Ordene o fluxo correto dessa operação interestadual:",
+    "options": [
+      "Consolidar a apuração do período",
+      "Emitir a nota fiscal de transferência com IBS de origem e destino",
+      "Registrar o crédito na filial de destino",
+      "Aplicar a partilha entre os Estados envolvidos"
+    ],
+    "correctAnswer": [
+      "Emitir a nota fiscal de transferência com IBS de origem e destino",
+      "Aplicar a partilha entre os Estados envolvidos",
+      "Registrar o crédito na filial de destino",
+      "Consolidar a apuração do período"
+    ],
+    "explanation": "A nota é emitida primeiro, depois se aplica a partilha entre os Estados, registra-se o crédito na filial destinatária e, por fim, consolida-se a apuração.",
+    "pacciTip": "Emite, reparte, credita, fecha a conta! Assim nenhuma filial fica no prejuízo."
+  },
+  {
+    "id": "REF-ASS-011",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Um novo cliente pessoa jurídica foi fechado pela empresa e você precisa parametrizar o cadastro dele corretamente no ERP antes da primeira venda.",
+    "question": "Ordene o fluxo correto de parametrização do cadastro desse cliente:",
+    "options": [
+      "Testar a emissão de uma nota simulada",
+      "Cadastrar dados cadastrais e regime tributário do cliente",
+      "Vincular a tabela de alíquotas aplicável",
+      "Definir se há hipótese de retenção na operação"
+    ],
+    "correctAnswer": [
+      "Cadastrar dados cadastrais e regime tributário do cliente",
+      "Definir se há hipótese de retenção na operação",
+      "Vincular a tabela de alíquotas aplicável",
+      "Testar a emissão de uma nota simulada"
+    ],
+    "explanation": "Primeiro cadastram-se os dados e o regime, depois se avalia a retenção, vincula-se a tabela de alíquotas e, por fim, testa-se com uma nota simulada.",
+    "pacciTip": "Nunca solta um cadastro novo sem testar antes, tesoro! Nota simulada salva muita dor de cabeça."
+  },
+  {
+    "id": "REF-ASS-012",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "A empresa vende diretamente ao consumidor final e usa split payment no checkout online, com o tributo sendo segregado automaticamente.",
+    "question": "Ordene o fluxo de uma venda com split payment no checkout:",
+    "options": [
+      "Valor líquido (sem o tributo) é repassado ao vendedor",
+      "Cliente realiza o pagamento da compra",
+      "Split payment direciona o tributo automaticamente ao Fisco",
+      "Sistema de pagamento identifica o valor de IBS/CBS embutido"
+    ],
+    "correctAnswer": [
+      "Cliente realiza o pagamento da compra",
+      "Sistema de pagamento identifica o valor de IBS/CBS embutido",
+      "Split payment direciona o tributo automaticamente ao Fisco",
+      "Valor líquido (sem o tributo) é repassado ao vendedor"
+    ],
+    "explanation": "O cliente paga, o sistema identifica o tributo embutido, o split payment já manda essa parte direto ao Fisco, e só o valor líquido chega ao vendedor.",
+    "pacciTip": "O dinheiro do imposto nem passa pela sua conta, capisce? Ele já sai direto pro Fisco no split payment!"
+  },
+  {
+    "id": "REF-ASS-013",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No manual interno de parametrização de compras, há uma frase incompleta sobre a retenção na fonte.",
+    "question": "No fluxo de compras, quando aplicável, a empresa tomadora do serviço deve ___ o IBS/CBS diretamente na fonte, antes de repassar o pagamento ao fornecedor.",
+    "options": [
+      "reter",
+      "isentar",
+      "dobrar",
+      "parcelar"
+    ],
+    "correctAnswer": "reter",
+    "explanation": "Nas hipóteses previstas em lei, o tomador do serviço deve reter o IBS/CBS na fonte, repassando apenas o valor líquido ao fornecedor.",
+    "pacciTip": "Reter é separar antes de pagar, tesoro! O fornecedor recebe só o que sobra depois do tributo."
+  },
+  {
+    "id": "REF-ASS-014",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No treinamento sobre cadastros de fornecedores, o instrutor apresenta uma frase incompleta sobre a estrutura de gestão do IBS.",
+    "question": "O órgão responsável por administrar o IBS de forma compartilhada entre Estados e Municípios é o ___ do IBS.",
+    "options": [
+      "Comitê Gestor",
+      "Ministério",
+      "Tribunal",
+      "Conselho Fiscal"
+    ],
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS centraliza a administração, arrecadação e distribuição do imposto entre os entes estaduais e municipais.",
+    "pacciTip": "Comitê Gestor: grava esse nome, ele vai aparecer bastante na sua rotina!"
+  },
+  {
+    "id": "REF-ASS-015",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "Ao parametrizar produtos da cesta básica no cadastro de mercadorias, você encontra uma frase incompleta no procedimento interno.",
+    "question": "Produtos da cesta básica nacional terão alíquota ___ de IBS/CBS, mantendo o direito a crédito nas etapas anteriores.",
+    "options": [
+      "zero",
+      "dobrada",
+      "variável",
+      "suspensa"
+    ],
+    "correctAnswer": "zero",
+    "explanation": "A alíquota zero garante que esses itens não tenham cobrança na venda, sem prejudicar o direito ao crédito das etapas anteriores.",
+    "pacciTip": "Zero na saída, crédito garantido na entrada. Essa é a receita da cesta básica!"
+  },
+  {
+    "id": "REF-ASS-016",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "Revisando o fluxo de vendas interestaduais com o time, você encontra uma frase incompleta sobre o princípio de arrecadação do IBS.",
+    "question": "Nas operações interestaduais, a Reforma desloca a arrecadação do IBS para o local de ___ da mercadoria ou serviço.",
+    "options": [
+      "destino",
+      "origem",
+      "trânsito",
+      "fabricação"
+    ],
+    "correctAnswer": "destino",
+    "explanation": "O princípio do destino direciona a arrecadação para onde o bem ou serviço é efetivamente consumido, e não onde foi produzido.",
+    "pacciTip": "Destino manda, origem obedece! É a nova regra do jogo pras operações interestaduais."
+  },
+  {
+    "id": "REF-ASS-017",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Durante a parametrização de um fornecedor no ERP, o sistema pede que você identifique o órgão gestor do IBS por extenso resumido.",
+    "question": "Digite o nome (duas palavras) do órgão criado para administrar o IBS entre Estados e Municípios:",
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "Comitê Gestor é o órgão responsável pela administração compartilhada do IBS entre Estados e Municípios.",
+    "pacciTip": "Comitê Gestor, duas palavras só. Fácil de lembrar quando você já sabe o que ele faz!"
+  },
+  {
+    "id": "REF-ASS-018",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Ao parametrizar a tabela de alíquotas para itens da cesta básica nacional, você precisa informar qual alíquota se aplica a esses produtos.",
+    "question": "Qual é a alíquota de IBS/CBS aplicável aos itens da cesta básica nacional?",
+    "correctAnswer": "zero",
+    "explanation": "A cesta básica nacional terá alíquota zero de IBS/CBS, mantendo o direito a crédito nas etapas anteriores.",
+    "pacciTip": "Zero na cobrança, mas o crédito segue firme! Não confunde com isenção, tesoro."
+  },
+  {
+    "id": "REF-ASS-019",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Configurando o checkout de vendas online da empresa, você precisa identificar o mecanismo responsável por separar o tributo automaticamente no pagamento.",
+    "question": "Digite o termo (em inglês, duas palavras) que descreve o mecanismo de pagamento que separa o tributo automaticamente no momento da compra:",
+    "correctAnswer": "split payment",
+    "explanation": "Split payment é o mecanismo que segrega automaticamente o valor do IBS/CBS já no momento do pagamento.",
+    "pacciTip": "Split payment: o tributo já sai separado antes mesmo de chegar na sua conta!"
+  },
+  {
+    "id": "REF-ASS-020",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Fechando a análise do fluxo interestadual, o supervisor pede que você resuma em uma palavra para onde vai a arrecadação do IBS no novo modelo.",
+    "question": "Digite o termo que define para onde vai principalmente a arrecadação do IBS: origem ou ___?",
+    "correctAnswer": "destino",
+    "explanation": "A arrecadação do IBS é direcionada principalmente ao local de destino, ou seja, de consumo do bem ou serviço.",
+    "pacciTip": "Destino, sempre destino! Onde o produto é consumido, é lá que o imposto fica."
+  },
+  {
+    "id": "REF-ASS-021",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Seu escritório de contabilidade fechou contrato com uma auditoria externa para revisão anual dos balanços, e você precisa avaliar se essa prestação de serviço se enquadra em hipótese de retenção na fonte.",
+    "question": "Como você deve proceder para saber se a operação exige retenção de IBS/CBS na fonte?",
+    "options": [
+      "Verificar se esse tipo específico de serviço está previsto em lei como hipótese de retenção",
+      "Aplicar a retenção automaticamente, pois todo serviço contratado por PJ é retido",
+      "Perguntar ao fornecedor se ele prefere reter ou não",
+      "Ignorar a retenção, pois ela só existe para operações com mercadorias"
+    ],
+    "correctAnswer": "Verificar se esse tipo específico de serviço está previsto em lei como hipótese de retenção",
+    "explanation": "A retenção de IBS/CBS não é automática para todo serviço: só se aplica às hipóteses específicas previstas em lei, por isso é preciso checar se o serviço contratado está entre elas.",
+    "pacciTip": "Antes de reter, confere na lei, amico! Nem todo serviço entra nessa lista."
+  },
+  {
+    "id": "REF-ASS-022",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria de autopeças está abrindo uma nova filial e o time fiscal precisa saber a quem reportar as obrigações acessórias relacionadas ao IBS gerado nas vendas dessa filial.",
+    "question": "Qual órgão é responsável pela administração do IBS gerado pelas operações da nova filial?",
+    "options": [
+      "Comitê Gestor do IBS",
+      "Receita Federal do Brasil",
+      "Junta Comercial do Estado",
+      "Banco Central"
+    ],
+    "correctAnswer": "Comitê Gestor do IBS",
+    "explanation": "O IBS, tributo de competência compartilhada entre Estados e Municípios, é administrado pelo Comitê Gestor do IBS, e não pela Receita Federal.",
+    "pacciTip": "IBS é com o Comitê Gestor, sempre! Guarda esse nome na cabeça."
+  },
+  {
+    "id": "REF-ASS-023",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de farmácias também vende itens de conveniência, entre eles produtos que constam na lista da cesta básica nacional, e o time fiscal precisa parametrizar a tributação correta desses itens.",
+    "question": "Ao parametrizar um item da cesta básica nacional no cadastro de produtos, qual tratamento tributário deve ser aplicado?",
+    "options": [
+      "Alíquota zero na venda, com manutenção do direito a crédito nas compras",
+      "Alíquota cheia normal, sem nenhuma diferenciação",
+      "Isenção total, inclusive dos créditos anteriores",
+      "Alíquota dobrada, como forma de compensação"
+    ],
+    "correctAnswer": "Alíquota zero na venda, com manutenção do direito a crédito nas compras",
+    "explanation": "Itens da cesta básica nacional recebem alíquota zero de IBS/CBS na venda, mas isso não impede o vendedor de aproveitar os créditos das etapas anteriores.",
+    "pacciTip": "Zero na saída não é zero de vantagem, tesoro! O crédito continua garantido."
+  },
+  {
+    "id": "REF-ASS-024",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um e-commerce de eletrônicos sediado em São Paulo vende um smartphone para um cliente final na Bahia, e o time de compliance precisa entender como fica a arrecadação do IBS nessa venda.",
+    "question": "Nessa venda interestadual, para qual Estado é destinada a maior parte da arrecadação do IBS?",
+    "options": [
+      "Bahia, Estado de destino da mercadoria",
+      "São Paulo, Estado de origem da mercadoria",
+      "Distrito Federal, por ser a capital administrativa",
+      "Nenhum Estado, o valor fica só com a União"
+    ],
+    "correctAnswer": "Bahia, Estado de destino da mercadoria",
+    "explanation": "O princípio do destino faz com que a maior parte da arrecadação do IBS vá para o Estado onde a mercadoria é consumida, no caso, a Bahia.",
+    "pacciTip": "O produto viaja, mas o imposto segue o consumidor, capisce?"
+  },
+  {
+    "id": "REF-ASS-025",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um marketplace de artesanato recebe pagamentos de clientes finais via cartão de crédito, e o financeiro quer entender como o split payment afeta o valor que efetivamente cai na conta dos artesãos vendedores.",
+    "question": "Como o split payment atua no repasse do valor da venda ao vendedor nesse marketplace?",
+    "options": [
+      "O sistema de pagamento segrega o IBS/CBS automaticamente, repassando ao vendedor apenas o valor líquido",
+      "O vendedor recebe o valor cheio e depois calcula e paga o tributo manualmente",
+      "O marketplace acumula o tributo e paga uma vez por ano",
+      "O split payment não se aplica a marketplaces, só a lojas físicas"
+    ],
+    "correctAnswer": "O sistema de pagamento segrega o IBS/CBS automaticamente, repassando ao vendedor apenas o valor líquido",
+    "explanation": "No split payment, o próprio arranjo de pagamento identifica e segrega o tributo devido no momento da transação, repassando ao vendedor apenas o valor líquido.",
+    "pacciTip": "O imposto nem passa pela conta do vendedor, bellissimo! Já sai separado no pagamento."
+  },
+  {
+    "id": "REF-ASS-026",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma construtora está cadastrando um novo fornecedor de material de construção no ERP antes de fazer o primeiro pedido de compra.",
+    "question": "Qual é o primeiro passo recomendado ao parametrizar o cadastro desse novo fornecedor?",
+    "options": [
+      "Registrar os dados cadastrais e o regime tributário do fornecedor",
+      "Emitir a nota fiscal de compra imediatamente",
+      "Aplicar a retenção antes de saber se ela é devida",
+      "Cadastrar direto a alíquota antiga, sem revisar"
+    ],
+    "correctAnswer": "Registrar os dados cadastrais e o regime tributário do fornecedor",
+    "explanation": "Antes de qualquer operação, é preciso registrar corretamente os dados cadastrais e o regime tributário do fornecedor, base para todas as demais parametrizações.",
+    "pacciTip": "Cadastro bem-feito no início evita dor de cabeça depois, tesoro!"
+  },
+  {
+    "id": "REF-ASS-027",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um hospital contratou uma empresa terceirizada para manutenção preventiva de equipamentos de diagnóstico por imagem, serviço que se enquadra em hipótese legal de retenção.",
+    "question": "Nesse caso, quem é o responsável por calcular e reter o IBS/CBS no momento do pagamento?",
+    "options": [
+      "O hospital, na condição de tomador do serviço",
+      "A empresa de manutenção, na condição de prestadora",
+      "O Comitê Gestor do IBS diretamente",
+      "Nenhum dos dois, pois serviços de saúde nunca têm retenção"
+    ],
+    "correctAnswer": "O hospital, na condição de tomador do serviço",
+    "explanation": "Quando há hipótese legal de retenção, é o tomador do serviço, nesse caso o hospital, quem calcula e retém o tributo no momento do pagamento ao prestador.",
+    "pacciTip": "Quem toma o serviço, retém o tributo. Regra simples, mas importante!"
+  },
+  {
+    "id": "REF-ASS-028",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "O setor fiscal de uma transportadora de cargas está revisando o manual interno de tributos e precisa esclarecer a um novo analista qual ente regulamenta cada novo tributo.",
+    "question": "Qual afirmação está correta sobre a administração dos novos tributos?",
+    "options": [
+      "O Comitê Gestor cuida do IBS e a Receita Federal cuida da CBS",
+      "A Receita Federal cuida de ambos os tributos, IBS e CBS",
+      "O Comitê Gestor cuida de ambos os tributos, IBS e CBS",
+      "Cada Estado cuida separadamente da CBS dentro do seu território"
+    ],
+    "correctAnswer": "O Comitê Gestor cuida do IBS e a Receita Federal cuida da CBS",
+    "explanation": "A divisão é clara: o Comitê Gestor administra o IBS (estadual/municipal) e a Receita Federal administra a CBS (federal).",
+    "pacciTip": "Dois tributos, dois administradores diferentes. Não mistura, amico!"
+  },
+  {
+    "id": "REF-ASS-029",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de bebidas também comercializa alguns itens de mercearia, como arroz e feijão, que fazem parte da lista da cesta básica nacional.",
+    "question": "Ao cadastrar arroz e feijão na tabela de produtos, qual configuração tributária é correta?",
+    "options": [
+      "Alíquota zero de IBS/CBS, sem perda do crédito das compras",
+      "Alíquota cheia, pois bebidas e alimentos têm o mesmo tratamento",
+      "Isenção com bloqueio total dos créditos anteriores",
+      "Alíquota reduzida à metade, mas nunca zero"
+    ],
+    "correctAnswer": "Alíquota zero de IBS/CBS, sem perda do crédito das compras",
+    "explanation": "Arroz e feijão, como itens da cesta básica nacional, recebem alíquota zero, mantendo o direito ao crédito das etapas anteriores da cadeia.",
+    "pacciTip": "Arroz com feijão e alíquota zero: combinação perfeita no cadastro!"
+  },
+  {
+    "id": "REF-ASS-030",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma fábrica de cosméticos localizada em Minas Gerais vende um lote de produtos para uma rede varejista do Rio de Janeiro.",
+    "question": "Sobre a arrecadação do IBS nessa venda interestadual, o que é correto afirmar?",
+    "options": [
+      "A maior parte da arrecadação será destinada ao Rio de Janeiro, Estado de destino",
+      "A totalidade da arrecadação permanece em Minas Gerais, Estado de origem",
+      "A arrecadação é dividida sempre em partes iguais entre os dois Estados",
+      "A arrecadação não pertence a nenhum Estado, apenas à União"
+    ],
+    "correctAnswer": "A maior parte da arrecadação será destinada ao Rio de Janeiro, Estado de destino",
+    "explanation": "Pelo princípio do destino, a maior parte da arrecadação do IBS vai para o Estado onde a mercadoria é consumida, no caso, o Rio de Janeiro.",
+    "pacciTip": "O batom viaja de Minas pro Rio, e o imposto vai junto até o destino final!"
+  },
+  {
+    "id": "REF-ASS-031",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de restaurantes recebe pedidos por um aplicativo de delivery, com pagamento feito diretamente pelo cliente final no app.",
+    "question": "Com o split payment em operação, o que acontece com o valor do IBS/CBS embutido no preço do prato pedido pelo app?",
+    "options": [
+      "É segregado automaticamente no momento do pagamento e direcionado ao Fisco",
+      "É somado ao valor da próxima fatura do restaurante",
+      "É pago manualmente pelo restaurante ao final do mês",
+      "É descontado da taxa de entrega do entregador"
+    ],
+    "correctAnswer": "É segregado automaticamente no momento do pagamento e direcionado ao Fisco",
+    "explanation": "O split payment segrega o tributo automaticamente já no momento em que o cliente paga, direcionando essa parcela ao Fisco sem passar pelo caixa do restaurante.",
+    "pacciTip": "O molho de tomate é seu, mas o imposto já saiu direto pro Fisco, capisce?"
+  },
+  {
+    "id": "REF-ASS-032",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria têxtil fechou negócio com um novo cliente atacadista e precisa parametrizar o cadastro dele antes de liberar o primeiro pedido de venda.",
+    "question": "Depois de registrar os dados cadastrais e o regime tributário do cliente, qual é o próximo passo lógico na parametrização?",
+    "options": [
+      "Vincular a tabela de alíquotas aplicável a esse cliente",
+      "Emitir diretamente a nota fiscal de venda, sem mais checagens",
+      "Excluir o cadastro e recomeçar do zero",
+      "Aguardar seis meses antes de liberar qualquer venda"
+    ],
+    "correctAnswer": "Vincular a tabela de alíquotas aplicável a esse cliente",
+    "explanation": "Depois do cadastro básico e do regime tributário, o próximo passo é vincular a tabela de alíquotas correta para que as vendas futuras sejam tributadas corretamente.",
+    "pacciTip": "Um passo de cada vez, tesoro! Cadastro, depois alíquota, depois venda."
+  },
+  {
+    "id": "REF-ASS-033",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma agência de turismo contrata mensalmente uma empresa terceirizada de suporte de TI, serviço recorrente que pode se enquadrar em hipótese de retenção.",
+    "question": "Para decidir se deve reter o IBS/CBS nesses pagamentos mensais, o que a agência deve fazer?",
+    "options": [
+      "Checar se esse tipo de serviço está entre as hipóteses legais de retenção",
+      "Reter automaticamente todo mês, independente do tipo de serviço",
+      "Nunca reter, pois contratos recorrentes são sempre isentos",
+      "Deixar a decisão a critério do fornecedor de TI"
+    ],
+    "correctAnswer": "Checar se esse tipo de serviço está entre as hipóteses legais de retenção",
+    "explanation": "A retenção depende de previsão legal específica para o tipo de serviço contratado, não sendo automática só por o contrato ser recorrente.",
+    "pacciTip": "Recorrente não é sinônimo de retenção automática, amico! Confere sempre a lei."
+  },
+  {
+    "id": "REF-ASS-034",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma startup de software SaaS está estruturando sua rotina fiscal e precisa saber a quem recolher a CBS gerada nas assinaturas mensais dos clientes.",
+    "question": "A CBS gerada nas vendas dessa startup deve ser recolhida a qual órgão?",
+    "options": [
+      "Receita Federal do Brasil",
+      "Comitê Gestor do IBS",
+      "Secretaria de Fazenda do Estado",
+      "Prefeitura do Município sede"
+    ],
+    "correctAnswer": "Receita Federal do Brasil",
+    "explanation": "A CBS é um tributo federal, administrado e recolhido junto à Receita Federal do Brasil.",
+    "pacciTip": "CBS é federal, vai pra Receita Federal! O IBS é que fica com o Comitê Gestor."
+  },
+  {
+    "id": "REF-ASS-035",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria de laticínios está parametrizando o cadastro do leite tipo integral, item que consta na lista da cesta básica nacional.",
+    "question": "Como deve ficar configurada a tributação de IBS/CBS para o leite integral no cadastro de produtos?",
+    "options": [
+      "Alíquota zero na venda, preservando o crédito das compras de insumos",
+      "Alíquota cheia, pois laticínios não entram na cesta básica",
+      "Alíquota zero, mas com perda total do crédito de insumos",
+      "Suspensão do tributo até a revenda final ao consumidor"
+    ],
+    "correctAnswer": "Alíquota zero na venda, preservando o crédito das compras de insumos",
+    "explanation": "O leite integral, como item da cesta básica nacional, tem alíquota zero na venda, mas a indústria mantém o direito de crédito sobre os insumos adquiridos.",
+    "pacciTip": "Leite com alíquota zero, mas crédito de insumo intacto! Não esquece de cadastrar certinho."
+  },
+  {
+    "id": "REF-ASS-036",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma montadora de veículos com fábrica em São Paulo vende um lote de carros para uma concessionária do Paraná.",
+    "question": "Considerando o princípio do destino, o que ocorre com a arrecadação do IBS nessa operação?",
+    "options": [
+      "A maior parte é destinada ao Paraná, onde os veículos serão consumidos",
+      "A totalidade fica em São Paulo, de onde os veículos saíram",
+      "A arrecadação é definida pelo fabricante, não pela legislação",
+      "Não há incidência de IBS em vendas de veículos entre Estados"
+    ],
+    "correctAnswer": "A maior parte é destinada ao Paraná, onde os veículos serão consumidos",
+    "explanation": "Pelo princípio do destino, a maior parte da arrecadação do IBS vai para o Estado de consumo, nesse caso, o Paraná.",
+    "pacciTip": "O carro sai de São Paulo, mas o imposto acompanha até o Paraná!"
+  },
+  {
+    "id": "REF-ASS-037",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma escola de idiomas cobra a mensalidade dos alunos por meio de um link de pagamento online integrado ao seu sistema financeiro.",
+    "question": "Com o split payment aplicado a essa cobrança, o que a escola efetivamente recebe na conta?",
+    "options": [
+      "O valor líquido, já sem a parcela de IBS/CBS que foi segregada",
+      "O valor cheio da mensalidade, sem nenhum desconto",
+      "Apenas metade do valor, o restante fica retido indefinidamente",
+      "O valor em dobro, para compensar futuras cobranças"
+    ],
+    "correctAnswer": "O valor líquido, já sem a parcela de IBS/CBS que foi segregada",
+    "explanation": "No split payment, o tributo é segregado automaticamente no momento do pagamento, e a escola recebe apenas o valor líquido da mensalidade.",
+    "pacciTip": "A mensalidade chega mais enxuta na conta, mas o motivo é o tributo que já saiu antes!"
+  },
+  {
+    "id": "REF-ASS-038",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma gráfica editorial está cadastrando um novo fornecedor de papel importado, essencial para a produção de livros, antes do primeiro pedido de compra.",
+    "question": "Qual é a finalidade de vincular a tabela de alíquotas correta no cadastro desse fornecedor?",
+    "options": [
+      "Garantir que as compras futuras sejam tributadas de forma correta desde a primeira nota",
+      "Evitar que a gráfica precise emitir qualquer nota fiscal",
+      "Dispensar a necessidade de testar a emissão de notas simuladas",
+      "Bloquear automaticamente qualquer hipótese de retenção"
+    ],
+    "correctAnswer": "Garantir que as compras futuras sejam tributadas de forma correta desde a primeira nota",
+    "explanation": "Vincular a tabela de alíquotas correta ao cadastro garante que as operações futuras com esse fornecedor sejam tributadas corretamente desde o início.",
+    "pacciTip": "Tabela de alíquotas certa no cadastro evita nota fiscal errada depois, tesoro!"
+  },
+  {
+    "id": "REF-ASS-039",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de energia solar contrata uma equipe terceirizada para a instalação de painéis em um condomínio residencial, serviço que pode se enquadrar em hipótese de retenção.",
+    "question": "Antes de efetuar o pagamento à equipe terceirizada, o que a empresa deve verificar?",
+    "options": [
+      "Se esse tipo específico de serviço está previsto como hipótese de retenção na fonte",
+      "Se o condomínio já pagou a fatura de energia do mês",
+      "Se a equipe terceirizada tem mais de dez funcionários",
+      "Se o serviço foi prestado em dia de sol"
+    ],
+    "correctAnswer": "Se esse tipo específico de serviço está previsto como hipótese de retenção na fonte",
+    "explanation": "A verificação essencial é se o serviço se enquadra em alguma das hipóteses legais específicas de retenção de IBS/CBS na fonte.",
+    "pacciTip": "Antes de pagar, confere se essa prestação entra na lista de retenção, amico!"
+  },
+  {
+    "id": "REF-ASS-040",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma operadora de telecomunicações está atualizando seu sistema fiscal e precisa configurar corretamente para qual ente cada novo tributo deve ser declarado.",
+    "question": "Nessa configuração, qual associação está correta?",
+    "options": [
+      "IBS declarado ao Comitê Gestor; CBS declarada à Receita Federal",
+      "IBS declarado à Receita Federal; CBS declarada ao Comitê Gestor",
+      "Ambos os tributos são declarados exclusivamente ao Comitê Gestor",
+      "Ambos os tributos são declarados exclusivamente à Receita Federal"
+    ],
+    "correctAnswer": "IBS declarado ao Comitê Gestor; CBS declarada à Receita Federal",
+    "explanation": "O IBS é de competência compartilhada entre Estados e Municípios e é administrado pelo Comitê Gestor; a CBS é federal e administrada pela Receita Federal.",
+    "pacciTip": "Cada tributo com seu administrador certo, mai sbagliato!"
+  },
+  {
+    "id": "REF-ASS-041",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma papelaria de bairro também revende alguns itens de alimentação básica na seção de conveniência e precisa parametrizar corretamente esses produtos no sistema.",
+    "question": "Ao identificar um item de alimentação básica na lista da cesta básica nacional, qual configuração de alíquota é correta no cadastro?",
+    "options": [
+      "Alíquota zero, com manutenção do crédito das compras anteriores",
+      "Mesma alíquota aplicada aos materiais escolares vendidos na loja",
+      "Alíquota zero, mas sem direito a nenhum crédito",
+      "Alíquota negativa, gerando saldo a favor da papelaria"
+    ],
+    "correctAnswer": "Alíquota zero, com manutenção do crédito das compras anteriores",
+    "explanation": "Itens da cesta básica nacional recebem alíquota zero na venda, sem prejuízo do direito ao crédito das etapas anteriores da cadeia.",
+    "pacciTip": "Não confunde caderno com arroz no cadastro, tesoro! Cada um tem sua alíquota."
+  },
+  {
+    "id": "REF-ASS-042",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria química com planta em Santa Catarina fornece insumos para uma fábrica de tintas localizada no Ceará.",
+    "question": "Nessa venda interestadual, o princípio do destino determina que a arrecadação do IBS será direcionada principalmente para:",
+    "options": [
+      "O Ceará, Estado onde o insumo será efetivamente utilizado",
+      "Santa Catarina, Estado onde o insumo foi produzido",
+      "Um fundo nacional único, sem vínculo com nenhum Estado",
+      "O Estado escolhido livremente pela indústria vendedora"
+    ],
+    "correctAnswer": "O Ceará, Estado onde o insumo será efetivamente utilizado",
+    "explanation": "O princípio do destino direciona a maior parte da arrecadação do IBS para o Estado de consumo, nesse caso o Ceará.",
+    "pacciTip": "O insumo cruza fronteira, e o imposto segue o mesmo caminho até o destino!"
+  },
+  {
+    "id": "REF-ASS-043",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma clínica odontológica passou a aceitar pagamento de consultas por um checkout digital integrado, que já opera com split payment.",
+    "question": "Do ponto de vista da clínica, qual é o efeito prático do split payment nesse recebimento?",
+    "options": [
+      "A clínica recebe apenas o valor líquido, já descontado o IBS/CBS segregado no pagamento",
+      "A clínica precisa calcular e recolher o tributo manualmente depois de receber o valor cheio",
+      "O split payment não se aplica a serviços de saúde",
+      "O paciente precisa pagar o tributo separadamente em outra transação"
+    ],
+    "correctAnswer": "A clínica recebe apenas o valor líquido, já descontado o IBS/CBS segregado no pagamento",
+    "explanation": "O split payment segrega automaticamente o tributo no momento do pagamento, então a clínica recebe diretamente o valor líquido.",
+    "pacciTip": "O sorriso fica por conta do dentista, o tributo já foi separado no pagamento!"
+  },
+  {
+    "id": "REF-ASS-044",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de TI terceirizada fechou um novo contrato de suporte com um grande cliente corporativo e precisa organizar o cadastro antes de emitir a primeira fatura.",
+    "question": "Por que é importante testar a emissão de uma nota fiscal simulada antes de liberar o cadastro desse novo cliente?",
+    "options": [
+      "Para identificar eventuais erros de parametrização antes da primeira operação real",
+      "Porque a lei exige uma nota simulada por mês para todo cliente",
+      "Para substituir a necessidade de definir o regime tributário do cliente",
+      "Porque a nota simulada gera crédito automático para o cliente"
+    ],
+    "correctAnswer": "Para identificar eventuais erros de parametrização antes da primeira operação real",
+    "explanation": "O teste com nota fiscal simulada permite identificar e corrigir erros de parametrização antes de gerar uma operação real, evitando retrabalho e inconsistências fiscais.",
+    "pacciTip": "Testa antes de valer, tesoro! Nota simulada é seu ensaio geral."
+  },
+  {
+    "id": "REF-ASS-045",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma rede de varejo de moda contratou uma consultoria jurídica para atendimento recorrente e o analista fiscal afirma que, por ser um contrato recorrente, a retenção do IBS/CBS é sempre obrigatória.",
+    "question": "Essa afirmação do analista está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A retenção depende de previsão legal específica para o tipo de serviço, não do fato de o contrato ser recorrente.",
+    "pacciTip": "Recorrência não é sinônimo de retenção, amico! Confere sempre a hipótese legal."
+  },
+  {
+    "id": "REF-ASS-046",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Durante uma reunião de parametrização em uma indústria de calçados, um colega afirma que o Comitê Gestor do IBS também é responsável por administrar a CBS.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Comitê Gestor administra apenas o IBS. A CBS é administrada pela Receita Federal do Brasil.",
+    "pacciTip": "Cada tributo com seu dono, piccolo! Não junta os dois."
+  },
+  {
+    "id": "REF-ASS-047",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Ao parametrizar rações básicas para animais que constam na lista de itens com alíquota zero, um colega de uma distribuidora de medicamentos veterinários afirma que isso elimina totalmente o direito de crédito da empresa.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A alíquota zero não cobra o tributo na saída, mas preserva o direito de crédito das etapas anteriores da cadeia.",
+    "pacciTip": "Zero na cobrança não é zero no crédito, tesoro! Continua garantido."
+  },
+  {
+    "id": "REF-ASS-048",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma fazenda de grãos no Mato Grosso vende sua safra para uma processadora em São Paulo, e o setor fiscal está revisando o período de transição da Reforma.",
+    "question": "No período de transição, o Estado de origem (Mato Grosso) deixa de receber imediatamente qualquer parcela de arrecadação do IBS, passando o valor total ao Estado de destino desde o primeiro ano?",
+    "correctAnswer": false,
+    "explanation": "Errado! Durante a transição, o Estado de origem ainda recebe uma parcela residual, que diminui gradualmente ano a ano até desaparecer.",
+    "pacciTip": "É uma despedida gradual, não um corte seco, capisce?"
+  },
+  {
+    "id": "REF-ASS-049",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma loja de móveis que vende pelo site afirma, em treinamento interno, que o split payment só se aplica a vendas feitas em lojas físicas, nunca em vendas online.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O split payment se aplica a vendas ao consumidor final de forma geral, incluindo vendas online por checkout digital.",
+    "pacciTip": "Físico ou online, o split payment não escolhe lado, amico!"
+  },
+  {
+    "id": "REF-ASS-050",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Ao cadastrar um novo fornecedor de produtos de beleza, o gerente de uma franquia de salões afirma que não é necessário registrar o regime tributário do fornecedor, apenas o nome e o CNPJ.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O regime tributário do fornecedor é uma informação essencial da parametrização, pois influencia diretamente o cálculo dos tributos nas operações.",
+    "pacciTip": "Nome e CNPJ não bastam, tesoro! O regime tributário é peça-chave do cadastro."
+  },
+  {
+    "id": "REF-ASS-051",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "No hospital, ao revisar o manual de compliance fiscal, você lê que a retenção de IBS/CBS na fonte só se aplica às operações e serviços expressamente previstos em lei.",
+    "question": "Essa afirmação do manual está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! A retenção na fonte não é regra geral, aplicando-se apenas às hipóteses específicas definidas em lei.",
+    "pacciTip": "Sì, é isso mesmo! Só entra na lista quem a lei escolher."
+  },
+  {
+    "id": "REF-ASS-052",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "O setor fiscal de uma montadora está treinando novos analistas e afirma que toda a CBS gerada nas vendas de veículos é recolhida e fiscalizada pela Receita Federal do Brasil.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! A CBS, por ser tributo federal, é administrada integralmente pela Receita Federal do Brasil.",
+    "pacciTip": "CBS é território da Receita Federal, sempre foi assim!"
+  },
+  {
+    "id": "REF-ASS-053",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma rede de padarias está parametrizando o pão francês e outros itens da cesta básica nacional, e o analista afirma que, mesmo com alíquota zero na venda, a padaria continua podendo se creditar dos tributos pagos na compra da farinha.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! A alíquota zero não cobra o tributo na saída, mas preserva o direito de crédito sobre as compras anteriores, como a farinha usada na produção.",
+    "pacciTip": "Perfetto! O crédito da farinha continua garantido mesmo com venda a alíquota zero."
+  },
+  {
+    "id": "REF-ASS-054",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma editora de livros em São Paulo vende um lote de exemplares para uma livraria no Amazonas, e o time fiscal confirma que a maior parte da arrecadação do IBS será destinada ao Amazonas.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! Pelo princípio do destino, a maior parte da arrecadação do IBS é direcionada ao Estado onde o bem é efetivamente consumido, nesse caso o Amazonas.",
+    "pacciTip": "O livro viaja pro Amazonas, e o imposto vai com ele até o destino!"
+  },
+  {
+    "id": "REF-ASS-055",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Durante um treinamento em uma agência de viagens, um instrutor afirma que o split payment só se aplica à venda de produtos físicos, nunca à venda de serviços ao consumidor final.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O split payment se aplica a operações de venda ao consumidor final de forma geral, incluindo a prestação de serviços, como pacotes de viagem.",
+    "pacciTip": "Produto ou serviço, o split payment atua nos dois, amico!"
+  },
+  {
+    "id": "REF-ASS-056",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma indústria de embalagens sempre testa a emissão de uma nota fiscal simulada antes de liberar o cadastro de um novo cliente para vendas reais.",
+    "question": "Essa prática de testar a nota simulada antes de liberar o cadastro é considerada uma boa prática de parametrização?",
+    "correctAnswer": true,
+    "explanation": "Correto! Testar com uma nota simulada antes da primeira operação real ajuda a identificar erros de parametrização e evita inconsistências fiscais.",
+    "pacciTip": "Ensaio geral antes da estreia, tesoro! Sempre vale a pena."
+  },
+  {
+    "id": "REF-ASS-057",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "O financeiro de uma distribuidora de autopeças pergunta se deve reter IBS/CBS em toda compra de mercadoria feita de fornecedores, e um colega responde que sim, sempre.",
+    "question": "A resposta do colega está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A retenção não é regra geral para toda compra de mercadoria; aplica-se apenas às hipóteses específicas previstas em lei, geralmente ligadas a determinados serviços.",
+    "pacciTip": "Compra de mercadoria não é sinônimo de retenção automática, piccolo!"
+  },
+  {
+    "id": "REF-ASS-058",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma clínica de estética com unidades em dois Estados diferentes confirma, junto ao setor fiscal, que o Comitê Gestor do IBS é quem centraliza a arrecadação e distribui os valores entre os entes envolvidos.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! O Comitê Gestor centraliza a administração, arrecadação e distribuição do IBS entre Estados e Municípios.",
+    "pacciTip": "Um só centro cuidando da partilha entre todos os entes, bellissimo!"
+  },
+  {
+    "id": "REF-ASS-059",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "O dono de uma mercearia de bairro afirma que pode escolher livremente quais produtos de sua loja terão alíquota zero de IBS/CBS.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A alíquota zero se aplica apenas aos itens definidos pela legislação como parte da cesta básica nacional, não é uma escolha do comerciante.",
+    "pacciTip": "Não é o dono da loja que decide isso, tesoro! É a lei que define a lista."
+  },
+  {
+    "id": "REF-ASS-060",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Um analista fiscal de uma indústria de móveis afirma que, no novo modelo, toda a arrecadação do IBS de uma venda interestadual continua ficando no Estado de origem, como no sistema antigo.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O novo modelo desloca a maior parte da arrecadação para o Estado de destino, ao contrário do sistema antigo baseado na origem.",
+    "pacciTip": "O jogo mudou, amico! Agora quem manda é o destino, não mais a origem."
+  },
+  {
+    "id": "REF-ASS-061",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma farmácia online percebe que o valor total pago pelo cliente no checkout é maior do que o valor que efetivamente cai na conta da farmácia, por causa da segregação automática do tributo.",
+    "question": "Essa diferença entre o valor pago pelo cliente e o valor recebido pela farmácia pode ser explicada pelo split payment?",
+    "correctAnswer": true,
+    "explanation": "Correto! O split payment segrega o IBS/CBS automaticamente no momento do pagamento, fazendo com que o vendedor receba apenas o valor líquido.",
+    "pacciTip": "A diferença na conta tem nome e sobrenome: split payment, tesoro!"
+  },
+  {
+    "id": "REF-ASS-062",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma empresa de logística internacional afirma que, ao cadastrar um novo cliente, não é necessário avaliar se há hipótese de retenção aplicável, pois isso pode ser resolvido depois, na hora de emitir a fatura.",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! Avaliar a hipótese de retenção é parte do fluxo correto de parametrização do cadastro, feito antes das operações, para evitar erros na fatura.",
+    "pacciTip": "Deixar pra depois é receita de erro, piccolo! Resolve isso já no cadastro."
+  },
+  {
+    "id": "REF-ASS-063",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma operadora de planos de saúde contrata um serviço de terceiros que se enquadra expressamente em uma hipótese legal de retenção, e o setor fiscal já parametrizou o cadastro do fornecedor para aplicar a retenção corretamente.",
+    "question": "Essa parametrização, feita porque o serviço se enquadra em hipótese legal específica, está alinhada com a lógica da retenção de IBS/CBS?",
+    "correctAnswer": true,
+    "explanation": "Correto! A retenção deve ser aplicada exatamente nos casos previstos em lei, como o identificado nesse serviço contratado pela operadora.",
+    "pacciTip": "Identificou a hipótese, parametrizou certo! Assim que funciona, amico."
+  },
+  {
+    "id": "REF-ASS-064",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "O setor fiscal de uma indústria de bebidas explica a um novo colaborador que a CBS, por ser tributo federal, não é administrada nem repartida diretamente entre Estados e Municípios como acontece com o IBS.",
+    "question": "Essa explicação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! A CBS é de competência federal e administrada pela Receita Federal, diferente do IBS, que é compartilhado entre Estados e Municípios via Comitê Gestor.",
+    "pacciTip": "CBS é assunto da União, o IBS é que se divide entre Estados e Municípios!"
+  },
+  {
+    "id": "REF-ASS-065",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Em uma loja de conveniência de um posto de combustível, um atendente acredita que um item da cesta básica nacional perde o benefício da alíquota zero se for vendido na mesma nota fiscal junto com outros produtos comuns.",
+    "question": "Essa crença do atendente está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O tratamento tributário é definido pelo item em si, conforme sua classificação na lista da cesta básica, e não pelo fato de estar na mesma nota que outros produtos.",
+    "pacciTip": "Cada item tem sua própria etiqueta tributária, mesmo dividindo a nota com outros produtos!"
+  },
+  {
+    "id": "REF-ASS-066",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma fábrica de brinquedos no Rio Grande do Sul vende para uma loja em Goiás, e o setor fiscal confirma que, durante o período de transição, a parcela de arrecadação que ainda fica com o Rio Grande do Sul será reduzida a cada ano, até deixar de existir.",
+    "question": "Essa afirmação sobre a transição está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! No período de transição, a parcela residual destinada ao Estado de origem diminui progressivamente ano a ano até ser eliminada.",
+    "pacciTip": "Ano após ano, a fatia da origem encolhe até sumir de vez!"
+  },
+  {
+    "id": "REF-ASS-067",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Uma clínica veterinária explica aos clientes que o split payment não altera o preço final que eles pagam pela consulta, apenas organiza de forma automática o repasse do tributo embutido nesse valor.",
+    "question": "Essa explicação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! O split payment não muda o preço cobrado do consumidor final; ele apenas segrega automaticamente a parte do tributo já embutida no preço.",
+    "pacciTip": "O preço na etiqueta não muda, só o caminho do imposto lá dentro!"
+  },
+  {
+    "id": "REF-ASS-068",
+    "level": "assistente",
+    "type": "true_false",
+    "scenario": "Um analista de uma distribuidora de eletrônicos sugere alterar diretamente a tabela de alíquotas vinculada a um cliente antigo, sem revisar antes os dados cadastrais e o regime tributário registrados originalmente.",
+    "question": "Essa prática sugerida pelo analista é considerada segura?",
+    "correctAnswer": false,
+    "explanation": "Errado! A tabela de alíquotas deve estar sempre alinhada aos dados cadastrais e ao regime tributário do cliente; alterá-la isoladamente pode gerar inconsistências fiscais.",
+    "pacciTip": "Não mexe numa peça sem olhar o conjunto todo, tesoro! Revisa o cadastro primeiro."
+  },
+  {
+    "id": "REF-ASS-069",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma rede de moda contratou uma agência de marketing para uma campanha recorrente, serviço que se enquadra em hipótese legal de retenção de IBS/CBS.",
+    "question": "Ordene o fluxo correto desde a contratação até o recolhimento da retenção:",
+    "options": [
+      "Efetuar o pagamento líquido à agência de marketing",
+      "Confirmar que o serviço contratado está na lista legal de retenção",
+      "Reter o valor de IBS/CBS no momento do pagamento",
+      "Recolher o valor retido ao ente competente"
+    ],
+    "correctAnswer": [
+      "Confirmar que o serviço contratado está na lista legal de retenção",
+      "Reter o valor de IBS/CBS no momento do pagamento",
+      "Efetuar o pagamento líquido à agência de marketing",
+      "Recolher o valor retido ao ente competente"
+    ],
+    "explanation": "Primeiro confirma-se a hipótese legal, depois retém-se o valor no pagamento, paga-se o líquido ao fornecedor e, por fim, recolhe-se o tributo retido ao Fisco.",
+    "pacciTip": "Confirma, retém, paga o líquido, recolhe! Essa é a sequência que não falha."
+  },
+  {
+    "id": "REF-ASS-070",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma indústria de bebidas está mapeando o fluxo interno de apuração e recolhimento do IBS gerado em suas vendas mensais até o repasse ao Comitê Gestor.",
+    "question": "Ordene o fluxo correto de apuração e recolhimento do IBS:",
+    "options": [
+      "Recolher o valor apurado, que será administrado pelo Comitê Gestor",
+      "Consolidar as notas fiscais de venda do período",
+      "Calcular o IBS devido considerando os créditos das compras",
+      "Transmitir a apuração ao sistema do Comitê Gestor"
+    ],
+    "correctAnswer": [
+      "Consolidar as notas fiscais de venda do período",
+      "Calcular o IBS devido considerando os créditos das compras",
+      "Transmitir a apuração ao sistema do Comitê Gestor",
+      "Recolher o valor apurado, que será administrado pelo Comitê Gestor"
+    ],
+    "explanation": "Consolidam-se as notas do período, calcula-se o IBS já descontando créditos, transmite-se a apuração ao Comitê Gestor e, por fim, recolhe-se o valor devido.",
+    "pacciTip": "Consolida, calcula, transmite, recolhe! O Comitê Gestor espera essa sequência certinha."
+  },
+  {
+    "id": "REF-ASS-071",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma distribuidora de arroz e feijão está cadastrando esses produtos no ERP, que constam na lista oficial de itens da cesta básica nacional.",
+    "question": "Ordene o fluxo correto de parametrização desses itens no sistema:",
+    "options": [
+      "Configurar a alíquota zero de IBS/CBS na venda desse item",
+      "Confirmar que o produto consta na lista oficial da cesta básica nacional",
+      "Manter ativo o direito ao crédito das compras anteriores no cadastro",
+      "Testar a emissão de uma nota de venda simulada com o item"
+    ],
+    "correctAnswer": [
+      "Confirmar que o produto consta na lista oficial da cesta básica nacional",
+      "Configurar a alíquota zero de IBS/CBS na venda desse item",
+      "Manter ativo o direito ao crédito das compras anteriores no cadastro",
+      "Testar a emissão de uma nota de venda simulada com o item"
+    ],
+    "explanation": "Confirma-se primeiro o enquadramento na lista oficial, configura-se a alíquota zero, garante-se o crédito das compras e testa-se com uma nota simulada antes de liberar.",
+    "pacciTip": "Confirma a lista, zera a alíquota, guarda o crédito, testa a nota! Passo a passo, tesoro."
+  },
+  {
+    "id": "REF-ASS-072",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma fábrica de móveis no Paraná vende um lote de produtos para uma loja de decoração em Pernambuco, operação que segue o princípio do destino.",
+    "question": "Ordene o fluxo correto dessa venda interestadual:",
+    "options": [
+      "Repassar a maior parte da arrecadação ao Estado de destino, Pernambuco",
+      "Emitir a nota fiscal de venda interestadual",
+      "Apurar o IBS devido conforme as regras de destino",
+      "Registrar a operação na apuração mensal da fábrica"
+    ],
+    "correctAnswer": [
+      "Emitir a nota fiscal de venda interestadual",
+      "Apurar o IBS devido conforme as regras de destino",
+      "Repassar a maior parte da arrecadação ao Estado de destino, Pernambuco",
+      "Registrar a operação na apuração mensal da fábrica"
+    ],
+    "explanation": "Emite-se a nota, apura-se o IBS conforme as regras de destino, repassa-se a maior parte ao Estado de consumo e registra-se tudo na apuração mensal.",
+    "pacciTip": "Emite, apura, repassa pro destino, registra! Assim fecha certinho o mês."
+  },
+  {
+    "id": "REF-ASS-073",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma loja de eletrodomésticos vende pela internet e o pagamento é processado por um gateway que já opera com split payment.",
+    "question": "Ordene o fluxo correto dessa venda com split payment:",
+    "options": [
+      "Repassar o valor líquido à loja de eletrodomésticos",
+      "Cliente conclui o pagamento no checkout do site",
+      "Gateway calcula o IBS/CBS embutido no valor da compra",
+      "Gateway direciona automaticamente o tributo ao Fisco"
+    ],
+    "correctAnswer": [
+      "Cliente conclui o pagamento no checkout do site",
+      "Gateway calcula o IBS/CBS embutido no valor da compra",
+      "Gateway direciona automaticamente o tributo ao Fisco",
+      "Repassar o valor líquido à loja de eletrodomésticos"
+    ],
+    "explanation": "O cliente paga, o gateway calcula o tributo embutido, direciona essa parcela ao Fisco automaticamente e só então repassa o valor líquido à loja.",
+    "pacciTip": "Paga, calcula, separa, repassa! O split payment não pula nenhuma etapa."
+  },
+  {
+    "id": "REF-ASS-074",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma indústria farmacêutica está estruturando o cadastro de um novo fornecedor de embalagens antes da primeira compra.",
+    "question": "Ordene o fluxo correto de parametrização desse cadastro:",
+    "options": [
+      "Confirmar o regime tributário declarado pelo fornecedor",
+      "Registrar os dados cadastrais básicos do fornecedor",
+      "Avaliar se as compras futuras desse fornecedor têm hipótese de retenção",
+      "Liberar o cadastro para a primeira compra oficial"
+    ],
+    "correctAnswer": [
+      "Registrar os dados cadastrais básicos do fornecedor",
+      "Confirmar o regime tributário declarado pelo fornecedor",
+      "Avaliar se as compras futuras desse fornecedor têm hipótese de retenção",
+      "Liberar o cadastro para a primeira compra oficial"
+    ],
+    "explanation": "Primeiro registram-se os dados básicos, confirma-se o regime tributário, avalia-se a retenção aplicável e só então libera-se o cadastro para compras.",
+    "pacciTip": "Dados, regime, retenção, liberação! Segue essa ordem e nada passa batido."
+  },
+  {
+    "id": "REF-ASS-075",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma empresa de eventos corporativos contrata recorrentemente um buffet terceirizado, serviço enquadrado em hipótese legal de retenção de IBS/CBS.",
+    "question": "Ordene o fluxo correto de aplicação da retenção nesse contrato:",
+    "options": [
+      "Registrar o valor retido na apuração fiscal da empresa de eventos",
+      "Verificar a previsão legal de retenção para esse tipo de serviço",
+      "Aplicar o percentual de retenção sobre o valor da fatura do buffet",
+      "Repassar o valor líquido ao buffet terceirizado"
+    ],
+    "correctAnswer": [
+      "Verificar a previsão legal de retenção para esse tipo de serviço",
+      "Aplicar o percentual de retenção sobre o valor da fatura do buffet",
+      "Repassar o valor líquido ao buffet terceirizado",
+      "Registrar o valor retido na apuração fiscal da empresa de eventos"
+    ],
+    "explanation": "Verifica-se a previsão legal, aplica-se o percentual sobre a fatura, repassa-se o valor líquido ao fornecedor e registra-se o valor retido na apuração.",
+    "pacciTip": "Verifica, aplica, repassa, registra! Assim a retenção fica redondinha."
+  },
+  {
+    "id": "REF-ASS-076",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma empresa de consultoria empresarial está mapeando o caminho da CBS gerada em suas notas de serviço até o recolhimento junto à Receita Federal.",
+    "question": "Ordene o fluxo correto de apuração e recolhimento da CBS:",
+    "options": [
+      "Recolher o valor apurado à Receita Federal do Brasil",
+      "Emitir as notas fiscais de prestação de serviço no período",
+      "Consolidar o total de CBS devida no período de apuração",
+      "Descontar os créditos de CBS aplicáveis, quando existentes"
+    ],
+    "correctAnswer": [
+      "Emitir as notas fiscais de prestação de serviço no período",
+      "Consolidar o total de CBS devida no período de apuração",
+      "Descontar os créditos de CBS aplicáveis, quando existentes",
+      "Recolher o valor apurado à Receita Federal do Brasil"
+    ],
+    "explanation": "Emitem-se as notas do período, consolida-se o total de CBS devida, descontam-se os créditos aplicáveis e recolhe-se o valor final à Receita Federal.",
+    "pacciTip": "Emite, consolida, desconta, recolhe! A CBS sempre termina na Receita Federal."
+  },
+  {
+    "id": "REF-ASS-077",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma padaria industrial está cadastrando o pão tipo francês, item de cesta básica nacional, em sua tabela de preços para grandes redes de supermercado.",
+    "question": "Ordene o fluxo correto de parametrização desse item:",
+    "options": [
+      "Validar o enquadramento do pão francês na lista da cesta básica nacional",
+      "Enviar a tabela atualizada para os clientes supermercadistas",
+      "Zerar a alíquota de IBS/CBS na venda do item",
+      "Confirmar a manutenção do crédito sobre a farinha e demais insumos"
+    ],
+    "correctAnswer": [
+      "Validar o enquadramento do pão francês na lista da cesta básica nacional",
+      "Zerar a alíquota de IBS/CBS na venda do item",
+      "Confirmar a manutenção do crédito sobre a farinha e demais insumos",
+      "Enviar a tabela atualizada para os clientes supermercadistas"
+    ],
+    "explanation": "Valida-se o enquadramento na lista, zera-se a alíquota de venda, confirma-se a manutenção do crédito dos insumos e só depois se envia a tabela aos clientes.",
+    "pacciTip": "Valida, zera, confirma o crédito, só então envia! Ordem certa evita retrabalho."
+  },
+  {
+    "id": "REF-ASS-078",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma exportadora de café no Espírito Santo vende parte da produção para um torrefador em Santa Catarina, operação sujeita ao princípio do destino.",
+    "question": "Ordene o fluxo correto dessa venda interestadual de café:",
+    "options": [
+      "Consolidar a operação na apuração mensal do IBS",
+      "Emitir a nota fiscal informando origem e destino da carga",
+      "Direcionar a maior parte da arrecadação ao Estado de destino",
+      "Calcular o IBS aplicável conforme as regras vigentes"
+    ],
+    "correctAnswer": [
+      "Emitir a nota fiscal informando origem e destino da carga",
+      "Calcular o IBS aplicável conforme as regras vigentes",
+      "Direcionar a maior parte da arrecadação ao Estado de destino",
+      "Consolidar a operação na apuração mensal do IBS"
+    ],
+    "explanation": "Emite-se a nota com origem e destino, calcula-se o IBS conforme as regras, direciona-se a maior parte ao Estado de consumo e consolida-se na apuração mensal.",
+    "pacciTip": "Emite, calcula, direciona pro destino, consolida! O café segue esse trajeto certinho."
+  },
+  {
+    "id": "REF-ASS-079",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Um pet shop oferece um plano de assinatura mensal de produtos, cobrado automaticamente via cartão, com split payment ativo.",
+    "question": "Ordene o fluxo correto da cobrança mensal com split payment:",
+    "options": [
+      "Valor líquido é depositado na conta do pet shop",
+      "Cobrança automática é processada no cartão do cliente assinante",
+      "Sistema de pagamento segrega o IBS/CBS embutido na assinatura",
+      "Tributo segregado é direcionado automaticamente ao Fisco"
+    ],
+    "correctAnswer": [
+      "Cobrança automática é processada no cartão do cliente assinante",
+      "Sistema de pagamento segrega o IBS/CBS embutido na assinatura",
+      "Tributo segregado é direcionado automaticamente ao Fisco",
+      "Valor líquido é depositado na conta do pet shop"
+    ],
+    "explanation": "A cobrança é processada, o sistema segrega o tributo embutido, envia essa parcela ao Fisco automaticamente e só então repassa o valor líquido à academia.",
+    "pacciTip": "Cobra, segrega, envia, repassa! O split payment não perde o ritmo do assinante."
+  },
+  {
+    "id": "REF-ASS-080",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma loja de materiais elétricos fechou venda para uma construtora e precisa parametrizar o cadastro dessa nova cliente antes de emitir a nota.",
+    "question": "Ordene o fluxo correto de parametrização do cadastro dessa cliente:",
+    "options": [
+      "Vincular a tabela de alíquotas de acordo com o regime da construtora",
+      "Emitir a primeira nota fiscal de venda para a construtora",
+      "Registrar os dados cadastrais e o regime tributário da construtora",
+      "Avaliar se a operação exige alguma retenção específica"
+    ],
+    "correctAnswer": [
+      "Registrar os dados cadastrais e o regime tributário da construtora",
+      "Avaliar se a operação exige alguma retenção específica",
+      "Vincular a tabela de alíquotas de acordo com o regime da construtora",
+      "Emitir a primeira nota fiscal de venda para a construtora"
+    ],
+    "explanation": "Registram-se os dados e o regime, avalia-se a retenção aplicável, vincula-se a tabela de alíquotas e só então se emite a primeira nota fiscal.",
+    "pacciTip": "Cadastra, avalia, vincula, emite! Passo a passo sem pular etapa."
+  },
+  {
+    "id": "REF-ASS-081",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma empresa de tecnologia contratou uma consultoria especializada em segurança da informação, serviço que se enquadra em hipótese de retenção prevista em lei.",
+    "question": "Ordene o fluxo correto de aplicação dessa retenção:",
+    "options": [
+      "Recolher o tributo retido ao ente competente dentro do prazo",
+      "Identificar que o serviço contratado está sujeito à retenção",
+      "Calcular o valor a ser retido sobre o valor da fatura",
+      "Descontar o valor retido no pagamento à consultoria"
+    ],
+    "correctAnswer": [
+      "Identificar que o serviço contratado está sujeito à retenção",
+      "Calcular o valor a ser retido sobre o valor da fatura",
+      "Descontar o valor retido no pagamento à consultoria",
+      "Recolher o tributo retido ao ente competente dentro do prazo"
+    ],
+    "explanation": "Identifica-se a hipótese de retenção, calcula-se o valor sobre a fatura, desconta-se no pagamento e recolhe-se o tributo retido ao ente competente.",
+    "pacciTip": "Identifica, calcula, desconta, recolhe! Sem pressa, mas sem pular passo."
+  },
+  {
+    "id": "REF-ASS-082",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma rede de supermercados está organizando uma auditoria interna para conferir se os tributos das últimas notas foram declarados aos órgãos corretos.",
+    "question": "Ordene o fluxo correto dessa checagem por tributo:",
+    "options": [
+      "Separar o valor de CBS apurado em cada nota",
+      "Confirmar que o IBS foi transmitido ao Comitê Gestor",
+      "Separar o valor de IBS apurado em cada nota",
+      "Confirmar que a CBS foi transmitida à Receita Federal"
+    ],
+    "correctAnswer": [
+      "Separar o valor de IBS apurado em cada nota",
+      "Confirmar que o IBS foi transmitido ao Comitê Gestor",
+      "Separar o valor de CBS apurado em cada nota",
+      "Confirmar que a CBS foi transmitida à Receita Federal"
+    ],
+    "explanation": "A checagem segue por tributo: primeiro separa-se e confirma-se o IBS junto ao Comitê Gestor, depois separa-se e confirma-se a CBS junto à Receita Federal.",
+    "pacciTip": "Um tributo de cada vez, amico! IBS com o Comitê, CBS com a Receita."
+  },
+  {
+    "id": "REF-ASS-083",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma rede de hortifrúti está cadastrando frutas e verduras que constam na lista de itens com alíquota zero, para abastecer suas lojas físicas.",
+    "question": "Ordene o fluxo correto de parametrização desses itens:",
+    "options": [
+      "Ativar a alíquota zero na venda ao consumidor final",
+      "Confirmar que os itens integram a lista oficial de alíquota zero",
+      "Preservar o crédito das compras feitas junto aos produtores",
+      "Disponibilizar os itens para venda nas lojas físicas"
+    ],
+    "correctAnswer": [
+      "Confirmar que os itens integram a lista oficial de alíquota zero",
+      "Ativar a alíquota zero na venda ao consumidor final",
+      "Preservar o crédito das compras feitas junto aos produtores",
+      "Disponibilizar os itens para venda nas lojas físicas"
+    ],
+    "explanation": "Confirma-se o enquadramento na lista, ativa-se a alíquota zero na venda, preserva-se o crédito das compras e só então os itens vão para a loja.",
+    "pacciTip": "Confirma, ativa, preserva o crédito, libera pra loja! Assim a fruta chega certinha no cadastro."
+  },
+  {
+    "id": "REF-ASS-084",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma fábrica de eletrodomésticos em Santa Catarina vende uma linha de fogões para uma rede varejista no Rio Grande do Sul.",
+    "question": "Ordene o fluxo correto dessa venda interestadual:",
+    "options": [
+      "Emitir a nota fiscal registrando Estado de origem e de destino",
+      "Consolidar a operação na apuração periódica do IBS",
+      "Calcular o IBS aplicando as regras do princípio do destino",
+      "Direcionar a maior parte da arrecadação ao Rio Grande do Sul"
+    ],
+    "correctAnswer": [
+      "Emitir a nota fiscal registrando Estado de origem e de destino",
+      "Calcular o IBS aplicando as regras do princípio do destino",
+      "Direcionar a maior parte da arrecadação ao Rio Grande do Sul",
+      "Consolidar a operação na apuração periódica do IBS"
+    ],
+    "explanation": "Emite-se a nota com origem e destino, calcula-se o IBS pelas regras de destino, direciona-se a maior parte ao Rio Grande do Sul e consolida-se na apuração.",
+    "pacciTip": "Origem manda o produto, destino recebe o imposto! Sempre nessa ordem."
+  },
+  {
+    "id": "REF-ASS-085",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma academia de ginástica cobra a mensalidade dos alunos automaticamente via aplicativo, com split payment configurado no arranjo de pagamento.",
+    "question": "Ordene o fluxo correto dessa cobrança recorrente:",
+    "options": [
+      "Sistema segrega o IBS/CBS embutido no valor da mensalidade",
+      "Valor líquido é repassado à conta da academia",
+      "Aplicativo processa a cobrança automática do aluno",
+      "Parcela segregada é enviada automaticamente ao Fisco"
+    ],
+    "correctAnswer": [
+      "Aplicativo processa a cobrança automática do aluno",
+      "Sistema segrega o IBS/CBS embutido no valor da mensalidade",
+      "Parcela segregada é enviada automaticamente ao Fisco",
+      "Valor líquido é repassado à conta da academia"
+    ],
+    "explanation": "O aplicativo processa a cobrança, o sistema segrega o tributo embutido, envia essa parcela ao Fisco e só então repassa o valor líquido à academia.",
+    "pacciTip": "Cobra, segrega, envia, repassa! O split payment não perde o ritmo da academia."
+  },
+  {
+    "id": "REF-ASS-086",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma empresa de organização de eventos fechou contrato com uma nova cliente PJ e precisa parametrizar o cadastro antes de emitir a primeira fatura de serviço.",
+    "question": "Ordene o fluxo correto dessa parametrização:",
+    "options": [
+      "Definir se há hipótese de retenção aplicável ao serviço contratado",
+      "Registrar os dados cadastrais e o regime tributário da cliente",
+      "Emitir a primeira fatura de prestação de serviço",
+      "Vincular a tabela de alíquotas correspondente ao serviço"
+    ],
+    "correctAnswer": [
+      "Registrar os dados cadastrais e o regime tributário da cliente",
+      "Definir se há hipótese de retenção aplicável ao serviço contratado",
+      "Vincular a tabela de alíquotas correspondente ao serviço",
+      "Emitir a primeira fatura de prestação de serviço"
+    ],
+    "explanation": "Registram-se os dados e o regime, define-se a retenção aplicável, vincula-se a tabela de alíquotas e só então se emite a primeira fatura.",
+    "pacciTip": "Cadastro, retenção, alíquota, fatura! Segue essa receita e não erra."
+  },
+  {
+    "id": "REF-ASS-087",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma indústria gráfica contrata uma transportadora terceirizada para entregas recorrentes de grandes lotes, serviço enquadrado em hipótese de retenção.",
+    "question": "Ordene o fluxo correto de aplicação da retenção nesses fretes:",
+    "options": [
+      "Repassar o valor líquido do frete à transportadora",
+      "Confirmar que o frete contratado está sujeito à retenção",
+      "Recolher o valor retido dentro do prazo estabelecido",
+      "Calcular o percentual de retenção sobre o valor do frete"
+    ],
+    "correctAnswer": [
+      "Confirmar que o frete contratado está sujeito à retenção",
+      "Calcular o percentual de retenção sobre o valor do frete",
+      "Repassar o valor líquido do frete à transportadora",
+      "Recolher o valor retido dentro do prazo estabelecido"
+    ],
+    "explanation": "Confirma-se a hipótese, calcula-se o percentual sobre o frete, repassa-se o líquido à transportadora e recolhe-se o valor retido dentro do prazo.",
+    "pacciTip": "Confirma, calcula, repassa, recolhe! O frete não sai do lugar sem essa ordem."
+  },
+  {
+    "id": "REF-ASS-088",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma rede de clínicas de fisioterapia com unidades em três cidades está organizando o fluxo de declaração da CBS gerada nos atendimentos.",
+    "question": "Ordene o fluxo correto de declaração da CBS dessa rede:",
+    "options": [
+      "Recolher o valor apurado à Receita Federal do Brasil",
+      "Consolidar os atendimentos faturados nas três unidades",
+      "Apurar a CBS devida no período de referência",
+      "Transmitir a declaração pelos canais da Receita Federal"
+    ],
+    "correctAnswer": [
+      "Consolidar os atendimentos faturados nas três unidades",
+      "Apurar a CBS devida no período de referência",
+      "Transmitir a declaração pelos canais da Receita Federal",
+      "Recolher o valor apurado à Receita Federal do Brasil"
+    ],
+    "explanation": "Consolidam-se os atendimentos das unidades, apura-se a CBS do período, transmite-se a declaração à Receita Federal e recolhe-se o valor apurado.",
+    "pacciTip": "Três unidades, uma só declaração, e tudo vai pra Receita Federal!"
+  },
+  {
+    "id": "REF-ASS-089",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma cooperativa agrícola está parametrizando a venda de feijão a granel para um atacadista, item que consta na lista da cesta básica nacional.",
+    "question": "Ordene o fluxo correto dessa parametrização de venda:",
+    "options": [
+      "Emitir a nota fiscal de venda com alíquota zero aplicada",
+      "Confirmar o enquadramento do feijão na lista de alíquota zero",
+      "Registrar o crédito das compras de insumos agrícolas",
+      "Configurar a alíquota zero no cadastro do produto"
+    ],
+    "correctAnswer": [
+      "Confirmar o enquadramento do feijão na lista de alíquota zero",
+      "Configurar a alíquota zero no cadastro do produto",
+      "Registrar o crédito das compras de insumos agrícolas",
+      "Emitir a nota fiscal de venda com alíquota zero aplicada"
+    ],
+    "explanation": "Confirma-se o enquadramento do feijão, configura-se a alíquota zero no cadastro, registra-se o crédito dos insumos e emite-se a nota de venda.",
+    "pacciTip": "O feijão segue esse caminho até chegar na nota com alíquota zero certinha!"
+  },
+  {
+    "id": "REF-ASS-090",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma indústria de tintas no Rio de Janeiro fecha uma grande venda para uma rede de construção em Pernambuco.",
+    "question": "Ordene o fluxo correto dessa venda interestadual de tintas:",
+    "options": [
+      "Consolidar a venda na apuração mensal do IBS",
+      "Direcionar a maior parte da arrecadação a Pernambuco",
+      "Emitir a nota fiscal da operação interestadual",
+      "Calcular o IBS conforme o princípio do destino"
+    ],
+    "correctAnswer": [
+      "Emitir a nota fiscal da operação interestadual",
+      "Calcular o IBS conforme o princípio do destino",
+      "Direcionar a maior parte da arrecadação a Pernambuco",
+      "Consolidar a venda na apuração mensal do IBS"
+    ],
+    "explanation": "Emite-se a nota, calcula-se o IBS pelas regras de destino, direciona-se a maior parte da arrecadação a Pernambuco e consolida-se a operação na apuração.",
+    "pacciTip": "A tinta muda de Estado, e o imposto pinta o quadro certo no destino!"
+  },
+  {
+    "id": "REF-ASS-091",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma livraria online vende diretamente ao consumidor final por meio de um checkout que já opera com split payment configurado.",
+    "question": "Ordene o fluxo correto dessa venda online:",
+    "options": [
+      "Valor líquido é depositado na conta da livraria",
+      "Sistema identifica o IBS/CBS embutido no preço do livro",
+      "Cliente finaliza a compra e efetua o pagamento",
+      "Tributo identificado é direcionado automaticamente ao Fisco"
+    ],
+    "correctAnswer": [
+      "Cliente finaliza a compra e efetua o pagamento",
+      "Sistema identifica o IBS/CBS embutido no preço do livro",
+      "Tributo identificado é direcionado automaticamente ao Fisco",
+      "Valor líquido é depositado na conta da livraria"
+    ],
+    "explanation": "O cliente paga, o sistema identifica o tributo embutido, direciona essa parte ao Fisco automaticamente e deposita o valor líquido na conta da livraria.",
+    "pacciTip": "Paga, identifica, direciona, deposita! O livro chega, o imposto já foi entregue antes."
+  },
+  {
+    "id": "REF-ASS-092",
+    "level": "assistente",
+    "type": "ordering",
+    "scenario": "Uma indústria de autopeças está cadastrando um novo fornecedor nacional de insumos metálicos antes de iniciar as compras regulares.",
+    "question": "Ordene o fluxo correto dessa parametrização de fornecedor:",
+    "options": [
+      "Vincular a tabela de alíquotas aplicável às compras desse insumo",
+      "Registrar os dados cadastrais e o regime tributário do fornecedor",
+      "Testar a emissão de uma nota de entrada simulada",
+      "Avaliar se as compras desse insumo têm hipótese de retenção"
+    ],
+    "correctAnswer": [
+      "Registrar os dados cadastrais e o regime tributário do fornecedor",
+      "Avaliar se as compras desse insumo têm hipótese de retenção",
+      "Vincular a tabela de alíquotas aplicável às compras desse insumo",
+      "Testar a emissão de uma nota de entrada simulada"
+    ],
+    "explanation": "Registram-se os dados e o regime, avalia-se a retenção aplicável, vincula-se a tabela de alíquotas e testa-se com uma nota de entrada simulada.",
+    "pacciTip": "Cadastra, avalia, vincula, testa! Assim a compra de insumo começa sem sustos."
+  },
+  {
+    "id": "REF-ASS-093",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No manual de compliance de uma empresa de auditoria contábil, há uma frase incompleta sobre quando aplicar a retenção de tributos.",
+    "question": "A retenção do IBS/CBS na fonte deve ser aplicada apenas nas operações ___ previstas em lei, e não em todas as operações.",
+    "options": [
+      "especificamente",
+      "genericamente",
+      "aleatoriamente",
+      "opcionalmente"
+    ],
+    "correctAnswer": "especificamente",
+    "explanation": "A retenção não é regra geral: aplica-se apenas às operações especificamente previstas em lei.",
+    "pacciTip": "Especificamente é a palavra-chave, tesoro! Sem ela, a retenção vira bagunça."
+  },
+  {
+    "id": "REF-ASS-094",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No procedimento interno de uma empresa de eventos, consta uma frase incompleta sobre o momento de aplicar a retenção.",
+    "question": "Quando aplicável, a retenção do IBS/CBS deve ser calculada no momento do ___ ao fornecedor do serviço.",
+    "options": [
+      "pagamento",
+      "cadastro",
+      "orçamento",
+      "cancelamento"
+    ],
+    "correctAnswer": "pagamento",
+    "explanation": "A retenção é calculada e aplicada no momento do pagamento ao fornecedor, sendo repassado a ele apenas o valor líquido.",
+    "pacciTip": "É na hora de pagar que a retenção entra em ação, amico!"
+  },
+  {
+    "id": "REF-ASS-095",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "Durante um treinamento em uma consultoria de TI, o instrutor apresenta uma frase incompleta sobre quem é o responsável pela retenção.",
+    "question": "Nas hipóteses legais de retenção, é o ___ do serviço quem deve calcular e reter o IBS/CBS, e não o prestador.",
+    "options": [
+      "tomador",
+      "vendedor",
+      "transportador",
+      "consumidor final"
+    ],
+    "correctAnswer": "tomador",
+    "explanation": "É o tomador do serviço, ou seja, quem contrata e paga, o responsável por calcular e reter o tributo devido.",
+    "pacciTip": "Quem contrata, retém! O prestador só recebe o valor líquido depois."
+  },
+  {
+    "id": "REF-ASS-096",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No fluxograma interno de uma rede de clínicas, há uma etapa final descrita de forma incompleta.",
+    "question": "Depois de reter o tributo no pagamento, a empresa deve ___ esse valor ao ente competente dentro do prazo legal.",
+    "options": [
+      "recolher",
+      "descartar",
+      "reembolsar",
+      "arquivar"
+    ],
+    "correctAnswer": "recolher",
+    "explanation": "O valor retido deve ser recolhido ao ente competente (Comitê Gestor ou Receita Federal, conforme o tributo) dentro do prazo estabelecido.",
+    "pacciTip": "Reteve, agora recolhe! Não pode ficar parado na conta da empresa."
+  },
+  {
+    "id": "REF-ASS-097",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de uma indústria metalúrgica, há uma frase incompleta sobre a administração dos novos tributos.",
+    "question": "O IBS é administrado pelo Comitê Gestor, enquanto a CBS é administrada pela ___.",
+    "options": [
+      "Receita Federal do Brasil",
+      "Junta Comercial",
+      "Prefeitura Municipal",
+      "Agência Reguladora"
+    ],
+    "correctAnswer": "Receita Federal do Brasil",
+    "explanation": "A divisão de competência é clara: IBS com o Comitê Gestor, CBS com a Receita Federal do Brasil.",
+    "pacciTip": "Receita Federal cuida da CBS, sempre foi assim, tesoro!"
+  },
+  {
+    "id": "REF-ASS-098",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "Ao revisar o organograma de tributos com o time fiscal de uma rede de postos de combustível, você encontra uma frase incompleta.",
+    "question": "O ___ do IBS centraliza a arrecadação e distribuição do imposto entre Estados e Municípios.",
+    "options": [
+      "Comitê Gestor",
+      "Tribunal de Contas",
+      "Conselho Monetário",
+      "Ministério Público"
+    ],
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS é o órgão que centraliza a arrecadação e a distribuição do imposto entre os entes envolvidos.",
+    "pacciTip": "Comitê Gestor centraliza tudo do IBS, um só lugar pra cuidar da partilha!"
+  },
+  {
+    "id": "REF-ASS-099",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No módulo de configuração fiscal de um novo ERP, a tela de ajuda apresenta uma frase incompleta sobre a natureza da CBS.",
+    "question": "A CBS é um tributo de competência ___, administrado pela Receita Federal do Brasil.",
+    "options": [
+      "federal",
+      "estadual",
+      "municipal",
+      "internacional"
+    ],
+    "correctAnswer": "federal",
+    "explanation": "A CBS é um tributo federal, diferente do IBS, que é compartilhado entre Estados e Municípios.",
+    "pacciTip": "Federal é CBS, compartilhado é IBS. Não troca essa etiqueta, amico!"
+  },
+  {
+    "id": "REF-ASS-100",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No treinamento de integração de um comércio atacadista de bebidas, a apostila traz uma frase incompleta sobre a natureza do IBS.",
+    "question": "O IBS é um tributo de competência ___ entre Estados e Municípios, administrado pelo Comitê Gestor.",
+    "options": [
+      "compartilhada",
+      "exclusivamente federal",
+      "exclusivamente municipal",
+      "internacional"
+    ],
+    "correctAnswer": "compartilhada",
+    "explanation": "O IBS tem competência compartilhada entre Estados e Municípios, e por isso é administrado por um órgão colegiado, o Comitê Gestor.",
+    "pacciTip": "Compartilhado entre Estados e Municípios, por isso o Comitê Gestor existe!"
+  },
+  {
+    "id": "REF-ASS-101",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No manual de precificação de um mercado municipal, há uma frase incompleta sobre o tratamento de itens básicos de alimentação.",
+    "question": "Itens da cesta básica nacional têm alíquota ___ de IBS/CBS, mas o vendedor mantém o direito a crédito.",
+    "options": [
+      "zero",
+      "máxima",
+      "progressiva",
+      "dobrada"
+    ],
+    "correctAnswer": "zero",
+    "explanation": "A alíquota zero elimina a cobrança na venda desses itens, sem prejudicar o crédito das etapas anteriores.",
+    "pacciTip": "Zero na venda, crédito garantido na compra! Combinação perfeita da cesta básica."
+  },
+  {
+    "id": "REF-ASS-102",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No procedimento de cadastro de produtos de uma indústria de farinha de trigo, há uma frase incompleta sobre o efeito da alíquota zero no crédito.",
+    "question": "Mesmo com alíquota zero na venda, a empresa mantém o direito ao ___ dos tributos pagos nas compras anteriores.",
+    "options": [
+      "crédito",
+      "desconto",
+      "cancelamento",
+      "adiamento"
+    ],
+    "correctAnswer": "crédito",
+    "explanation": "A alíquota zero não retira o direito ao crédito das etapas anteriores da cadeia, apenas elimina a cobrança na saída.",
+    "pacciTip": "Crédito é a palavra que não pode sumir do seu vocabulário, tesoro!"
+  },
+  {
+    "id": "REF-ASS-103",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No treinamento de uma rede de açougues sobre itens com tratamento tributário diferenciado, há uma frase incompleta na apostila.",
+    "question": "A lista de itens com alíquota zero é definida pela ___, e não escolhida livremente pelo comerciante.",
+    "options": [
+      "legislação",
+      "concorrência",
+      "clientela",
+      "diretoria da loja"
+    ],
+    "correctAnswer": "legislação",
+    "explanation": "Os itens que recebem alíquota zero são definidos pela legislação, não podendo ser escolhidos livremente por cada comerciante.",
+    "pacciTip": "Quem decide a lista é a lei, não o dono da loja, capisce?"
+  },
+  {
+    "id": "REF-ASS-104",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No cadastro de produtos de uma indústria de óleo de cozinha, você encontra uma frase incompleta sobre a diferença entre alíquota zero e isenção.",
+    "question": "Diferente da isenção tradicional, a alíquota zero não retira da empresa o direito ao ___ das compras anteriores.",
+    "options": [
+      "crédito",
+      "estoque",
+      "faturamento",
+      "cadastro"
+    ],
+    "correctAnswer": "crédito",
+    "explanation": "A principal diferença prática é que a alíquota zero preserva o crédito das etapas anteriores, o que nem sempre ocorre em modelos de isenção tradicional.",
+    "pacciTip": "Alíquota zero é generosa com o crédito, não esquece essa diferença!"
+  },
+  {
+    "id": "REF-ASS-105",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No manual de logística fiscal de uma fábrica de pneus, há uma frase incompleta sobre operações interestaduais.",
+    "question": "Nas vendas interestaduais, a maior parte da arrecadação do IBS vai para o Estado de ___ da mercadoria.",
+    "options": [
+      "destino",
+      "origem",
+      "trânsito",
+      "fabricação"
+    ],
+    "correctAnswer": "destino",
+    "explanation": "O princípio do destino direciona a maior parte da arrecadação do IBS para onde o bem é efetivamente consumido.",
+    "pacciTip": "Destino é quem fica com a maior fatia, sempre lembra disso!"
+  },
+  {
+    "id": "REF-ASS-106",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No treinamento fiscal de uma distribuidora de peças agrícolas, a apostila traz uma frase incompleta sobre o modelo anterior de tributação.",
+    "question": "O modelo anterior concentrava a arrecadação na ___, enquanto o novo modelo prioriza o destino do consumo.",
+    "options": [
+      "origem",
+      "capital do país",
+      "sede da matriz",
+      "fronteira"
+    ],
+    "correctAnswer": "origem",
+    "explanation": "O sistema antigo concentrava a arrecadação no Estado de origem da mercadoria; o novo modelo inverte essa lógica, priorizando o destino.",
+    "pacciTip": "Origem era o rei antes, agora o destino assumiu o trono!"
+  },
+  {
+    "id": "REF-ASS-107",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No procedimento de vendas interestaduais de uma indústria de móveis planejados, consta uma frase incompleta sobre o período de transição.",
+    "question": "Durante o período de transição, a parcela de arrecadação que ainda fica com a origem é reduzida de forma ___ a cada ano.",
+    "options": [
+      "gradual",
+      "instantânea",
+      "aleatória",
+      "dobrada"
+    ],
+    "correctAnswer": "gradual",
+    "explanation": "A transição prevê uma redução gradual e progressiva da parcela destinada à origem, até ela desaparecer por completo.",
+    "pacciTip": "Devagar e sempre, a fatia da origem vai encolhendo a cada ano!"
+  },
+  {
+    "id": "REF-ASS-108",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No treinamento de operações interestaduais de uma rede de lojas de tecidos, há uma frase incompleta sobre o consumidor final.",
+    "question": "O princípio do destino busca fazer o IBS acompanhar o local onde o bem é efetivamente ___ pelo consumidor final.",
+    "options": [
+      "consumido",
+      "fabricado",
+      "estocado",
+      "transportado"
+    ],
+    "correctAnswer": "consumido",
+    "explanation": "O princípio do destino direciona a arrecadação para onde o bem ou serviço é efetivamente consumido, e não onde é produzido.",
+    "pacciTip": "Segue o consumo, não a fábrica! É a lógica do destino."
+  },
+  {
+    "id": "REF-ASS-109",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No manual de checkout de uma loja de artigos esportivos online, consta uma frase incompleta sobre o mecanismo de pagamento.",
+    "question": "O ___ segrega automaticamente o valor do IBS/CBS no momento em que o cliente final realiza o pagamento.",
+    "options": [
+      "split payment",
+      "boleto bancário",
+      "cartão pré-pago",
+      "carnê"
+    ],
+    "correctAnswer": "split payment",
+    "explanation": "O split payment é o mecanismo responsável por segregar automaticamente o tributo já no momento do pagamento.",
+    "pacciTip": "Split payment: o nome já entrega, ele separa o tributo na hora!"
+  },
+  {
+    "id": "REF-ASS-110",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No treinamento sobre pagamentos de um aplicativo de transporte, há uma frase incompleta sobre o que o motorista efetivamente recebe.",
+    "question": "Com o split payment, o prestador recebe apenas o valor ___, já sem a parcela de IBS/CBS.",
+    "options": [
+      "líquido",
+      "bruto",
+      "dobrado",
+      "integral"
+    ],
+    "correctAnswer": "líquido",
+    "explanation": "O split payment repassa ao prestador apenas o valor líquido, pois a parcela do tributo já foi segregada no pagamento.",
+    "pacciTip": "Líquido é o que sobra depois que o tributo já saiu voando pro Fisco!"
+  },
+  {
+    "id": "REF-ASS-111",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No fluxo de cobrança recorrente de uma plataforma de assinatura educacional, há uma frase incompleta sobre o destino do tributo segregado.",
+    "question": "No split payment, o valor do tributo segregado é direcionado automaticamente ao ___, sem passar pela conta do vendedor.",
+    "options": [
+      "Fisco",
+      "cliente",
+      "banco emissor do cartão",
+      "fornecedor de tecnologia"
+    ],
+    "correctAnswer": "Fisco",
+    "explanation": "O valor segregado pelo split payment vai diretamente ao Fisco, sem transitar pela conta do vendedor.",
+    "pacciTip": "Direto pro Fisco, sem escalas na conta do vendedor!"
+  },
+  {
+    "id": "REF-ASS-112",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No treinamento de uma loja de calçados que vende tanto na loja física quanto por aplicativo, há uma frase incompleta sobre a abrangência do split payment.",
+    "question": "O split payment se aplica a vendas ao consumidor final tanto em canais físicos quanto ___.",
+    "options": [
+      "digitais",
+      "internacionais",
+      "atacadistas",
+      "governamentais"
+    ],
+    "correctAnswer": "digitais",
+    "explanation": "O split payment não se limita a um canal específico: aplica-se a vendas ao consumidor final tanto em lojas físicas quanto em canais digitais.",
+    "pacciTip": "Loja física ou aplicativo, o split payment está presente nos dois!"
+  },
+  {
+    "id": "REF-ASS-113",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No checklist de parametrização de uma distribuidora de produtos de limpeza, há uma frase incompleta sobre a etapa inicial do cadastro.",
+    "question": "Antes de liberar qualquer venda, é preciso ___ os dados cadastrais e o regime tributário do novo cliente.",
+    "options": [
+      "registrar",
+      "ignorar",
+      "adivinhar",
+      "copiar de outro cliente"
+    ],
+    "correctAnswer": "registrar",
+    "explanation": "O primeiro passo da parametrização é sempre registrar corretamente os dados cadastrais e o regime tributário do cliente.",
+    "pacciTip": "Registrar primeiro, vender depois! Nunca inverte essa ordem."
+  },
+  {
+    "id": "REF-ASS-114",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No manual de compras de uma fábrica de móveis sob encomenda, há uma frase incompleta sobre a etapa final antes de liberar um novo fornecedor.",
+    "question": "Antes de liberar o cadastro para compras reais, recomenda-se testar a emissão de uma nota fiscal ___.",
+    "options": [
+      "simulada",
+      "definitiva",
+      "manual em papel",
+      "sem numeração"
+    ],
+    "correctAnswer": "simulada",
+    "explanation": "Testar com uma nota fiscal simulada antes de liberar o cadastro ajuda a identificar erros de parametrização antes da primeira operação real.",
+    "pacciTip": "Simulada primeiro, real depois! Assim você evita surpresa feia."
+  },
+  {
+    "id": "REF-ASS-115",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No procedimento de vendas de uma rede de óticas, há uma frase incompleta sobre a etapa que conecta o cadastro do cliente às alíquotas corretas.",
+    "question": "Depois de definir o regime tributário do cliente, é preciso ___ a tabela de alíquotas correspondente.",
+    "options": [
+      "vincular",
+      "apagar",
+      "duplicar",
+      "ocultar"
+    ],
+    "correctAnswer": "vincular",
+    "explanation": "Vincular a tabela de alíquotas correta ao cadastro do cliente garante que as vendas futuras sejam tributadas corretamente.",
+    "pacciTip": "Vincula a tabela certa, e as vendas seguem tranquilas depois!"
+  },
+  {
+    "id": "REF-ASS-116",
+    "level": "assistente",
+    "type": "fill_blank",
+    "scenario": "No fluxo de compras de uma empresa de manutenção predial, há uma frase incompleta sobre a avaliação necessária antes de pagar um fornecedor de serviço.",
+    "question": "Antes de efetuar o pagamento, é preciso avaliar se a operação se enquadra em hipótese de ___ na fonte.",
+    "options": [
+      "retenção",
+      "isenção",
+      "suspensão",
+      "compensação"
+    ],
+    "correctAnswer": "retenção",
+    "explanation": "Antes do pagamento, deve-se avaliar se o serviço contratado se enquadra em alguma hipótese legal de retenção do tributo na fonte.",
+    "pacciTip": "Avalia a retenção antes de soltar o pagamento, tesoro!"
+  },
+  {
+    "id": "REF-ASS-117",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em um escritório de advocacia, o financeiro pergunta sobre a base que determina se um serviço contratado exige retenção de IBS/CBS na fonte.",
+    "question": "Digite a palavra que resume a fonte que determina as hipóteses de retenção do IBS/CBS: previsão em ___?",
+    "correctAnswer": "lei",
+    "explanation": "A retenção na fonte só se aplica às hipóteses expressamente previstas em lei, não sendo uma regra geral.",
+    "pacciTip": "Lei, sempre a lei! Sem previsão legal, não existe retenção."
+  },
+  {
+    "id": "REF-ASS-118",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma indústria de embalagens plásticas, o setor de compras precisa lembrar quem é o responsável por reter o tributo em uma hipótese legal aplicável.",
+    "question": "Digite o termo (uma palavra) que designa quem contrata e paga o serviço, e por isso é responsável por reter o tributo:",
+    "correctAnswer": "tomador",
+    "explanation": "O tomador do serviço é quem contrata e paga, sendo o responsável por calcular e reter o tributo nas hipóteses previstas em lei.",
+    "pacciTip": "Tomador é quem retém, prestador é quem recebe o líquido!"
+  },
+  {
+    "id": "REF-ASS-119",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma clínica de estética, o financeiro perguntou o que deve ser feito com o valor retido de um fornecedor antes do prazo de vencimento.",
+    "question": "Digite o verbo que indica a ação de enviar o valor retido ao ente competente:",
+    "correctAnswer": "recolher",
+    "explanation": "Após a retenção, o valor deve ser recolhido ao ente competente, IBS ao Comitê Gestor ou CBS à Receita Federal, dentro do prazo legal.",
+    "pacciTip": "Recolher é a palavra final da retenção, não esquece dela!"
+  },
+  {
+    "id": "REF-ASS-120",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma agência de publicidade, um novo estagiário perguntou se a retenção de IBS/CBS se aplica a toda e qualquer compra de serviço.",
+    "question": "Digite a palavra que caracteriza a retenção do IBS/CBS: ela é a regra geral ou a ___?",
+    "correctAnswer": "exceção",
+    "explanation": "A retenção é a exceção, aplicável apenas às hipóteses específicas previstas em lei, e não a regra geral das operações.",
+    "pacciTip": "Exceção, não regra! Guarda bem essa diferença, tesoro."
+  },
+  {
+    "id": "REF-ASS-121",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma indústria de alimentos processados, o setor fiscal está treinando um novo analista sobre quem administra cada tributo.",
+    "question": "Digite o nome (duas palavras) do órgão responsável pela administração compartilhada do IBS:",
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS administra esse tributo de forma compartilhada entre Estados e Municípios.",
+    "pacciTip": "Comitê Gestor, duas palavras que valem ouro na sua rotina fiscal!"
+  },
+  {
+    "id": "REF-ASS-122",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma empresa de consultoria financeira, o time fiscal precisa lembrar a quem a CBS deve ser declarada e recolhida.",
+    "question": "Digite o nome do órgão federal responsável por administrar a CBS:",
+    "correctAnswer": "Receita Federal",
+    "explanation": "A CBS, tributo de competência federal, é administrada pela Receita Federal do Brasil.",
+    "pacciTip": "Receita Federal cuida da CBS, sempre no mesmo endereço!"
+  },
+  {
+    "id": "REF-ASS-123",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma rede de lojas de departamento, o gestor fiscal pediu para resumir em uma palavra a natureza da competência do IBS entre os entes federativos.",
+    "question": "Digite a palavra que caracteriza a competência do IBS entre Estados e Municípios:",
+    "correctAnswer": "compartilhada",
+    "explanation": "O IBS tem competência compartilhada entre Estados e Municípios, administrada de forma conjunta pelo Comitê Gestor.",
+    "pacciTip": "Compartilhada é a palavra-chave do IBS, ninguém cuida sozinho!"
+  },
+  {
+    "id": "REF-ASS-124",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma startup de fintech, o time de compliance precisa resumir em uma palavra a natureza da competência da CBS.",
+    "question": "Digite a palavra que caracteriza a competência da CBS:",
+    "correctAnswer": "federal",
+    "explanation": "A CBS é um tributo de competência federal, administrado exclusivamente pela Receita Federal do Brasil.",
+    "pacciTip": "Federal é a etiqueta da CBS, direto pra Receita!"
+  },
+  {
+    "id": "REF-ASS-125",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma rede de supermercados populares, o time de precificação precisa lembrar qual alíquota se aplica aos itens da cesta básica nacional.",
+    "question": "Digite a alíquota de IBS/CBS aplicável à cesta básica nacional:",
+    "correctAnswer": "zero",
+    "explanation": "Os itens da cesta básica nacional recebem alíquota zero de IBS/CBS, mantendo o direito a crédito das etapas anteriores.",
+    "pacciTip": "Zero é a alíquota, mas o crédito continua vivo!"
+  },
+  {
+    "id": "REF-ASS-126",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma indústria de massas alimentícias, o setor fiscal precisa lembrar o que a empresa mantém mesmo vendendo com alíquota zero.",
+    "question": "Digite o que a empresa mantém sobre as compras anteriores, mesmo vendendo produtos com alíquota zero:",
+    "correctAnswer": "crédito",
+    "explanation": "Mesmo com alíquota zero na venda, a empresa mantém o direito ao crédito dos tributos pagos nas compras anteriores.",
+    "pacciTip": "Crédito não vai embora com a alíquota zero, tesoro!"
+  },
+  {
+    "id": "REF-ASS-127",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma distribuidora de grãos a granel, o gestor fiscal pediu para identificar quem define a lista de produtos com alíquota zero.",
+    "question": "Digite quem define a lista de produtos com alíquota zero da cesta básica:",
+    "correctAnswer": "legislação",
+    "explanation": "A lista de produtos com alíquota zero é definida pela legislação, não podendo ser escolhida livremente pela empresa.",
+    "pacciTip": "É a lei quem escolhe a lista, não a empresa, capisce?"
+  },
+  {
+    "id": "REF-ASS-128",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma rede de padarias de bairro, o gerente perguntou o nome do conjunto de produtos essenciais que recebe o tratamento de alíquota zero.",
+    "question": "Digite o termo (duas palavras) que designa o conjunto de produtos essenciais com alíquota zero:",
+    "correctAnswer": "cesta básica",
+    "explanation": "A cesta básica nacional é o conjunto de produtos essenciais que recebe o tratamento de alíquota zero de IBS/CBS.",
+    "pacciTip": "Cesta básica, duas palavras que todo consumidor agradece!"
+  },
+  {
+    "id": "REF-ASS-129",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma fábrica de eletrônicos, o time fiscal precisa lembrar para qual local vai a maior parte da arrecadação do IBS em vendas interestaduais.",
+    "question": "Digite o termo que define o local para onde vai a maior parte da arrecadação do IBS:",
+    "correctAnswer": "destino",
+    "explanation": "A maior parte da arrecadação do IBS é destinada ao local de destino, ou seja, onde o bem ou serviço é consumido.",
+    "pacciTip": "Destino é a palavra final da conta, sempre!"
+  },
+  {
+    "id": "REF-ASS-130",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma indústria de autopeças reconstruídas, o analista fiscal precisa lembrar o nome do princípio que orienta a arrecadação nas vendas interestaduais.",
+    "question": "Digite o nome (duas palavras) do princípio que orienta a arrecadação do IBS nas operações interestaduais:",
+    "correctAnswer": "princípio do destino",
+    "explanation": "O princípio do destino orienta que a arrecadação do IBS seja direcionada principalmente ao Estado de consumo do bem ou serviço.",
+    "pacciTip": "Princípio do destino: a bússola das vendas interestaduais!"
+  },
+  {
+    "id": "REF-ASS-131",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma exportadora de frutas que vende para outros Estados brasileiros, o setor fiscal precisa lembrar qual sistema orientava a arrecadação antes da Reforma.",
+    "question": "Digite o termo que definia, no sistema antigo, o local que concentrava a maior parte da arrecadação:",
+    "correctAnswer": "origem",
+    "explanation": "No sistema antigo, a arrecadação se concentrava no Estado de origem da mercadoria; o novo modelo inverte essa lógica para o destino.",
+    "pacciTip": "Origem era o modelo antigo, agora o destino assumiu o comando!"
+  },
+  {
+    "id": "REF-ASS-132",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma indústria de papel e celulose, o gestor fiscal precisa lembrar o comportamento da parcela destinada à origem durante o período de transição.",
+    "question": "Digite o adjetivo que descreve como a parcela destinada à origem diminui ao longo da transição:",
+    "correctAnswer": "gradual",
+    "explanation": "A parcela de arrecadação ainda destinada à origem diminui de forma gradual, ano a ano, até ser eliminada por completo.",
+    "pacciTip": "Gradual, devagarinho, até a origem ficar com zero!"
+  },
+  {
+    "id": "REF-ASS-133",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma loja de brinquedos online, o financeiro perguntou o nome do mecanismo que já separa o tributo no momento do pagamento do cliente.",
+    "question": "Digite o termo em inglês (duas palavras) que descreve esse mecanismo de segregação automática do tributo:",
+    "correctAnswer": "split payment",
+    "explanation": "O split payment é o mecanismo que segrega automaticamente o valor do tributo já no momento do pagamento pelo consumidor final.",
+    "pacciTip": "Split payment: separa antes mesmo de você perceber!"
+  },
+  {
+    "id": "REF-ASS-134",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma plataforma de delivery de refeições saudáveis, o restaurante parceiro perguntou o que ele efetivamente recebe depois da segregação automática do tributo.",
+    "question": "Digite o termo que designa o valor que o restaurante efetivamente recebe após o split payment:",
+    "correctAnswer": "líquido",
+    "explanation": "Após a segregação automática do tributo pelo split payment, o vendedor recebe apenas o valor líquido da venda.",
+    "pacciTip": "Líquido é o que sobra depois que o tributo já foi separado!"
+  },
+  {
+    "id": "REF-ASS-135",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma clínica de estética, o financeiro precisa lembrar para onde vai o valor segregado automaticamente no split payment.",
+    "question": "Digite para onde vai o valor do tributo segregado automaticamente no split payment:",
+    "correctAnswer": "Fisco",
+    "explanation": "O valor do tributo segregado automaticamente pelo split payment é direcionado diretamente ao Fisco, sem passar pela conta do vendedor.",
+    "pacciTip": "Direto pro Fisco, sem escalas! Essa é a rota do split payment."
+  },
+  {
+    "id": "REF-ASS-136",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma loja de cosméticos com plano de assinatura mensal, o financeiro perguntou em que momento exato o split payment atua na transação.",
+    "question": "Digite o momento em que o split payment segrega o tributo: no momento do ___?",
+    "correctAnswer": "pagamento",
+    "explanation": "O split payment atua exatamente no momento do pagamento, segregando automaticamente a parcela do tributo devido.",
+    "pacciTip": "É no pagamento que a mágica acontece, tesoro!"
+  },
+  {
+    "id": "REF-ASS-137",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma distribuidora de material de escritório, o time de cadastro precisa lembrar a primeira informação essencial a registrar sobre um novo cliente.",
+    "question": "Digite o que deve ser registrado primeiro, junto aos dados cadastrais, ao parametrizar um novo cliente:",
+    "correctAnswer": "regime tributário",
+    "explanation": "Junto aos dados cadastrais básicos, o regime tributário do cliente é uma informação essencial registrada logo no início da parametrização.",
+    "pacciTip": "Regime tributário é a base de tudo no cadastro, não esquece!"
+  },
+  {
+    "id": "REF-ASS-138",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma indústria de móveis corporativos, o time fiscal recomenda testar algo antes de liberar um cadastro novo para vendas reais.",
+    "question": "Digite o tipo de nota fiscal que deve ser testada antes de liberar um cadastro novo para operações reais:",
+    "correctAnswer": "simulada",
+    "explanation": "Testar a emissão de uma nota fiscal simulada antes da primeira operação real ajuda a identificar erros de parametrização.",
+    "pacciTip": "Nota simulada é o ensaio antes da estreia de verdade!"
+  },
+  {
+    "id": "REF-ASS-139",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma rede de farmácias de manipulação, o time de compras precisa lembrar o que conecta o regime tributário do fornecedor às vendas futuras.",
+    "question": "Digite o que deve ser vinculado ao cadastro do fornecedor, de acordo com seu regime tributário:",
+    "correctAnswer": "tabela de alíquotas",
+    "explanation": "A tabela de alíquotas deve ser vinculada ao cadastro conforme o regime tributário do fornecedor, garantindo a tributação correta das operações futuras.",
+    "pacciTip": "Tabela de alíquotas certa, operação futura tranquila!"
+  },
+  {
+    "id": "REF-ASS-140",
+    "level": "assistente",
+    "type": "text_input",
+    "scenario": "Em uma empresa de logística, o time fiscal precisa lembrar o que deve ser avaliado, no fluxo de cadastro, para saber se algum pagamento futuro exigirá retenção.",
+    "question": "Digite o que deve ser avaliado no cadastro para saber se a operação futura exige retenção do tributo:",
+    "correctAnswer": "hipótese",
+    "explanation": "É preciso avaliar se a operação se enquadra em alguma hipótese legal de retenção, etapa essencial do fluxo de parametrização do cadastro.",
+    "pacciTip": "Avalia a hipótese antes, e o pagamento sai sem sustos depois!"
+  }
+]

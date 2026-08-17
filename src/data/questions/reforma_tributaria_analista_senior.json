@@ -1,0 +1,2046 @@
+[
+  {
+    "id": "REF-SR-001",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Você está planejando o cronograma de adaptação de sistemas da empresa para os próximos anos, considerando a redução gradual do ICMS e do ISS.",
+    "question": "Entre 2029 e 2032, o que ocorre com as alíquotas de ICMS e ISS?",
+    "options": [
+      "São reduzidas progressivamente, ano a ano, até a extinção total em 2033",
+      "Permanecem fixas até 2033, quando somem de uma vez",
+      "Aumentam para compensar a queda de arrecadação federal",
+      "São suspensas totalmente já em 2029"
+    ],
+    "correctAnswer": "São reduzidas progressivamente, ano a ano, até a extinção total em 2033",
+    "explanation": "Entre 2029 e 2032, ICMS e ISS têm suas alíquotas reduzidas de forma gradual e progressiva, até serem totalmente extintos em 2033.",
+    "pacciTip": "Nada de susto de uma vez só, tesoro! É degrau por degrau até 2033."
+  },
+  {
+    "id": "REF-SR-002",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Você está revisando um contrato de fornecimento de longo prazo (5 anos), assinado antes da Reforma, que não prevê qualquer cláusula sobre mudança na carga tributária.",
+    "question": "Qual é a recomendação mais prudente ao revisar esse tipo de contrato diante da transição tributária?",
+    "options": [
+      "Incluir cláusula de repactuação/revisão de preço vinculada às mudanças de carga tributária ao longo da transição",
+      "Manter o contrato inalterado até o vencimento, mesmo com aumento de custo",
+      "Renegociar apenas em 2033, quando a transição terminar",
+      "Cancelar o contrato imediatamente"
+    ],
+    "correctAnswer": "Incluir cláusula de repactuação/revisão de preço vinculada às mudanças de carga tributária ao longo da transição",
+    "explanation": "Contratos de longo prazo devem prever mecanismos de repactuação para absorver variações de carga tributária, evitando prejuízo a qualquer uma das partes durante a transição.",
+    "pacciTip": "Contrato sem cláusula de repactuação é bomba-relógio, amico! Revisa antes que estoure."
+  },
+  {
+    "id": "REF-SR-003",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Você está avaliando o impacto do split payment no capital de giro da empresa, já que o valor do tributo não transita mais pelo caixa da companhia.",
+    "question": "Qual é o principal impacto do split payment no fluxo de caixa da empresa vendedora?",
+    "options": [
+      "Redução da disponibilidade de caixa, já que o valor do tributo é direcionado automaticamente ao Fisco, sem ficar disponível para uso da empresa",
+      "Aumento do caixa disponível, pois o Fisco antecipa recursos",
+      "Nenhum impacto, pois o tributo nunca fez parte do caixa da empresa",
+      "Elimina totalmente a necessidade de capital de giro"
+    ],
+    "correctAnswer": "Redução da disponibilidade de caixa, já que o valor do tributo é direcionado automaticamente ao Fisco, sem ficar disponível para uso da empresa",
+    "explanation": "Como o tributo é segregado no momento do pagamento, a empresa deixa de contar, mesmo que temporariamente, com esse valor em caixa — um efeito relevante no planejamento de capital de giro.",
+    "pacciTip": "O dinheiro do imposto nem passa pela sua conta, tesoro! Planeja o caixa pensando nisso."
+  },
+  {
+    "id": "REF-SR-004",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Você está avaliando o compliance fiscal da empresa considerando que o split payment gera dados em tempo real para o Fisco.",
+    "question": "Qual é uma das principais implicações desse cruzamento de dados em tempo real para o compliance fiscal da empresa?",
+    "options": [
+      "Menor margem para erros ou inconsistências não detectadas, exigindo maior rigor na parametrização e conferência das operações",
+      "Redução da necessidade de qualquer controle interno",
+      "Fim das obrigações acessórias",
+      "Isenção automática de fiscalização"
+    ],
+    "correctAnswer": "Menor margem para erros ou inconsistências não detectadas, exigindo maior rigor na parametrização e conferência das operações",
+    "explanation": "Com dados em tempo real, o Fisco detecta inconsistências muito mais rápido, o que exige controles internos mais rigorosos e parametrização precisa desde a origem.",
+    "pacciTip": "O Fisco agora vê quase tudo na hora, amico! Compliance frouxo não sobrevive nesse cenário."
+  },
+  {
+    "id": "REF-SR-005",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Você está explicando ao time que, em 2026, a cobrança do IBS/CBS terá caráter apenas de teste dos sistemas.",
+    "question": "Em 2026, a cobrança do IBS/CBS ocorre com alíquota simbólica, apenas para testar os sistemas, sem impacto financeiro relevante?",
+    "correctAnswer": true,
+    "explanation": "Correto! 2026 é o ano de teste, com alíquota bem reduzida, servindo para validar sistemas e processos antes da cobrança efetiva.",
+    "pacciTip": "2026 é o ensaio geral, tesoro! Ninguém sente o peso ainda no bolso."
+  },
+  {
+    "id": "REF-SR-006",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Um colega afirma, durante o planejamento anual, que a partir de 2027 o PIS e a Cofins deixam de existir, sendo substituídos definitivamente pela CBS.",
+    "question": "A partir de 2027, o PIS e a Cofins são extintos e substituídos pela CBS?",
+    "correctAnswer": true,
+    "explanation": "Correto! 2027 é o marco de extinção do PIS e da Cofins, com a CBS entrando plenamente em vigor no lugar deles.",
+    "pacciTip": "2027 é a despedida do PIS e da Cofins, amico! A CBS assume de vez."
+  },
+  {
+    "id": "REF-SR-007",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Ao revisar contratos de longo prazo firmados antes da Reforma, um colega comenta que eles já estão automaticamente protegidos de qualquer efeito da transição tributária, sem necessidade de revisão.",
+    "question": "Contratos de longo prazo firmados antes da Reforma estão automaticamente blindados de qualquer efeito da transição tributária, sem necessidade de revisão?",
+    "correctAnswer": false,
+    "explanation": "Errado! Sem cláusulas específicas, esses contratos podem gerar prejuízo para uma das partes ao longo da transição, sendo essencial revisá-los e, se necessário, repactuá-los.",
+    "pacciTip": "Nada é automático nesse mundo tributário, tesoro! Sempre revisa antes de assumir que está protegido."
+  },
+  {
+    "id": "REF-SR-008",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Durante uma reunião de compliance, um colega afirma que, com o split payment, o Fisco passa a ter acesso, em tempo real, a uma parte relevante das informações financeiras das transações comerciais.",
+    "question": "Com o split payment, o Fisco passa a ter acesso, em tempo real, a uma parte relevante das informações financeiras das transações comerciais?",
+    "correctAnswer": true,
+    "explanation": "Correto! O split payment é processado no próprio momento do pagamento, dando ao Fisco visibilidade quase imediata sobre parte relevante das transações.",
+    "pacciTip": "O Fisco virou espectador em tempo real, amico! Compliance precisa acompanhar esse ritmo."
+  },
+  {
+    "id": "REF-SR-009",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "Você está preparando uma apresentação para a diretoria com o cronograma detalhado da transição tributária, do início ao fim.",
+    "question": "Ordene os marcos da transição, do mais antigo para o mais recente:",
+    "options": [
+      "2033 – Extinção total do ICMS e do ISS, com o novo modelo plenamente vigente",
+      "2026 – Alíquota de teste (0,1%) de IBS/CBS, sem impacto relevante",
+      "2029 a 2032 – Redução progressiva das alíquotas de ICMS e ISS",
+      "2027 – Extinção do PIS/Cofins e vigência plena da CBS"
+    ],
+    "correctAnswer": [
+      "2026 – Alíquota de teste (0,1%) de IBS/CBS, sem impacto relevante",
+      "2027 – Extinção do PIS/Cofins e vigência plena da CBS",
+      "2029 a 2032 – Redução progressiva das alíquotas de ICMS e ISS",
+      "2033 – Extinção total do ICMS e do ISS, com o novo modelo plenamente vigente"
+    ],
+    "explanation": "O cronograma segue: teste em 2026, extinção do PIS/Cofins em 2027, redução gradual de ICMS/ISS entre 2029 e 2032, e extinção total em 2033.",
+    "pacciTip": "Esse cronograma você vai apresentar de olhos fechados, tesoro! Decora bem essa linha do tempo."
+  },
+  {
+    "id": "REF-SR-010",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "Você foi designado para liderar a revisão dos contratos de fornecimento de longo prazo da empresa diante da transição tributária.",
+    "question": "Ordene o fluxo correto desse planejamento de revisão contratual:",
+    "options": [
+      "Formalizar os aditivos contratuais necessários",
+      "Mapear os contratos vigentes com impacto relevante de tributos sobre o consumo",
+      "Negociar cláusulas de repactuação com as contrapartes",
+      "Simular o efeito da transição na carga tributária de cada contrato"
+    ],
+    "correctAnswer": [
+      "Mapear os contratos vigentes com impacto relevante de tributos sobre o consumo",
+      "Simular o efeito da transição na carga tributária de cada contrato",
+      "Negociar cláusulas de repactuação com as contrapartes",
+      "Formalizar os aditivos contratuais necessários"
+    ],
+    "explanation": "O processo começa pelo mapeamento dos contratos, segue com a simulação de impacto, a negociação de repactuação e a formalização dos aditivos.",
+    "pacciTip": "Mapeia, simula, negocia, formaliza. Assim nenhum contrato pega a empresa de surpresa!"
+  },
+  {
+    "id": "REF-SR-011",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "Você precisa avaliar o impacto do split payment no capital de giro da empresa antes de apresentar o planejamento financeiro anual.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Ajustar o planejamento financeiro/linhas de crédito, se necessário",
+      "Levantar o volume de vendas sujeitas a split payment",
+      "Simular o efeito no capital de giro necessário",
+      "Estimar o valor de tributo que deixará de transitar pelo caixa da empresa"
+    ],
+    "correctAnswer": [
+      "Levantar o volume de vendas sujeitas a split payment",
+      "Estimar o valor de tributo que deixará de transitar pelo caixa da empresa",
+      "Simular o efeito no capital de giro necessário",
+      "Ajustar o planejamento financeiro/linhas de crédito, se necessário"
+    ],
+    "explanation": "A avaliação parte do volume de vendas, estima o valor retido, simula o efeito no capital de giro e, se necessário, ajusta o planejamento financeiro.",
+    "pacciTip": "Capital de giro não se ajusta de última hora, tesoro! Planeja com antecedência."
+  },
+  {
+    "id": "REF-SR-012",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "Você está estruturando um programa de compliance fiscal avançado diante do cruzamento de dados em tempo real que o Fisco passa a ter com o split payment.",
+    "question": "Ordene o fluxo correto de estruturação desse programa:",
+    "options": [
+      "Corrigir tempestivamente qualquer inconsistência identificada",
+      "Mapear os pontos de risco na parametrização tributária dos sistemas",
+      "Monitorar de forma contínua as informações compartilhadas com o Fisco",
+      "Implementar controles internos de conferência antes da transmissão das notas"
+    ],
+    "correctAnswer": [
+      "Mapear os pontos de risco na parametrização tributária dos sistemas",
+      "Implementar controles internos de conferência antes da transmissão das notas",
+      "Monitorar de forma contínua as informações compartilhadas com o Fisco",
+      "Corrigir tempestivamente qualquer inconsistência identificada"
+    ],
+    "explanation": "O programa de compliance avançado mapeia riscos, implementa controles preventivos, monitora continuamente e corrige rapidamente qualquer desvio.",
+    "pacciTip": "Compliance forte se antecipa ao erro, amico! Mapeia, controla, monitora, corrige."
+  },
+  {
+    "id": "REF-SR-013",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No plano de transição apresentado à diretoria, há uma frase incompleta sobre o comportamento das alíquotas de ICMS e ISS entre 2029 e 2032.",
+    "question": "Entre 2029 e 2032, as alíquotas de ICMS e ISS serão reduzidas de forma ___, até a extinção total em 2033.",
+    "options": [
+      "gradual",
+      "imediata",
+      "dobrada",
+      "suspensa"
+    ],
+    "correctAnswer": "gradual",
+    "explanation": "A redução das alíquotas de ICMS e ISS ocorre de forma gradual entre 2029 e 2032, preparando a extinção total em 2033.",
+    "pacciTip": "Gradual é a palavra-chave da transição, tesoro! Nada acontece de uma vez."
+  },
+  {
+    "id": "REF-SR-014",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de revisão de contratos de longo prazo, há uma frase incompleta sobre a cláusula recomendada.",
+    "question": "Contratos de longo prazo firmados antes da Reforma devem, preferencialmente, prever cláusula de ___ vinculada às mudanças na carga tributária.",
+    "options": [
+      "repactuação",
+      "rescisão automática",
+      "isenção",
+      "confidencialidade"
+    ],
+    "correctAnswer": "repactuação",
+    "explanation": "A cláusula de repactuação permite ajustar o contrato conforme a carga tributária muda ao longo da transição, protegendo ambas as partes.",
+    "pacciTip": "Repactuação é o seguro do contrato, amico! Protege as duas partes da mudança tributária."
+  },
+  {
+    "id": "REF-SR-015",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de impacto financeiro do split payment, há uma frase incompleta sobre o efeito no caixa da empresa.",
+    "question": "O split payment reduz a disponibilidade de ___ da empresa vendedora, já que o tributo não transita mais pelo seu fluxo financeiro.",
+    "options": [
+      "caixa",
+      "crédito",
+      "estoque",
+      "patrimônio"
+    ],
+    "correctAnswer": "caixa",
+    "explanation": "Como o tributo é segregado automaticamente, a empresa deixa de contar com esse valor no caixa, mesmo que temporariamente.",
+    "pacciTip": "Caixa é o que sente o impacto primeiro, tesoro! Planeja o fluxo pensando nisso."
+  },
+  {
+    "id": "REF-SR-016",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No plano de compliance fiscal avançado, há uma frase incompleta sobre a exigência trazida pelo cruzamento de dados em tempo real.",
+    "question": "O cruzamento de dados em tempo real via split payment exige um compliance fiscal mais ___, com controles internos reforçados.",
+    "options": [
+      "rigoroso",
+      "flexível",
+      "dispensável",
+      "opcional"
+    ],
+    "correctAnswer": "rigoroso",
+    "explanation": "Com o Fisco acompanhando as operações quase em tempo real, o compliance precisa ser mais rigoroso para evitar inconsistências detectadas rapidamente.",
+    "pacciTip": "Rigoroso é a nova palavra de ordem, amico! O Fisco não pisca mais."
+  },
+  {
+    "id": "REF-SR-017",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Fechando a apresentação do cronograma da transição para a diretoria, você precisa lembrar o ano final do processo.",
+    "question": "Digite o ano em que está prevista a extinção total do ICMS e do ISS, com o novo modelo plenamente vigente:",
+    "correctAnswer": "2033",
+    "explanation": "2033 é o ano em que a transição se encerra e o novo modelo de IBS/CBS passa a vigorar plenamente, sem ICMS ou ISS.",
+    "pacciTip": "2033, o ano da virada final, tesoro! Guarda esse número."
+  },
+  {
+    "id": "REF-SR-018",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No planejamento tributário anual, você precisa lembrar em qual ano o PIS e a Cofins deixam de existir.",
+    "question": "Digite o ano em que o PIS e a Cofins são extintos e a CBS entra plenamente em vigor:",
+    "correctAnswer": "2027",
+    "explanation": "2027 marca a extinção do PIS e da Cofins, com a vigência plena da CBS em seu lugar.",
+    "pacciTip": "2027 é a despedida definitiva do PIS e da Cofins, amico!"
+  },
+  {
+    "id": "REF-SR-019",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Orientando o time jurídico sobre revisão de contratos de longo prazo, você precisa nomear o tipo de cláusula recomendada.",
+    "question": "Digite a palavra que designa o tipo de cláusula contratual recomendada para lidar com mudanças de carga tributária ao longo da transição:",
+    "correctAnswer": "repactuação",
+    "explanation": "A cláusula de repactuação permite ajustar preços e condições contratuais diante de mudanças relevantes na carga tributária.",
+    "pacciTip": "Repactuação, tesoro! Essa palavra protege o contrato dos solavancos da transição."
+  },
+  {
+    "id": "REF-SR-020",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Resumindo o impacto financeiro do split payment para a diretoria, você precisa citar em uma palavra o principal recurso afetado.",
+    "question": "Digite a palavra que resume o principal recurso financeiro impactado pelo split payment na empresa vendedora:",
+    "correctAnswer": "caixa",
+    "explanation": "O caixa é o recurso diretamente impactado, já que o valor do tributo deixa de transitar pelo fluxo financeiro da empresa.",
+    "pacciTip": "Caixa, sempre caixa! É ele quem sente o split payment primeiro."
+  },
+  {
+    "id": "REF-SR-021",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A equipe de TI de uma indústria automotiva está planejando um cronograma de testes internos do novo sistema de emissão de notas fiscais antes do início oficial da transição.",
+    "question": "Por que é recomendável realizar testes internos (piloto) do sistema de emissão de notas fiscais com IBS/CBS antes mesmo de 2026?",
+    "options": [
+      "Para identificar e corrigir falhas de parametrização antes que o teste oficial do Fisco comece em 2026",
+      "Porque a partir de 2026 não será mais permitido alterar o sistema",
+      "Porque o teste oficial de 2026 é opcional e pode ser ignorado",
+      "Porque em 2026 as empresas já pagam a alíquota cheia do novo modelo"
+    ],
+    "correctAnswer": "Para identificar e corrigir falhas de parametrização antes que o teste oficial do Fisco comece em 2026",
+    "explanation": "Um piloto interno antes de 2026 permite corrigir erros de parametrização com calma, evitando que problemas apareçam justamente durante o período oficial de teste.",
+    "pacciTip": "Ensaiar antes da estreia oficial, tesoro! Assim nenhuma falha pega a equipe de surpresa."
+  },
+  {
+    "id": "REF-SR-022",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Na diretoria de uma rede de farmácias, alguém pergunta se, a partir de 2027, a empresa deixa de recolher todos os tributos federais e estaduais sobre o consumo.",
+    "question": "O que efetivamente ocorre em 2027 no cronograma da transição?",
+    "options": [
+      "Extinção do PIS e da Cofins, com a CBS plenamente em vigor, mas ICMS e ISS ainda continuam sendo cobrados normalmente",
+      "Extinção total de todos os tributos sobre consumo, incluindo ICMS e ISS",
+      "Início da cobrança-teste do IBS/CBS, com alíquota simbólica",
+      "Redução de 50% do ICMS em todos os estados"
+    ],
+    "correctAnswer": "Extinção do PIS e da Cofins, com a CBS plenamente em vigor, mas ICMS e ISS ainda continuam sendo cobrados normalmente",
+    "explanation": "Em 2027 apenas os tributos federais PIS e Cofins são extintos e substituídos pela CBS. ICMS e ISS só começam a reduzir a partir de 2029.",
+    "pacciTip": "Um de cada vez, amico! Em 2027 só os federais saem de cena."
+  },
+  {
+    "id": "REF-SR-023",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "O gestor fiscal de uma transportadora está montando o cronograma de descontinuação dos sistemas legados de apuração de ICMS.",
+    "question": "Qual é o momento mais adequado para planejar o desligamento definitivo dos sistemas legados de apuração de ICMS e ISS?",
+    "options": [
+      "Próximo a 2033, quando esses tributos forem efetivamente extintos, mantendo-os ativos durante toda a redução gradual de 2029 a 2032",
+      "Já em 2026, junto com o início do teste do IBS/CBS",
+      "Em 2027, junto com a extinção do PIS/Cofins",
+      "Assim que a lei da reforma foi promulgada, em 2023"
+    ],
+    "correctAnswer": "Próximo a 2033, quando esses tributos forem efetivamente extintos, mantendo-os ativos durante toda a redução gradual de 2029 a 2032",
+    "explanation": "Como ICMS e ISS continuam existindo, ainda que em alíquotas decrescentes, até 2032, os sistemas legados precisam permanecer ativos até a extinção total em 2033.",
+    "pacciTip": "Desliga só quando o motor realmente parar, tesoro! Antes disso, ICMS e ISS ainda rodam."
+  },
+  {
+    "id": "REF-SR-024",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A diretoria financeira de uma rede de escolas privadas questiona o que caracteriza a convivência entre o sistema tributário antigo e o novo entre 2026 e 2032.",
+    "question": "Durante o período de 2026 a 2032, o que caracteriza a convivência entre o sistema tributário antigo e o novo?",
+    "options": [
+      "Empresas podem precisar apurar e cumprir obrigações acessórias tanto do sistema antigo (ICMS, ISS e, conforme o ano, PIS/Cofins) quanto do novo (IBS/CBS) simultaneamente",
+      "Apenas o sistema novo vigora, o antigo já está extinto desde 2026",
+      "As empresas escolhem livremente qual sistema seguir a cada ano",
+      "Não há qualquer sobreposição entre os sistemas"
+    ],
+    "correctAnswer": "Empresas podem precisar apurar e cumprir obrigações acessórias tanto do sistema antigo (ICMS, ISS e, conforme o ano, PIS/Cofins) quanto do novo (IBS/CBS) simultaneamente",
+    "explanation": "Durante boa parte da transição, os dois sistemas coexistem, o que exige da empresa capacidade de apurar e declarar tributos em ambos os modelos ao mesmo tempo.",
+    "pacciTip": "Dois sistemas rodando juntos, amico! É malabarismo fiscal por alguns anos."
+  },
+  {
+    "id": "REF-SR-025",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A equipe de precificação de uma distribuidora de bebidas pergunta com que frequência a política de preços deve ser revisada ao longo da transição.",
+    "question": "Qual é a abordagem mais adequada para a política de precificação da empresa ao longo dos anos de transição (2026-2033)?",
+    "options": [
+      "Revisar a precificação em cada fase relevante do cronograma, já que a carga tributária muda progressivamente ano a ano",
+      "Definir uma única revisão de preços em 2033, quando a transição terminar",
+      "Manter os preços congelados durante toda a transição, para simplificar",
+      "Revisar os preços apenas se houver reclamação de clientes"
+    ],
+    "correctAnswer": "Revisar a precificação em cada fase relevante do cronograma, já que a carga tributária muda progressivamente ano a ano",
+    "explanation": "Como a carga tributária muda em diferentes marcos (2026, 2027, 2029-2032, 2033), a precificação deve acompanhar cada fase, e não esperar o fim da transição.",
+    "pacciTip": "Preço parado enquanto o imposto se mexe é receita de prejuízo, tesoro!"
+  },
+  {
+    "id": "REF-SR-026",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "O RH de uma empresa de energia solar está planejando o treinamento da equipe fiscal e comercial sobre a reforma tributária.",
+    "question": "Como deve ser estruturado o treinamento das equipes fiscal e comercial diante do cronograma plurianual da reforma?",
+    "options": [
+      "De forma faseada e contínua, acompanhando cada marco do cronograma (2026, 2027, 2029-2032, 2033), e não concentrado em um único momento",
+      "Em um único treinamento no ano de 2033, quando tudo estiver definido",
+      "Apenas para a equipe fiscal, sem envolver a área comercial",
+      "Não é necessário treinamento, pois o sistema se ajusta automaticamente"
+    ],
+    "correctAnswer": "De forma faseada e contínua, acompanhando cada marco do cronograma (2026, 2027, 2029-2032, 2033), e não concentrado em um único momento",
+    "explanation": "Como a transição tem vários marcos ao longo de quase uma década, o treinamento precisa ser contínuo, atualizando as equipes a cada fase relevante.",
+    "pacciTip": "Treinamento em capítulos, amico! Não dá pra aprender tudo de uma vez só."
+  },
+  {
+    "id": "REF-SR-027",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "O jurídico de uma rede de shopping centers revisa um contrato de locação comercial de 10 anos, assinado antes da reforma, sem cláusula de ajuste tributário.",
+    "question": "Diante de um contrato de locação comercial de longo prazo sem cláusula de ajuste tributário, qual é a ação mais prudente durante a transição?",
+    "options": [
+      "Negociar um aditivo com cláusula de repactuação para absorver eventual mudança na carga tributária incidente sobre a operação",
+      "Aguardar o vencimento do contrato em 2033 para qualquer ajuste",
+      "Rescindir o contrato imediatamente para evitar riscos",
+      "Ignorar o tema, pois locação comercial não é afetada pela reforma"
+    ],
+    "correctAnswer": "Negociar um aditivo com cláusula de repactuação para absorver eventual mudança na carga tributária incidente sobre a operação",
+    "explanation": "Um aditivo com cláusula de repactuação permite ajustar o contrato conforme a carga tributária evolui, evitando prejuízo para qualquer das partes.",
+    "pacciTip": "Aditivo bem feito hoje evita dor de cabeça amanhã, tesoro!"
+  },
+  {
+    "id": "REF-SR-028",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um fabricante de embalagens tem um contrato de fornecimento de 4 anos com margem fixa firmado com uma indústria alimentícia.",
+    "question": "Em um contrato de fornecimento de longo prazo com margem fixa, por que a ausência de cláusula de repactuação tributária é especialmente arriscada durante a transição?",
+    "options": [
+      "Porque mudanças na carga tributária ao longo dos anos podem corroer a margem combinada, prejudicando uma das partes sem mecanismo contratual de ajuste",
+      "Porque contratos com margem fixa são automaticamente reajustados pela lei da reforma",
+      "Porque a reforma tributária proíbe contratos com margem fixa",
+      "Porque a margem fixa elimina qualquer efeito tributário sobre o contrato"
+    ],
+    "correctAnswer": "Porque mudanças na carga tributária ao longo dos anos podem corroer a margem combinada, prejudicando uma das partes sem mecanismo contratual de ajuste",
+    "explanation": "Sem cláusula de repactuação, a margem fixa vira uma aposta: se a carga tributária mudar, uma das partes sai perdendo sem ter como reequilibrar o contrato.",
+    "pacciTip": "Margem fixa sem repactuação é terreno movediço, amico!"
+  },
+  {
+    "id": "REF-SR-029",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "O jurídico de uma empresa de software (SaaS) revisa contratos de assinatura corporativos firmados por 3 anos com grandes clientes.",
+    "question": "Ao revisar contratos de assinatura (SaaS) de longo prazo firmados antes da reforma, qual cuidado adicional deve ser observado?",
+    "options": [
+      "Verificar se a cláusula de reajuste existente (ex.: por índice de inflação) também cobre variações de carga tributária, pois um reajuste por índice geralmente não contempla esse efeito",
+      "Presumir que qualquer cláusula de reajuste automaticamente cobre efeitos tributários",
+      "Cancelar todos os contratos de assinatura anteriores à reforma",
+      "Aumentar o preço unilateralmente sem qualquer aviso ao cliente"
+    ],
+    "correctAnswer": "Verificar se a cláusula de reajuste existente (ex.: por índice de inflação) também cobre variações de carga tributária, pois um reajuste por índice geralmente não contempla esse efeito",
+    "explanation": "Reajuste por índice de inflação e repactuação tributária são coisas diferentes: um contrato pode ter o primeiro e ainda assim ficar exposto ao segundo.",
+    "pacciTip": "Índice de inflação e imposto são times diferentes, tesoro! Confere se os dois estão cobertos."
+  },
+  {
+    "id": "REF-SR-030",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma construtora firmou contrato de 6 anos com uma incorporadora para execução de uma obra que atravessa vários marcos da transição tributária.",
+    "question": "Para uma obra de construção civil contratada por 6 anos, atravessando vários marcos da transição tributária, qual é a recomendação mais adequada?",
+    "options": [
+      "Prever revisão periódica de preços ao longo da execução da obra, vinculada aos marcos do cronograma da reforma, e não apenas uma revisão pontual",
+      "Fixar o preço integralmente no início do contrato, sem qualquer possibilidade de revisão",
+      "Repactuar o contrato apenas uma vez, em 2033",
+      "Não é necessário prever qualquer cláusula, pois obras de construção civil não sofrem efeito da reforma"
+    ],
+    "correctAnswer": "Prever revisão periódica de preços ao longo da execução da obra, vinculada aos marcos do cronograma da reforma, e não apenas uma revisão pontual",
+    "explanation": "Como a obra atravessa vários marcos (2027, 2029-2032, 2033), uma única revisão não é suficiente: o ideal é prever gatilhos periódicos de reajuste.",
+    "pacciTip": "Obra longa pede revisão em capítulos, amico! Um reajuste só não sustenta 6 anos de transição."
+  },
+  {
+    "id": "REF-SR-031",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de franquias de fast-food possui contratos com royalties calculados sobre o faturamento bruto dos franqueados, firmados por 10 anos.",
+    "question": "Em contratos de franquia com royalties fixos sobre o faturamento, qual é o principal ponto de atenção durante a transição tributária?",
+    "options": [
+      "Avaliar se mudanças na composição da carga tributária alteram o faturamento líquido do franqueado a ponto de justificar renegociação das condições contratuais",
+      "Ignorar o tema, pois royalties sobre faturamento bruto nunca são afetados por tributos",
+      "Extinguir automaticamente o contrato de franquia em 2027",
+      "Transferir toda a responsabilidade tributária para o franqueador, sem necessidade de revisão contratual"
+    ],
+    "correctAnswer": "Avaliar se mudanças na composição da carga tributária alteram o faturamento líquido do franqueado a ponto de justificar renegociação das condições contratuais",
+    "explanation": "Mesmo royalties calculados sobre faturamento bruto podem gerar tensão se a carga tributária pressionar a margem líquida do franqueado, exigindo diálogo contratual.",
+    "pacciTip": "Faturamento bruto não conta a história toda, tesoro! Olha o efeito na margem do franqueado."
+  },
+  {
+    "id": "REF-SR-032",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa importadora possui contratos internacionais de fornecimento de longo prazo, com preços em dólar e apenas cláusula de ajuste cambial.",
+    "question": "Um contrato internacional de fornecimento com cláusula apenas de ajuste cambial, mas sem cláusula tributária, está adequadamente protegido diante da transição?",
+    "options": [
+      "Não necessariamente, pois a cláusula cambial cobre apenas variação de câmbio, não o efeito da mudança na carga tributária brasileira incidente sobre a importação",
+      "Sim, cláusula cambial sempre cobre qualquer variação de custo, incluindo tributos",
+      "Sim, contratos internacionais são imunes à reforma tributária brasileira",
+      "Não, mas o problema se resolve automaticamente em 2033"
+    ],
+    "correctAnswer": "Não necessariamente, pois a cláusula cambial cobre apenas variação de câmbio, não o efeito da mudança na carga tributária brasileira incidente sobre a importação",
+    "explanation": "Câmbio e tributo são riscos diferentes: uma cláusula cambial não substitui a necessidade de tratar contratualmente o efeito da reforma tributária local.",
+    "pacciTip": "Dólar sobe e desce, imposto muda por outro motivo, amico! Trata cada risco na sua cláusula."
+  },
+  {
+    "id": "REF-SR-033",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "O CFO de um e-commerce de moda com vendas parceladas avalia o efeito do split payment sobre o descasamento entre recebimento parcelado e pagamento a fornecedores à vista.",
+    "question": "Qual é o principal risco de descasamento de fluxo de caixa que o split payment intensifica em empresas que vendem a prazo mas pagam fornecedores à vista?",
+    "options": [
+      "A empresa recebe o valor líquido de tributos aos poucos, conforme as parcelas, mas pode precisar honrar compromissos com fornecedores antes de acumular caixa suficiente",
+      "O split payment elimina totalmente a necessidade de pagar fornecedores",
+      "O split payment antecipa integralmente o recebimento das vendas parceladas",
+      "Não há qualquer relação entre split payment e prazo de pagamento a fornecedores"
+    ],
+    "correctAnswer": "A empresa recebe o valor líquido de tributos aos poucos, conforme as parcelas, mas pode precisar honrar compromissos com fornecedores antes de acumular caixa suficiente",
+    "explanation": "O descasamento entre o ritmo de entrada de caixa (parcelado e já líquido de tributo) e o ritmo de saída (fornecedores à vista) se acentua com o split payment.",
+    "pacciTip": "Entra devagar, sai rápido: aí que mora o perigo, tesoro!"
+  },
+  {
+    "id": "REF-SR-034",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A diretoria financeira de uma distribuidora atacadista de alimentos, que opera com margem apertada, avalia a sensibilidade do negócio ao split payment.",
+    "question": "Por que empresas com margens operacionais mais apertadas, como distribuidoras atacadistas, tendem a sentir de forma mais aguda o efeito do split payment no capital de giro?",
+    "options": [
+      "Porque a retenção do tributo reduz ainda mais a folga de caixa disponível para cobrir custos operacionais, que já opera com margem reduzida",
+      "Porque margens apertadas são imunes a qualquer efeito de fluxo de caixa",
+      "Porque o split payment beneficia proporcionalmente mais empresas de baixa margem",
+      "Porque a retenção do tributo é opcional para empresas com margem baixa"
+    ],
+    "correctAnswer": "Porque a retenção do tributo reduz ainda mais a folga de caixa disponível para cobrir custos operacionais, que já opera com margem reduzida",
+    "explanation": "Quando a margem já é curta, qualquer redução adicional na disponibilidade de caixa aperta ainda mais o giro do negócio.",
+    "pacciTip": "Margem curta e caixa retido não combinam bem, amico! Fica de olho na folga."
+  },
+  {
+    "id": "REF-SR-035",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A equipe de operações de um marketplace de e-commerce avalia como o split payment afeta o repasse de valores aos lojistas parceiros da plataforma.",
+    "question": "Em um marketplace com múltiplos vendedores, qual é um desafio adicional trazido pelo split payment na gestão dos repasses?",
+    "options": [
+      "É preciso segregar corretamente, para cada venda, a parcela do tributo destinada ao Fisco e o valor líquido a repassar a cada lojista, exigindo controles mais sofisticados",
+      "O marketplace deixa de ter qualquer responsabilidade sobre o repasse de valores",
+      "O split payment elimina a necessidade de repasse a lojistas",
+      "Todos os vendedores passam a receber o valor integral da venda, sem qualquer retenção"
+    ],
+    "correctAnswer": "É preciso segregar corretamente, para cada venda, a parcela do tributo destinada ao Fisco e o valor líquido a repassar a cada lojista, exigindo controles mais sofisticados",
+    "explanation": "Com múltiplos vendedores, cada transação precisa de uma segregação precisa entre tributo retido e valor líquido, aumentando a complexidade operacional do repasse.",
+    "pacciTip": "Cada venda é um quebra-cabeça de repasse, tesoro! Controle apertado é essencial."
+  },
+  {
+    "id": "REF-SR-036",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A controladoria de uma clínica de estética com faturamento recorrente (assinatura de pacotes) projeta o fluxo de caixa mensal considerando o split payment.",
+    "question": "Ao projetar o fluxo de caixa mensal de um negócio com faturamento recorrente (assinaturas), como o split payment deve ser considerado?",
+    "options": [
+      "O valor do tributo retido em cada cobrança recorrente deve ser excluído da projeção de caixa disponível, e não tratado como se estivesse livre para uso da empresa",
+      "O split payment não afeta negócios de assinatura, apenas vendas avulsas",
+      "O valor retido pode ser somado ao caixa disponível, pois retorna à empresa no fim do mês",
+      "A projeção de caixa deve ignorar completamente o split payment"
+    ],
+    "correctAnswer": "O valor do tributo retido em cada cobrança recorrente deve ser excluído da projeção de caixa disponível, e não tratado como se estivesse livre para uso da empresa",
+    "explanation": "Tratar o valor retido como se estivesse disponível é um erro clássico de projeção: ele nunca chega a entrar no caixa livre da empresa.",
+    "pacciTip": "O que já saiu direto pro Fisco não conta como seu, amico!"
+  },
+  {
+    "id": "REF-SR-037",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A tesouraria de uma indústria de autopeças, que vende para montadoras com prazos de recebimento longos, negocia linha de crédito adicional para o período de transição.",
+    "question": "Por que uma indústria com prazos de recebimento longos pode precisar negociar linhas de crédito adicionais durante a implementação do split payment?",
+    "options": [
+      "Porque o valor do tributo é retido no momento do pagamento pelo cliente, reduzindo o caixa disponível antes mesmo de a empresa conseguir compensar esse efeito com o giro normal do negócio",
+      "Porque o split payment aumenta automaticamente o limite de crédito disponível na praça",
+      "Porque prazos de recebimento longos eliminam qualquer necessidade de capital de giro",
+      "Porque o split payment substitui integralmente a necessidade de linhas de crédito"
+    ],
+    "correctAnswer": "Porque o valor do tributo é retido no momento do pagamento pelo cliente, reduzindo o caixa disponível antes mesmo de a empresa conseguir compensar esse efeito com o giro normal do negócio",
+    "explanation": "Com prazos longos de recebimento, o hiato entre a retenção do tributo e a recomposição natural do caixa pode ser grande, tornando o crédito adicional uma proteção prudente.",
+    "pacciTip": "Prazo longo pede colchão de crédito, tesoro! Melhor negociar antes do aperto."
+  },
+  {
+    "id": "REF-SR-038",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A diretoria de uma rede de postos de combustíveis avalia se deve antecipar recebíveis via factoring com mais frequência após a implementação do split payment.",
+    "question": "Após a implementação do split payment, por que a antecipação de recebíveis (factoring/desconto de duplicatas) pode se tornar uma ferramenta ainda mais relevante para algumas empresas?",
+    "options": [
+      "Porque parte do valor da venda já não fica disponível em caixa devido à retenção automática do tributo, aumentando a necessidade de fontes alternativas de liquidez de curto prazo",
+      "Porque o factoring elimina totalmente a incidência de tributos sobre a venda",
+      "Porque, com o split payment, os recebíveis já vêm líquidos de qualquer necessidade de antecipação",
+      "Porque a antecipação de recebíveis deixa de ser permitida após a reforma"
+    ],
+    "correctAnswer": "Porque parte do valor da venda já não fica disponível em caixa devido à retenção automática do tributo, aumentando a necessidade de fontes alternativas de liquidez de curto prazo",
+    "explanation": "Com menos caixa disponível por venda, ferramentas de antecipação de recebíveis ganham peso na estratégia de liquidez de curto prazo.",
+    "pacciTip": "Menos caixa por venda, mais valor pra ferramenta de antecipação, amico!"
+  },
+  {
+    "id": "REF-SR-039",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "O comitê de compliance de uma rede de hospitais estrutura uma auditoria interna periódica dos dados fiscais transmitidos ao Fisco.",
+    "question": "Qual é o principal objetivo de uma auditoria interna periódica dos dados fiscais transmitidos ao Fisco em tempo real?",
+    "options": [
+      "Identificar e corrigir inconsistências antes que se tornem objeto de questionamento ou autuação por parte do Fisco",
+      "Cumprir uma exigência apenas simbólica, sem efeito prático",
+      "Substituir totalmente a necessidade de parametrização correta do ERP",
+      "Eliminar a obrigação de emitir notas fiscais"
+    ],
+    "correctAnswer": "Identificar e corrigir inconsistências antes que se tornem objeto de questionamento ou autuação por parte do Fisco",
+    "explanation": "A auditoria interna funciona como uma linha de defesa antecipada, encontrando problemas antes que o próprio Fisco os aponte.",
+    "pacciTip": "Achar o erro antes do Fisco é sempre a melhor jogada, tesoro!"
+  },
+  {
+    "id": "REF-SR-040",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A diretoria de TI de uma rede varejista com múltiplas filiais avalia a integração entre as áreas fiscal, financeira e de tecnologia diante do novo modelo.",
+    "question": "Por que a integração entre as áreas fiscal, financeira e de TI se torna ainda mais crítica no novo modelo de cruzamento de dados em tempo real?",
+    "options": [
+      "Porque qualquer falha de parametrização em um desses times pode gerar inconsistências detectadas quase imediatamente pelo Fisco, exigindo resposta coordenada e rápida",
+      "Porque, com o novo modelo, essas áreas passam a trabalhar de forma totalmente independente",
+      "Porque a integração entre áreas deixa de ser relevante após a reforma",
+      "Porque apenas a área de TI é responsável pelo compliance fiscal a partir de agora"
+    ],
+    "correctAnswer": "Porque qualquer falha de parametrização em um desses times pode gerar inconsistências detectadas quase imediatamente pelo Fisco, exigindo resposta coordenada e rápida",
+    "explanation": "Com dados em tempo real, um erro isolado em qualquer uma das três áreas aparece rapidamente para o Fisco, então a resposta precisa ser conjunta e ágil.",
+    "pacciTip": "Fiscal, financeiro e TI remando juntos, amico! Separado, o barco vira."
+  },
+  {
+    "id": "REF-SR-041",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "O gestor de compliance de uma indústria têxtil propõe a implantação de um dashboard de monitoramento fiscal em tempo real.",
+    "question": "Qual é a principal vantagem de um dashboard de monitoramento fiscal em tempo real diante do novo modelo de cruzamento de dados?",
+    "options": [
+      "Permite identificar rapidamente desvios ou inconsistências nas operações, possibilitando correção tempestiva antes que o Fisco aponte o problema",
+      "Substitui totalmente a necessidade de qualquer auditoria interna",
+      "É exigido apenas para empresas do Simples Nacional",
+      "Elimina qualquer necessidade de parametrização correta do sistema"
+    ],
+    "correctAnswer": "Permite identificar rapidamente desvios ou inconsistências nas operações, possibilitando correção tempestiva antes que o Fisco aponte o problema",
+    "explanation": "O dashboard dá visibilidade quase instantânea sobre desvios, permitindo agir antes que o problema vire uma autuação.",
+    "pacciTip": "Ver o problema na hora vale ouro, tesoro! Corrige rápido, evita dor de cabeça."
+  },
+  {
+    "id": "REF-SR-042",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A diretoria de uma rede de supermercados discute se o compliance fiscal deve ser reativo ou preventivo diante do novo cenário de dados em tempo real.",
+    "question": "Diante do cruzamento de dados em tempo real trazido pelo split payment, qual deve ser a postura predominante do compliance fiscal da empresa?",
+    "options": [
+      "Preventiva, antecipando riscos e corrigindo falhas de parametrização antes da transmissão dos dados, em vez de apenas corrigir problemas após identificados pelo Fisco",
+      "Reativa, corrigindo apenas os problemas apontados pelo Fisco após autuação",
+      "Indiferente, já que o resultado final é o mesmo",
+      "Terceirizada integralmente, sem qualquer acompanhamento interno"
+    ],
+    "correctAnswer": "Preventiva, antecipando riscos e corrigindo falhas de parametrização antes da transmissão dos dados, em vez de apenas corrigir problemas após identificados pelo Fisco",
+    "explanation": "Esperar a autuação para agir custa caro. O modelo em tempo real recompensa quem antecipa e corrige antes de transmitir os dados.",
+    "pacciTip": "Prevenir é mais barato que remediar, amico! Ainda mais com o Fisco de olho em tempo real."
+  },
+  {
+    "id": "REF-SR-043",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A equipe de segurança da informação de uma operadora de telecomunicações discute a governança de acesso aos dados fiscais em tempo real.",
+    "question": "Por que a governança de acesso aos dados fiscais (controle de quem pode alterar parametrizações e emitir documentos fiscais) ganha ainda mais importância no novo modelo?",
+    "options": [
+      "Porque qualquer alteração indevida ou erro de parametrização pode gerar inconsistências detectadas quase instantaneamente pelo Fisco, com potencial impacto financeiro e reputacional",
+      "Porque o novo modelo elimina a necessidade de controle de acesso a sistemas fiscais",
+      "Porque a governança de dados fiscais só é relevante para empresas públicas",
+      "Porque o cruzamento de dados em tempo real substitui qualquer controle interno de acesso"
+    ],
+    "correctAnswer": "Porque qualquer alteração indevida ou erro de parametrização pode gerar inconsistências detectadas quase instantaneamente pelo Fisco, com potencial impacto financeiro e reputacional",
+    "explanation": "Sem controle de quem altera o quê, um erro de parametrização pode se espalhar rapidamente e aparecer para o Fisco quase em tempo real.",
+    "pacciTip": "Quem mexe, deixa rastro, tesoro! Governança de acesso é escudo essencial."
+  },
+  {
+    "id": "REF-SR-044",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A diretoria de uma empresa de mineração avalia se um compliance fiscal rigoroso pode gerar vantagem competitiva no novo cenário.",
+    "question": "De que forma um compliance fiscal rigoroso, adaptado ao cruzamento de dados em tempo real, pode se tornar uma vantagem competitiva para a empresa?",
+    "options": [
+      "Reduz o risco de autuações, bloqueios operacionais e desgaste com o Fisco, contribuindo para maior previsibilidade financeira e reputação no mercado",
+      "Não há qualquer relação entre compliance fiscal e competitividade",
+      "Compliance rigoroso sempre aumenta os custos sem qualquer contrapartida",
+      "Apenas empresas pequenas se beneficiam de compliance fiscal rigoroso"
+    ],
+    "correctAnswer": "Reduz o risco de autuações, bloqueios operacionais e desgaste com o Fisco, contribuindo para maior previsibilidade financeira e reputação no mercado",
+    "explanation": "Empresas com compliance sólido evitam surpresas desagradáveis e constroem uma reputação de solidez, o que pesa positivamente perante parceiros e investidores.",
+    "pacciTip": "Compliance forte também é marketing silencioso, amico!"
+  },
+  {
+    "id": "REF-SR-045",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma reunião de planejamento de uma indústria química, um colega afirma que durante 2026 a 2032 pode haver necessidade de a empresa cumprir obrigações acessórias tanto do sistema antigo quanto do novo, simultaneamente.",
+    "question": "Durante o período de transição (2026 a 2032), é possível que a empresa precise cumprir obrigações acessórias dos sistemas antigo e novo ao mesmo tempo?",
+    "correctAnswer": true,
+    "explanation": "Correto! Enquanto ICMS, ISS e, em parte do período, PIS/Cofins ainda existem, a empresa convive com obrigações do sistema antigo e do novo simultaneamente.",
+    "pacciTip": "Dois calendários fiscais rodando juntos, tesoro! É assim até a poeira baixar."
+  },
+  {
+    "id": "REF-SR-046",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Durante um planejamento anual, um colega de uma rede de farmácias afirma que a partir de 2027 o ICMS e o ISS já deixam de ser cobrados, restando apenas o IBS e a CBS.",
+    "question": "A partir de 2027, o ICMS e o ISS deixam de ser cobrados, restando apenas o IBS e a CBS?",
+    "correctAnswer": false,
+    "explanation": "Errado! Em 2027 apenas o PIS e a Cofins são extintos. O ICMS e o ISS continuam sendo cobrados normalmente até o início da redução gradual, em 2029.",
+    "pacciTip": "Calma, amico! ICMS e ISS ainda ficam na festa até 2029."
+  },
+  {
+    "id": "REF-SR-047",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma transportadora, um colega afirma que a redução do ICMS e do ISS entre 2029 e 2032 ocorre de forma previsível, ano a ano, permitindo planejamento antecipado da precificação.",
+    "question": "A redução gradual do ICMS e do ISS entre 2029 e 2032 ocorre ano a ano, permitindo que a empresa planeje antecipadamente ajustes de precificação a cada fase?",
+    "correctAnswer": true,
+    "explanation": "Correto! Como a redução é progressiva e programada, a empresa pode antecipar cada fase e ajustar sua política de preços de forma planejada.",
+    "pacciTip": "Redução previsível é presente pro planejamento, tesoro! Aproveita."
+  },
+  {
+    "id": "REF-SR-048",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma startup de tecnologia, um colega comenta que, por ser uma empresa pequena, pode ignorar totalmente o cronograma de transição até próximo de 2030.",
+    "question": "Empresas de menor porte podem ignorar o cronograma de transição até próximo de 2030, sem qualquer prejuízo de planejamento?",
+    "correctAnswer": false,
+    "explanation": "Errado! O porte da empresa não isenta ninguém do cronograma. Ignorar a transição cedo pode significar sistemas despreparados e prejuízo financeiro nos primeiros marcos.",
+    "pacciTip": "Pequena no porte, mas não pode ser pequena no planejamento, amico!"
+  },
+  {
+    "id": "REF-SR-049",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma indústria de alimentos, um colega afirma que, em 2026, as empresas já pagam a alíquota cheia do IBS e da CBS, equivalente à carga tributária final do novo modelo.",
+    "question": "Em 2026, as empresas já pagam a alíquota cheia do IBS e da CBS, equivalente à carga tributária final do novo modelo?",
+    "correctAnswer": false,
+    "explanation": "Errado! Em 2026 a cobrança é feita com alíquota simbólica, apenas para testar os sistemas, sem representar a carga tributária final do modelo.",
+    "pacciTip": "2026 é ensaio, não estreia de verdade, tesoro!"
+  },
+  {
+    "id": "REF-SR-050",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma rede hoteleira, um colega defende que o treinamento das equipes fiscal e comercial deve acompanhar cada marco do cronograma da reforma, e não ser feito de uma única vez.",
+    "question": "O treinamento das equipes fiscal e comercial deve, idealmente, ser faseado e contínuo, acompanhando os marcos do cronograma da reforma?",
+    "correctAnswer": true,
+    "explanation": "Correto! Como a transição tem vários marcos ao longo de quase uma década, o treinamento contínuo mantém as equipes preparadas em cada fase.",
+    "pacciTip": "Aprender aos poucos gruda melhor, amico! Treinamento faseado é o caminho."
+  },
+  {
+    "id": "REF-SR-051",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "No jurídico de um shopping center, um colega afirma que cláusulas de reajuste vinculadas a um índice de inflação, como o IPCA, automaticamente cobrem qualquer variação de carga tributária.",
+    "question": "Uma cláusula de reajuste vinculada a um índice de inflação (como o IPCA) automaticamente cobre variações na carga tributária decorrentes da reforma?",
+    "correctAnswer": false,
+    "explanation": "Errado! Um índice de inflação mede a variação geral de preços, não o efeito específico de mudanças na carga tributária. É preciso cláusula própria de repactuação tributária.",
+    "pacciTip": "IPCA e imposto não falam a mesma língua, tesoro! Cada risco precisa da sua cláusula."
+  },
+  {
+    "id": "REF-SR-052",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma indústria de embalagens, um colega afirma que contratos de fornecimento de longo prazo com margem fixa são especialmente vulneráveis sem cláusula de repactuação tributária.",
+    "question": "Contratos de fornecimento de longo prazo com margem fixa são especialmente vulneráveis a mudanças na carga tributária quando não preveem cláusula de repactuação?",
+    "correctAnswer": true,
+    "explanation": "Correto! Sem um mecanismo de ajuste, uma margem fixa pode ser corroída por mudanças na carga tributária ao longo da transição.",
+    "pacciTip": "Margem fixa sem proteção é aposta arriscada, amico!"
+  },
+  {
+    "id": "REF-SR-053",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma empresa de software (SaaS), um colega comenta que basta revisar contratos de longo prazo uma única vez, no início da transição, sem necessidade de acompanhamento posterior.",
+    "question": "Para contratos de longo prazo, basta uma única revisão no início da transição, sem necessidade de acompanhamento contínuo até 2033?",
+    "correctAnswer": false,
+    "explanation": "Errado! Como a carga tributária muda em vários marcos ao longo dos anos, os contratos de longo prazo precisam de acompanhamento contínuo, não apenas uma revisão pontual.",
+    "pacciTip": "Contrato longo pede olhar constante, tesoro! Não dá pra revisar uma vez só e esquecer."
+  },
+  {
+    "id": "REF-SR-054",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma construtora, um colega defende que obras plurianuais contratadas antes da reforma devem prever revisão periódica de preços vinculada aos marcos da transição.",
+    "question": "Contratos de obras plurianuais que atravessam vários marcos da transição devem, idealmente, prever mecanismos de revisão periódica de preços?",
+    "correctAnswer": true,
+    "explanation": "Correto! Como a obra atravessa vários marcos do cronograma, uma cláusula de revisão periódica evita que qualquer parte fique prejudicada ao longo da execução.",
+    "pacciTip": "Obra longa, revisão em capítulos, amico!"
+  },
+  {
+    "id": "REF-SR-055",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma rede de franquias, um colega afirma que royalties calculados sobre o faturamento bruto do franqueado nunca sofrem qualquer efeito indireto da reforma tributária.",
+    "question": "Royalties de franquia calculados sobre o faturamento bruto do franqueado estão imunes a qualquer efeito indireto da reforma tributária?",
+    "correctAnswer": false,
+    "explanation": "Errado! Ainda que calculados sobre o faturamento bruto, os royalties podem sofrer efeito indireto se a carga tributária pressionar a margem líquida do franqueado, gerando tensão contratual.",
+    "pacciTip": "Faturamento bruto não conta toda a história, tesoro!"
+  },
+  {
+    "id": "REF-SR-056",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma importadora, um colega afirma que um contrato internacional com cláusula apenas de ajuste cambial já está automaticamente protegido também quanto a efeitos tributários brasileiros.",
+    "question": "Um contrato internacional que prevê apenas cláusula de ajuste cambial está automaticamente protegido também quanto a efeitos da reforma tributária brasileira?",
+    "correctAnswer": false,
+    "explanation": "Errado! Câmbio e tributo são riscos distintos. A cláusula cambial não substitui a necessidade de tratar contratualmente o efeito da reforma tributária local.",
+    "pacciTip": "Cada risco pede sua própria blindagem, amico!"
+  },
+  {
+    "id": "REF-SR-057",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em um e-commerce, um colega afirma que, em vendas parceladas, o split payment retém o tributo apenas na primeira parcela, liberando as demais integralmente para a empresa vendedora.",
+    "question": "Em vendas parceladas, o split payment retém o tributo apenas na primeira parcela, liberando as demais integralmente para a empresa vendedora?",
+    "correctAnswer": false,
+    "explanation": "Errado! A retenção do tributo ocorre a cada pagamento de parcela, e não apenas na primeira, mantendo o efeito sobre o caixa ao longo de todo o parcelamento.",
+    "pacciTip": "O Fisco não larga o osso só na primeira mordida, tesoro!"
+  },
+  {
+    "id": "REF-SR-058",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma distribuidora atacadista, um colega afirma que empresas com margem operacional apertada tendem a sentir de forma mais intensa o efeito do split payment no capital de giro.",
+    "question": "Empresas com margens operacionais mais apertadas tendem a sentir de forma mais intensa o efeito do split payment sobre o capital de giro?",
+    "correctAnswer": true,
+    "explanation": "Correto! Quanto menor a folga de margem, mais sensível o negócio fica à redução de caixa disponível causada pela retenção automática do tributo.",
+    "pacciTip": "Margem curta sente cada centavo retido, amico!"
+  },
+  {
+    "id": "REF-SR-059",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em um marketplace, um colega afirma que o split payment simplifica automaticamente o repasse de valores aos lojistas, sem exigir controles adicionais.",
+    "question": "Em marketplaces com múltiplos vendedores, o split payment simplifica automaticamente o repasse de valores aos lojistas, sem exigir controles adicionais?",
+    "correctAnswer": false,
+    "explanation": "Errado! Pelo contrário, o split payment exige controles mais sofisticados para segregar corretamente, em cada venda, o valor do tributo e o valor líquido a repassar.",
+    "pacciTip": "Mais vendedores, mais cuidado no repasse, tesoro!"
+  },
+  {
+    "id": "REF-SR-060",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma clínica com faturamento recorrente, um colega afirma que o valor do tributo retido em cada cobrança de assinatura deve ser excluído da projeção de caixa disponível da empresa.",
+    "question": "Em negócios com faturamento recorrente (assinaturas), o valor do tributo retido pelo split payment deve ser excluído da projeção de caixa disponível para a empresa?",
+    "correctAnswer": true,
+    "explanation": "Correto! O valor retido nunca chega a ficar disponível para a empresa, então deve ser excluído da projeção de caixa livre.",
+    "pacciTip": "Se já foi direto pro Fisco, não conta como seu, amico!"
+  },
+  {
+    "id": "REF-SR-061",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma indústria de autopeças, um colega afirma que, para empresas com prazos de recebimento longos, o efeito do split payment sobre o caixa é irrelevante, resolvendo-se naturalmente com o tempo.",
+    "question": "Para empresas com prazos de recebimento longos, o efeito do split payment sobre o caixa é irrelevante, resolvendo-se naturalmente com o tempo?",
+    "correctAnswer": false,
+    "explanation": "Errado! Prazos longos de recebimento podem, ao contrário, ampliar o hiato de caixa gerado pela retenção do tributo, exigindo planejamento de liquidez, e não esperar que o problema \"se resolva sozinho\".",
+    "pacciTip": "Tempo não resolve caixa apertado sozinho, tesoro! Planeja."
+  },
+  {
+    "id": "REF-SR-062",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma rede de postos de combustível, um colega defende que a antecipação de recebíveis pode se tornar uma ferramenta mais relevante de gestão de liquidez após o split payment.",
+    "question": "A antecipação de recebíveis (factoring) pode se tornar uma ferramenta ainda mais relevante de gestão de liquidez após a implementação do split payment?",
+    "correctAnswer": true,
+    "explanation": "Correto! Com menos caixa disponível por venda, ferramentas de antecipação de recebíveis passam a ter papel mais relevante na estratégia de liquidez.",
+    "pacciTip": "Quando o caixa aperta, a antecipação vira aliada, amico!"
+  },
+  {
+    "id": "REF-SR-063",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em um hospital, um colega afirma que auditorias internas periódicas dos dados fiscais transmitidos ao Fisco perdem relevância no novo modelo, já que o próprio Fisco identifica os erros.",
+    "question": "Auditorias internas periódicas dos dados fiscais perdem relevância no novo modelo, já que cabe ao Fisco identificar os erros?",
+    "correctAnswer": false,
+    "explanation": "Errado! Pelo contrário, a auditoria interna ganha ainda mais relevância, pois permite corrigir inconsistências antes que o Fisco as identifique e questione.",
+    "pacciTip": "Achar o erro antes é sempre melhor que ser pego por ele, tesoro!"
+  },
+  {
+    "id": "REF-SR-064",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma rede varejista, um colega defende que a integração entre as áreas fiscal, financeira e de TI se torna mais crítica diante do cruzamento de dados em tempo real.",
+    "question": "A integração entre as áreas fiscal, financeira e de TI se torna mais crítica diante do cruzamento de dados fiscais em tempo real?",
+    "correctAnswer": true,
+    "explanation": "Correto! Como qualquer falha em uma dessas áreas pode aparecer quase instantaneamente para o Fisco, a resposta coordenada entre elas se torna essencial.",
+    "pacciTip": "Time desalinhado erra rápido demais, amico! Integração é chave."
+  },
+  {
+    "id": "REF-SR-065",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma indústria têxtil, um colega afirma que um dashboard de monitoramento fiscal em tempo real substitui totalmente a necessidade de auditoria interna.",
+    "question": "Um dashboard de monitoramento fiscal em tempo real substitui totalmente a necessidade de auditoria interna?",
+    "correctAnswer": false,
+    "explanation": "Errado! O dashboard é uma ferramenta complementar de visibilidade rápida, mas não substitui a profundidade e a periodicidade de uma auditoria interna estruturada.",
+    "pacciTip": "Painel bonito ajuda, mas não faz tudo sozinho, tesoro!"
+  },
+  {
+    "id": "REF-SR-066",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em um supermercado, um colega defende que, no novo cenário, o compliance fiscal deve adotar postura preventiva, corrigindo riscos antes da transmissão dos dados.",
+    "question": "No novo cenário de cruzamento de dados em tempo real, o compliance fiscal deve adotar postura preventiva, corrigindo riscos antes da transmissão dos dados?",
+    "correctAnswer": true,
+    "explanation": "Correto! Antecipar e corrigir riscos antes da transmissão evita que inconsistências cheguem ao Fisco, reduzindo a chance de questionamentos.",
+    "pacciTip": "Prevenir sempre sai mais barato que remediar, amico!"
+  },
+  {
+    "id": "REF-SR-067",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma operadora de telecomunicações, um colega afirma que o controle de acesso a sistemas fiscais perde importância no novo modelo, pois qualquer erro é corrigido automaticamente pelo sistema.",
+    "question": "O controle de acesso e a governança sobre quem pode alterar parametrizações fiscais perdem importância no novo modelo?",
+    "correctAnswer": false,
+    "explanation": "Errado! Nenhum sistema corrige sozinho um erro de parametrização feito por uma pessoa sem o devido controle. A governança de acesso segue essencial, e até mais crítica, no novo modelo.",
+    "pacciTip": "Sistema não lê mente, tesoro! Governança de acesso continua fundamental."
+  },
+  {
+    "id": "REF-SR-068",
+    "level": "analista_senior",
+    "type": "true_false",
+    "scenario": "Em uma mineradora, um colega afirma que um compliance fiscal rigoroso pode reduzir o risco de autuações e contribuir para maior previsibilidade financeira.",
+    "question": "Um compliance fiscal rigoroso, adaptado ao novo modelo, pode reduzir o risco de autuações e contribuir para maior previsibilidade financeira da empresa?",
+    "correctAnswer": true,
+    "explanation": "Correto! Um compliance bem estruturado reduz surpresas fiscais e contribui para uma gestão financeira mais previsível e uma reputação mais sólida.",
+    "pacciTip": "Compliance forte é sinônimo de menos susto no caixa, amico!"
+  },
+  {
+    "id": "REF-SR-069",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A equipe de TI de uma indústria eletrônica está desenhando o processo de adaptação dos sistemas de emissão de documentos fiscais ao longo de toda a transição.",
+    "question": "Ordene o processo correto de adaptação dos sistemas ao longo da transição:",
+    "options": [
+      "Operar em paralelo os sistemas antigo e novo durante a apuração dupla até 2032",
+      "Migrar definitivamente para o novo modelo em 2033, desligando os sistemas legados",
+      "Realizar o teste piloto interno de emissão de documentos fiscais com IBS/CBS antes de 2026",
+      "Participar do teste oficial com alíquota simbólica em 2026"
+    ],
+    "correctAnswer": [
+      "Realizar o teste piloto interno de emissão de documentos fiscais com IBS/CBS antes de 2026",
+      "Participar do teste oficial com alíquota simbólica em 2026",
+      "Operar em paralelo os sistemas antigo e novo durante a apuração dupla até 2032",
+      "Migrar definitivamente para o novo modelo em 2033, desligando os sistemas legados"
+    ],
+    "explanation": "A adaptação começa com testes internos, segue para o teste oficial de 2026, passa pela operação em paralelo até 2032 e termina na migração definitiva em 2033.",
+    "pacciTip": "Piloto, teste oficial, paralelo, migração final, tesoro! Passo a passo até 2033."
+  },
+  {
+    "id": "REF-SR-070",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A equipe de precificação de uma rede de farmácias planeja como a formação de preços deve evoluir ao longo da transição tributária.",
+    "question": "Ordene o processo correto de revisão da política de precificação ao longo da transição:",
+    "options": [
+      "Ajustar definitivamente a política de preços após a extinção total em 2033",
+      "Revisar a margem em cada faixa de redução do ICMS/ISS entre 2029 e 2032",
+      "Recalcular a formação de preço após a extinção do PIS/Cofins em 2027",
+      "Simular o efeito da alíquota de teste do IBS/CBS em 2026 na formação de preço"
+    ],
+    "correctAnswer": [
+      "Simular o efeito da alíquota de teste do IBS/CBS em 2026 na formação de preço",
+      "Recalcular a formação de preço após a extinção do PIS/Cofins em 2027",
+      "Revisar a margem em cada faixa de redução do ICMS/ISS entre 2029 e 2032",
+      "Ajustar definitivamente a política de preços após a extinção total em 2033"
+    ],
+    "explanation": "A precificação acompanha o cronograma: simulação em 2026, recálculo em 2027, revisões em 2029-2032 e ajuste definitivo em 2033.",
+    "pacciTip": "Preço acompanha o calendário da reforma, amico! Passo a passo."
+  },
+  {
+    "id": "REF-SR-071",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "O RH de uma indústria automotiva organiza o plano de capacitação da equipe fiscal para cada fase da transição.",
+    "question": "Ordene o plano de capacitação da equipe fiscal conforme os marcos da transição:",
+    "options": [
+      "Capacitação para a operação plena do novo modelo, sem ICMS/ISS",
+      "Capacitação para o ano de teste do IBS/CBS",
+      "Capacitação para o período de redução gradual do ICMS/ISS",
+      "Capacitação para a extinção do PIS/Cofins e plena vigência da CBS"
+    ],
+    "correctAnswer": [
+      "Capacitação para o ano de teste do IBS/CBS",
+      "Capacitação para a extinção do PIS/Cofins e plena vigência da CBS",
+      "Capacitação para o período de redução gradual do ICMS/ISS",
+      "Capacitação para a operação plena do novo modelo, sem ICMS/ISS"
+    ],
+    "explanation": "A capacitação segue o cronograma legal: teste (2026), extinção do PIS/Cofins (2027), redução gradual (2029-2032) e operação plena (2033).",
+    "pacciTip": "Capacita em ordem, tesoro! Cada fase tem seu próprio desafio."
+  },
+  {
+    "id": "REF-SR-072",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A área de comunicação interna de uma empresa de logística planeja os avisos que serão enviados aos colaboradores conforme a transição avança.",
+    "question": "Ordene o cronograma de comunicação interna sobre os marcos da reforma:",
+    "options": [
+      "Comunicar o início da redução gradual de ICMS/ISS em 2029",
+      "Comunicar a extinção total do ICMS e do ISS em 2033",
+      "Comunicar à empresa o início do teste oficial em 2026",
+      "Comunicar a extinção do PIS e da Cofins em 2027"
+    ],
+    "correctAnswer": [
+      "Comunicar à empresa o início do teste oficial em 2026",
+      "Comunicar a extinção do PIS e da Cofins em 2027",
+      "Comunicar o início da redução gradual de ICMS/ISS em 2029",
+      "Comunicar a extinção total do ICMS e do ISS em 2033"
+    ],
+    "explanation": "A comunicação interna acompanha o cronograma oficial: 2026, 2027, 2029 e 2033.",
+    "pacciTip": "Aviso certo na hora certa, amico! Ninguém é pego de surpresa."
+  },
+  {
+    "id": "REF-SR-073",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A equipe de orçamento de uma rede de clínicas odontológicas monta o planejamento orçamentário anual considerando os efeitos da reforma.",
+    "question": "Ordene a evolução do orçamento anual conforme os marcos da transição:",
+    "options": [
+      "Incluir no orçamento o cenário final sem ICMS/ISS a partir de 2033",
+      "Incluir no orçamento o efeito ainda simbólico do teste de 2026",
+      "Incluir no orçamento os ajustes graduais de ICMS/ISS entre 2029 e 2032",
+      "Incluir no orçamento o impacto pleno da CBS após a extinção do PIS/Cofins em 2027"
+    ],
+    "correctAnswer": [
+      "Incluir no orçamento o efeito ainda simbólico do teste de 2026",
+      "Incluir no orçamento o impacto pleno da CBS após a extinção do PIS/Cofins em 2027",
+      "Incluir no orçamento os ajustes graduais de ICMS/ISS entre 2029 e 2032",
+      "Incluir no orçamento o cenário final sem ICMS/ISS a partir de 2033"
+    ],
+    "explanation": "O orçamento evolui junto com o cronograma legal: efeito simbólico em 2026, impacto pleno da CBS em 2027, ajustes graduais em 2029-2032 e cenário final em 2033.",
+    "pacciTip": "Orçamento que ignora o calendário da reforma quebra a cara, tesoro!"
+  },
+  {
+    "id": "REF-SR-074",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "O jurídico de uma indústria têxtil planeja revisar os contratos com fornecedores conforme cada marco da transição de tributos federais e depois estaduais/municipais afeta as relações comerciais.",
+    "question": "Ordene o cronograma de revisão de contratos conforme os marcos da transição:",
+    "options": [
+      "Revisar contratos afetados pela extinção total em 2033",
+      "Revisar contratos afetados pelo teste de 2026",
+      "Revisar contratos afetados pela redução gradual do ICMS/ISS entre 2029 e 2032",
+      "Revisar contratos afetados pela extinção do PIS/Cofins em 2027"
+    ],
+    "correctAnswer": [
+      "Revisar contratos afetados pelo teste de 2026",
+      "Revisar contratos afetados pela extinção do PIS/Cofins em 2027",
+      "Revisar contratos afetados pela redução gradual do ICMS/ISS entre 2029 e 2032",
+      "Revisar contratos afetados pela extinção total em 2033"
+    ],
+    "explanation": "A revisão de contratos acompanha o mesmo cronograma: 2026, 2027, 2029-2032 e 2033.",
+    "pacciTip": "Revisão de contrato também tem calendário, amico! Segue o cronograma."
+  },
+  {
+    "id": "REF-SR-075",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "O jurídico de uma rede de lojas de departamento conduz o processo de revisão de um contrato de locação de longo prazo diante da transição tributária.",
+    "question": "Ordene o processo correto de revisão do contrato de locação:",
+    "options": [
+      "Formalizar aditivo contratual com a cláusula de repactuação negociada",
+      "Identificar contratos de locação com vigência que ultrapassa 2033",
+      "Avaliar juridicamente a viabilidade de inclusão de cláusula de repactuação",
+      "Apresentar proposta de aditivo ao locador"
+    ],
+    "correctAnswer": [
+      "Identificar contratos de locação com vigência que ultrapassa 2033",
+      "Avaliar juridicamente a viabilidade de inclusão de cláusula de repactuação",
+      "Apresentar proposta de aditivo ao locador",
+      "Formalizar aditivo contratual com a cláusula de repactuação negociada"
+    ],
+    "explanation": "O processo começa pela identificação dos contratos expostos, segue com a avaliação jurídica, a proposta ao locador e a formalização do aditivo.",
+    "pacciTip": "Identifica, avalia, propõe, formaliza, tesoro! Um passo de cada vez."
+  },
+  {
+    "id": "REF-SR-076",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "Um fabricante de embalagens conduz a negociação de repactuação de um contrato estratégico com fornecedor de matéria-prima.",
+    "question": "Ordene o processo correto dessa negociação de repactuação:",
+    "options": [
+      "Acordar o novo mecanismo de repactuação periódica",
+      "Comunicar formalmente o fornecedor sobre a necessidade de revisão contratual",
+      "Monitorar a aplicação da cláusula a cada marco da transição",
+      "Quantificar o impacto estimado da mudança tributária no contrato"
+    ],
+    "correctAnswer": [
+      "Quantificar o impacto estimado da mudança tributária no contrato",
+      "Comunicar formalmente o fornecedor sobre a necessidade de revisão contratual",
+      "Acordar o novo mecanismo de repactuação periódica",
+      "Monitorar a aplicação da cláusula a cada marco da transição"
+    ],
+    "explanation": "O processo parte da quantificação do impacto, passa pela comunicação formal, pelo acordo do mecanismo e termina no monitoramento contínuo da cláusula.",
+    "pacciTip": "Quantifica antes de negociar, amico! Argumento embasado convence mais."
+  },
+  {
+    "id": "REF-SR-077",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "O jurídico de uma empresa de SaaS revisa os contratos de assinatura corporativos plurianuais diante da transição.",
+    "question": "Ordene o processo correto de revisão desses contratos:",
+    "options": [
+      "Priorizar a renegociação dos contratos mais expostos",
+      "Classificar os contratos por criticidade de exposição tributária",
+      "Incluir cláusula de repactuação nos contratos renegociados",
+      "Levantar todos os contratos de assinatura vigentes com prazo superior a 3 anos"
+    ],
+    "correctAnswer": [
+      "Levantar todos os contratos de assinatura vigentes com prazo superior a 3 anos",
+      "Classificar os contratos por criticidade de exposição tributária",
+      "Priorizar a renegociação dos contratos mais expostos",
+      "Incluir cláusula de repactuação nos contratos renegociados"
+    ],
+    "explanation": "O processo começa pelo levantamento, segue com a classificação de risco, a priorização e, por fim, a inclusão da cláusula de repactuação.",
+    "pacciTip": "Levanta, classifica, prioriza, protege, tesoro!"
+  },
+  {
+    "id": "REF-SR-078",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "Uma construtora gerencia um contrato de obra plurianual que atravessa vários marcos da transição tributária.",
+    "question": "Ordene o processo correto de gestão desse contrato de obra:",
+    "options": [
+      "Executar a obra aplicando os reajustes previstos a cada marco da transição",
+      "Negociar com o contratante a inclusão de cláusula de revisão periódica",
+      "Identificar que o prazo da obra atravessa múltiplos marcos do cronograma da reforma",
+      "Definir os gatilhos (datas/eventos) que acionam cada revisão de preço"
+    ],
+    "correctAnswer": [
+      "Identificar que o prazo da obra atravessa múltiplos marcos do cronograma da reforma",
+      "Negociar com o contratante a inclusão de cláusula de revisão periódica",
+      "Definir os gatilhos (datas/eventos) que acionam cada revisão de preço",
+      "Executar a obra aplicando os reajustes previstos a cada marco da transição"
+    ],
+    "explanation": "O processo começa pela identificação do risco temporal, segue com a negociação da cláusula, a definição dos gatilhos e a execução com os reajustes aplicados.",
+    "pacciTip": "Identifica o risco, negocia, define os gatilhos, executa, amico!"
+  },
+  {
+    "id": "REF-SR-079",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A área jurídica de uma rede de franquias revisa o contrato-padrão de franquia diante da reforma tributária.",
+    "question": "Ordene o processo correto de revisão do contrato-padrão de franquia:",
+    "options": [
+      "Comunicar a todos os franqueados as mudanças no contrato-padrão",
+      "Avaliar o impacto da reforma na margem líquida do franqueado",
+      "Redigir a nova minuta do contrato-padrão com cláusula de revisão periódica",
+      "Submeter a nova minuta à aprovação jurídica"
+    ],
+    "correctAnswer": [
+      "Avaliar o impacto da reforma na margem líquida do franqueado",
+      "Redigir a nova minuta do contrato-padrão com cláusula de revisão periódica",
+      "Submeter a nova minuta à aprovação jurídica",
+      "Comunicar a todos os franqueados as mudanças no contrato-padrão"
+    ],
+    "explanation": "O processo parte da avaliação de impacto, segue com a redação da minuta, a aprovação jurídica e a comunicação final aos franqueados.",
+    "pacciTip": "Avalia, redige, aprova, comunica, tesoro! Ordem que evita retrabalho."
+  },
+  {
+    "id": "REF-SR-080",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "O jurídico de uma importadora revisa os contratos internacionais de fornecimento de longo prazo diante da transição tributária brasileira.",
+    "question": "Ordene o processo correto de revisão desses contratos internacionais:",
+    "options": [
+      "Verificar se a cláusula cambial existente cobre também efeitos tributários locais",
+      "Incluir cláusula específica de repactuação tributária, se necessário",
+      "Mapear os contratos internacionais de fornecimento de longo prazo",
+      "Consultar a área jurídica sobre a viabilidade da nova cláusula"
+    ],
+    "correctAnswer": [
+      "Mapear os contratos internacionais de fornecimento de longo prazo",
+      "Verificar se a cláusula cambial existente cobre também efeitos tributários locais",
+      "Consultar a área jurídica sobre a viabilidade da nova cláusula",
+      "Incluir cláusula específica de repactuação tributária, se necessário"
+    ],
+    "explanation": "O processo começa pelo mapeamento dos contratos, segue com a verificação da cobertura da cláusula cambial, a consulta jurídica e a inclusão da cláusula tributária, se necessário.",
+    "pacciTip": "Mapeia, verifica, consulta, inclui, amico! Passo a passo sem pular etapa."
+  },
+  {
+    "id": "REF-SR-081",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "O CFO de um e-commerce de moda avalia o impacto do split payment no descasamento de caixa entre vendas parceladas e pagamentos a fornecedores.",
+    "question": "Ordene o processo correto dessa avaliação:",
+    "options": [
+      "Comparar o novo ciclo de caixa com o prazo médio de pagamento a fornecedores",
+      "Simular o novo ciclo de caixa considerando a retenção automática do tributo",
+      "Definir ações de mitigação, como renegociação de prazos ou linha de crédito",
+      "Levantar o prazo médio de recebimento das vendas parceladas"
+    ],
+    "correctAnswer": [
+      "Levantar o prazo médio de recebimento das vendas parceladas",
+      "Simular o novo ciclo de caixa considerando a retenção automática do tributo",
+      "Comparar o novo ciclo de caixa com o prazo médio de pagamento a fornecedores",
+      "Definir ações de mitigação, como renegociação de prazos ou linha de crédito"
+    ],
+    "explanation": "A avaliação parte do levantamento dos prazos, passa pela simulação do novo ciclo de caixa, pela comparação com os pagamentos e termina nas ações de mitigação.",
+    "pacciTip": "Levanta, simula, compara, mitiga, tesoro!"
+  },
+  {
+    "id": "REF-SR-082",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A diretoria financeira de uma distribuidora atacadista avalia a sensibilidade da margem de cada linha de produto ao split payment.",
+    "question": "Ordene o processo correto dessa análise de sensibilidade:",
+    "options": [
+      "Priorizar ações de mitigação para as linhas mais sensíveis",
+      "Identificar os produtos com margem mais apertada na carteira",
+      "Reportar à diretoria os resultados da análise de sensibilidade",
+      "Estimar o efeito do split payment sobre o caixa disponível para cada linha de produto"
+    ],
+    "correctAnswer": [
+      "Identificar os produtos com margem mais apertada na carteira",
+      "Estimar o efeito do split payment sobre o caixa disponível para cada linha de produto",
+      "Priorizar ações de mitigação para as linhas mais sensíveis",
+      "Reportar à diretoria os resultados da análise de sensibilidade"
+    ],
+    "explanation": "A análise começa pela identificação dos produtos mais sensíveis, segue com a estimativa de efeito no caixa, a priorização de ações e o reporte final.",
+    "pacciTip": "Identifica, estima, prioriza, reporta, amico!"
+  },
+  {
+    "id": "REF-SR-083",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A equipe de operações de um marketplace redesenha o processo de repasse a lojistas parceiros diante do split payment.",
+    "question": "Ordene o processo correto dessa adaptação:",
+    "options": [
+      "Testar o novo processo de repasse com um grupo piloto de lojistas",
+      "Mapear o fluxo atual de repasse de valores aos lojistas",
+      "Redesenhar o fluxo considerando a retenção automática do tributo",
+      "Implementar o novo processo para todos os lojistas da plataforma"
+    ],
+    "correctAnswer": [
+      "Mapear o fluxo atual de repasse de valores aos lojistas",
+      "Redesenhar o fluxo considerando a retenção automática do tributo",
+      "Testar o novo processo de repasse com um grupo piloto de lojistas",
+      "Implementar o novo processo para todos os lojistas da plataforma"
+    ],
+    "explanation": "A adaptação parte do mapeamento do fluxo atual, segue com o redesenho, o teste piloto e a implementação final para todos os lojistas.",
+    "pacciTip": "Mapeia, redesenha, testa, implementa, tesoro! Sem pular o piloto."
+  },
+  {
+    "id": "REF-SR-084",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A controladoria de uma clínica de estética constrói a projeção de fluxo de caixa mensal considerando o split payment nas assinaturas recorrentes.",
+    "question": "Ordene o processo correto dessa projeção de caixa:",
+    "options": [
+      "Validar a projeção com a diretoria financeira",
+      "Levantar o volume mensal de cobranças recorrentes sujeitas a split payment",
+      "Excluir da projeção de caixa disponível o valor estimado de tributo retido",
+      "Construir a projeção de fluxo de caixa mensal ajustada"
+    ],
+    "correctAnswer": [
+      "Levantar o volume mensal de cobranças recorrentes sujeitas a split payment",
+      "Excluir da projeção de caixa disponível o valor estimado de tributo retido",
+      "Construir a projeção de fluxo de caixa mensal ajustada",
+      "Validar a projeção com a diretoria financeira"
+    ],
+    "explanation": "A projeção começa pelo levantamento do volume de cobranças, exclui o valor retido, constrói a projeção ajustada e a valida com a diretoria.",
+    "pacciTip": "Levanta, exclui, constrói, valida, amico! Projeção sem esse cuidado engana."
+  },
+  {
+    "id": "REF-SR-085",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A tesouraria de uma indústria de autopeças negocia uma linha de crédito adicional para cobrir o efeito do split payment durante a transição.",
+    "question": "Ordene o processo correto dessa negociação:",
+    "options": [
+      "Apresentar a simulação ao banco/instituição financeira",
+      "Calcular o hiato de caixa esperado durante o período de transição",
+      "Negociar as condições da linha de crédito adicional",
+      "Formalizar a contratação da linha de crédito"
+    ],
+    "correctAnswer": [
+      "Calcular o hiato de caixa esperado durante o período de transição",
+      "Apresentar a simulação ao banco/instituição financeira",
+      "Negociar as condições da linha de crédito adicional",
+      "Formalizar a contratação da linha de crédito"
+    ],
+    "explanation": "O processo começa pelo cálculo do hiato de caixa, segue com a apresentação ao banco, a negociação das condições e a formalização do crédito.",
+    "pacciTip": "Calcula antes de bater na porta do banco, tesoro! Argumento numérico convence mais."
+  },
+  {
+    "id": "REF-SR-086",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A diretoria de uma rede de postos de combustível decide sobre o uso mais frequente da antecipação de recebíveis após o split payment.",
+    "question": "Ordene o processo correto dessa decisão:",
+    "options": [
+      "Avaliar o custo financeiro da antecipação de recebíveis frente ao hiato de caixa gerado pelo split payment",
+      "Monitorar o resultado da antecipação no fluxo de caixa mensal",
+      "Mapear o volume de recebíveis elegíveis à antecipação",
+      "Definir a política de uso da antecipação de recebíveis"
+    ],
+    "correctAnswer": [
+      "Mapear o volume de recebíveis elegíveis à antecipação",
+      "Avaliar o custo financeiro da antecipação de recebíveis frente ao hiato de caixa gerado pelo split payment",
+      "Definir a política de uso da antecipação de recebíveis",
+      "Monitorar o resultado da antecipação no fluxo de caixa mensal"
+    ],
+    "explanation": "O processo começa pelo mapeamento dos recebíveis, avalia o custo da antecipação, define a política de uso e monitora os resultados.",
+    "pacciTip": "Mapeia, avalia, define, monitora, amico!"
+  },
+  {
+    "id": "REF-SR-087",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "O comitê de compliance de um hospital estrutura uma auditoria interna periódica dos dados fiscais transmitidos ao Fisco.",
+    "question": "Ordene o processo correto de estruturação dessa auditoria interna:",
+    "options": [
+      "Comparar os dados transmitidos com os registros internos da empresa",
+      "Definir a periodicidade e o escopo da auditoria interna dos dados fiscais",
+      "Reportar e corrigir eventuais inconsistências identificadas",
+      "Selecionar amostras de documentos fiscais transmitidos ao Fisco"
+    ],
+    "correctAnswer": [
+      "Definir a periodicidade e o escopo da auditoria interna dos dados fiscais",
+      "Selecionar amostras de documentos fiscais transmitidos ao Fisco",
+      "Comparar os dados transmitidos com os registros internos da empresa",
+      "Reportar e corrigir eventuais inconsistências identificadas"
+    ],
+    "explanation": "A auditoria começa pela definição de escopo e periodicidade, segue com a seleção de amostras, a comparação de dados e o reporte/correção de inconsistências.",
+    "pacciTip": "Define, seleciona, compara, corrige, tesoro! Auditoria sem esse roteiro perde o rumo."
+  },
+  {
+    "id": "REF-SR-088",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A diretoria de uma rede varejista lidera um projeto de integração entre as áreas fiscal, financeira e de TI diante do novo modelo de dados em tempo real.",
+    "question": "Ordene o processo correto de estruturação desse projeto de integração:",
+    "options": [
+      "Formar um comitê conjunto de acompanhamento da transição tributária",
+      "Diagnosticar os pontos de falha de comunicação entre as áreas fiscal, financeira e de TI",
+      "Implementar rotinas de reunião e reporte compartilhado entre as áreas",
+      "Monitorar indicadores conjuntos de compliance fiscal"
+    ],
+    "correctAnswer": [
+      "Diagnosticar os pontos de falha de comunicação entre as áreas fiscal, financeira e de TI",
+      "Formar um comitê conjunto de acompanhamento da transição tributária",
+      "Implementar rotinas de reunião e reporte compartilhado entre as áreas",
+      "Monitorar indicadores conjuntos de compliance fiscal"
+    ],
+    "explanation": "O projeto começa pelo diagnóstico das falhas de comunicação, segue com a formação do comitê, a implementação das rotinas e o monitoramento dos indicadores.",
+    "pacciTip": "Diagnostica, forma o time, cria rotina, monitora, amico!"
+  },
+  {
+    "id": "REF-SR-089",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "Uma indústria têxtil implanta um dashboard de monitoramento fiscal em tempo real para acompanhar o compliance da empresa.",
+    "question": "Ordene o processo correto de implantação desse dashboard:",
+    "options": [
+      "Integrar o dashboard às bases de dados fiscais da empresa",
+      "Definir os indicadores-chave de compliance a serem monitorados",
+      "Especificar os requisitos do dashboard de monitoramento",
+      "Testar e validar os alertas do dashboard com a equipe fiscal"
+    ],
+    "correctAnswer": [
+      "Especificar os requisitos do dashboard de monitoramento",
+      "Definir os indicadores-chave de compliance a serem monitorados",
+      "Integrar o dashboard às bases de dados fiscais da empresa",
+      "Testar e validar os alertas do dashboard com a equipe fiscal"
+    ],
+    "explanation": "A implantação começa pela especificação dos requisitos, segue com a definição dos indicadores, a integração às bases de dados e o teste dos alertas.",
+    "pacciTip": "Especifica, define, integra, testa, tesoro! Dashboard sem esse cuidado vira enfeite."
+  },
+  {
+    "id": "REF-SR-090",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A diretoria de um supermercado conduz a mudança de postura do compliance fiscal, de reativa para preventiva, diante do novo modelo.",
+    "question": "Ordene o processo correto dessa mudança de postura:",
+    "options": [
+      "Implementar controles preventivos antes da transmissão dos dados ao Fisco",
+      "Identificar os principais pontos de risco de inconsistência na parametrização fiscal",
+      "Diagnosticar o modelo atual de compliance, predominantemente reativo",
+      "Acompanhar os resultados e ajustar os controles preventivos periodicamente"
+    ],
+    "correctAnswer": [
+      "Diagnosticar o modelo atual de compliance, predominantemente reativo",
+      "Identificar os principais pontos de risco de inconsistência na parametrização fiscal",
+      "Implementar controles preventivos antes da transmissão dos dados ao Fisco",
+      "Acompanhar os resultados e ajustar os controles preventivos periodicamente"
+    ],
+    "explanation": "A mudança começa pelo diagnóstico do modelo atual, segue com a identificação dos riscos, a implementação de controles preventivos e o acompanhamento contínuo.",
+    "pacciTip": "Diagnostica, identifica, previne, acompanha, amico! Assim o compliance vira hábito, não susto."
+  },
+  {
+    "id": "REF-SR-091",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A equipe de segurança da informação de uma operadora de telecomunicações reforça a governança de acesso aos sistemas fiscais.",
+    "question": "Ordene o processo correto dessa estruturação de governança:",
+    "options": [
+      "Definir perfis de acesso e níveis de permissão para os sistemas fiscais",
+      "Implementar trilha de auditoria para alterações realizadas nos sistemas",
+      "Mapear todos os usuários com acesso a parametrizações fiscais críticas",
+      "Revisar periodicamente os acessos concedidos"
+    ],
+    "correctAnswer": [
+      "Mapear todos os usuários com acesso a parametrizações fiscais críticas",
+      "Definir perfis de acesso e níveis de permissão para os sistemas fiscais",
+      "Implementar trilha de auditoria para alterações realizadas nos sistemas",
+      "Revisar periodicamente os acessos concedidos"
+    ],
+    "explanation": "A governança começa pelo mapeamento dos usuários, segue com a definição de perfis, a implementação da trilha de auditoria e a revisão periódica dos acessos.",
+    "pacciTip": "Mapeia, define, rastreia, revisa, tesoro! Governança de acesso não se faz uma vez só."
+  },
+  {
+    "id": "REF-SR-092",
+    "level": "analista_senior",
+    "type": "ordering",
+    "scenario": "A diretoria de uma empresa de mineração conduz um projeto para transformar o compliance fiscal em vantagem competitiva.",
+    "question": "Ordene o processo correto dessa transformação:",
+    "options": [
+      "Medir a redução de autuações e inconsistências ao longo do tempo",
+      "Estruturar controles internos rigorosos alinhados ao novo modelo de cruzamento de dados",
+      "Diagnosticar o nível de maturidade atual do compliance fiscal da empresa",
+      "Comunicar ao mercado e a parceiros a solidez do compliance fiscal da empresa"
+    ],
+    "correctAnswer": [
+      "Diagnosticar o nível de maturidade atual do compliance fiscal da empresa",
+      "Estruturar controles internos rigorosos alinhados ao novo modelo de cruzamento de dados",
+      "Medir a redução de autuações e inconsistências ao longo do tempo",
+      "Comunicar ao mercado e a parceiros a solidez do compliance fiscal da empresa"
+    ],
+    "explanation": "O processo começa pelo diagnóstico de maturidade, segue com a estruturação de controles, a medição de resultados e a comunicação ao mercado.",
+    "pacciTip": "Diagnostica, estrutura, mede, comunica, amico! Compliance forte também é reputação."
+  },
+  {
+    "id": "REF-SR-093",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "Em um relatório de cronograma técnico de sistemas de uma indústria eletrônica, há uma frase incompleta sobre a convivência entre os modelos tributários.",
+    "question": "Durante o período de 2026 a 2032, a empresa deve estar preparada para operar em ___ os sistemas de apuração do modelo antigo e do novo modelo tributário.",
+    "options": [
+      "paralelo",
+      "substituição",
+      "isolamento",
+      "suspensão"
+    ],
+    "correctAnswer": "paralelo",
+    "explanation": "Durante boa parte da transição, os sistemas antigo e novo funcionam em paralelo, exigindo que a empresa apure e cumpra obrigações de ambos.",
+    "pacciTip": "Dois motores rodando ao mesmo tempo, tesoro! É assim até 2033."
+  },
+  {
+    "id": "REF-SR-094",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "Em uma nota técnica de uma rede de farmácias sobre o marco de 2027, há uma frase incompleta.",
+    "question": "A partir de 2027, o PIS e a Cofins são ___, dando lugar à plena vigência da CBS.",
+    "options": [
+      "extintos",
+      "reduzidos",
+      "suspensos",
+      "mantidos"
+    ],
+    "correctAnswer": "extintos",
+    "explanation": "O marco de 2027 é justamente a extinção do PIS e da Cofins, substituídos definitivamente pela CBS.",
+    "pacciTip": "Extintos de vez, amico! A CBS assume o posto."
+  },
+  {
+    "id": "REF-SR-095",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No cronograma de redução de ICMS/ISS apresentado por uma transportadora, há uma frase incompleta.",
+    "question": "Entre 2029 e 2032, a redução das alíquotas de ICMS e ISS ocorre de forma ___, e não de uma só vez.",
+    "options": [
+      "progressiva",
+      "abrupta",
+      "aleatória",
+      "retroativa"
+    ],
+    "correctAnswer": "progressiva",
+    "explanation": "A redução do ICMS e do ISS entre 2029 e 2032 é progressiva, ano a ano, e não um corte único.",
+    "pacciTip": "Degrau por degrau, tesoro! Nada de susto repentino."
+  },
+  {
+    "id": "REF-SR-096",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No plano de treinamento faseado de uma rede hoteleira, há uma frase incompleta.",
+    "question": "O treinamento das equipes deve ser ___, acompanhando cada marco relevante do cronograma da transição, em vez de concentrado em um único momento.",
+    "options": [
+      "faseado",
+      "único",
+      "dispensável",
+      "aleatório"
+    ],
+    "correctAnswer": "faseado",
+    "explanation": "Como a transição tem vários marcos ao longo dos anos, o treinamento faseado mantém as equipes atualizadas em cada fase.",
+    "pacciTip": "Aprendizado em capítulos, amico! Cada marco, sua aula."
+  },
+  {
+    "id": "REF-SR-097",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "Em uma nota sobre o ano de 2026 elaborada por uma indústria de alimentos, há uma frase incompleta.",
+    "question": "Em 2026, a cobrança do IBS/CBS ocorre com alíquota ___, servindo apenas para testar os sistemas.",
+    "options": [
+      "simbólica",
+      "integral",
+      "dobrada",
+      "retroativa"
+    ],
+    "correctAnswer": "simbólica",
+    "explanation": "2026 é o ano de teste, com alíquota simbólica, sem representar a carga tributária final do novo modelo.",
+    "pacciTip": "Alíquota de brincadeira, efeito de treino, tesoro!"
+  },
+  {
+    "id": "REF-SR-098",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No cronograma final apresentado por uma indústria têxtil, há uma frase incompleta sobre o marco de 2033.",
+    "question": "A partir de 2033, o ICMS e o ISS deixam de existir e o novo modelo passa a vigorar de forma ___.",
+    "options": [
+      "plena",
+      "parcial",
+      "provisória",
+      "condicional"
+    ],
+    "correctAnswer": "plena",
+    "explanation": "2033 marca a vigência plena do novo modelo, sem qualquer resquício do ICMS ou do ISS.",
+    "pacciTip": "2033 é a virada completa, amico! Modelo pleno, sem meio-termo."
+  },
+  {
+    "id": "REF-SR-099",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "Na revisão de um contrato de locação de um shopping center, há uma frase incompleta sobre os limites de uma cláusula de reajuste.",
+    "question": "Cláusulas de reajuste vinculadas apenas a índices de inflação, como o IPCA, geralmente não cobrem o efeito de mudanças na ___ ao longo da transição.",
+    "options": [
+      "carga tributária",
+      "taxa de câmbio",
+      "taxa de juros",
+      "inflação"
+    ],
+    "correctAnswer": "carga tributária",
+    "explanation": "Um índice de inflação mede a variação geral de preços, não o efeito específico de mudanças na carga tributária trazidas pela reforma.",
+    "pacciTip": "IPCA não cobre imposto, tesoro! São riscos diferentes."
+  },
+  {
+    "id": "REF-SR-100",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de risco contratual de um fabricante de embalagens, há uma frase incompleta.",
+    "question": "Contratos de fornecimento com margem ___ são especialmente vulneráveis a mudanças na carga tributária quando não preveem cláusula de repactuação.",
+    "options": [
+      "fixa",
+      "flexível",
+      "negativa",
+      "indexada"
+    ],
+    "correctAnswer": "fixa",
+    "explanation": "Uma margem fixa não se ajusta sozinha a mudanças na carga tributária, o que a torna vulnerável sem uma cláusula de repactuação.",
+    "pacciTip": "Margem fixa sem proteção é risco puro, amico!"
+  },
+  {
+    "id": "REF-SR-101",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de revisão de contratos de uma empresa de SaaS, há uma frase incompleta.",
+    "question": "Contratos de assinatura de longo prazo devem ser revisados de forma ___ ao longo da transição, e não apenas uma única vez no início.",
+    "options": [
+      "contínua",
+      "pontual",
+      "anual fixa",
+      "dispensável"
+    ],
+    "correctAnswer": "contínua",
+    "explanation": "Como a carga tributária muda em vários marcos, a revisão contratual precisa ser contínua, e não um evento único.",
+    "pacciTip": "Revisão de vez em quando não basta, tesoro! Tem que ser constante."
+  },
+  {
+    "id": "REF-SR-102",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No plano de gestão de contratos de obra de uma construtora, há uma frase incompleta.",
+    "question": "Contratos de obras que atravessam vários marcos da transição devem prever ___ periódica de preços vinculada ao cronograma da reforma.",
+    "options": [
+      "revisão",
+      "rescisão",
+      "isenção",
+      "suspensão"
+    ],
+    "correctAnswer": "revisão",
+    "explanation": "A revisão periódica de preços permite que o contrato de obra se ajuste a cada marco relevante da transição.",
+    "pacciTip": "Revisão em capítulos, amico! Obra longa pede acompanhamento constante."
+  },
+  {
+    "id": "REF-SR-103",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório jurídico de uma rede de franquias, há uma frase incompleta sobre o efeito da reforma nos royalties.",
+    "question": "Mesmo royalties calculados sobre o faturamento bruto podem sofrer efeito ___ da reforma, caso a carga tributária afete a margem líquida do franqueado.",
+    "options": [
+      "indireto",
+      "nulo",
+      "direto e imediato",
+      "cambial"
+    ],
+    "correctAnswer": "indireto",
+    "explanation": "Ainda que o cálculo seja sobre o faturamento bruto, a pressão sobre a margem líquida do franqueado pode gerar um efeito indireto relevante.",
+    "pacciTip": "Efeito indireto também pesa no bolso, tesoro!"
+  },
+  {
+    "id": "REF-SR-104",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de revisão contratual de uma importadora, há uma frase incompleta.",
+    "question": "Uma cláusula puramente ___ não é suficiente para proteger o contrato contra efeitos da reforma tributária brasileira.",
+    "options": [
+      "cambial",
+      "tributária",
+      "de repactuação",
+      "fiscal"
+    ],
+    "correctAnswer": "cambial",
+    "explanation": "A cláusula cambial cobre apenas variação de câmbio, não substituindo a necessidade de tratar contratualmente o risco tributário.",
+    "pacciTip": "Câmbio é um risco, imposto é outro, amico! Não confunde as blindagens."
+  },
+  {
+    "id": "REF-SR-105",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório financeiro de um e-commerce de moda, há uma frase incompleta sobre o efeito do split payment no caixa.",
+    "question": "O split payment pode intensificar o ___ entre o recebimento das vendas a prazo e o pagamento aos fornecedores à vista.",
+    "options": [
+      "descasamento",
+      "alinhamento",
+      "excedente",
+      "superávit"
+    ],
+    "correctAnswer": "descasamento",
+    "explanation": "Com o tributo retido a cada parcela recebida, o ritmo de entrada de caixa pode ficar mais lento que o ritmo de saída para fornecedores, gerando descasamento.",
+    "pacciTip": "Entra devagar, sai rápido: aí mora o descasamento, tesoro!"
+  },
+  {
+    "id": "REF-SR-106",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de sensibilidade de uma distribuidora atacadista, há uma frase incompleta.",
+    "question": "Empresas com margem operacional mais ___ tendem a sentir de forma mais intensa o efeito do split payment no capital de giro.",
+    "options": [
+      "apertada",
+      "ampla",
+      "estável",
+      "previsível"
+    ],
+    "correctAnswer": "apertada",
+    "explanation": "Quanto menor a folga de margem, mais sensível a empresa fica à redução de caixa causada pela retenção automática do tributo.",
+    "pacciTip": "Margem curta sente cada centavo retido, amico!"
+  },
+  {
+    "id": "REF-SR-107",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No manual operacional de um marketplace, há uma frase incompleta sobre o processo de repasse a lojistas.",
+    "question": "Em marketplaces, o split payment exige controles mais sofisticados para segregar corretamente o valor do tributo e o valor líquido a ___ a cada lojista.",
+    "options": [
+      "repassar",
+      "reter",
+      "descontar",
+      "cancelar"
+    ],
+    "correctAnswer": "repassar",
+    "explanation": "A plataforma precisa segregar, em cada venda, o que vai para o Fisco e o que deve ser repassado corretamente ao lojista.",
+    "pacciTip": "Repasse correto é questão de confiança, tesoro!"
+  },
+  {
+    "id": "REF-SR-108",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de projeção de caixa de uma clínica de estética, há uma frase incompleta.",
+    "question": "O valor do tributo retido pelo split payment em cada cobrança recorrente deve ser ___ da projeção de caixa disponível da empresa.",
+    "options": [
+      "excluído",
+      "incluído",
+      "somado",
+      "duplicado"
+    ],
+    "correctAnswer": "excluído",
+    "explanation": "Como o valor retido nunca chega a ficar disponível para a empresa, ele deve ser excluído da projeção de caixa livre, sob risco de superestimar a liquidez.",
+    "pacciTip": "O que já foi pro Fisco não conta como seu, amico!"
+  },
+  {
+    "id": "REF-SR-109",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de tesouraria de uma indústria de autopeças, há uma frase incompleta.",
+    "question": "Empresas com prazos de recebimento longos podem precisar negociar linhas de ___ adicionais para cobrir o hiato de caixa gerado pelo split payment.",
+    "options": [
+      "crédito",
+      "estoque",
+      "seguro",
+      "câmbio"
+    ],
+    "correctAnswer": "crédito",
+    "explanation": "O hiato entre a retenção do tributo e a recomposição natural do caixa pode exigir linhas de crédito adicionais como colchão de liquidez.",
+    "pacciTip": "Crédito de reserva é o colchão pro período de transição, tesoro!"
+  },
+  {
+    "id": "REF-SR-110",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório financeiro de uma rede de postos de combustível, há uma frase incompleta sobre antecipação de recebíveis.",
+    "question": "Após o split payment, a ___ de recebíveis pode se tornar uma ferramenta ainda mais relevante para reforçar a liquidez de curto prazo.",
+    "options": [
+      "antecipação",
+      "eliminação",
+      "duplicação",
+      "postergação"
+    ],
+    "correctAnswer": "antecipação",
+    "explanation": "Com menos caixa disponível por venda, antecipar recebíveis passa a ter papel mais relevante na estratégia de liquidez.",
+    "pacciTip": "Antecipar recebível vira aliado quando o caixa aperta, amico!"
+  },
+  {
+    "id": "REF-SR-111",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No plano de auditoria interna de um hospital, há uma frase incompleta.",
+    "question": "Auditorias internas periódicas ajudam a identificar e corrigir ___ nos dados fiscais antes que o Fisco as aponte.",
+    "options": [
+      "inconsistências",
+      "lucros",
+      "créditos",
+      "isenções"
+    ],
+    "correctAnswer": "inconsistências",
+    "explanation": "O papel central da auditoria interna é encontrar inconsistências antes que se tornem objeto de questionamento pelo Fisco.",
+    "pacciTip": "Achar o erro antes é sempre a jogada mais esperta, tesoro!"
+  },
+  {
+    "id": "REF-SR-112",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de governança de dados de uma rede varejista, há uma frase incompleta.",
+    "question": "A integração entre as áreas fiscal, financeira e de TI se torna ___ diante do cruzamento de dados em tempo real.",
+    "options": [
+      "mais crítica",
+      "dispensável",
+      "menos relevante",
+      "opcional"
+    ],
+    "correctAnswer": "mais crítica",
+    "explanation": "Com dados em tempo real, falhas em qualquer uma dessas áreas aparecem rapidamente para o Fisco, exigindo integração mais forte entre elas.",
+    "pacciTip": "Time desalinhado erra rápido demais, amico!"
+  },
+  {
+    "id": "REF-SR-113",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de implantação de dashboard fiscal de uma indústria têxtil, há uma frase incompleta.",
+    "question": "Um dashboard de monitoramento fiscal em tempo real permite identificar desvios e realizar correções de forma ___, antes de eventual questionamento do Fisco.",
+    "options": [
+      "tempestiva",
+      "posterior",
+      "anual",
+      "aleatória"
+    ],
+    "correctAnswer": "tempestiva",
+    "explanation": "A correção tempestiva, feita a tempo, é o que diferencia um compliance eficaz de um compliance apenas reativo.",
+    "pacciTip": "Corrigir rápido evita dor de cabeça depois, tesoro!"
+  },
+  {
+    "id": "REF-SR-114",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de mudança de postura de compliance de um supermercado, há uma frase incompleta.",
+    "question": "No novo modelo de cruzamento de dados, o compliance fiscal deve deixar de ser apenas reativo e passar a ser ___.",
+    "options": [
+      "preventivo",
+      "opcional",
+      "terceirizado",
+      "anual"
+    ],
+    "correctAnswer": "preventivo",
+    "explanation": "Antecipar riscos antes da transmissão dos dados caracteriza a postura preventiva, mais adequada ao novo modelo de fiscalização em tempo real.",
+    "pacciTip": "Prevenir sempre sai mais barato que remediar, amico!"
+  },
+  {
+    "id": "REF-SR-115",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório de governança de acesso de uma operadora de telecomunicações, há uma frase incompleta.",
+    "question": "A governança de acesso aos sistemas fiscais deve incluir uma trilha de ___ para registrar qualquer alteração de parametrização.",
+    "options": [
+      "auditoria",
+      "marketing",
+      "vendas",
+      "logística"
+    ],
+    "correctAnswer": "auditoria",
+    "explanation": "A trilha de auditoria registra quem alterou o quê e quando, permitindo rastrear e corrigir eventuais problemas de parametrização.",
+    "pacciTip": "Todo acesso deixa rastro, tesoro! É assim que se protege o sistema."
+  },
+  {
+    "id": "REF-SR-116",
+    "level": "analista_senior",
+    "type": "fill_blank",
+    "scenario": "No relatório estratégico de uma empresa de mineração, há uma frase incompleta sobre compliance fiscal como diferencial.",
+    "question": "Um compliance fiscal rigoroso pode se tornar uma vantagem ___ ao reduzir o risco de autuações e aumentar a previsibilidade financeira.",
+    "options": [
+      "competitiva",
+      "irrelevante",
+      "temporária",
+      "proibida"
+    ],
+    "correctAnswer": "competitiva",
+    "explanation": "Empresas com compliance sólido evitam surpresas fiscais e constroem reputação de solidez, o que se torna um diferencial competitivo.",
+    "pacciTip": "Compliance forte também é vitrine para o mercado, amico!"
+  },
+  {
+    "id": "REF-SR-117",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No relatório final de cronograma de uma indústria eletrônica, você precisa lembrar em que ano começa o teste oficial do novo modelo.",
+    "question": "Digite o ano em que se inicia o teste oficial de cobrança do IBS/CBS, com alíquota simbólica:",
+    "correctAnswer": "2026",
+    "explanation": "2026 é o ano do teste oficial, com alíquota simbólica, apenas para validar sistemas e processos.",
+    "pacciTip": "2026, o ensaio geral, tesoro! Guarda esse número."
+  },
+  {
+    "id": "REF-SR-118",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em uma nota técnica de uma rede de farmácias sobre o cronograma de redução de ICMS/ISS, você precisa lembrar em que ano essa redução começa.",
+    "question": "Digite o ano em que tem início a redução gradual das alíquotas de ICMS e ISS, dentro do cronograma da transição:",
+    "correctAnswer": "2029",
+    "explanation": "2029 é o ano em que a redução gradual do ICMS e do ISS tem início, estendendo-se até 2032.",
+    "pacciTip": "2029, o início da rampa de descida, amico!"
+  },
+  {
+    "id": "REF-SR-119",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em uma apresentação para a diretoria de uma transportadora, você precisa lembrar o último ano do período de redução gradual do ICMS e do ISS.",
+    "question": "Digite o último ano do período de redução gradual das alíquotas de ICMS e ISS, antes da extinção total:",
+    "correctAnswer": "2032",
+    "explanation": "2032 é o último ano da redução gradual do ICMS e do ISS; a extinção total ocorre no ano seguinte, em 2033.",
+    "pacciTip": "2032, o penúltimo capítulo da história, tesoro!"
+  },
+  {
+    "id": "REF-SR-120",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No plano de treinamento de uma rede hoteleira, você precisa resumir em uma palavra como o treinamento das equipes deve ser conduzido ao longo do cronograma da reforma.",
+    "question": "Digite, em uma palavra, como deve ser o treinamento das equipes ao longo do cronograma da reforma (não concentrado em um único momento):",
+    "correctAnswer": "faseado",
+    "explanation": "O treinamento deve ser faseado, acompanhando cada marco relevante do cronograma, e não concentrado em um único momento.",
+    "pacciTip": "Faseado é a palavra da vez, amico! Aprendizado em capítulos."
+  },
+  {
+    "id": "REF-SR-121",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em uma nota técnica de uma indústria de alimentos sobre o ano de 2026, você precisa resumir em uma palavra o tipo de alíquota praticada.",
+    "question": "Digite, em uma palavra, o tipo de alíquota praticada durante o ano de teste do IBS/CBS em 2026:",
+    "correctAnswer": "simbólica",
+    "explanation": "Em 2026, a alíquota é simbólica, servindo apenas para testar os sistemas, sem representar a carga tributária final.",
+    "pacciTip": "Alíquota de treino, efeito de treino, tesoro!"
+  },
+  {
+    "id": "REF-SR-122",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em um relatório técnico de uma indústria têxtil, você precisa resumir em uma palavra como os sistemas antigo e novo de tributação coexistem entre 2026 e 2032.",
+    "question": "Digite, em uma palavra, como os sistemas antigo e novo de tributação coexistem durante 2026 a 2032:",
+    "correctAnswer": "paralelo",
+    "explanation": "Durante boa parte da transição, os dois sistemas funcionam em paralelo, exigindo apuração e obrigações acessórias de ambos.",
+    "pacciTip": "Dois motores rodando juntos, amico! É assim até 2033."
+  },
+  {
+    "id": "REF-SR-123",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No jurídico de uma rede de shopping centers, você precisa lembrar o nome do documento usado para incluir uma nova cláusula em um contrato já vigente.",
+    "question": "Digite, em uma palavra, o tipo de documento contratual usado para formalizar a inclusão de uma nova cláusula em um contrato já vigente:",
+    "correctAnswer": "aditivo",
+    "explanation": "O aditivo contratual é o instrumento usado para incluir ou alterar cláusulas em um contrato que já está em vigor.",
+    "pacciTip": "Aditivo é o remendo formal do contrato, tesoro!"
+  },
+  {
+    "id": "REF-SR-124",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em um fabricante de embalagens, você precisa lembrar qual tipo de margem contratual torna um contrato mais vulnerável a mudanças tributárias, quando não há cláusula de ajuste.",
+    "question": "Digite, em uma palavra, o tipo de margem contratual que torna um contrato de fornecimento mais vulnerável a mudanças tributárias sem cláusula de ajuste:",
+    "correctAnswer": "fixa",
+    "explanation": "Uma margem fixa não se ajusta automaticamente a mudanças na carga tributária, o que a torna vulnerável sem uma cláusula de repactuação.",
+    "pacciTip": "Margem fixa sem proteção é risco puro, amico!"
+  },
+  {
+    "id": "REF-SR-125",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No jurídico de uma empresa de SaaS, você precisa lembrar a característica que a revisão de contratos de longo prazo deve ter ao longo da transição.",
+    "question": "Digite, em uma palavra, a característica que a revisão de contratos de longo prazo deve ter ao longo da transição (não deve ser feita uma única vez):",
+    "correctAnswer": "contínua",
+    "explanation": "A revisão contratual deve ser contínua, acompanhando os diversos marcos da transição, e não um evento único no início do processo.",
+    "pacciTip": "Revisão de vez em quando não basta, tesoro!"
+  },
+  {
+    "id": "REF-SR-126",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em uma construtora, você precisa lembrar o que deve ser feito periodicamente em contratos de obras plurianuais, em relação aos preços.",
+    "question": "Digite, em uma palavra, o que deve ser feito periodicamente em contratos de obras plurianuais ao longo dos marcos da transição, em relação aos preços:",
+    "correctAnswer": "revisão",
+    "explanation": "A revisão periódica de preços permite que o contrato de obra se ajuste a cada marco relevante da transição tributária.",
+    "pacciTip": "Revisão em capítulos, amico! Obra longa pede acompanhamento constante."
+  },
+  {
+    "id": "REF-SR-127",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em uma rede de franquias, você precisa lembrar o tipo de efeito que a reforma pode ter sobre royalties calculados sobre faturamento bruto.",
+    "question": "Digite, em uma palavra, o tipo de efeito (não direto) que a reforma pode ter sobre royalties calculados sobre faturamento bruto:",
+    "correctAnswer": "indireto",
+    "explanation": "Mesmo calculados sobre o faturamento bruto, os royalties podem sofrer efeito indireto se a carga tributária pressionar a margem líquida do franqueado.",
+    "pacciTip": "Efeito indireto também pesa no bolso, tesoro!"
+  },
+  {
+    "id": "REF-SR-128",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em uma importadora, você precisa lembrar o tipo de cláusula que, isoladamente, protege apenas contra variação cambial, mas não contra efeitos tributários.",
+    "question": "Digite, em uma palavra, o tipo de cláusula (isoladamente insuficiente) que protege apenas contra variação cambial, mas não contra efeitos tributários:",
+    "correctAnswer": "cambial",
+    "explanation": "A cláusula cambial cobre apenas o risco de variação do câmbio, não substituindo a necessidade de tratar contratualmente o risco tributário.",
+    "pacciTip": "Câmbio é um risco, imposto é outro, amico!"
+  },
+  {
+    "id": "REF-SR-129",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No financeiro de um e-commerce de moda, você precisa lembrar o fenômeno intensificado pelo split payment quando o prazo de recebimento é maior que o de pagamento a fornecedores.",
+    "question": "Digite, em uma palavra, o fenômeno intensificado pelo split payment quando o prazo de recebimento das vendas é maior que o prazo de pagamento a fornecedores:",
+    "correctAnswer": "descasamento",
+    "explanation": "O descasamento entre o ritmo de entrada de caixa (parcelado e já líquido de tributo) e o de saída para fornecedores se acentua com o split payment.",
+    "pacciTip": "Entra devagar, sai rápido: aí mora o descasamento, tesoro!"
+  },
+  {
+    "id": "REF-SR-130",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Em uma distribuidora atacadista, você precisa lembrar a característica de margem que torna uma empresa mais sensível ao efeito do split payment.",
+    "question": "Digite, em uma palavra, a característica de margem que torna uma empresa mais sensível ao efeito do split payment no capital de giro:",
+    "correctAnswer": "apertada",
+    "explanation": "Quanto mais apertada a margem, mais sensível a empresa fica à redução de caixa causada pela retenção automática do tributo.",
+    "pacciTip": "Margem curta sente cada centavo retido, amico!"
+  },
+  {
+    "id": "REF-SR-131",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na equipe de operações de um marketplace, você precisa lembrar o que a plataforma precisa fazer corretamente, em cada venda, entre o valor do tributo e o valor líquido a repassar ao lojista.",
+    "question": "Digite, em uma palavra, o que o marketplace precisa fazer corretamente, para cada venda, entre o valor do tributo e o valor líquido a repassar ao lojista:",
+    "correctAnswer": "segregar",
+    "explanation": "A plataforma precisa segregar, em cada venda, o valor destinado ao Fisco e o valor líquido a repassar corretamente ao lojista.",
+    "pacciTip": "Separar direitinho evita confusão no repasse, tesoro!"
+  },
+  {
+    "id": "REF-SR-132",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na controladoria de uma clínica de estética, você precisa lembrar o que deve ser feito com o valor do tributo retido pelo split payment ao projetar o caixa disponível.",
+    "question": "Digite, em uma palavra, o que deve ser feito com o valor do tributo retido pelo split payment ao projetar o caixa disponível da empresa (incluir ou excluir):",
+    "correctAnswer": "excluir",
+    "explanation": "O valor retido nunca chega a ficar disponível para a empresa, então deve ser excluído da projeção de caixa livre.",
+    "pacciTip": "O que já foi pro Fisco não conta como seu, amico!"
+  },
+  {
+    "id": "REF-SR-133",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na tesouraria de uma indústria de autopeças, você precisa lembrar o tipo de linha financeira que pode ser negociada para cobrir o hiato de caixa gerado pelo split payment.",
+    "question": "Digite, em uma palavra, o tipo de linha financeira que pode ser negociada com bancos para cobrir o hiato de caixa gerado pelo split payment:",
+    "correctAnswer": "crédito",
+    "explanation": "Uma linha de crédito adicional funciona como colchão de liquidez para cobrir o hiato de caixa gerado pela retenção do tributo.",
+    "pacciTip": "Crédito de reserva é o colchão pro período de transição, tesoro!"
+  },
+  {
+    "id": "REF-SR-134",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na diretoria de uma rede de postos de combustível, você precisa lembrar a operação financeira de conversão antecipada de recebíveis em caixa.",
+    "question": "Digite, em uma palavra, a operação financeira de conversão antecipada de recebíveis em caixa, que ganha relevância após o split payment:",
+    "correctAnswer": "antecipação",
+    "explanation": "A antecipação de recebíveis converte valores a receber em caixa imediato, ganhando relevância quando o caixa disponível por venda diminui.",
+    "pacciTip": "Antecipar recebível vira aliado quando o caixa aperta, amico!"
+  },
+  {
+    "id": "REF-SR-135",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No comitê de compliance de um hospital, você precisa lembrar o tipo de verificação interna periódica que compara os dados fiscais transmitidos ao Fisco com os registros da empresa.",
+    "question": "Digite, em uma palavra, o tipo de verificação interna periódica que compara os dados fiscais transmitidos ao Fisco com os registros da empresa:",
+    "correctAnswer": "auditoria",
+    "explanation": "A auditoria interna periódica é a verificação que compara os dados transmitidos com os registros internos, identificando inconsistências.",
+    "pacciTip": "Achar o erro antes é sempre a jogada mais esperta, tesoro!"
+  },
+  {
+    "id": "REF-SR-136",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na diretoria de TI de uma rede varejista, você precisa lembrar o que se torna mais crítico entre as áreas fiscal, financeira e de TI diante do cruzamento de dados em tempo real.",
+    "question": "Digite, em uma palavra, o que se torna mais crítico entre as áreas fiscal, financeira e de TI diante do cruzamento de dados em tempo real:",
+    "correctAnswer": "integração",
+    "explanation": "A integração entre essas três áreas se torna mais crítica, já que falhas isoladas aparecem rapidamente para o Fisco.",
+    "pacciTip": "Time desalinhado erra rápido demais, amico!"
+  },
+  {
+    "id": "REF-SR-137",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "No gestor de compliance de uma indústria têxtil, você precisa lembrar a característica que a correção de inconsistências fiscais deve ter no novo modelo de dados em tempo real.",
+    "question": "Digite, em uma palavra, a característica que a correção de inconsistências fiscais deve ter no novo modelo de dados em tempo real (rápida, feita a tempo):",
+    "correctAnswer": "tempestiva",
+    "explanation": "A correção tempestiva, feita a tempo, evita que a inconsistência se torne objeto de questionamento pelo Fisco.",
+    "pacciTip": "Corrigir rápido evita dor de cabeça depois, tesoro!"
+  },
+  {
+    "id": "REF-SR-138",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na diretoria de um supermercado, você precisa lembrar o tipo de postura que o compliance fiscal deve adotar no novo modelo, em vez de reativa.",
+    "question": "Digite, em uma palavra, o tipo de postura (antecipar riscos) que o compliance fiscal deve adotar no novo modelo, em vez de reativa:",
+    "correctAnswer": "preventiva",
+    "explanation": "A postura preventiva antecipa e corrige riscos antes da transmissão dos dados, sendo mais adequada ao novo modelo de fiscalização em tempo real.",
+    "pacciTip": "Prevenir sempre sai mais barato que remediar, amico!"
+  },
+  {
+    "id": "REF-SR-139",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na equipe de segurança da informação de uma operadora de telecomunicações, você precisa lembrar o registro que rastreia alterações feitas nas parametrizações dos sistemas fiscais.",
+    "question": "Digite, em uma palavra, o registro que rastreia alterações feitas nas parametrizações dos sistemas fiscais:",
+    "correctAnswer": "trilha",
+    "explanation": "A trilha de auditoria registra quem alterou o quê e quando, permitindo rastrear e corrigir eventuais problemas de parametrização.",
+    "pacciTip": "Todo acesso deixa rastro, tesoro! É assim que se protege o sistema."
+  },
+  {
+    "id": "REF-SR-140",
+    "level": "analista_senior",
+    "type": "text_input",
+    "scenario": "Na diretoria de uma empresa de mineração, você precisa lembrar o tipo de vantagem que um compliance fiscal rigoroso pode gerar perante o mercado.",
+    "question": "Digite, em uma palavra, o tipo de vantagem que um compliance fiscal rigoroso pode gerar para a empresa perante o mercado:",
+    "correctAnswer": "competitiva",
+    "explanation": "Um compliance fiscal rigoroso reduz o risco de autuações e constrói reputação de solidez, tornando-se uma vantagem competitiva.",
+    "pacciTip": "Compliance forte também é vitrine para o mercado, amico!"
+  }
+]

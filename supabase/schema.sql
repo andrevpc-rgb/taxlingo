@@ -1,0 +1,336 @@
+-- =============================================================================
+-- TaxLingo — Schema do Supabase (PostgreSQL)
+-- =============================================================================
+-- Como rodar: cole este arquivo inteiro no SQL Editor do painel do Supabase
+-- (https://supabase.com/dashboard/project/_/sql/new) e execute. É seguro
+-- rodar mais de uma vez (usa IF NOT EXISTS / CREATE OR REPLACE em tudo).
+--
+-- Autenticação: usamos o Supabase Auth nativo (schema `auth.users`) para
+-- email/senha — por isso `public.users` NÃO tem coluna de senha. Cada linha
+-- de `public.users` é um "perfil" vinculado 1:1 a um `auth.users` pelo `id`.
+-- =============================================================================
+
+create extension if not exists "pgcrypto";
+
+-- -----------------------------------------------------------------------------
+-- 1. companies
+-- -----------------------------------------------------------------------------
+create table if not exists public.companies (
+  id uuid primary key default gen_random_uuid(),
+  name text not null,
+  company_code text not null unique,
+  logo_url text,
+  created_at timestamptz not null default now()
+);
+
+comment on table public.companies is 'Empresas clientes (multi-tenancy). company_code é usado no cadastro do colaborador para vínculo automático.';
+
+-- -----------------------------------------------------------------------------
+-- 2. users (perfil — vinculado 1:1 a auth.users)
+-- -----------------------------------------------------------------------------
+create table if not exists public.users (
+  id uuid primary key references auth.users (id) on delete cascade,
+  email text not null unique,
+  full_name text not null,
+  job_title text,
+  role text not null default 'employee' check (role in ('employee', 'admin', 'master')),
+  company_id uuid references public.companies (id) on delete set null,
+  avatar_url text default '🙂',
+  xp integer not null default 0,
+  level integer not null default 1,
+  lives integer not null default 5,
+  max_lives integer not null default 5,
+  streak integer not null default 0,
+  streak_freezes integer not null default 0,
+  gems integer not null default 0,
+  last_study_date date,
+  current_level_id text,
+  current_level_since date,
+  time_spent_minutes integer not null default 0,
+  trial_expires_at timestamptz, -- só preenchido pra contas do "Testar Grátis por 24 Horas"
+  created_at timestamptz not null default now()
+);
+
+comment on table public.users is 'Perfil do colaborador. id = auth.users.id. Sem coluna de senha: isso fica em auth.users, gerenciado pelo Supabase Auth.';
+comment on column public.users.role is 'employee = colaborador comum; admin = gestor da própria empresa (Painel do Gestor); master = acesso total (conta do fundador/QA).';
+
+create index if not exists users_company_id_idx on public.users (company_id);
+
+-- -----------------------------------------------------------------------------
+-- 3. modules / lessons / questions
+-- -----------------------------------------------------------------------------
+create table if not exists public.modules (
+  id text primary key, -- ex: 'reforma-tributaria'
+  title text not null,
+  description text,
+  icon text,
+  color text,
+  is_available boolean not null default false,
+  order_index integer not null default 0
+);
+
+create table if not exists public.lessons (
+  id text primary key, -- ex: 'estagiario-1', 'estagiario-exam'
+  module_id text not null references public.modules (id) on delete cascade,
+  career_level_id text, -- ex: 'estagiario' (null para módulos sem trilha de carreira)
+  type text not null default 'regular' check (type in ('regular', 'exam')),
+  title text not null,
+  xp_reward integer not null default 0,
+  question_count integer not null default 0,
+  pass_threshold numeric(3, 2), -- só preenchido para type = 'exam' (ex: 0.80)
+  order_index integer not null default 0
+);
+
+create index if not exists lessons_module_id_idx on public.lessons (module_id);
+
+create table if not exists public.questions (
+  id text primary key, -- ex: 'REF-EST-001'
+  lesson_id text not null references public.lessons (id) on delete cascade,
+  level text not null, -- career_level_id da questão (redundante com a lição, útil pra filtro rápido)
+  type text not null check (type in ('multiple_choice', 'true_false', 'ordering', 'fill_blank', 'text_input')),
+  scenario text,
+  question text not null,
+  options jsonb, -- array de strings; null para true_false e text_input
+  correct_answer jsonb not null, -- string | boolean | array de strings, conforme `type`
+  explanation text,
+  pacci_tip text,
+  order_index integer not null default 0
+);
+
+create index if not exists questions_lesson_id_idx on public.questions (lesson_id);
+
+-- -----------------------------------------------------------------------------
+-- 4. user_progress (substitui o estado local `state.modules` do GameContext)
+-- -----------------------------------------------------------------------------
+create table if not exists public.user_progress (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.users (id) on delete cascade,
+  lesson_id text not null references public.lessons (id) on delete cascade,
+  completed_at timestamptz,
+  score numeric(4, 3), -- % de acerto (0.000 a 1.000) — relevante para exames
+  passed boolean, -- null para lições regulares (não têm conceito de reprovação)
+  created_at timestamptz not null default now()
+);
+
+comment on table public.user_progress is 'Uma linha por tentativa de lição. Lições regulares: 1 linha ao concluir. Exames: 1 linha por tentativa (histórico completo de aprovações/reprovações).';
+
+create index if not exists user_progress_user_id_idx on public.user_progress (user_id);
+create index if not exists user_progress_lesson_id_idx on public.user_progress (lesson_id);
+-- Acelera a checagem "colaborador já completou esta lição regular?"
+create unique index if not exists user_progress_unique_regular_completion
+  on public.user_progress (user_id, lesson_id)
+  where passed is null; -- só uma linha "concluída" por lição regular; exames podem repetir
+
+-- -----------------------------------------------------------------------------
+-- 5. temp_access_tokens (Testar Grátis por 24 Horas)
+-- -----------------------------------------------------------------------------
+create table if not exists public.temp_access_tokens (
+  id uuid primary key default gen_random_uuid(),
+  email text not null,
+  temp_password text not null,
+  expires_at timestamptz not null,
+  used_at timestamptz,
+  created_at timestamptz not null default now()
+);
+
+comment on table public.temp_access_tokens is 'Sem RLS liberada para anon/authenticated — só a Edge Function (service_role) acessa. Contém senha temporária em texto puro por curtíssimo prazo (24h) só para o e-mail de boas-vindas; o login real usa auth.users normalmente.';
+
+create index if not exists temp_access_tokens_email_idx on public.temp_access_tokens (email);
+
+-- -----------------------------------------------------------------------------
+-- 6. subscriptions (plano da empresa — checkout Asaas)
+-- -----------------------------------------------------------------------------
+create table if not exists public.subscriptions (
+  id uuid primary key default gen_random_uuid(),
+  company_id uuid not null references public.companies (id) on delete cascade,
+  plan text not null check (plan in ('starter', 'pro')),
+  status text not null default 'trialing' check (status in ('trialing', 'active', 'past_due', 'canceled')),
+  seats_limit integer not null,
+  asaas_customer_id text,
+  asaas_subscription_id text,
+  current_period_end timestamptz,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+create index if not exists subscriptions_company_id_idx on public.subscriptions (company_id);
+
+create or replace function public.set_updated_at()
+returns trigger
+language plpgsql
+as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
+drop trigger if exists subscriptions_set_updated_at on public.subscriptions;
+create trigger subscriptions_set_updated_at
+  before update on public.subscriptions
+  for each row execute function public.set_updated_at();
+
+-- =============================================================================
+-- Trigger: cria automaticamente o perfil em public.users quando alguém se
+-- cadastra via supabase.auth.signUp(). Os campos extras (full_name, job_title,
+-- company_id) vêm de `options.data` passado no signUp — ver src/lib/supabase.js.
+-- =============================================================================
+create or replace function public.handle_new_auth_user()
+returns trigger
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  insert into public.users (id, email, full_name, job_title, company_id, avatar_url, trial_expires_at)
+  values (
+    new.id,
+    new.email,
+    coalesce(new.raw_user_meta_data ->> 'full_name', split_part(new.email, '@', 1)),
+    new.raw_user_meta_data ->> 'job_title',
+    nullif(new.raw_user_meta_data ->> 'company_id', '')::uuid,
+    coalesce(new.raw_user_meta_data ->> 'avatar_url', '🙂'),
+    nullif(new.raw_user_meta_data ->> 'trial_expires_at', '')::timestamptz
+  )
+  on conflict (id) do nothing;
+  return new;
+end;
+$$;
+
+drop trigger if exists on_auth_user_created on auth.users;
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute function public.handle_new_auth_user();
+
+-- =============================================================================
+-- Helpers de RLS (SECURITY DEFINER pra evitar recursão de policy em `users`)
+-- =============================================================================
+create or replace function public.current_user_company_id()
+returns uuid
+language sql
+security definer set search_path = public
+stable
+as $$
+  select company_id from public.users where id = auth.uid();
+$$;
+
+create or replace function public.current_user_role()
+returns text
+language sql
+security definer set search_path = public
+stable
+as $$
+  select role from public.users where id = auth.uid();
+$$;
+
+create or replace function public.is_manager()
+returns boolean
+language sql
+security definer set search_path = public
+stable
+as $$
+  select coalesce(public.current_user_role() in ('admin', 'master'), false);
+$$;
+
+create or replace function public.is_master()
+returns boolean
+language sql
+security definer set search_path = public
+stable
+as $$
+  select coalesce(public.current_user_role() = 'master', false);
+$$;
+
+-- Ranking Geral: qualquer colaborador logado pode comparar XP com o de
+-- outras empresas, mas a tabela `users` completa (email etc.) fica
+-- restrita a self/própria empresa/master (ver policy users_select_self_or_company
+-- abaixo). Por isso o "Ranking Geral" não faz um SELECT direto em `users` —
+-- usa esta função SECURITY DEFINER, que só devolve as colunas não sensíveis
+-- necessárias pro pódio/lista (nome, avatar, cargo, empresa, xp).
+create or replace function public.get_global_leaderboard()
+returns table (id uuid, full_name text, avatar_url text, job_title text, company_id uuid, xp integer)
+language sql
+security definer set search_path = public
+stable
+as $$
+  select id, full_name, avatar_url, job_title, company_id, xp
+  from public.users
+  order by xp desc;
+$$;
+
+comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa).';
+
+-- =============================================================================
+-- Row Level Security
+-- =============================================================================
+alter table public.companies enable row level security;
+alter table public.users enable row level security;
+alter table public.modules enable row level security;
+alter table public.lessons enable row level security;
+alter table public.questions enable row level security;
+alter table public.user_progress enable row level security;
+alter table public.temp_access_tokens enable row level security;
+alter table public.subscriptions enable row level security;
+
+-- companies: leitura pública (necessário pra validar company_code no cadastro,
+-- antes mesmo de existir sessão). Nenhuma escrita pelo cliente.
+drop policy if exists companies_select_all on public.companies;
+create policy companies_select_all on public.companies for select using (true);
+
+-- users: cada um vê/edita o próprio perfil; quem é admin/master vê a própria
+-- empresa inteira (Painel do Gestor); master vê todo mundo.
+drop policy if exists users_select_self_or_company on public.users;
+create policy users_select_self_or_company on public.users for select
+  using (
+    id = auth.uid()
+    or public.is_master()
+    or (public.is_manager() and company_id = public.current_user_company_id())
+  );
+
+drop policy if exists users_update_self on public.users;
+create policy users_update_self on public.users for update
+  using (id = auth.uid() or public.is_master())
+  with check (id = auth.uid() or public.is_master());
+
+-- modules/lessons/questions: conteúdo, leitura liberada pra qualquer usuário logado.
+drop policy if exists modules_select_authenticated on public.modules;
+create policy modules_select_authenticated on public.modules for select
+  using (auth.role() = 'authenticated');
+
+drop policy if exists lessons_select_authenticated on public.lessons;
+create policy lessons_select_authenticated on public.lessons for select
+  using (auth.role() = 'authenticated');
+
+drop policy if exists questions_select_authenticated on public.questions;
+create policy questions_select_authenticated on public.questions for select
+  using (auth.role() = 'authenticated');
+
+-- user_progress: cada um grava/lê o próprio progresso; admin/master leem o
+-- progresso de quem está na mesma empresa (pro Painel do Gestor).
+drop policy if exists user_progress_select_self_or_company on public.user_progress;
+create policy user_progress_select_self_or_company on public.user_progress for select
+  using (
+    user_id = auth.uid()
+    or public.is_master()
+    or (
+      public.is_manager()
+      and user_id in (select id from public.users where company_id = public.current_user_company_id())
+    )
+  );
+
+drop policy if exists user_progress_insert_self on public.user_progress;
+create policy user_progress_insert_self on public.user_progress for insert
+  with check (user_id = auth.uid());
+
+-- temp_access_tokens: SEM policy pra anon/authenticated -> RLS bloqueia tudo
+-- por padrão. Só a Edge Function (com a service_role key) consegue ler/escrever.
+
+-- subscriptions: admin/master da empresa conseguem ver o próprio plano.
+drop policy if exists subscriptions_select_company on public.subscriptions;
+create policy subscriptions_select_company on public.subscriptions for select
+  using (public.is_master() or (public.is_manager() and company_id = public.current_user_company_id()));
+
+-- =============================================================================
+-- Fim do schema. Próximo passo: rode `node scripts/seed.mjs` (ver README) pra
+-- popular companies, usuários de teste, a conta master e o banco de 1000
+-- questões a partir de src/data/.
+-- =============================================================================

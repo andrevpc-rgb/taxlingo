@@ -1,0 +1,2338 @@
+[
+  {
+    "id": "REF-ESP-001",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Você está avaliando se a empresa deve descontinuar uma estrutura societária criada anos atrás exclusivamente para aproveitar um benefício fiscal estadual de ICMS concedido no contexto da guerra fiscal.",
+    "question": "O que substitui, durante a transição, os benefícios fiscais estaduais de ICMS concedidos no contexto da 'guerra fiscal'?",
+    "options": [
+      "O Fundo de Compensação de Benefícios Fiscais (FCBF), que compensa gradualmente empresas beneficiárias durante a transição",
+      "Nada, os benefícios são simplesmente cancelados sem qualquer compensação",
+      "Um aumento automático de alíquota para essas empresas",
+      "A obrigatoriedade de mudança de sede para outro Estado"
+    ],
+    "correctAnswer": "O Fundo de Compensação de Benefícios Fiscais (FCBF), que compensa gradualmente empresas beneficiárias durante a transição",
+    "explanation": "O FCBF foi criado para compensar, de forma decrescente ao longo da transição, empresas que usufruíam de benefícios fiscais estaduais de ICMS.",
+    "pacciTip": "Mamma mia, nada se perde de uma vez! O FCBF suaviza a queda dos benefícios antigos."
+  },
+  {
+    "id": "REF-ESP-002",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Você está elaborando uma tese tributária sobre o destino dos créditos de PIS/Cofins acumulados pela empresa antes da extinção definitiva desses tributos em 2027.",
+    "question": "O que ocorre, em regra, com créditos de PIS/Cofins acumulados até a extinção desses tributos?",
+    "options": [
+      "Poderão ser aproveitados/compensados conforme regras de transição específicas previstas em lei",
+      "São automaticamente convertidos em créditos de IBS",
+      "Perdem-se integralmente, sem qualquer aproveitamento",
+      "Só podem ser usados por empresas exportadoras"
+    ],
+    "correctAnswer": "Poderão ser aproveitados/compensados conforme regras de transição específicas previstas em lei",
+    "explanation": "A legislação de transição prevê regras próprias para o aproveitamento dos créditos remanescentes de PIS/Cofins, evitando a perda pura e simples desses valores.",
+    "pacciTip": "Crédito velho não vira pó, tesoro! Existe regra de transição pra aproveitar direitinho."
+  },
+  {
+    "id": "REF-ESP-003",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Você está simulando a carga tributária final de uma operação complexa: venda feita por um marketplace, com centro de distribuição em um Estado e entrega ao consumidor final em outro.",
+    "question": "Nesse tipo de operação, qual princípio orienta a apuração do IBS devido?",
+    "options": [
+      "O princípio do destino, considerando o local de entrega/consumo do bem, independentemente de onde está o centro de distribuição",
+      "O princípio da origem, considerando apenas onde está localizado o marketplace",
+      "A escolha livre do vendedor sobre onde recolher",
+      "A isenção total para vendas por marketplace"
+    ],
+    "correctAnswer": "O princípio do destino, considerando o local de entrega/consumo do bem, independentemente de onde está o centro de distribuição",
+    "explanation": "O princípio do destino se mantém mesmo em cadeias logísticas complexas: o que importa é onde o bem é efetivamente consumido, não onde está o centro de distribuição.",
+    "pacciTip": "Não importa de onde o pacote saiu, amico! O que conta é onde ele chega."
+  },
+  {
+    "id": "REF-ESP-004",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Você está avaliando o mecanismo constitucional de teto ('trava') de carga tributária, criado para monitorar a carga tributária global durante a transição.",
+    "question": "Qual é a finalidade do mecanismo de teto ('trava') de carga tributária previsto na Reforma?",
+    "options": [
+      "Impedir que a soma das alíquotas de referência do IBS/CBS resulte em aumento da carga tributária global em relação ao sistema atual",
+      "Limitar o número de empresas que podem vender no país",
+      "Fixar um valor máximo de faturamento para as empresas",
+      "Impedir que Estados aumentem qualquer tributo estadual"
+    ],
+    "correctAnswer": "Impedir que a soma das alíquotas de referência do IBS/CBS resulte em aumento da carga tributária global em relação ao sistema atual",
+    "explanation": "O teto de carga tributária é um mecanismo de controle que impede que a transição, na prática, aumente a carga tributária total suportada pela sociedade.",
+    "pacciTip": "É um freio de segurança, tesoro! A carga total não pode subir além do combinado."
+  },
+  {
+    "id": "REF-ESP-005",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Você está avaliando se uma reestruturação societária feita exclusivamente para aproveitar incentivo fiscal de ICMS ainda faz sentido econômico isoladamente diante da extinção gradual desses benefícios.",
+    "question": "Estruturas societárias criadas exclusivamente para aproveitar benefícios fiscais estaduais tendem a perder relevância à medida que esses benefícios são substituídos pelo Fundo de Compensação?",
+    "correctAnswer": true,
+    "explanation": "Correto! Como os benefícios são gradualmente extintos e compensados pelo FCBF, estruturas criadas só por causa deles tendem a perder razão de ser ao longo da transição.",
+    "pacciTip": "Sì! Estrutura só por causa de benefício perde o sentido quando o benefício vai embora."
+  },
+  {
+    "id": "REF-ESP-006",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Durante uma discussão técnica, um colega afirma que a alíquota de referência de cada ente federativo (Estado/Município) é fixa, definida diretamente na Constituição, sem possibilidade de ajuste.",
+    "question": "A alíquota de referência de cada ente federativo é fixa, definida diretamente na Constituição, sem qualquer possibilidade de ajuste?",
+    "correctAnswer": false,
+    "explanation": "Errado! A alíquota de referência é calculada periodicamente segundo metodologia própria, podendo ser ajustada para preservar o nível de arrecadação de cada ente.",
+    "pacciTip": "Nada é gravado em pedra, amico! A alíquota de referência é calculada e pode ser ajustada."
+  },
+  {
+    "id": "REF-ESP-007",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um colega afirma que o mecanismo de teto de carga tributária garante que a carga tributária total do país nunca poderá ser maior, em termos percentuais, do que era antes da Reforma, considerando a soma das alíquotas de referência.",
+    "question": "O mecanismo de teto de carga tributária garante que a carga tributária total do país não ultrapasse, em termos percentuais, o patamar anterior à Reforma?",
+    "correctAnswer": true,
+    "explanation": "Correto! Essa é exatamente a função do teto: servir como salvaguarda para que a soma das alíquotas de referência não eleve a carga tributária global.",
+    "pacciTip": "É a garantia constitucional, tesoro! A carga total não pode ultrapassar o combinado."
+  },
+  {
+    "id": "REF-ESP-008",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um colega afirma que, em operações complexas envolvendo múltiplos Estados — como transferência entre filiais seguida de venda ao consumidor final —, a apuração do IBS pode exigir a aplicação combinada de mais de uma regra, aumentando a complexidade da análise tributária.",
+    "question": "Em operações complexas envolvendo múltiplos Estados, a apuração do IBS pode exigir a aplicação combinada de mais de uma regra, aumentando a complexidade da análise?",
+    "correctAnswer": true,
+    "explanation": "Correto! Cadeias com transferências entre filiais e vendas subsequentes podem combinar regras de transferência e de venda ao consumidor final, exigindo análise mais elaborada.",
+    "pacciTip": "Operação complexa pede análise complexa, amico! Nunca simplifica demais uma cadeia com várias etapas."
+  },
+  {
+    "id": "REF-ESP-009",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "Você está elaborando uma tese tributária sobre o aproveitamento de créditos de PIS/Cofins remanescentes durante a transição para o novo modelo.",
+    "question": "Ordene o fluxo correto de elaboração dessa tese:",
+    "options": [
+      "Submeter a tese à validação da área jurídica/tributária antes da aplicação",
+      "Levantar o saldo de créditos de PIS/Cofins acumulados pela empresa",
+      "Elaborar a tese jurídica sobre a forma de aproveitamento",
+      "Analisar as regras de transição aplicáveis a esses créditos"
+    ],
+    "correctAnswer": [
+      "Levantar o saldo de créditos de PIS/Cofins acumulados pela empresa",
+      "Analisar as regras de transição aplicáveis a esses créditos",
+      "Elaborar a tese jurídica sobre a forma de aproveitamento",
+      "Submeter a tese à validação da área jurídica/tributária antes da aplicação"
+    ],
+    "explanation": "A tese parte do levantamento do saldo, passa pela análise das regras de transição, pela elaboração formal da tese e, por fim, pela validação jurídica.",
+    "pacciTip": "Tese boa nasce de dado bom, tesoro! Levanta, analisa, escreve, valida."
+  },
+  {
+    "id": "REF-ESP-010",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "Você está liderando a reestruturação de modelo de negócios da empresa diante da extinção gradual dos benefícios fiscais estaduais de ICMS.",
+    "question": "Ordene o fluxo correto dessa reestruturação:",
+    "options": [
+      "Decidir pela manutenção, ajuste ou descontinuidade das estruturas",
+      "Mapear os benefícios fiscais de ICMS atualmente utilizados pela empresa",
+      "Simular o impacto financeiro da transição em cada estrutura societária",
+      "Avaliar o cronograma de substituição pelo Fundo de Compensação"
+    ],
+    "correctAnswer": [
+      "Mapear os benefícios fiscais de ICMS atualmente utilizados pela empresa",
+      "Avaliar o cronograma de substituição pelo Fundo de Compensação",
+      "Simular o impacto financeiro da transição em cada estrutura societária",
+      "Decidir pela manutenção, ajuste ou descontinuidade das estruturas"
+    ],
+    "explanation": "O processo mapeia os benefícios atuais, avalia o cronograma de substituição, simula o impacto financeiro e conclui com a decisão estratégica sobre cada estrutura.",
+    "pacciTip": "Mapeia, avalia, simula, decide. Reestruturação sem esses passos é aposta às cegas, amico!"
+  },
+  {
+    "id": "REF-ESP-011",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "Você está simulando a carga tributária final de uma operação complexa de venda por marketplace com entrega em múltiplos Estados.",
+    "question": "Ordene o fluxo correto dessa simulação:",
+    "options": [
+      "Comparar o resultado com a carga tributária do modelo atual",
+      "Identificar o local de destino/consumo de cada venda",
+      "Consolidar a apuração considerando múltiplos destinos",
+      "Aplicar a alíquota de referência do ente de destino"
+    ],
+    "correctAnswer": [
+      "Identificar o local de destino/consumo de cada venda",
+      "Aplicar a alíquota de referência do ente de destino",
+      "Consolidar a apuração considerando múltiplos destinos",
+      "Comparar o resultado com a carga tributária do modelo atual"
+    ],
+    "explanation": "A simulação identifica o destino de cada venda, aplica a alíquota correspondente, consolida os resultados e compara com o modelo atual para dimensionar o impacto.",
+    "pacciTip": "Cada venda tem seu destino, tesoro! Trata uma por uma antes de consolidar tudo."
+  },
+  {
+    "id": "REF-ESP-012",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "Você está analisando como o Comitê Gestor do IBS aplica o mecanismo de teto (trava) de carga tributária ao ajustar as alíquotas de referência.",
+    "question": "Ordene o fluxo correto dessa análise:",
+    "options": [
+      "Ajustar as alíquotas de referência para respeitar o teto",
+      "Calcular a soma das alíquotas de referência vigentes no período",
+      "Identificar se há excesso em relação ao limite",
+      "Comparar o resultado com o teto constitucional de carga tributária"
+    ],
+    "correctAnswer": [
+      "Calcular a soma das alíquotas de referência vigentes no período",
+      "Comparar o resultado com o teto constitucional de carga tributária",
+      "Identificar se há excesso em relação ao limite",
+      "Ajustar as alíquotas de referência para respeitar o teto"
+    ],
+    "explanation": "O mecanismo calcula a soma das alíquotas, compara com o teto, identifica eventual excesso e, se necessário, ajusta as alíquotas de referência para respeitar o limite.",
+    "pacciTip": "Calcula, compara, identifica, ajusta. O teto não deixa a carga tributária fugir do combinado!"
+  },
+  {
+    "id": "REF-ESP-013",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No parecer sobre reestruturação societária, há uma frase incompleta sobre o mecanismo que substitui os benefícios fiscais estaduais.",
+    "question": "Os benefícios fiscais estaduais de ICMS concedidos na 'guerra fiscal' serão gradualmente substituídos por compensações pagas pelo Fundo de ___ de Benefícios Fiscais.",
+    "options": [
+      "Compensação",
+      "Investimento",
+      "Reserva",
+      "Fomento"
+    ],
+    "correctAnswer": "Compensação",
+    "explanation": "O Fundo de Compensação de Benefícios Fiscais (FCBF) foi criado para compensar gradualmente as empresas afetadas pela extinção dos benefícios estaduais.",
+    "pacciTip": "Compensação é a palavra-chave, tesoro! O fundo existe pra suavizar essa transição."
+  },
+  {
+    "id": "REF-ESP-014",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No relatório de simulação de carga tributária de uma operação de marketplace, há uma frase incompleta sobre o princípio de apuração aplicável.",
+    "question": "Em operações de venda por marketplace com entrega interestadual, o IBS devido segue o princípio do ___, considerando onde o bem é efetivamente consumido.",
+    "options": [
+      "destino",
+      "origem",
+      "trânsito",
+      "estoque"
+    ],
+    "correctAnswer": "destino",
+    "explanation": "Mesmo em cadeias logísticas complexas, o princípio do destino permanece o critério central de apuração do IBS.",
+    "pacciTip": "Destino continua no comando, amico! Nem marketplace escapa dessa regra."
+  },
+  {
+    "id": "REF-ESP-015",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No estudo técnico sobre os mecanismos de controle da Reforma, há uma frase incompleta sobre o limite de carga tributária.",
+    "question": "O mecanismo de ___ de carga tributária impede que a soma das alíquotas de referência resulte em aumento da carga tributária global do país.",
+    "options": [
+      "teto",
+      "piso",
+      "bônus",
+      "desconto"
+    ],
+    "correctAnswer": "teto",
+    "explanation": "O teto (ou 'trava') de carga tributária é a salvaguarda constitucional contra o aumento da carga tributária total durante a transição.",
+    "pacciTip": "Teto é o limite que ninguém pode furar, tesoro! Nem o próprio sistema tributário."
+  },
+  {
+    "id": "REF-ESP-016",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "Na tese tributária sobre créditos remanescentes, há uma frase incompleta sobre a base legal do aproveitamento.",
+    "question": "Créditos de PIS/Cofins acumulados até a extinção desses tributos poderão ser aproveitados conforme regras de ___ previstas em lei.",
+    "options": [
+      "transição",
+      "exportação",
+      "doação",
+      "prescrição"
+    ],
+    "correctAnswer": "transição",
+    "explanation": "As regras de transição definem especificamente como os créditos remanescentes de PIS/Cofins poderão ser aproveitados ou compensados.",
+    "pacciTip": "Transição é a palavra que salva o crédito velho, amico! Sem ela, ele ficaria perdido."
+  },
+  {
+    "id": "REF-ESP-017",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "Redigindo o parecer final sobre reestruturação societária, você precisa citar a sigla do fundo que compensa empresas beneficiárias de incentivos fiscais estaduais extintos.",
+    "question": "Digite a sigla do fundo criado para compensar gradualmente empresas que usufruíam de benefícios fiscais estaduais de ICMS na guerra fiscal:",
+    "correctAnswer": "FCBF",
+    "explanation": "FCBF = Fundo de Compensação de Benefícios Fiscais, criado para compensar gradualmente empresas afetadas pela extinção dos incentivos estaduais.",
+    "pacciTip": "FCBF, quatro letrinhas que salvam muita reestruturação, tesoro!"
+  },
+  {
+    "id": "REF-ESP-018",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "Fechando a simulação de carga tributária de uma venda interestadual complexa, você precisa nomear o princípio central de apuração do IBS.",
+    "question": "Digite o princípio que orienta a apuração do IBS em operações de venda com entrega interestadual, considerando o local de consumo:",
+    "correctAnswer": "destino",
+    "explanation": "O princípio do destino define que o IBS é apurado com base no local onde o bem ou serviço é efetivamente consumido.",
+    "pacciTip": "Destino, sempre destino, amico! É o fio condutor de toda operação interestadual."
+  },
+  {
+    "id": "REF-ESP-019",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No estudo apresentado ao comitê executivo, você precisa nomear o mecanismo constitucional que evita o aumento da carga tributária total do país.",
+    "question": "Digite a palavra que designa o mecanismo constitucional que impede o aumento da carga tributária total do país durante a transição:",
+    "correctAnswer": "teto",
+    "explanation": "O teto de carga tributária é a salvaguarda que impede que a transição eleve, na prática, a carga tributária global.",
+    "pacciTip": "Teto, tesoro! Palavra pequena, proteção grande."
+  },
+  {
+    "id": "REF-ESP-020",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "Concluindo a tese sobre créditos remanescentes de PIS/Cofins, você precisa nomear o tipo de regra que rege esse aproveitamento.",
+    "question": "Digite a palavra que designa as regras aplicáveis ao aproveitamento de créditos de PIS/Cofins remanescentes após a extinção desses tributos:",
+    "correctAnswer": "transição",
+    "explanation": "As regras de transição regem especificamente como os créditos remanescentes poderão ser utilizados após a extinção do PIS e da Cofins.",
+    "pacciTip": "Transição, a palavra que fecha o ciclo, amico! Você chegou até o topo do TaxLingo!"
+  },
+  {
+    "id": "REF-ESP-021",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de farmácias que operava seu centro de distribuição em um Estado concedente de crédito presumido de ICMS avalia se compensa manter a estrutura logística após o início da extinção gradual desse benefício.",
+    "question": "O que a empresa deve observar para ter direito à compensação do FCBF sobre o benefício fiscal extinto?",
+    "options": [
+      "Que o benefício estava regularmente concedido, em fruição, e atende aos critérios de habilitação definidos na legislação de transição",
+      "Que decidiu unilateralmente pedir o ressarcimento ao Estado concedente",
+      "Que renunciou ao benefício antes do prazo de extinção",
+      "Que aumentou o quadro de funcionários no Estado"
+    ],
+    "correctAnswer": "Que o benefício estava regularmente concedido, em fruição, e atende aos critérios de habilitação definidos na legislação de transição",
+    "explanation": "A habilitação ao FCBF depende de o benefício ter sido regularmente concedido e estar em fruição, conforme os critérios estabelecidos na legislação de transição, não bastando decisões unilaterais da empresa.",
+    "pacciTip": "Não basta querer, bello! Tem que provar que o benefício era de verdade e estava em uso."
+  },
+  {
+    "id": "REF-ESP-022",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria química que concentra produção em polo industrial beneficiado por isenção de ICMS sobre insumos avalia consolidar plantas após o início da extinção gradual desse incentivo.",
+    "question": "Qual das alternativas descreve corretamente o horizonte temporal da extinção dos benefícios fiscais de ICMS abrangidos pela transição?",
+    "options": [
+      "A extinção ocorre de forma escalonada, conforme cronograma definido na legislação de transição, e não de uma só vez",
+      "A extinção ocorre integralmente já no primeiro ano da reforma",
+      "Os benefícios concedidos antes de 2000 nunca serão extintos",
+      "A extinção depende exclusivamente de decisão do governo estadual concedente"
+    ],
+    "correctAnswer": "A extinção ocorre de forma escalonada, conforme cronograma definido na legislação de transição, e não de uma só vez",
+    "explanation": "A extinção dos benefícios fiscais de ICMS segue cronograma escalonado definido na legislação de transição, e não ocorre de forma abrupta nem depende de decisão unilateral do Estado.",
+    "pacciTip": "Passo a passo, bello! Nada de extinção da noite pro dia."
+  },
+  {
+    "id": "REF-ESP-023",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de desenvolvimento de software acumulou créditos de PIS/Cofins não aproveitados sobre aquisições de equipamentos e está avaliando o impacto da extinção desses tributos em 2027 sobre esse saldo.",
+    "question": "Segundo as regras de transição, o que a empresa deve fazer para não perder o direito de utilizar esse saldo credor?",
+    "options": [
+      "Observar os prazos e condições específicos definidos na legislação de transição para aproveitamento ou compensação do saldo remanescente",
+      "Zerar o saldo voluntariamente antes de 2027 para evitar questionamentos",
+      "Transferir automaticamente o saldo para outra empresa do grupo, independentemente de regra específica",
+      "Aguardar a extinção do PIS/Cofins sem tomar nenhuma providência, pois o saldo se mantém indefinidamente sem prazo"
+    ],
+    "correctAnswer": "Observar os prazos e condições específicos definidos na legislação de transição para aproveitamento ou compensação do saldo remanescente",
+    "explanation": "A legislação de transição estabelece prazos e condições específicos para o aproveitamento ou compensação dos créditos remanescentes; ignorar essas regras pode implicar perda do direito.",
+    "pacciTip": "Prazo é prazo, tesoro! Fica de olho nas regras de transição pra não perder nada."
+  },
+  {
+    "id": "REF-ESP-024",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma montadora de veículos possui elevado saldo credor de PIS/Cofins decorrente de exportações e está reestruturando seu planejamento de caixa para os próximos anos considerando a extinção desses tributos.",
+    "question": "Do ponto de vista estratégico, o que a área financeira deve priorizar em relação a esse saldo credor?",
+    "options": [
+      "Mapear os prazos e mecanismos de compensação previstos na transição para não deixar o direito prescrever ou perder eficácia",
+      "Provisionar contabilmente a perda total do saldo, já que ele não terá mais utilidade",
+      "Solicitar a conversão imediata do saldo em título público federal",
+      "Aguardar pronunciamento informal de terceiros sem base normativa"
+    ],
+    "correctAnswer": "Mapear os prazos e mecanismos de compensação previstos na transição para não deixar o direito prescrever ou perder eficácia",
+    "explanation": "A prioridade estratégica é mapear os prazos e mecanismos previstos na legislação de transição para garantir o aproveitamento do saldo credor dentro do prazo legal.",
+    "pacciTip": "Prazo esquecido é dinheiro perdido, tesoro! Mapeia direitinho."
+  },
+  {
+    "id": "REF-ESP-025",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um marketplace de moda recebe pedidos de todo o Brasil, mantém estoque centralizado em um Estado e despacha diretamente ao consumidor final localizado em outro Estado.",
+    "question": "Para fins de apuração do IBS devido nessa venda, qual é o critério determinante?",
+    "options": [
+      "O local de destino/consumo do bem pelo adquirente final, e não o local do estoque ou da sede do marketplace",
+      "O Estado onde está registrada a sede do marketplace",
+      "O Estado com a menor alíquota de referência entre origem e destino",
+      "A escolha do consumidor no momento da compra, mediante opção no checkout"
+    ],
+    "correctAnswer": "O local de destino/consumo do bem pelo adquirente final, e não o local do estoque ou da sede do marketplace",
+    "explanation": "O IBS segue o princípio do destino: o que importa é onde o bem é efetivamente consumido pelo adquirente final, independentemente de onde o estoque está localizado.",
+    "pacciTip": "Destino manda, tesoro! Estoque é só um detalhe logístico."
+  },
+  {
+    "id": "REF-ESP-026",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um distribuidor atacadista transfere mercadorias de sua filial em um Estado para outra filial em Estado diferente e, em seguida, revende o estoque a clientes localizados num terceiro Estado.",
+    "question": "Nessa cadeia com transferência entre filiais seguida de venda, como deve ser tratada a apuração do IBS?",
+    "options": [
+      "A transferência entre estabelecimentos do mesmo titular segue regra própria (em regra sem tributação definitiva), e a venda ao cliente final é tributada conforme o destino da venda",
+      "Toda a cadeia é tributada apenas uma vez, no Estado da filial de origem",
+      "A transferência entre filiais gera o mesmo IBS da venda final, dobrando o valor devido",
+      "Nenhuma etapa da cadeia é tributada, por se tratar de operações entre estabelecimentos do mesmo grupo"
+    ],
+    "correctAnswer": "A transferência entre estabelecimentos do mesmo titular segue regra própria (em regra sem tributação definitiva), e a venda ao cliente final é tributada conforme o destino da venda",
+    "explanation": "Transferências entre estabelecimentos do mesmo titular têm tratamento próprio, sem gerar tributação definitiva equivalente à venda, enquanto a venda ao cliente final segue a regra do destino do consumo.",
+    "pacciTip": "Filial que transfere pra filial não é venda, tesoro! Quem manda é a venda final, pelo destino."
+  },
+  {
+    "id": "REF-ESP-027",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "O CFO de uma holding do setor de energia elétrica está apresentando ao conselho um estudo sobre os mecanismos constitucionais que limitam o impacto da reforma na carga tributária do grupo.",
+    "question": "Qual é o papel do mecanismo de teto de carga tributária nesse contexto?",
+    "options": [
+      "Atuar como salvaguarda para impedir que a soma das alíquotas de referência do IBS/CBS eleve a carga tributária global em relação ao sistema anterior",
+      "Fixar individualmente a alíquota de cada empresa do setor de energia",
+      "Garantir isenção total para o setor elétrico",
+      "Impedir qualquer reajuste tarifário no setor de energia"
+    ],
+    "correctAnswer": "Atuar como salvaguarda para impedir que a soma das alíquotas de referência do IBS/CBS eleve a carga tributária global em relação ao sistema anterior",
+    "explanation": "O teto de carga tributária é uma salvaguarda macro, que atua sobre a soma das alíquotas de referência, e não sobre a carga tributária individual de cada empresa ou setor.",
+    "pacciTip": "É um freio geral, tesoro! Não é vantagem individual pra cada setor."
+  },
+  {
+    "id": "REF-ESP-028",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um grupo de comunicação com múltiplas empresas de mídia e streaming está avaliando cenários de carga tributária futura para seu planejamento estratégico de longo prazo.",
+    "question": "Caso a soma das alíquotas de referência projetadas ultrapasse o teto constitucional, o que deve ocorrer?",
+    "options": [
+      "As alíquotas de referência devem ser ajustadas para respeitar o limite estabelecido pelo mecanismo de teto",
+      "O governo federal deve conceder isenção retroativa a todos os contribuintes",
+      "O Comitê Gestor é automaticamente dissolvido",
+      "Nenhuma medida é tomada, pois o teto tem caráter apenas informativo"
+    ],
+    "correctAnswer": "As alíquotas de referência devem ser ajustadas para respeitar o limite estabelecido pelo mecanismo de teto",
+    "explanation": "Havendo excesso em relação ao teto, as alíquotas de referência devem ser ajustadas para respeitar o limite constitucional, já que o mecanismo tem caráter vinculante, não meramente informativo.",
+    "pacciTip": "Teto vinculante, tesoro! Se passar do limite, ajusta a alíquota."
+  },
+  {
+    "id": "REF-ESP-029",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma cooperativa agroindustrial está estimando a carga tributária de suas operações para os próximos anos, mas encontra dificuldade porque a alíquota de referência do seu Estado ainda não foi divulgada para o período seguinte.",
+    "question": "Por que a cooperativa não encontra uma alíquota de referência fixa e definitiva na própria Constituição?",
+    "options": [
+      "Porque a alíquota de referência é calculada periodicamente por metodologia própria, podendo variar para preservar o nível de arrecadação de cada ente",
+      "Porque o agronegócio está isento de IBS em qualquer hipótese",
+      "Porque a Constituição delega a cada empresa a escolha de sua própria alíquota",
+      "Porque a alíquota de referência só existe para o CBS, nunca para o IBS"
+    ],
+    "correctAnswer": "Porque a alíquota de referência é calculada periodicamente por metodologia própria, podendo variar para preservar o nível de arrecadação de cada ente",
+    "explanation": "A alíquota de referência não é fixada diretamente na Constituição; ela é calculada periodicamente conforme metodologia própria, podendo ser ajustada para preservar a arrecadação de cada ente federativo.",
+    "pacciTip": "Não procura na Constituição um número fixo, tesoro! Ele é calculado e pode mudar."
+  },
+  {
+    "id": "REF-ESP-030",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma incorporadora está estruturando o orçamento de um empreendimento de longo prazo e precisa estimar a carga tributária de IBS/CBS incidente ao longo de vários anos da obra.",
+    "question": "Qual é o principal desafio dessa estimativa, considerando a natureza da alíquota de referência?",
+    "options": [
+      "A alíquota de referência pode ser recalculada e ajustada periodicamente, exigindo atualização constante das premissas do orçamento",
+      "A alíquota de referência é sempre a mesma para todos os Estados e Municípios do país",
+      "A alíquota de referência só se aplica a operações do setor público",
+      "A alíquota de referência é definida exclusivamente pela incorporadora"
+    ],
+    "correctAnswer": "A alíquota de referência pode ser recalculada e ajustada periodicamente, exigindo atualização constante das premissas do orçamento",
+    "explanation": "Como a alíquota de referência pode ser recalculada periodicamente por Estados e Municípios, o orçamento de longo prazo precisa considerar a possibilidade de ajustes ao longo da execução da obra.",
+    "pacciTip": "Orçamento de obra longa precisa de margem, tesoro! Alíquota pode mudar no caminho."
+  },
+  {
+    "id": "REF-ESP-031",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "A área jurídica de uma rede de hospitais está estudando a governança do novo tributo estadual/municipal para entender quem terá competência para uniformizar interpretações sobre o IBS aplicável a operações de saúde.",
+    "question": "Qual é a natureza jurídica e a função do Comitê Gestor do IBS nesse contexto?",
+    "options": [
+      "É uma entidade pública sob regime especial, responsável pela administração unificada do IBS entre Estados e Municípios, incluindo normatização, arrecadação centralizada e distribuição dos recursos",
+      "É um órgão exclusivamente federal, sem qualquer participação de Estados e Municípios",
+      "É uma associação privada de contribuintes do setor de saúde",
+      "É um tribunal administrativo que substitui integralmente o Judiciário em matéria tributária"
+    ],
+    "correctAnswer": "É uma entidade pública sob regime especial, responsável pela administração unificada do IBS entre Estados e Municípios, incluindo normatização, arrecadação centralizada e distribuição dos recursos",
+    "explanation": "O Comitê Gestor do IBS é entidade pública sob regime especial, responsável pela gestão unificada do imposto entre Estados e Municípios, unificando normas, arrecadação e distribuição dos recursos.",
+    "pacciTip": "É gestão compartilhada, tesoro! Estados e Municípios juntos, não é federal sozinho."
+  },
+  {
+    "id": "REF-ESP-032",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma fintech que oferece serviços financeiros digitais em todo o território nacional está avaliando como se relacionará com a administração tributária do IBS, considerando sua atuação em múltiplos Estados e Municípios simultaneamente.",
+    "question": "Do ponto de vista prático, qual é a vantagem de existir um Comitê Gestor unificado do IBS para uma empresa com atuação nacional como essa fintech?",
+    "options": [
+      "Reduz a necessidade de a empresa lidar separadamente com centenas de administrações tributárias estaduais e municipais distintas, unificando normas e processos",
+      "Isenta automaticamente a empresa de qualquer tributação sobre serviços financeiros",
+      "Permite que a empresa escolha livremente qual Estado deseja recolher o imposto",
+      "Substitui integralmente a fiscalização da Receita Federal sobre a empresa"
+    ],
+    "correctAnswer": "Reduz a necessidade de a empresa lidar separadamente com centenas de administrações tributárias estaduais e municipais distintas, unificando normas e processos",
+    "explanation": "A existência de um Comitê Gestor unificado simplifica a relação do contribuinte com a administração tributária do IBS, evitando a fragmentação entre milhares de administrações municipais e estaduais distintas.",
+    "pacciTip": "Um só lugar pra resolver, tesoro! Isso poupa muita dor de cabeça pra quem atua no Brasil todo."
+  },
+  {
+    "id": "REF-ESP-033",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um marketplace de eletrônicos está adaptando seu sistema de pagamentos para operar sob o mecanismo de split payment, no qual o valor do tributo é segregado no momento da liquidação financeira da venda.",
+    "question": "O que caracteriza o mecanismo de split payment no contexto do IBS/CBS?",
+    "options": [
+      "O valor do tributo devido é automaticamente segregado e recolhido no momento da liquidação financeira da operação, reduzindo o risco de inadimplência fiscal",
+      "O consumidor final escolhe se deseja ou não pagar o tributo no ato da compra",
+      "O vendedor recebe o valor integral da venda e recolhe o tributo manualmente até 30 dias depois",
+      "O split payment substitui integralmente a emissão de documento fiscal"
+    ],
+    "correctAnswer": "O valor do tributo devido é automaticamente segregado e recolhido no momento da liquidação financeira da operação, reduzindo o risco de inadimplência fiscal",
+    "explanation": "O split payment é o mecanismo pelo qual o valor do tributo é segregado automaticamente no momento do pagamento da operação, sendo recolhido diretamente aos cofres públicos, reduzindo o risco de inadimplência.",
+    "pacciTip": "O dinheiro do imposto já sai separado na hora do pagamento, tesoro! Menos risco de sonegação."
+  },
+  {
+    "id": "REF-ESP-034",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de franquias de restaurantes está avaliando o impacto do split payment sobre o fluxo de caixa das unidades franqueadas, que recebem pagamentos por cartão e aplicativos de delivery.",
+    "question": "Qual é o principal impacto operacional do split payment sobre o fluxo de caixa de uma unidade franqueada?",
+    "options": [
+      "A unidade franqueada passa a receber o valor líquido da venda, já descontado o tributo segregado automaticamente no pagamento",
+      "A unidade franqueada deixa de precisar emitir qualquer documento fiscal",
+      "A unidade franqueada passa a receber o valor total da venda, sem qualquer desconto de tributo",
+      "A unidade franqueada passa a recolher o tributo apenas uma vez por ano"
+    ],
+    "correctAnswer": "A unidade franqueada passa a receber o valor líquido da venda, já descontado o tributo segregado automaticamente no pagamento",
+    "explanation": "Com o split payment, o valor recebido pela unidade franqueada já vem líquido do tributo, que foi segregado e recolhido automaticamente no momento do pagamento, impactando diretamente a gestão do fluxo de caixa.",
+    "pacciTip": "O caixa já chega líquido, tesoro! Bom planejar o fluxo pensando nisso."
+  },
+  {
+    "id": "REF-ESP-035",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma operadora de planos de saúde está avaliando como a Reforma Tributária trata suas operações, que historicamente possuíam regras tributárias diferenciadas em relação à generalidade das empresas.",
+    "question": "Como a Reforma Tributária trata setores como planos de saúde, dentro da lógica de regimes específicos?",
+    "options": [
+      "Prevê regime específico de apuração para o setor, reconhecendo peculiaridades operacionais que impedem a aplicação plena da sistemática geral do IBS/CBS",
+      "Extingue integralmente a tributação sobre planos de saúde, tornando-os isentos",
+      "Aplica exatamente a mesma sistemática de apuração usada pelo varejo em geral, sem qualquer adaptação",
+      "Transfere a tributação do setor inteiramente para o Imposto Seletivo"
+    ],
+    "correctAnswer": "Prevê regime específico de apuração para o setor, reconhecendo peculiaridades operacionais que impedem a aplicação plena da sistemática geral do IBS/CBS",
+    "explanation": "Setores com peculiaridades operacionais relevantes, como planos de saúde, contam com regimes específicos de apuração do IBS/CBS, adaptados às características próprias de sua atividade.",
+    "pacciTip": "Cada setor tem sua peculiaridade, tesoro! Por isso existem regimes específicos."
+  },
+  {
+    "id": "REF-ESP-036",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de combustíveis está estruturando sua área fiscal para lidar com o regime de tributação monofásica previsto para o setor no novo sistema de IBS/CBS.",
+    "question": "O que caracteriza, em linhas gerais, um regime monofásico de tributação como o previsto para combustíveis?",
+    "options": [
+      "A concentração da cobrança do tributo em uma única etapa da cadeia produtiva ou comercial, geralmente na produção ou importação, com alíquotas específicas",
+      "A cobrança do tributo em todas as etapas da cadeia, sem qualquer concentração",
+      "A isenção total do setor em todas as etapas da cadeia produtiva",
+      "A aplicação de alíquota zero exclusivamente na etapa de revenda ao consumidor final"
+    ],
+    "correctAnswer": "A concentração da cobrança do tributo em uma única etapa da cadeia produtiva ou comercial, geralmente na produção ou importação, com alíquotas específicas",
+    "explanation": "No regime monofásico, a cobrança do tributo se concentra em uma única etapa da cadeia (normalmente produção ou importação), com alíquotas específicas, simplificando a apuração nas etapas seguintes.",
+    "pacciTip": "Cobra uma vez só, tesoro! Concentra na etapa certa da cadeia."
+  },
+  {
+    "id": "REF-ESP-037",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria de bebidas alcoólicas está reavaliando seu portfólio de produtos diante da incidência do Imposto Seletivo sobre itens considerados prejudiciais à saúde.",
+    "question": "Qual é a finalidade extrafiscal do Imposto Seletivo em relação a produtos como bebidas alcoólicas?",
+    "options": [
+      "Desestimular o consumo de bens e serviços considerados prejudiciais à saúde ou ao meio ambiente, por meio de tributação mais elevada",
+      "Financiar exclusivamente programas de infraestrutura rodoviária",
+      "Substituir integralmente o ICMS sobre bebidas alcoólicas",
+      "Reduzir o preço final dessas bebidas para o consumidor"
+    ],
+    "correctAnswer": "Desestimular o consumo de bens e serviços considerados prejudiciais à saúde ou ao meio ambiente, por meio de tributação mais elevada",
+    "explanation": "O Imposto Seletivo tem finalidade extrafiscal: desestimular o consumo de bens e serviços prejudiciais à saúde ou ao meio ambiente, por meio de uma tributação mais elevada sobre esses itens.",
+    "pacciTip": "É imposto com propósito, tesoro! Quer desestimular o que faz mal."
+  },
+  {
+    "id": "REF-ESP-038",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma mineradora está avaliando o impacto do Imposto Seletivo sobre suas operações de extração, considerando que bens extrativos com impacto ambiental relevante podem estar sujeitos a essa tributação diferenciada.",
+    "question": "Sob a ótica da Reforma, qual é o critério central que justifica a incidência do Imposto Seletivo sobre determinado bem ou atividade?",
+    "options": [
+      "O potencial de dano à saúde ou ao meio ambiente associado ao bem, serviço ou atividade, e não simplesmente o setor econômico envolvido",
+      "O porte da empresa, medido exclusivamente pelo faturamento anual",
+      "A localização geográfica da atividade, independentemente de seu impacto",
+      "O tempo de existência da empresa no mercado"
+    ],
+    "correctAnswer": "O potencial de dano à saúde ou ao meio ambiente associado ao bem, serviço ou atividade, e não simplesmente o setor econômico envolvido",
+    "explanation": "O critério central do Imposto Seletivo é o potencial de dano à saúde ou ao meio ambiente do bem, serviço ou atividade envolvida, não o porte da empresa nem seu tempo de mercado.",
+    "pacciTip": "O que importa é o dano potencial, tesoro! Não é sobre tamanho de empresa."
+  },
+  {
+    "id": "REF-ESP-039",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria de eletrônicos está remodelando sua política de compras diante da não-cumulatividade plena do IBS/CBS, que amplia o direito a crédito sobre praticamente todas as aquisições relacionadas à atividade.",
+    "question": "O que caracteriza a não-cumulatividade plena prevista para o IBS/CBS, em comparação com o sistema anterior?",
+    "options": [
+      "O direito a crédito é amplo, alcançando em regra todas as aquisições relacionadas à atividade econômica, com poucas exceções expressas em lei",
+      "O direito a crédito é restrito apenas a matérias-primas empregadas diretamente no produto final",
+      "Não existe mais direito a crédito no novo sistema, apenas débito",
+      "O crédito só é permitido para empresas do Simples Nacional"
+    ],
+    "correctAnswer": "O direito a crédito é amplo, alcançando em regra todas as aquisições relacionadas à atividade econômica, com poucas exceções expressas em lei",
+    "explanation": "A não-cumulatividade plena amplia o direito a crédito para praticamente todas as aquisições relacionadas à atividade econômica da empresa, superando as restrições setoriais do sistema anterior.",
+    "pacciTip": "Crédito amplo, tesoro! Quase tudo que você compra pra empresa pode gerar crédito agora."
+  },
+  {
+    "id": "REF-ESP-040",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de hotéis está reorganizando seus contratos de terceirização de serviços de limpeza e manutenção, avaliando o impacto da não-cumulatividade plena sobre o custo efetivo dessas contratações.",
+    "question": "Sob a não-cumulatividade plena, qual é o efeito esperado sobre a contratação de serviços terceirizados relacionados à atividade hoteleira?",
+    "options": [
+      "Em regra, o IBS/CBS pago na contratação desses serviços gera direito a crédito, reduzindo o custo tributário efetivo da terceirização para a rede hoteleira",
+      "Serviços terceirizados nunca geram direito a crédito, independentemente da nova sistemática",
+      "A terceirização de serviços passa a ser proibida pela Reforma Tributária",
+      "O crédito sobre serviços terceirizados só existe para hotéis de rede internacional"
+    ],
+    "correctAnswer": "Em regra, o IBS/CBS pago na contratação desses serviços gera direito a crédito, reduzindo o custo tributário efetivo da terceirização para a rede hoteleira",
+    "explanation": "Sob a não-cumulatividade plena, o IBS/CBS pago na contratação de serviços relacionados à atividade econômica, como limpeza e manutenção terceirizadas, gera em regra direito a crédito, reduzindo o custo tributário efetivo.",
+    "pacciTip": "Serviço terceirizado também dá crédito, tesoro! A regra ficou bem mais generosa."
+  },
+  {
+    "id": "REF-ESP-041",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de supermercados está ajustando seu sistema de precificação para refletir corretamente a alíquota reduzida a zero aplicável aos itens da cesta básica nacional.",
+    "question": "Qual é o objetivo dessa redução de alíquota a zero para itens da cesta básica nacional no novo sistema?",
+    "options": [
+      "Mitigar a regressividade da tributação sobre o consumo, reduzindo o impacto proporcional do tributo sobre famílias de menor renda",
+      "Aumentar a margem de lucro dos supermercados sobre esses produtos",
+      "Eliminar totalmente o IBS e a CBS de todo o setor supermercadista",
+      "Beneficiar exclusivamente supermercados de grande porte"
+    ],
+    "correctAnswer": "Mitigar a regressividade da tributação sobre o consumo, reduzindo o impacto proporcional do tributo sobre famílias de menor renda",
+    "explanation": "A redução a zero da alíquota sobre a cesta básica nacional busca mitigar a regressividade do consumo, já que famílias de menor renda destinam proporcionalmente mais recursos a itens essenciais.",
+    "pacciTip": "É justiça social, tesoro! Item essencial pesa menos no bolso de quem ganha menos."
+  },
+  {
+    "id": "REF-ESP-042",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de alimentos que atende famílias de baixa renda cadastradas em programas sociais está estudando como funciona o mecanismo de devolução de parte do tributo pago por esse público.",
+    "question": "Como funciona, em linhas gerais, o mecanismo de cashback previsto na Reforma Tributária para famílias de baixa renda?",
+    "options": [
+      "Consiste na devolução de parte do valor de IBS/CBS pago nas aquisições de determinados bens e serviços por famílias inscritas em programas sociais, conforme critérios definidos em lei",
+      "Consiste em um desconto automático concedido no ato da compra por qualquer estabelecimento, sem necessidade de cadastro",
+      "Consiste na isenção total e permanente de tributos para qualquer pessoa física",
+      "Consiste em um crédito tributário exclusivo para empresas de pequeno porte"
+    ],
+    "correctAnswer": "Consiste na devolução de parte do valor de IBS/CBS pago nas aquisições de determinados bens e serviços por famílias inscritas em programas sociais, conforme critérios definidos em lei",
+    "explanation": "O cashback é o mecanismo de devolução de parte do tributo pago por famílias de baixa renda inscritas em programas sociais, conforme critérios e limites definidos em lei, e não um desconto automático geral.",
+    "pacciTip": "Devolve um pouco do que já foi pago, tesoro! É apoio direcionado a quem mais precisa."
+  },
+  {
+    "id": "REF-ESP-043",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um grupo educacional com unidades de ensino em vários Estados está mapeando as fases do cronograma de transição da Reforma Tributária para planejar seus sistemas de faturamento entre 2026 e 2033.",
+    "question": "Como se caracteriza, em linhas gerais, o período inicial de teste do novo sistema, previsto para começar em 2026?",
+    "options": [
+      "É marcado pela cobrança de alíquotas reduzidas de CBS e IBS, permitindo testar a operacionalização do sistema sem grande impacto na carga tributária efetiva",
+      "É marcado pela cobrança das alíquotas plenas de CBS e IBS desde o primeiro dia",
+      "É marcado pela suspensão total de PIS, Cofins, ICMS e ISS já em 2026",
+      "É marcado pela extinção definitiva do IBS já no primeiro ano"
+    ],
+    "correctAnswer": "É marcado pela cobrança de alíquotas reduzidas de CBS e IBS, permitindo testar a operacionalização do sistema sem grande impacto na carga tributária efetiva",
+    "explanation": "O período inicial de teste é caracterizado pela cobrança de alíquotas reduzidas de CBS e IBS, permitindo calibrar a operacionalização do novo sistema antes da convivência plena com os tributos antigos.",
+    "pacciTip": "Começa devagar, tesoro! Alíquota baixa só pra testar o sistema."
+  },
+  {
+    "id": "REF-ESP-044",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma seguradora está estruturando sua área de compliance tributário para acompanhar a distribuição de receita entre os entes federativos durante o período de transição, à medida que o modelo antigo cede espaço ao novo.",
+    "question": "O que ocorre, de forma geral, com a distribuição de receita entre os entes federativos ao longo da transição?",
+    "options": [
+      "A distribuição de receita é progressivamente recalculada, migrando gradualmente do critério do sistema antigo para o critério de destino do novo sistema de IBS",
+      "A distribuição de receita permanece sempre idêntica à do sistema antigo, sem qualquer alteração",
+      "A distribuição de receita passa a ser decidida exclusivamente pela União, sem participação de Estados e Municípios",
+      "A distribuição de receita é suspensa totalmente durante todo o período de transição"
+    ],
+    "correctAnswer": "A distribuição de receita é progressivamente recalculada, migrando gradualmente do critério do sistema antigo para o critério de destino do novo sistema de IBS",
+    "explanation": "Ao longo da transição, a distribuição de receita é progressivamente recalculada, migrando do critério de origem do sistema antigo para o critério de destino do novo modelo de IBS.",
+    "pacciTip": "Muda aos poucos, tesoro! Da origem pro destino, um passo de cada vez."
+  },
+  {
+    "id": "REF-ESP-045",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma startup de tecnologia optante pelo Simples Nacional está avaliando se deve migrar para o regime regular de apuração de IBS/CBS, considerando que seus principais clientes são grandes empresas que valorizam o aproveitamento de créditos tributários.",
+    "question": "Por que uma empresa optante pelo Simples Nacional pode considerar estrategicamente migrar para o regime regular de apuração de IBS/CBS?",
+    "options": [
+      "Porque, no regime regular, a empresa pode transferir créditos integrais de IBS/CBS a seus clientes, o que pode ser mais atrativo comercialmente do que a sistemática simplificada do Simples Nacional",
+      "Porque empresas do Simples Nacional são automaticamente excluídas de vender para grandes empresas",
+      "Porque o Simples Nacional deixará de existir imediatamente com a Reforma Tributária",
+      "Porque apenas empresas do regime regular podem emitir documentos fiscais eletrônicos"
+    ],
+    "correctAnswer": "Porque, no regime regular, a empresa pode transferir créditos integrais de IBS/CBS a seus clientes, o que pode ser mais atrativo comercialmente do que a sistemática simplificada do Simples Nacional",
+    "explanation": "Empresas do regime regular podem transferir créditos integrais de IBS/CBS a seus clientes, o que pode ser comercialmente mais atrativo para negócios B2B com clientes que aproveitam créditos, sendo um fator estratégico na decisão de permanecer ou não no Simples Nacional.",
+    "pacciTip": "Cliente grande gosta de crédito cheio, tesoro! Vale pensar na estratégia comercial."
+  },
+  {
+    "id": "REF-ESP-046",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma pequena indústria de móveis planejados, optante pelo Simples Nacional, vende majoritariamente para consumidores finais pessoas físicas em lojas próprias.",
+    "question": "Nesse perfil de negócio, qual fator tende a pesar menos na decisão sobre migrar ou não do Simples Nacional para o regime regular?",
+    "options": [
+      "A necessidade de transferir créditos integrais de IBS/CBS, já que consumidores finais pessoas físicas não aproveitam crédito tributário nas compras",
+      "O custo total da folha de pagamento da empresa",
+      "A localização geográfica das lojas da indústria",
+      "O valor do aluguel pago pelas lojas físicas"
+    ],
+    "correctAnswer": "A necessidade de transferir créditos integrais de IBS/CBS, já que consumidores finais pessoas físicas não aproveitam crédito tributário nas compras",
+    "explanation": "Como a venda é majoritariamente para consumidores finais pessoas físicas, que não aproveitam créditos tributários, a vantagem de transferir créditos integrais do regime regular tende a ter menor relevância estratégica nesse perfil de negócio.",
+    "pacciTip": "Cliente final não usa crédito, tesoro! Esse argumento pesa menos aqui."
+  },
+  {
+    "id": "REF-ESP-047",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma família patrimonial está reestruturando sua holding, que concentra imóveis alugados a empresas operacionais do grupo, avaliando o impacto do IBS sobre operações de locação diante da Reforma Tributária.",
+    "question": "Qual é uma das principais preocupações tributárias em uma reestruturação como essa, considerando a incidência do IBS sobre locações?",
+    "options": [
+      "Avaliar corretamente se e como a atividade de locação se enquadra nas regras (inclusive eventual regime específico) aplicáveis ao IBS sobre operações imobiliárias",
+      "Garantir que a holding pague o dobro do IBS por deter múltiplos imóveis",
+      "Assegurar que a holding seja automaticamente isenta de qualquer tributo por ser familiar",
+      "Migrar obrigatoriamente todos os imóveis para o nome de pessoas físicas"
+    ],
+    "correctAnswer": "Avaliar corretamente se e como a atividade de locação se enquadra nas regras (inclusive eventual regime específico) aplicáveis ao IBS sobre operações imobiliárias",
+    "explanation": "Reestruturações de holdings patrimoniais exigem análise cuidadosa de como a atividade de locação se enquadra nas regras aplicáveis ao IBS, incluindo eventual regime específico previsto para operações com bens imóveis.",
+    "pacciTip": "Locação tem regra própria, tesoro! Vale estudar bem antes de reestruturar."
+  },
+  {
+    "id": "REF-ESP-048",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um grupo econômico multinacional está reavaliando a estrutura de suas subsidiárias brasileiras, historicamente segmentadas por Estado para otimizar benefícios fiscais de ICMS hoje em extinção gradual.",
+    "question": "Diante da extinção gradual dos benefícios fiscais estaduais, qual tende a ser a lógica predominante para decisões de reestruturação societária desse tipo de grupo?",
+    "options": [
+      "Critérios de eficiência operacional e logística tendem a ganhar peso relativo em relação à antiga lógica de otimização tributária estadual baseada em benefícios fiscais",
+      "Nenhuma reestruturação faz sentido, pois a carga tributária será idêntica em qualquer Estado, sempre",
+      "A reestruturação deve necessariamente concentrar toda a operação em um único Estado",
+      "A reestruturação deve ser decidida exclusivamente pelo Comitê Gestor do IBS"
+    ],
+    "correctAnswer": "Critérios de eficiência operacional e logística tendem a ganhar peso relativo em relação à antiga lógica de otimização tributária estadual baseada em benefícios fiscais",
+    "explanation": "Com a extinção gradual dos benefícios fiscais estaduais, decisões de estrutura societária tendem a ser menos guiadas por otimização tributária estadual e mais por critérios de eficiência operacional e logística, já que o IBS segue majoritariamente o princípio do destino.",
+    "pacciTip": "O motivo tributário perde força, tesoro! Agora pesa mais a eficiência de verdade."
+  },
+  {
+    "id": "REF-ESP-049",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um diretor financeiro de uma rede de farmácias afirma que, como o benefício de ICMS será extinto, a empresa perderá automaticamente qualquer valor a receber relacionado a ele, sem nenhuma compensação.",
+    "question": "É correto afirmar que a extinção do benefício fiscal estadual implica perda total e imediata de qualquer valor relacionado, sem possibilidade de compensação?",
+    "correctAnswer": false,
+    "explanation": "Errado! O FCBF foi criado justamente para compensar de forma decrescente as empresas que usufruíam desses benefícios, evitando a perda abrupta e total dos valores.",
+    "pacciTip": "Calma, tesoro! Tem fundo pra isso, não é perda total de uma vez."
+  },
+  {
+    "id": "REF-ESP-050",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um consultor afirma que empresas que usufruíam de isenção de ICMS sobre insumos poderão, durante a transição, continuar recebendo compensação decrescente mesmo após mudarem de razão social, desde que mantida a mesma atividade e habilitação.",
+    "question": "A compensação pelo FCBF está necessariamente vinculada à pessoa jurídica original, impedindo qualquer ajuste cadastral da empresa durante a transição?",
+    "correctAnswer": false,
+    "explanation": "Errado! Ajustes cadastrais como mudança de razão social não descaracterizam, por si só, o direito à compensação, desde que atendidos os critérios de habilitação previstos em lei.",
+    "pacciTip": "Nome pode mudar, tesoro, mas o direito à compensação segue as regras de habilitação."
+  },
+  {
+    "id": "REF-ESP-051",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um analista tributário de uma empresa de TI afirma que, como a Cofins será extinta, os créditos acumulados sobre bens do ativo imobilizado simplesmente deixam de existir na data da extinção, sem qualquer regra de transição aplicável.",
+    "question": "É correto afirmar que os créditos de PIS/Cofins deixam de existir automaticamente na data de extinção desses tributos, sem regra de transição aplicável?",
+    "correctAnswer": false,
+    "explanation": "Errado! A legislação de transição prevê regras específicas para o aproveitamento ou compensação dos créditos remanescentes, evitando a perda automática desses valores.",
+    "pacciTip": "Nada desaparece assim do nada, amico! Existe regra de transição pra isso."
+  },
+  {
+    "id": "REF-ESP-052",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um diretor financeiro de uma montadora afirma que apenas empresas exportadoras terão direito a aproveitar créditos remanescentes de PIS/Cofins após a extinção desses tributos.",
+    "question": "É correto afirmar que somente empresas exportadoras têm direito a aproveitar créditos remanescentes de PIS/Cofins na transição?",
+    "correctAnswer": false,
+    "explanation": "Errado! As regras de transição para aproveitamento dos créditos remanescentes não se restringem a empresas exportadoras; aplicam-se, em regra, a qualquer empresa com saldo credor legítimo.",
+    "pacciTip": "Não é só pra quem exporta, amico! A regra vale de forma mais ampla."
+  },
+  {
+    "id": "REF-ESP-053",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um gerente de operações de um marketplace de moda afirma que, quando o centro de distribuição e o consumidor final estão no mesmo Estado, mas a sede da empresa fica em outro, o IBS deve ser recolhido em favor do Estado da sede.",
+    "question": "É correto afirmar que o IBS deve ser recolhido em favor do Estado onde está a sede da empresa vendedora, e não do local de consumo?",
+    "correctAnswer": false,
+    "explanation": "Errado! O princípio do destino determina que o IBS seja apurado com base no local de consumo do bem, e não no local da sede da empresa vendedora.",
+    "pacciTip": "Sede não é destino, amico! Confundir isso é escorregar na prova."
+  },
+  {
+    "id": "REF-ESP-054",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um controller de um distribuidor atacadista afirma que a apuração do IBS em cadeias com transferência entre filiais e venda subsequente é sempre mais simples do que em uma venda direta, por envolver apenas um destinatário final.",
+    "question": "É correto afirmar que cadeias com transferência entre filiais e venda subsequente são sempre mais simples de apurar do que uma venda direta?",
+    "correctAnswer": false,
+    "explanation": "Errado! Ao contrário, essas cadeias tendem a ser mais complexas, pois exigem a aplicação combinada da regra de transferência entre estabelecimentos e da regra de venda ao destino final.",
+    "pacciTip": "Mais etapas, mais cuidado, amico! Não é mais simples, não."
+  },
+  {
+    "id": "REF-ESP-055",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um analista da holding de energia afirma que o teto de carga tributária garante que cada empresa, individualmente, pagará exatamente o mesmo valor de tributos que pagava antes da reforma.",
+    "question": "É correto afirmar que o teto de carga tributária garante que cada empresa pagará exatamente o mesmo valor que pagava antes da reforma?",
+    "correctAnswer": false,
+    "explanation": "Errado! O teto atua sobre a carga tributária agregada do país (soma das alíquotas de referência), não garantindo manutenção idêntica do valor pago por cada empresa individualmente.",
+    "pacciTip": "É controle geral, não é promessa individual, amico! Cada empresa pode variar."
+  },
+  {
+    "id": "REF-ESP-056",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um consultor do grupo de mídia afirma que o mecanismo de teto de carga tributária é apenas uma recomendação informativa, sem qualquer efeito vinculante sobre o cálculo das alíquotas de referência.",
+    "question": "É correto afirmar que o teto de carga tributária tem caráter meramente informativo, sem efeito vinculante?",
+    "correctAnswer": false,
+    "explanation": "Errado! O teto tem caráter vinculante: caso a soma das alíquotas de referência o ultrapasse, ajustes são exigidos para respeitar o limite constitucional.",
+    "pacciTip": "Não é sugestão, amico! É regra que precisa ser respeitada."
+  },
+  {
+    "id": "REF-ESP-057",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um contador de uma cooperativa agroindustrial afirma que, uma vez publicada, a alíquota de referência de determinado Estado jamais poderá ser recalculada nos anos seguintes.",
+    "question": "É correto afirmar que, uma vez publicada, a alíquota de referência de um Estado jamais poderá ser recalculada?",
+    "correctAnswer": false,
+    "explanation": "Errado! A alíquota de referência é recalculada periodicamente conforme metodologia própria, podendo ser ajustada ao longo do tempo.",
+    "pacciTip": "Nada é definitivo pra sempre, amico! A alíquota pode ser recalculada."
+  },
+  {
+    "id": "REF-ESP-058",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um engenheiro orçamentista afirma que todos os Municípios do Brasil terão exatamente a mesma alíquota de referência de IBS, sem qualquer variação entre eles.",
+    "question": "É correto afirmar que todos os Municípios terão exatamente a mesma alíquota de referência de IBS, sem qualquer variação?",
+    "correctAnswer": false,
+    "explanation": "Errado! Cada ente federativo (Estado ou Município) tem sua própria alíquota de referência, calculada conforme sua realidade de arrecadação, podendo variar entre eles.",
+    "pacciTip": "Cada Município tem sua conta, amico! Não é número único pro Brasil todo."
+  },
+  {
+    "id": "REF-ESP-059",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um jurista de uma rede de hospitais afirma que o Comitê Gestor do IBS é composto exclusivamente por representantes da União, sem participação de Estados e Municípios.",
+    "question": "É correto afirmar que o Comitê Gestor do IBS é composto exclusivamente por representantes da União?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Comitê Gestor do IBS é formado por representantes dos Estados, do Distrito Federal e dos Municípios, sem participação direta da União em sua composição.",
+    "pacciTip": "União fica de fora dessa, amico! É coisa de Estado e Município."
+  },
+  {
+    "id": "REF-ESP-060",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um executivo da fintech afirma que a criação do Comitê Gestor do IBS elimina totalmente a necessidade de a empresa observar particularidades locais de cada Município em que atua.",
+    "question": "É correto afirmar que o Comitê Gestor elimina totalmente a necessidade de observar particularidades locais de cada Município?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Comitê Gestor unifica a administração e a normatização geral do IBS, mas isso não elimina totalmente peculiaridades locais legítimas previstas na legislação, como a alíquota de referência de cada ente.",
+    "pacciTip": "Unificar não é apagar tudo, amico! Cada ente ainda tem sua alíquota própria."
+  },
+  {
+    "id": "REF-ESP-061",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um gerente de tecnologia do marketplace afirma que o split payment depende exclusivamente de ação manual do vendedor após o recebimento integral do valor da venda.",
+    "question": "É correto afirmar que o split payment depende de ação manual do vendedor após o recebimento integral do valor da venda?",
+    "correctAnswer": false,
+    "explanation": "Errado! O split payment é um mecanismo automatizado, integrado ao processo de liquidação financeira, e não depende de uma ação manual posterior do vendedor.",
+    "pacciTip": "É automático, amico! Não espera o vendedor lembrar de recolher depois."
+  },
+  {
+    "id": "REF-ESP-062",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um franqueado afirma que, com o split payment, ele não precisa mais se preocupar com o risco de esquecer de recolher o tributo devido sobre suas vendas.",
+    "question": "É correto afirmar que o split payment reduz o risco de inadimplência fiscal por esquecimento no recolhimento do tributo?",
+    "correctAnswer": true,
+    "explanation": "Correto! Como o valor do tributo é segregado e recolhido automaticamente no momento do pagamento, reduz-se significativamente o risco de inadimplência por esquecimento ou atraso do contribuinte.",
+    "pacciTip": "Sì, tesoro! Automatizar o recolhimento evita muito esquecimento chato."
+  },
+  {
+    "id": "REF-ESP-063",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um executivo da operadora de saúde afirma que a existência de regime específico para o setor significa que planos de saúde estarão totalmente fora da incidência de IBS e CBS.",
+    "question": "É correto afirmar que a existência de regime específico significa que o setor está totalmente fora da incidência de IBS e CBS?",
+    "correctAnswer": false,
+    "explanation": "Errado! Regime específico significa uma forma diferenciada de apuração, adaptada às peculiaridades do setor, e não necessariamente a ausência de incidência tributária.",
+    "pacciTip": "Regime específico não é isenção automática, amico! É outra forma de apurar."
+  },
+  {
+    "id": "REF-ESP-064",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um gerente fiscal da distribuidora de combustíveis afirma que o regime específico para o setor de combustíveis dispensa qualquer forma de controle ou fiscalização adicional por parte da administração tributária.",
+    "question": "É correto afirmar que o regime específico de combustíveis dispensa qualquer forma de controle ou fiscalização adicional?",
+    "correctAnswer": false,
+    "explanation": "Errado! Regimes específicos como o de combustíveis costumam vir acompanhados de mecanismos de controle e rastreabilidade adicionais, justamente por lidarem com produtos sensíveis à arrecadação.",
+    "pacciTip": "Regime especial não é regime sem controle, amico! Pelo contrário."
+  },
+  {
+    "id": "REF-ESP-065",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um diretor comercial da indústria de bebidas afirma que o Imposto Seletivo incide sobre a mesma base e da mesma forma que o IBS e a CBS, sem qualquer diferença metodológica.",
+    "question": "É correto afirmar que o Imposto Seletivo incide exatamente da mesma forma que o IBS e a CBS, sem diferença metodológica?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Imposto Seletivo tem finalidade extrafiscal específica e incide sobre uma lista definida de bens e serviços considerados prejudiciais à saúde ou ao meio ambiente, distinta da lógica ampla do IBS/CBS.",
+    "pacciTip": "Não é tudo igual, amico! O Seletivo tem propósito e alcance próprios."
+  },
+  {
+    "id": "REF-ESP-066",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um consultor ambiental da mineradora afirma que toda atividade de extração mineral está automaticamente sujeita ao Imposto Seletivo, independentemente do bem extraído ou de seu impacto específico.",
+    "question": "É correto afirmar que toda atividade de extração mineral está automaticamente sujeita ao Imposto Seletivo, independentemente do bem extraído?",
+    "correctAnswer": false,
+    "explanation": "Errado! A incidência do Imposto Seletivo depende da previsão específica na lista de bens e atividades sujeitos a essa tributação, não bastando ser uma atividade de extração mineral em geral.",
+    "pacciTip": "Não é automático, amico! Precisa estar na lista específica."
+  },
+  {
+    "id": "REF-ESP-067",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um controller da indústria de eletrônicos afirma que, sob a não-cumulatividade plena, apenas insumos fisicamente incorporados ao produto final geram direito a crédito de IBS/CBS.",
+    "question": "É correto afirmar que, sob a não-cumulatividade plena, apenas insumos fisicamente incorporados ao produto final geram direito a crédito?",
+    "correctAnswer": false,
+    "explanation": "Errado! A não-cumulatividade plena amplia o direito a crédito para além dos insumos fisicamente incorporados, alcançando em regra todas as aquisições relacionadas à atividade econômica da empresa.",
+    "pacciTip": "Não é só o que vira produto, amico! O crédito é mais amplo que isso."
+  },
+  {
+    "id": "REF-ESP-068",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um gerente financeiro da rede de hotéis afirma que a ampliação do direito a crédito trazida pela não-cumulatividade plena tende a reduzir o chamado 'efeito cascata' de tributos ao longo da cadeia de fornecimento.",
+    "question": "É correto afirmar que a não-cumulatividade plena tende a reduzir o efeito cascata de tributos ao longo da cadeia?",
+    "correctAnswer": true,
+    "explanation": "Correto! Ao ampliar o direito a crédito para praticamente todas as aquisições relacionadas à atividade, a não-cumulatividade plena reduz o acúmulo de tributos sobre tributos ao longo da cadeia produtiva.",
+    "pacciTip": "Sì, tesoro! Crédito amplo é o antídoto contra o efeito cascata."
+  },
+  {
+    "id": "REF-ESP-069",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um gerente de precificação do supermercado afirma que a redução de alíquota a zero para a cesta básica se aplica a qualquer produto alimentício, sem necessidade de estar em lista específica definida em lei.",
+    "question": "É correto afirmar que a alíquota zero se aplica a qualquer produto alimentício, sem necessidade de estar em lista específica?",
+    "correctAnswer": false,
+    "explanation": "Errado! A alíquota zero da cesta básica nacional aplica-se aos itens especificamente definidos em lista prevista em lei, não a qualquer produto alimentício de forma genérica.",
+    "pacciTip": "Precisa estar na lista, amico! Nem todo alimento entra na cesta básica nacional."
+  },
+  {
+    "id": "REF-ESP-070",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um analista da distribuidora de alimentos afirma que o cashback é aplicável automaticamente a qualquer consumidor, independentemente de cadastro em programas sociais.",
+    "question": "É correto afirmar que o cashback é aplicável automaticamente a qualquer consumidor, independentemente de cadastro em programas sociais?",
+    "correctAnswer": false,
+    "explanation": "Errado! O cashback é direcionado a famílias inscritas em programas sociais e cadastros específicos definidos em lei, não sendo um benefício automático e universal.",
+    "pacciTip": "Precisa de cadastro, amico! Não é benefício pra qualquer um, sem critério."
+  },
+  {
+    "id": "REF-ESP-071",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um coordenador financeiro do grupo educacional afirma que, durante todo o período de transição, os tributos antigos (PIS, Cofins, ICMS, ISS) e os novos (IBS, CBS) convivem simultaneamente, em proporções que se alteram ao longo dos anos.",
+    "question": "É correto afirmar que, durante a transição, tributos antigos e novos convivem simultaneamente, em proporções que se alteram ao longo dos anos?",
+    "correctAnswer": true,
+    "explanation": "Correto! O período de transição é marcado pela convivência entre o sistema antigo e o novo, com redução progressiva dos tributos antigos e aumento progressivo dos novos, até a extinção completa dos primeiros.",
+    "pacciTip": "Sì, tesoro! É uma travessia gradual, não um salto de uma vez."
+  },
+  {
+    "id": "REF-ESP-072",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um atuário da seguradora afirma que, ao final do período de transição em 2033, o sistema antigo de tributos sobre o consumo estará totalmente extinto, restando apenas IBS, CBS e Imposto Seletivo.",
+    "question": "É correto afirmar que, ao final do período de transição, o sistema antigo de tributos sobre o consumo estará totalmente extinto?",
+    "correctAnswer": true,
+    "explanation": "Correto! Ao final do cronograma de transição, os tributos do sistema antigo sobre o consumo são extintos, prevalecendo o novo modelo de IBS, CBS e Imposto Seletivo.",
+    "pacciTip": "Sì, tesoro! No fim da travessia, só resta o modelo novo."
+  },
+  {
+    "id": "REF-ESP-073",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um sócio da startup afirma que a Reforma Tributária extingue automaticamente o Simples Nacional, obrigando todas as empresas optantes a migrar para o regime regular.",
+    "question": "É correto afirmar que a Reforma Tributária extingue automaticamente o Simples Nacional, obrigando migração para o regime regular?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Simples Nacional continua existindo como regime opcional; a Reforma não impõe migração obrigatória, embora traga considerações estratégicas sobre a vantagem de permanecer ou não nesse regime.",
+    "pacciTip": "Simples não acaba, amico! Continua sendo uma opção, não uma obrigação de sair."
+  },
+  {
+    "id": "REF-ESP-074",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um contador da indústria de móveis afirma que, para empresas com clientes majoritariamente pessoas físicas, a permanência no Simples Nacional tende a ser, em regra, mais vantajosa do ponto de vista da simplicidade operacional.",
+    "question": "É correto afirmar que, para empresas com clientes majoritariamente pessoas físicas, a permanência no Simples Nacional tende a preservar a simplicidade operacional do negócio?",
+    "correctAnswer": true,
+    "explanation": "Correto! Quando a vantagem de transferência de créditos tem pouca relevância (por vender majoritariamente a pessoas físicas), a simplicidade operacional do Simples Nacional tende a pesar mais na decisão.",
+    "pacciTip": "Sì, tesoro! Simplicidade importa bastante quando o cliente não usa crédito."
+  },
+  {
+    "id": "REF-ESP-075",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um advogado tributarista afirma que a reforma tributária trata a atividade de locação de imóveis exatamente da mesma forma que a venda de mercadorias em geral, sem qualquer peculiaridade.",
+    "question": "É correto afirmar que a Reforma Tributária trata a locação de imóveis exatamente da mesma forma que a venda de mercadorias em geral, sem peculiaridades?",
+    "correctAnswer": false,
+    "explanation": "Errado! Operações com bens imóveis, incluindo locação, tendem a contar com tratamento e regras próprias dentro do sistema de IBS/CBS, reconhecendo as peculiaridades desse mercado.",
+    "pacciTip": "Imóvel tem seu jeito próprio, amico! Não é igual venda de mercadoria comum."
+  },
+  {
+    "id": "REF-ESP-076",
+    "level": "especialista",
+    "type": "true_false",
+    "scenario": "Um diretor jurídico do grupo multinacional afirma que, como o IBS segue o princípio do destino, a localização das subsidiárias produtoras deixa de ter qualquer relevância tributária para o grupo.",
+    "question": "É correto afirmar que, com o princípio do destino, a localização das subsidiárias produtoras deixa de ter qualquer relevância tributária para o grupo?",
+    "correctAnswer": false,
+    "explanation": "Errado! Embora o princípio do destino reduza a relevância tributária da localização da produção para fins de ICMS/IBS na venda, outros fatores tributários (como IBS sobre transferências, Imposto Seletivo, tributos federais) ainda podem ser afetados pela localização.",
+    "pacciTip": "Não é irrelevante de vez, amico! Outros fatores tributários ainda entram na conta."
+  },
+  {
+    "id": "REF-ESP-077",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A equipe tributária da rede de farmácias está estruturando o processo de habilitação da empresa ao FCBF para obter a compensação pelo benefício fiscal extinto.",
+    "question": "Ordene o fluxo correto desse processo de habilitação:",
+    "options": [
+      "Acompanhar o cronograma decrescente de compensação até o fim da transição",
+      "Reunir a documentação que comprova a concessão e fruição regular do benefício",
+      "Submeter o pedido de habilitação ao FCBF dentro do prazo legal",
+      "Levantar o histórico de benefícios fiscais de ICMS utilizados pela empresa"
+    ],
+    "correctAnswer": [
+      "Levantar o histórico de benefícios fiscais de ICMS utilizados pela empresa",
+      "Reunir a documentação que comprova a concessão e fruição regular do benefício",
+      "Submeter o pedido de habilitação ao FCBF dentro do prazo legal",
+      "Acompanhar o cronograma decrescente de compensação até o fim da transição"
+    ],
+    "explanation": "O processo começa pelo levantamento dos benefícios utilizados, passa pela reunião da documentação comprobatória, pela submissão do pedido dentro do prazo e termina no acompanhamento do cronograma decrescente.",
+    "pacciTip": "Levanta, documenta, pede, acompanha, amico! Sem pular etapa."
+  },
+  {
+    "id": "REF-ESP-078",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A área tributária da indústria química está avaliando a consolidação de duas plantas fabris, uma delas beneficiária de isenção de ICMS extinta gradualmente pela reforma.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Decidir sobre a consolidação das plantas com base no resultado da simulação",
+      "Simular o custo tributário de manter as duas plantas separadas versus consolidá-las",
+      "Identificar qual planta é beneficiária do incentivo fiscal em extinção",
+      "Projetar o cronograma decrescente da compensação pelo FCBF"
+    ],
+    "correctAnswer": [
+      "Identificar qual planta é beneficiária do incentivo fiscal em extinção",
+      "Projetar o cronograma decrescente da compensação pelo FCBF",
+      "Simular o custo tributário de manter as duas plantas separadas versus consolidá-las",
+      "Decidir sobre a consolidação das plantas com base no resultado da simulação"
+    ],
+    "explanation": "A avaliação parte da identificação da planta beneficiária, projeta o cronograma de compensação, simula os custos das opções e conclui com a decisão sobre a consolidação.",
+    "pacciTip": "Identifica, projeta, simula, decide, amico! Essa é a ordem que não falha."
+  },
+  {
+    "id": "REF-ESP-079",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A empresa de software está organizando o levantamento dos créditos de PIS/Cofins acumulados para orientar sua estratégia diante da extinção desses tributos.",
+    "question": "Ordene o fluxo correto desse levantamento:",
+    "options": [
+      "Definir a forma de aproveitamento ou compensação do saldo apurado",
+      "Conferir a documentação fiscal que sustenta os créditos apurados",
+      "Levantar o saldo credor de PIS/Cofins acumulado nos últimos períodos",
+      "Enquadrar o saldo nas regras de transição aplicáveis"
+    ],
+    "correctAnswer": [
+      "Levantar o saldo credor de PIS/Cofins acumulado nos últimos períodos",
+      "Conferir a documentação fiscal que sustenta os créditos apurados",
+      "Enquadrar o saldo nas regras de transição aplicáveis",
+      "Definir a forma de aproveitamento ou compensação do saldo apurado"
+    ],
+    "explanation": "O processo começa pelo levantamento do saldo, passa pela conferência documental, pelo enquadramento nas regras de transição e termina na definição da forma de aproveitamento.",
+    "pacciTip": "Levanta, confere, enquadra, define, bello! Passo a passo sem pressa."
+  },
+  {
+    "id": "REF-ESP-080",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A montadora está estruturando seu plano de transição para lidar com o elevado saldo credor de PIS/Cofins acumulado ao longo dos anos.",
+    "question": "Ordene o fluxo correto desse plano:",
+    "options": [
+      "Executar a compensação ou o ressarcimento dentro do prazo aplicável",
+      "Auditar a origem e a consistência do saldo credor acumulado",
+      "Consolidar o montante total do saldo credor por categoria de crédito",
+      "Definir a estratégia de compensação frente às regras de transição"
+    ],
+    "correctAnswer": [
+      "Consolidar o montante total do saldo credor por categoria de crédito",
+      "Auditar a origem e a consistência do saldo credor acumulado",
+      "Definir a estratégia de compensação frente às regras de transição",
+      "Executar a compensação ou o ressarcimento dentro do prazo aplicável"
+    ],
+    "explanation": "O plano consolida o saldo por categoria, audita sua origem, define a estratégia de compensação e, por fim, executa a compensação dentro do prazo aplicável.",
+    "pacciTip": "Consolida, audita, define, executa, bello! Sem pular a auditoria, viu?"
+  },
+  {
+    "id": "REF-ESP-081",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "O time fiscal do marketplace de moda está estruturando o processo de apuração do IBS para vendas com entrega em múltiplos Estados.",
+    "question": "Ordene o fluxo correto dessa apuração:",
+    "options": [
+      "Identificar o Estado e o Município de destino de cada pedido",
+      "Recolher o IBS conforme a alíquota apurada para cada destino",
+      "Emitir o documento fiscal com a discriminação de destino da venda",
+      "Aplicar a alíquota de referência vigente no local de destino"
+    ],
+    "correctAnswer": [
+      "Identificar o Estado e o Município de destino de cada pedido",
+      "Aplicar a alíquota de referência vigente no local de destino",
+      "Emitir o documento fiscal com a discriminação de destino da venda",
+      "Recolher o IBS conforme a alíquota apurada para cada destino"
+    ],
+    "explanation": "O processo identifica o destino de cada pedido, aplica a alíquota correspondente, emite o documento fiscal com essa informação e, por fim, recolhe o IBS apurado.",
+    "pacciTip": "Identifica, aplica, emite, recolhe, bello! Cada pedido com seu destino certo."
+  },
+  {
+    "id": "REF-ESP-082",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A equipe fiscal do distribuidor atacadista está mapeando o fluxo de apuração tributária de uma cadeia com transferência entre filiais seguida de venda a terceiros.",
+    "question": "Ordene o fluxo correto dessa apuração:",
+    "options": [
+      "Aplicar a regra de destino para a venda final ao cliente",
+      "Registrar a transferência de mercadorias entre as filiais do grupo",
+      "Identificar o Estado de destino da venda final",
+      "Consolidar a apuração total considerando as duas etapas da cadeia"
+    ],
+    "correctAnswer": [
+      "Registrar a transferência de mercadorias entre as filiais do grupo",
+      "Identificar o Estado de destino da venda final",
+      "Aplicar a regra de destino para a venda final ao cliente",
+      "Consolidar a apuração total considerando as duas etapas da cadeia"
+    ],
+    "explanation": "A apuração registra a transferência entre filiais, identifica o destino da venda final, aplica a regra de destino a essa venda e consolida o total da cadeia.",
+    "pacciTip": "Registra, identifica, aplica, consolida, bello! Cada etapa da cadeia conta."
+  },
+  {
+    "id": "REF-ESP-083",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A equipe de planejamento tributário da holding de energia está estruturando a análise do impacto do teto de carga tributária sobre o setor elétrico.",
+    "question": "Ordene o fluxo correto dessa análise:",
+    "options": [
+      "Verificar se a soma projetada ultrapassa o teto constitucional de referência",
+      "Levantar as alíquotas de referência aplicáveis às operações do setor elétrico",
+      "Reportar ao conselho as conclusões sobre o impacto do teto no planejamento do grupo",
+      "Somar as alíquotas de referência incidentes na cadeia de energia"
+    ],
+    "correctAnswer": [
+      "Levantar as alíquotas de referência aplicáveis às operações do setor elétrico",
+      "Somar as alíquotas de referência incidentes na cadeia de energia",
+      "Verificar se a soma projetada ultrapassa o teto constitucional de referência",
+      "Reportar ao conselho as conclusões sobre o impacto do teto no planejamento do grupo"
+    ],
+    "explanation": "A análise levanta as alíquotas aplicáveis, soma-as, verifica se ultrapassam o teto e reporta as conclusões ao conselho.",
+    "pacciTip": "Levanta, soma, verifica, reporta, bello! Assim o conselho fica bem informado."
+  },
+  {
+    "id": "REF-ESP-084",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A área de planejamento do grupo de mídia está simulando diferentes cenários de carga tributária para os próximos anos da transição.",
+    "question": "Ordene o fluxo correto dessa simulação:",
+    "options": [
+      "Construir cenários alternativos considerando possíveis ajustes de alíquota",
+      "Projetar a soma das alíquotas de referência para os próximos exercícios",
+      "Levantar os dados históricos de carga tributária do grupo antes da reforma",
+      "Avaliar o risco de a soma projetada ultrapassar o teto constitucional"
+    ],
+    "correctAnswer": [
+      "Levantar os dados históricos de carga tributária do grupo antes da reforma",
+      "Projetar a soma das alíquotas de referência para os próximos exercícios",
+      "Avaliar o risco de a soma projetada ultrapassar o teto constitucional",
+      "Construir cenários alternativos considerando possíveis ajustes de alíquota"
+    ],
+    "explanation": "A simulação parte dos dados históricos, projeta as alíquotas futuras, avalia o risco frente ao teto e constrói cenários alternativos de ajuste.",
+    "pacciTip": "Histórico, projeção, risco, cenário, bello! Assim a simulação fica completa."
+  },
+  {
+    "id": "REF-ESP-085",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A cooperativa agroindustrial está acompanhando o processo de definição da alíquota de referência aplicável às suas operações no Estado onde atua.",
+    "question": "Ordene o fluxo correto desse processo, conduzido pelo Comitê Gestor do IBS:",
+    "options": [
+      "Publicar a alíquota de referência para o período seguinte",
+      "Aplicar a metodologia de cálculo definida em lei complementar",
+      "Levantar os dados de arrecadação necessários ao cálculo",
+      "Ajustar o percentual, se necessário, para preservar o nível de arrecadação do ente"
+    ],
+    "correctAnswer": [
+      "Levantar os dados de arrecadação necessários ao cálculo",
+      "Aplicar a metodologia de cálculo definida em lei complementar",
+      "Ajustar o percentual, se necessário, para preservar o nível de arrecadação do ente",
+      "Publicar a alíquota de referência para o período seguinte"
+    ],
+    "explanation": "O processo levanta os dados de arrecadação, aplica a metodologia de cálculo, ajusta o percentual quando necessário e publica a alíquota de referência resultante.",
+    "pacciTip": "Levanta, aplica, ajusta, publica, bello! O cálculo não é chute."
+  },
+  {
+    "id": "REF-ESP-086",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A incorporadora está estruturando o processo de atualização orçamentária de um empreendimento diante de eventuais mudanças na alíquota de referência do Município.",
+    "question": "Ordene o fluxo correto dessa atualização orçamentária:",
+    "options": [
+      "Recalcular o orçamento da obra com a nova alíquota",
+      "Monitorar publicações do Comitê Gestor sobre alíquotas de referência",
+      "Identificar se houve alteração na alíquota do Município do empreendimento",
+      "Comunicar o impacto financeiro aos stakeholders do projeto"
+    ],
+    "correctAnswer": [
+      "Monitorar publicações do Comitê Gestor sobre alíquotas de referência",
+      "Identificar se houve alteração na alíquota do Município do empreendimento",
+      "Recalcular o orçamento da obra com a nova alíquota",
+      "Comunicar o impacto financeiro aos stakeholders do projeto"
+    ],
+    "explanation": "O processo monitora as publicações do Comitê Gestor, identifica alterações relevantes, recalcula o orçamento e comunica o impacto aos stakeholders.",
+    "pacciTip": "Monitora, identifica, recalcula, comunica, bello! Obra longa pede acompanhamento constante."
+  },
+  {
+    "id": "REF-ESP-087",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A rede de hospitais está estruturando um estudo sobre como o Comitê Gestor do IBS trata dúvidas de interpretação relacionadas a operações do setor de saúde.",
+    "question": "Ordene o fluxo correto desse tratamento, do ponto de vista do contribuinte:",
+    "options": [
+      "Aguardar a manifestação oficial ou normativa do Comitê Gestor",
+      "Consultar as normas já editadas pelo Comitê Gestor sobre o tema",
+      "Identificar a dúvida específica de interpretação sobre a operação de saúde",
+      "Formular consulta formal ao Comitê Gestor, se necessário"
+    ],
+    "correctAnswer": [
+      "Identificar a dúvida específica de interpretação sobre a operação de saúde",
+      "Consultar as normas já editadas pelo Comitê Gestor sobre o tema",
+      "Formular consulta formal ao Comitê Gestor, se necessário",
+      "Aguardar a manifestação oficial ou normativa do Comitê Gestor"
+    ],
+    "explanation": "O processo identifica a dúvida, consulta normas já existentes, formula consulta formal se necessário e aguarda a manifestação do Comitê Gestor.",
+    "pacciTip": "Identifica, consulta, formula, aguarda, bello! Sem pular pra conclusão precipitada."
+  },
+  {
+    "id": "REF-ESP-088",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A fintech está estruturando seu plano de compliance tributário nacional, considerando a existência do Comitê Gestor do IBS como interlocutor central.",
+    "question": "Ordene o fluxo correto desse plano de compliance:",
+    "options": [
+      "Acompanhar atualizações normativas emitidas pelo Comitê Gestor",
+      "Mapear todos os Estados e Municípios em que a fintech possui clientes",
+      "Implementar os processos de apuração e recolhimento do IBS unificado",
+      "Identificar as obrigações acessórias unificadas definidas pelo Comitê Gestor"
+    ],
+    "correctAnswer": [
+      "Mapear todos os Estados e Municípios em que a fintech possui clientes",
+      "Identificar as obrigações acessórias unificadas definidas pelo Comitê Gestor",
+      "Implementar os processos de apuração e recolhimento do IBS unificado",
+      "Acompanhar atualizações normativas emitidas pelo Comitê Gestor"
+    ],
+    "explanation": "O plano mapeia a atuação geográfica, identifica as obrigações acessórias unificadas, implementa os processos de apuração e recolhimento e mantém acompanhamento contínuo das atualizações normativas.",
+    "pacciTip": "Mapeia, identifica, implementa, acompanha, bello! Compliance nacional pede método."
+  },
+  {
+    "id": "REF-ESP-089",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A equipe de tecnologia do marketplace está implementando o fluxo de recolhimento via split payment nas vendas realizadas pela plataforma.",
+    "question": "Ordene o fluxo correto desse processo de split payment:",
+    "options": [
+      "Recolher o valor segregado diretamente aos cofres públicos",
+      "Processar o pagamento da compra pelo consumidor final",
+      "Repassar ao vendedor apenas o valor líquido da operação",
+      "Calcular e segregar o valor do tributo devido na operação"
+    ],
+    "correctAnswer": [
+      "Processar o pagamento da compra pelo consumidor final",
+      "Calcular e segregar o valor do tributo devido na operação",
+      "Recolher o valor segregado diretamente aos cofres públicos",
+      "Repassar ao vendedor apenas o valor líquido da operação"
+    ],
+    "explanation": "O fluxo processa o pagamento do consumidor, calcula e segrega o tributo devido, recolhe esse valor diretamente aos cofres públicos e repassa ao vendedor apenas o valor líquido.",
+    "pacciTip": "Processa, calcula, recolhe, repassa, bello! Tudo dentro do mesmo fluxo de pagamento."
+  },
+  {
+    "id": "REF-ESP-090",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A rede de franquias está treinando os franqueados sobre como o fluxo de caixa muda com a adoção do split payment nos meios de pagamento eletrônico.",
+    "question": "Ordene o fluxo correto desse novo processo de recebimento:",
+    "options": [
+      "Consultar o extrato consolidado dos valores líquidos recebidos",
+      "Ajustar a gestão de caixa da unidade ao novo padrão de recebimento líquido",
+      "Cliente paga a conta por cartão ou aplicativo de delivery",
+      "Sistema segrega automaticamente o valor do tributo devido"
+    ],
+    "correctAnswer": [
+      "Cliente paga a conta por cartão ou aplicativo de delivery",
+      "Sistema segrega automaticamente o valor do tributo devido",
+      "Consultar o extrato consolidado dos valores líquidos recebidos",
+      "Ajustar a gestão de caixa da unidade ao novo padrão de recebimento líquido"
+    ],
+    "explanation": "O fluxo começa no pagamento do cliente, passa pela segregação automática do tributo, pela consulta ao extrato consolidado e termina no ajuste da gestão de caixa da unidade.",
+    "pacciTip": "Paga, segrega, consulta, ajusta, bello! Franqueado bem treinado não se assusta com o novo fluxo."
+  },
+  {
+    "id": "REF-ESP-091",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A área tributária da operadora de saúde está estruturando o estudo de adequação da empresa ao regime específico previsto para o setor.",
+    "question": "Ordene o fluxo correto desse estudo de adequação:",
+    "options": [
+      "Ajustar os sistemas de faturamento à sistemática do regime específico",
+      "Identificar as regras do regime específico aplicável ao setor de saúde",
+      "Mapear as operações da operadora sujeitas a esse regime",
+      "Comparar o resultado do regime específico com a sistemática geral"
+    ],
+    "correctAnswer": [
+      "Identificar as regras do regime específico aplicável ao setor de saúde",
+      "Mapear as operações da operadora sujeitas a esse regime",
+      "Comparar o resultado do regime específico com a sistemática geral",
+      "Ajustar os sistemas de faturamento à sistemática do regime específico"
+    ],
+    "explanation": "O estudo identifica as regras do regime específico, mapeia as operações sujeitas a ele, compara com a sistemática geral e, por fim, ajusta os sistemas de faturamento.",
+    "pacciTip": "Identifica, mapeia, compara, ajusta, bello! Regime específico pede atenção redobrada."
+  },
+  {
+    "id": "REF-ESP-092",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A distribuidora de combustíveis está estruturando seu processo de apuração tributária sob o regime específico monofásico previsto para o setor.",
+    "question": "Ordene o fluxo correto desse processo de apuração:",
+    "options": [
+      "Repassar o produto às etapas seguintes da cadeia já com o tributo concentrado",
+      "Identificar a etapa da cadeia em que ocorre a concentração da cobrança",
+      "Aplicar as alíquotas específicas definidas para o regime monofásico",
+      "Apurar a base de cálculo na etapa de produção ou importação"
+    ],
+    "correctAnswer": [
+      "Identificar a etapa da cadeia em que ocorre a concentração da cobrança",
+      "Apurar a base de cálculo na etapa de produção ou importação",
+      "Aplicar as alíquotas específicas definidas para o regime monofásico",
+      "Repassar o produto às etapas seguintes da cadeia já com o tributo concentrado"
+    ],
+    "explanation": "O processo identifica a etapa de concentração, apura a base de cálculo nessa etapa, aplica as alíquotas específicas e repassa o produto às etapas seguintes já tributado.",
+    "pacciTip": "Identifica, apura, aplica, repassa, bello! Monofásico concentra tudo numa etapa só."
+  },
+  {
+    "id": "REF-ESP-093",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A indústria de bebidas está estruturando o mapeamento de produtos sujeitos ao Imposto Seletivo em seu portfólio.",
+    "question": "Ordene o fluxo correto desse mapeamento:",
+    "options": [
+      "Calcular o impacto do Imposto Seletivo no preço final de cada produto",
+      "Verificar quais desses produtos constam na lista de incidência do Imposto Seletivo",
+      "Levantar o portfólio completo de produtos da indústria",
+      "Reavaliar a estratégia comercial dos produtos mais impactados"
+    ],
+    "correctAnswer": [
+      "Levantar o portfólio completo de produtos da indústria",
+      "Verificar quais desses produtos constam na lista de incidência do Imposto Seletivo",
+      "Calcular o impacto do Imposto Seletivo no preço final de cada produto",
+      "Reavaliar a estratégia comercial dos produtos mais impactados"
+    ],
+    "explanation": "O mapeamento levanta o portfólio completo, verifica a incidência do Imposto Seletivo, calcula o impacto no preço e reavalia a estratégia comercial dos produtos mais afetados.",
+    "pacciTip": "Levanta, verifica, calcula, reavalia, bello! Seletivo pede atenção produto a produto."
+  },
+  {
+    "id": "REF-ESP-094",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A área jurídica da mineradora está avaliando se suas atividades de extração estão sujeitas ao Imposto Seletivo.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Definir eventuais ajustes de precificação decorrentes da incidência",
+      "Verificar se essas atividades constam da lista de incidência do Imposto Seletivo",
+      "Levantar as atividades extrativas realizadas pela mineradora",
+      "Calcular o impacto tributário estimado sobre a atividade sujeita ao imposto"
+    ],
+    "correctAnswer": [
+      "Levantar as atividades extrativas realizadas pela mineradora",
+      "Verificar se essas atividades constam da lista de incidência do Imposto Seletivo",
+      "Calcular o impacto tributário estimado sobre a atividade sujeita ao imposto",
+      "Definir eventuais ajustes de precificação decorrentes da incidência"
+    ],
+    "explanation": "A avaliação levanta as atividades extrativas, verifica a incidência na lista do Imposto Seletivo, calcula o impacto tributário e define ajustes de precificação, se necessário.",
+    "pacciTip": "Levanta, verifica, calcula, ajusta, bello! Não assume incidência sem checar a lista."
+  },
+  {
+    "id": "REF-ESP-095",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A indústria de eletrônicos está reestruturando seu processo de apuração de créditos de IBS/CBS sob a lógica da não-cumulatividade plena.",
+    "question": "Ordene o fluxo correto dessa reestruturação:",
+    "options": [
+      "Ajustar o sistema de apuração para capturar todos os créditos elegíveis",
+      "Levantar todas as aquisições realizadas pela empresa no período",
+      "Classificar quais aquisições geram direito a crédito sob a nova regra",
+      "Consolidar o saldo de créditos apurado para compensação com os débitos"
+    ],
+    "correctAnswer": [
+      "Levantar todas as aquisições realizadas pela empresa no período",
+      "Classificar quais aquisições geram direito a crédito sob a nova regra",
+      "Ajustar o sistema de apuração para capturar todos os créditos elegíveis",
+      "Consolidar o saldo de créditos apurado para compensação com os débitos"
+    ],
+    "explanation": "A reestruturação levanta as aquisições do período, classifica quais geram crédito, ajusta o sistema para captura desses créditos e consolida o saldo para compensação.",
+    "pacciTip": "Levanta, classifica, ajusta, consolida, bello! Crédito amplo pede sistema afiado."
+  },
+  {
+    "id": "REF-ESP-096",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A rede de hotéis está revisando seus contratos de terceirização à luz da não-cumulatividade plena, buscando otimizar o aproveitamento de créditos.",
+    "question": "Ordene o fluxo correto dessa revisão contratual:",
+    "options": [
+      "Renegociar cláusulas contratuais para assegurar a correta documentação fiscal do crédito",
+      "Mapear todos os contratos de terceirização vigentes na rede hoteleira",
+      "Verificar se os prestadores emitem documentação fiscal hábil para geração de crédito",
+      "Estimar o volume de crédito potencialmente recuperável em cada contrato"
+    ],
+    "correctAnswer": [
+      "Mapear todos os contratos de terceirização vigentes na rede hoteleira",
+      "Verificar se os prestadores emitem documentação fiscal hábil para geração de crédito",
+      "Estimar o volume de crédito potencialmente recuperável em cada contrato",
+      "Renegociar cláusulas contratuais para assegurar a correta documentação fiscal do crédito"
+    ],
+    "explanation": "A revisão mapeia os contratos vigentes, verifica a documentação fiscal dos prestadores, estima o crédito recuperável e renegocia cláusulas para assegurar a documentação correta.",
+    "pacciTip": "Mapeia, verifica, estima, renegocia, bello! Documentação certa é a base de todo crédito."
+  },
+  {
+    "id": "REF-ESP-097",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A rede de supermercados está ajustando seus sistemas de precificação e frente de caixa para aplicar corretamente a alíquota zero aos itens da cesta básica nacional.",
+    "question": "Ordene o fluxo correto desse ajuste:",
+    "options": [
+      "Testar a aplicação da alíquota zero nos terminais de venda",
+      "Identificar quais produtos do mix constam na lista da cesta básica nacional",
+      "Consultar a lista oficial de itens beneficiados com alíquota zero",
+      "Parametrizar o sistema de precificação para esses itens"
+    ],
+    "correctAnswer": [
+      "Consultar a lista oficial de itens beneficiados com alíquota zero",
+      "Identificar quais produtos do mix constam na lista da cesta básica nacional",
+      "Parametrizar o sistema de precificação para esses itens",
+      "Testar a aplicação da alíquota zero nos terminais de venda"
+    ],
+    "explanation": "O ajuste começa pela consulta à lista oficial, identifica os produtos do mix próprio, parametriza o sistema e testa a aplicação nos terminais de venda.",
+    "pacciTip": "Consulta, identifica, parametriza, testa, bello! Cesta básica não pode dar erro no caixa."
+  },
+  {
+    "id": "REF-ESP-098",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A distribuidora de alimentos está estruturando seu entendimento sobre como o mecanismo de cashback opera na prática, para orientar seus clientes institucionais do varejo popular.",
+    "question": "Ordene o fluxo correto de funcionamento do cashback, do ponto de vista do consumidor beneficiário:",
+    "options": [
+      "Receber a devolução de parte do tributo pago conforme os critérios legais",
+      "Realizar a compra de bens ou serviços elegíveis ao benefício",
+      "Estar devidamente inscrito em programa social reconhecido para fins do benefício",
+      "Ter a compra identificada e vinculada ao cadastro do beneficiário"
+    ],
+    "correctAnswer": [
+      "Estar devidamente inscrito em programa social reconhecido para fins do benefício",
+      "Realizar a compra de bens ou serviços elegíveis ao benefício",
+      "Ter a compra identificada e vinculada ao cadastro do beneficiário",
+      "Receber a devolução de parte do tributo pago conforme os critérios legais"
+    ],
+    "explanation": "O fluxo do cashback exige inscrição prévia em programa social, realização da compra elegível, identificação vinculada ao cadastro e, por fim, a devolução de parte do tributo pago.",
+    "pacciTip": "Inscreve, compra, identifica, recebe, bello! Cashback tem seus critérios certinhos."
+  },
+  {
+    "id": "REF-ESP-099",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "O grupo educacional está estruturando seu planejamento de sistemas de faturamento considerando as fases do cronograma de transição da Reforma.",
+    "question": "Ordene cronologicamente as fases dessa transição:",
+    "options": [
+      "Convivência com redução progressiva dos tributos antigos",
+      "Extinção definitiva de PIS, Cofins e, na sequência, ICMS/ISS",
+      "Vigência plena do novo sistema de IBS e CBS",
+      "Período de teste com alíquotas reduzidas de CBS e IBS"
+    ],
+    "correctAnswer": [
+      "Período de teste com alíquotas reduzidas de CBS e IBS",
+      "Convivência com redução progressiva dos tributos antigos",
+      "Extinção definitiva de PIS, Cofins e, na sequência, ICMS/ISS",
+      "Vigência plena do novo sistema de IBS e CBS"
+    ],
+    "explanation": "A transição começa com o período de teste, segue com a convivência e redução progressiva dos tributos antigos, avança para a extinção definitiva destes e culmina na vigência plena do novo sistema.",
+    "pacciTip": "Testa, convive, extingue, vigora plena, bello! Uma travessia com etapas bem definidas."
+  },
+  {
+    "id": "REF-ESP-100",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A seguradora está estruturando o acompanhamento da distribuição de receita tributária entre os entes federativos ao longo da transição, para fins de análise de risco regulatório.",
+    "question": "Ordene o fluxo correto desse acompanhamento:",
+    "options": [
+      "Reportar à diretoria eventuais riscos regulatórios identificados na mudança de critério",
+      "Levantar o critério de distribuição vigente no sistema antigo",
+      "Identificar o cronograma legal de migração para o critério de destino",
+      "Monitorar anualmente o percentual de migração entre os critérios"
+    ],
+    "correctAnswer": [
+      "Levantar o critério de distribuição vigente no sistema antigo",
+      "Identificar o cronograma legal de migração para o critério de destino",
+      "Monitorar anualmente o percentual de migração entre os critérios",
+      "Reportar à diretoria eventuais riscos regulatórios identificados na mudança de critério"
+    ],
+    "explanation": "O acompanhamento levanta o critério vigente no sistema antigo, identifica o cronograma legal de migração, monitora anualmente o percentual de migração e reporta riscos à diretoria.",
+    "pacciTip": "Levanta, identifica, monitora, reporta, bello! Transição pede olhos atentos todo ano."
+  },
+  {
+    "id": "REF-ESP-101",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A startup de tecnologia está estruturando sua análise sobre permanecer no Simples Nacional ou migrar para o regime regular de apuração de IBS/CBS.",
+    "question": "Ordene o fluxo correto dessa análise estratégica:",
+    "options": [
+      "Decidir pela permanência ou migração com base no resultado da análise",
+      "Simular o efeito comercial de oferecer créditos integrais aos clientes",
+      "Levantar o perfil da carteira de clientes (pessoa física ou jurídica) da startup",
+      "Comparar a carga tributária efetiva nos dois regimes"
+    ],
+    "correctAnswer": [
+      "Levantar o perfil da carteira de clientes (pessoa física ou jurídica) da startup",
+      "Simular o efeito comercial de oferecer créditos integrais aos clientes",
+      "Comparar a carga tributária efetiva nos dois regimes",
+      "Decidir pela permanência ou migração com base no resultado da análise"
+    ],
+    "explanation": "A análise levanta o perfil da carteira de clientes, simula o efeito comercial dos créditos, compara a carga tributária efetiva nos dois regimes e conclui com a decisão estratégica.",
+    "pacciTip": "Levanta, simula, compara, decide, bello! Decisão de regime não pode ser no achismo."
+  },
+  {
+    "id": "REF-ESP-102",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A indústria de móveis está avaliando o impacto de cada regime tributário (Simples Nacional versus regular) sobre sua operação de vendas para pessoa física.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Concluir pela manutenção ou não do Simples Nacional",
+      "Levantar o percentual de vendas para pessoa física versus pessoa jurídica",
+      "Estimar a relevância comercial da transferência de créditos para o negócio",
+      "Calcular a carga tributária efetiva em cada regime"
+    ],
+    "correctAnswer": [
+      "Levantar o percentual de vendas para pessoa física versus pessoa jurídica",
+      "Estimar a relevância comercial da transferência de créditos para o negócio",
+      "Calcular a carga tributária efetiva em cada regime",
+      "Concluir pela manutenção ou não do Simples Nacional"
+    ],
+    "explanation": "A avaliação levanta o perfil de vendas, estima a relevância comercial dos créditos, calcula a carga tributária em cada regime e conclui pela manutenção ou migração do regime.",
+    "pacciTip": "Levanta, estima, calcula, conclui, bello! Perfil de cliente é o ponto de partida."
+  },
+  {
+    "id": "REF-ESP-103",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "A holding familiar está estruturando sua análise de reorganização societária diante das novas regras aplicáveis à locação de imóveis sob o IBS.",
+    "question": "Ordene o fluxo correto dessa análise:",
+    "options": [
+      "Decidir sobre eventuais ajustes na estrutura de locação entre as empresas do grupo",
+      "Levantar todos os contratos de locação entre a holding e as empresas operacionais",
+      "Verificar as regras específicas aplicáveis à tributação de locação de imóveis",
+      "Simular o impacto tributário da manutenção da estrutura atual"
+    ],
+    "correctAnswer": [
+      "Levantar todos os contratos de locação entre a holding e as empresas operacionais",
+      "Verificar as regras específicas aplicáveis à tributação de locação de imóveis",
+      "Simular o impacto tributário da manutenção da estrutura atual",
+      "Decidir sobre eventuais ajustes na estrutura de locação entre as empresas do grupo"
+    ],
+    "explanation": "A análise levanta os contratos de locação, verifica as regras específicas aplicáveis, simula o impacto tributário e decide sobre eventuais ajustes na estrutura do grupo.",
+    "pacciTip": "Levanta, verifica, simula, decide, bello! Holding patrimonial não pode reestruturar no escuro."
+  },
+  {
+    "id": "REF-ESP-104",
+    "level": "especialista",
+    "type": "ordering",
+    "scenario": "O grupo multinacional está conduzindo um projeto de reestruturação societária de suas subsidiárias brasileiras diante da extinção dos benefícios fiscais estaduais.",
+    "question": "Ordene o fluxo correto desse projeto de reestruturação:",
+    "options": [
+      "Implementar a nova estrutura societária aprovada pelo conselho global",
+      "Diagnosticar a atual estrutura societária e sua dependência de benefícios fiscais estaduais",
+      "Desenhar alternativas de estrutura com foco em eficiência operacional e logística",
+      "Submeter a proposta de reestruturação à aprovação do conselho global do grupo"
+    ],
+    "correctAnswer": [
+      "Diagnosticar a atual estrutura societária e sua dependência de benefícios fiscais estaduais",
+      "Desenhar alternativas de estrutura com foco em eficiência operacional e logística",
+      "Submeter a proposta de reestruturação à aprovação do conselho global do grupo",
+      "Implementar a nova estrutura societária aprovada pelo conselho global"
+    ],
+    "explanation": "O projeto diagnostica a estrutura atual, desenha alternativas focadas em eficiência, submete a proposta à aprovação do conselho global e implementa a nova estrutura aprovada.",
+    "pacciTip": "Diagnostica, desenha, submete, implementa, bello! Reestruturação de grupo grande pede processo formal."
+  },
+  {
+    "id": "REF-ESP-105",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No memorando interno sobre a extinção do benefício de ICMS da rede de farmácias, falta preencher uma palavra-chave.",
+    "question": "A compensação pelo benefício fiscal extinto é paga por meio do Fundo de Compensação de Benefícios Fiscais, de forma ___ ao longo do período de transição.",
+    "options": [
+      "decrescente",
+      "crescente",
+      "aleatória",
+      "dobrada"
+    ],
+    "correctAnswer": "decrescente",
+    "explanation": "A compensação é decrescente: diminui progressivamente ao longo dos anos da transição, até se extinguir por completo.",
+    "pacciTip": "Decrescente, tesoro! Vai diminuindo devagarinho até sumir."
+  },
+  {
+    "id": "REF-ESP-106",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No estudo de viabilidade da consolidação de plantas industriais, falta uma palavra na frase sobre o ritmo da extinção dos benefícios.",
+    "question": "A extinção dos benefícios fiscais de ICMS ocorre de forma ___, conforme cronograma fixado na legislação de transição, e não de maneira imediata.",
+    "options": [
+      "escalonada",
+      "instantânea",
+      "aleatória",
+      "retroativa"
+    ],
+    "correctAnswer": "escalonada",
+    "explanation": "A extinção é escalonada, seguindo um cronograma progressivo definido em lei, o que dá tempo para as empresas se adaptarem.",
+    "pacciTip": "Escalonada, tesoro! Degrau por degrau, sem susto."
+  },
+  {
+    "id": "REF-ESP-107",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No memorando sobre créditos remanescentes da empresa de TI, falta uma palavra na frase sobre a origem desses créditos.",
+    "question": "Créditos de PIS/Cofins sobre bens do ativo ___ acumulados antes da extinção podem seguir regras específicas de aproveitamento na transição.",
+    "options": [
+      "imobilizado",
+      "circulante",
+      "intangível",
+      "financeiro"
+    ],
+    "correctAnswer": "imobilizado",
+    "explanation": "Créditos vinculados a bens do ativo imobilizado (como equipamentos) são um exemplo típico de saldo credor de PIS/Cofins que pode exigir regra específica de transição.",
+    "pacciTip": "Imobilizado, tesoro! Máquina e equipamento geram crédito que merece atenção na transição."
+  },
+  {
+    "id": "REF-ESP-108",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No plano de transição da montadora, falta uma palavra na frase sobre o destino do saldo credor após a extinção do PIS/Cofins.",
+    "question": "O saldo credor de PIS/Cofins pode ser objeto de ___ ou ressarcimento, conforme as regras específicas da transição.",
+    "options": [
+      "compensação",
+      "confisco",
+      "doação",
+      "prescrição imediata"
+    ],
+    "correctAnswer": "compensação",
+    "explanation": "A compensação é um dos mecanismos previstos para o aproveitamento do saldo credor remanescente, ao lado do ressarcimento em hipóteses específicas.",
+    "pacciTip": "Compensação, tesoro! É o caminho mais comum pra usar esse saldo."
+  },
+  {
+    "id": "REF-ESP-109",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No manual de operações fiscais do marketplace de moda, falta uma palavra na frase sobre o critério de apuração do IBS.",
+    "question": "Em vendas por marketplace com entrega interestadual, o IBS é apurado com base no local de ___ do bem pelo consumidor final.",
+    "options": [
+      "consumo",
+      "fabricação",
+      "armazenamento",
+      "cadastro"
+    ],
+    "correctAnswer": "consumo",
+    "explanation": "O local de consumo (destino) é o critério central para apuração do IBS, mesmo em operações logísticas complexas.",
+    "pacciTip": "Consumo é a palavra-chave, tesoro! Onde o produto é usado, ali recolhe."
+  },
+  {
+    "id": "REF-ESP-110",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal do distribuidor atacadista, falta uma palavra na frase sobre a tributação da transferência entre estabelecimentos do mesmo titular.",
+    "question": "A transferência de mercadorias entre estabelecimentos do mesmo ___ segue regra própria, distinta da tributação aplicável à venda ao consumidor final.",
+    "options": [
+      "titular",
+      "concorrente",
+      "fornecedor",
+      "Estado"
+    ],
+    "correctAnswer": "titular",
+    "explanation": "Estabelecimentos do mesmo titular (mesma empresa/grupo) têm regra própria para transferências, diferente da tributação de uma venda a terceiros.",
+    "pacciTip": "Mesmo titular, regra especial, tesoro! Não confunde com venda de verdade."
+  },
+  {
+    "id": "REF-ESP-111",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No relatório apresentado ao conselho da holding de energia, falta uma palavra na frase sobre a função do teto de carga tributária.",
+    "question": "O teto de carga tributária funciona como uma ___ constitucional contra o aumento da carga tributária global do país durante a transição.",
+    "options": [
+      "salvaguarda",
+      "sanção",
+      "isenção",
+      "moratória"
+    ],
+    "correctAnswer": "salvaguarda",
+    "explanation": "O teto atua como salvaguarda constitucional, protegendo a sociedade contra um eventual aumento da carga tributária total durante a reforma.",
+    "pacciTip": "Salvaguarda, tesoro! Uma proteção constitucional bem pensada."
+  },
+  {
+    "id": "REF-ESP-112",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No estudo de cenários do grupo de mídia, falta uma palavra na frase sobre o efeito do mecanismo de teto.",
+    "question": "Caso a soma das alíquotas de referência ultrapasse o teto, o ajuste das alíquotas é ___, não uma faculdade do Comitê Gestor.",
+    "options": [
+      "obrigatório",
+      "opcional",
+      "eventual",
+      "simbólico"
+    ],
+    "correctAnswer": "obrigatório",
+    "explanation": "O ajuste é obrigatório quando o teto é ultrapassado, reforçando o caráter vinculante do mecanismo constitucional.",
+    "pacciTip": "Obrigatório, tesoro! Quando estoura o teto, o ajuste não é escolha."
+  },
+  {
+    "id": "REF-ESP-113",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No estudo tributário da cooperativa agroindustrial, falta uma palavra na frase sobre a natureza da alíquota de referência.",
+    "question": "A alíquota de referência de cada ente federativo é ___ periodicamente por metodologia própria, e não fixada de forma definitiva na Constituição.",
+    "options": [
+      "calculada",
+      "sorteada",
+      "congelada",
+      "leiloada"
+    ],
+    "correctAnswer": "calculada",
+    "explanation": "A alíquota de referência é calculada periodicamente, segundo metodologia própria definida em lei, e não fixada de forma imutável no texto constitucional.",
+    "pacciTip": "Calculada, tesoro! Sempre com base em metodologia, nunca no chute."
+  },
+  {
+    "id": "REF-ESP-114",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No orçamento de longo prazo da incorporadora, falta uma palavra na frase sobre a variação da alíquota de referência entre entes.",
+    "question": "Cada ente federativo possui sua própria alíquota de referência, o que exige atualização ___ do orçamento de obras plurianuais.",
+    "options": [
+      "periódica",
+      "única",
+      "proibida",
+      "retroativa"
+    ],
+    "correctAnswer": "periódica",
+    "explanation": "Como a alíquota de referência pode ser recalculada, o orçamento de obras de longo prazo precisa de atualização periódica das premissas tributárias.",
+    "pacciTip": "Periódica, tesoro! Orçamento de obra longa não é feito só uma vez."
+  },
+  {
+    "id": "REF-ESP-115",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No parecer jurídico da rede de hospitais, falta uma palavra na frase sobre a composição do Comitê Gestor do IBS.",
+    "question": "O Comitê Gestor do IBS é integrado por representantes dos Estados, do Distrito Federal e dos ___, refletindo a natureza compartilhada do tributo.",
+    "options": [
+      "Municípios",
+      "Cartórios",
+      "Consulados",
+      "Sindicatos"
+    ],
+    "correctAnswer": "Municípios",
+    "explanation": "O Comitê Gestor reúne representantes de Estados, Distrito Federal e Municípios, refletindo a titularidade compartilhada do IBS entre esses entes.",
+    "pacciTip": "Municípios também têm voz, tesoro! O IBS é tributo de dois níveis."
+  },
+  {
+    "id": "REF-ESP-116",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No plano de compliance da fintech, falta uma palavra na frase sobre a vantagem prática da existência do Comitê Gestor.",
+    "question": "O Comitê Gestor do IBS ___ a administração tributária entre os milhares de Estados e Municípios do país, simplificando o relacionamento do contribuinte nacional.",
+    "options": [
+      "unifica",
+      "fragmenta",
+      "duplica",
+      "ignora"
+    ],
+    "correctAnswer": "unifica",
+    "explanation": "O Comitê Gestor unifica a administração tributária do IBS, evitando a fragmentação entre milhares de administrações estaduais e municipais distintas.",
+    "pacciTip": "Unifica, tesoro! Um comitê só pra cuidar de tudo isso."
+  },
+  {
+    "id": "REF-ESP-117",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No manual técnico de implementação do split payment do marketplace, falta uma palavra na frase sobre o momento da segregação do tributo.",
+    "question": "No split payment, o valor do tributo é segregado no momento da ___ financeira da operação, e não posteriormente.",
+    "options": [
+      "liquidação",
+      "prescrição",
+      "auditoria",
+      "reserva"
+    ],
+    "correctAnswer": "liquidação",
+    "explanation": "A segregação do tributo ocorre no momento da liquidação financeira (pagamento) da operação, o que caracteriza o split payment.",
+    "pacciTip": "Liquidação, tesoro! É na hora do pagamento que o imposto já se separa."
+  },
+  {
+    "id": "REF-ESP-118",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No material de treinamento para franqueados, falta uma palavra na frase sobre o efeito do split payment no fluxo de caixa.",
+    "question": "Com o split payment, o franqueado recebe o valor ___ da venda, pois o tributo já foi segregado no pagamento.",
+    "options": [
+      "líquido",
+      "bruto",
+      "integral",
+      "dobrado"
+    ],
+    "correctAnswer": "líquido",
+    "explanation": "O franqueado passa a receber o valor líquido da venda, já descontado o tributo segregado automaticamente na liquidação financeira.",
+    "pacciTip": "Líquido, tesoro! O bruto já vem com o imposto separado antes de chegar no caixa."
+  },
+  {
+    "id": "REF-ESP-119",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No estudo de adequação da operadora de saúde, falta uma palavra na frase sobre a razão de existirem regimes diferenciados.",
+    "question": "Setores com peculiaridades operacionais relevantes, como planos de saúde, contam com regime ___ de apuração do IBS/CBS.",
+    "options": [
+      "específico",
+      "genérico",
+      "provisório",
+      "internacional"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Regime específico é o termo que designa a apuração diferenciada prevista para setores com peculiaridades operacionais relevantes, como saúde.",
+    "pacciTip": "Específico, tesoro! Cada setor com sua regra sob medida."
+  },
+  {
+    "id": "REF-ESP-120",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal da distribuidora, falta uma palavra na frase sobre a característica central do regime aplicável a combustíveis.",
+    "question": "O regime específico de combustíveis é do tipo ___, concentrando a cobrança do tributo em uma única etapa da cadeia.",
+    "options": [
+      "monofásico",
+      "plurifásico",
+      "isento",
+      "regressivo"
+    ],
+    "correctAnswer": "monofásico",
+    "explanation": "Monofásico é o termo técnico para o regime que concentra a cobrança do tributo em uma única etapa da cadeia, típico do setor de combustíveis.",
+    "pacciTip": "Monofásico, tesoro! Uma etapa só carrega o peso da cobrança."
+  },
+  {
+    "id": "REF-ESP-121",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No estudo tributário da indústria de bebidas, falta uma palavra na frase sobre a finalidade do Imposto Seletivo.",
+    "question": "O Imposto Seletivo tem finalidade ___, buscando desestimular o consumo de bens prejudiciais à saúde ou ao meio ambiente.",
+    "options": [
+      "extrafiscal",
+      "arrecadatória",
+      "compensatória",
+      "declaratória"
+    ],
+    "correctAnswer": "extrafiscal",
+    "explanation": "A finalidade extrafiscal é o traço central do Imposto Seletivo: seu objetivo principal não é apenas arrecadar, mas desestimular determinados consumos.",
+    "pacciTip": "Extrafiscal, tesoro! Palavra chique pra dizer 'quer mudar comportamento'."
+  },
+  {
+    "id": "REF-ESP-122",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No parecer jurídico da mineradora, falta uma palavra na frase sobre o critério de incidência do Imposto Seletivo.",
+    "question": "A incidência do Imposto Seletivo depende de previsão ___ do bem ou atividade na lista definida em lei, não bastando pertencer a um setor extrativo em geral.",
+    "options": [
+      "específica",
+      "genérica",
+      "presumida",
+      "retroativa"
+    ],
+    "correctAnswer": "específica",
+    "explanation": "É necessária previsão específica do bem ou atividade na lista de incidência do Imposto Seletivo, não bastando pertencer a um setor extrativo de forma genérica.",
+    "pacciTip": "Específica, tesoro! Precisa estar na lista, não vale suposição."
+  },
+  {
+    "id": "REF-ESP-123",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No manual de apuração de créditos da indústria de eletrônicos, falta uma palavra na frase sobre a amplitude do direito a crédito.",
+    "question": "A não-cumulatividade ___ do IBS/CBS amplia o direito a crédito para praticamente todas as aquisições relacionadas à atividade econômica.",
+    "options": [
+      "plena",
+      "parcial",
+      "seletiva",
+      "condicionada"
+    ],
+    "correctAnswer": "plena",
+    "explanation": "Plena é o termo que caracteriza a amplitude do direito a crédito no novo sistema, alcançando praticamente todas as aquisições relacionadas à atividade.",
+    "pacciTip": "Plena, tesoro! Amplitude é a palavra de ordem aqui."
+  },
+  {
+    "id": "REF-ESP-124",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No relatório de revisão contratual da rede de hotéis, falta uma palavra na frase sobre o efeito da não-cumulatividade plena na cadeia de fornecimento.",
+    "question": "A ampliação do direito a crédito reduz o efeito ___ de tributos ao longo da cadeia de fornecimento da rede hoteleira.",
+    "options": [
+      "cascata",
+      "cambial",
+      "sazonal",
+      "residual"
+    ],
+    "correctAnswer": "cascata",
+    "explanation": "O efeito cascata (tributo sobre tributo) é justamente o que a não-cumulatividade plena busca reduzir, ao ampliar o direito a crédito ao longo da cadeia.",
+    "pacciTip": "Cascata, tesoro! É esse efeito que a reforma quer represar."
+  },
+  {
+    "id": "REF-ESP-125",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No manual de precificação do supermercado, falta uma palavra na frase sobre o efeito social da alíquota zero na cesta básica.",
+    "question": "A alíquota zero da cesta básica nacional busca reduzir a ___ da tributação sobre o consumo, que penaliza proporcionalmente mais quem ganha menos.",
+    "options": [
+      "regressividade",
+      "progressividade",
+      "neutralidade",
+      "seletividade"
+    ],
+    "correctAnswer": "regressividade",
+    "explanation": "A regressividade é o fenômeno pelo qual tributos sobre consumo pesam proporcionalmente mais sobre quem tem menor renda; a alíquota zero da cesta básica busca mitigar esse efeito.",
+    "pacciTip": "Regressividade, tesoro! A cesta básica ajuda a suavizar essa desigualdade."
+  },
+  {
+    "id": "REF-ESP-126",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No material informativo da distribuidora de alimentos para clientes de baixa renda, falta uma palavra na frase sobre o público-alvo do cashback.",
+    "question": "O mecanismo de cashback é direcionado a famílias de baixa renda inscritas em programas ___ reconhecidos para fins do benefício.",
+    "options": [
+      "sociais",
+      "corporativos",
+      "acadêmicos",
+      "internacionais"
+    ],
+    "correctAnswer": "sociais",
+    "explanation": "O cashback é direcionado a famílias inscritas em programas sociais reconhecidos, conforme os critérios definidos na legislação da Reforma Tributária.",
+    "pacciTip": "Sociais, tesoro! O foco é claro: apoiar quem mais precisa."
+  },
+  {
+    "id": "REF-ESP-127",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No planejamento de sistemas do grupo educacional, falta uma palavra na frase sobre a natureza do período entre 2026 e 2033.",
+    "question": "O período entre 2026 e 2033 é chamado de período de ___, marcado pela convivência entre os tributos antigos e os novos.",
+    "options": [
+      "transição",
+      "moratória",
+      "prescrição",
+      "carência"
+    ],
+    "correctAnswer": "transição",
+    "explanation": "O período de transição é a fase de convivência gradual entre o sistema tributário antigo e o novo modelo de IBS/CBS, com duração plurianual.",
+    "pacciTip": "Transição, tesoro! A palavra que resume toda essa travessia."
+  },
+  {
+    "id": "REF-ESP-128",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No relatório de compliance da seguradora, falta uma palavra na frase sobre o critério de distribuição de receita ao final da transição.",
+    "question": "Ao final da transição, a distribuição de receita do IBS passa a seguir integralmente o critério de ___, e não mais o critério de origem do sistema antigo.",
+    "options": [
+      "destino",
+      "origem",
+      "sorteio",
+      "faturamento"
+    ],
+    "correctAnswer": "destino",
+    "explanation": "Ao final da transição, o critério de destino passa a reger integralmente a distribuição de receita do IBS, substituindo o critério de origem do sistema antigo.",
+    "pacciTip": "Destino, tesoro! No fim da travessia, ele reina sozinho."
+  },
+  {
+    "id": "REF-ESP-129",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No estudo estratégico da startup, falta uma palavra na frase sobre a vantagem comercial do regime regular.",
+    "question": "No regime regular, a empresa pode transferir créditos ___ de IBS/CBS a seus clientes, o que pode ser vantajoso em negócios B2B.",
+    "options": [
+      "integrais",
+      "parciais",
+      "proibidos",
+      "condicionados"
+    ],
+    "correctAnswer": "integrais",
+    "explanation": "A transferência de créditos integrais de IBS/CBS é uma vantagem comercial do regime regular, especialmente relevante em relações B2B com clientes que aproveitam créditos tributários.",
+    "pacciTip": "Integrais, tesoro! Crédito completo pesa na decisão comercial."
+  },
+  {
+    "id": "REF-ESP-130",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No parecer contábil da indústria de móveis, falta uma palavra na frase sobre o perfil de cliente que reduz a vantagem de migrar do Simples Nacional.",
+    "question": "Para empresas que vendem majoritariamente a consumidores ___, a vantagem de transferir créditos integrais tende a ter menor relevância estratégica.",
+    "options": [
+      "finais",
+      "corporativos",
+      "atacadistas",
+      "exportadores"
+    ],
+    "correctAnswer": "finais",
+    "explanation": "Consumidores finais pessoas físicas não aproveitam créditos tributários, o que reduz a relevância estratégica da migração para o regime regular nesse perfil de venda.",
+    "pacciTip": "Finais, tesoro! Quem compra pra usar, não pra revender, não aproveita crédito."
+  },
+  {
+    "id": "REF-ESP-131",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No parecer da holding familiar, falta uma palavra na frase sobre o tratamento tributário de operações com bens imóveis.",
+    "question": "Operações com bens imóveis, como a locação, tendem a contar com regras ___ dentro do sistema de IBS/CBS, distintas da regra geral.",
+    "options": [
+      "próprias",
+      "idênticas",
+      "inexistentes",
+      "proibidas"
+    ],
+    "correctAnswer": "próprias",
+    "explanation": "Operações com bens imóveis contam com regras próprias dentro do sistema de IBS/CBS, reconhecendo as peculiaridades desse mercado em relação à regra geral de bens e serviços.",
+    "pacciTip": "Próprias, tesoro! Cada mercado com sua regrinha sob medida."
+  },
+  {
+    "id": "REF-ESP-132",
+    "level": "especialista",
+    "type": "fill_blank",
+    "scenario": "No relatório do projeto de reestruturação do grupo multinacional, falta uma palavra na frase sobre o novo critério predominante de decisão societária.",
+    "question": "Com a extinção dos benefícios fiscais estaduais, critérios de eficiência ___ tendem a prevalecer sobre a antiga lógica de otimização tributária estadual.",
+    "options": [
+      "operacional",
+      "cambial",
+      "eleitoral",
+      "diplomática"
+    ],
+    "correctAnswer": "operacional",
+    "explanation": "A eficiência operacional e logística tende a prevalecer como critério de decisão societária, substituindo a antiga lógica de otimização tributária baseada em benefícios fiscais estaduais.",
+    "pacciTip": "Operacional, tesoro! Eficiência de verdade ganha o protagonismo agora."
+  },
+  {
+    "id": "REF-ESP-133",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório final sobre a extinção dos benefícios fiscais estaduais, você precisa nomear o tipo de trajetória que a compensação segue ao longo da transição.",
+    "question": "Digite a palavra que descreve a trajetória da compensação paga pelo FCBF ao longo do período de transição (do maior valor ao menor):",
+    "correctAnswer": "decrescente",
+    "explanation": "A compensação segue trajetória decrescente, reduzindo-se progressivamente até a extinção total ao fim da transição.",
+    "pacciTip": "Decrescente é a palavra, amico! Começa grande e vai encolhendo."
+  },
+  {
+    "id": "REF-ESP-134",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer sobre a consolidação de plantas fabris, você precisa nomear o tipo de cronograma que rege a extinção dos benefícios fiscais estaduais.",
+    "question": "Digite a palavra que qualifica o cronograma de extinção dos benefícios fiscais de ICMS (progressivo, em etapas):",
+    "correctAnswer": "escalonado",
+    "explanation": "O cronograma de extinção é escalonado, ou seja, ocorre em etapas progressivas ao longo do período de transição.",
+    "pacciTip": "Escalonado, amico! Sempre em etapas, nunca de uma vez."
+  },
+  {
+    "id": "REF-ESP-135",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer final sobre os créditos de PIS/Cofins da empresa de tecnologia, você precisa nomear o tipo de saldo que fica pendente de aproveitamento.",
+    "question": "Digite a palavra que designa o saldo de créditos de PIS/Cofins ainda não utilizado, acumulado pela empresa:",
+    "correctAnswer": "remanescente",
+    "explanation": "Saldo remanescente é o termo técnico para os créditos acumulados e ainda não aproveitados até a extinção dos tributos.",
+    "pacciTip": "Remanescente, amico! O que sobra também tem seu caminho."
+  },
+  {
+    "id": "REF-ESP-136",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "Fechando a auditoria do saldo credor de PIS/Cofins da montadora, você precisa nomear o mecanismo de devolução em dinheiro previsto para hipóteses específicas.",
+    "question": "Digite a palavra que designa a devolução em dinheiro do saldo credor de PIS/Cofins, alternativa à compensação:",
+    "correctAnswer": "ressarcimento",
+    "explanation": "O ressarcimento é o mecanismo de devolução em espécie do saldo credor, alternativo à compensação com outros tributos.",
+    "pacciTip": "Ressarcimento, amico! Quando não compensa, às vezes devolve em dinheiro."
+  },
+  {
+    "id": "REF-ESP-137",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório de compliance fiscal do marketplace, você precisa nomear o princípio que rege a tributação de vendas com entrega em Estado diferente do estoque.",
+    "question": "Digite o princípio que determina a apuração do IBS com base no local de consumo do bem, mesmo em vendas por marketplace:",
+    "correctAnswer": "destino",
+    "explanation": "O princípio do destino é o critério central de apuração do IBS em operações com entrega interestadual, inclusive vendas por marketplace.",
+    "pacciTip": "Destino, sempre destino, amico! Essa palavra resolve muita dúvida."
+  },
+  {
+    "id": "REF-ESP-138",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer sobre a cadeia logística do distribuidor atacadista, você precisa nomear o tipo de operação que ocorre entre filiais do mesmo grupo, antes da venda final.",
+    "question": "Digite a palavra que designa o deslocamento de mercadorias entre estabelecimentos do mesmo titular, antes da venda ao consumidor final:",
+    "correctAnswer": "transferência",
+    "explanation": "Transferência é o termo técnico para o deslocamento de mercadorias entre estabelecimentos do mesmo titular, com tratamento tributário próprio.",
+    "pacciTip": "Transferência, amico! Palavra certa pra etapa antes da venda final."
+  },
+  {
+    "id": "REF-ESP-139",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer final sobre o impacto da reforma na holding de energia, você precisa nomear o órgão responsável por calcular as alíquotas de referência que compõem a base do teto.",
+    "question": "Digite o nome do órgão responsável por calcular as alíquotas de referência do IBS consideradas no cálculo do teto de carga tributária:",
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS é o órgão responsável por calcular e ajustar as alíquotas de referência, que compõem a base do mecanismo de teto.",
+    "pacciTip": "Comitê Gestor, amico! Ele que calcula essa conta toda."
+  },
+  {
+    "id": "REF-ESP-140",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No estudo de cenários do grupo de mídia, você precisa nomear a natureza jurídica do mecanismo de teto quanto à sua exigibilidade.",
+    "question": "Digite a palavra que qualifica o mecanismo de teto de carga tributária quanto à sua exigibilidade quando ultrapassado (não é facultativo):",
+    "correctAnswer": "vinculante",
+    "explanation": "O teto tem caráter vinculante: seu descumprimento projetado obriga o ajuste das alíquotas de referência.",
+    "pacciTip": "Vinculante, amico! Palavra que mostra a força do mecanismo."
+  },
+  {
+    "id": "REF-ESP-141",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório sobre a definição de alíquotas da cooperativa agroindustrial, você precisa nomear o objetivo central do recálculo periódico da alíquota de referência.",
+    "question": "Digite a palavra que designa o que a metodologia de cálculo da alíquota de referência busca preservar para cada ente federativo:",
+    "correctAnswer": "arrecadação",
+    "explanation": "O recálculo periódico busca preservar o nível de arrecadação de cada ente federativo, adaptando a alíquota de referência conforme necessário.",
+    "pacciTip": "Arrecadação, amico! É isso que a metodologia protege."
+  },
+  {
+    "id": "REF-ESP-142",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório de riscos orçamentários da incorporadora, você precisa nomear o elemento variável que impacta diretamente o cálculo tributário do empreendimento ao longo dos anos.",
+    "question": "Digite a expressão que designa o percentual que pode ser recalculado periodicamente por cada ente federativo e impacta o orçamento de obras longas:",
+    "correctAnswer": "alíquota de referência",
+    "explanation": "A alíquota de referência é o elemento tributário que pode ser recalculado periodicamente e que, por isso, exige acompanhamento constante em orçamentos de obras plurianuais.",
+    "pacciTip": "Alíquota de referência, amico! Ela é a peça que sempre pode se mexer."
+  },
+  {
+    "id": "REF-ESP-143",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer jurídico sobre a governança do IBS aplicável à rede de hospitais, você precisa nomear o órgão responsável pela administração unificada desse imposto.",
+    "question": "Digite o nome do órgão responsável pela administração unificada do IBS entre Estados e Municípios:",
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS é o órgão responsável pela gestão unificada do imposto, reunindo representantes dos Estados, do Distrito Federal e dos Municípios.",
+    "pacciTip": "Comitê Gestor, amico! Ele centraliza a gestão do IBS."
+  },
+  {
+    "id": "REF-ESP-144",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório de compliance nacional da fintech, você precisa nomear o tipo de obrigação que passa a ser padronizada entre Estados e Municípios por conta do Comitê Gestor.",
+    "question": "Digite a palavra que designa as obrigações (declarações, documentos fiscais) que passam a ser padronizadas nacionalmente com a criação do IBS:",
+    "correctAnswer": "acessórias",
+    "explanation": "As obrigações acessórias (como documentos e declarações fiscais) tendem a ser padronizadas nacionalmente com a unificação trazida pelo IBS e pelo Comitê Gestor.",
+    "pacciTip": "Acessórias, amico! Padronizar isso é um baita alívio operacional."
+  },
+  {
+    "id": "REF-ESP-145",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório técnico sobre a implementação de pagamentos do marketplace, você precisa nomear o mecanismo que segrega automaticamente o valor do tributo no pagamento da operação.",
+    "question": "Digite o termo (em inglês, como usado no Brasil) que designa a segregação automática do tributo no momento do pagamento da operação:",
+    "correctAnswer": "split payment",
+    "explanation": "Split payment é o termo utilizado para o mecanismo de segregação automática do valor do tributo no momento da liquidação financeira da operação.",
+    "pacciTip": "Split payment, amico! Divide o pagamento, separa o imposto na hora."
+  },
+  {
+    "id": "REF-ESP-146",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No treinamento de franqueados sobre split payment, você precisa nomear o efeito esperado desse mecanismo sobre a arrecadação e a inadimplência fiscal.",
+    "question": "Digite a palavra que designa o principal benefício do split payment para a administração tributária, relacionado à garantia do recolhimento:",
+    "correctAnswer": "eficiência",
+    "explanation": "O split payment traz maior eficiência arrecadatória, pois reduz a inadimplência ao segregar e recolher o tributo automaticamente no pagamento.",
+    "pacciTip": "Eficiência, amico! Recolher na hora certa evita muita dor de cabeça depois."
+  },
+  {
+    "id": "REF-ESP-147",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer da operadora de saúde sobre a apuração de IBS/CBS, você precisa nomear o tipo de regime aplicável a setores com peculiaridades operacionais relevantes.",
+    "question": "Digite a expressão que designa a sistemática diferenciada de apuração prevista para setores como planos de saúde:",
+    "correctAnswer": "regime específico",
+    "explanation": "Regime específico é a expressão que designa a sistemática diferenciada de apuração de IBS/CBS prevista para setores com peculiaridades relevantes.",
+    "pacciTip": "Regime específico, amico! É a chave pra entender esses setores especiais."
+  },
+  {
+    "id": "REF-ESP-148",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer sobre o regime tributário de combustíveis, você precisa nomear o tipo de regime que concentra a cobrança em uma única etapa da cadeia.",
+    "question": "Digite a palavra que designa o regime que concentra a cobrança do tributo em uma única etapa da cadeia produtiva, aplicável a combustíveis:",
+    "correctAnswer": "monofásico",
+    "explanation": "O regime monofásico concentra a cobrança do tributo em uma única etapa da cadeia produtiva ou comercial, como ocorre no setor de combustíveis.",
+    "pacciTip": "Monofásico, amico! Decoreba que vale ouro nessa prova."
+  },
+  {
+    "id": "REF-ESP-149",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório final sobre o portfólio de bebidas, você precisa nomear o tributo que incide especificamente sobre bens prejudiciais à saúde ou ao meio ambiente.",
+    "question": "Digite o nome do tributo que incide sobre bens e serviços prejudiciais à saúde ou ao meio ambiente, como bebidas alcoólicas:",
+    "correctAnswer": "Imposto Seletivo",
+    "explanation": "O Imposto Seletivo é o tributo com finalidade extrafiscal que incide sobre bens e serviços considerados prejudiciais à saúde ou ao meio ambiente.",
+    "pacciTip": "Imposto Seletivo, amico! Nome e função andam juntos aqui."
+  },
+  {
+    "id": "REF-ESP-150",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório jurídico da mineradora sobre a incidência do Imposto Seletivo, você precisa nomear o critério central que orienta essa incidência.",
+    "question": "Digite a palavra que designa o critério central para a incidência do Imposto Seletivo sobre um bem ou atividade (relacionado a saúde e meio ambiente):",
+    "correctAnswer": "dano",
+    "explanation": "O potencial de dano à saúde ou ao meio ambiente é o critério central que orienta a incidência do Imposto Seletivo sobre determinado bem, serviço ou atividade.",
+    "pacciTip": "Dano, amico! É o fio condutor de todo o Imposto Seletivo."
+  },
+  {
+    "id": "REF-ESP-151",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer sobre a política de compras da indústria de eletrônicos, você precisa nomear a característica central do novo modelo de creditamento de IBS/CBS.",
+    "question": "Digite a palavra que designa a amplitude do direito a crédito no novo sistema de IBS/CBS, que alcança praticamente todas as aquisições da atividade:",
+    "correctAnswer": "plena",
+    "explanation": "A não-cumulatividade plena é a característica central do novo sistema, que amplia o direito a crédito para praticamente todas as aquisições relacionadas à atividade econômica.",
+    "pacciTip": "Plena, amico! Uma palavrinha que muda toda a política de compras."
+  },
+  {
+    "id": "REF-ESP-152",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer final sobre a revisão de contratos da rede de hotéis, você precisa nomear o fenômeno tributário que a não-cumulatividade plena busca eliminar ao longo da cadeia produtiva.",
+    "question": "Digite a palavra que designa o acúmulo de tributo sobre tributo ao longo da cadeia produtiva, que a não-cumulatividade busca eliminar:",
+    "correctAnswer": "cascata",
+    "explanation": "O efeito cascata é o acúmulo de tributo sobre tributo ao longo da cadeia, fenômeno que a não-cumulatividade plena do IBS/CBS busca eliminar.",
+    "pacciTip": "Cascata, amico! Combater esse efeito é a alma da não-cumulatividade."
+  },
+  {
+    "id": "REF-ESP-153",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório de impacto social do novo sistema tributário, você precisa nomear o fenômeno que a alíquota zero da cesta básica busca mitigar.",
+    "question": "Digite a palavra que designa o efeito pelo qual a tributação sobre o consumo pesa proporcionalmente mais sobre famílias de menor renda:",
+    "correctAnswer": "regressividade",
+    "explanation": "A regressividade é o efeito que a alíquota zero da cesta básica e outros mecanismos, como o cashback, buscam mitigar no novo sistema tributário.",
+    "pacciTip": "Regressividade, amico! Combater isso é um dos objetivos centrais da reforma."
+  },
+  {
+    "id": "REF-ESP-154",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No material informativo da distribuidora sobre o novo sistema tributário, você precisa nomear o mecanismo que devolve parte do tributo pago por famílias de baixa renda.",
+    "question": "Digite a palavra (em inglês, como usada no Brasil) que designa a devolução de parte do tributo pago por famílias de baixa renda em determinadas compras:",
+    "correctAnswer": "cashback",
+    "explanation": "Cashback é o termo utilizado para o mecanismo de devolução de parte do tributo pago por famílias de baixa renda inscritas em programas sociais.",
+    "pacciTip": "Cashback, amico! Uma palavrinha que ajuda muita família."
+  },
+  {
+    "id": "REF-ESP-155",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório final do grupo educacional sobre o cronograma da reforma, você precisa nomear a fase que caracteriza os anos entre a implantação inicial e a vigência plena do novo sistema.",
+    "question": "Digite a palavra que designa o período plurianual de convivência entre os tributos antigos e os novos, entre 2026 e 2033:",
+    "correctAnswer": "transição",
+    "explanation": "A transição é o período plurianual de convivência entre o sistema tributário antigo e o novo, com redução e aumento progressivos, respectivamente, dos tributos envolvidos.",
+    "pacciTip": "Transição, amico! É a resposta certa pra essa fase de travessia."
+  },
+  {
+    "id": "REF-ESP-156",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório de compliance da seguradora sobre a distribuição de receita tributária, você precisa nomear o critério que passa a prevalecer ao final da transição.",
+    "question": "Digite a palavra que designa o critério de distribuição de receita que passa a prevalecer integralmente ao final do período de transição:",
+    "correctAnswer": "destino",
+    "explanation": "O critério de destino passa a prevalecer integralmente ao final da transição, substituindo o critério de origem que caracterizava o sistema antigo.",
+    "pacciTip": "Destino, amico! A resposta que fecha esse ciclo de transição."
+  },
+  {
+    "id": "REF-ESP-157",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer estratégico sobre o regime tributário da startup, você precisa nomear o regime tributário opcional simplificado ao qual pequenas empresas podem aderir.",
+    "question": "Digite o nome do regime tributário simplificado, opcional, ao qual pequenas e médias empresas podem aderir, mesmo após a Reforma Tributária:",
+    "correctAnswer": "Simples Nacional",
+    "explanation": "O Simples Nacional continua existindo como regime tributário simplificado e opcional para pequenas e médias empresas, mesmo após a implementação da Reforma Tributária.",
+    "pacciTip": "Simples Nacional, amico! Ele segue firme como opção, não obrigação."
+  },
+  {
+    "id": "REF-ESP-158",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer contábil sobre o regime tributário da indústria de móveis, você precisa nomear o tipo de cliente cuja predominância reduz a vantagem estratégica de migrar do Simples Nacional.",
+    "question": "Digite a expressão que designa o tipo de comprador que não aproveita créditos tributários nas compras (compra para uso próprio, não para revenda):",
+    "correctAnswer": "consumidor final",
+    "explanation": "O consumidor final é o comprador que não aproveita créditos tributários nas compras, o que reduz a vantagem estratégica da migração ao regime regular para negócios voltados a esse público.",
+    "pacciTip": "Consumidor final, amico! Ele fecha a cadeia, sem repassar crédito."
+  },
+  {
+    "id": "REF-ESP-159",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No parecer sobre a reestruturação da holding familiar, você precisa nomear o tipo de operação sujeita a regras próprias dentro do sistema de IBS relacionada a imóveis.",
+    "question": "Digite a palavra que designa a operação pela qual a holding cede o uso de um imóvel a outra empresa mediante pagamento periódico:",
+    "correctAnswer": "locação",
+    "explanation": "A locação é a operação pela qual o proprietário cede o uso de um imóvel mediante pagamento periódico, sujeita a regras próprias dentro do sistema de IBS/CBS.",
+    "pacciTip": "Locação, amico! Palavra simples pra uma operação com regra especial."
+  },
+  {
+    "id": "REF-ESP-160",
+    "level": "especialista",
+    "type": "text_input",
+    "scenario": "No relatório final do projeto de reestruturação do grupo multinacional, você precisa nomear o princípio constitucional que reduziu a relevância tributária da localização de subsidiárias produtoras nas vendas internas.",
+    "question": "Digite o princípio constitucional que faz com que a tributação do IBS incida no local de consumo, reduzindo a relevância tributária da localização da produção:",
+    "correctAnswer": "destino",
+    "explanation": "O princípio do destino é o que faz a tributação do IBS incidir no local de consumo, reduzindo a relevância tributária pura da localização das subsidiárias produtoras nas vendas internas.",
+    "pacciTip": "Destino, amico! Ele muda a lógica de decisão societária dos grandes grupos."
+  }
+]

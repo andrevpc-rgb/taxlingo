@@ -1,0 +1,2046 @@
+[
+  {
+    "id": "REF-PL-001",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Você está calculando o crédito de IBS/CBS sobre a compra de material de escritório (um bem de uso e consumo) para a empresa — algo que hoje, no ICMS, normalmente não gera crédito.",
+    "question": "No novo modelo de não cumulatividade plena, a aquisição de bens de uso e consumo pela empresa:",
+    "options": [
+      "Passa a gerar direito a crédito de IBS/CBS, ampliando a base de créditos em relação ao modelo atual",
+      "Continua sem gerar nenhum crédito, igual ao ICMS atual",
+      "Gera crédito apenas se o bem for revendido",
+      "Gera crédito apenas para empresas do Lucro Real"
+    ],
+    "correctAnswer": "Passa a gerar direito a crédito de IBS/CBS, ampliando a base de créditos em relação ao modelo atual",
+    "explanation": "A não cumulatividade plena elimina a maior parte das restrições atuais: bens de uso e consumo, antes fora do crédito de ICMS, passam a gerar crédito de IBS/CBS.",
+    "pacciTip": "Mamma mia, isso muda o jogo! Até o cafezinho do escritório agora ajuda a gerar crédito, capisce?"
+  },
+  {
+    "id": "REF-PL-002",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Você está formando o preço de venda de um produto e precisa explicar a um colega a diferença entre o ICMS atual e o novo modelo na hora de calcular o tributo.",
+    "question": "O que significa dizer que o IBS/CBS será calculado 'por fora' do preço, diferente do ICMS atual?",
+    "options": [
+      "O valor do tributo é somado ao preço da mercadoria/serviço, e não embutido na própria base de cálculo do tributo",
+      "O tributo não aparece na nota fiscal",
+      "O tributo é cobrado apenas na saída do produto do país",
+      "O tributo passa a ser opcional para o comprador"
+    ],
+    "correctAnswer": "O valor do tributo é somado ao preço da mercadoria/serviço, e não embutido na própria base de cálculo do tributo",
+    "explanation": "No cálculo 'por fora', o tributo é somado ao preço líquido, evitando o efeito de 'imposto sobre imposto' que existe no cálculo 'por dentro' do ICMS atual.",
+    "pacciTip": "Por fora é mais transparente, tesoro! O preço não esconde imposto dentro dele mesmo."
+  },
+  {
+    "id": "REF-PL-003",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Você está avaliando o caso de uma empresa exportadora que acumula créditos de IBS/CBS há alguns meses, sem conseguir compensá-los totalmente nas operações internas.",
+    "question": "O que ocorre, em regra, com créditos de IBS/CBS acumulados que a empresa não consegue compensar em suas próprias operações?",
+    "options": [
+      "Podem ser objeto de ressarcimento/restituição pelo Fisco, em prazo reduzido em relação ao modelo atual",
+      "São simplesmente perdidos ao final do exercício",
+      "Só podem ser usados após 10 anos",
+      "Não existem créditos acumulados no novo modelo"
+    ],
+    "correctAnswer": "Podem ser objeto de ressarcimento/restituição pelo Fisco, em prazo reduzido em relação ao modelo atual",
+    "explanation": "Um dos avanços do novo modelo é a previsão de ressarcimento mais ágil de créditos acumulados, especialmente relevante para exportadores.",
+    "pacciTip": "Crédito acumulado não é dinheiro perdido, amico! Agora o ressarcimento é mais rápido."
+  },
+  {
+    "id": "REF-PL-004",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Você está analisando o impacto de custo de contratar uma instituição financeira, setor que opera sob regime específico com restrição de crédito.",
+    "question": "Em regimes específicos como o de serviços financeiros, o aproveitamento de crédito pelo comprador tende a:",
+    "options": [
+      "Ser mais restrito ou calculado de forma diferenciada, impactando o custo final da operação para quem compra desses setores",
+      "Ser sempre maior do que no regime geral",
+      "Não ter nenhuma relação com o tipo de operação",
+      "Ser automaticamente dobrado"
+    ],
+    "correctAnswer": "Ser mais restrito ou calculado de forma diferenciada, impactando o custo final da operação para quem compra desses setores",
+    "explanation": "Regimes específicos costumam ter regras próprias de crédito, muitas vezes mais restritivas, o que afeta diretamente o custo de quem contrata esses serviços.",
+    "pacciTip": "Serviço financeiro tem regra especial de crédito, tesoro! Isso pesa direto no custo de quem compra."
+  },
+  {
+    "id": "REF-PL-005",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Formando o preço de venda de um novo produto, um colega afirma que a não cumulatividade plena garante crédito para praticamente toda aquisição ligada à atividade da empresa.",
+    "question": "A não cumulatividade plena do IBS/CBS garante crédito para praticamente toda aquisição relacionada à atividade da empresa?",
+    "correctAnswer": true,
+    "explanation": "Correto! Esse é o princípio central da não cumulatividade plena: ampliar o crédito a quase todas as aquisições vinculadas à atividade empresarial, reduzindo o efeito cascata.",
+    "pacciTip": "Sì! Quase tudo que você compra pra trabalhar agora ajuda a gerar crédito."
+  },
+  {
+    "id": "REF-PL-006",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um colega da precificação afirma que o modelo de tributação 'por fora' não tem qualquer impacto na formação do preço de venda, servindo apenas para exibição na nota fiscal.",
+    "question": "O modelo de tributação por fora não tem qualquer impacto na formação do preço de venda, servindo apenas para exibição na nota fiscal?",
+    "correctAnswer": false,
+    "explanation": "Errado! O cálculo por fora elimina o efeito cascata de 'imposto sobre imposto', alterando de fato a base de cálculo e, portanto, a lógica de formação de preço.",
+    "pacciTip": "Não é só estética na nota, amico! O cálculo por fora muda a conta de verdade."
+  },
+  {
+    "id": "REF-PL-007",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Ao analisar a compra de uma máquina para o ativo imobilizado da empresa, você compara a apropriação do crédito no ICMS atual (48 parcelas) com o que se espera no novo modelo.",
+    "question": "No novo modelo, bens do ativo imobilizado tendem a ter o crédito apropriado de forma mais simplificada e ampla do que no regime atual do ICMS?",
+    "correctAnswer": true,
+    "explanation": "Correto! A tendência do novo modelo é simplificar e agilizar a apropriação de créditos sobre bens do ativo imobilizado, em vez de exigir parcelamento longo como hoje.",
+    "pacciTip": "Menos parcelas, mais crédito rápido, tesoro! O ativo imobilizado agradece."
+  },
+  {
+    "id": "REF-PL-008",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um colega comenta que, na sua visão, todos os regimes específicos (combustíveis, serviços financeiros, planos de saúde) geram exatamente o mesmo percentual de crédito que o regime geral.",
+    "question": "Todos os regimes específicos geram exatamente o mesmo crédito que o regime geral, sem qualquer diferença?",
+    "correctAnswer": false,
+    "explanation": "Errado! Cada regime específico tem regras próprias de apuração e crédito, que podem ser mais restritivas ou diferentes do regime geral.",
+    "pacciTip": "Regime específico é específico até no crédito, capisce? Não generaliza!"
+  },
+  {
+    "id": "REF-PL-009",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Você precisa calcular o impacto de custo de um novo produto considerando os créditos de IBS/CBS recuperáveis ao longo da cadeia, antes de definir o preço final de venda.",
+    "question": "Ordene o fluxo correto desse cálculo:",
+    "options": [
+      "Formar o preço de venda com a margem desejada, somando o tributo por fora",
+      "Levantar os insumos e custos da cadeia de produção",
+      "Calcular o custo líquido considerando os créditos aproveitáveis",
+      "Identificar os créditos de IBS/CBS recuperáveis em cada insumo"
+    ],
+    "correctAnswer": [
+      "Levantar os insumos e custos da cadeia de produção",
+      "Identificar os créditos de IBS/CBS recuperáveis em cada insumo",
+      "Calcular o custo líquido considerando os créditos aproveitáveis",
+      "Formar o preço de venda com a margem desejada, somando o tributo por fora"
+    ],
+    "explanation": "O cálculo parte do levantamento de custos, identifica os créditos possíveis, apura o custo líquido e só então forma o preço com a margem e o tributo por fora.",
+    "pacciTip": "Custo, crédito, custo líquido, preço. Nessa ordem a margem não escapa, tesoro!"
+  },
+  {
+    "id": "REF-PL-010",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Ao final do período de apuração, uma empresa exportadora acumulou créditos de IBS/CBS que não foram totalmente compensados nas operações internas.",
+    "question": "Ordene o fluxo correto de tratamento desse crédito acumulado:",
+    "options": [
+      "Solicitar o ressarcimento/restituição do saldo ao Fisco",
+      "Apurar o total de créditos de IBS/CBS do período",
+      "Identificar o saldo credor remanescente",
+      "Compensar os créditos com os débitos das operações tributadas"
+    ],
+    "correctAnswer": [
+      "Apurar o total de créditos de IBS/CBS do período",
+      "Compensar os créditos com os débitos das operações tributadas",
+      "Identificar o saldo credor remanescente",
+      "Solicitar o ressarcimento/restituição do saldo ao Fisco"
+    ],
+    "explanation": "Primeiro apura-se o total de crédito, compensa-se com os débitos, identifica-se o saldo remanescente e, só então, solicita-se o ressarcimento.",
+    "pacciTip": "Apura, compensa, sobra, pede de volta. Assim o dinheiro do exportador não fica esquecido!"
+  },
+  {
+    "id": "REF-PL-011",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "A empresa comprou um lote de bens de uso e consumo (materiais de escritório e limpeza) e você precisa tratar corretamente o crédito dessa aquisição.",
+    "question": "Ordene o fluxo correto de tratamento dessa compra:",
+    "options": [
+      "Considerar o efeito do crédito na formação de custo do produto final",
+      "Registrar a aquisição do bem de uso e consumo no sistema",
+      "Lançar o crédito na apuração do período",
+      "Verificar se a operação gera direito a crédito de IBS/CBS"
+    ],
+    "correctAnswer": [
+      "Registrar a aquisição do bem de uso e consumo no sistema",
+      "Verificar se a operação gera direito a crédito de IBS/CBS",
+      "Lançar o crédito na apuração do período",
+      "Considerar o efeito do crédito na formação de custo do produto final"
+    ],
+    "explanation": "Primeiro registra-se a compra, depois se confirma o direito ao crédito, lança-se na apuração e, por fim, considera-se o efeito no custo do produto final.",
+    "pacciTip": "Nem todo bem de uso é igual, tesoro! Sempre confirma o direito ao crédito antes de lançar."
+  },
+  {
+    "id": "REF-PL-012",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Você está revisando um contrato de fornecimento de serviços financeiros, setor sujeito a regime específico com crédito restrito, e precisa reavaliar o impacto no custo da operação.",
+    "question": "Ordene o fluxo correto dessa revisão:",
+    "options": [
+      "Ajustar a formação de preço/margem considerando o crédito reduzido",
+      "Identificar que a operação está sujeita a regime específico de crédito restrito",
+      "Reavaliar o custo da operação para o comprador",
+      "Calcular o percentual de crédito efetivamente aproveitável"
+    ],
+    "correctAnswer": [
+      "Identificar que a operação está sujeita a regime específico de crédito restrito",
+      "Calcular o percentual de crédito efetivamente aproveitável",
+      "Reavaliar o custo da operação para o comprador",
+      "Ajustar a formação de preço/margem considerando o crédito reduzido"
+    ],
+    "explanation": "A revisão começa identificando o regime, segue com o cálculo do crédito real, a reavaliação do custo e o ajuste final da precificação.",
+    "pacciTip": "Crédito restrito exige conta fina, amico! Identifica, calcula, reavalia, ajusta."
+  },
+  {
+    "id": "REF-PL-013",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual de créditos tributários da empresa, há uma frase incompleta sobre o princípio central do novo modelo.",
+    "question": "No novo modelo, a não cumulatividade ___ amplia o direito a crédito para praticamente todas as aquisições relacionadas à atividade da empresa.",
+    "options": [
+      "plena",
+      "restrita",
+      "parcial",
+      "inexistente"
+    ],
+    "correctAnswer": "plena",
+    "explanation": "A não cumulatividade plena é o princípio que amplia o crédito, reduzindo o efeito cascata típico do sistema atual.",
+    "pacciTip": "Plena é a palavra que resume tudo, tesoro! Crédito para quase tudo que você compra."
+  },
+  {
+    "id": "REF-PL-014",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "Explicando para um colega da área comercial a diferença na formação de preço, você usa um roteiro com uma frase incompleta.",
+    "question": "Diferente do ICMS atual, o IBS/CBS será calculado por ___ do preço da mercadoria ou serviço.",
+    "options": [
+      "fora",
+      "dentro",
+      "cima",
+      "baixo"
+    ],
+    "correctAnswer": "fora",
+    "explanation": "O cálculo 'por fora' soma o tributo ao preço líquido, sem embuti-lo na própria base de cálculo, como ocorre hoje no ICMS.",
+    "pacciTip": "Fora é a palavra certa, amico! O imposto some sem se esconder dentro do preço."
+  },
+  {
+    "id": "REF-PL-015",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No procedimento de fechamento de período para empresas exportadoras, há uma frase incompleta sobre o tratamento do crédito acumulado.",
+    "question": "Créditos de IBS/CBS que a empresa não consegue compensar podem ser objeto de ___ pelo Fisco.",
+    "options": [
+      "ressarcimento",
+      "perda",
+      "multa",
+      "suspensão"
+    ],
+    "correctAnswer": "ressarcimento",
+    "explanation": "O ressarcimento é o mecanismo previsto para devolver à empresa créditos acumulados que não puderam ser compensados internamente.",
+    "pacciTip": "Ressarcimento é o caminho de volta do dinheiro, tesoro! Não deixa o crédito parado."
+  },
+  {
+    "id": "REF-PL-016",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "Revisando o impacto de custo de contratar setores com regime específico, você encontra uma frase incompleta no relatório interno.",
+    "question": "Em regimes específicos, como o de serviços financeiros, o crédito aproveitável pelo comprador tende a ser ___ em relação ao regime geral.",
+    "options": [
+      "diferenciado",
+      "idêntico",
+      "dobrado",
+      "proibido"
+    ],
+    "correctAnswer": "diferenciado",
+    "explanation": "Regimes específicos costumam ter regras próprias de crédito, diferentes do regime geral, o que impacta o custo de quem compra desses setores.",
+    "pacciTip": "Diferenciado é a palavra-chave, tesoro! Cada regime específico tem sua própria conta de crédito."
+  },
+  {
+    "id": "REF-PL-017",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando o novo modelo de crédito para um estagiário, você resume em uma palavra o tipo de não cumulatividade adotado pelo IBS/CBS.",
+    "question": "Como se chama, em uma palavra, o tipo de não cumulatividade adotado pelo IBS/CBS, que amplia o direito a crédito para quase todas as aquisições?",
+    "correctAnswer": "plena",
+    "explanation": "A não cumulatividade plena é o conceito que garante crédito amplo, reduzindo o efeito cascata do sistema atual.",
+    "pacciTip": "Plena, sempre plena! Essa palavra resume o espírito do novo crédito."
+  },
+  {
+    "id": "REF-PL-018",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Formando o preço de venda de um produto, você precisa lembrar como o tributo é somado ao preço no novo modelo.",
+    "question": "Digite a palavra que descreve como o IBS/CBS é calculado em relação ao preço: por dentro ou por ___?",
+    "correctAnswer": "fora",
+    "explanation": "O tributo é calculado 'por fora' do preço, evitando o efeito cascata do cálculo 'por dentro' usado hoje no ICMS.",
+    "pacciTip": "Fora, sempre fora! O imposto não se esconde mais dentro do preço."
+  },
+  {
+    "id": "REF-PL-019",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Ao orientar o time de exportação sobre créditos acumulados, você precisa nomear o procedimento que devolve o valor à empresa.",
+    "question": "Digite o termo usado para o procedimento pelo qual a empresa recupera do Fisco créditos de IBS/CBS que não conseguiu compensar:",
+    "correctAnswer": "ressarcimento",
+    "explanation": "O ressarcimento é o mecanismo de devolução de créditos acumulados e não compensados à empresa.",
+    "pacciTip": "Ressarcimento é a palavra do dia, tesoro! Decora ela bem."
+  },
+  {
+    "id": "REF-PL-020",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Fechando a análise de custo de um contrato com uma instituição financeira, você resume em uma palavra o tipo de crédito aplicável a regimes específicos.",
+    "question": "Digite a palavra que descreve o tipo de crédito aplicável em regimes específicos, normalmente diferente do regime geral:",
+    "correctAnswer": "diferenciado",
+    "explanation": "Regimes específicos possuem crédito diferenciado, com regras próprias distintas do regime geral.",
+    "pacciTip": "Diferenciado, tesoro! Regime específico nunca segue a receita padrão."
+  },
+  {
+    "id": "REF-PL-021",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria automotiva investiu em uma nova linha de robôs de solda para a fábrica e sua equipe pergunta como o crédito de IBS/CBS dessa aquisição será aproveitado.",
+    "question": "Em relação ao crédito sobre bens do ativo imobilizado, o que muda no novo modelo em comparação ao ICMS atual (que exige apropriação em 48 parcelas mensais)?",
+    "options": [
+      "O crédito tende a ser apropriado de forma mais ágil e simplificada, sem a necessidade do parcelamento longo do modelo atual",
+      "O crédito deixa de existir para bens do ativo imobilizado",
+      "O crédito só pode ser tomado após a depreciação total do bem",
+      "O crédito passa a ser parcelado em 96 meses, o dobro do atual"
+    ],
+    "correctAnswer": "O crédito tende a ser apropriado de forma mais ágil e simplificada, sem a necessidade do parcelamento longo do modelo atual",
+    "explanation": "A tendência do novo modelo é agilizar a apropriação de crédito sobre ativo imobilizado, superando a exigência de parcelamento em 48 meses do ICMS.",
+    "pacciTip": "Robô de solda também dá crédito rapidinho, tesoro! Sem fila de 48 parcelas."
+  },
+  {
+    "id": "REF-PL-022",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um escritório de consultoria contratou uma empresa terceirizada de limpeza para suas salas e o financeiro quer saber se essa despesa gera crédito de IBS/CBS.",
+    "question": "A contratação de serviço de limpeza para as instalações da empresa, sob a não cumulatividade plena:",
+    "options": [
+      "Gera direito a crédito, pois é uma aquisição vinculada à atividade da empresa",
+      "Nunca gera crédito, por se tratar de serviço e não de mercadoria",
+      "Só gera crédito se a limpeza for feita por funcionários próprios",
+      "Gera crédito apenas para empresas industriais"
+    ],
+    "correctAnswer": "Gera direito a crédito, pois é uma aquisição vinculada à atividade da empresa",
+    "explanation": "A não cumulatividade plena amplia o crédito também para serviços contratados que estejam vinculados à atividade da empresa, como a limpeza das instalações.",
+    "pacciTip": "Escritório limpo e crédito em dia, capisce? Serviço vinculado à atividade também conta."
+  },
+  {
+    "id": "REF-PL-023",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma concessionária registrou como despesa da empresa a compra de um carro de luxo para uso pessoal do sócio-diretor, sem qualquer relação com a operação do negócio.",
+    "question": "Nesse caso, a aquisição do veículo de uso pessoal do sócio:",
+    "options": [
+      "Não gera crédito de IBS/CBS, pois não há vínculo com a atividade econômica da empresa",
+      "Gera crédito integral, pois toda despesa contabilizada pela empresa gera crédito",
+      "Gera crédito parcial de 50%, por ser um bem misto",
+      "Gera crédito, desde que o sócio pague uma taxa simbólica pelo uso"
+    ],
+    "correctAnswer": "Não gera crédito de IBS/CBS, pois não há vínculo com a atividade econômica da empresa",
+    "explanation": "Mesmo com a ampliação trazida pela não cumulatividade plena, o crédito depende do vínculo da aquisição com a atividade econômica da empresa — bens de uso estritamente pessoal ficam de fora.",
+    "pacciTip": "Nem tudo que passa pelo caixa da empresa é crédito, tesoro! Precisa ter a cara do negócio."
+  },
+  {
+    "id": "REF-PL-024",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma gráfica industrial produziu brindes promocionais (canecas e blocos personalizados) para distribuir a clientes em uma feira do setor.",
+    "question": "A aquisição de insumos para produção de brindes promocionais distribuídos a clientes, como ação vinculada à atividade comercial da empresa:",
+    "options": [
+      "Gera direito a crédito de IBS/CBS, por estar vinculada à atividade da empresa",
+      "Nunca gera crédito, pois brindes são sempre considerados uso pessoal",
+      "Gera crédito apenas se os brindes forem vendidos posteriormente",
+      "Gera crédito somente para empresas do setor de brindes"
+    ],
+    "correctAnswer": "Gera direito a crédito de IBS/CBS, por estar vinculada à atividade da empresa",
+    "explanation": "Despesas com ações de marketing e brindes vinculadas à atividade comercial da empresa se enquadram na ampla base de crédito da não cumulatividade plena.",
+    "pacciTip": "Caneca de brinde também carrega crédito, amico! O que importa é o vínculo com o negócio."
+  },
+  {
+    "id": "REF-PL-025",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um e-commerce de eletrônicos compra grandes lotes de caixas, plástico bolha e fita adesiva para embalar os produtos antes do envio aos clientes.",
+    "question": "Os materiais de embalagem usados para o envio dos produtos vendidos pelo e-commerce:",
+    "options": [
+      "Geram crédito de IBS/CBS, por serem aquisições vinculadas à atividade de venda da empresa",
+      "Não geram crédito, pois não fazem parte do produto vendido",
+      "Geram crédito apenas se o cliente final for pessoa jurídica",
+      "Geram crédito somente se a embalagem for reaproveitada"
+    ],
+    "correctAnswer": "Geram crédito de IBS/CBS, por serem aquisições vinculadas à atividade de venda da empresa",
+    "explanation": "Materiais de embalagem usados na operação de venda são aquisições vinculadas à atividade da empresa e, portanto, geram crédito na não cumulatividade plena.",
+    "pacciTip": "Caixa, plástico bolha, fita — tudo isso ajuda no crédito, tesoro! Embalagem também conta."
+  },
+  {
+    "id": "REF-PL-026",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de petshops reformou e pintou uma de suas lojas para melhorar a experiência dos clientes, contratando uma empreiteira para o serviço.",
+    "question": "O serviço de reforma e pintura contratado para a loja, sob a não cumulatividade plena:",
+    "options": [
+      "Gera crédito de IBS/CBS, por se tratar de despesa vinculada ao estabelecimento onde a empresa opera",
+      "Não gera crédito, pois reforma é sempre considerada investimento pessoal do proprietário",
+      "Gera crédito apenas se a reforma for financiada por banco",
+      "Gera crédito somente em lojas próprias, nunca em lojas alugadas"
+    ],
+    "correctAnswer": "Gera crédito de IBS/CBS, por se tratar de despesa vinculada ao estabelecimento onde a empresa opera",
+    "explanation": "Serviços de reforma vinculados ao estabelecimento onde a empresa exerce sua atividade se enquadram na ampla base de crédito da não cumulatividade plena, mesmo em imóveis alugados.",
+    "pacciTip": "Loja bonita e crédito também, tesoro! Reforma do ponto comercial conta, seja próprio ou alugado."
+  },
+  {
+    "id": "REF-PL-027",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma loja de roupas está comparando, em uma planilha, como o preço final de uma peça mudaria se o tributo fosse calculado por dentro (como no ICMS) ou por fora (como no IBS/CBS).",
+    "question": "Ao calcular o tributo 'por fora', qual é o efeito prático na planilha de formação de preço da loja?",
+    "options": [
+      "O tributo é somado ao preço líquido já formado, sem inflar a própria base de cálculo do imposto",
+      "O tributo passa a ser descontado do preço líquido antes da venda",
+      "O tributo deixa de ser calculado, pois passa a ser fixo por peça",
+      "O tributo passa a ser cobrado apenas do fornecedor, nunca do consumidor final"
+    ],
+    "correctAnswer": "O tributo é somado ao preço líquido já formado, sem inflar a própria base de cálculo do imposto",
+    "explanation": "No cálculo por fora, o tributo é somado ao preço líquido, e não embutido dentro da própria base, o que evita o efeito cascata do 'imposto sobre imposto'.",
+    "pacciTip": "Por fora é soma limpa, tesoro! Nada de imposto se escondendo dentro do próprio cálculo."
+  },
+  {
+    "id": "REF-PL-028",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria de alimentos está formando o preço de venda de um novo lote de biscoitos, considerando o custo de produção, a margem desejada e o tributo que será somado ao final.",
+    "question": "Na formação desse preço de venda, em que momento o IBS/CBS 'por fora' deve ser considerado?",
+    "options": [
+      "Após definir o preço líquido com a margem desejada, somando o tributo por cima desse valor",
+      "Antes de calcular o custo de produção, subtraindo o tributo do custo",
+      "No meio do cálculo, dividindo a margem pelo tributo",
+      "O tributo não entra na formação de preço, apenas na nota fiscal"
+    ],
+    "correctAnswer": "Após definir o preço líquido com a margem desejada, somando o tributo por cima desse valor",
+    "explanation": "O tributo por fora é somado ao preço líquido já formado (custo + margem), e não misturado ao cálculo do custo ou da margem em si.",
+    "pacciTip": "Primeiro forma o preço líquido, depois soma o tributo por cima, tesoro! Essa é a ordem certa."
+  },
+  {
+    "id": "REF-PL-029",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um analista de uma farmacêutica está explicando a um diretor por que o novo modelo tende a reduzir o chamado 'efeito cascata' que hoje encarece a cadeia de medicamentos.",
+    "question": "O que caracteriza o 'efeito cascata' que a não cumulatividade plena e o cálculo por fora ajudam a reduzir?",
+    "options": [
+      "A cobrança de imposto sobre valores que já contêm imposto embutido de etapas anteriores da cadeia",
+      "A cobrança do mesmo produto duas vezes pelo mesmo fornecedor",
+      "O aumento do preço apenas por causa da inflação",
+      "A cobrança de frete duplicado entre distribuidor e farmácia"
+    ],
+    "correctAnswer": "A cobrança de imposto sobre valores que já contêm imposto embutido de etapas anteriores da cadeia",
+    "explanation": "O efeito cascata ocorre quando o imposto incide sobre uma base que já contém imposto de etapas anteriores. A não cumulatividade plena e o cálculo por fora ajudam a eliminar essa distorção.",
+    "pacciTip": "Imposto sobre imposto é a bagunça, tesoro! O novo modelo ajuda a limpar essa conta."
+  },
+  {
+    "id": "REF-PL-030",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de software por assinatura (SaaS) está revisando se a lógica do cálculo por fora se aplica também à venda de serviços digitais, e não apenas a mercadorias físicas.",
+    "question": "O cálculo do IBS/CBS por fora do preço aplica-se:",
+    "options": [
+      "Tanto a operações com mercadorias quanto a operações com serviços, como uma assinatura de software",
+      "Apenas a operações com mercadorias físicas",
+      "Apenas a operações de exportação de serviços",
+      "Apenas quando o cliente é pessoa física"
+    ],
+    "correctAnswer": "Tanto a operações com mercadorias quanto a operações com serviços, como uma assinatura de software",
+    "explanation": "A lógica do cálculo por fora se aplica de forma ampla a bens e serviços, incluindo assinaturas de software e outros serviços digitais.",
+    "pacciTip": "Serviço digital também soma o tributo por fora, tesoro! A regra não é só para caixinha física."
+  },
+  {
+    "id": "REF-PL-031",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "O time comercial de uma distribuidora de bebidas está definindo o markup padrão a ser aplicado sobre o custo líquido dos produtos, já sabendo que o tributo será somado depois, por fora.",
+    "question": "Se o tributo é somado por fora após a definição da margem, o que a distribuidora deve fazer para não distorcer sua margem líquida real?",
+    "options": [
+      "Calcular o markup sobre o custo líquido (já considerando créditos) antes de somar o tributo por fora",
+      "Somar o tributo antes de calcular qualquer margem, incluindo-o no custo do produto",
+      "Ignorar o tributo, pois ele nunca afeta a margem",
+      "Aplicar o markup apenas sobre o valor do tributo"
+    ],
+    "correctAnswer": "Calcular o markup sobre o custo líquido (já considerando créditos) antes de somar o tributo por fora",
+    "explanation": "Para preservar a margem real, o markup deve ser calculado sobre o custo líquido de créditos, e só então o tributo por fora é somado ao preço final.",
+    "pacciTip": "Margem se calcula no custo líquido, tesoro! O tributo por fora entra só no final, sem bagunçar a conta."
+  },
+  {
+    "id": "REF-PL-032",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um cliente de uma loja de material de construção estranhou o preço final de um produto e perguntou ao vendedor por que o tributo aparece somado ao preço, e não 'escondido' como ele estava acostumado a ver.",
+    "question": "Por que, no novo modelo, o consumidor consegue identificar mais claramente o valor do tributo pago?",
+    "options": [
+      "Porque o tributo é calculado por fora e somado de forma visível ao preço, aumentando a transparência",
+      "Porque o tributo deixou de existir para o consumidor final",
+      "Porque a loja passou a dar desconto equivalente ao tributo",
+      "Porque o tributo agora é cobrado apenas uma vez por ano, à parte da compra"
+    ],
+    "correctAnswer": "Porque o tributo é calculado por fora e somado de forma visível ao preço, aumentando a transparência",
+    "explanation": "O cálculo por fora torna o valor do tributo mais visível e destacado, diferente do cálculo por dentro do ICMS, que embute o imposto na própria base de cálculo.",
+    "pacciTip": "Tributo por fora é tributo às claras, tesoro! Mais fácil de enxergar quanto se paga."
+  },
+  {
+    "id": "REF-PL-033",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma trading de grãos exporta a maior parte de sua produção e, mês após mês, acumula créditos de IBS/CBS sobre os insumos comprados, sem débitos suficientes nas operações internas para compensá-los.",
+    "question": "Diante desse acúmulo recorrente de créditos, o que a empresa exportadora de grãos pode fazer?",
+    "options": [
+      "Solicitar o ressarcimento dos créditos acumulados que não foram compensados, em prazo mais ágil que o atual",
+      "Nada, pois exportadoras não têm direito a nenhum crédito",
+      "Transferir os créditos automaticamente para os sócios pessoa física",
+      "Esperar 10 anos para que os créditos expirem e sejam descartados"
+    ],
+    "correctAnswer": "Solicitar o ressarcimento dos créditos acumulados que não foram compensados, em prazo mais ágil que o atual",
+    "explanation": "Exportadoras costumam acumular créditos por venderem sem débito de saída relevante; o novo modelo prevê ressarcimento mais ágil desse saldo.",
+    "pacciTip": "Grão exportado não paga o tributo lá fora, mas o crédito aqui dentro pode voltar pro bolso, tesoro!"
+  },
+  {
+    "id": "REF-PL-034",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria têxtil que vende 70% de sua produção para o exterior percebe que seu saldo credor de IBS/CBS cresce a cada apuração, mesmo compensando o que consegue nas vendas internas.",
+    "question": "Esse crescimento constante do saldo credor, nesse cenário, é esperado para empresas com esse perfil de vendas?",
+    "options": [
+      "Sim, pois exportações não geram débito de saída relevante, fazendo o crédito das compras superar os débitos internos",
+      "Não, esse acúmulo indica sempre um erro de apuração da empresa",
+      "Sim, mas apenas empresas do Simples Nacional podem acumular crédito",
+      "Não, pois exportadoras não têm direito a crédito algum"
+    ],
+    "correctAnswer": "Sim, pois exportações não geram débito de saída relevante, fazendo o crédito das compras superar os débitos internos",
+    "explanation": "Empresas fortemente exportadoras naturalmente acumulam créditos, já que as exportações não geram débito relevante para compensar os créditos das aquisições internas.",
+    "pacciTip": "Quem exporta muito, acumula crédito, tesoro! É esperado, não é erro de conta."
+  },
+  {
+    "id": "REF-PL-035",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma mineradora que vende praticamente toda sua produção para clientes no exterior está estruturando um processo interno para solicitar periodicamente o ressarcimento dos créditos acumulados de IBS/CBS.",
+    "question": "Qual é o principal motivo para essa mineradora acumular créditos de forma recorrente?",
+    "options": [
+      "Suas vendas ao exterior não geram débito relevante de IBS/CBS para compensar os créditos das aquisições",
+      "A mineração é um setor proibido de tomar qualquer crédito",
+      "O minério vendido no Brasil paga o dobro do tributo",
+      "Os fornecedores da mineradora nunca destacam crédito nas notas fiscais"
+    ],
+    "correctAnswer": "Suas vendas ao exterior não geram débito relevante de IBS/CBS para compensar os créditos das aquisições",
+    "explanation": "Como as exportações não geram débito relevante, empresas fortemente exportadoras como mineradoras tendem a acumular créditos, exigindo um processo estruturado de ressarcimento.",
+    "pacciTip": "Minério que vai pro exterior deixa crédito aqui dentro, tesoro! Vale organizar o pedido direitinho."
+  },
+  {
+    "id": "REF-PL-036",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma fábrica de autopeças, que vende quase tudo para o mercado interno, investiu pesado em novas máquinas em um único mês e ficou temporariamente com saldo credor de IBS/CBS maior que os débitos do período.",
+    "question": "Mesmo não sendo exportadora, essa empresa pode ficar com saldo credor de IBS/CBS?",
+    "options": [
+      "Sim, qualquer empresa pode ter saldo credor temporário quando os créditos do período superam os débitos, como em meses de alto investimento",
+      "Não, saldo credor só existe para empresas exportadoras",
+      "Não, pois toda empresa do mercado interno tem débito sempre maior que o crédito",
+      "Sim, mas apenas empresas do setor de serviços podem ter saldo credor"
+    ],
+    "correctAnswer": "Sim, qualquer empresa pode ter saldo credor temporário quando os créditos do período superam os débitos, como em meses de alto investimento",
+    "explanation": "O acúmulo de crédito não é exclusivo de exportadoras: qualquer empresa pode ter saldo credor temporário quando os créditos superam os débitos do período, como em meses de forte investimento.",
+    "pacciTip": "Comprou máquina pra caramba num mês só? Pode sobrar crédito, tesoro, mesmo vendendo aqui dentro!"
+  },
+  {
+    "id": "REF-PL-037",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria de papel e celulose enfrenta sazonalidade nas vendas: em alguns meses os créditos sobre insumos superam os débitos das vendas, gerando saldo credor temporário.",
+    "question": "Diante da sazonalidade que gera saldo credor em determinados meses, qual é o tratamento esperado desse crédito não compensado?",
+    "options": [
+      "Pode ser mantido para compensação em períodos futuros ou, se aplicável, ser objeto de ressarcimento",
+      "É automaticamente cancelado ao final de cada mês",
+      "Deve ser transferido obrigatoriamente para outra empresa do grupo",
+      "Gera multa para a empresa por ter apurado saldo credor"
+    ],
+    "correctAnswer": "Pode ser mantido para compensação em períodos futuros ou, se aplicável, ser objeto de ressarcimento",
+    "explanation": "O saldo credor de um período pode ser aproveitado em períodos seguintes ou, em casos como acúmulo relevante e persistente, ser objeto de ressarcimento junto ao Fisco.",
+    "pacciTip": "Sazonalidade não é problema, tesoro! O crédito espera ou volta pelo ressarcimento."
+  },
+  {
+    "id": "REF-PL-038",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma trading company que atua exclusivamente com operações de comércio exterior está estruturando o fluxo de pedidos de ressarcimento de créditos de IBS/CBS acumulados sobre suas aquisições.",
+    "question": "Para uma trading dedicada quase exclusivamente à exportação, o mecanismo de ressarcimento de créditos acumulados é especialmente relevante porque:",
+    "options": [
+      "Suas operações de exportação praticamente não geram débito para compensar os créditos das aquisições, tornando o ressarcimento a principal via de recuperação",
+      "Trading companies são isentas de qualquer apuração de crédito",
+      "O ressarcimento é a única forma de a empresa pagar seus tributos",
+      "Toda trading é obrigada a devolver os créditos ao Fisco no fim do ano"
+    ],
+    "correctAnswer": "Suas operações de exportação praticamente não geram débito para compensar os créditos das aquisições, tornando o ressarcimento a principal via de recuperação",
+    "explanation": "Empresas cuja atividade é majoritariamente de exportação acumulam créditos por não terem débitos relevantes de saída, tornando o ressarcimento essencial para a recuperação desses valores.",
+    "pacciTip": "Trading que só exporta vive de ressarcimento, tesoro! É a válvula de escape do crédito acumulado."
+  },
+  {
+    "id": "REF-PL-039",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "O RH de uma empresa de médio porte está negociando a renovação do plano de saúde corporativo para os funcionários e perguntou ao financeiro se o crédito de IBS/CBS sobre essa contratação é igual ao de uma compra comum.",
+    "question": "A contratação de plano de saúde corporativo, por se enquadrar em regime específico do setor de saúde suplementar, tende a gerar crédito:",
+    "options": [
+      "Calculado de forma diferenciada, conforme as regras próprias desse regime específico, impactando o custo final do benefício",
+      "Idêntico ao de qualquer mercadoria do regime geral",
+      "Sempre integral e superior ao das demais operações",
+      "Inexistente, pois planos de saúde nunca geram crédito"
+    ],
+    "correctAnswer": "Calculado de forma diferenciada, conforme as regras próprias desse regime específico, impactando o custo final do benefício",
+    "explanation": "Planos de saúde estão sujeitos a regime específico, com regras próprias de crédito que diferem do regime geral e afetam o custo de quem contrata o benefício.",
+    "pacciTip": "Plano de saúde tem conta própria, tesoro! Sempre confere a regra do regime específico."
+  },
+  {
+    "id": "REF-PL-040",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma transportadora de cargas abastece toda sua frota em postos de combustível e o setor fiscal precisa entender como funciona o crédito de IBS/CBS nessas aquisições, dado o regime específico do setor de combustíveis.",
+    "question": "Sobre o crédito de IBS/CBS na aquisição de combustíveis por uma transportadora, é correto afirmar que:",
+    "options": [
+      "O setor de combustíveis está sujeito a regime específico, com apuração e crédito calculados de forma própria, diferente do regime geral",
+      "Combustíveis nunca geram qualquer crédito para quem os adquire",
+      "O crédito de combustíveis é sempre idêntico ao de mercadorias do regime geral",
+      "Combustíveis só geram crédito para empresas do setor de mineração"
+    ],
+    "correctAnswer": "O setor de combustíveis está sujeito a regime específico, com apuração e crédito calculados de forma própria, diferente do regime geral",
+    "explanation": "Combustíveis estão sujeitos a regime específico de tributação, com regras próprias de apuração e crédito que impactam o custo de quem os adquire, como transportadoras.",
+    "pacciTip": "Combustível tem regime todo especial, tesoro! Não é a mesma conta do regime geral."
+  },
+  {
+    "id": "REF-PL-041",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria contratou uma apólice de seguro empresarial para proteger seu parque fabril e o financeiro quer saber se esse gasto segue a mesma lógica de crédito das demais compras.",
+    "question": "A contratação de seguro empresarial, por estar sujeita a regime específico do setor de seguros, tem o crédito de IBS/CBS:",
+    "options": [
+      "Apurado conforme regras próprias desse regime, que podem diferir do regime geral de crédito",
+      "Sempre proibido, pois seguros nunca geram crédito em nenhuma hipótese",
+      "Idêntico ao de uma compra de matéria-prima industrial",
+      "Dobrado em relação ao regime geral, como incentivo ao setor"
+    ],
+    "correctAnswer": "Apurado conforme regras próprias desse regime, que podem diferir do regime geral de crédito",
+    "explanation": "O setor de seguros está sujeito a regime específico, com regras próprias de apuração e crédito, que podem ser diferentes das aplicáveis ao regime geral.",
+    "pacciTip": "Seguro também tem regra própria de crédito, amico! Vale checar antes de fechar a apólice."
+  },
+  {
+    "id": "REF-PL-042",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma construtora está avaliando a compra de um terreno para erguer sua nova sede administrativa e precisa entender o tratamento de crédito de IBS/CBS aplicável a operações com bens imóveis, sujeitas a regime específico.",
+    "question": "Operações com bens imóveis, por estarem sujeitas a regime específico, tendem a ter regras de crédito:",
+    "options": [
+      "Próprias desse regime, distintas das aplicáveis a mercadorias e serviços do regime geral",
+      "Idênticas às de qualquer mercadoria vendida no varejo",
+      "Inexistentes, pois imóveis nunca geram nenhum tipo de crédito",
+      "Aplicáveis apenas a pessoas físicas, nunca a empresas"
+    ],
+    "correctAnswer": "Próprias desse regime, distintas das aplicáveis a mercadorias e serviços do regime geral",
+    "explanation": "Operações com bens imóveis possuem regime específico de tributação, com regras próprias de apuração e crédito, diferentes do regime geral aplicável a mercadorias e serviços.",
+    "pacciTip": "Imóvel também tem regime todo seu, tesoro! Não confunde com a prateleira do mercado."
+  },
+  {
+    "id": "REF-PL-043",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma fintech captou um empréstimo bancário para reforçar o capital de giro e a controladoria quer entender se os encargos financeiros dessa operação geram crédito de IBS/CBS normalmente.",
+    "question": "Encargos de operações financeiras, como juros de um empréstimo bancário, por estarem sujeitos ao regime específico do setor financeiro:",
+    "options": [
+      "Têm o crédito apurado conforme regras próprias desse regime, que costumam ser mais restritivas que o regime geral",
+      "Geram sempre o mesmo crédito que a compra de uma mercadoria comum",
+      "Nunca são considerados na apuração de créditos da empresa tomadora",
+      "Geram crédito em dobro por se tratar de operação financeira"
+    ],
+    "correctAnswer": "Têm o crédito apurado conforme regras próprias desse regime, que costumam ser mais restritivas que o regime geral",
+    "explanation": "Operações financeiras seguem regime específico, com regras próprias e geralmente mais restritivas de crédito, o que afeta o custo de quem toma o serviço financeiro.",
+    "pacciTip": "Juros de empréstimo também têm regra especial de crédito, tesoro! Regime financeiro nunca é igual ao geral."
+  },
+  {
+    "id": "REF-PL-044",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma agência de publicidade fechou uma cota de patrocínio com uma empresa de apostas esportivas, setor sujeito a regime específico de tributação, e precisa avaliar o impacto no crédito dessa operação.",
+    "question": "Contratos com empresas de setores sujeitos a regimes específicos, como o de apostas esportivas, tendem a exigir do comprador:",
+    "options": [
+      "Atenção redobrada às regras de crédito próprias desse regime, que podem ser diferentes das do regime geral",
+      "Nenhum cuidado adicional, pois o crédito é sempre padronizado entre todos os setores",
+      "A obrigatoriedade de renunciar a qualquer crédito na operação",
+      "A aplicação automática do dobro do crédito do regime geral"
+    ],
+    "correctAnswer": "Atenção redobrada às regras de crédito próprias desse regime, que podem ser diferentes das do regime geral",
+    "explanation": "Setores sujeitos a regimes específicos possuem regras próprias de crédito, que exigem atenção redobrada de quem contrata seus serviços para avaliar corretamente o impacto no custo.",
+    "pacciTip": "Regime específico pede atenção redobrada, tesoro! Cada setor tem sua própria regrinha de crédito."
+  },
+  {
+    "id": "REF-PL-045",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um escritório de contabilidade renovou o estoque de materiais de escritório (papel, tinta de impressora, cartuchos) e o sócio quer confirmar se essas compras agora entram na apuração de crédito.",
+    "question": "Sob a não cumulatividade plena, a compra de materiais de escritório por um escritório de contabilidade gera direito a crédito de IBS/CBS, ampliando o que era permitido no ICMS?",
+    "correctAnswer": true,
+    "explanation": "Correto! Bens de uso e consumo, antes vedados de crédito no ICMS, passam a gerar crédito de IBS/CBS na não cumulatividade plena.",
+    "pacciTip": "Sì, tesoro! Cartucho de impressora agora também ajuda no crédito."
+  },
+  {
+    "id": "REF-PL-046",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista de uma indústria química afirma que, no novo modelo, só os insumos que entram fisicamente no produto final geram direito a crédito de IBS/CBS.",
+    "question": "Apenas os insumos que se incorporam fisicamente ao produto final geram crédito de IBS/CBS no novo modelo?",
+    "correctAnswer": false,
+    "explanation": "Errado! A não cumulatividade plena vai além dos insumos incorporados ao produto: praticamente toda aquisição vinculada à atividade da empresa gera crédito, incluindo bens de uso, consumo e serviços contratados.",
+    "pacciTip": "Não é só o que entra no produto, tesoro! O crédito é bem mais largo que isso."
+  },
+  {
+    "id": "REF-PL-047",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Uma indústria metalúrgica contrata uma empresa especializada para fazer manutenção preventiva regular em seus fornos e máquinas.",
+    "question": "O serviço de manutenção de equipamentos contratado pela indústria gera crédito de IBS/CBS, por estar vinculado à atividade produtiva da empresa?",
+    "correctAnswer": true,
+    "explanation": "Correto! Serviços vinculados à atividade da empresa, como manutenção de equipamentos, se enquadram na ampla base de crédito da não cumulatividade plena.",
+    "pacciTip": "Máquina bem cuidada e crédito também, amico! Manutenção conta."
+  },
+  {
+    "id": "REF-PL-048",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "O departamento de RH de uma empresa comprou um presente de aniversário para um funcionário, como gesto pessoal, sem qualquer relação com a atividade operacional do negócio.",
+    "question": "Essa compra de presente de aniversário, por ser um gesto pessoal sem vínculo com a atividade operacional, gera crédito normal de IBS/CBS?",
+    "correctAnswer": false,
+    "explanation": "Errado! Apesar da ampliação trazida pela não cumulatividade plena, o crédito depende do vínculo da aquisição com a atividade econômica da empresa — despesas de cunho estritamente pessoal ficam fora dessa lógica.",
+    "pacciTip": "Presente de aniversário é carinho, não é crédito, tesoro! Falta o vínculo com o negócio."
+  },
+  {
+    "id": "REF-PL-049",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Uma rede de hotéis reformou os quartos de uma de suas unidades, trocando móveis, colchões e revestimentos, para melhorar a experiência dos hóspedes.",
+    "question": "Os gastos com a reforma dos quartos do hotel, por estarem vinculados à atividade de hospedagem, geram crédito de IBS/CBS na não cumulatividade plena?",
+    "correctAnswer": true,
+    "explanation": "Correto! Despesas vinculadas à estrutura usada na atividade da empresa, como a reforma de quartos de um hotel, se enquadram na ampla base de crédito do novo modelo.",
+    "pacciTip": "Quarto reformado e crédito no bolso, tesoro! Hospedagem também entra na conta."
+  },
+  {
+    "id": "REF-PL-050",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Uma indústria de eletroeletrônicos importou uma máquina de última geração para sua linha de montagem e um colega afirma que bens importados nunca geram crédito de IBS/CBS, apenas os nacionais.",
+    "question": "Bens do ativo imobilizado adquiridos no exterior nunca geram direito a crédito de IBS/CBS, diferentemente dos bens nacionais?",
+    "correctAnswer": false,
+    "explanation": "Errado! O direito a crédito decorre do vínculo do bem com a atividade da empresa e da tributação incidente na operação, não da origem nacional ou importada do bem.",
+    "pacciTip": "Origem do bem não é o que decide o crédito, tesoro! O que importa é o vínculo com o negócio."
+  },
+  {
+    "id": "REF-PL-051",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um gerente de uma loja de calçados acredita que o cálculo por fora do IBS/CBS é apenas uma mudança de nome, sem qualquer efeito real na composição do preço final.",
+    "question": "O cálculo por fora do IBS/CBS é apenas uma mudança de nomenclatura, sem qualquer efeito real na composição do preço final?",
+    "correctAnswer": false,
+    "explanation": "Errado! O cálculo por fora muda de fato a lógica da base tributável, evitando o efeito cascata do 'imposto sobre imposto' presente no cálculo por dentro do ICMS.",
+    "pacciTip": "Não é só nome novo, tesoro! O cálculo por fora muda a conta de verdade."
+  },
+  {
+    "id": "REF-PL-052",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista de precificação de uma indústria de bebidas monta a planilha somando primeiro a margem desejada sobre o custo líquido, e só depois soma o tributo por fora.",
+    "question": "Essa ordem de cálculo — margem sobre o custo líquido primeiro, tributo por fora depois — está alinhada à lógica do novo modelo de tributação?",
+    "correctAnswer": true,
+    "explanation": "Correto! No modelo por fora, o tributo é somado ao preço já formado com a margem desejada, e não misturado ao cálculo da margem em si.",
+    "pacciTip": "Sì! Margem primeiro, tributo por cima depois. Essa é a receita certa."
+  },
+  {
+    "id": "REF-PL-053",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um sócio de um escritório de advocacia afirma que o cálculo por fora do IBS/CBS só se aplica a mercadorias físicas, nunca a honorários de serviços.",
+    "question": "O cálculo do IBS/CBS por fora do preço se aplica apenas a mercadorias físicas, nunca a honorários de serviços prestados?",
+    "correctAnswer": false,
+    "explanation": "Errado! O cálculo por fora se aplica de forma ampla tanto a mercadorias quanto a serviços, incluindo honorários profissionais.",
+    "pacciTip": "Serviço também soma o tributo por fora, amico! A regra não escolhe só mercadoria."
+  },
+  {
+    "id": "REF-PL-054",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista de uma distribuidora de autopeças explica a um novo colega que, no ICMS atual, o valor do tributo de uma etapa pode acabar sendo tributado de novo na etapa seguinte.",
+    "question": "Essa situação descrita — tributo de uma etapa sendo tributado novamente na etapa seguinte — corresponde ao chamado efeito cascata, que a não cumulatividade plena ajuda a reduzir?",
+    "correctAnswer": true,
+    "explanation": "Correto! O efeito cascata ocorre quando o imposto de uma etapa é incluído na base de cálculo da etapa seguinte, sendo tributado novamente. A não cumulatividade plena e o cálculo por fora ajudam a eliminar essa distorção.",
+    "pacciTip": "Sì! Imposto sobre imposto é exatamente o efeito cascata que o novo modelo ataca."
+  },
+  {
+    "id": "REF-PL-055",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um cliente de uma rede de farmácias comentou que, no novo modelo, consegue ver com mais clareza quanto pagou de tributo em cada compra, comparado a antes.",
+    "question": "O cálculo por fora do IBS/CBS tende a tornar o valor do tributo mais visível e destacado para o consumidor, em comparação ao cálculo por dentro do ICMS?",
+    "correctAnswer": true,
+    "explanation": "Correto! Como o tributo é somado de forma explícita ao preço líquido, o cálculo por fora tende a dar mais transparência ao valor pago de tributo.",
+    "pacciTip": "Sì, tesoro! Tributo por fora é tributo mais fácil de enxergar na conta."
+  },
+  {
+    "id": "REF-PL-056",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista de uma indústria de móveis calculou o markup aplicando a margem sobre um valor que já incluía o tributo por fora somado, e não sobre o custo líquido.",
+    "question": "Esse procedimento — aplicar a margem sobre o valor que já inclui o tributo por fora — é a forma correta de preservar a margem líquida real da empresa?",
+    "correctAnswer": false,
+    "explanation": "Errado! Para preservar a margem real, o markup deve ser calculado sobre o custo líquido (já considerando os créditos), e só então o tributo por fora deve ser somado ao preço final.",
+    "pacciTip": "Ordem errada distorce a margem, tesoro! Primeiro o custo líquido, o tributo entra por último."
+  },
+  {
+    "id": "REF-PL-057",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Uma indústria de calçados que exporta a maior parte da produção percebe que seus créditos de IBS/CBS sobre insumos superam consistentemente os débitos das vendas internas.",
+    "question": "Esse padrão de créditos superando débitos é esperado em empresas fortemente exportadoras, já que exportações não geram débito relevante de saída?",
+    "correctAnswer": true,
+    "explanation": "Correto! Empresas fortemente exportadoras tendem a acumular créditos, pois suas vendas ao exterior não geram débito de saída relevante para compensar os créditos das aquisições internas.",
+    "pacciTip": "Sì! Quem exporta muito, acumula crédito. É a regra do jogo, tesoro."
+  },
+  {
+    "id": "REF-PL-058",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um colega de uma siderúrgica afirma que todo crédito de IBS/CBS não utilizado dentro do próprio mês de apuração é automaticamente perdido, sem possibilidade de uso posterior.",
+    "question": "Créditos de IBS/CBS não utilizados no mês são automaticamente perdidos, sem possibilidade de aproveitamento em períodos seguintes ou de ressarcimento?",
+    "correctAnswer": false,
+    "explanation": "Errado! O saldo credor pode ser aproveitado em períodos seguintes ou, quando aplicável, ser objeto de pedido de ressarcimento junto ao Fisco.",
+    "pacciTip": "Crédito não some assim do nada, tesoro! Ele espera ou volta pelo ressarcimento."
+  },
+  {
+    "id": "REF-PL-059",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um contador de uma pequena cooperativa agrícola exportadora acredita que o mecanismo de ressarcimento de créditos acumulados é reservado apenas a grandes multinacionais.",
+    "question": "O mecanismo de ressarcimento de créditos acumulados é reservado apenas a grandes multinacionais, não se aplicando a empresas menores como uma cooperativa agrícola?",
+    "correctAnswer": false,
+    "explanation": "Errado! O direito ao ressarcimento de créditos acumulados não compensados se aplica a qualquer empresa que se enquadre nas condições previstas, independentemente do porte.",
+    "pacciTip": "Tamanho da empresa não é o que decide o ressarcimento, tesoro! A regra vale pra todo mundo que se enquadra."
+  },
+  {
+    "id": "REF-PL-060",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista de uma indústria de celulose está comparando o tempo médio de espera para reaver créditos acumulados no ICMS atual com o que se espera do novo modelo.",
+    "question": "O novo modelo tende a prever prazos mais ágeis para o ressarcimento de créditos acumulados, em comparação ao ICMS atual?",
+    "correctAnswer": true,
+    "explanation": "Correto! Um dos avanços do novo modelo é justamente a previsão de ressarcimento mais rápido de créditos acumulados, algo criticado como lento no sistema atual.",
+    "pacciTip": "Sì, tesoro! Ressarcimento mais rápido é um dos ganhos do novo modelo."
+  },
+  {
+    "id": "REF-PL-061",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Uma fabricante de máquinas agrícolas, voltada majoritariamente ao mercado interno, apurou saldo credor de IBS/CBS após um mês de forte investimento em novos equipamentos de produção.",
+    "question": "Esse saldo credor pontual, gerado por um mês de alto investimento, só pode ocorrer em empresas exportadoras, nunca em empresas voltadas ao mercado interno?",
+    "correctAnswer": false,
+    "explanation": "Errado! Qualquer empresa pode ter saldo credor temporário quando os créditos do período superam os débitos, como em meses de investimento elevado, independente de vender para o mercado interno ou externo.",
+    "pacciTip": "Saldo credor não é exclusividade de exportador, tesoro! Investimento forte também pode gerar sobra."
+  },
+  {
+    "id": "REF-PL-062",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um colega da tesouraria de uma indústria de brinquedos acredita que o ressarcimento de créditos acumulados de IBS/CBS acontece automaticamente, sem que a empresa precise fazer qualquer solicitação ao Fisco.",
+    "question": "O ressarcimento de créditos acumulados ocorre automaticamente, sem que a empresa precise formalizar qualquer pedido junto ao Fisco?",
+    "correctAnswer": false,
+    "explanation": "Errado! O ressarcimento depende de solicitação formal da empresa ao Fisco, ainda que o novo modelo preveja prazos mais ágeis de análise e devolução.",
+    "pacciTip": "Ressarcimento não cai do céu, tesoro! Precisa pedir direitinho pro Fisco."
+  },
+  {
+    "id": "REF-PL-063",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "O RH de uma empresa está negociando um plano odontológico corporativo para os funcionários e o financeiro pergunta se o crédito dessa contratação segue exatamente as mesmas regras de uma compra de material de escritório.",
+    "question": "O crédito de IBS/CBS sobre a contratação de um plano odontológico corporativo segue exatamente as mesmas regras de uma compra comum do regime geral, sem qualquer diferença?",
+    "correctAnswer": false,
+    "explanation": "Errado! Planos de saúde e odontológicos estão sujeitos a regime específico do setor de saúde suplementar, com regras próprias de apuração e crédito, diferentes do regime geral.",
+    "pacciTip": "Plano odontológico também tem regra especial, tesoro! Não confunde com compra comum."
+  },
+  {
+    "id": "REF-PL-064",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista fiscal de uma distribuidora de combustíveis confirma com a equipe que o setor está sujeito a um regime de apuração diferente do regime geral aplicado à maioria das mercadorias.",
+    "question": "O setor de combustíveis está sujeito a um regime específico de apuração e crédito, distinto do regime geral aplicado à maioria das mercadorias?",
+    "correctAnswer": true,
+    "explanation": "Correto! Combustíveis estão entre os setores com regime específico de tributação, com regras próprias de apuração e crédito.",
+    "pacciTip": "Sì! Combustível sempre teve regrinha diferente, tesoro."
+  },
+  {
+    "id": "REF-PL-065",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um vendedor de uma corretora de seguros afirma a um cliente empresarial que o crédito de IBS/CBS sobre a apólice contratada é idêntico ao de qualquer compra de mercadoria do regime geral.",
+    "question": "O crédito de IBS/CBS sobre uma apólice de seguro empresarial é idêntico ao de uma compra de mercadoria comum do regime geral?",
+    "correctAnswer": false,
+    "explanation": "Errado! O setor de seguros está sujeito a regime específico, com regras próprias de apuração e crédito, que podem diferir do regime geral aplicável a mercadorias.",
+    "pacciTip": "Seguro tem regra própria, tesoro! Não é igual à prateleira do mercado."
+  },
+  {
+    "id": "REF-PL-066",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista de uma incorporadora imobiliária pesquisa se as operações com bens imóveis realmente possuem tratamento tributário diferenciado dentro do novo modelo.",
+    "question": "Operações com bens imóveis estão sujeitas a regime específico de tributação, com regras próprias de apuração diferentes do regime geral?",
+    "correctAnswer": true,
+    "explanation": "Correto! Bens imóveis estão entre os setores com regime específico previsto no novo modelo, com regras próprias de apuração e crédito.",
+    "pacciTip": "Sì! Imóvel também tem seu regime especial, tesoro."
+  },
+  {
+    "id": "REF-PL-067",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Uma empresa que tomou um financiamento bancário para expandir a produção acredita que os encargos financeiros pagos ao banco geram o mesmo volume de crédito que a compra de uma matéria-prima industrial.",
+    "question": "Os encargos de uma operação financeira, como juros de financiamento bancário, geram o mesmo volume de crédito de IBS/CBS que a compra de uma matéria-prima industrial do regime geral?",
+    "correctAnswer": false,
+    "explanation": "Errado! O setor financeiro está sujeito a regime específico, com regras próprias de crédito que costumam ser mais restritivas do que as do regime geral.",
+    "pacciTip": "Juro de banco não segue a régua do regime geral, tesoro! Regime financeiro é mais restrito."
+  },
+  {
+    "id": "REF-PL-068",
+    "level": "analista_pleno",
+    "type": "true_false",
+    "scenario": "Um analista de compliance de uma agência de marketing esportivo confirma internamente que contratos com empresas de apostas esportivas seguem um regime tributário diferenciado dos demais fornecedores.",
+    "question": "Contratos com empresas de apostas esportivas estão sujeitos a um regime tributário diferenciado, com regras próprias que podem impactar o crédito do contratante?",
+    "correctAnswer": true,
+    "explanation": "Correto! O setor de apostas esportivas está entre os que possuem regime específico, com regras próprias que podem impactar o crédito de quem contrata seus serviços.",
+    "pacciTip": "Sì, tesoro! Aposta esportiva também joga com regras de crédito próprias."
+  },
+  {
+    "id": "REF-PL-069",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma indústria automotiva adquiriu uma nova linha de máquinas para a fábrica e precisa organizar o fluxo de apropriação do crédito de IBS/CBS sobre esse ativo imobilizado.",
+    "question": "Ordene o fluxo correto dessa apropriação de crédito:",
+    "options": [
+      "Apropriar o crédito de forma ágil, sem o parcelamento longo do modelo atual",
+      "Registrar a aquisição da máquina no ativo imobilizado",
+      "Confirmar o vínculo do bem com a atividade produtiva da empresa",
+      "Lançar o crédito de IBS/CBS na apuração do período"
+    ],
+    "correctAnswer": [
+      "Registrar a aquisição da máquina no ativo imobilizado",
+      "Confirmar o vínculo do bem com a atividade produtiva da empresa",
+      "Lançar o crédito de IBS/CBS na apuração do período",
+      "Apropriar o crédito de forma ágil, sem o parcelamento longo do modelo atual"
+    ],
+    "explanation": "Primeiro registra-se a aquisição, confirma-se o vínculo com a atividade, lança-se o crédito na apuração e, por fim, aproveita-se o crédito de forma ágil.",
+    "pacciTip": "Registra, confirma, lança, aproveita, tesoro! Assim o crédito do ativo não trava."
+  },
+  {
+    "id": "REF-PL-070",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Um escritório de consultoria contratou uma empresa terceirizada de limpeza e o financeiro precisa organizar o tratamento do crédito dessa contratação.",
+    "question": "Ordene o fluxo correto do tratamento desse crédito:",
+    "options": [
+      "Considerar o crédito na apuração do período",
+      "Verificar se o serviço está vinculado à atividade da empresa",
+      "Contratar o serviço de limpeza terceirizado",
+      "Registrar a nota fiscal do serviço no sistema"
+    ],
+    "correctAnswer": [
+      "Contratar o serviço de limpeza terceirizado",
+      "Registrar a nota fiscal do serviço no sistema",
+      "Verificar se o serviço está vinculado à atividade da empresa",
+      "Considerar o crédito na apuração do período"
+    ],
+    "explanation": "Primeiro contrata-se o serviço, registra-se a nota fiscal, verifica-se o vínculo com a atividade e, então, considera-se o crédito na apuração.",
+    "pacciTip": "Contrata, registra, verifica, aproveita, tesoro! Serviço de limpeza também segue esse caminho."
+  },
+  {
+    "id": "REF-PL-071",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "O financeiro de uma concessionária recebeu a nota de compra de um veículo destinado ao uso pessoal do sócio-diretor e precisa avaliar corretamente se há direito a crédito.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Concluir pela ausência de direito a crédito de IBS/CBS",
+      "Registrar a aquisição do veículo no sistema contábil",
+      "Verificar se há vínculo entre o bem e a atividade econômica da empresa",
+      "Identificar que o uso do bem é exclusivamente pessoal"
+    ],
+    "correctAnswer": [
+      "Registrar a aquisição do veículo no sistema contábil",
+      "Identificar que o uso do bem é exclusivamente pessoal",
+      "Verificar se há vínculo entre o bem e a atividade econômica da empresa",
+      "Concluir pela ausência de direito a crédito de IBS/CBS"
+    ],
+    "explanation": "Registra-se a compra, identifica-se o uso pessoal, verifica-se a ausência de vínculo com a atividade e conclui-se pela impossibilidade de crédito.",
+    "pacciTip": "Sem vínculo com o negócio, sem crédito, tesoro! Essa é a ordem da lógica."
+  },
+  {
+    "id": "REF-PL-072",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Um e-commerce de eletrônicos compra grandes lotes de material de embalagem para envio dos produtos vendidos e precisa organizar o tratamento do crédito dessa compra.",
+    "question": "Ordene o fluxo correto desse tratamento:",
+    "options": [
+      "Considerar o valor do crédito no custo líquido dos produtos vendidos",
+      "Comprar os materiais de embalagem junto ao fornecedor",
+      "Lançar o crédito de IBS/CBS na apuração do período",
+      "Confirmar o vínculo da embalagem com a atividade de venda da empresa"
+    ],
+    "correctAnswer": [
+      "Comprar os materiais de embalagem junto ao fornecedor",
+      "Confirmar o vínculo da embalagem com a atividade de venda da empresa",
+      "Lançar o crédito de IBS/CBS na apuração do período",
+      "Considerar o valor do crédito no custo líquido dos produtos vendidos"
+    ],
+    "explanation": "Primeiro compra-se o material, confirma-se o vínculo com a atividade, lança-se o crédito e, por fim, considera-se seu efeito no custo líquido.",
+    "pacciTip": "Compra, confirma, lança, considera, tesoro! Embalagem também tem seu fluxo de crédito."
+  },
+  {
+    "id": "REF-PL-073",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma rede de petshops contratou uma empreiteira para reformar uma de suas lojas e precisa organizar corretamente o crédito dessa despesa.",
+    "question": "Ordene o fluxo correto desse processo:",
+    "options": [
+      "Lançar o crédito de IBS/CBS referente ao serviço na apuração",
+      "Contratar a empreiteira para o serviço de reforma",
+      "Confirmar que a reforma está vinculada ao estabelecimento da empresa",
+      "Receber a nota fiscal do serviço prestado"
+    ],
+    "correctAnswer": [
+      "Contratar a empreiteira para o serviço de reforma",
+      "Receber a nota fiscal do serviço prestado",
+      "Confirmar que a reforma está vinculada ao estabelecimento da empresa",
+      "Lançar o crédito de IBS/CBS referente ao serviço na apuração"
+    ],
+    "explanation": "Contrata-se o serviço, recebe-se a nota fiscal, confirma-se o vínculo com o estabelecimento e lança-se o crédito na apuração.",
+    "pacciTip": "Contrata, recebe nota, confirma vínculo, lança crédito, tesoro! Reforma de loja segue essa trilha."
+  },
+  {
+    "id": "REF-PL-074",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma indústria farmacêutica fez uma compra combinada de matérias-primas para produção e materiais de uso do laboratório, e a equipe fiscal precisa organizar a apuração de crédito dessas aquisições.",
+    "question": "Ordene o fluxo correto dessa apuração:",
+    "options": [
+      "Somar os créditos das matérias-primas e dos materiais de uso na apuração do período",
+      "Classificar cada item entre insumo de produção e bem de uso e consumo",
+      "Registrar a nota fiscal de compra no sistema",
+      "Aplicar o crédito no custo líquido dos produtos fabricados"
+    ],
+    "correctAnswer": [
+      "Registrar a nota fiscal de compra no sistema",
+      "Classificar cada item entre insumo de produção e bem de uso e consumo",
+      "Somar os créditos das matérias-primas e dos materiais de uso na apuração do período",
+      "Aplicar o crédito no custo líquido dos produtos fabricados"
+    ],
+    "explanation": "Registra-se a nota, classifica-se cada item, soma-se o crédito na apuração e aplica-se seu efeito no custo líquido dos produtos.",
+    "pacciTip": "Registra, classifica, soma, aplica, tesoro! Insumo e bem de uso andam juntos na não cumulatividade plena."
+  },
+  {
+    "id": "REF-PL-075",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma loja de roupas está montando a planilha de formação de preço de uma nova coleção, já considerando que o IBS/CBS será somado por fora ao final do cálculo.",
+    "question": "Ordene o fluxo correto dessa formação de preço:",
+    "options": [
+      "Somar o tributo por fora ao preço com margem já formado",
+      "Levantar o custo de aquisição das peças, líquido de créditos",
+      "Definir a margem de lucro desejada sobre o custo líquido",
+      "Chegar ao preço final de venda ao consumidor"
+    ],
+    "correctAnswer": [
+      "Levantar o custo de aquisição das peças, líquido de créditos",
+      "Definir a margem de lucro desejada sobre o custo líquido",
+      "Somar o tributo por fora ao preço com margem já formado",
+      "Chegar ao preço final de venda ao consumidor"
+    ],
+    "explanation": "Primeiro se levanta o custo líquido, depois se define a margem, soma-se o tributo por fora e chega-se ao preço final.",
+    "pacciTip": "Custo líquido, margem, tributo por fora, preço final, tesoro! Essa é a receita da precificação."
+  },
+  {
+    "id": "REF-PL-076",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Um analista de uma indústria de alimentos está demonstrando para a diretoria, passo a passo, como o cálculo por fora evita o efeito cascata presente no cálculo por dentro do ICMS.",
+    "question": "Ordene o raciocínio correto dessa demonstração:",
+    "options": [
+      "Concluir que o cálculo por fora evita esse acúmulo de tributo sobre tributo",
+      "Mostrar que, no cálculo por dentro, o tributo integra a própria base de cálculo",
+      "Explicar que essa base inflada pode gerar cobrança de tributo sobre tributo",
+      "Apresentar como o cálculo por fora soma o tributo após o preço líquido"
+    ],
+    "correctAnswer": [
+      "Mostrar que, no cálculo por dentro, o tributo integra a própria base de cálculo",
+      "Explicar que essa base inflada pode gerar cobrança de tributo sobre tributo",
+      "Apresentar como o cálculo por fora soma o tributo após o preço líquido",
+      "Concluir que o cálculo por fora evita esse acúmulo de tributo sobre tributo"
+    ],
+    "explanation": "A demonstração parte do problema do cálculo por dentro, mostra o efeito cascata, apresenta a alternativa por fora e conclui com a vantagem do novo modelo.",
+    "pacciTip": "Primeiro o problema, depois a solução, tesoro! Assim a diretoria entende o cálculo por fora."
+  },
+  {
+    "id": "REF-PL-077",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma farmacêutica está formando o preço de um novo medicamento, considerando o custo de produção, os créditos recuperáveis e a margem desejada antes de somar o tributo por fora.",
+    "question": "Ordene o fluxo correto dessa formação de preço:",
+    "options": [
+      "Somar o tributo por fora ao preço com margem definida",
+      "Aplicar a margem desejada sobre o custo líquido de créditos",
+      "Calcular o custo líquido de produção descontando os créditos recuperáveis",
+      "Levantar o custo bruto de produção do medicamento"
+    ],
+    "correctAnswer": [
+      "Levantar o custo bruto de produção do medicamento",
+      "Calcular o custo líquido de produção descontando os créditos recuperáveis",
+      "Aplicar a margem desejada sobre o custo líquido de créditos",
+      "Somar o tributo por fora ao preço com margem definida"
+    ],
+    "explanation": "Parte-se do custo bruto, desconta-se o crédito para chegar ao custo líquido, aplica-se a margem e, por fim, soma-se o tributo por fora.",
+    "pacciTip": "Bruto, líquido, margem, tributo por fora, tesoro! Remédio também segue essa receita."
+  },
+  {
+    "id": "REF-PL-078",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma empresa de software por assinatura está revisando o processo de precificação de um novo plano, aplicando a mesma lógica do cálculo por fora usada para produtos físicos.",
+    "question": "Ordene o fluxo correto dessa precificação:",
+    "options": [
+      "Definir o valor final da assinatura, já com o tributo somado por fora",
+      "Levantar os custos de operação e manutenção do serviço",
+      "Somar o tributo por fora ao preço com margem já definida",
+      "Estabelecer a margem desejada sobre o custo líquido do serviço"
+    ],
+    "correctAnswer": [
+      "Levantar os custos de operação e manutenção do serviço",
+      "Estabelecer a margem desejada sobre o custo líquido do serviço",
+      "Somar o tributo por fora ao preço com margem já definida",
+      "Definir o valor final da assinatura, já com o tributo somado por fora"
+    ],
+    "explanation": "Levanta-se o custo do serviço, define-se a margem, soma-se o tributo por fora e chega-se ao valor final da assinatura.",
+    "pacciTip": "Serviço digital segue o mesmo caminho, tesoro! Custo, margem, tributo por fora, preço final."
+  },
+  {
+    "id": "REF-PL-079",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "O time comercial de uma distribuidora de bebidas está revisando o processo de definição do markup, para garantir que o tributo por fora não distorça a margem real do negócio.",
+    "question": "Ordene o fluxo correto dessa revisão:",
+    "options": [
+      "Somar o tributo por fora somente após a margem estar definida",
+      "Confirmar que a margem real não foi distorcida pelo tributo",
+      "Apurar o custo líquido de créditos de cada produto",
+      "Calcular o markup padrão sobre esse custo líquido"
+    ],
+    "correctAnswer": [
+      "Apurar o custo líquido de créditos de cada produto",
+      "Calcular o markup padrão sobre esse custo líquido",
+      "Somar o tributo por fora somente após a margem estar definida",
+      "Confirmar que a margem real não foi distorcida pelo tributo"
+    ],
+    "explanation": "Apura-se o custo líquido, calcula-se o markup sobre ele, soma-se o tributo por fora depois e confirma-se que a margem não foi distorcida.",
+    "pacciTip": "Custo líquido primeiro, tributo por fora por último, tesoro! Assim a margem fica limpinha."
+  },
+  {
+    "id": "REF-PL-080",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Um gerente de loja de material de construção está preparando um treinamento para os vendedores explicarem aos clientes por que o tributo aparece somado de forma visível no preço final.",
+    "question": "Ordene o roteiro correto desse treinamento:",
+    "options": [
+      "Concluir que o cliente consegue ver com clareza o valor do tributo pago",
+      "Explicar que, no ICMS atual, o tributo fica embutido dentro do próprio preço",
+      "Mostrar que o tributo é somado de forma destacada ao preço líquido",
+      "Apresentar o conceito de cálculo por fora do IBS/CBS"
+    ],
+    "correctAnswer": [
+      "Explicar que, no ICMS atual, o tributo fica embutido dentro do próprio preço",
+      "Apresentar o conceito de cálculo por fora do IBS/CBS",
+      "Mostrar que o tributo é somado de forma destacada ao preço líquido",
+      "Concluir que o cliente consegue ver com clareza o valor do tributo pago"
+    ],
+    "explanation": "O roteiro parte do modelo atual, apresenta o novo conceito, mostra como o tributo é somado e conclui com o ganho de transparência para o cliente.",
+    "pacciTip": "Do jeito antigo pro jeito novo, tesoro! Assim o vendedor explica com clareza pro cliente."
+  },
+  {
+    "id": "REF-PL-081",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma indústria têxtil que exporta a maior parte da produção está estruturando o ciclo mensal de apuração e pedido de ressarcimento dos créditos acumulados de IBS/CBS.",
+    "question": "Ordene o ciclo correto desse processo:",
+    "options": [
+      "Formalizar o pedido de ressarcimento junto ao Fisco",
+      "Apurar os créditos e débitos de IBS/CBS do período",
+      "Confirmar a existência de saldo credor após a compensação possível",
+      "Compensar os créditos com os débitos das vendas internas"
+    ],
+    "correctAnswer": [
+      "Apurar os créditos e débitos de IBS/CBS do período",
+      "Compensar os créditos com os débitos das vendas internas",
+      "Confirmar a existência de saldo credor após a compensação possível",
+      "Formalizar o pedido de ressarcimento junto ao Fisco"
+    ],
+    "explanation": "Apura-se créditos e débitos, compensa-se o que for possível, confirma-se o saldo remanescente e formaliza-se o pedido de ressarcimento.",
+    "pacciTip": "Apura, compensa, confirma, pede, tesoro! O ciclo do exportador não pode travar."
+  },
+  {
+    "id": "REF-PL-082",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma mineradora que vende quase toda a produção ao exterior está montando uma rotina interna para não deixar acumular créditos de IBS/CBS sem solicitar o ressarcimento periodicamente.",
+    "question": "Ordene o fluxo correto dessa rotina interna:",
+    "options": [
+      "Enviar a documentação exigida ao Fisco para análise do pedido",
+      "Levantar o saldo credor acumulado do período",
+      "Acompanhar o retorno do Fisco sobre o pedido de ressarcimento",
+      "Preparar o pedido formal de ressarcimento"
+    ],
+    "correctAnswer": [
+      "Levantar o saldo credor acumulado do período",
+      "Preparar o pedido formal de ressarcimento",
+      "Enviar a documentação exigida ao Fisco para análise do pedido",
+      "Acompanhar o retorno do Fisco sobre o pedido de ressarcimento"
+    ],
+    "explanation": "Levanta-se o saldo, prepara-se o pedido, envia-se a documentação exigida e acompanha-se o retorno do Fisco.",
+    "pacciTip": "Levanta, prepara, envia, acompanha, tesoro! Rotina de ressarcimento não pode ficar solta."
+  },
+  {
+    "id": "REF-PL-083",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma fábrica de autopeças, voltada ao mercado interno, apurou saldo credor de IBS/CBS após investir pesado em novas máquinas em um único mês e precisa decidir o tratamento desse saldo.",
+    "question": "Ordene o fluxo correto do tratamento desse saldo credor pontual:",
+    "options": [
+      "Verificar se o saldo remanescente pode ser objeto de ressarcimento",
+      "Apurar o crédito elevado gerado pela compra das máquinas no mês",
+      "Tentar compensar o crédito com os débitos das vendas do período",
+      "Identificar que o crédito do mês superou os débitos apurados"
+    ],
+    "correctAnswer": [
+      "Apurar o crédito elevado gerado pela compra das máquinas no mês",
+      "Tentar compensar o crédito com os débitos das vendas do período",
+      "Identificar que o crédito do mês superou os débitos apurados",
+      "Verificar se o saldo remanescente pode ser objeto de ressarcimento"
+    ],
+    "explanation": "Apura-se o crédito elevado, tenta-se compensar com os débitos, identifica-se o excedente e verifica-se a possibilidade de ressarcimento do saldo.",
+    "pacciTip": "Compra grande gera crédito grande, tesoro! O fluxo confirma se sobra pra ressarcir."
+  },
+  {
+    "id": "REF-PL-084",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma trading company dedicada quase exclusivamente à exportação está desenhando o fluxo interno de acompanhamento de créditos acumulados de IBS/CBS.",
+    "question": "Ordene o fluxo correto desse acompanhamento:",
+    "options": [
+      "Consolidar o saldo credor acumulado nas operações do mês",
+      "Registrar os créditos de cada aquisição vinculada à exportação",
+      "Solicitar o ressarcimento do saldo consolidado ao Fisco",
+      "Confirmar a ausência de débito relevante nas vendas ao exterior"
+    ],
+    "correctAnswer": [
+      "Registrar os créditos de cada aquisição vinculada à exportação",
+      "Confirmar a ausência de débito relevante nas vendas ao exterior",
+      "Consolidar o saldo credor acumulado nas operações do mês",
+      "Solicitar o ressarcimento do saldo consolidado ao Fisco"
+    ],
+    "explanation": "Registram-se os créditos, confirma-se a ausência de débito relevante nas exportações, consolida-se o saldo e solicita-se o ressarcimento.",
+    "pacciTip": "Registra, confirma, consolida, pede, tesoro! Trading exportadora vive desse fluxo."
+  },
+  {
+    "id": "REF-PL-085",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma indústria de papel e celulose enfrenta meses de sazonalidade em que os créditos sobre insumos superam os débitos das vendas, exigindo um fluxo claro de tratamento do saldo.",
+    "question": "Ordene o fluxo correto desse tratamento sazonal:",
+    "options": [
+      "Manter o saldo remanescente para compensação em meses futuros ou ressarcimento",
+      "Identificar os meses de maior volume de compra de insumos",
+      "Comparar os créditos apurados com os débitos das vendas do período",
+      "Apurar o volume de crédito gerado nesses meses"
+    ],
+    "correctAnswer": [
+      "Identificar os meses de maior volume de compra de insumos",
+      "Apurar o volume de crédito gerado nesses meses",
+      "Comparar os créditos apurados com os débitos das vendas do período",
+      "Manter o saldo remanescente para compensação em meses futuros ou ressarcimento"
+    ],
+    "explanation": "Identificam-se os meses críticos, apura-se o crédito gerado, compara-se com os débitos e trata-se o saldo remanescente conforme o caso.",
+    "pacciTip": "Sazonalidade pede rotina firme, tesoro! Identifica, apura, compara, resolve."
+  },
+  {
+    "id": "REF-PL-086",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "A tesouraria de uma indústria de brinquedos precisa organizar, passo a passo, como formalizar corretamente um pedido de ressarcimento de créditos acumulados junto ao Fisco.",
+    "question": "Ordene o fluxo correto dessa formalização:",
+    "options": [
+      "Reunir a documentação comprobatória dos créditos acumulados",
+      "Protocolar o pedido de ressarcimento junto ao Fisco",
+      "Confirmar o valor do saldo credor não compensado",
+      "Acompanhar a análise do pedido até a devolução do valor"
+    ],
+    "correctAnswer": [
+      "Confirmar o valor do saldo credor não compensado",
+      "Reunir a documentação comprobatória dos créditos acumulados",
+      "Protocolar o pedido de ressarcimento junto ao Fisco",
+      "Acompanhar a análise do pedido até a devolução do valor"
+    ],
+    "explanation": "Confirma-se o saldo, reúne-se a documentação, protocola-se o pedido e acompanha-se a análise até a devolução do valor.",
+    "pacciTip": "Confirma, reúne, protocola, acompanha, tesoro! Assim o ressarcimento não trava no meio do caminho."
+  },
+  {
+    "id": "REF-PL-087",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "O RH de uma empresa está fechando a contratação de um plano de saúde corporativo e o financeiro precisa organizar a avaliação do impacto de crédito dessa operação.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Ajustar a previsão de custo do benefício considerando o crédito diferenciado",
+      "Calcular o percentual de crédito aplicável conforme o regime específico de saúde",
+      "Identificar que a operadora de saúde está sujeita a regime específico",
+      "Receber a proposta comercial da operadora de plano de saúde"
+    ],
+    "correctAnswer": [
+      "Receber a proposta comercial da operadora de plano de saúde",
+      "Identificar que a operadora de saúde está sujeita a regime específico",
+      "Calcular o percentual de crédito aplicável conforme o regime específico de saúde",
+      "Ajustar a previsão de custo do benefício considerando o crédito diferenciado"
+    ],
+    "explanation": "Recebe-se a proposta, identifica-se o regime específico aplicável, calcula-se o crédito real e ajusta-se a previsão de custo do benefício.",
+    "pacciTip": "Recebe, identifica, calcula, ajusta, tesoro! Plano de saúde sempre pede essa checagem."
+  },
+  {
+    "id": "REF-PL-088",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma transportadora de cargas está fechando um contrato de abastecimento com um grande posto de combustíveis e o setor fiscal precisa avaliar o impacto de crédito dessa relação comercial.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Reavaliar o custo efetivo do abastecimento para a frota",
+      "Identificar que o fornecedor está sujeito ao regime específico de combustíveis",
+      "Negociar o contrato de fornecimento com o posto de combustíveis",
+      "Calcular o crédito de IBS/CBS aplicável segundo esse regime"
+    ],
+    "correctAnswer": [
+      "Negociar o contrato de fornecimento com o posto de combustíveis",
+      "Identificar que o fornecedor está sujeito ao regime específico de combustíveis",
+      "Calcular o crédito de IBS/CBS aplicável segundo esse regime",
+      "Reavaliar o custo efetivo do abastecimento para a frota"
+    ],
+    "explanation": "Negocia-se o contrato, identifica-se o regime específico do fornecedor, calcula-se o crédito aplicável e reavalia-se o custo efetivo da operação.",
+    "pacciTip": "Negocia, identifica, calcula, reavalia, tesoro! Combustível sempre pede essa conta fina."
+  },
+  {
+    "id": "REF-PL-089",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma indústria está fechando uma apólice de seguro empresarial para o parque fabril e o financeiro precisa organizar a análise do impacto de crédito dessa contratação.",
+    "question": "Ordene o fluxo correto dessa análise:",
+    "options": [
+      "Ajustar o orçamento anual considerando o crédito efetivo esperado",
+      "Solicitar a cotação da apólice junto à seguradora",
+      "Calcular o crédito de IBS/CBS conforme as regras desse regime",
+      "Verificar que o setor de seguros segue regime específico de tributação"
+    ],
+    "correctAnswer": [
+      "Solicitar a cotação da apólice junto à seguradora",
+      "Verificar que o setor de seguros segue regime específico de tributação",
+      "Calcular o crédito de IBS/CBS conforme as regras desse regime",
+      "Ajustar o orçamento anual considerando o crédito efetivo esperado"
+    ],
+    "explanation": "Solicita-se a cotação, verifica-se o regime específico do setor, calcula-se o crédito conforme as regras próprias e ajusta-se o orçamento com base nesse crédito.",
+    "pacciTip": "Cotação, regime, cálculo, orçamento, tesoro! Seguro empresarial pede esses quatro passos."
+  },
+  {
+    "id": "REF-PL-090",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma construtora está avaliando a compra de um terreno para erguer sua nova sede administrativa e precisa organizar a análise do crédito de IBS/CBS dessa operação imobiliária.",
+    "question": "Ordene o fluxo correto dessa análise:",
+    "options": [
+      "Ajustar o planejamento de custo da nova sede com base no crédito apurado",
+      "Identificar que a compra do terreno segue regime específico de bens imóveis",
+      "Negociar a compra do terreno com o proprietário",
+      "Apurar o crédito de IBS/CBS conforme as regras desse regime específico"
+    ],
+    "correctAnswer": [
+      "Negociar a compra do terreno com o proprietário",
+      "Identificar que a compra do terreno segue regime específico de bens imóveis",
+      "Apurar o crédito de IBS/CBS conforme as regras desse regime específico",
+      "Ajustar o planejamento de custo da nova sede com base no crédito apurado"
+    ],
+    "explanation": "Negocia-se a compra, identifica-se o regime específico aplicável, apura-se o crédito conforme suas regras e ajusta-se o planejamento de custo da obra.",
+    "pacciTip": "Negocia, identifica, apura, ajusta, tesoro! Imóvel também segue seu próprio fluxo."
+  },
+  {
+    "id": "REF-PL-091",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma fintech tomou um empréstimo bancário para reforçar o capital de giro e a controladoria precisa organizar a avaliação do impacto de crédito dessa operação financeira.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Registrar os encargos financeiros pagos ao banco no período",
+      "Reavaliar o custo efetivo do capital captado",
+      "Verificar as regras de crédito aplicáveis ao regime específico financeiro",
+      "Calcular o crédito de IBS/CBS restrito sobre esses encargos"
+    ],
+    "correctAnswer": [
+      "Registrar os encargos financeiros pagos ao banco no período",
+      "Verificar as regras de crédito aplicáveis ao regime específico financeiro",
+      "Calcular o crédito de IBS/CBS restrito sobre esses encargos",
+      "Reavaliar o custo efetivo do capital captado"
+    ],
+    "explanation": "Registram-se os encargos, verificam-se as regras do regime financeiro, calcula-se o crédito restrito aplicável e reavalia-se o custo efetivo do capital.",
+    "pacciTip": "Registra, verifica, calcula, reavalia, tesoro! Empréstimo bancário também tem sua trilha."
+  },
+  {
+    "id": "REF-PL-092",
+    "level": "analista_pleno",
+    "type": "ordering",
+    "scenario": "Uma agência de publicidade fechou uma cota de patrocínio com uma empresa de apostas esportivas e o financeiro precisa organizar a avaliação do impacto de crédito desse contrato.",
+    "question": "Ordene o fluxo correto dessa avaliação:",
+    "options": [
+      "Ajustar a proposta comercial considerando o crédito diferenciado esperado",
+      "Identificar que a empresa de apostas segue regime tributário específico",
+      "Assinar o contrato de patrocínio com a empresa de apostas",
+      "Calcular o crédito de IBS/CBS conforme as regras próprias desse regime"
+    ],
+    "correctAnswer": [
+      "Assinar o contrato de patrocínio com a empresa de apostas",
+      "Identificar que a empresa de apostas segue regime tributário específico",
+      "Calcular o crédito de IBS/CBS conforme as regras próprias desse regime",
+      "Ajustar a proposta comercial considerando o crédito diferenciado esperado"
+    ],
+    "explanation": "Assina-se o contrato, identifica-se o regime específico aplicável, calcula-se o crédito conforme suas regras e ajusta-se a proposta comercial.",
+    "pacciTip": "Assina, identifica, calcula, ajusta, tesoro! Regime específico pede sempre esse cuidado."
+  },
+  {
+    "id": "REF-PL-093",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual interno de crédito tributário de uma indústria automotiva, há uma frase incompleta sobre bens do ativo imobilizado.",
+    "question": "No novo modelo, o crédito sobre bens do ativo ___ tende a ser apropriado de forma mais ágil, sem o parcelamento longo do ICMS atual.",
+    "options": [
+      "imobilizado",
+      "circulante",
+      "intangível",
+      "financeiro"
+    ],
+    "correctAnswer": "imobilizado",
+    "explanation": "O ativo imobilizado é a categoria de bens (máquinas, equipamentos) cujo crédito passa a ser apropriado de forma mais ágil no novo modelo.",
+    "pacciTip": "Imobilizado é a palavra certa, tesoro! Máquina também entra na conta do crédito."
+  },
+  {
+    "id": "REF-PL-094",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No treinamento de novos analistas de um escritório de consultoria, há uma frase incompleta sobre o alcance do crédito na não cumulatividade plena.",
+    "question": "A não cumulatividade plena garante crédito para praticamente toda aquisição ___ à atividade da empresa, incluindo serviços contratados.",
+    "options": [
+      "vinculada",
+      "proibida",
+      "isenta",
+      "estrangeira"
+    ],
+    "correctAnswer": "vinculada",
+    "explanation": "O critério central é o vínculo da aquisição com a atividade econômica da empresa, e não o tipo específico de bem ou serviço.",
+    "pacciTip": "Vinculada é a palavra-chave, tesoro! O que importa é a ligação com o negócio."
+  },
+  {
+    "id": "REF-PL-095",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No relatório de auditoria interna de uma concessionária, há uma frase incompleta sobre bens de uso estritamente pessoal dos sócios.",
+    "question": "Bens adquiridos para uso estritamente ___ dos sócios, sem relação com a atividade da empresa, não geram direito a crédito de IBS/CBS.",
+    "options": [
+      "pessoal",
+      "operacional",
+      "produtivo",
+      "comercial"
+    ],
+    "correctAnswer": "pessoal",
+    "explanation": "A exceção à ampla base de crédito ocorre justamente quando o bem tem uso estritamente pessoal, sem vínculo com a atividade econômica.",
+    "pacciTip": "Pessoal é a exceção, tesoro! Sem vínculo com o negócio, sem crédito."
+  },
+  {
+    "id": "REF-PL-096",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No procedimento fiscal de uma gráfica industrial, há uma frase incompleta sobre despesas com ações de marketing.",
+    "question": "Despesas com brindes e ações de ___ vinculadas à atividade comercial da empresa geram direito a crédito de IBS/CBS.",
+    "options": [
+      "marketing",
+      "lazer",
+      "viagem",
+      "doação"
+    ],
+    "correctAnswer": "marketing",
+    "explanation": "Ações de marketing vinculadas à atividade comercial da empresa se enquadram na ampla base de crédito da não cumulatividade plena.",
+    "pacciTip": "Marketing conta como crédito, tesoro! Desde que ligado ao negócio, é claro."
+  },
+  {
+    "id": "REF-PL-097",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual de compras de um e-commerce de eletrônicos, há uma frase incompleta sobre materiais usados no envio de produtos.",
+    "question": "Materiais de ___ usados para envio dos produtos vendidos geram crédito de IBS/CBS, por estarem vinculados à atividade da empresa.",
+    "options": [
+      "embalagem",
+      "decoração",
+      "escritório apenas",
+      "manutenção veicular"
+    ],
+    "correctAnswer": "embalagem",
+    "explanation": "Materiais de embalagem usados na operação de venda são aquisições vinculadas à atividade da empresa, gerando crédito na não cumulatividade plena.",
+    "pacciTip": "Embalagem também carrega crédito, tesoro! Não esquece dela na conta."
+  },
+  {
+    "id": "REF-PL-098",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No plano de manutenção de uma rede de hotéis, há uma frase incompleta sobre reformas realizadas nas unidades.",
+    "question": "Despesas com ___ das instalações vinculadas à atividade de hospedagem geram crédito de IBS/CBS na não cumulatividade plena.",
+    "options": [
+      "reforma",
+      "publicidade externa",
+      "doação",
+      "multa"
+    ],
+    "correctAnswer": "reforma",
+    "explanation": "Despesas com reforma das instalações usadas na atividade de hospedagem se enquadram na ampla base de crédito do novo modelo.",
+    "pacciTip": "Reforma também é crédito, tesoro! Quarto bonito e conta em dia."
+  },
+  {
+    "id": "REF-PL-099",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No treinamento de precificação de uma loja de calçados, há uma frase incompleta sobre a ordem de cálculo do tributo.",
+    "question": "No cálculo por fora, o tributo é somado ao preço líquido já formado com a margem, e não embutido na própria ___ de cálculo.",
+    "options": [
+      "base",
+      "nota",
+      "planilha",
+      "etiqueta"
+    ],
+    "correctAnswer": "base",
+    "explanation": "No cálculo por fora, o tributo não integra a própria base de cálculo, diferente do que ocorre no cálculo por dentro do ICMS.",
+    "pacciTip": "Base é a palavra certa, tesoro! O tributo não se mistura na base do cálculo."
+  },
+  {
+    "id": "REF-PL-100",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No treinamento de formação de preço de uma indústria de alimentos, há uma frase incompleta sobre o efeito eliminado pelo novo modelo.",
+    "question": "O cálculo por fora ajuda a eliminar o efeito ___, que ocorre quando o tributo incide sobre uma base que já contém tributo de etapas anteriores.",
+    "options": [
+      "cascata",
+      "sazonal",
+      "cambial",
+      "regressivo"
+    ],
+    "correctAnswer": "cascata",
+    "explanation": "O efeito cascata é a cobrança de tributo sobre uma base que já contém tributo de etapas anteriores, reduzido pelo cálculo por fora.",
+    "pacciTip": "Cascata é a palavra, tesoro! O novo modelo ajuda a segurar essa água."
+  },
+  {
+    "id": "REF-PL-101",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual de precificação de uma empresa de software por assinatura, há uma frase incompleta sobre a abrangência do cálculo por fora.",
+    "question": "O cálculo do IBS/CBS por fora se aplica tanto a mercadorias quanto a ___, incluindo assinaturas de software.",
+    "options": [
+      "serviços",
+      "doações",
+      "importações apenas",
+      "brindes"
+    ],
+    "correctAnswer": "serviços",
+    "explanation": "A lógica do cálculo por fora se aplica de forma ampla a bens e serviços, incluindo assinaturas de software.",
+    "pacciTip": "Serviços também, tesoro! A regra do por fora não escolhe só mercadoria física."
+  },
+  {
+    "id": "REF-PL-102",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual de precificação de uma distribuidora de bebidas, há uma frase incompleta sobre a ordem correta de cálculo do markup.",
+    "question": "O markup deve ser calculado sobre o custo ___ de créditos, e só então o tributo por fora deve ser somado ao preço final.",
+    "options": [
+      "líquido",
+      "bruto",
+      "financeiro",
+      "fiscal"
+    ],
+    "correctAnswer": "líquido",
+    "explanation": "Para preservar a margem real, o markup é calculado sobre o custo líquido de créditos, e o tributo por fora é somado somente depois.",
+    "pacciTip": "Líquido é a palavra certa, tesoro! Assim a margem não se distorce."
+  },
+  {
+    "id": "REF-PL-103",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No treinamento de atendimento de uma loja de material de construção, há uma frase incompleta sobre o ganho de transparência do novo modelo.",
+    "question": "O cálculo por fora torna o valor do tributo mais ___ para o consumidor, diferente do cálculo por dentro do ICMS atual.",
+    "options": [
+      "visível",
+      "oculto",
+      "reduzido",
+      "gratuito"
+    ],
+    "correctAnswer": "visível",
+    "explanation": "Como o tributo é somado de forma explícita ao preço líquido, o cálculo por fora torna o valor pago de tributo mais visível ao consumidor.",
+    "pacciTip": "Visível é a palavra, tesoro! O cliente enxerga melhor quanto pagou de imposto."
+  },
+  {
+    "id": "REF-PL-104",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No procedimento de precificação de uma indústria de móveis, há uma frase incompleta sobre o momento correto de somar o tributo.",
+    "question": "O tributo por fora deve ser somado ___ da definição da margem sobre o custo líquido, nunca antes.",
+    "options": [
+      "depois",
+      "antes",
+      "durante",
+      "nunca"
+    ],
+    "correctAnswer": "depois",
+    "explanation": "O tributo por fora é somado depois de definida a margem sobre o custo líquido, preservando a margem real da empresa.",
+    "pacciTip": "Depois, sempre depois, tesoro! Tributo por fora entra só no fim da conta."
+  },
+  {
+    "id": "REF-PL-105",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de uma indústria têxtil exportadora, há uma frase incompleta sobre o motivo do acúmulo de créditos.",
+    "question": "Empresas fortemente ___ tendem a acumular créditos de IBS/CBS, pois suas vendas ao exterior não geram débito relevante de saída.",
+    "options": [
+      "exportadoras",
+      "importadoras",
+      "endividadas",
+      "franqueadas"
+    ],
+    "correctAnswer": "exportadoras",
+    "explanation": "Empresas exportadoras acumulam créditos porque suas vendas ao exterior não geram débito relevante para compensar os créditos das aquisições.",
+    "pacciTip": "Exportadoras, sempre elas, tesoro! O crédito sobra quando a venda vai pra fora."
+  },
+  {
+    "id": "REF-PL-106",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No procedimento interno de uma mineradora, há uma frase incompleta sobre o mecanismo usado para recuperar créditos acumulados.",
+    "question": "Créditos de IBS/CBS acumulados e não compensados podem ser objeto de pedido de ___ junto ao Fisco.",
+    "options": [
+      "ressarcimento",
+      "cancelamento",
+      "doação",
+      "prescrição"
+    ],
+    "correctAnswer": "ressarcimento",
+    "explanation": "O ressarcimento é o mecanismo previsto para devolver à empresa créditos acumulados que não puderam ser compensados internamente.",
+    "pacciTip": "Ressarcimento, sempre ele, tesoro! É o caminho de volta do crédito parado."
+  },
+  {
+    "id": "REF-PL-107",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No relatório de fechamento mensal de uma fábrica de autopeças, há uma frase incompleta sobre o saldo credor gerado por um investimento pontual.",
+    "question": "Mesmo empresas voltadas ao mercado interno podem apurar saldo ___ quando os créditos do período superam os débitos, como em meses de forte investimento.",
+    "options": [
+      "credor",
+      "devedor",
+      "zerado",
+      "cambial"
+    ],
+    "correctAnswer": "credor",
+    "explanation": "O saldo credor ocorre quando os créditos apurados no período superam os débitos, podendo acontecer em qualquer empresa, não só exportadoras.",
+    "pacciTip": "Credor é a palavra, tesoro! Sobra de crédito também acontece em mês de compra grande."
+  },
+  {
+    "id": "REF-PL-108",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual de operações de uma trading company dedicada à exportação, há uma frase incompleta sobre a importância do mecanismo de recuperação de créditos.",
+    "question": "Para empresas cuja atividade é majoritariamente de ___, o ressarcimento de créditos acumulados é a principal via de recuperação desses valores.",
+    "options": [
+      "exportação",
+      "importação",
+      "publicidade",
+      "distribuição interna"
+    ],
+    "correctAnswer": "exportação",
+    "explanation": "Empresas voltadas à exportação acumulam créditos por não terem débitos relevantes de saída, tornando o ressarcimento essencial para a recuperação.",
+    "pacciTip": "Exportação puxa o ressarcimento, tesoro! É a saída natural do crédito acumulado."
+  },
+  {
+    "id": "REF-PL-109",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No relatório de sazonalidade de uma indústria de papel e celulose, há uma frase incompleta sobre o tratamento do saldo credor gerado em meses específicos.",
+    "question": "O saldo credor gerado em meses de sazonalidade pode ser ___ para compensação em períodos futuros ou ser objeto de ressarcimento.",
+    "options": [
+      "mantido",
+      "descartado",
+      "multado",
+      "cancelado"
+    ],
+    "correctAnswer": "mantido",
+    "explanation": "O saldo credor de um período pode ser mantido para compensação em períodos seguintes ou, quando aplicável, ser objeto de ressarcimento.",
+    "pacciTip": "Mantido é a palavra certa, tesoro! O crédito sazonal não se perde no meio do caminho."
+  },
+  {
+    "id": "REF-PL-110",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No procedimento da tesouraria de uma indústria de brinquedos, há uma frase incompleta sobre a necessidade de ação formal para reaver créditos acumulados.",
+    "question": "O ressarcimento de créditos acumulados depende de ___ formal da empresa junto ao Fisco, mesmo com prazos mais ágeis no novo modelo.",
+    "options": [
+      "solicitação",
+      "renúncia",
+      "doação",
+      "proibição"
+    ],
+    "correctAnswer": "solicitação",
+    "explanation": "O ressarcimento não ocorre automaticamente: depende de solicitação formal da empresa, ainda que os prazos de análise sejam mais ágeis.",
+    "pacciTip": "Solicitação é a palavra, tesoro! O ressarcimento não pede sozinho, é a empresa que pede."
+  },
+  {
+    "id": "REF-PL-111",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual de benefícios corporativos de uma empresa, há uma frase incompleta sobre o crédito aplicável a planos de saúde.",
+    "question": "Planos de saúde estão sujeitos a regime ___ do setor de saúde suplementar, com regras próprias de crédito diferentes do regime geral.",
+    "options": [
+      "específico",
+      "geral",
+      "temporário",
+      "internacional"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Planos de saúde estão sujeitos a regime específico, com regras próprias de apuração e crédito, diferentes do regime geral.",
+    "pacciTip": "Específico é a palavra-chave, tesoro! Plano de saúde tem sua própria regra de crédito."
+  },
+  {
+    "id": "REF-PL-112",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de uma transportadora de cargas, há uma frase incompleta sobre o regime aplicável ao setor de combustíveis.",
+    "question": "O setor de ___ está sujeito a regime específico de apuração e crédito, diferente do regime geral aplicado à maioria das mercadorias.",
+    "options": [
+      "combustíveis",
+      "vestuário",
+      "papelaria",
+      "brinquedos"
+    ],
+    "correctAnswer": "combustíveis",
+    "explanation": "Combustíveis estão entre os setores com regime específico de tributação, com regras próprias de apuração e crédito.",
+    "pacciTip": "Combustíveis, sempre eles, tesoro! Regime especial de ponta a ponta."
+  },
+  {
+    "id": "REF-PL-113",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No relatório de custos de uma indústria, há uma frase incompleta sobre o crédito aplicável a apólices de seguro empresarial.",
+    "question": "O setor de ___ está sujeito a regime específico, com regras próprias de apuração e crédito, distintas do regime geral.",
+    "options": [
+      "seguros",
+      "alimentos",
+      "vestuário",
+      "papelaria"
+    ],
+    "correctAnswer": "seguros",
+    "explanation": "O setor de seguros está sujeito a regime específico de tributação, com regras próprias de crédito diferentes do regime geral.",
+    "pacciTip": "Seguros também têm regra própria, tesoro! Sempre vale conferir antes de fechar a apólice."
+  },
+  {
+    "id": "REF-PL-114",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de uma incorporadora imobiliária, há uma frase incompleta sobre o regime aplicável a operações com bens imóveis.",
+    "question": "Operações com bens ___ estão sujeitas a regime específico de tributação, com regras próprias de apuração e crédito.",
+    "options": [
+      "imóveis",
+      "móveis apenas",
+      "digitais",
+      "importados"
+    ],
+    "correctAnswer": "imóveis",
+    "explanation": "Bens imóveis estão entre os setores com regime específico previsto no novo modelo, com regras próprias de apuração e crédito.",
+    "pacciTip": "Imóveis também têm regime todo seu, tesoro! Não confunde com mercadoria comum."
+  },
+  {
+    "id": "REF-PL-115",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No relatório da controladoria de uma fintech, há uma frase incompleta sobre o crédito aplicável a encargos de operações financeiras.",
+    "question": "Encargos de operações financeiras, como juros de empréstimos, seguem regras de crédito geralmente mais ___ do que as do regime geral.",
+    "options": [
+      "restritivas",
+      "amplas",
+      "generosas",
+      "flexíveis"
+    ],
+    "correctAnswer": "restritivas",
+    "explanation": "O setor financeiro segue regime específico, com regras de crédito geralmente mais restritivas do que as aplicáveis ao regime geral.",
+    "pacciTip": "Restritivas é a palavra, tesoro! Regime financeiro sempre aperta mais a mão no crédito."
+  },
+  {
+    "id": "REF-PL-116",
+    "level": "analista_pleno",
+    "type": "fill_blank",
+    "scenario": "No manual de compliance de uma agência de publicidade, há uma frase incompleta sobre contratos com empresas de apostas esportivas.",
+    "question": "Contratos com empresas de setores sujeitos a regimes ___, como apostas esportivas, exigem atenção redobrada às regras de crédito aplicáveis.",
+    "options": [
+      "específicos",
+      "gerais",
+      "inexistentes",
+      "uniformes"
+    ],
+    "correctAnswer": "específicos",
+    "explanation": "Setores sujeitos a regimes específicos possuem regras próprias de crédito, exigindo atenção redobrada de quem contrata seus serviços.",
+    "pacciTip": "Específicos, sempre eles, tesoro! Cada setor com sua regrinha de crédito."
+  },
+  {
+    "id": "REF-PL-117",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para um novo analista de uma indústria automotiva como funciona o crédito sobre máquinas, você resume em uma palavra a categoria contábil desses bens.",
+    "question": "Digite, em uma palavra, a categoria de bens (como máquinas e equipamentos de produção) cujo crédito de IBS/CBS passa a ser apropriado de forma mais ágil no novo modelo:",
+    "correctAnswer": "imobilizado",
+    "explanation": "O ativo imobilizado é a categoria de bens cujo crédito é apropriado de forma mais ágil, superando o parcelamento longo do ICMS atual.",
+    "pacciTip": "Imobilizado, tesoro! Decora essa palavra, ela abre a porta do crédito rápido."
+  },
+  {
+    "id": "REF-PL-118",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Ao revisar a compra de um veículo de uso pessoal do sócio-diretor de uma concessionária, você precisa nomear, em uma palavra, o critério que determina se há direito a crédito.",
+    "question": "Digite, em uma palavra, o critério que determina se uma aquisição gera direito a crédito de IBS/CBS: o bem precisa ter ___ com a atividade da empresa.",
+    "correctAnswer": "vínculo",
+    "explanation": "O critério central para o direito ao crédito é o vínculo da aquisição com a atividade econômica da empresa.",
+    "pacciTip": "Vínculo é a palavra do dia, tesoro! Sem ligação com o negócio, não tem crédito."
+  },
+  {
+    "id": "REF-PL-119",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para a diretoria de uma rede de hotéis por que a reforma de quartos gera crédito de IBS/CBS, você resume em uma palavra o princípio que ampliou essa base de crédito.",
+    "question": "Digite, em uma palavra, o tipo de não cumulatividade que ampliou o crédito para despesas como a reforma de quartos de um hotel:",
+    "correctAnswer": "plena",
+    "explanation": "A não cumulatividade plena é o princípio que ampliou o crédito para praticamente todas as aquisições vinculadas à atividade da empresa.",
+    "pacciTip": "Plena, sempre plena, tesoro! Essa palavra abre a porta de quase todo crédito."
+  },
+  {
+    "id": "REF-PL-120",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Ao justificar para o financeiro de um e-commerce por que os materiais de embalagem geram crédito, você nomeia em uma palavra a categoria dessas aquisições.",
+    "question": "Digite, em uma palavra, a categoria de aquisições, antes vedada de crédito no ICMS, à qual pertencem os materiais de uso e ___ que agora geram crédito de IBS/CBS:",
+    "correctAnswer": "consumo",
+    "explanation": "Bens de uso e consumo, antes vedados de crédito no ICMS, passam a gerar crédito de IBS/CBS na não cumulatividade plena.",
+    "pacciTip": "Consumo é a palavra que falta, tesoro! Uso e consumo agora abrem crédito."
+  },
+  {
+    "id": "REF-PL-121",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para um colega da manutenção de uma indústria metalúrgica por que o serviço de manutenção de equipamentos gera crédito, você resume o motivo em uma palavra.",
+    "question": "Digite, em uma palavra, o que a aquisição precisa ter com a atividade da empresa para gerar direito a crédito de IBS/CBS:",
+    "correctAnswer": "vínculo",
+    "explanation": "O vínculo com a atividade da empresa é o critério que determina o direito ao crédito de IBS/CBS na não cumulatividade plena.",
+    "pacciTip": "Vínculo de novo, tesoro! Essa palavra é a chave-mestra do crédito."
+  },
+  {
+    "id": "REF-PL-122",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Fechando a explicação sobre brindes promocionais para um colega de marketing de uma gráfica industrial, você nomeia em uma palavra a ação empresarial que justifica o crédito dessa despesa.",
+    "question": "Digite, em uma palavra, o tipo de ação empresarial (divulgação da marca, distribuição de brindes) vinculada à atividade comercial que gera crédito de IBS/CBS:",
+    "correctAnswer": "marketing",
+    "explanation": "Despesas com ações de marketing vinculadas à atividade comercial da empresa se enquadram na ampla base de crédito da não cumulatividade plena.",
+    "pacciTip": "Marketing, tesoro! Divulgar a marca também ajuda a construir crédito."
+  },
+  {
+    "id": "REF-PL-123",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Treinando um novo vendedor de uma loja de calçados sobre como o tributo aparece no preço, você resume em uma palavra o tipo de cálculo usado pelo IBS/CBS.",
+    "question": "Digite a palavra que descreve como o IBS/CBS é calculado em relação ao preço de venda: por dentro ou por ___?",
+    "correctAnswer": "fora",
+    "explanation": "O IBS/CBS é calculado por fora do preço, somado ao valor líquido, diferente do cálculo por dentro do ICMS atual.",
+    "pacciTip": "Fora, sempre fora, tesoro! Essa é a marca registrada do novo cálculo."
+  },
+  {
+    "id": "REF-PL-124",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para a diretoria de uma indústria de alimentos por que o novo modelo reduz a cobrança de tributo sobre tributo, você nomeia em uma palavra esse fenômeno indesejado.",
+    "question": "Digite, em uma palavra, o nome do efeito que ocorre quando o tributo incide sobre uma base que já contém tributo de etapas anteriores, reduzido pelo cálculo por fora:",
+    "correctAnswer": "cascata",
+    "explanation": "O efeito cascata é a cobrança de tributo sobre uma base que já contém tributo de etapas anteriores, minimizado pelo cálculo por fora.",
+    "pacciTip": "Cascata, tesoro! O novo modelo segura essa água que sobe demais."
+  },
+  {
+    "id": "REF-PL-125",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Fechando a explicação sobre precificação de assinaturas de software, você resume em uma palavra o custo já sem os créditos recuperáveis, base para calcular a margem.",
+    "question": "Digite, em uma palavra, o tipo de custo (já descontado dos créditos recuperáveis) sobre o qual a margem deve ser calculada antes de somar o tributo por fora:",
+    "correctAnswer": "líquido",
+    "explanation": "O custo líquido, já descontado dos créditos recuperáveis, é a base sobre a qual a margem deve ser calculada.",
+    "pacciTip": "Líquido é a palavra, tesoro! Margem se calcula sempre no custo já limpo de crédito."
+  },
+  {
+    "id": "REF-PL-126",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Orientando o time comercial de uma distribuidora de bebidas sobre a ordem certa de cálculo, você resume em uma palavra quando o tributo por fora deve ser somado ao preço.",
+    "question": "Digite, em uma palavra, quando o tributo por fora deve ser somado ao preço: antes ou ___ da definição da margem?",
+    "correctAnswer": "depois",
+    "explanation": "O tributo por fora deve ser somado depois da definição da margem sobre o custo líquido, para preservar a margem real.",
+    "pacciTip": "Depois, sempre depois, tesoro! O tributo por fora fecha a conta, não abre."
+  },
+  {
+    "id": "REF-PL-127",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para um cliente de uma loja de material de construção por que ele consegue ver melhor o valor do tributo pago, você resume em uma palavra o ganho trazido pelo cálculo por fora.",
+    "question": "Digite, em uma palavra, o principal ganho para o consumidor trazido pelo cálculo do tributo por fora, em comparação ao cálculo por dentro:",
+    "correctAnswer": "transparência",
+    "explanation": "O cálculo por fora dá mais transparência ao valor do tributo pago, pois ele é somado de forma explícita ao preço líquido.",
+    "pacciTip": "Transparência, tesoro! O cliente agora vê direitinho quanto pagou de imposto."
+  },
+  {
+    "id": "REF-PL-128",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Fechando o treinamento de precificação de uma indústria de móveis, você resume em uma palavra o que o cálculo por fora evita na formação do preço final.",
+    "question": "Digite, em uma palavra, o tipo de distorção que o cálculo por fora ajuda a evitar na formação do preço, ao não embutir o tributo na própria base:",
+    "correctAnswer": "cascata",
+    "explanation": "O cálculo por fora ajuda a evitar o efeito cascata, distorção causada pela cobrança de tributo sobre uma base que já contém tributo.",
+    "pacciTip": "Cascata de novo, tesoro! Ela aparece toda vez que o cálculo é por dentro."
+  },
+  {
+    "id": "REF-PL-129",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para a diretoria de uma indústria têxtil exportadora por que os créditos se acumulam mês a mês, você resume em uma palavra o perfil de vendas responsável por isso.",
+    "question": "Digite, em uma palavra, o perfil de vendas (voltado majoritariamente ao exterior) que costuma gerar acúmulo recorrente de créditos de IBS/CBS:",
+    "correctAnswer": "exportador",
+    "explanation": "Empresas com perfil exportador acumulam créditos, pois suas vendas ao exterior não geram débito relevante para compensar as aquisições internas.",
+    "pacciTip": "Exportador, tesoro! Quem vende pra fora, acumula crédito aqui dentro."
+  },
+  {
+    "id": "REF-PL-130",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Orientando o time fiscal de uma mineradora sobre o mecanismo de recuperação de créditos acumulados, você resume em uma palavra o nome desse procedimento.",
+    "question": "Digite o termo usado para o procedimento pelo qual a mineradora recupera do Fisco os créditos de IBS/CBS acumulados e não compensados:",
+    "correctAnswer": "ressarcimento",
+    "explanation": "O ressarcimento é o mecanismo pelo qual a empresa recupera do Fisco os créditos acumulados que não conseguiu compensar internamente.",
+    "pacciTip": "Ressarcimento, tesoro! Decora bem essa palavra, ela devolve o crédito parado."
+  },
+  {
+    "id": "REF-PL-131",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para a controladoria de uma fábrica de autopeças por que sobrou crédito num mês de forte investimento em máquinas, você resume em uma palavra o tipo de saldo apurado.",
+    "question": "Digite, em uma palavra, o tipo de saldo apurado quando os créditos de IBS/CBS do período superam os débitos das vendas:",
+    "correctAnswer": "credor",
+    "explanation": "O saldo credor ocorre quando os créditos apurados no período superam os débitos das operações, podendo acontecer em qualquer empresa.",
+    "pacciTip": "Credor, tesoro! Sobra de crédito também acontece fora da exportação."
+  },
+  {
+    "id": "REF-PL-132",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Fechando a explicação sobre o fluxo de uma trading dedicada à exportação, você resume em uma palavra a razão pela qual o ressarcimento é tão importante para esse tipo de empresa.",
+    "question": "Digite, em uma palavra, o principal motivo pelo qual o ressarcimento é essencial para uma trading exportadora: suas vendas ao exterior quase não geram ___ para compensar o crédito.",
+    "correctAnswer": "débito",
+    "explanation": "As vendas ao exterior praticamente não geram débito de saída, fazendo com que os créditos das aquisições se acumulem sem compensação interna.",
+    "pacciTip": "Débito é a palavra que falta, tesoro! Exportação quase não gera débito pra compensar."
+  },
+  {
+    "id": "REF-PL-133",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para a diretoria de uma indústria de papel e celulose sobre o saldo credor gerado em meses de sazonalidade, você resume em uma palavra o que pode ser feito com esse saldo.",
+    "question": "Digite, em uma palavra, o que a empresa pode fazer com o saldo credor de um mês de sazonalidade, mantendo-o para uso em períodos futuros: ___ o crédito para compensação posterior.",
+    "correctAnswer": "manter",
+    "explanation": "O saldo credor de um período pode ser mantido para compensação em períodos futuros ou ser objeto de ressarcimento, conforme o caso.",
+    "pacciTip": "Manter, tesoro! O crédito sazonal não se perde, ele espera a vez."
+  },
+  {
+    "id": "REF-PL-134",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Orientando a tesouraria de uma indústria de brinquedos sobre como formalizar o pedido de recuperação de créditos, você resume em uma palavra a ação necessária junto ao Fisco.",
+    "question": "Digite, em uma palavra, a ação que a empresa precisa realizar junto ao Fisco para obter o ressarcimento de créditos acumulados: formalizar uma ___.",
+    "correctAnswer": "solicitação",
+    "explanation": "O ressarcimento depende de solicitação formal da empresa junto ao Fisco, mesmo com prazos de análise mais ágeis no novo modelo.",
+    "pacciTip": "Solicitação, tesoro! O ressarcimento não vem sozinho, precisa ser pedido."
+  },
+  {
+    "id": "REF-PL-135",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para o RH de uma empresa por que o crédito da contratação de um plano de saúde corporativo é diferente do crédito de uma compra comum, você resume em uma palavra o tipo de regime aplicável.",
+    "question": "Digite, em uma palavra, o tipo de regime tributário aplicável a setores como planos de saúde, com regras próprias de crédito diferentes do regime geral:",
+    "correctAnswer": "específico",
+    "explanation": "Planos de saúde estão sujeitos a regime específico, com regras próprias de apuração e crédito, diferentes do regime geral.",
+    "pacciTip": "Específico, tesoro! Cada setor desses tem sua regrinha própria."
+  },
+  {
+    "id": "REF-PL-136",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para o setor fiscal de uma transportadora por que o crédito sobre combustíveis segue regras próprias, você resume em uma palavra o setor sujeito a esse regime diferenciado.",
+    "question": "Digite, em uma palavra, o setor cuja aquisição por uma transportadora segue regime específico de apuração e crédito diferenciado:",
+    "correctAnswer": "combustíveis",
+    "explanation": "O setor de combustíveis está sujeito a regime específico de tributação, com regras próprias de apuração e crédito.",
+    "pacciTip": "Combustíveis, tesoro! Regime especial de ponta a ponta na cadeia."
+  },
+  {
+    "id": "REF-PL-137",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para o financeiro de uma indústria por que o crédito de uma apólice de seguro empresarial segue regras próprias, você resume em uma palavra o setor responsável por essa diferença.",
+    "question": "Digite, em uma palavra, o setor cuja contratação de apólices está sujeita a regime específico de crédito, diferente do regime geral:",
+    "correctAnswer": "seguros",
+    "explanation": "O setor de seguros está sujeito a regime específico de tributação, com regras próprias de apuração e crédito.",
+    "pacciTip": "Seguros, tesoro! Vale sempre checar a regrinha antes de fechar a apólice."
+  },
+  {
+    "id": "REF-PL-138",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para um analista de uma incorporadora imobiliária por que a compra de um terreno segue regras próprias de crédito, você resume em uma palavra o tipo de bem envolvido.",
+    "question": "Digite, em uma palavra, o tipo de bem (como terrenos e edificações) cujas operações seguem regime específico de tributação e crédito:",
+    "correctAnswer": "imóveis",
+    "explanation": "Operações com bens imóveis estão sujeitas a regime específico, com regras próprias de apuração e crédito, diferentes do regime geral.",
+    "pacciTip": "Imóveis, tesoro! Terreno e prédio sempre seguem regra própria."
+  },
+  {
+    "id": "REF-PL-139",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Explicando para a controladoria de uma fintech por que o crédito sobre juros de empréstimo é mais apertado, você resume em uma palavra o tipo de regras aplicáveis ao setor financeiro.",
+    "question": "Digite, em uma palavra, como costumam ser as regras de crédito do regime específico financeiro, em comparação ao regime geral: mais ___.",
+    "correctAnswer": "restritivas",
+    "explanation": "O setor financeiro segue regime específico, com regras de crédito geralmente mais restritivas do que as aplicáveis ao regime geral.",
+    "pacciTip": "Restritivas, tesoro! Regime financeiro sempre aperta mais a mão no crédito."
+  },
+  {
+    "id": "REF-PL-140",
+    "level": "analista_pleno",
+    "type": "text_input",
+    "scenario": "Fechando a análise de um contrato de patrocínio com uma empresa de apostas esportivas, você resume em uma palavra o tipo de regime que exige atenção redobrada da agência de publicidade.",
+    "question": "Digite, em uma palavra, o tipo de regime tributário que exige atenção redobrada da agência ao avaliar o crédito de um contrato com uma empresa de apostas esportivas:",
+    "correctAnswer": "específico",
+    "explanation": "Setores sujeitos a regime específico, como apostas esportivas, possuem regras próprias de crédito que exigem atenção redobrada de quem contrata seus serviços.",
+    "pacciTip": "Específico, de novo, tesoro! Essa palavra resume o cuidado extra necessário."
+  }
+]

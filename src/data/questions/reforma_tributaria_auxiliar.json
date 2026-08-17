@@ -1,0 +1,2046 @@
+[
+  {
+    "id": "REF-AUX-001",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você está emitindo uma NF-e de venda de mercadoria e o sistema pede um novo campo que nunca existiu antes na nota fiscal.",
+    "question": "Qual é o nome do novo código que identifica o tratamento tributário do IBS/CBS na nota fiscal?",
+    "options": [
+      "cClassTrib",
+      "CFOP",
+      "NCM",
+      "CNAE"
+    ],
+    "correctAnswer": "cClassTrib",
+    "explanation": "O cClassTrib (Código de Classificação Tributária) é o novo campo que informa o tratamento específico do IBS/CBS aplicável à operação.",
+    "pacciTip": "cClassTrib é o nome novo na praça, tesoro! Decore que ele vai aparecer em toda nota daqui pra frente."
+  },
+  {
+    "id": "REF-AUX-002",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um colega pediu ajuda para emitir uma nota de prestação de serviço de consultoria e ficou em dúvida sobre qual código de classificação usar.",
+    "question": "Qual código é utilizado para classificar SERVIÇOS (e não mercadorias) no novo modelo?",
+    "options": [
+      "NBS",
+      "NCM",
+      "CFOP",
+      "CNPJ"
+    ],
+    "correctAnswer": "NBS",
+    "explanation": "A NBS (Nomenclatura Brasileira de Serviços) é o código usado para classificar serviços, assim como o NCM classifica mercadorias.",
+    "pacciTip": "Serviço é NBS, mercadoria é NCM. Dois códigos, dois mundos diferentes, capisce?"
+  },
+  {
+    "id": "REF-AUX-003",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao cadastrar um novo produto no ERP para começar a vender, você precisa preencher o código de classificação da mercadoria.",
+    "question": "Qual código classifica mercadorias (bens) tanto no modelo atual quanto no novo?",
+    "options": [
+      "NCM",
+      "NBS",
+      "CST",
+      "CFOP"
+    ],
+    "correctAnswer": "NCM",
+    "explanation": "O NCM (Nomenclatura Comum do Mercosul) continua sendo o código de classificação de mercadorias no novo modelo tributário.",
+    "pacciTip": "NCM é o velho conhecido, amico! Ele não muda, continua firme e forte pras mercadorias."
+  },
+  {
+    "id": "REF-AUX-004",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que a alíquota de IBS destacada em uma nota fiscal recebida é diferente da que aprendeu no treinamento e pergunta ao analista o motivo.",
+    "question": "O que é a 'alíquota de referência' do IBS/CBS mencionada pelo analista?",
+    "options": [
+      "A alíquota padrão calculada para manter a arrecadação de cada ente federativo",
+      "Uma alíquota fixa e única para todo o Brasil",
+      "A alíquota cobrada apenas de grandes empresas",
+      "A alíquota usada somente durante a fase de testes"
+    ],
+    "correctAnswer": "A alíquota padrão calculada para manter a arrecadação de cada ente federativo",
+    "explanation": "Cada Estado e Município terá sua própria alíquota de referência, calculada para preservar o nível de arrecadação atual, podendo variar entre entes.",
+    "pacciTip": "Não é um número mágico único, piccolo! Cada Estado e Município calcula o seu, pra não perder dinheiro no caixa."
+  },
+  {
+    "id": "REF-AUX-005",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Conferindo uma nota fiscal recebida, você percebe que o campo NCM foi preenchido com um código pensado para descrever um serviço de consultoria.",
+    "question": "O NCM pode ser usado tanto para classificar mercadorias quanto serviços?",
+    "correctAnswer": false,
+    "explanation": "Errado! O NCM é exclusivo para mercadorias (bens). Serviços devem ser classificados pela NBS.",
+    "pacciTip": "Nooo, isso está trocado! NCM é só pra mercadoria. Serviço pede NBS, sempre!"
+  },
+  {
+    "id": "REF-AUX-006",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Um colega, emitindo uma nota de prestação de serviço de consultoria, diz que não precisa preencher a NBS porque já informou o CNAE da empresa.",
+    "question": "É correto dispensar o preenchimento da NBS numa nota de serviço só porque o CNAE da empresa já foi informado?",
+    "correctAnswer": false,
+    "explanation": "Errado! O CNAE identifica a atividade da empresa, mas a NBS classifica especificamente o serviço prestado naquela nota — são coisas diferentes e ambas necessárias.",
+    "pacciTip": "CNAE fala da empresa, NBS fala do serviço da nota. Não é a mesma coisa, presta atenção!"
+  },
+  {
+    "id": "REF-AUX-007",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Revisando as notas emitidas durante a fase de testes de 2026, você percebe que os campos de IBS e CBS já aparecem preenchidos, mesmo com alíquota quase zero.",
+    "question": "Mesmo na fase de testes de 2026, os campos de IBS/CBS já devem aparecer na nota fiscal eletrônica?",
+    "correctAnswer": true,
+    "explanation": "Correto! Desde 2026 os campos de IBS/CBS já constam na nota, com alíquota simbólica, para testar os sistemas antes da cobrança efetiva.",
+    "pacciTip": "Sì, sì, é ensaio geral, mas o campo já aparece! Bom pra treinar o olho desde já."
+  },
+  {
+    "id": "REF-AUX-008",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Ao fechar as notas do mês, um colega comenta que o ICMS vai sumir completamente das notas fiscais já em 2026.",
+    "question": "O ICMS deixará de aparecer completamente nas notas fiscais já em 2026?",
+    "correctAnswer": false,
+    "explanation": "Errado! Durante o período de transição, o ICMS convive com o IBS/CBS, sendo reduzido gradualmente até sua extinção completa, prevista para 2033.",
+    "pacciTip": "Calma, não é de uma vez! O ICMS ainda vai aparecer nas notas por um bom tempo, diminuindo aos poucos."
+  },
+  {
+    "id": "REF-AUX-009",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Você foi encarregado de emitir uma NF-e simples de venda de mercadoria pela primeira vez sozinho.",
+    "question": "Ordene os passos corretos para emitir essa nota fiscal:",
+    "options": [
+      "Validar e transmitir a nota para a SEFAZ",
+      "Selecionar o produto e informar o NCM",
+      "Preencher a classificação tributária (cClassTrib) do IBS/CBS",
+      "Informar o CFOP da operação"
+    ],
+    "correctAnswer": [
+      "Selecionar o produto e informar o NCM",
+      "Informar o CFOP da operação",
+      "Preencher a classificação tributária (cClassTrib) do IBS/CBS",
+      "Validar e transmitir a nota para a SEFAZ"
+    ],
+    "explanation": "Primeiro identifica-se o produto (NCM), depois a natureza da operação (CFOP), em seguida a classificação tributária do IBS/CBS e, por fim, valida-se e transmite-se a nota.",
+    "pacciTip": "Um passo de cada vez, bambino! Produto, operação, tributo, transmissão. Assim ninguém erra a nota!"
+  },
+  {
+    "id": "REF-AUX-010",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma nota fiscal de um fornecedor chegou com suspeita de erro de classificação tributária e você precisa conferi-la antes de aprovar.",
+    "question": "Ordene os passos corretos de conferência dessa nota:",
+    "options": [
+      "Registrar a nota como conforme ou sinalizar divergência",
+      "Conferir se o NCM/NBS está compatível com o produto/serviço",
+      "Confirmar se os valores de IBS/CBS destacados batem com a alíquota aplicável",
+      "Verificar se o campo cClassTrib foi preenchido corretamente"
+    ],
+    "correctAnswer": [
+      "Conferir se o NCM/NBS está compatível com o produto/serviço",
+      "Verificar se o campo cClassTrib foi preenchido corretamente",
+      "Confirmar se os valores de IBS/CBS destacados batem com a alíquota aplicável",
+      "Registrar a nota como conforme ou sinalizar divergência"
+    ],
+    "explanation": "A conferência segue do geral para o específico: primeiro a classificação do item, depois o tratamento tributário, depois os valores, e por fim o registro da conclusão.",
+    "pacciTip": "Confere como um detetive, passo a passo! Primeiro o quê, depois o tributo, depois o valor. Só no final você fecha o caso."
+  },
+  {
+    "id": "REF-AUX-011",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "A empresa vai começar a vender um produto novo e você precisa cadastrá-lo corretamente no ERP antes da primeira nota.",
+    "question": "Ordene o fluxo de cadastro desse novo produto:",
+    "options": [
+      "Liberar o produto para faturamento",
+      "Cadastrar a descrição e o NCM do produto",
+      "Vincular o produto ao regime tributário da empresa",
+      "Definir a classificação tributária padrão (cClassTrib)"
+    ],
+    "correctAnswer": [
+      "Cadastrar a descrição e o NCM do produto",
+      "Definir a classificação tributária padrão (cClassTrib)",
+      "Vincular o produto ao regime tributário da empresa",
+      "Liberar o produto para faturamento"
+    ],
+    "explanation": "O cadastro começa pela identificação do produto, segue com a classificação tributária, o vínculo ao regime da empresa e só então é liberado para venda.",
+    "pacciTip": "Produto sem cadastro certo é nota fiscal com dor de cabeça depois. Capricha na ordem, tesoro!"
+  },
+  {
+    "id": "REF-AUX-012",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma nota de compra chegou do fornecedor e precisa ser lançada no sistema para que a empresa possa aproveitar o crédito tributário.",
+    "question": "Ordene o processo de checagem e lançamento dessa nota de compra:",
+    "options": [
+      "Lançar a nota no sistema para aproveitamento de crédito",
+      "Receber a nota fiscal do fornecedor",
+      "Checar os tributos destacados (IBS/CBS)",
+      "Conferir os dados cadastrais do emitente"
+    ],
+    "correctAnswer": [
+      "Receber a nota fiscal do fornecedor",
+      "Conferir os dados cadastrais do emitente",
+      "Checar os tributos destacados (IBS/CBS)",
+      "Lançar a nota no sistema para aproveitamento de crédito"
+    ],
+    "explanation": "Primeiro recebe-se a nota, confere-se quem emitiu, depois os tributos destacados, e só então ela é lançada para gerar crédito.",
+    "pacciTip": "Recebeu, conferiu, checou o tributo, lançou. Assim o crédito não se perde no caminho!"
+  },
+  {
+    "id": "REF-AUX-013",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Durante o treinamento de emissão de notas, o instrutor entrega um roteiro com uma frase incompleta sobre venda de mercadorias.",
+    "question": "Ao emitir uma nota de venda de mercadoria, o auxiliar deve informar o código ___ para classificar o produto.",
+    "options": [
+      "NCM",
+      "NBS",
+      "CNAE",
+      "CST"
+    ],
+    "correctAnswer": "NCM",
+    "explanation": "O NCM é o código responsável por classificar mercadorias em qualquer nota fiscal de venda de produtos.",
+    "pacciTip": "Mercadoria pede NCM, sempre! Grava essa igual musiquinha."
+  },
+  {
+    "id": "REF-AUX-014",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "No mesmo roteiro de treinamento, agora a frase incompleta é sobre a emissão de notas de prestação de serviços.",
+    "question": "Para prestação de serviços, a classificação tributária correta é feita pelo código ___.",
+    "options": [
+      "NBS",
+      "NCM",
+      "CFOP",
+      "CNPJ"
+    ],
+    "correctAnswer": "NBS",
+    "explanation": "A NBS é o código específico para classificar serviços, equivalente ao NCM das mercadorias.",
+    "pacciTip": "Serviço é NBS, ponto final! Não deixa essa te confundir na prova."
+  },
+  {
+    "id": "REF-AUX-015",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Enquanto revisa o layout atualizado da nota fiscal eletrônica, você encontra uma frase para completar sobre o novo campo tributário.",
+    "question": "O novo campo que identifica o tratamento tributário específico do IBS e da CBS é chamado de ___.",
+    "options": [
+      "cClassTrib",
+      "CST",
+      "CFOP",
+      "CSOSN"
+    ],
+    "correctAnswer": "cClassTrib",
+    "explanation": "O cClassTrib é o campo criado especificamente para indicar o tratamento tributário do IBS/CBS aplicável à operação.",
+    "pacciTip": "cClassTrib, cClassTrib! Repete até virar automático na sua cabeça."
+  },
+  {
+    "id": "REF-AUX-016",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Ao fechar as notas do mês durante o período de transição, você percebe uma mistura de tributos na mesma nota fiscal.",
+    "question": "Durante a fase de transição, é normal a nota fiscal apresentar, ao mesmo tempo, tributos ___ e os novos IBS/CBS.",
+    "options": [
+      "antigos",
+      "futuros",
+      "estrangeiros",
+      "isentos"
+    ],
+    "correctAnswer": "antigos",
+    "explanation": "Durante a transição, tributos antigos (ICMS, ISS, PIS, Cofins) convivem com os novos (IBS, CBS) até a extinção gradual dos primeiros.",
+    "pacciTip": "É normal ver os dois juntos por um tempo, tesoro! É a transição fazendo o seu trabalho."
+  },
+  {
+    "id": "REF-AUX-017",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Um novo colega de equipe pergunta rapidamente qual código se usa para classificar mercadorias na nota fiscal.",
+    "question": "Digite a sigla do código usado para classificar mercadorias na nota fiscal:",
+    "correctAnswer": "NCM",
+    "explanation": "NCM = Nomenclatura Comum do Mercosul, código usado para classificar mercadorias.",
+    "pacciTip": "N-C-M, três letrinhas pra mercadoria não errar o caminho!"
+  },
+  {
+    "id": "REF-AUX-018",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "O mesmo colega, ainda em dúvida, pergunta agora qual código se usa para classificar serviços.",
+    "question": "Digite a sigla do código usado para classificar serviços na nota fiscal:",
+    "correctAnswer": "NBS",
+    "explanation": "NBS = Nomenclatura Brasileira de Serviços, código usado para classificar serviços.",
+    "pacciTip": "N-B-S, o irmão do NCM só que pra serviço!"
+  },
+  {
+    "id": "REF-AUX-019",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Durante uma revisão do layout da nota fiscal eletrônica, o supervisor pede que você identifique o novo campo tributário pelo nome abreviado.",
+    "question": "Digite o nome (abreviado) do novo campo da nota fiscal que indica a classificação tributária do IBS/CBS:",
+    "correctAnswer": "cClassTrib",
+    "explanation": "cClassTrib é o nome técnico do campo que carrega a classificação tributária do IBS/CBS na nota fiscal eletrônica.",
+    "pacciTip": "cClassTrib com C minúsculo no começo, tesoro! Detalhe que faz diferença na prova."
+  },
+  {
+    "id": "REF-AUX-020",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "No treinamento básico de emissão, o instrutor pergunta qual é o documento fiscal mais comum emitido na venda de mercadorias.",
+    "question": "Digite a sigla do documento fiscal eletrônico mais comum emitido na venda de mercadorias:",
+    "correctAnswer": "NF-e",
+    "explanation": "NF-e = Nota Fiscal Eletrônica, o documento fiscal padrão para vendas de mercadorias no Brasil.",
+    "pacciTip": "NF-e é o documento que você vai emitir todo santo dia, decora bem esse!"
+  },
+  {
+    "id": "REF-AUX-021",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Numa farmácia, a atendente ouve o gerente comentar que o ICMS e o ISS vão se transformar em um único imposto novo.",
+    "question": "Qual novo tributo estadual/municipal substituirá o ICMS e o ISS?",
+    "options": [
+      "IBS",
+      "CBS",
+      "Imposto Seletivo",
+      "IOF"
+    ],
+    "correctAnswer": "IBS",
+    "explanation": "O IBS (Imposto sobre Bens e Serviços) é o novo tributo de competência estadual e municipal que substitui o ICMS e o ISS.",
+    "pacciTip": "IBS entra no lugar dos dois, tesoro! Um imposto só, pra simplificar a vida."
+  },
+  {
+    "id": "REF-AUX-022",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Conferindo uma nota de compra de cigarros para a loja, você percebe um tributo novo destacado que nunca tinha visto antes.",
+    "question": "Esse novo tributo, que incide sobre produtos como cigarros e bebidas alcoólicas para desestimular o consumo, é chamado de:",
+    "options": [
+      "Imposto Seletivo",
+      "IBS",
+      "CBS",
+      "ITCMD"
+    ],
+    "correctAnswer": "Imposto Seletivo",
+    "explanation": "O Imposto Seletivo incide sobre produtos prejudiciais à saúde ou ao meio ambiente, como cigarros, bebidas alcoólicas e agrotóxicos.",
+    "pacciTip": "Esse é o 'imposto do pecadinho', capisce? Quanto mais nocivo, mais ele aparece."
+  },
+  {
+    "id": "REF-AUX-023",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente paga com cartão numa loja virtual e o financeiro comenta que, no futuro, o tributo será separado automaticamente já no pagamento.",
+    "question": "Como se chama o mecanismo que separa automaticamente o valor do tributo no momento do pagamento eletrônico, recolhendo-o direto ao governo?",
+    "options": [
+      "Split Payment",
+      "cClassTrib",
+      "Substituição Tributária",
+      "Retenção na Fonte"
+    ],
+    "correctAnswer": "Split Payment",
+    "explanation": "O Split Payment segrega o valor do tributo já no momento do pagamento, direcionando-o automaticamente para o poder público.",
+    "pacciTip": "Split Payment separa o tributo na hora, tesoro! Ninguém mais precisa correr atrás depois."
+  },
+  {
+    "id": "REF-AUX-024",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Num escritório de contabilidade, o contador comenta que o IBS não é administrado por um único fisco, mas por um órgão colegiado.",
+    "question": "Qual órgão é responsável por administrar o IBS, reunindo representantes de Estados e Municípios?",
+    "options": [
+      "Comitê Gestor do IBS",
+      "Receita Federal",
+      "CONFAZ",
+      "Secretaria da Fazenda"
+    ],
+    "correctAnswer": "Comitê Gestor do IBS",
+    "explanation": "O Comitê Gestor do IBS reúne representantes de Estados e Municípios para administrar a arrecadação e distribuição do imposto.",
+    "pacciTip": "Um comitê pra cuidar de todo mundo junto, capisce? Ninguém administra o IBS sozinho."
+  },
+  {
+    "id": "REF-AUX-025",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No caixa de um supermercado, você percebe que o arroz e o feijão saem sem cobrança de IBS/CBS destacada.",
+    "question": "Por que produtos da cesta básica nacional, como arroz e feijão, não têm cobrança de IBS/CBS?",
+    "options": [
+      "Porque a alíquota de IBS/CBS para esses itens é reduzida a zero",
+      "Porque esses itens não precisam de NF-e",
+      "Porque são isentos apenas de ICMS",
+      "Porque só grandes redes pagam esse tributo"
+    ],
+    "correctAnswer": "Porque a alíquota de IBS/CBS para esses itens é reduzida a zero",
+    "explanation": "Produtos da cesta básica nacional têm alíquota de IBS/CBS reduzida a zero, para baratear itens essenciais.",
+    "pacciTip": "Arroz e feijão com alíquota zero, tesoro! Comida essencial merece esse carinho."
+  },
+  {
+    "id": "REF-AUX-026",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Num laboratório de exames, o atendente emite uma nota de serviço médico e percebe que o valor de IBS/CBS aparece menor que o de outros serviços da clínica.",
+    "question": "Por que serviços de saúde costumam ter carga tributária de IBS/CBS reduzida em relação à alíquota padrão?",
+    "options": [
+      "Porque a reforma prevê redução de alíquota para setores como saúde e educação",
+      "Porque hospitais não emitem nota fiscal",
+      "Porque o Imposto Seletivo cobre a diferença",
+      "Porque são isentos de preencher o cClassTrib"
+    ],
+    "correctAnswer": "Porque a reforma prevê redução de alíquota para setores como saúde e educação",
+    "explanation": "Setores considerados essenciais, como saúde e educação, têm previsão de redução de alíquota de IBS/CBS.",
+    "pacciTip": "Saúde e educação ganham um desconto especial, amico! É pra cuidar do que importa."
+  },
+  {
+    "id": "REF-AUX-027",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Num showroom de veículos, o vendedor percebe que carros a combustão têm um tributo adicional que os elétricos não têm.",
+    "question": "Esse tributo adicional sobre veículos mais poluentes, que não incide da mesma forma sobre elétricos, é:",
+    "options": [
+      "Imposto Seletivo",
+      "IPVA",
+      "CBS",
+      "ITBI"
+    ],
+    "correctAnswer": "Imposto Seletivo",
+    "explanation": "O Imposto Seletivo busca desestimular produtos e atividades mais poluentes, incidindo com mais força sobre veículos menos sustentáveis.",
+    "pacciTip": "Poluiu mais, pagou mais, tesoro! O Seletivo gosta de cutucar quem suja o planeta."
+  },
+  {
+    "id": "REF-AUX-028",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma transportadora leva mercadoria de São Paulo para o Rio de Janeiro, e o supervisor explica para onde vai o IBS gerado nessa venda.",
+    "question": "No novo modelo, o IBS gerado numa venda interestadual pertence a qual ente federativo?",
+    "options": [
+      "Ao Estado/Município de destino da mercadoria ou serviço",
+      "Ao Estado de origem da mercadoria",
+      "Sempre à União",
+      "Metade para cada Estado, dividido automaticamente"
+    ],
+    "correctAnswer": "Ao Estado/Município de destino da mercadoria ou serviço",
+    "explanation": "No novo modelo, a tributação do IBS segue o princípio do destino: o imposto pertence ao ente onde a mercadoria ou serviço é consumido.",
+    "pacciTip": "O IBS viaja com a mercadoria e fica no destino, capisce? É lá que ele mora agora."
+  },
+  {
+    "id": "REF-AUX-029",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Numa indústria de alimentos, o analista fiscal comenta que um dos dois novos tributos é de competência federal.",
+    "question": "Qual dos novos tributos é de competência federal (da União)?",
+    "options": [
+      "CBS",
+      "IBS",
+      "ISS",
+      "ICMS"
+    ],
+    "correctAnswer": "CBS",
+    "explanation": "A CBS (Contribuição sobre Bens e Serviços) é de competência federal, enquanto o IBS é estadual e municipal.",
+    "pacciTip": "CBS é da União, tesoro! IBS fica com Estado e Município."
+  },
+  {
+    "id": "REF-AUX-030",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Num petshop, o dono está cadastrando uma nova ração no ERP e percebe que esqueceu de preencher um campo obrigatório.",
+    "question": "Qual código é obrigatório no cadastro de um produto físico como a ração, mesmo no novo modelo tributário?",
+    "options": [
+      "NCM",
+      "NBS",
+      "CNAE",
+      "CBO"
+    ],
+    "correctAnswer": "NCM",
+    "explanation": "A ração é uma mercadoria (bem físico), então precisa do NCM, o código de classificação de mercadorias.",
+    "pacciTip": "Produto físico pede NCM, sempre, amico! Ração não foge dessa regra."
+  },
+  {
+    "id": "REF-AUX-031",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de software emite a nota mensal de uma assinatura (SaaS) para um cliente corporativo.",
+    "question": "Para classificar corretamente esse serviço de tecnologia na nota fiscal, qual código deve ser usado?",
+    "options": [
+      "NBS",
+      "NCM",
+      "GTIN",
+      "CEST"
+    ],
+    "correctAnswer": "NBS",
+    "explanation": "Serviços, incluindo os de tecnologia como assinaturas de software, são classificados pela NBS (Nomenclatura Brasileira de Serviços).",
+    "pacciTip": "SaaS é serviço, então NBS na certa! Software não é mercadoria que se pega na mão."
+  },
+  {
+    "id": "REF-AUX-032",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "O gerente de um hotel pergunta até quando vai durar a fase de convivência entre os tributos antigos e o IBS/CBS.",
+    "question": "Segundo o cronograma da reforma, até quando os tributos antigos devem conviver com o IBS/CBS antes da extinção completa?",
+    "options": [
+      "Até 2033",
+      "Até 2026",
+      "Até 2030",
+      "Não há prazo definido"
+    ],
+    "correctAnswer": "Até 2033",
+    "explanation": "O período de transição vai de 2026 a 2033, quando os tributos antigos são extintos por completo.",
+    "pacciTip": "2033 é o ano da despedida final dos tributos antigos, tesoro! Marca esse na agenda."
+  },
+  {
+    "id": "REF-AUX-033",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de bebidas recebe uma orientação da matriz sobre o ano em que o IBS/CBS começou a aparecer nas notas fiscais em caráter de teste.",
+    "question": "Em que ano o IBS e a CBS começaram a aparecer nas notas fiscais em caráter de teste, com alíquota simbólica?",
+    "options": [
+      "2026",
+      "2023",
+      "2029",
+      "2033"
+    ],
+    "correctAnswer": "2026",
+    "explanation": "Desde 2026 os campos de IBS/CBS já constam nas notas fiscais, com alíquota simbólica, para testar os sistemas antes da cobrança efetiva.",
+    "pacciTip": "2026 é o ano do ensaio geral, capisce! Alíquota pequena, mas o campo já treina forte."
+  },
+  {
+    "id": "REF-AUX-034",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma joalheria optante pelo Simples Nacional recebe do contador uma explicação sobre como fica sua tributação com a reforma.",
+    "question": "O que a reforma tributária prevê para empresas do Simples Nacional em relação ao IBS/CBS?",
+    "options": [
+      "Podem manter as regras do Simples ou optar pelo regime regular, conforme a operação",
+      "São automaticamente excluídas do Simples Nacional",
+      "Ficam isentas de IBS/CBS para sempre",
+      "Precisam pagar IBS/CBS em dobro"
+    ],
+    "correctAnswer": "Podem manter as regras do Simples ou optar pelo regime regular, conforme a operação",
+    "explanation": "Empresas do Simples Nacional continuam existindo e podem manter suas regras próprias ou, em certas situações, optar pelo regime regular do IBS/CBS.",
+    "pacciTip": "Simples continua vivo, tesoro! Só ganhou mais uma opção na mesa."
+  },
+  {
+    "id": "REF-AUX-035",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pede 'a nota impressa' numa gráfica, e o atendente entrega um documento resumido gerado a partir da NF-e.",
+    "question": "Como se chama o documento impresso/simplificado gerado a partir da NF-e para acompanhar a mercadoria?",
+    "options": [
+      "DANFE",
+      "cClassTrib",
+      "CT-e",
+      "Boleto"
+    ],
+    "correctAnswer": "DANFE",
+    "explanation": "O DANFE (Documento Auxiliar da Nota Fiscal Eletrônica) é a representação impressa e simplificada da NF-e.",
+    "pacciTip": "DANFE é o retrato impresso da nota, amico! A nota de verdade mora no sistema."
+  },
+  {
+    "id": "REF-AUX-036",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Numa importadora, o despachante aduaneiro comenta que o novo modelo tributário também alcança as mercadorias trazidas do exterior.",
+    "question": "Como o novo modelo trata a tributação de mercadorias importadas?",
+    "options": [
+      "O IBS/CBS incide também sobre importações, tal como sobre operações internas",
+      "Importações ficam isentas de IBS/CBS",
+      "Só a CBS incide sobre importações",
+      "Importações pagam apenas Imposto Seletivo"
+    ],
+    "correctAnswer": "O IBS/CBS incide também sobre importações, tal como sobre operações internas",
+    "explanation": "O novo modelo equipara a tributação de bens e serviços importados à das operações internas, evitando vantagem indevida ao produto estrangeiro.",
+    "pacciTip": "Veio de fora, mas paga igual, tesoro! Ninguém escapa do IBS/CBS."
+  },
+  {
+    "id": "REF-AUX-037",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "O dono de uma academia pergunta ao contador se o IBS/CBS pago na compra de equipamentos pode virar crédito no futuro.",
+    "question": "Uma das promessas centrais da reforma é a não cumulatividade ampla. O que isso significa, de forma simples?",
+    "options": [
+      "O tributo pago nas compras pode, em regra, ser aproveitado como crédito nas vendas",
+      "O tributo é cobrado várias vezes na mesma cadeia",
+      "Só a indústria pode aproveitar créditos",
+      "Não existe mais possibilidade de crédito tributário"
+    ],
+    "correctAnswer": "O tributo pago nas compras pode, em regra, ser aproveitado como crédito nas vendas",
+    "explanation": "A não cumulatividade ampla permite, em regra, que o tributo pago numa etapa da cadeia seja aproveitado como crédito na etapa seguinte, evitando o efeito cascata.",
+    "pacciTip": "Pagou na compra, credita na venda, capisce? Assim ninguém paga imposto sobre imposto."
+  },
+  {
+    "id": "REF-AUX-038",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "O ERP de uma loja de material de construção foi atualizado e, ao emitir uma nota, o atendente percebe campos novos na tela.",
+    "question": "O que motivou a atualização do layout da NF-e nos últimos anos?",
+    "options": [
+      "A necessidade de incluir os campos do IBS, CBS e Imposto Seletivo",
+      "A criação de um novo tipo de nota exclusivo para exportação",
+      "O fim da exigência do NCM",
+      "A substituição da NF-e por um novo tipo de boleto"
+    ],
+    "correctAnswer": "A necessidade de incluir os campos do IBS, CBS e Imposto Seletivo",
+    "explanation": "O layout da NF-e foi atualizado para comportar os novos campos exigidos pelos tributos criados na reforma, como o cClassTrib.",
+    "pacciTip": "Nota nova, campos novos, tesoro! O layout cresceu pra caber a reforma toda."
+  },
+  {
+    "id": "REF-AUX-039",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma floricultura vende um buquê com entrega inclusa e emite a nota; o atendente não sabe se usa NCM ou NBS para o item principal.",
+    "question": "Numa nota que envolve a venda de uma mercadoria (o buquê) com um serviço agregado (entrega), qual é a orientação básica de classificação?",
+    "options": [
+      "Cada item deve ser classificado conforme sua natureza: mercadoria com NCM, serviço com NBS",
+      "Tudo deve ser classificado só com NCM",
+      "Tudo deve ser classificado só com NBS",
+      "Não é necessário classificar itens combinados"
+    ],
+    "correctAnswer": "Cada item deve ser classificado conforme sua natureza: mercadoria com NCM, serviço com NBS",
+    "explanation": "Quando uma nota mistura mercadoria e serviço, cada item deve levar seu código próprio: NCM para o bem físico e NBS para o serviço.",
+    "pacciTip": "Buquê é NCM, entrega é NBS, tesoro! Cada coisa no seu devido código."
+  },
+  {
+    "id": "REF-AUX-040",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Numa metalúrgica, o analista fiscal explica que o IBS, na verdade, é formado pela soma de duas parcelas diferentes.",
+    "question": "O IBS é formado pela soma de quais parcelas?",
+    "options": [
+      "Uma parcela estadual e uma parcela municipal",
+      "Uma parcela federal e uma estadual",
+      "Apenas uma parcela federal",
+      "Uma parcela para cada Região do Brasil"
+    ],
+    "correctAnswer": "Uma parcela estadual e uma parcela municipal",
+    "explanation": "O IBS reúne, numa só cobrança, a parcela devida ao Estado e a parcela devida ao Município.",
+    "pacciTip": "Dois donos, um imposto só, capisce? Estado e Município dividem o IBS."
+  },
+  {
+    "id": "REF-AUX-041",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Num posto de combustível, o atendente cadastra um novo lubrificante no sistema, que pede o preenchimento de dois códigos diferentes.",
+    "question": "Ao cadastrar um novo produto físico no ERP, quais dois códigos relacionados à tributação normalmente são exigidos?",
+    "options": [
+      "NCM e cClassTrib",
+      "NBS e CNAE",
+      "CFOP e CNPJ",
+      "CST e CEST apenas"
+    ],
+    "correctAnswer": "NCM e cClassTrib",
+    "explanation": "Todo produto físico precisa do NCM (para identificar a mercadoria) e do cClassTrib (para indicar o tratamento tributário do IBS/CBS).",
+    "pacciTip": "NCM diz o que é, cClassTrib diz como é tributado, tesoro! Os dois andam juntos."
+  },
+  {
+    "id": "REF-AUX-042",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Numa livraria, o funcionário percebe que os livros vendidos não têm cobrança de IBS/CBS destacada na nota.",
+    "question": "Por que a venda de livros normalmente não tem cobrança de IBS/CBS?",
+    "options": [
+      "Porque livros mantêm tratamento favorecido (imunidade/alíquota zero), como já ocorria antes da reforma",
+      "Porque livrarias são dispensadas de emitir NF-e",
+      "Porque livros são tributados só pelo Imposto Seletivo",
+      "Porque livros não têm NCM"
+    ],
+    "correctAnswer": "Porque livros mantêm tratamento favorecido (imunidade/alíquota zero), como já ocorria antes da reforma",
+    "explanation": "A reforma preservou o tratamento tributário favorecido que os livros já tinham, mantendo a alíquota reduzida a zero.",
+    "pacciTip": "Livro sempre teve esse carinho, tesoro! A reforma não mexeu nesse benefício."
+  },
+  {
+    "id": "REF-AUX-043",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Numa cooperativa agrícola, o contador comenta que a reforma prevê tratamento diferenciado para pequenos produtores rurais.",
+    "question": "Em relação ao agronegócio, o que a reforma tributária prevê?",
+    "options": [
+      "Regimes específicos e alíquotas diferenciadas para produtores rurais e o setor agropecuário",
+      "A extinção total de qualquer tributo sobre o agronegócio",
+      "A obrigatoriedade de todos os produtores se tornarem grandes empresas",
+      "A eliminação do NCM para produtos agrícolas"
+    ],
+    "correctAnswer": "Regimes específicos e alíquotas diferenciadas para produtores rurais e o setor agropecuário",
+    "explanation": "A reforma prevê regimes específicos, com alíquotas e regras próprias, para o setor agropecuário e para produtores rurais.",
+    "pacciTip": "Campo tem regra sua, tesoro! A reforma pensou no agro com carinho especial."
+  },
+  {
+    "id": "REF-AUX-044",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "O gerente de uma franquia de fast food lê num informativo que o Brasil está adotando um modelo tributário parecido com o de outros países.",
+    "question": "O modelo formado por IBS + CBS é popularmente descrito como um:",
+    "options": [
+      "IVA dual (Imposto sobre Valor Agregado dividido em duas partes)",
+      "Imposto único federal",
+      "Substituto direto do Imposto de Renda",
+      "Tributo exclusivo para exportações"
+    ],
+    "correctAnswer": "IVA dual (Imposto sobre Valor Agregado dividido em duas partes)",
+    "explanation": "IBS e CBS juntos formam o que se chama de IVA dual: um modelo de Imposto sobre Valor Agregado dividido entre duas competências.",
+    "pacciTip": "IVA dual, tesoro, é dois numa dança só! IBS e CBS de mãos dadas."
+  },
+  {
+    "id": "REF-AUX-045",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa distribuidora de eletrônicos, um colega afirma que a CBS é um tributo de competência estadual, assim como o IBS.",
+    "question": "A CBS é um tributo de competência estadual, assim como o IBS?",
+    "correctAnswer": false,
+    "explanation": "Errado! A CBS é de competência federal. Quem é estadual e municipal é o IBS.",
+    "pacciTip": "Nooo, tesoro, CBS mora com a União! Não confunde os endereços dos tributos."
+  },
+  {
+    "id": "REF-AUX-046",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa farmácia, a atendente acha que os remédios pagam Imposto Seletivo por serem produtos 'sensíveis'.",
+    "question": "Medicamentos estão sujeitos ao Imposto Seletivo, assim como cigarros e bebidas alcoólicas?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Imposto Seletivo incide sobre produtos prejudiciais à saúde ou ao meio ambiente; medicamentos costumam ter redução de alíquota, não incidência de Imposto Seletivo.",
+    "pacciTip": "Remédio cura, não pune! Seletivo é pra quem faz mal, não pra quem ajuda."
+  },
+  {
+    "id": "REF-AUX-047",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa loja de departamentos, o gerente diz que o Split Payment funciona por meio de um boleto separado, para o cliente pagar o tributo depois.",
+    "question": "O Split Payment funciona por meio da emissão de um boleto separado para o cliente pagar o tributo depois?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Split Payment segrega automaticamente o valor do tributo já no momento do próprio pagamento eletrônico, sem boleto à parte.",
+    "pacciTip": "Não tem boleto extra, tesoro! O tributo já sai separado na hora do pagamento."
+  },
+  {
+    "id": "REF-AUX-048",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Num escritório de contabilidade, um colega diz que o Comitê Gestor do IBS é um órgão exclusivamente federal, vinculado à Receita Federal.",
+    "question": "O Comitê Gestor do IBS é um órgão exclusivamente federal, vinculado à Receita Federal?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Comitê Gestor do IBS reúne representantes dos Estados e dos Municípios, e não é vinculado à Receita Federal.",
+    "pacciTip": "É um comitê de Estados e Municípios, amico! A União nem participa dessa mesa."
+  },
+  {
+    "id": "REF-AUX-049",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "No caixa de um supermercado, a operadora afirma que todo produto da cesta básica está dispensado de emissão de nota fiscal.",
+    "question": "Produtos da cesta básica nacional ficam dispensados de emissão de nota fiscal?",
+    "correctAnswer": false,
+    "explanation": "Errado! Esses produtos continuam exigindo NF-e normalmente; o que muda é a alíquota de IBS/CBS, reduzida a zero.",
+    "pacciTip": "Nota fiscal continua obrigatória, tesoro! Só a alíquota é que fica zerada."
+  },
+  {
+    "id": "REF-AUX-050",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa revenda de veículos, o vendedor afirma que carros elétricos pagam o mesmo Imposto Seletivo que carros a combustão mais poluentes.",
+    "question": "Carros elétricos pagam o mesmo Imposto Seletivo que carros a combustão movidos por energia mais poluente?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Imposto Seletivo busca desestimular produtos mais poluentes, então veículos menos poluentes tendem a ter tratamento mais favorável.",
+    "pacciTip": "Elétrico polui menos, paga menos Seletivo, capisce? A conta muda com o motor."
+  },
+  {
+    "id": "REF-AUX-051",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Num e-commerce, o analista financeiro diz que a nota emitida para consumidor final não precisa de cClassTrib por ser 'venda de varejo simples'.",
+    "question": "Notas emitidas para consumidor final (venda de varejo) ficam dispensadas do preenchimento do cClassTrib?",
+    "correctAnswer": false,
+    "explanation": "Errado! O cClassTrib é exigido em qualquer NF-e sujeita ao IBS/CBS, independentemente de o destinatário ser consumidor final ou empresa.",
+    "pacciTip": "Nooo, cClassTrib não escolhe cliente, tesoro! Vale pra toda nota sujeita ao IBS/CBS."
+  },
+  {
+    "id": "REF-AUX-052",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa transportadora internacional, o despachante diz que produtos importados não pagam IBS/CBS porque já foram tributados no país de origem.",
+    "question": "Produtos importados estão isentos de IBS/CBS por já terem sido tributados no país de origem?",
+    "correctAnswer": false,
+    "explanation": "Errado! O novo modelo tributa também as importações, equiparando-as às operações internas.",
+    "pacciTip": "Veio de fora, mas o IBS/CBS não perdoa, amico! Importação paga igual à venda interna."
+  },
+  {
+    "id": "REF-AUX-053",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa escola de idiomas, a secretária afirma que serviços de educação têm a mesma alíquota cheia de IBS/CBS que um serviço qualquer.",
+    "question": "Serviços de educação têm, em regra, a mesma alíquota cheia de IBS/CBS que um serviço qualquer?",
+    "correctAnswer": false,
+    "explanation": "Errado! Setores como educação e saúde têm previsão de redução de alíquota de IBS/CBS.",
+    "pacciTip": "Educação ganha desconto, tesoro! Não é alíquota cheia igual a qualquer outro serviço."
+  },
+  {
+    "id": "REF-AUX-054",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa indústria química, o engenheiro de produção acredita que o NCM vai deixar de existir, sendo totalmente substituído pelo cClassTrib.",
+    "question": "O NCM deixará de ser usado, sendo totalmente substituído pelo cClassTrib?",
+    "correctAnswer": false,
+    "explanation": "Errado! O NCM continua identificando a mercadoria; o cClassTrib é um campo adicional sobre o tratamento tributário, não um substituto do NCM.",
+    "pacciTip": "Os dois convivem, tesoro! NCM diz o que é, cClassTrib diz como é tributado."
+  },
+  {
+    "id": "REF-AUX-055",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa livraria, o funcionário diz que os livros passarão a pagar IBS/CBS normalmente, perdendo qualquer benefício com a reforma.",
+    "question": "Com a reforma, os livros perderão o tratamento tributário favorecido que já tinham antes?",
+    "correctAnswer": false,
+    "explanation": "Errado! A reforma manteve o tratamento tributário favorecido dos livros, com alíquota reduzida a zero.",
+    "pacciTip": "Livro continua com seu carinho especial, amico! Ninguém tirou esse benefício."
+  },
+  {
+    "id": "REF-AUX-056",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa cooperativa de crédito, o gerente diz que o Simples Nacional será extinto imediatamente com a entrada da reforma tributária.",
+    "question": "O Simples Nacional será extinto imediatamente com a entrada da reforma tributária?",
+    "correctAnswer": false,
+    "explanation": "Errado! Empresas do Simples Nacional podem manter suas regras próprias ou, conforme o caso, optar por aderir ao regime regular do IBS/CBS.",
+    "pacciTip": "Simples continua de pé, tesoro! Ninguém apagou ele do mapa."
+  },
+  {
+    "id": "REF-AUX-057",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa fábrica de bebidas, o analista comenta que a alíquota de referência do IBS é um número único, igual para o país inteiro.",
+    "question": "A alíquota de referência do IBS é um número único, igual para todos os Estados e Municípios do Brasil?",
+    "correctAnswer": false,
+    "explanation": "Errado! Cada Estado e Município calcula sua própria alíquota de referência, podendo variar entre entes.",
+    "pacciTip": "Cada terra tem sua conta, capisce? A alíquota de referência não é igual em todo canto."
+  },
+  {
+    "id": "REF-AUX-058",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Num petshop que também presta serviço veterinário, o dono acha que a ração precisa de NBS, já que é vendida junto com um serviço.",
+    "question": "A ração de animais, por ser vendida numa loja que também presta serviço veterinário, deve ser classificada com NBS?",
+    "correctAnswer": false,
+    "explanation": "Errado! A ração é mercadoria (bem físico), então usa NCM; a NBS seria só para o serviço veterinário em si.",
+    "pacciTip": "Ração é NCM, consulta é NBS, tesoro! Não mistura os dois códigos."
+  },
+  {
+    "id": "REF-AUX-059",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa agência de marketing, o financeiro acredita que qualquer serviço prestado pela agência é automaticamente isento de IBS/CBS.",
+    "question": "Serviços prestados por agências de marketing são automaticamente isentos de IBS/CBS?",
+    "correctAnswer": false,
+    "explanation": "Errado! Serviços em geral são tributados normalmente pelo IBS/CBS, salvo regimes específicos previstos em lei.",
+    "pacciTip": "Serviço de marketing paga sim, amico! Não existe isenção automática por ser 'só divulgação'."
+  },
+  {
+    "id": "REF-AUX-060",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa metalúrgica, o supervisor diz que o IBS é composto apenas por uma parcela municipal, sem parcela estadual.",
+    "question": "O IBS é composto apenas por uma parcela municipal, sem parcela estadual?",
+    "correctAnswer": false,
+    "explanation": "Errado! O IBS reúne uma parcela estadual e uma parcela municipal, somadas numa só cobrança.",
+    "pacciTip": "Faltou o Estado na conta, tesoro! O IBS tem as duas parcelas, sempre juntas."
+  },
+  {
+    "id": "REF-AUX-061",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa clínica odontológica, a recepcionista diz que a NF-e será totalmente substituída por um novo documento chamado cClassTrib.",
+    "question": "O cClassTrib é um novo tipo de documento fiscal que substitui a NF-e?",
+    "correctAnswer": false,
+    "explanation": "Errado! O cClassTrib é apenas um campo dentro da NF-e, e não um documento novo.",
+    "pacciTip": "cClassTrib é campo, não documento, capisce? A NF-e continua sendo a rainha."
+  },
+  {
+    "id": "REF-AUX-062",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa loja de eletrodomésticos, o vendedor afirma que, durante a transição, o consumidor pagará a soma total dos tributos antigos mais os novos, dobrando o valor.",
+    "question": "Durante a transição, o consumidor pagará a soma total dos tributos antigos mais os novos, dobrando a carga tributária?",
+    "correctAnswer": false,
+    "explanation": "Errado! A transição prevê ajustes nas alíquotas para manter a carga tributária equivalente, e não uma soma simples que dobraria o valor pago.",
+    "pacciTip": "Não é conta dobrada, tesoro! As alíquotas se ajustam pra manter o equilíbrio."
+  },
+  {
+    "id": "REF-AUX-063",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa distribuidora de medicamentos, o farmacêutico responsável diz que produtos sujeitos ao Imposto Seletivo ficam dispensados de informar o NCM.",
+    "question": "Produtos sujeitos ao Imposto Seletivo ficam dispensados de informar o NCM na nota fiscal?",
+    "correctAnswer": false,
+    "explanation": "Errado! O NCM continua obrigatório para identificar a mercadoria, independentemente da incidência do Imposto Seletivo.",
+    "pacciTip": "NCM não tira folga por causa do Seletivo, amico! Os dois convivem na mesma nota."
+  },
+  {
+    "id": "REF-AUX-064",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa construtora, o engenheiro de obra diz que, já na fase de testes de 2026, o IBS/CBS é cobrado com as alíquotas cheias e definitivas.",
+    "question": "Na fase de testes iniciada em 2026, o IBS e a CBS já são cobrados com as alíquotas cheias e definitivas?",
+    "correctAnswer": false,
+    "explanation": "Errado! Em 2026 a cobrança é simbólica, apenas para testar os sistemas antes da aplicação efetiva das alíquotas.",
+    "pacciTip": "Ainda é treino, tesoro! Alíquota cheia chega só mais pra frente."
+  },
+  {
+    "id": "REF-AUX-065",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa revenda de peças automotivas, o balconista diz que o CFOP deixará de existir com a reforma tributária.",
+    "question": "O CFOP deixará de ser utilizado nas notas fiscais após a reforma tributária?",
+    "correctAnswer": false,
+    "explanation": "Errado! O CFOP continua sendo utilizado para indicar a natureza da operação, ao lado dos novos campos como o cClassTrib.",
+    "pacciTip": "CFOP não vai embora, amico! Ele fica trabalhando junto com os campos novos."
+  },
+  {
+    "id": "REF-AUX-066",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa rede de hotéis, a recepcionista diz que o IBS pertence sempre ao Estado onde a empresa vendedora está sediada, e não ao destino do serviço.",
+    "question": "O IBS pertence sempre ao Estado/Município de origem da empresa que vende, e não ao de destino?",
+    "correctAnswer": false,
+    "explanation": "Errado! No novo modelo, o IBS é destinado ao ente federativo de destino da operação, não ao de origem.",
+    "pacciTip": "O IBS segue pro destino, tesoro! É lá que ele fica de vez."
+  },
+  {
+    "id": "REF-AUX-067",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa gráfica rápida, o atendente diz que o DANFE tem mais validade jurídica perante o Fisco do que a própria NF-e eletrônica.",
+    "question": "O DANFE (documento impresso) tem mais validade jurídica que a própria NF-e eletrônica?",
+    "correctAnswer": false,
+    "explanation": "Errado! O documento que vale legalmente é a NF-e eletrônica; o DANFE é apenas sua representação simplificada para acompanhar a mercadoria.",
+    "pacciTip": "A nota de verdade mora no sistema, tesoro! O DANFE é só o retrato dela impresso."
+  },
+  {
+    "id": "REF-AUX-068",
+    "level": "auxiliar",
+    "type": "true_false",
+    "scenario": "Numa indústria têxtil, o analista fiscal comenta que a não cumulatividade ampla permite, em regra, aproveitar como crédito o tributo pago nas compras da empresa.",
+    "question": "A não cumulatividade ampla prevista na reforma permite, em regra, aproveitar como crédito o tributo pago nas compras da empresa?",
+    "correctAnswer": true,
+    "explanation": "Correto! Esse é um dos princípios centrais do novo modelo, criado para evitar o efeito cascata na cadeia produtiva.",
+    "pacciTip": "Sì, sì! Pagou na compra, credita depois. Assim ninguém paga imposto sobre imposto."
+  },
+  {
+    "id": "REF-AUX-069",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Um cliente devolve um produto com defeito numa loja de eletrônicos e você precisa emitir a nota fiscal de devolução correspondente.",
+    "question": "Ordene os passos corretos para emitir essa nota de devolução:",
+    "options": [
+      "Transmitir a nota de devolução para a SEFAZ",
+      "Repetir o NCM e a classificação tributária (cClassTrib) usados na venda",
+      "Localizar a nota fiscal de venda original",
+      "Emitir a nota de devolução referenciando a nota original"
+    ],
+    "correctAnswer": [
+      "Localizar a nota fiscal de venda original",
+      "Emitir a nota de devolução referenciando a nota original",
+      "Repetir o NCM e a classificação tributária (cClassTrib) usados na venda",
+      "Transmitir a nota de devolução para a SEFAZ"
+    ],
+    "explanation": "A devolução parte da nota original, referencia-a, repete a classificação usada na venda e só então é transmitida.",
+    "pacciTip": "Devolução começa olhando pra trás, tesoro! Acha a nota original antes de qualquer coisa."
+  },
+  {
+    "id": "REF-AUX-070",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "A matriz de uma rede de farmácias precisa enviar um lote de medicamentos para uma filial em outro Estado, e você deve emitir a nota de transferência.",
+    "question": "Ordene o processo correto de emissão dessa nota de transferência entre filiais:",
+    "options": [
+      "Transmitir a nota e providenciar o transporte",
+      "Preencher o cClassTrib aplicável à operação",
+      "Selecionar os produtos e conferir o NCM de cada um",
+      "Informar o CFOP de transferência entre filiais"
+    ],
+    "correctAnswer": [
+      "Selecionar os produtos e conferir o NCM de cada um",
+      "Informar o CFOP de transferência entre filiais",
+      "Preencher o cClassTrib aplicável à operação",
+      "Transmitir a nota e providenciar o transporte"
+    ],
+    "explanation": "Primeiro identifica-se o produto (NCM), depois a natureza da operação (CFOP), em seguida a classificação tributária, e só então se transmite e transporta.",
+    "pacciTip": "Produto, operação, tributo, transporte, tesoro! Essa ordem nunca falha."
+  },
+  {
+    "id": "REF-AUX-071",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Chegou numa distribuidora de bebidas uma nota de compra de bebidas alcoólicas, e você precisa conferir se o Imposto Seletivo foi corretamente destacado.",
+    "question": "Ordene os passos corretos dessa conferência:",
+    "options": [
+      "Registrar a conferência como aprovada ou sinalizar divergência",
+      "Confirmar se o NCM do produto está correto",
+      "Verificar se o valor do Imposto Seletivo está destacado separadamente do IBS/CBS",
+      "Conferir se o produto realmente se enquadra na lista sujeita ao Imposto Seletivo"
+    ],
+    "correctAnswer": [
+      "Confirmar se o NCM do produto está correto",
+      "Conferir se o produto realmente se enquadra na lista sujeita ao Imposto Seletivo",
+      "Verificar se o valor do Imposto Seletivo está destacado separadamente do IBS/CBS",
+      "Registrar a conferência como aprovada ou sinalizar divergência"
+    ],
+    "explanation": "A conferência começa pela identificação do produto (NCM), passa pelo enquadramento no Imposto Seletivo, confirma o valor destacado e só então é registrada.",
+    "pacciTip": "Confere o produto, confere a regra, confere o valor, aí sim fecha o caso, capisce?"
+  },
+  {
+    "id": "REF-AUX-072",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma consultoria de TI vai passar a vender um novo pacote de suporte técnico, e você precisa cadastrar esse serviço no ERP antes da primeira nota.",
+    "question": "Ordene o fluxo correto de cadastro desse novo serviço:",
+    "options": [
+      "Liberar o serviço para faturamento",
+      "Descrever o serviço no cadastro",
+      "Definir a classificação tributária padrão (cClassTrib) do serviço",
+      "Informar o código NBS correspondente"
+    ],
+    "correctAnswer": [
+      "Descrever o serviço no cadastro",
+      "Informar o código NBS correspondente",
+      "Definir a classificação tributária padrão (cClassTrib) do serviço",
+      "Liberar o serviço para faturamento"
+    ],
+    "explanation": "O cadastro de serviço segue a mesma lógica do produto: descreve-se, classifica-se pela NBS, define-se o cClassTrib e só então libera-se para venda.",
+    "pacciTip": "Serviço também tem seu ritual de cadastro, tesoro! Descreve, classifica, libera."
+  },
+  {
+    "id": "REF-AUX-073",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Numa auditoria interna de uma indústria de alimentos, você percebe que várias notas emitidas usaram um cClassTrib incorreto para o mesmo produto.",
+    "question": "Ordene os passos corretos para tratar essa divergência:",
+    "options": [
+      "Avaliar se é preciso emitir carta de correção ou cancelar e reemitir as notas",
+      "Identificar todas as notas afetadas pelo erro",
+      "Corrigir o cadastro do produto no ERP",
+      "Confirmar qual é o cClassTrib correto para o produto"
+    ],
+    "correctAnswer": [
+      "Identificar todas as notas afetadas pelo erro",
+      "Confirmar qual é o cClassTrib correto para o produto",
+      "Corrigir o cadastro do produto no ERP",
+      "Avaliar se é preciso emitir carta de correção ou cancelar e reemitir as notas"
+    ],
+    "explanation": "Primeiro mapeia-se o problema, depois confirma-se a informação correta, corrige-se o cadastro e, por fim, decide-se o tratamento das notas já emitidas.",
+    "pacciTip": "Achou o erro? Mapeia tudo antes de sair corrigindo, tesoro! Ordem evita bagunça."
+  },
+  {
+    "id": "REF-AUX-074",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma indústria de calçados fechou uma venda para um cliente no exterior, e você precisa emitir a nota fiscal dessa exportação.",
+    "question": "Ordene os passos corretos para emitir essa nota de exportação:",
+    "options": [
+      "Verificar o tratamento tributário de imunidade aplicável à exportação",
+      "Confirmar os dados do comprador estrangeiro e o NCM da mercadoria",
+      "Transmitir a nota e reunir a documentação para o despacho aduaneiro",
+      "Informar o CFOP específico de exportação"
+    ],
+    "correctAnswer": [
+      "Confirmar os dados do comprador estrangeiro e o NCM da mercadoria",
+      "Informar o CFOP específico de exportação",
+      "Verificar o tratamento tributário de imunidade aplicável à exportação",
+      "Transmitir a nota e reunir a documentação para o despacho aduaneiro"
+    ],
+    "explanation": "A exportação segue do cadastro do comprador e do produto, passa pela operação específica, confirma a imunidade e finaliza com a transmissão e a documentação aduaneira.",
+    "pacciTip": "Exportação tem seu próprio ritual, amico! Comprador, operação, imunidade, despacho."
+  },
+  {
+    "id": "REF-AUX-075",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "O sistema de uma rede de supermercados foi atualizado para a fase de testes do IBS/CBS em 2026, e você precisa validar se está tudo certo antes de liberar para as lojas.",
+    "question": "Ordene o processo correto de validação dessa atualização:",
+    "options": [
+      "Liberar o sistema atualizado para uso em produção",
+      "Emitir notas de teste com os novos campos preenchidos",
+      "Reportar eventuais erros para o time de TI",
+      "Conferir se o IBS/CBS aparece com a alíquota simbólica esperada"
+    ],
+    "correctAnswer": [
+      "Emitir notas de teste com os novos campos preenchidos",
+      "Conferir se o IBS/CBS aparece com a alíquota simbólica esperada",
+      "Reportar eventuais erros para o time de TI",
+      "Liberar o sistema atualizado para uso em produção"
+    ],
+    "explanation": "Primeiro testa-se emitindo notas, depois confere-se o resultado, reportam-se erros e só então o sistema é liberado para todas as lojas.",
+    "pacciTip": "Testa antes de liberar geral, tesoro! Erro achado no teste é erro que não vira dor de cabeça depois."
+  },
+  {
+    "id": "REF-AUX-076",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma loja de conveniência começou a operar com um sistema de pagamento que já simula o split payment, e você precisa entender o fluxo dessa venda.",
+    "question": "Ordene as etapas dessa venda com split payment:",
+    "options": [
+      "O valor líquido (sem o tributo) é repassado à conta da loja",
+      "Cliente finaliza a compra e paga com cartão",
+      "O valor do tributo é automaticamente segregado no processamento do pagamento",
+      "O sistema calcula o valor de IBS/CBS devido na operação"
+    ],
+    "correctAnswer": [
+      "Cliente finaliza a compra e paga com cartão",
+      "O sistema calcula o valor de IBS/CBS devido na operação",
+      "O valor do tributo é automaticamente segregado no processamento do pagamento",
+      "O valor líquido (sem o tributo) é repassado à conta da loja"
+    ],
+    "explanation": "No split payment, o pagamento é feito, o tributo é calculado, segregado automaticamente e só o valor líquido chega até a loja.",
+    "pacciTip": "O tributo já sai separado, tesoro! A loja recebe só o que é dela."
+  },
+  {
+    "id": "REF-AUX-077",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Um novo item de mercearia está sendo cadastrado num supermercado, e você precisa verificar se ele se enquadra na cesta básica nacional.",
+    "question": "Ordene os passos corretos dessa verificação:",
+    "options": [
+      "Salvar o cadastro do produto com o tratamento correto",
+      "Verificar se o NCM do produto consta nessa lista",
+      "Consultar a lista oficial de produtos da cesta básica nacional",
+      "Aplicar a classificação tributária (cClassTrib) de alíquota zero, se aplicável"
+    ],
+    "correctAnswer": [
+      "Consultar a lista oficial de produtos da cesta básica nacional",
+      "Verificar se o NCM do produto consta nessa lista",
+      "Aplicar a classificação tributária (cClassTrib) de alíquota zero, se aplicável",
+      "Salvar o cadastro do produto com o tratamento correto"
+    ],
+    "explanation": "Consulta-se a lista oficial, confere-se o NCM do item, aplica-se a classificação tributária correspondente e só então se salva o cadastro.",
+    "pacciTip": "Antes de zerar a alíquota, confere na lista oficial, tesoro! Não é só achismo."
+  },
+  {
+    "id": "REF-AUX-078",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Chegou numa loja de material de construção uma nota de compra de um fornecedor optante pelo Simples Nacional, e você precisa conferi-la antes de lançar.",
+    "question": "Ordene os passos corretos dessa conferência:",
+    "options": [
+      "Lançar a nota no sistema",
+      "Confirmar que o fornecedor está corretamente identificado como optante pelo Simples Nacional",
+      "Checar se o NCM e o cClassTrib estão coerentes com o produto",
+      "Verificar o tratamento tributário aplicado na nota"
+    ],
+    "correctAnswer": [
+      "Confirmar que o fornecedor está corretamente identificado como optante pelo Simples Nacional",
+      "Verificar o tratamento tributário aplicado na nota",
+      "Checar se o NCM e o cClassTrib estão coerentes com o produto",
+      "Lançar a nota no sistema"
+    ],
+    "explanation": "Confirma-se primeiro o regime do fornecedor, depois o tratamento tributário aplicado, checam-se os códigos do produto e só então lança-se a nota.",
+    "pacciTip": "Fornecedor do Simples também merece conferência caprichada, amico! Passo a passo, sem pular etapa."
+  },
+  {
+    "id": "REF-AUX-079",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "A tabela de NCM foi atualizada pelo governo, e um dos produtos de uma indústria de brinquedos precisa ter o código corrigido no ERP.",
+    "question": "Ordene o processo correto dessa atualização de cadastro:",
+    "options": [
+      "Validar que as próximas notas emitidas já saem com o NCM correto",
+      "Identificar quais produtos foram afetados pela mudança de NCM",
+      "Atualizar o cadastro do produto no ERP",
+      "Consultar a nova classificação correta na tabela oficial"
+    ],
+    "correctAnswer": [
+      "Identificar quais produtos foram afetados pela mudança de NCM",
+      "Consultar a nova classificação correta na tabela oficial",
+      "Atualizar o cadastro do produto no ERP",
+      "Validar que as próximas notas emitidas já saem com o NCM correto"
+    ],
+    "explanation": "Primeiro identifica-se o impacto da mudança, consulta-se a tabela oficial, atualiza-se o cadastro e valida-se o resultado nas próximas notas.",
+    "pacciTip": "Tabela mudou? Vai atrás, atualiza e confere se pegou, tesoro! Sem esse último passo, o erro volta."
+  },
+  {
+    "id": "REF-AUX-080",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Um escritório de advocacia presta um serviço de consultoria jurídica para um grande cliente que exige retenção de tributos na fonte.",
+    "question": "Ordene o processo correto de emissão dessa nota de serviço:",
+    "options": [
+      "Enviar a nota para aprovação do financeiro antes do envio final",
+      "Emitir a nota de serviço informando o NBS correto",
+      "Informar os valores retidos conforme regra do cliente",
+      "Preencher a classificação tributária (cClassTrib) do serviço"
+    ],
+    "correctAnswer": [
+      "Emitir a nota de serviço informando o NBS correto",
+      "Preencher a classificação tributária (cClassTrib) do serviço",
+      "Informar os valores retidos conforme regra do cliente",
+      "Enviar a nota para aprovação do financeiro antes do envio final"
+    ],
+    "explanation": "A nota de serviço com retenção segue: classificação do serviço (NBS), tratamento tributário (cClassTrib), valores retidos e, por fim, aprovação interna.",
+    "pacciTip": "Retenção exige um cuidado a mais, tesoro! Confere tudo antes de mandar pro cliente."
+  },
+  {
+    "id": "REF-AUX-081",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Ao conferir um pedido recebido numa distribuidora de ferramentas, você percebe que a nota descreve uma furadeira, mas o NCM informado parece ser de outro produto.",
+    "question": "Ordene os passos corretos para tratar essa possível divergência:",
+    "options": [
+      "Registrar a ocorrência para acompanhamento até a correção",
+      "Comparar a descrição do produto com o NCM informado na nota",
+      "Comunicar o fornecedor sobre o possível erro",
+      "Consultar a tabela de NCM para confirmar a divergência"
+    ],
+    "correctAnswer": [
+      "Comparar a descrição do produto com o NCM informado na nota",
+      "Consultar a tabela de NCM para confirmar a divergência",
+      "Comunicar o fornecedor sobre o possível erro",
+      "Registrar a ocorrência para acompanhamento até a correção"
+    ],
+    "explanation": "Primeiro compara-se descrição e código, confirma-se na tabela oficial, comunica-se o fornecedor e registra-se a ocorrência para acompanhamento.",
+    "pacciTip": "Desconfiou do NCM? Confere na tabela antes de acusar, tesoro! Depois é só avisar e acompanhar."
+  },
+  {
+    "id": "REF-AUX-082",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Um caminhão chega numa distribuidora de bebidas com uma carga de mercadorias, e você precisa conferir a nota fiscal antes de dar entrada no estoque.",
+    "question": "Ordene os passos corretos dessa conferência de recebimento:",
+    "options": [
+      "Dar entrada da mercadoria no estoque do sistema",
+      "Conferir se a quantidade física recebida bate com a nota",
+      "Checar os valores de IBS/CBS destacados",
+      "Verificar o NCM de cada item recebido"
+    ],
+    "correctAnswer": [
+      "Conferir se a quantidade física recebida bate com a nota",
+      "Verificar o NCM de cada item recebido",
+      "Checar os valores de IBS/CBS destacados",
+      "Dar entrada da mercadoria no estoque do sistema"
+    ],
+    "explanation": "A conferência de recebimento vai do físico ao fiscal: quantidade, classificação do produto, valores de tributo e só então a entrada no estoque.",
+    "pacciTip": "Primeiro conta, depois confere o código, depois o tributo, aí sim guarda no estoque, capisce?"
+  },
+  {
+    "id": "REF-AUX-083",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Numa gráfica, você percebe que uma nota já transmitida tem um pequeno erro no campo de classificação tributária e precisa corrigi-la sem cancelar a nota.",
+    "question": "Ordene os passos corretos para essa correção:",
+    "options": [
+      "Arquivar a carta de correção junto com a nota original",
+      "Identificar o campo que contém o erro",
+      "Emitir a carta de correção detalhando o ajuste",
+      "Verificar se o erro é do tipo que pode ser corrigido por carta de correção"
+    ],
+    "correctAnswer": [
+      "Identificar o campo que contém o erro",
+      "Verificar se o erro é do tipo que pode ser corrigido por carta de correção",
+      "Emitir a carta de correção detalhando o ajuste",
+      "Arquivar a carta de correção junto com a nota original"
+    ],
+    "explanation": "Primeiro identifica-se o erro, avalia-se se cabe carta de correção, emite-se o documento e arquiva-se junto com a nota original.",
+    "pacciTip": "Nem todo erro se corrige do mesmo jeito, tesoro! Primeiro avalia, depois corrige."
+  },
+  {
+    "id": "REF-AUX-084",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Um novo auxiliar administrativo entrou numa empresa de logística, e você foi designado para treiná-lo na emissão de notas fiscais.",
+    "question": "Ordene os passos corretos desse treinamento:",
+    "options": [
+      "Acompanhar a emissão da primeira nota feita pelo novo funcionário",
+      "Apresentar o layout atualizado da NF-e e seus principais campos",
+      "Mostrar como preencher o cClassTrib em um exemplo prático",
+      "Explicar a diferença entre NCM e NBS"
+    ],
+    "correctAnswer": [
+      "Apresentar o layout atualizado da NF-e e seus principais campos",
+      "Explicar a diferença entre NCM e NBS",
+      "Mostrar como preencher o cClassTrib em um exemplo prático",
+      "Acompanhar a emissão da primeira nota feita pelo novo funcionário"
+    ],
+    "explanation": "O treinamento vai do geral (layout) para o específico (NCM/NBS, cClassTrib) e termina com a prática supervisionada.",
+    "pacciTip": "Ensina do básico ao específico, tesoro! E só solta a mão depois da primeira nota supervisionada."
+  },
+  {
+    "id": "REF-AUX-085",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "No fim do mês, o setor fiscal de uma indústria metalúrgica precisa fechar todas as notas emitidas para o relatório de faturamento.",
+    "question": "Ordene os passos corretos desse fechamento mensal:",
+    "options": [
+      "Enviar o fechamento para a área de contabilidade",
+      "Reunir todas as notas emitidas no período",
+      "Verificar se os totais de IBS/CBS batem com o relatório do sistema",
+      "Conferir se todas têm o cClassTrib preenchido corretamente"
+    ],
+    "correctAnswer": [
+      "Reunir todas as notas emitidas no período",
+      "Conferir se todas têm o cClassTrib preenchido corretamente",
+      "Verificar se os totais de IBS/CBS batem com o relatório do sistema",
+      "Enviar o fechamento para a área de contabilidade"
+    ],
+    "explanation": "O fechamento reúne as notas, confere os campos obrigatórios, valida os totais e só então segue para a contabilidade.",
+    "pacciTip": "Fechamento é revisão fina, tesoro! Reúne, confere, valida, manda pra frente."
+  },
+  {
+    "id": "REF-AUX-086",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma venda foi feita por um e-commerce para um cliente de outro Estado, e você quer confirmar para onde vai o IBS dessa operação antes de emitir a nota.",
+    "question": "Ordene os passos corretos dessa verificação:",
+    "options": [
+      "Emitir a nota fiscal",
+      "Identificar o Estado e Município de destino do cliente",
+      "Preencher os dados da nota conforme o destino identificado",
+      "Confirmar a alíquota de referência aplicável a esse destino"
+    ],
+    "correctAnswer": [
+      "Identificar o Estado e Município de destino do cliente",
+      "Confirmar a alíquota de referência aplicável a esse destino",
+      "Preencher os dados da nota conforme o destino identificado",
+      "Emitir a nota fiscal"
+    ],
+    "explanation": "Primeiro identifica-se o destino, confirma-se a alíquota daquele ente, preenchem-se os dados e só então a nota é emitida.",
+    "pacciTip": "O destino manda no IBS, tesoro! Descobre pra onde vai antes de emitir."
+  },
+  {
+    "id": "REF-AUX-087",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Um novo cliente pessoa jurídica fechou um contrato de compra com uma distribuidora atacadista, e você precisa cadastrá-lo no ERP antes da primeira nota.",
+    "question": "Ordene os passos corretos desse cadastro:",
+    "options": [
+      "Emitir a primeira nota de venda para o cliente",
+      "Coletar os dados cadastrais (CNPJ, endereço, inscrição) do cliente",
+      "Cadastrar o cliente no sistema",
+      "Validar esses dados junto à Receita Federal"
+    ],
+    "correctAnswer": [
+      "Coletar os dados cadastrais (CNPJ, endereço, inscrição) do cliente",
+      "Validar esses dados junto à Receita Federal",
+      "Cadastrar o cliente no sistema",
+      "Emitir a primeira nota de venda para o cliente"
+    ],
+    "explanation": "Coleta-se os dados, valida-se sua autenticidade, cadastra-se o cliente no sistema e só então emite-se a primeira nota.",
+    "pacciTip": "Cliente novo merece cadastro caprichado, tesoro! Valida antes de confiar de olhos fechados."
+  },
+  {
+    "id": "REF-AUX-088",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma indústria cosmética vai enviar amostras grátis de um novo produto para uma rede de lojas parceiras, e você precisa emitir a nota correspondente.",
+    "question": "Ordene os passos corretos dessa emissão:",
+    "options": [
+      "Transmitir a nota para acompanhar o envio",
+      "Selecionar os produtos e confirmar o NCM de cada amostra",
+      "Preencher o cClassTrib mesmo sem cobrança de valor",
+      "Informar o CFOP específico de amostra grátis"
+    ],
+    "correctAnswer": [
+      "Selecionar os produtos e confirmar o NCM de cada amostra",
+      "Informar o CFOP específico de amostra grátis",
+      "Preencher o cClassTrib mesmo sem cobrança de valor",
+      "Transmitir a nota para acompanhar o envio"
+    ],
+    "explanation": "Mesmo sem cobrança, a amostra grátis segue o mesmo fluxo: produto, operação específica, classificação tributária e transmissão.",
+    "pacciTip": "Amostra grátis não é 'de graça' no sistema, tesoro! Todos os campos continuam obrigatórios."
+  },
+  {
+    "id": "REF-AUX-089",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Uma nota de compra de um medicamento com tratamento tributário favorecido chegou para conferência numa farmácia, e você precisa validar se o benefício foi aplicado corretamente.",
+    "question": "Ordene os passos corretos dessa conferência:",
+    "options": [
+      "Aprovar a nota ou sinalizar divergência",
+      "Confirmar que o produto realmente tem direito ao tratamento favorecido",
+      "Checar se o valor de IBS/CBS cobrado é compatível com a alíquota reduzida ou zero",
+      "Verificar se o cClassTrib da nota reflete essa condição"
+    ],
+    "correctAnswer": [
+      "Confirmar que o produto realmente tem direito ao tratamento favorecido",
+      "Verificar se o cClassTrib da nota reflete essa condição",
+      "Checar se o valor de IBS/CBS cobrado é compatível com a alíquota reduzida ou zero",
+      "Aprovar a nota ou sinalizar divergência"
+    ],
+    "explanation": "Confirma-se o direito ao benefício, confere-se o campo que deveria refletir isso, valida-se o valor cobrado e só então se aprova a nota.",
+    "pacciTip": "Benefício tributário se confere em três camadas, tesoro! Direito, campo e valor."
+  },
+  {
+    "id": "REF-AUX-090",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Antes de transmitir uma nota de venda para outro Estado numa indústria de móveis, você percebe que o CFOP selecionado é o de operação interna, não interestadual.",
+    "question": "Ordene os passos corretos para corrigir esse erro antes da transmissão:",
+    "options": [
+      "Transmitir a nota corrigida",
+      "Identificar o erro no CFOP selecionado",
+      "Revalidar os demais campos da nota",
+      "Corrigir para o CFOP de operação interestadual"
+    ],
+    "correctAnswer": [
+      "Identificar o erro no CFOP selecionado",
+      "Corrigir para o CFOP de operação interestadual",
+      "Revalidar os demais campos da nota",
+      "Transmitir a nota corrigida"
+    ],
+    "explanation": "Identifica-se o erro, corrige-se o CFOP, revalida-se a nota inteira e só então se transmite.",
+    "pacciTip": "Achou o erro antes de transmitir? Sorte grande, tesoro! Corrige, revalida e manda."
+  },
+  {
+    "id": "REF-AUX-091",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Numa loja de informática, uma nota foi cancelada por ter usado o cClassTrib errado, e agora você precisa emitir a nota correta no lugar dela.",
+    "question": "Ordene os passos corretos dessa reemissão:",
+    "options": [
+      "Vincular a nova nota ao cancelamento da anterior, se exigido pelo sistema",
+      "Confirmar o cancelamento da nota original",
+      "Emitir a nova nota com os dados corrigidos",
+      "Identificar o cClassTrib correto para o produto"
+    ],
+    "correctAnswer": [
+      "Confirmar o cancelamento da nota original",
+      "Identificar o cClassTrib correto para o produto",
+      "Emitir a nova nota com os dados corrigidos",
+      "Vincular a nova nota ao cancelamento da anterior, se exigido pelo sistema"
+    ],
+    "explanation": "Confirma-se o cancelamento, identifica-se a informação correta, emite-se a nova nota e faz-se o vínculo entre as duas, se necessário.",
+    "pacciTip": "Cancelou? Confirma antes de reemitir, tesoro! Assim não cria confusão no sistema."
+  },
+  {
+    "id": "REF-AUX-092",
+    "level": "auxiliar",
+    "type": "ordering",
+    "scenario": "Toda semana, o setor fiscal de uma rede de farmácias faz uma auditoria por amostragem das notas emitidas para evitar erros recorrentes.",
+    "question": "Ordene os passos corretos dessa auditoria semanal:",
+    "options": [
+      "Repassar as correções necessárias para a equipe de emissão",
+      "Selecionar uma amostra de notas emitidas na semana",
+      "Registrar os erros encontrados e suas causas",
+      "Conferir NCM/NBS e cClassTrib de cada uma"
+    ],
+    "correctAnswer": [
+      "Selecionar uma amostra de notas emitidas na semana",
+      "Conferir NCM/NBS e cClassTrib de cada uma",
+      "Registrar os erros encontrados e suas causas",
+      "Repassar as correções necessárias para a equipe de emissão"
+    ],
+    "explanation": "A auditoria seleciona uma amostra, confere os campos principais, registra os erros e repassa as correções para quem emite.",
+    "pacciTip": "Auditoria boa não só aponta erro, tesoro! Ela repassa a correção pra não repetir."
+  },
+  {
+    "id": "REF-AUX-093",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Revisando uma nota de bebida alcoólica numa distribuidora, você percebe um tributo extra além do IBS/CBS.",
+    "question": "Bebidas alcoólicas estão sujeitas, além do IBS/CBS, à cobrança do Imposto ___.",
+    "options": [
+      "Seletivo",
+      "de Renda",
+      "Territorial",
+      "Predial"
+    ],
+    "correctAnswer": "Seletivo",
+    "explanation": "O Imposto Seletivo incide sobre produtos como bebidas alcoólicas, além do IBS/CBS normalmente devido.",
+    "pacciTip": "Bebida alcoólica sente o peso do Seletivo, tesoro! Ele gosta de aparecer nesses produtos."
+  },
+  {
+    "id": "REF-AUX-094",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "No financeiro de um e-commerce, discute-se um novo jeito de recolher tributo já no momento do pagamento com cartão.",
+    "question": "O mecanismo que separa automaticamente o valor do tributo no momento do pagamento eletrônico é chamado de ___ Payment.",
+    "options": [
+      "Split",
+      "Full",
+      "Fast",
+      "Auto"
+    ],
+    "correctAnswer": "Split",
+    "explanation": "O Split Payment segrega automaticamente o valor do tributo já no processamento do pagamento.",
+    "pacciTip": "Split Payment, tesoro! Separa na hora, sem drama depois."
+  },
+  {
+    "id": "REF-AUX-095",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Num escritório de contabilidade, o contador explica quem é responsável por administrar o IBS entre os entes federativos.",
+    "question": "O IBS é administrado por um órgão colegiado chamado Comitê ___ do IBS.",
+    "options": [
+      "Gestor",
+      "Fiscal",
+      "Diretor",
+      "Nacional"
+    ],
+    "correctAnswer": "Gestor",
+    "explanation": "O Comitê Gestor do IBS reúne Estados e Municípios para administrar a arrecadação e distribuição do imposto.",
+    "pacciTip": "Comitê Gestor, tesoro! Ele cuida do IBS pra todo mundo junto."
+  },
+  {
+    "id": "REF-AUX-096",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "No caixa de um supermercado, a operadora percebe alíquota zero na venda de arroz.",
+    "question": "Produtos da cesta ___ nacional têm alíquota de IBS/CBS reduzida a zero.",
+    "options": [
+      "básica",
+      "especial",
+      "importada",
+      "gourmet"
+    ],
+    "correctAnswer": "básica",
+    "explanation": "A cesta básica nacional reúne itens essenciais com alíquota de IBS/CBS reduzida a zero.",
+    "pacciTip": "Cesta básica com alíquota zero, amico! Comida essencial merece esse mimo."
+  },
+  {
+    "id": "REF-AUX-097",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Num showroom de veículos, o vendedor explica a diferença tributária entre um carro elétrico e um a combustão.",
+    "question": "Veículos mais poluentes podem sofrer incidência do Imposto ___, que busca desestimular seu consumo.",
+    "options": [
+      "Seletivo",
+      "de Importação",
+      "de Renda",
+      "Territorial"
+    ],
+    "correctAnswer": "Seletivo",
+    "explanation": "O Imposto Seletivo incide com mais força sobre produtos e veículos mais poluentes, como parte de sua função extrafiscal.",
+    "pacciTip": "Quanto mais fumaça, mais Seletivo, tesoro! Ele não gosta de poluição."
+  },
+  {
+    "id": "REF-AUX-098",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa indústria química, o analista fiscal explica de quem é a competência da CBS.",
+    "question": "A CBS é um tributo de competência ___, enquanto o IBS é estadual e municipal.",
+    "options": [
+      "federal",
+      "municipal",
+      "estadual",
+      "internacional"
+    ],
+    "correctAnswer": "federal",
+    "explanation": "A CBS é de competência federal (da União), diferente do IBS, que é estadual e municipal.",
+    "pacciTip": "CBS mora com a União, tesoro! Endereço federal, sem erro."
+  },
+  {
+    "id": "REF-AUX-099",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "O gerente de um hotel pergunta ao contador até quando durará a convivência entre tributos antigos e novos.",
+    "question": "A convivência entre os tributos antigos e o IBS/CBS deve durar até o ano de ___.",
+    "options": [
+      "2033",
+      "2026",
+      "2029",
+      "2040"
+    ],
+    "correctAnswer": "2033",
+    "explanation": "A transição vai de 2026 a 2033, ano em que os tributos antigos são extintos por completo.",
+    "pacciTip": "2033, tesoro! É quando os tributos antigos se despedem de vez."
+  },
+  {
+    "id": "REF-AUX-100",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa transportadora, o supervisor explica para onde vai o IBS gerado numa entrega interestadual.",
+    "question": "No novo modelo, o IBS pertence ao Estado/Município de ___ da operação, não ao de origem.",
+    "options": [
+      "destino",
+      "origem",
+      "trânsito",
+      "cadastro"
+    ],
+    "correctAnswer": "destino",
+    "explanation": "O novo modelo segue o princípio do destino: o IBS pertence ao ente onde a mercadoria ou serviço é consumido.",
+    "pacciTip": "O IBS viaja e fica no destino, capisce? É lá que ele se estabelece."
+  },
+  {
+    "id": "REF-AUX-101",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa loja de roupas, a atendente aprende que o documento impresso entregue ao cliente não é o que vale legalmente.",
+    "question": "O documento impresso e simplificado que acompanha a mercadoria, gerado a partir da NF-e, é chamado de ___.",
+    "options": [
+      "DANFE",
+      "cClassTrib",
+      "CFOP",
+      "CEST"
+    ],
+    "correctAnswer": "DANFE",
+    "explanation": "O DANFE é a representação impressa e simplificada da NF-e, usada para acompanhar a mercadoria no transporte.",
+    "pacciTip": "DANFE é o retrato da nota, tesoro! A nota de verdade fica no sistema."
+  },
+  {
+    "id": "REF-AUX-102",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa metalúrgica, o analista fiscal explica de que partes é formado o IBS.",
+    "question": "O IBS é formado pela soma de uma parcela estadual e uma parcela ___.",
+    "options": [
+      "municipal",
+      "federal",
+      "internacional",
+      "setorial"
+    ],
+    "correctAnswer": "municipal",
+    "explanation": "O IBS reúne, numa só cobrança, a parcela devida ao Estado e a parcela devida ao Município.",
+    "pacciTip": "Estadual e municipal, de mãos dadas, tesoro! Assim nasce o IBS."
+  },
+  {
+    "id": "REF-AUX-103",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa livraria, o funcionário percebe que os livros não têm cobrança de IBS/CBS na nota.",
+    "question": "Livros mantêm tratamento tributário ___ na reforma, sem cobrança de IBS/CBS.",
+    "options": [
+      "favorecido",
+      "padrão",
+      "dobrado",
+      "seletivo"
+    ],
+    "correctAnswer": "favorecido",
+    "explanation": "A reforma preservou o tratamento tributário favorecido que os livros já tinham, com alíquota reduzida a zero.",
+    "pacciTip": "Livro sempre teve esse carinho, amico! A reforma não mexeu nisso."
+  },
+  {
+    "id": "REF-AUX-104",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa escola de idiomas, a secretária percebe que o serviço educacional tem alíquota de IBS/CBS menor que outros serviços.",
+    "question": "Setores como saúde e educação têm previsão de ___ de alíquota de IBS/CBS.",
+    "options": [
+      "redução",
+      "aumento",
+      "duplicação",
+      "isenção total"
+    ],
+    "correctAnswer": "redução",
+    "explanation": "A reforma prevê redução de alíquota de IBS/CBS para setores considerados essenciais, como saúde e educação.",
+    "pacciTip": "Educação ganha desconto, tesoro! Não é isenção total, mas ajuda bastante."
+  },
+  {
+    "id": "REF-AUX-105",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa cooperativa de crédito, o gerente explica que o Simples Nacional não deixará de existir com a reforma.",
+    "question": "Empresas do Simples Nacional podem manter suas regras próprias ou optar pelo regime ___ do IBS/CBS.",
+    "options": [
+      "regular",
+      "seletivo",
+      "internacional",
+      "suplementar"
+    ],
+    "correctAnswer": "regular",
+    "explanation": "Empresas do Simples podem manter suas regras ou, conforme o caso, optar pelo regime regular de apuração do IBS/CBS.",
+    "pacciTip": "Simples continua de pé, tesoro! Só ganhou mais uma escolha na mesa."
+  },
+  {
+    "id": "REF-AUX-106",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa importadora, o despachante explica que produtos vindos do exterior também pagam o novo tributo.",
+    "question": "O IBS/CBS incide também sobre mercadorias ___, equiparando-as às operações internas.",
+    "options": [
+      "importadas",
+      "exportadas",
+      "doadas",
+      "devolvidas"
+    ],
+    "correctAnswer": "importadas",
+    "explanation": "O novo modelo tributa também as importações, equiparando-as às operações realizadas dentro do país.",
+    "pacciTip": "Veio de fora, mas paga igual, tesoro! IBS/CBS não faz distinção de origem."
+  },
+  {
+    "id": "REF-AUX-107",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa indústria têxtil, o analista fiscal comenta sobre o aproveitamento do tributo pago nas compras da empresa.",
+    "question": "A não cumulatividade ___ permite, em regra, aproveitar como crédito o tributo pago nas compras da empresa.",
+    "options": [
+      "ampla",
+      "parcial",
+      "seletiva",
+      "proibida"
+    ],
+    "correctAnswer": "ampla",
+    "explanation": "A não cumulatividade ampla é um dos princípios centrais da reforma, permitindo o aproveitamento do crédito em regra geral.",
+    "pacciTip": "Ampla, tesoro, bem ampla! O crédito flui numa cadeia sem tanto entrave."
+  },
+  {
+    "id": "REF-AUX-108",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Num petshop, o dono aprende que a ração deve ser classificada como mercadoria, não como serviço.",
+    "question": "Por ser um bem físico, a ração de animais deve ser classificada com o código ___, e não NBS.",
+    "options": [
+      "NCM",
+      "CNAE",
+      "CBO",
+      "CEST"
+    ],
+    "correctAnswer": "NCM",
+    "explanation": "A ração é uma mercadoria (bem físico), então usa o NCM; a NBS seria apenas para o serviço veterinário.",
+    "pacciTip": "Ração é NCM, tesoro! Bem físico não passeia pela NBS."
+  },
+  {
+    "id": "REF-AUX-109",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa consultoria de TI, a empresa emite a nota de uma assinatura de software (SaaS) para um cliente.",
+    "question": "Serviços de tecnologia, como uma assinatura de software, devem ser classificados na nota fiscal pelo código ___.",
+    "options": [
+      "NBS",
+      "NCM",
+      "GTIN",
+      "CST"
+    ],
+    "correctAnswer": "NBS",
+    "explanation": "Serviços, incluindo assinaturas de software, são classificados pela NBS, o código próprio para serviços.",
+    "pacciTip": "Software é serviço, NBS na certa, amico! Não confunde com mercadoria."
+  },
+  {
+    "id": "REF-AUX-110",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa loja de eletrodomésticos, o vendedor entende que a carga tributária não dobra durante a transição.",
+    "question": "Durante a transição, as alíquotas são ajustadas para manter a carga tributária ___, não para somar todos os tributos.",
+    "options": [
+      "equivalente",
+      "dobrada",
+      "zerada",
+      "triplicada"
+    ],
+    "correctAnswer": "equivalente",
+    "explanation": "Durante a transição, as alíquotas são ajustadas para manter a carga tributária equivalente à anterior, e não uma soma cumulativa.",
+    "pacciTip": "Equilíbrio, tesoro, não dobradinha! A transição ajusta pra manter tudo parecido."
+  },
+  {
+    "id": "REF-AUX-111",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa distribuidora de medicamentos, o farmacêutico confirma que o NCM continua obrigatório mesmo em produtos com Imposto Seletivo.",
+    "question": "Mesmo em produtos sujeitos ao Imposto Seletivo, o preenchimento do ___ continua obrigatório para identificar a mercadoria.",
+    "options": [
+      "NCM",
+      "CNAE",
+      "CBO",
+      "RG"
+    ],
+    "correctAnswer": "NCM",
+    "explanation": "O NCM continua sendo obrigatório para identificar a mercadoria, independentemente da incidência do Imposto Seletivo.",
+    "pacciTip": "NCM não tira folga por causa do Seletivo, tesoro! Ele continua na nota, sempre."
+  },
+  {
+    "id": "REF-AUX-112",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa construtora, o engenheiro entende que 2026 é apenas uma fase de teste para os novos tributos.",
+    "question": "Em 2026, o IBS/CBS aparece na nota fiscal com alíquota ___, apenas para testar os sistemas.",
+    "options": [
+      "simbólica",
+      "cheia",
+      "dobrada",
+      "negativa"
+    ],
+    "correctAnswer": "simbólica",
+    "explanation": "Em 2026, a cobrança de IBS/CBS é simbólica, servindo apenas para testar os sistemas antes da aplicação efetiva.",
+    "pacciTip": "É treino, tesoro, alíquota pequena! O valor cheio chega mais pra frente."
+  },
+  {
+    "id": "REF-AUX-113",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa revenda de peças automotivas, o balconista confirma que um código antigo continua sendo usado normalmente.",
+    "question": "O código que indica a natureza da operação (venda, devolução, transferência) e continua sendo usado é o ___.",
+    "options": [
+      "CFOP",
+      "cClassTrib",
+      "NBS",
+      "GTIN"
+    ],
+    "correctAnswer": "CFOP",
+    "explanation": "O CFOP continua sendo utilizado para indicar a natureza da operação, ao lado dos novos campos criados pela reforma.",
+    "pacciTip": "CFOP não saiu de cena, amico! Ele continua trabalhando lado a lado com o cClassTrib."
+  },
+  {
+    "id": "REF-AUX-114",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa agência de marketing, o financeiro entende que os serviços prestados são tributados normalmente.",
+    "question": "Serviços prestados por agências, como marketing, são tributados normalmente pelo IBS/___, salvo regime específico.",
+    "options": [
+      "CBS",
+      "IPVA",
+      "ITBI",
+      "IOF"
+    ],
+    "correctAnswer": "CBS",
+    "explanation": "Serviços em geral são tributados normalmente pelo IBS e pela CBS, salvo previsão de regime específico em lei.",
+    "pacciTip": "Marketing paga IBS/CBS igual a todo mundo, tesoro! Não tem isenção automática."
+  },
+  {
+    "id": "REF-AUX-115",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa cooperativa agrícola, o contador explica que existe um regime tributário diferenciado pensado para o campo.",
+    "question": "A reforma prevê regimes específicos e alíquotas diferenciadas para o setor ___.",
+    "options": [
+      "agropecuário",
+      "bancário",
+      "imobiliário",
+      "aéreo"
+    ],
+    "correctAnswer": "agropecuário",
+    "explanation": "A reforma prevê regimes específicos, com alíquotas e regras próprias, para o setor agropecuário.",
+    "pacciTip": "O campo ganhou regra sua, tesoro! A reforma pensou no agro com carinho."
+  },
+  {
+    "id": "REF-AUX-116",
+    "level": "auxiliar",
+    "type": "fill_blank",
+    "scenario": "Numa franquia de fast food, o gerente lê que o Brasil está seguindo um modelo tributário usado em outros países.",
+    "question": "O modelo formado por IBS + CBS é descrito como um IVA ___, ou seja, dividido em duas partes.",
+    "options": [
+      "dual",
+      "único",
+      "triplo",
+      "federal"
+    ],
+    "correctAnswer": "dual",
+    "explanation": "IBS e CBS juntos formam o chamado IVA dual: um modelo de Imposto sobre Valor Agregado dividido entre duas competências.",
+    "pacciTip": "IVA dual, tesoro! Dois tributos dançando juntos, no mesmo compasso."
+  },
+  {
+    "id": "REF-AUX-117",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa distribuidora de bebidas, o gerente pergunta rapidamente o nome do tributo que incide sobre produtos nocivos.",
+    "question": "Digite o nome (duas palavras) do novo tributo que incide sobre produtos como cigarros e bebidas alcoólicas, buscando desestimular o consumo:",
+    "correctAnswer": "Imposto Seletivo",
+    "explanation": "O Imposto Seletivo incide sobre produtos prejudiciais à saúde ou ao meio ambiente, como cigarros e bebidas alcoólicas.",
+    "pacciTip": "Imposto Seletivo, tesoro! O 'imposto do pecadinho' bem na ponta da língua."
+  },
+  {
+    "id": "REF-AUX-118",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "No financeiro de um e-commerce, perguntam o nome do mecanismo que separa o tributo já no pagamento.",
+    "question": "Digite (em inglês) o nome do mecanismo que segrega automaticamente o valor do tributo no momento do pagamento eletrônico:",
+    "correctAnswer": "Split Payment",
+    "explanation": "O Split Payment segrega automaticamente o valor do tributo já no momento do pagamento eletrônico.",
+    "pacciTip": "Split Payment, capisce? Ele separa o tributo antes mesmo do dinheiro chegar."
+  },
+  {
+    "id": "REF-AUX-119",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Num escritório de contabilidade, o contador pergunta a sigla do tributo federal que substitui parte do PIS/Cofins.",
+    "question": "Digite a sigla do novo tributo federal que substitui, entre outros, o PIS e a Cofins:",
+    "correctAnswer": "CBS",
+    "explanation": "A CBS (Contribuição sobre Bens e Serviços) é o novo tributo federal que substitui PIS e Cofins.",
+    "pacciTip": "CBS, tesoro! O tributo federal da nova geração."
+  },
+  {
+    "id": "REF-AUX-120",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa loja de material de construção, o supervisor pergunta a sigla do tributo estadual/municipal que substitui ICMS e ISS.",
+    "question": "Digite a sigla do novo tributo que substitui o ICMS e o ISS:",
+    "correctAnswer": "IBS",
+    "explanation": "O IBS (Imposto sobre Bens e Serviços) é o novo tributo estadual e municipal que substitui o ICMS e o ISS.",
+    "pacciTip": "IBS, amico! O novo morador do imposto estadual e municipal."
+  },
+  {
+    "id": "REF-AUX-121",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Num escritório de contabilidade, alguém pergunta rapidamente o nome do órgão que administra o IBS.",
+    "question": "Digite o nome (duas palavras) do órgão que administra o IBS, reunindo representantes de Estados e Municípios:",
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS é o órgão que reúne Estados e Municípios para administrar o imposto.",
+    "pacciTip": "Comitê Gestor, tesoro! O time que cuida do IBS pra todo mundo."
+  },
+  {
+    "id": "REF-AUX-122",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa gráfica, perguntam a sigla do documento impresso derivado da NF-e.",
+    "question": "Digite a sigla do documento impresso e simplificado, gerado a partir da NF-e, que acompanha a mercadoria no transporte:",
+    "correctAnswer": "DANFE",
+    "explanation": "O DANFE é a representação impressa e simplificada da NF-e, usada para acompanhar a mercadoria.",
+    "pacciTip": "DANFE, tesoro! O retrato de bolso da nota fiscal."
+  },
+  {
+    "id": "REF-AUX-123",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa revenda de veículos, perguntam qual código classifica mercadorias, mesmo as sujeitas ao Imposto Seletivo.",
+    "question": "Digite a sigla do código usado para classificar mercadorias, obrigatório inclusive para produtos sujeitos ao Imposto Seletivo:",
+    "correctAnswer": "NCM",
+    "explanation": "O NCM continua obrigatório para identificar a mercadoria, mesmo quando o produto está sujeito ao Imposto Seletivo.",
+    "pacciTip": "NCM não tira férias, amico! Ele sempre aparece nas mercadorias."
+  },
+  {
+    "id": "REF-AUX-124",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa consultoria de TI, perguntam qual código classifica um serviço de assinatura de software (SaaS).",
+    "question": "Digite a sigla do código usado para classificar um serviço de assinatura de software (SaaS) na nota fiscal:",
+    "correctAnswer": "NBS",
+    "explanation": "A NBS é o código próprio para classificar serviços, incluindo assinaturas de software.",
+    "pacciTip": "NBS, tesoro! Serviço de tecnologia também precisa do seu código."
+  },
+  {
+    "id": "REF-AUX-125",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa indústria de alimentos, perguntam o nome do campo tributário mais novo da nota fiscal.",
+    "question": "Digite o nome (abreviado) do campo da nota fiscal que traz a classificação tributária do IBS/CBS aplicável à operação:",
+    "correctAnswer": "cClassTrib",
+    "explanation": "O cClassTrib é o campo criado para indicar o tratamento tributário do IBS/CBS aplicável a cada operação.",
+    "pacciTip": "cClassTrib, com C minúsculo no início, tesoro! Detalhe que faz diferença."
+  },
+  {
+    "id": "REF-AUX-126",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa transportadora, perguntam qual código indica a natureza da operação na nota fiscal.",
+    "question": "Digite a sigla do código que indica a natureza da operação (venda, devolução, transferência) na nota fiscal:",
+    "correctAnswer": "CFOP",
+    "explanation": "O CFOP indica a natureza da operação registrada na nota fiscal, como venda, devolução ou transferência.",
+    "pacciTip": "CFOP, amico! Ele conta a história por trás da nota."
+  },
+  {
+    "id": "REF-AUX-127",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Num hotel, perguntam o ano previsto para o fim total dos tributos antigos.",
+    "question": "Digite o ano previsto para a extinção completa dos tributos antigos (ICMS, ISS, PIS, Cofins):",
+    "correctAnswer": "2033",
+    "explanation": "A extinção completa dos tributos antigos está prevista para 2033, ao fim do período de transição.",
+    "pacciTip": "2033, tesoro! O ano da despedida dos tributos antigos."
+  },
+  {
+    "id": "REF-AUX-128",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa distribuidora de eletrônicos, perguntam o ano de início da fase de testes do IBS/CBS.",
+    "question": "Digite o ano em que começou a fase de testes do IBS/CBS nas notas fiscais, com alíquota simbólica:",
+    "correctAnswer": "2026",
+    "explanation": "A fase de testes do IBS/CBS, com alíquota simbólica, começou em 2026.",
+    "pacciTip": "2026, capisce? O ano do ensaio geral da reforma."
+  },
+  {
+    "id": "REF-AUX-129",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Num supermercado, perguntam o nome do conjunto de produtos essenciais com alíquota zero.",
+    "question": "Digite o nome (duas palavras) do conjunto de produtos alimentícios essenciais que tem alíquota de IBS/CBS reduzida a zero:",
+    "correctAnswer": "cesta básica",
+    "explanation": "A cesta básica nacional reúne produtos essenciais com alíquota de IBS/CBS reduzida a zero.",
+    "pacciTip": "Cesta básica, tesoro! Comida essencial com tratamento especial."
+  },
+  {
+    "id": "REF-AUX-130",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa indústria química, perguntam a sigla do documento fiscal eletrônico padrão emitido nas vendas.",
+    "question": "Digite a sigla do documento fiscal eletrônico padrão emitido na venda de mercadorias:",
+    "correctAnswer": "NF-e",
+    "explanation": "A NF-e (Nota Fiscal Eletrônica) é o documento fiscal padrão emitido nas vendas de mercadorias.",
+    "pacciTip": "NF-e, amico! O documento que você emite todo santo dia."
+  },
+  {
+    "id": "REF-AUX-131",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa metalúrgica, perguntam a esfera de competência do tributo CBS.",
+    "question": "Digite a esfera de competência (uma palavra) do tributo CBS: federal, estadual ou municipal?",
+    "correctAnswer": "federal",
+    "explanation": "A CBS é um tributo de competência federal, de titularidade da União.",
+    "pacciTip": "Federal, tesoro! CBS mora com a União."
+  },
+  {
+    "id": "REF-AUX-132",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Num petshop, perguntam qual código de classificação é obrigatório para um produto físico como a ração.",
+    "question": "Digite a sigla do código de classificação obrigatório para um produto físico, como a ração de um petshop:",
+    "correctAnswer": "NCM",
+    "explanation": "Produtos físicos, como a ração, exigem o preenchimento do NCM na nota fiscal.",
+    "pacciTip": "NCM pra ração, sempre, tesoro! Produto físico não escapa dele."
+  },
+  {
+    "id": "REF-AUX-133",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa agência de eventos, perguntam qual código classifica um serviço de organização de eventos.",
+    "question": "Digite a sigla do código de classificação usado para um serviço de organização de eventos:",
+    "correctAnswer": "NBS",
+    "explanation": "Serviços, como a organização de eventos, são classificados pela NBS.",
+    "pacciTip": "NBS, amico! Evento é serviço, não mercadoria."
+  },
+  {
+    "id": "REF-AUX-134",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa loja de informática, perguntam para onde vai o IBS numa venda interestadual: origem ou destino.",
+    "question": "Em uma venda interestadual, o IBS pertence ao ente federativo de qual localidade: origem ou destino da mercadoria? (digite uma palavra)",
+    "correctAnswer": "destino",
+    "explanation": "No novo modelo, o IBS pertence ao ente federativo de destino da mercadoria ou serviço, e não ao de origem.",
+    "pacciTip": "Destino, tesoro! É lá que o IBS decide morar."
+  },
+  {
+    "id": "REF-AUX-135",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa cooperativa de crédito, perguntam o nome do regime tributário simplificado que pequenas empresas podem manter.",
+    "question": "Digite a sigla/nome do regime tributário simplificado que pequenas empresas podem optar por manter mesmo após a reforma:",
+    "correctAnswer": "Simples Nacional",
+    "explanation": "O Simples Nacional continua existindo, podendo ser mantido por pequenas empresas mesmo após a reforma.",
+    "pacciTip": "Simples Nacional, capisce? Ele não desapareceu com a reforma."
+  },
+  {
+    "id": "REF-AUX-136",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa distribuidora de bebidas, perguntam qual é a outra parcela que, junto com a estadual, compõe o IBS.",
+    "question": "Além da parcela estadual, qual é a outra parcela (uma palavra) que compõe o IBS?",
+    "correctAnswer": "municipal",
+    "explanation": "O IBS é formado pela soma de uma parcela estadual e uma parcela municipal.",
+    "pacciTip": "Municipal, tesoro! A dupla que forma o IBS."
+  },
+  {
+    "id": "REF-AUX-137",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa revenda de veículos, perguntam a sigla do tributo que incide sobre produtos prejudiciais à saúde ou ao meio ambiente.",
+    "question": "Digite a sigla (2 letras) do tributo que incide sobre produtos prejudiciais à saúde ou ao meio ambiente, como cigarros e agrotóxicos:",
+    "correctAnswer": "IS",
+    "explanation": "IS é a sigla do Imposto Seletivo, que incide sobre produtos prejudiciais à saúde ou ao meio ambiente.",
+    "pacciTip": "IS, tesoro! Duas letrinhas só, mas com peso grande."
+  },
+  {
+    "id": "REF-AUX-138",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa indústria têxtil, perguntam o termo técnico que descreve o aproveitamento amplo do tributo pago nas compras.",
+    "question": "Digite o termo técnico (duas palavras) que descreve o princípio de aproveitar amplamente como crédito o tributo pago nas compras da empresa:",
+    "correctAnswer": "não cumulatividade",
+    "explanation": "A não cumulatividade é o princípio que permite aproveitar como crédito o tributo pago nas etapas anteriores da cadeia.",
+    "pacciTip": "Não cumulatividade, amico! O nome bonito pra 'não pagar imposto sobre imposto'."
+  },
+  {
+    "id": "REF-AUX-139",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa importadora, perguntam a sigla do modelo internacional de tributação sobre consumo que IBS + CBS representam.",
+    "question": "Digite a sigla (3 letras) do modelo internacional de tributação sobre consumo que IBS + CBS formam no Brasil, na versão dual:",
+    "correctAnswer": "IVA",
+    "explanation": "IBS e CBS juntos formam o chamado IVA dual, modelo de Imposto sobre Valor Agregado usado em diversos países.",
+    "pacciTip": "IVA, tesoro! O Brasil entrou na dança internacional do valor agregado."
+  },
+  {
+    "id": "REF-AUX-140",
+    "level": "auxiliar",
+    "type": "text_input",
+    "scenario": "Numa livraria, perguntam se os livros ficam com alíquota cheia ou reduzida/zero após a reforma.",
+    "question": "Livros mantêm, com a reforma, o tratamento tributário favorecido: eles pagam a alíquota cheia ou ficam com alíquota reduzida a quanto? (digite um número)",
+    "correctAnswer": "zero",
+    "explanation": "Os livros mantêm o tratamento favorecido que já tinham, com alíquota de IBS/CBS reduzida a zero.",
+    "pacciTip": "Zero, tesoro! Livro continua com esse carinho especial da reforma."
+  }
+]

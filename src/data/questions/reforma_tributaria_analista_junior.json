@@ -1,0 +1,2046 @@
+[
+  {
+    "id": "REF-JR-001",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Você está analisando uma nota fiscal recebida cujo valor de IBS/CBS destacado não bate com o valor calculado pelo sistema com base na alíquota vigente para a operação.",
+    "question": "Qual é o primeiro passo recomendado ao identificar essa divergência, antes de rejeitar a nota?",
+    "options": [
+      "Verificar se o cClassTrib aplicado está correto para a operação",
+      "Cancelar a nota imediatamente sem análise",
+      "Pagar o valor da nota e ignorar a diferença",
+      "Aumentar a alíquota manualmente no sistema"
+    ],
+    "correctAnswer": "Verificar se o cClassTrib aplicado está correto para a operação",
+    "explanation": "Grande parte das divergências de valor nasce de uma classificação tributária incorreta. Conferir o cClassTrib é o primeiro passo lógico da análise.",
+    "pacciTip": "Antes de gritar 'erro!', confere o cClassTrib, tesoro. Muita divergência nasce ali."
+  },
+  {
+    "id": "REF-JR-002",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Você está analisando uma compra feita de um fornecedor optante do Simples Nacional e precisa entender como isso impacta o crédito de IBS/CBS da sua empresa.",
+    "question": "Como empresas do Simples Nacional participam, em regra, do novo sistema de IBS/CBS?",
+    "options": [
+      "Por meio de um regime específico e simplificado, podendo optar pelo regime regular para gerar mais créditos ao comprador",
+      "Ficam totalmente isentas de IBS/CBS",
+      "Pagam a alíquota cheia igual às demais empresas",
+      "Não podem mais vender para outras empresas"
+    ],
+    "correctAnswer": "Por meio de um regime específico e simplificado, podendo optar pelo regime regular para gerar mais créditos ao comprador",
+    "explanation": "O Simples Nacional mantém um regime simplificado próprio, mas a empresa pode optar por apurar pelo regime regular quando isso for vantajoso para os créditos de seus clientes.",
+    "pacciTip": "Simples Nacional não é tudo igual, amico! Tem opção de gerar mais crédito pro comprador, se o fornecedor escolher."
+  },
+  {
+    "id": "REF-JR-003",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Na conciliação mensal, você percebe uma divergência entre o valor pago pelo cliente no checkout e o valor efetivamente repassado à empresa via split payment.",
+    "question": "Qual é a causa mais comum desse tipo de divergência, a ser investigada primeiro?",
+    "options": [
+      "Erro na classificação tributária (cClassTrib) ou na alíquota aplicada na transação",
+      "Falha na internet do cliente",
+      "Erro de digitação no CNPJ do vendedor",
+      "Atraso no correio"
+    ],
+    "correctAnswer": "Erro na classificação tributária (cClassTrib) ou na alíquota aplicada na transação",
+    "explanation": "Como o split payment calcula o tributo a reter com base na classificação e alíquota da operação, erros nesses parâmetros são a causa mais frequente de divergência no repasse.",
+    "pacciTip": "Quando o split payment não bate, olha primeiro pra classificação e alíquota. É quase sempre ali o problema."
+  },
+  {
+    "id": "REF-JR-004",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Você está analisando uma operação de venda de combustível, setor que possui tratamento diferenciado dentro da Reforma.",
+    "question": "O que caracteriza, em linhas gerais, um regime específico (como o de combustíveis) dentro do novo modelo de IBS/CBS?",
+    "options": [
+      "Regras próprias de apuração e alíquota, diferentes do regime geral, definidas em lei complementar para setores específicos",
+      "A total isenção de qualquer tributo",
+      "A aplicação do dobro da alíquota padrão",
+      "A proibição de venda para pessoa física"
+    ],
+    "correctAnswer": "Regras próprias de apuração e alíquota, diferentes do regime geral, definidas em lei complementar para setores específicos",
+    "explanation": "Setores como combustíveis, serviços financeiros e planos de saúde têm regimes específicos, com regras próprias de apuração previstas em lei complementar.",
+    "pacciTip": "Combustível não segue a regra geral, tesoro! Ele tem regrinha própria, feita sob medida pro setor."
+  },
+  {
+    "id": "REF-JR-005",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Ao revisar uma nota com pequena divergência de valor no IBS/CBS destacado, você pensa em ignorar por ser um valor baixo.",
+    "question": "Divergências entre o IBS/CBS destacado e o valor calculado pela alíquota vigente devem sempre ser investigadas, independentemente do valor?",
+    "correctAnswer": true,
+    "explanation": "Correto! Mesmo divergências pequenas podem indicar erro de parametrização recorrente, que se multiplica em outras notas e gera passivo fiscal.",
+    "pacciTip": "Divergência pequena hoje vira problema grande amanhã, capisce? Sempre investiga!"
+  },
+  {
+    "id": "REF-JR-006",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Um colega comenta que, com o split payment funcionando, a equipe não precisa mais conciliar os valores recebidos das vendas.",
+    "question": "O split payment elimina totalmente a necessidade de conciliação entre o valor pago pelo cliente e o valor recebido pela empresa?",
+    "correctAnswer": false,
+    "explanation": "Errado! O split payment automatiza a separação do tributo, mas erros de parametrização, sistêmicos ou de classificação ainda podem ocorrer, exigindo conciliação.",
+    "pacciTip": "Automação ajuda, mas não dorme no ponto, amico! Conciliação continua sendo seu trabalho."
+  },
+  {
+    "id": "REF-JR-007",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Analisando o crédito gerado por uma compra de fornecedor optante do Simples Nacional, um colega afirma que esse tipo de compra nunca gera crédito de IBS/CBS.",
+    "question": "Uma empresa do Simples Nacional, ao vender para outra empresa, nunca gera qualquer crédito de IBS/CBS ao comprador?",
+    "correctAnswer": false,
+    "explanation": "Errado! Dependendo do regime escolhido pelo fornecedor (simplificado ou regular), pode haver geração de crédito, ainda que em proporção diferente do regime regular.",
+    "pacciTip": "Nunca é uma palavra forte demais, tesoro! Simples Nacional pode sim gerar crédito, depende da opção do fornecedor."
+  },
+  {
+    "id": "REF-JR-008",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Você está analisando a nota de um plano de saúde e percebe que a apuração do IBS/CBS segue uma lógica diferente da maioria das operações.",
+    "question": "Setores como serviços financeiros e planos de saúde possuem regimes específicos de apuração do IBS/CBS, diferentes do regime geral?",
+    "correctAnswer": true,
+    "explanation": "Correto! Esses setores têm particularidades operacionais que justificaram a criação de regimes específicos, com regras próprias de apuração.",
+    "pacciTip": "Plano de saúde, banco, seguradora... todos têm sua regrinha especial. Não tenta encaixar no regime geral!"
+  },
+  {
+    "id": "REF-JR-009",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma nota fiscal recebida apresenta valor de IBS/CBS diferente do esperado, e você precisa conduzir a análise dessa divergência.",
+    "question": "Ordene o fluxo correto de análise dessa divergência:",
+    "options": [
+      "Registrar a ocorrência e decidir pela aceitação ou glosa do crédito",
+      "Identificar a divergência entre o valor destacado e o valor calculado",
+      "Contatar o fornecedor para esclarecer a inconsistência",
+      "Verificar o cClassTrib e a alíquota aplicada na operação"
+    ],
+    "correctAnswer": [
+      "Identificar a divergência entre o valor destacado e o valor calculado",
+      "Verificar o cClassTrib e a alíquota aplicada na operação",
+      "Contatar o fornecedor para esclarecer a inconsistência",
+      "Registrar a ocorrência e decidir pela aceitação ou glosa do crédito"
+    ],
+    "explanation": "A análise segue do diagnóstico (identificar) para a causa (cClassTrib/alíquota), depois o esclarecimento com o fornecedor e, por fim, a decisão registrada.",
+    "pacciTip": "Detetive fiscal trabalha em ordem, tesoro! Identifica, investiga, pergunta, decide."
+  },
+  {
+    "id": "REF-JR-010",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "É o fim do mês e você precisa conciliar o relatório de split payment das vendas com o que efetivamente entrou na conta da empresa.",
+    "question": "Ordene o processo correto de conciliação do split payment:",
+    "options": [
+      "Reportar o resultado da conciliação ao analista pleno",
+      "Extrair o relatório de split payment do período",
+      "Investigar as divergências encontradas",
+      "Comparar os valores retidos com os valores esperados por venda"
+    ],
+    "correctAnswer": [
+      "Extrair o relatório de split payment do período",
+      "Comparar os valores retidos com os valores esperados por venda",
+      "Investigar as divergências encontradas",
+      "Reportar o resultado da conciliação ao analista pleno"
+    ],
+    "explanation": "A conciliação começa pela extração dos dados, segue com a comparação, a investigação de divergências e o reporte do resultado final.",
+    "pacciTip": "Extrai, compara, investiga, reporta. Assim nenhum centavo se perde no caminho!"
+  },
+  {
+    "id": "REF-JR-011",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Você recebeu uma nota de compra de um fornecedor do Simples Nacional e precisa determinar corretamente o crédito de IBS/CBS a ser aproveitado.",
+    "question": "Ordene o fluxo correto de análise dessa compra:",
+    "options": [
+      "Registrar o crédito correto na apuração da empresa compradora",
+      "Identificar que o fornecedor é optante do Simples Nacional",
+      "Confirmar o percentual de crédito de IBS/CBS transferível",
+      "Verificar se o fornecedor optou pelo regime regular de apuração"
+    ],
+    "correctAnswer": [
+      "Identificar que o fornecedor é optante do Simples Nacional",
+      "Verificar se o fornecedor optou pelo regime regular de apuração",
+      "Confirmar o percentual de crédito de IBS/CBS transferível",
+      "Registrar o crédito correto na apuração da empresa compradora"
+    ],
+    "explanation": "Primeiro identifica-se o regime do fornecedor, depois se verifica a opção por regime regular, confirma-se o percentual de crédito e, por fim, registra-se corretamente.",
+    "pacciTip": "Simples Nacional exige atenção extra na hora do crédito, tesoro! Segue a ordem certinha pra não perder dinheiro."
+  },
+  {
+    "id": "REF-JR-012",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Você está analisando uma operação de venda de combustível, produto sujeito a regime específico de apuração do IBS/CBS.",
+    "question": "Ordene o fluxo correto dessa análise:",
+    "options": [
+      "Validar o resultado com a área fiscal antes de finalizar",
+      "Identificar que o produto está sujeito a regime específico",
+      "Aplicar a alíquota e a forma de apuração específicas",
+      "Consultar a legislação/regra própria aplicável ao setor"
+    ],
+    "correctAnswer": [
+      "Identificar que o produto está sujeito a regime específico",
+      "Consultar a legislação/regra própria aplicável ao setor",
+      "Aplicar a alíquota e a forma de apuração específicas",
+      "Validar o resultado com a área fiscal antes de finalizar"
+    ],
+    "explanation": "A análise de regimes específicos exige identificar o enquadramento, consultar a regra própria, aplicar a apuração correspondente e validar com a área fiscal.",
+    "pacciTip": "Regime específico não se resolve de cabeça, amico! Sempre confirma com a área fiscal antes de fechar."
+  },
+  {
+    "id": "REF-JR-013",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No checklist de análise de divergências, há uma frase incompleta sobre o primeiro campo a ser conferido.",
+    "question": "Ao encontrar uma nota fiscal com valor de IBS/CBS divergente do esperado, o analista júnior deve, antes de tudo, verificar se o campo ___ foi preenchido corretamente.",
+    "options": [
+      "cClassTrib",
+      "CNPJ",
+      "endereço",
+      "telefone"
+    ],
+    "correctAnswer": "cClassTrib",
+    "explanation": "O cClassTrib determina o tratamento tributário da operação; é o principal suspeito quando o valor de IBS/CBS não bate com o esperado.",
+    "pacciTip": "cClassTrib é sempre o primeiro suspeito da investigação, tesoro. Confere ele primeiro!"
+  },
+  {
+    "id": "REF-JR-014",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento interno sobre análise de fornecedores, há uma frase incompleta sobre o regime das pequenas empresas.",
+    "question": "Empresas optantes pelo ___ participam do IBS/CBS por meio de um regime específico e simplificado.",
+    "options": [
+      "Simples Nacional",
+      "Lucro Real",
+      "Lucro Presumido",
+      "MEI apenas"
+    ],
+    "correctAnswer": "Simples Nacional",
+    "explanation": "O Simples Nacional mantém regras próprias e simplificadas de participação no IBS/CBS, distintas do regime regular.",
+    "pacciTip": "Simples Nacional tem seu próprio caminho no novo modelo. Não trata como se fosse regime regular!"
+  },
+  {
+    "id": "REF-JR-015",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "Analisando o setor de combustíveis com o time, você encontra uma frase incompleta sobre o tipo de regime aplicável.",
+    "question": "Setores como combustíveis possuem um regime ___ de apuração do IBS/CBS, com regras próprias definidas em lei complementar.",
+    "options": [
+      "específico",
+      "inexistente",
+      "provisório",
+      "universal"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Regimes específicos existem para setores com características operacionais particulares, como combustíveis, serviços financeiros e planos de saúde.",
+    "pacciTip": "Regime específico é feito sob medida, tesoro! Não confunde com o regime geral."
+  },
+  {
+    "id": "REF-JR-016",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de conciliação de split payment, há uma frase incompleta sobre como tratar divergências.",
+    "question": "Na conciliação de split payment, uma divergência entre o valor pago e o valor recebido deve ser ___ antes de ser considerada normal.",
+    "options": [
+      "investigada",
+      "ignorada",
+      "arredondada",
+      "cancelada"
+    ],
+    "correctAnswer": "investigada",
+    "explanation": "Toda divergência deve ser investigada; presumir que é 'normal' sem checar pode mascarar erros sistêmicos de parametrização.",
+    "pacciTip": "Nunca assume que é normal sem checar, amico! Investiga primeiro, conclui depois."
+  },
+  {
+    "id": "REF-JR-017",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Durante uma reunião rápida com o time, o analista pleno pergunta qual campo deve ser conferido primeiro ao investigar divergência de valor de IBS/CBS.",
+    "question": "Digite o nome do campo da nota fiscal que deve ser conferido primeiro ao identificar divergência no valor de IBS/CBS:",
+    "correctAnswer": "cClassTrib",
+    "explanation": "O cClassTrib é o campo que determina o tratamento tributário da operação e a principal causa de divergências de valor.",
+    "pacciTip": "cClassTrib de novo, tesoro! Ele é o personagem principal de quase toda divergência."
+  },
+  {
+    "id": "REF-JR-018",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Analisando o cadastro de um fornecedor pequeno, você precisa identificar o nome do regime tributário simplificado ao qual ele provavelmente pertence.",
+    "question": "Digite o nome do regime tributário simplificado destinado a micro e pequenas empresas, que possui tratamento diferenciado no IBS/CBS:",
+    "correctAnswer": "Simples Nacional",
+    "explanation": "O Simples Nacional é o regime simplificado voltado a micro e pequenas empresas, com tratamento próprio dentro do novo modelo tributário.",
+    "pacciTip": "Simples Nacional, tesoro! Pequena empresa, regrinha própria."
+  },
+  {
+    "id": "REF-JR-019",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Na reunião de fechamento do mês, o analista pleno pede que você relembre o nome do mecanismo revisado na conciliação bancária.",
+    "question": "Digite o termo (em inglês, duas palavras) do mecanismo de pagamento revisado na conciliação bancária do mês:",
+    "correctAnswer": "split payment",
+    "explanation": "O split payment é o mecanismo que segrega automaticamente o tributo no pagamento, sendo o foco da conciliação mensal.",
+    "pacciTip": "Split payment sempre no radar da conciliação, amico! Ele é o protagonista do mês."
+  },
+  {
+    "id": "REF-JR-020",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Fechando a análise do setor de combustíveis, o supervisor pede que você resuma em uma palavra o tipo de regime aplicado a esse setor.",
+    "question": "Digite a palavra que classifica o tipo de regime aplicado a setores como combustíveis, distinto do regime geral:",
+    "correctAnswer": "específico",
+    "explanation": "Regimes específicos são criados para setores com características próprias, como o de combustíveis, com regras diferentes do regime geral.",
+    "pacciTip": "Específico é a palavra-chave, tesoro! Combustível não joga com as regras de todo mundo."
+  },
+  {
+    "id": "REF-JR-021",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Você está analisando uma nota fiscal de venda de um marketplace de moda cujo total de IBS/CBS parece maior do que o esperado para a categoria do produto anunciado.",
+    "question": "Antes de abrir uma ocorrência com o vendedor, qual verificação interna você deve fazer primeiro?",
+    "options": [
+      "Confirmar se o cClassTrib informado corresponde de fato à natureza da operação registrada no pedido",
+      "Aumentar o preço de venda para cobrir a diferença",
+      "Excluir o pedido do sistema sem análise",
+      "Aplicar um desconto equivalente à diferença sem análise"
+    ],
+    "correctAnswer": "Confirmar se o cClassTrib informado corresponde de fato à natureza da operação registrada no pedido",
+    "explanation": "A checagem interna do cClassTrib evita abrir ocorrências desnecessárias com o vendedor quando o erro está na própria parametrização do pedido.",
+    "pacciTip": "Antes de incomodar o vendedor, olha pra dentro de casa primeiro, tesoro!"
+  },
+  {
+    "id": "REF-JR-022",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Você recebeu uma nota fiscal de compra de autopeças de um fornecedor industrial e percebeu que o valor de IBS/CBS destacado está abaixo do esperado.",
+    "question": "Além do cClassTrib, qual outro parâmetro deve ser conferido quando o valor apurado está abaixo do esperado?",
+    "options": [
+      "A alíquota vigente aplicada à operação",
+      "O tamanho da fonte do PDF da nota",
+      "A cor do logotipo do fornecedor",
+      "O número de páginas do romaneio"
+    ],
+    "correctAnswer": "A alíquota vigente aplicada à operação",
+    "explanation": "cClassTrib e alíquota caminham juntos no cálculo do tributo; um erro em qualquer um dos dois altera o valor final destacado na nota.",
+    "pacciTip": "cClassTrib e alíquota são a dupla dinâmica da investigação, amico! Confere os dois."
+  },
+  {
+    "id": "REF-JR-023",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Comparando duas notas de compra de fertilizantes do mesmo fornecedor e do mesmo produto, você percebe que o cClassTrib usado é diferente entre elas.",
+    "question": "O que essa inconsistência entre notas do mesmo produto mais provavelmente indica?",
+    "options": [
+      "Erro de parametrização em uma das notas, já que operações equivalentes deveriam manter o mesmo cClassTrib",
+      "Que o produto mudou de fórmula química",
+      "Que a reforma tributária exige mudar o cClassTrib a cada nota emitida",
+      "Que não há nada a investigar nessa situação"
+    ],
+    "correctAnswer": "Erro de parametrização em uma das notas, já que operações equivalentes deveriam manter o mesmo cClassTrib",
+    "explanation": "Operações de mesma natureza devem manter classificação consistente; divergência entre notas do mesmo item é sinal de erro cadastral em uma delas.",
+    "pacciTip": "Mesmo produto, mesma operação, mesmo cClassTrib. Se mudou, alguém errou a receita!"
+  },
+  {
+    "id": "REF-JR-024",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Sua empresa de construção civil recebeu uma nota de compra de cimento com IBS/CBS destacado maior do que o valor calculado pela alíquota padrão do produto.",
+    "question": "Qual das ações abaixo é INADEQUADA diante dessa divergência?",
+    "options": [
+      "Pagar a nota integralmente sem registrar a divergência em nenhum controle",
+      "Verificar o cClassTrib aplicado à operação",
+      "Registrar a divergência para análise posterior",
+      "Contatar o fornecedor para esclarecimento"
+    ],
+    "correctAnswer": "Pagar a nota integralmente sem registrar a divergência em nenhum controle",
+    "explanation": "Pagar sem registrar nada elimina o rastro da divergência e impede que o erro seja corrigido ou usado como aprendizado para casos futuros.",
+    "pacciTip": "Pagar e esquecer nunca é o caminho, tesoro! Registra sempre, mesmo pagando."
+  },
+  {
+    "id": "REF-JR-025",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Ao revisar uma nota fiscal de compra de medicamentos, você percebe que o valor de IBS está correto, mas o de CBS está divergente do esperado.",
+    "question": "Como é possível que apenas um dos dois tributos apresente divergência na mesma nota?",
+    "options": [
+      "Porque IBS e CBS são tributos distintos, apurados de forma independente, e um erro pode afetar apenas um deles",
+      "Porque isso é fisicamente impossível e a nota deve estar certa",
+      "Porque o CBS deixou de existir com a reforma tributária",
+      "Porque o sistema sempre calcula os dois tributos como um valor único indivisível"
+    ],
+    "correctAnswer": "Porque IBS e CBS são tributos distintos, apurados de forma independente, e um erro pode afetar apenas um deles",
+    "explanation": "IBS (subnacional) e CBS (federal) têm apuração própria; um erro de parametrização pode atingir apenas um dos dois cálculos.",
+    "pacciTip": "IBS e CBS são dois pratos diferentes no cardápio, amico! Um pode vir errado sem estragar o outro."
+  },
+  {
+    "id": "REF-JR-026",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Você está conferindo uma nota de serviço de assinatura de software e encontra uma diferença de poucos centavos entre o valor destacado e o valor calculado pelo sistema.",
+    "question": "Como uma diferença de poucos centavos deve ser tratada pelo analista?",
+    "options": [
+      "Como uma possível divergência de arredondamento ou parametrização, que ainda merece registro e verificação",
+      "Como um erro grave que exige cancelamento imediato do contrato",
+      "Como algo que nunca pode acontecer no sistema",
+      "Como motivo suficiente para trocar de fornecedor imediatamente"
+    ],
+    "correctAnswer": "Como uma possível divergência de arredondamento ou parametrização, que ainda merece registro e verificação",
+    "explanation": "Diferenças pequenas não devem ser descartadas sem checagem: podem indicar arredondamento aceitável ou um erro recorrente de parametrização.",
+    "pacciTip": "Centavo também conta história, tesoro! Não julga o tamanho, investiga a causa."
+  },
+  {
+    "id": "REF-JR-027",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Ao comparar duas notas fiscais de frete referentes ao mesmo trajeto e mesma transportadora, você percebe que o cClassTrib usado é diferente entre elas, sem qualquer mudança na operação.",
+    "question": "É normal que o cClassTrib varie entre notas de uma mesma operação recorrente, sem motivo aparente?",
+    "correctAnswer": false,
+    "explanation": "Não é normal. Operações de mesma natureza devem manter a mesma classificação tributária; variação sem justificativa indica erro em uma das notas.",
+    "pacciTip": "Se a operação é igual, o cClassTrib também deveria ser igual, tesoro!"
+  },
+  {
+    "id": "REF-JR-028",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma rede de hotéis percebe que reservas do mesmo tipo de quarto, feitas pelo mesmo canal de vendas, sempre usam o mesmo cClassTrib nas notas emitidas.",
+    "question": "É esperado que operações de mesma natureza mantenham o mesmo cClassTrib entre as notas emitidas?",
+    "correctAnswer": true,
+    "explanation": "Sim. Operações equivalentes devem manter classificação tributária consistente; isso é, inclusive, um bom sinal de parametrização correta.",
+    "pacciTip": "Consistência é sinal de que o sistema está bem-comportado, amico!"
+  },
+  {
+    "id": "REF-JR-029",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Um colega sugere não investigar uma pequena divergência de valor numa nota de material didático porque o fornecedor é parceiro de confiança há muitos anos.",
+    "question": "O histórico de confiança com um fornecedor dispensa a verificação de divergências no valor de IBS/CBS das notas?",
+    "correctAnswer": false,
+    "explanation": "Não dispensa. Mesmo fornecedores confiáveis podem ter erros de parametrização em seus sistemas, então toda divergência merece checagem.",
+    "pacciTip": "Confiança é bonita, mas não substitui a conferência, tesoro!"
+  },
+  {
+    "id": "REF-JR-030",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Analisando uma nota de serviço de internet corporativa, você nota que o campo cClassTrib está preenchido, mas o valor de IBS/CBS não bate com a alíquota vigente para aquele tipo de serviço.",
+    "question": "O simples preenchimento do campo cClassTrib garante, por si só, que o valor calculado esteja correto?",
+    "correctAnswer": false,
+    "explanation": "Não garante. O campo pode estar preenchido com um código que não corresponde à real natureza da operação, gerando cálculo incorreto mesmo estando preenchido.",
+    "pacciTip": "Preenchido não é sinônimo de certo, amico! Confere se o código bate com a operação de verdade."
+  },
+  {
+    "id": "REF-JR-031",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Você confere uma nota de insumos alimentícios e o valor de IBS/CBS destacado bate exatamente com o valor calculado pelo sistema com base na alíquota vigente.",
+    "question": "Quando o valor destacado bate exatamente com o esperado, isso é um bom indício de que a classificação usada está correta?",
+    "correctAnswer": true,
+    "explanation": "Sim. Quando o cálculo confere com o esperado, é um forte indício de que cClassTrib e alíquota foram aplicados corretamente na operação.",
+    "pacciTip": "Bateu certinho? Ótimo sinal, tesoro! O cClassTrib provavelmente está feliz e correto."
+  },
+  {
+    "id": "REF-JR-032",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Numa loja de eletrônicos, você percebe que uma venda para consumidor final dentro do país foi registrada com um cClassTrib normalmente usado em operações de exportação.",
+    "question": "Um cClassTrib de exportação aplicado a uma venda interna para consumidor final pode gerar divergência relevante no valor do IBS/CBS?",
+    "correctAnswer": true,
+    "explanation": "Sim. Classificações incompatíveis com a natureza real da operação alteram diretamente o cálculo do tributo, gerando divergência de valor.",
+    "pacciTip": "Exportação e venda interna não se vestem igual, amico! Cada uma tem seu código certo."
+  },
+  {
+    "id": "REF-JR-033",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Um pedido de um marketplace de moda apresenta um total de IBS/CBS que diverge do valor esperado para a categoria do produto anunciado.",
+    "question": "Ordene o fluxo correto de investigação dessa divergência:",
+    "options": [
+      "Validar a nota complementar recebida antes de liberar o pagamento",
+      "Detectar que o total de IBS/CBS diverge do valor esperado",
+      "Solicitar correção ao vendedor do marketplace",
+      "Confirmar se o cClassTrib é compatível com a categoria do produto"
+    ],
+    "correctAnswer": [
+      "Detectar que o total de IBS/CBS diverge do valor esperado",
+      "Confirmar se o cClassTrib é compatível com a categoria do produto",
+      "Solicitar correção ao vendedor do marketplace",
+      "Validar a nota complementar recebida antes de liberar o pagamento"
+    ],
+    "explanation": "O fluxo começa pela detecção da divergência, passa pela checagem do cClassTrib, segue com a solicitação de correção e termina com a validação do ajuste antes de liberar o pagamento.",
+    "pacciTip": "Detecta, confere, pede correção, valida. Assim ninguém libera pagamento errado, tesoro!"
+  },
+  {
+    "id": "REF-JR-034",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma distribuidora de bebidas recebe um carregamento acompanhado de nota fiscal e precisa decidir se o recebimento deve seguir normalmente ou com ressalva fiscal.",
+    "question": "Ordene o processo correto de conferência dessa nota:",
+    "options": [
+      "Verificar o cClassTrib e a alíquota usados no cálculo",
+      "Decidir se a mercadoria é recebida com ressalva fiscal ou não",
+      "Receber a nota fiscal da distribuidora com o carregamento",
+      "Comparar o valor de IBS/CBS destacado com o valor recalculado pelo sistema"
+    ],
+    "correctAnswer": [
+      "Receber a nota fiscal da distribuidora com o carregamento",
+      "Comparar o valor de IBS/CBS destacado com o valor recalculado pelo sistema",
+      "Verificar o cClassTrib e a alíquota usados no cálculo",
+      "Decidir se a mercadoria é recebida com ressalva fiscal ou não"
+    ],
+    "explanation": "Primeiro recebe-se a nota, depois compara-se o valor, investiga-se cClassTrib e alíquota e só então se decide sobre o recebimento com ou sem ressalva.",
+    "pacciTip": "Recebe, compara, investiga, decide. Nessa ordem o estoque não vira bagunça fiscal!"
+  },
+  {
+    "id": "REF-JR-035",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma metalúrgica identificou uma divergência de valor de IBS/CBS numa nota de compra de um equipamento para o ativo imobilizado.",
+    "question": "Ordene o fluxo correto de tratamento dessa divergência:",
+    "options": [
+      "Confirmar com o setor de compras a natureza exata da aquisição",
+      "Ajustar o lançamento contábil e o crédito a apropriar",
+      "Identificar a divergência no valor de IBS/CBS da nota de compra do equipamento",
+      "Verificar o cClassTrib informado para bens do ativo imobilizado"
+    ],
+    "correctAnswer": [
+      "Identificar a divergência no valor de IBS/CBS da nota de compra do equipamento",
+      "Verificar o cClassTrib informado para bens do ativo imobilizado",
+      "Confirmar com o setor de compras a natureza exata da aquisição",
+      "Ajustar o lançamento contábil e o crédito a apropriar"
+    ],
+    "explanation": "Identifica-se a divergência, verifica-se o cClassTrib do ativo, confirma-se a natureza da aquisição com compras e só então se ajusta o lançamento contábil.",
+    "pacciTip": "Ativo imobilizado exige passo a passo caprichado, amico! Não pula etapa."
+  },
+  {
+    "id": "REF-JR-036",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma clínica veterinária recebe uma nota de insumos cujo valor de IBS/CBS não corresponde ao esperado para aquele tipo de produto.",
+    "question": "Ordene o processo correto de tratamento dessa nota:",
+    "options": [
+      "Corrigir o lançamento após resposta do fornecedor",
+      "Notar que o valor de IBS/CBS não corresponde ao esperado para o insumo",
+      "Entrar em contato com o fornecedor para confirmar o código utilizado",
+      "Checar se o cClassTrib usado é o mesmo de compras anteriores do mesmo item"
+    ],
+    "correctAnswer": [
+      "Notar que o valor de IBS/CBS não corresponde ao esperado para o insumo",
+      "Checar se o cClassTrib usado é o mesmo de compras anteriores do mesmo item",
+      "Entrar em contato com o fornecedor para confirmar o código utilizado",
+      "Corrigir o lançamento após resposta do fornecedor"
+    ],
+    "explanation": "A análise começa notando a divergência, comparando com o histórico de compras, confirmando com o fornecedor e corrigindo o lançamento ao final.",
+    "pacciTip": "Comparar com o histórico é um truque esperto, tesoro! Ele revela rápido se algo mudou."
+  },
+  {
+    "id": "REF-JR-037",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma papelaria de atacado decidiu fazer uma revisão periódica para checar a consistência da classificação tributária das notas emitidas no período.",
+    "question": "Ordene o processo correto dessa auditoria interna:",
+    "options": [
+      "Listar as notas com possível classificação incorreta",
+      "Selecionar uma amostra de notas fiscais do período para revisão",
+      "Encaminhar a lista para tratativa com os fornecedores envolvidos",
+      "Comparar o cClassTrib de cada nota com a natureza real do produto vendido"
+    ],
+    "correctAnswer": [
+      "Selecionar uma amostra de notas fiscais do período para revisão",
+      "Comparar o cClassTrib de cada nota com a natureza real do produto vendido",
+      "Listar as notas com possível classificação incorreta",
+      "Encaminhar a lista para tratativa com os fornecedores envolvidos"
+    ],
+    "explanation": "A auditoria periódica segue da amostragem para a comparação, da comparação para a listagem de suspeitas e, por fim, o encaminhamento para tratativa.",
+    "pacciTip": "Amostra boa é a base de toda auditoria, amico! Depois é só seguir o fio da meada."
+  },
+  {
+    "id": "REF-JR-038",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma gráfica industrial recebeu a confirmação de um fornecedor de que uma nota fiscal anterior havia sido emitida com o cClassTrib incorreto.",
+    "question": "Ordene o processo correto de correção dessa situação:",
+    "options": [
+      "Atualizar o crédito apropriado com base no valor corrigido",
+      "Fornecedor confirma que o cClassTrib estava incorreto na nota original",
+      "Conferir se o valor de IBS/CBS na nova nota está correto",
+      "Solicitar a emissão de nota fiscal complementar ou de ajuste"
+    ],
+    "correctAnswer": [
+      "Fornecedor confirma que o cClassTrib estava incorreto na nota original",
+      "Solicitar a emissão de nota fiscal complementar ou de ajuste",
+      "Conferir se o valor de IBS/CBS na nova nota está correto",
+      "Atualizar o crédito apropriado com base no valor corrigido"
+    ],
+    "explanation": "Depois da confirmação do erro, solicita-se a nota complementar, confere-se o novo valor e só então se atualiza o crédito apropriado.",
+    "pacciTip": "Erro confirmado, nota complementar a caminho! Sempre confere antes de atualizar o crédito, tesoro."
+  },
+  {
+    "id": "REF-JR-039",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual interno de conferência de notas de uma indústria têxtil, há uma frase incompleta sobre notas do mesmo produto com classificações diferentes.",
+    "question": "Ao comparar duas notas fiscais do mesmo produto têxtil com cClassTrib diferentes, o mais provável é que exista um erro de ___ em uma delas.",
+    "options": [
+      "parametrização",
+      "logística",
+      "clima",
+      "estoque"
+    ],
+    "correctAnswer": "parametrização",
+    "explanation": "Classificações diferentes para o mesmo produto em operações equivalentes normalmente indicam erro de parametrização cadastral.",
+    "pacciTip": "Parametrização errada é a vilã mais comum dessa história, tesoro!"
+  },
+  {
+    "id": "REF-JR-040",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No checklist de recebimento de uma distribuidora de eletrônicos, há uma frase incompleta sobre a causa mais comum de divergência de valor.",
+    "question": "Quando o valor de IBS/CBS destacado numa nota não bate com o calculado, a causa mais comum está relacionada ao ___ aplicado à operação.",
+    "options": [
+      "cClassTrib",
+      "frete",
+      "desconto comercial",
+      "número de série"
+    ],
+    "correctAnswer": "cClassTrib",
+    "explanation": "O cClassTrib determina o tratamento tributário da operação, sendo o principal suspeito em divergências de valor.",
+    "pacciTip": "cClassTrib no banco dos réus de novo, amico!"
+  },
+  {
+    "id": "REF-JR-041",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de conferência de uma agroindústria, há uma frase incompleta sobre o segundo item a ser checado após o cClassTrib.",
+    "question": "Além do cClassTrib, o analista deve conferir se a ___ utilizada no cálculo está vigente para o período da operação.",
+    "options": [
+      "alíquota",
+      "embalagem",
+      "safra",
+      "cor do produto"
+    ],
+    "correctAnswer": "alíquota",
+    "explanation": "A alíquota vigente também influencia diretamente o valor calculado; usar uma alíquota desatualizada gera divergência mesmo com cClassTrib correto.",
+    "pacciTip": "Alíquota desatualizada é traiçoeira, tesoro! Confere sempre a vigência."
+  },
+  {
+    "id": "REF-JR-042",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de boas práticas de um setor de cosméticos, há uma frase incompleta sobre o tratamento de divergências pequenas.",
+    "question": "Divergências de valor no IBS/CBS, mesmo pequenas, devem ser ___ e não simplesmente ignoradas.",
+    "options": [
+      "registradas",
+      "arredondadas",
+      "descartadas",
+      "somadas ao lucro"
+    ],
+    "correctAnswer": "registradas",
+    "explanation": "Registrar toda divergência, ainda que pequena, cria histórico e evita que erros recorrentes passem despercebidos.",
+    "pacciTip": "Toda divergência merece um registrinho, amico! Por menor que seja."
+  },
+  {
+    "id": "REF-JR-043",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de uma revenda de autopeças, há uma frase incompleta sobre a consistência esperada entre notas de um mesmo item.",
+    "question": "Um mesmo produto vendido em operações equivalentes deve manter o mesmo ___ de uma nota para outra, salvo mudança real na operação.",
+    "options": [
+      "cClassTrib",
+      "número do pedido",
+      "vendedor",
+      "horário de emissão"
+    ],
+    "correctAnswer": "cClassTrib",
+    "explanation": "Operações equivalentes devem manter a mesma classificação tributária; variação sem justificativa indica erro de cadastro.",
+    "pacciTip": "Mesma operação, mesmo cClassTrib. Simples assim, tesoro!"
+  },
+  {
+    "id": "REF-JR-044",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de atendimento a fornecedores de uma papelaria, há uma frase incompleta sobre o passo anterior ao contato com o fornecedor.",
+    "question": "Antes de contatar o fornecedor sobre uma divergência, o analista deve primeiro ___ a causa provável internamente.",
+    "options": [
+      "investigar",
+      "inventar",
+      "ignorar",
+      "pagar"
+    ],
+    "correctAnswer": "investigar",
+    "explanation": "Investigar internamente primeiro evita contatos desnecessários e ajuda a apresentar o problema de forma clara ao fornecedor.",
+    "pacciTip": "Faz o dever de casa antes de ligar pro fornecedor, amico!"
+  },
+  {
+    "id": "REF-JR-045",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Durante a revisão de notas de insumos químicos, o gerente pergunta qual campo define o tratamento tributário da operação.",
+    "question": "Digite o nome do campo da nota fiscal que define o tratamento tributário aplicado à operação e deve ser conferido diante de uma divergência de valor:",
+    "correctAnswer": "cClassTrib",
+    "explanation": "O cClassTrib determina o tratamento tributário da operação e é o principal ponto de checagem em divergências de valor.",
+    "pacciTip": "cClassTrib de novo no centro das atenções, tesoro!"
+  },
+  {
+    "id": "REF-JR-046",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Na reunião de fechamento de uma fábrica de móveis, o gestor pergunta qual outro parâmetro numérico deve ser checado junto ao cClassTrib.",
+    "question": "Além do cClassTrib, digite o nome do outro parâmetro numérico que deve ser conferido quando o valor de IBS/CBS diverge do esperado:",
+    "correctAnswer": "alíquota",
+    "explanation": "A alíquota vigente, junto com o cClassTrib, forma a base do cálculo do tributo destacado na nota.",
+    "pacciTip": "cClassTrib e alíquota, a dupla imbatível da investigação, amico!"
+  },
+  {
+    "id": "REF-JR-047",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Em uma rede de farmácias, o supervisor pergunta como se chama o documento solicitado ao fornecedor quando a nota original tem erro de classificação.",
+    "question": "Digite o termo usado para o documento que corrige uma nota fiscal emitida com erro de classificação tributária (duas palavras):",
+    "correctAnswer": "nota complementar",
+    "explanation": "A nota complementar é o documento emitido pelo fornecedor para corrigir valores ou classificações de uma nota original com erro.",
+    "pacciTip": "Nota complementar é o remédio pra nota fiscal doente, tesoro!"
+  },
+  {
+    "id": "REF-JR-048",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Na diretoria de uma concessionária de veículos, o gestor pergunta que tipo de erro costuma fazer duas notas do mesmo produto terem cClassTrib diferentes.",
+    "question": "Digite, em uma palavra, o tipo de erro mais comum que faz duas notas do mesmo produto terem cClassTrib diferentes:",
+    "correctAnswer": "parametrização",
+    "explanation": "Erros de parametrização cadastral são a causa mais comum de divergência de classificação entre notas de operações equivalentes.",
+    "pacciTip": "Parametrização, sempre ela, amico! A vilã mais frequente."
+  },
+  {
+    "id": "REF-JR-049",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Em um treinamento sobre notas fiscais numa indústria gráfica, o instrutor pergunta a sigla do tributo federal que, junto com o IBS, compõe o valor destacado na nota.",
+    "question": "Digite a sigla do tributo federal que, junto com o IBS, compõe o valor total de tributo destacado na nota fiscal:",
+    "correctAnswer": "CBS",
+    "explanation": "O IBS (subnacional) e o CBS (federal) formam, juntos, o valor total de tributo destacado numa nota sob o novo modelo.",
+    "pacciTip": "CBS é o parceiro federal do IBS nessa dupla, tesoro!"
+  },
+  {
+    "id": "REF-JR-050",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Numa distribuidora de materiais de construção, o gestor de compras pergunta qual outro parâmetro, além da alíquota, deve ser conferido diante de divergência de valor.",
+    "question": "Digite o nome do campo que, junto com a alíquota, deve ser conferido diante de uma divergência de valor de IBS/CBS:",
+    "correctAnswer": "cClassTrib",
+    "explanation": "cClassTrib e alíquota são os dois pontos centrais de checagem sempre que o valor destacado numa nota diverge do esperado.",
+    "pacciTip": "Sempre os dois juntos na investigação, amico! cClassTrib e alíquota."
+  },
+  {
+    "id": "REF-JR-051",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "No fechamento do dia de uma loja de moda no e-commerce, o valor líquido recebido via split payment está menor do que o esperado para o lote de vendas do dia.",
+    "question": "Qual é a abordagem mais eficiente para investigar essa diferença?",
+    "options": [
+      "Comparar, venda a venda, o valor retido pelo split payment com o valor esperado pela alíquota da operação",
+      "Somar todas as vendas do mês e dividir por dois",
+      "Aguardar o próximo mês para ver se o valor se ajusta sozinho",
+      "Solicitar reembolso total às clientes"
+    ],
+    "correctAnswer": "Comparar, venda a venda, o valor retido pelo split payment com o valor esperado pela alíquota da operação",
+    "explanation": "A comparação individualizada por venda é o caminho mais eficiente para isolar exatamente onde está a diferença no lote do dia.",
+    "pacciTip": "Venda por venda é trabalhoso, mas é o jeito certo de achar a agulha no palheiro, tesoro!"
+  },
+  {
+    "id": "REF-JR-052",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um motorista parceiro de um aplicativo de transporte questiona por que o valor repassado pelo split payment de uma corrida foi diferente do informado no aplicativo.",
+    "question": "O que o analista deve verificar primeiro para responder a esse questionamento?",
+    "options": [
+      "Se a classificação tributária e a alíquota usadas na corrida estavam corretas no momento do pagamento",
+      "Se o motorista tem um bom histórico de avaliações",
+      "Se o carro do motorista estava limpo",
+      "Se o cliente deixou gorjeta"
+    ],
+    "correctAnswer": "Se a classificação tributária e a alíquota usadas na corrida estavam corretas no momento do pagamento",
+    "explanation": "O valor retido pelo split payment depende diretamente da classificação e da alíquota aplicadas à operação no momento do pagamento.",
+    "pacciTip": "A resposta pro motorista está na classificação da corrida, amico! Não no trânsito."
+  },
+  {
+    "id": "REF-JR-053",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Na conciliação semanal de um marketplace de delivery de comida, pequenas diferenças recorrentes aparecem sempre associadas a um único restaurante parceiro.",
+    "question": "Diferenças recorrentes concentradas em um único parceiro sugerem o quê?",
+    "options": [
+      "Possível erro sistemático de parametrização tributária no cadastro daquele parceiro",
+      "Que o parceiro está sendo perseguido pelo sistema",
+      "Que o problema é sempre da operadora de cartão",
+      "Que não há nada a investigar, pois é só um parceiro"
+    ],
+    "correctAnswer": "Possível erro sistemático de parametrização tributária no cadastro daquele parceiro",
+    "explanation": "Quando o erro se concentra sempre no mesmo parceiro, o mais provável é uma falha pontual e recorrente na parametrização do cadastro dele.",
+    "pacciTip": "Se o erro sempre mora no mesmo endereço, vai lá direto investigar, tesoro!"
+  },
+  {
+    "id": "REF-JR-054",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um cliente internacional paga uma assinatura de um SaaS e o valor repassado via split payment não corresponde ao esperado para uma operação nacional.",
+    "question": "O que deve ser verificado quando o split payment aplica regras de uma operação diferente da que realmente ocorreu?",
+    "options": [
+      "Se a operação foi classificada corretamente conforme sua real natureza (nacional, exportação etc.)",
+      "Se o cliente mudou de fuso horário",
+      "Se o valor foi pago em dinheiro físico",
+      "Se o servidor da empresa está localizado no exterior"
+    ],
+    "correctAnswer": "Se a operação foi classificada corretamente conforme sua real natureza (nacional, exportação etc.)",
+    "explanation": "O split payment calcula a retenção com base na classificação informada; se a natureza real da operação não bate com a classificação usada, o valor sai errado.",
+    "pacciTip": "Operação errada classificada é operação errada calculada, amico!"
+  },
+  {
+    "id": "REF-JR-055",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Numa loja de móveis, uma venda parcelada no cartão gera repasses mensais via split payment, e o analista percebe que uma das parcelas teve valor de tributo retido diferente das demais.",
+    "question": "O que essa diferença entre parcelas de uma mesma venda pode indicar?",
+    "options": [
+      "Erro de parametrização em uma das parcelas, já que o tributo retido deveria seguir o mesmo cálculo proporcional em todas",
+      "Que parcelas de cartão nunca têm tributo retido",
+      "Que o cliente pagou duas vendas diferentes por engano",
+      "Que o split payment só funciona corretamente na primeira parcela"
+    ],
+    "correctAnswer": "Erro de parametrização em uma das parcelas, já que o tributo retido deveria seguir o mesmo cálculo proporcional em todas",
+    "explanation": "Todas as parcelas de uma mesma venda devem seguir o mesmo cálculo proporcional de retenção; uma parcela fora do padrão indica erro pontual.",
+    "pacciTip": "Parcelas de uma mesma venda deveriam ser irmãs gêmeas no cálculo, tesoro! Uma diferente chama atenção."
+  },
+  {
+    "id": "REF-JR-056",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma agência de viagens vende um pacote turístico (passagem, hospedagem e serviços) com split payment, e o valor retido ficou menor do que o esperado.",
+    "question": "Por que pacotes compostos por diferentes serviços exigem atenção redobrada na conciliação do split payment?",
+    "options": [
+      "Porque cada item do pacote pode ter classificação e alíquota próprias, exigindo cálculo segregado do tributo retido",
+      "Porque pacotes de viagem são sempre isentos de tributo",
+      "Porque o split payment não funciona para vendas parceladas",
+      "Porque agências de viagem não emitem nota fiscal"
+    ],
+    "correctAnswer": "Porque cada item do pacote pode ter classificação e alíquota próprias, exigindo cálculo segregado do tributo retido",
+    "explanation": "Cada componente de um pacote (passagem, hospedagem, serviços) pode ter natureza tributária própria, exigindo cálculo individualizado, e não único, da retenção.",
+    "pacciTip": "Pacote misto pede cálculo separado por item, amico! Não dá pra jogar tudo no mesmo balaio."
+  },
+  {
+    "id": "REF-JR-057",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "O gerente de uma rede de farmácias acredita que, como o split payment é automático, qualquer valor recebido está automaticamente correto.",
+    "question": "O fato de o valor ter sido processado automaticamente pelo split payment garante, por si só, que ele está correto?",
+    "correctAnswer": false,
+    "explanation": "Não garante. A automação executa o cálculo com base nos parâmetros informados; se esses parâmetros estiverem errados, o valor processado também sai errado.",
+    "pacciTip": "Automático não é sinônimo de infalível, tesoro! Sempre confere."
+  },
+  {
+    "id": "REF-JR-058",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "A equipe financeira de uma plataforma de streaming nota uma pequena diferença no repasse mensal de assinaturas e decide não investigar mais, pois a diferença já aparece há alguns meses.",
+    "question": "Uma diferença recorrente ao longo de vários meses deixa de precisar de investigação simplesmente por já ter acontecido antes?",
+    "correctAnswer": false,
+    "explanation": "Não deixa. Diferenças recorrentes indicam um erro sistemático que se repete mês a mês e deveria ter sido investigado desde a primeira ocorrência.",
+    "pacciTip": "Repetir o erro não vira tradição, amico! Continua precisando de investigação."
+  },
+  {
+    "id": "REF-JR-059",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Um analista de um marketplace de eletrônicos propõe fazer a conciliação de split payment como rotina periódica mensal, independentemente de haver reclamação de vendedores.",
+    "question": "A conciliação do split payment deve ser feita como rotina periódica, independentemente de haver reclamação de vendedores?",
+    "correctAnswer": true,
+    "explanation": "Sim. A conciliação proativa evita que erros se acumulem antes de serem percebidos, em vez de depender apenas de reclamações para serem notados.",
+    "pacciTip": "Rotina proativa é o segredo, tesoro! Não espera reclamação pra agir."
+  },
+  {
+    "id": "REF-JR-060",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Num posto de gasolina com loja de conveniência, o analista percebe que o valor retido nas vendas de combustível é calculado de forma diferente do valor retido nas vendas de produtos da loja.",
+    "question": "É esperado que produtos de naturezas tributárias diferentes, vendidos no mesmo estabelecimento, tenham valores de tributo retido calculados de forma distinta pelo split payment?",
+    "correctAnswer": true,
+    "explanation": "Sim. Cada item segue sua própria classificação e alíquota, então é natural haver cálculos diferentes entre produtos de naturezas distintas vendidos juntos.",
+    "pacciTip": "Combustível e salgadinho não seguem a mesma receita tributária, amico!"
+  },
+  {
+    "id": "REF-JR-061",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Um colega de uma clínica de estética afirma que, uma vez implementado o split payment, a empresa nunca mais precisará se preocupar com passivo fiscal relacionado a tributo não recolhido.",
+    "question": "A adoção do split payment elimina totalmente o risco de passivo fiscal por tributo não recolhido corretamente?",
+    "correctAnswer": false,
+    "explanation": "Não elimina totalmente. O split payment reduz o risco ao automatizar a retenção, mas erros de parametrização ainda podem gerar recolhimento incorreto.",
+    "pacciTip": "Reduz o risco, sim, mas não apaga ele por completo, tesoro!"
+  },
+  {
+    "id": "REF-JR-062",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "No fechamento mensal de uma escola de idiomas, a conciliação do split payment bate exatamente com o valor esperado, sem nenhuma divergência encontrada.",
+    "question": "Mesmo quando a conciliação mensal do split payment fecha sem divergências, ainda é uma boa prática documentar o resultado da conciliação?",
+    "correctAnswer": true,
+    "explanation": "Sim. Documentar o resultado, mesmo sem divergências, cria um histórico auditável e evidencia que a rotina de controle foi de fato executada.",
+    "pacciTip": "Bateu certinho? Documenta assim mesmo, amico! Prova que o trabalho foi feito."
+  },
+  {
+    "id": "REF-JR-063",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma livraria online precisa fazer a conciliação semanal do split payment das vendas do site.",
+    "question": "Ordene o processo correto dessa conciliação:",
+    "options": [
+      "Separar as vendas com valores retidos divergentes",
+      "Abrir chamado interno para tratar as divergências encontradas",
+      "Extrair o relatório de vendas e retenções da semana",
+      "Cruzar cada venda com o valor de tributo esperado pela alíquota do produto"
+    ],
+    "correctAnswer": [
+      "Extrair o relatório de vendas e retenções da semana",
+      "Cruzar cada venda com o valor de tributo esperado pela alíquota do produto",
+      "Separar as vendas com valores retidos divergentes",
+      "Abrir chamado interno para tratar as divergências encontradas"
+    ],
+    "explanation": "A conciliação começa pela extração do relatório, segue com o cruzamento dos valores, a separação das divergências e o registro em chamado interno.",
+    "pacciTip": "Extrai, cruza, separa, registra. Assim nenhuma venda escapa da conferência, tesoro!"
+  },
+  {
+    "id": "REF-JR-064",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Um paciente de uma clínica odontológica questiona o valor cobrado numa consulta que passou pelo split payment.",
+    "question": "Ordene o processo correto de tratamento desse questionamento:",
+    "options": [
+      "Verificar a classificação tributária usada no procedimento",
+      "Responder ao paciente com a explicação ou corrigir o erro identificado",
+      "Receber o questionamento do paciente sobre o valor cobrado",
+      "Localizar a transação correspondente no relatório de split payment"
+    ],
+    "correctAnswer": [
+      "Receber o questionamento do paciente sobre o valor cobrado",
+      "Localizar a transação correspondente no relatório de split payment",
+      "Verificar a classificação tributária usada no procedimento",
+      "Responder ao paciente com a explicação ou corrigir o erro identificado"
+    ],
+    "explanation": "O atendimento começa recebendo o questionamento, localizando a transação, verificando a classificação usada e respondendo ao paciente com a conclusão.",
+    "pacciTip": "Recebe, localiza, verifica, responde. Assim o paciente sai satisfeito, amico!"
+  },
+  {
+    "id": "REF-JR-065",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma loja de departamentos usa vários meios de pagamento diferentes e precisa consolidar os relatórios de split payment no fechamento mensal.",
+    "question": "Ordene o processo correto dessa consolidação:",
+    "options": [
+      "Registrar e escalar as divergências relevantes para o time fiscal",
+      "Consolidar os relatórios de split payment de todos os meios de pagamento usados",
+      "Comparar o valor consolidado com o valor esperado pelas vendas do período",
+      "Padronizar os dados em um formato único para comparação"
+    ],
+    "correctAnswer": [
+      "Consolidar os relatórios de split payment de todos os meios de pagamento usados",
+      "Padronizar os dados em um formato único para comparação",
+      "Comparar o valor consolidado com o valor esperado pelas vendas do período",
+      "Registrar e escalar as divergências relevantes para o time fiscal"
+    ],
+    "explanation": "Primeiro consolidam-se os relatórios, depois padronizam-se os dados, compara-se o total com o esperado e, por fim, escalam-se as divergências relevantes.",
+    "pacciTip": "Consolida, padroniza, compara, escala. Fechamento com múltiplos meios de pagamento pede ordem, tesoro!"
+  },
+  {
+    "id": "REF-JR-066",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Um aplicativo de delivery percebe um aumento incomum de divergências no split payment logo após uma atualização do sistema.",
+    "question": "Ordene o processo correto de investigação dessa situação:",
+    "options": [
+      "Reportar o problema à equipe técnica responsável pelo sistema",
+      "Notar aumento incomum de divergências após uma atualização do sistema",
+      "Verificar se a atualização alterou parâmetros de classificação tributária",
+      "Isolar as transações realizadas após a atualização"
+    ],
+    "correctAnswer": [
+      "Notar aumento incomum de divergências após uma atualização do sistema",
+      "Isolar as transações realizadas após a atualização",
+      "Verificar se a atualização alterou parâmetros de classificação tributária",
+      "Reportar o problema à equipe técnica responsável pelo sistema"
+    ],
+    "explanation": "A investigação começa notando o aumento, isolando as transações do período afetado, checando se a atualização mexeu em parâmetros e reportando à equipe técnica.",
+    "pacciTip": "Atualização suspeita? Isola, investiga e chama o time técnico, amico!"
+  },
+  {
+    "id": "REF-JR-067",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma imobiliária precisa conciliar o split payment das taxas de intermediação de aluguel recebidas no mês.",
+    "question": "Ordene o processo correto dessa conciliação:",
+    "options": [
+      "Ajustar o registro contábil conforme o resultado da conferência",
+      "Levantar as taxas de intermediação recebidas no período",
+      "Comparar o valor retido pelo split payment com o valor esperado",
+      "Confirmar a classificação tributária aplicada a cada taxa"
+    ],
+    "correctAnswer": [
+      "Levantar as taxas de intermediação recebidas no período",
+      "Confirmar a classificação tributária aplicada a cada taxa",
+      "Comparar o valor retido pelo split payment com o valor esperado",
+      "Ajustar o registro contábil conforme o resultado da conferência"
+    ],
+    "explanation": "Levanta-se as taxas do período, confirma-se a classificação de cada uma, compara-se o valor retido com o esperado e ajusta-se o registro contábil ao final.",
+    "pacciTip": "Taxas de aluguel também merecem conferência caprichada, tesoro!"
+  },
+  {
+    "id": "REF-JR-068",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma academia de ginástica processa mensalidades recorrentes via split payment e precisa revisar se todas seguem o padrão esperado de retenção.",
+    "question": "Ordene o processo correto dessa revisão:",
+    "options": [
+      "Investigar a causa das assinaturas identificadas como fora do padrão",
+      "Listar as mensalidades processadas via split payment no mês",
+      "Identificar assinaturas com valor de retenção fora do padrão",
+      "Verificar se o valor retido é proporcional em cada cobrança recorrente"
+    ],
+    "correctAnswer": [
+      "Listar as mensalidades processadas via split payment no mês",
+      "Verificar se o valor retido é proporcional em cada cobrança recorrente",
+      "Identificar assinaturas com valor de retenção fora do padrão",
+      "Investigar a causa das assinaturas identificadas como fora do padrão"
+    ],
+    "explanation": "A revisão parte da listagem das mensalidades, verifica a proporcionalidade da retenção, identifica as fora do padrão e investiga a causa de cada uma.",
+    "pacciTip": "Mensalidade recorrente também pode esconder erro recorrente, amico! Revisa sempre."
+  },
+  {
+    "id": "REF-JR-069",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de conciliação de um pet shop online, há uma frase incompleta sobre o que fazer quando o valor recebido é menor que o esperado.",
+    "question": "Se o valor recebido via split payment for menor que o esperado, o analista deve comparar o valor retido com o valor calculado pela ___ da operação.",
+    "options": [
+      "alíquota",
+      "embalagem",
+      "cor do produto",
+      "distância de entrega"
+    ],
+    "correctAnswer": "alíquota",
+    "explanation": "A comparação com o valor calculado pela alíquota vigente é o ponto de partida para identificar a origem da diferença.",
+    "pacciTip": "Alíquota é a régua de comparação, tesoro!"
+  },
+  {
+    "id": "REF-JR-070",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de um marketplace de livros, há uma frase incompleta sobre o papel do split payment na rotina de controle.",
+    "question": "O split payment automatiza a retenção do tributo, mas não elimina a necessidade de ___ periódica dos valores.",
+    "options": [
+      "conciliação",
+      "propaganda",
+      "embalagem",
+      "reciclagem"
+    ],
+    "correctAnswer": "conciliação",
+    "explanation": "Mesmo com a automação da retenção, a conciliação periódica continua sendo necessária para identificar eventuais erros de parametrização.",
+    "pacciTip": "Automação ajuda, mas conciliação continua no cardápio, amico!"
+  },
+  {
+    "id": "REF-JR-071",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de um aplicativo de estacionamento, há uma frase incompleta sobre divergências concentradas em um único parceiro.",
+    "question": "Divergências recorrentes concentradas em um único parceiro geralmente indicam erro de ___ no cadastro tributário dele.",
+    "options": [
+      "parametrização",
+      "geolocalização",
+      "sinal de internet",
+      "senha"
+    ],
+    "correctAnswer": "parametrização",
+    "explanation": "Quando o erro se repete sempre no mesmo parceiro, a causa mais provável é uma falha específica na parametrização do cadastro tributário dele.",
+    "pacciTip": "Erro que mora sempre no mesmo lugar tem endereço certo, tesoro!"
+  },
+  {
+    "id": "REF-JR-072",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de uma loja de brinquedos online, há uma frase incompleta sobre vendas parceladas.",
+    "question": "Uma venda parcelada deve manter o mesmo cálculo proporcional de tributo retido em ___ as parcelas.",
+    "options": [
+      "todas",
+      "nenhuma",
+      "apenas na primeira",
+      "apenas na última"
+    ],
+    "correctAnswer": "todas",
+    "explanation": "O cálculo proporcional do tributo retido deve se manter consistente em todas as parcelas de uma mesma venda.",
+    "pacciTip": "Todas as parcelas seguem o mesmo compasso, amico!"
+  },
+  {
+    "id": "REF-JR-073",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de uma plataforma de cursos online, há uma frase incompleta sobre boas práticas mesmo quando a conciliação fecha sem diferenças.",
+    "question": "Ainda que o split payment feche sem diferenças no mês, é uma boa prática ___ o resultado da conciliação.",
+    "options": [
+      "documentar",
+      "apagar",
+      "esconder",
+      "ignorar"
+    ],
+    "correctAnswer": "documentar",
+    "explanation": "Documentar o resultado, mesmo positivo, mantém um histórico auditável da rotina de controle executada.",
+    "pacciTip": "Documenta sempre, mesmo quando está tudo certo, tesoro!"
+  },
+  {
+    "id": "REF-JR-074",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de uma rede de pet shops com loja física e online, há uma frase incompleta sobre vendas mistas no mesmo estabelecimento.",
+    "question": "Produtos de naturezas tributárias diferentes vendidos juntos podem ter valores de tributo retido ___ pelo split payment.",
+    "options": [
+      "distintos",
+      "idênticos sempre",
+      "zerados",
+      "dobrados"
+    ],
+    "correctAnswer": "distintos",
+    "explanation": "Cada produto segue sua própria classificação e alíquota, então é esperado que os valores retidos sejam distintos entre itens de naturezas diferentes.",
+    "pacciTip": "Produtos diferentes, retenções diferentes. Nada de estranhar, amico!"
+  },
+  {
+    "id": "REF-JR-075",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Numa reunião com o diretor financeiro de um marketplace de cosméticos, ele pergunta o nome do processo que compara os valores retidos com os esperados.",
+    "question": "Digite o nome do processo que compara os valores retidos pelo split payment com os valores esperados por venda:",
+    "correctAnswer": "conciliação",
+    "explanation": "A conciliação é o processo de comparação periódica entre valores retidos e valores esperados, essencial para detectar erros.",
+    "pacciTip": "Conciliação é a palavra do mês, sempre, tesoro!"
+  },
+  {
+    "id": "REF-JR-076",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Num treinamento sobre pagamentos numa rede de conveniência, o instrutor pergunta o termo em inglês que nomeia o mecanismo de retenção automática no pagamento.",
+    "question": "Digite o termo em inglês (duas palavras) do mecanismo que segrega automaticamente o tributo no momento do pagamento:",
+    "correctAnswer": "split payment",
+    "explanation": "O split payment é o mecanismo que separa automaticamente o valor do tributo no momento em que o pagamento é processado.",
+    "pacciTip": "Split payment, o protagonista da conciliação, amico!"
+  },
+  {
+    "id": "REF-JR-077",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um analista pleno de uma plataforma de assinaturas pergunta o que geralmente causa divergências recorrentes concentradas em um único parceiro.",
+    "question": "Digite, em uma palavra, o que geralmente causa divergências recorrentes de split payment concentradas em um único parceiro:",
+    "correctAnswer": "parametrização",
+    "explanation": "Erros de parametrização no cadastro tributário de um parceiro específico costumam ser a causa de divergências recorrentes e concentradas.",
+    "pacciTip": "Parametrização de novo na mira, tesoro!"
+  },
+  {
+    "id": "REF-JR-078",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um auditor de uma rede de hotéis pergunta qual campo, também citado nas divergências de nota fiscal, deve ser conferido quando o split payment retém um valor diferente do esperado.",
+    "question": "Digite o nome do campo, também citado nas divergências de nota fiscal, que deve ser conferido quando o split payment retém um valor diferente do esperado:",
+    "correctAnswer": "cClassTrib",
+    "explanation": "Assim como nas notas fiscais, o cClassTrib usado na operação é o principal ponto de checagem quando o valor retido diverge do esperado.",
+    "pacciTip": "cClassTrib aparece até no split payment, amico! Ele está em todo lugar."
+  },
+  {
+    "id": "REF-JR-079",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um gestor de uma plataforma de ingressos para eventos pergunta como deve ser o cálculo do tributo retido quando um pacote mistura itens de naturezas tributárias diferentes.",
+    "question": "Digite, em uma palavra, o que o cálculo do tributo retido deve ser em relação aos diferentes itens de um pacote com naturezas tributárias distintas:",
+    "correctAnswer": "segregado",
+    "explanation": "Cada item de naturezas tributárias diferentes deve ter seu tributo calculado de forma segregada, e não em bloco único.",
+    "pacciTip": "Pacote misto pede cálculo separado, tesoro!"
+  },
+  {
+    "id": "REF-JR-080",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um gestor de compliance de uma rede de farmácias online pergunta o que deve ser feito com o resultado da conciliação mensal, mesmo sem divergências.",
+    "question": "Digite, em uma palavra, o que deve ser feito com o resultado da conciliação mensal do split payment, mesmo quando não há divergências:",
+    "correctAnswer": "documentado",
+    "explanation": "Documentar o resultado da conciliação, mesmo positivo, evidencia que a rotina de controle foi executada e cria histórico auditável.",
+    "pacciTip": "Documentado, sempre, amico! Boa prática não tira folga."
+  },
+  {
+    "id": "REF-JR-081",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma oficina mecânica comprou peças de uma pequena distribuidora optante do Simples Nacional e precisa calcular o crédito de IBS/CBS a ser aproveitado.",
+    "question": "O que determina o percentual de crédito que a empresa compradora poderá aproveitar nessa compra?",
+    "options": [
+      "O regime de apuração escolhido pelo fornecedor optante do Simples Nacional (simplificado ou regular)",
+      "O tamanho da oficina compradora",
+      "A cor da peça comprada",
+      "O horário em que a nota foi emitida"
+    ],
+    "correctAnswer": "O regime de apuração escolhido pelo fornecedor optante do Simples Nacional (simplificado ou regular)",
+    "explanation": "O percentual de crédito transferido ao comprador depende diretamente do regime de apuração adotado pelo fornecedor do Simples Nacional.",
+    "pacciTip": "O regime do fornecedor é quem manda no crédito, tesoro!"
+  },
+  {
+    "id": "REF-JR-082",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma gráfica avalia trocar de fornecedor de papel entre dois candidatos: um optante do Simples Nacional no regime simplificado e outro no regime regular.",
+    "question": "Do ponto de vista do crédito de IBS/CBS gerado ao comprador, qual a principal diferença entre esses dois fornecedores?",
+    "options": [
+      "O fornecedor no regime regular tende a gerar mais crédito ao comprador do que o no regime simplificado",
+      "Não há diferença nenhuma entre os dois regimes",
+      "O regime simplificado sempre gera mais crédito que o regular",
+      "Fornecedores do Simples Nacional nunca emitem nota fiscal"
+    ],
+    "correctAnswer": "O fornecedor no regime regular tende a gerar mais crédito ao comprador do que o no regime simplificado",
+    "explanation": "A opção pelo regime regular por parte do fornecedor do Simples Nacional costuma ampliar o crédito disponível ao comprador em relação ao regime simplificado.",
+    "pacciTip": "Regime regular, crédito maior pro comprador, amico! Vale a pena comparar."
+  },
+  {
+    "id": "REF-JR-083",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma consultoria de TI optante do Simples Nacional presta serviço para uma grande empresa de tecnologia, que quer maximizar seu crédito de IBS/CBS nessa contratação.",
+    "question": "O que a empresa contratante pode sugerir ao fornecedor para obter mais crédito, dentro das regras existentes?",
+    "options": [
+      "Que o fornecedor avalie a opção pelo regime regular de apuração, se isso for vantajoso para ambas as partes",
+      "Que o fornecedor pare de emitir nota fiscal",
+      "Que o fornecedor aumente o preço do serviço sem mudar nada",
+      "Que o fornecedor saia do Simples Nacional sem nenhuma alternativa"
+    ],
+    "correctAnswer": "Que o fornecedor avalie a opção pelo regime regular de apuração, se isso for vantajoso para ambas as partes",
+    "explanation": "A opção pelo regime regular é uma escolha do próprio fornecedor do Simples Nacional, que pode ser negociada quando vantajosa para os dois lados.",
+    "pacciTip": "Conversa aberta com o fornecedor pode render mais crédito, tesoro!"
+  },
+  {
+    "id": "REF-JR-084",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma padaria compra farinha de um fornecedor do Simples Nacional e percebe que o crédito gerado é menor do que em compras de fornecedores do regime regular.",
+    "question": "Isso está de acordo com o funcionamento esperado do sistema?",
+    "options": [
+      "Sim, pois o regime simplificado do Simples Nacional pode gerar crédito em proporção diferente do regime regular",
+      "Não, é sempre um erro do sistema",
+      "Não, fornecedores do Simples Nacional nunca podem vender para padarias",
+      "Sim, mas apenas às sextas-feiras"
+    ],
+    "correctAnswer": "Sim, pois o regime simplificado do Simples Nacional pode gerar crédito em proporção diferente do regime regular",
+    "explanation": "É esperado que o regime simplificado do Simples Nacional gere crédito em proporção diferente do regime regular; não é, por si só, um erro.",
+    "pacciTip": "Diferença de crédito aqui é regra, não bug, amico!"
+  },
+  {
+    "id": "REF-JR-085",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um comprador de uma loja de material elétrico está decidindo entre dois fornecedores de mesmo produto e preço, um do Simples Nacional (regime simplificado) e outro do regime regular.",
+    "question": "Qual informação é essencial para essa análise de crédito antes da decisão de compra?",
+    "options": [
+      "O regime de apuração de IBS/CBS efetivamente adotado por cada fornecedor",
+      "A cor da fachada da loja de cada fornecedor",
+      "O número de funcionários de cada fornecedor",
+      "A distância entre os dois fornecedores"
+    ],
+    "correctAnswer": "O regime de apuração de IBS/CBS efetivamente adotado por cada fornecedor",
+    "explanation": "O regime de apuração de cada fornecedor é a informação central para estimar o crédito que a compra vai gerar antes de decidir.",
+    "pacciTip": "Antes de decidir, confere o regime de cada um, tesoro! É isso que muda o crédito."
+  },
+  {
+    "id": "REF-JR-086",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma produtora de eventos contratou diversos pequenos fornecedores (buffet, som, decoração) para um evento corporativo, vários deles optantes do Simples Nacional.",
+    "question": "Para apurar corretamente o crédito de IBS/CBS do evento, o que o analista deve fazer em relação a cada fornecedor?",
+    "options": [
+      "Verificar individualmente o regime de apuração de cada fornecedor, pois pode variar entre eles mesmo estando todos no Simples Nacional",
+      "Assumir que todos seguem exatamente a mesma regra, sem checagem",
+      "Ignorar o crédito desses fornecedores por serem pequenos",
+      "Somar todas as notas e aplicar uma alíquota única inventada"
+    ],
+    "correctAnswer": "Verificar individualmente o regime de apuração de cada fornecedor, pois pode variar entre eles mesmo estando todos no Simples Nacional",
+    "explanation": "Mesmo entre fornecedores do Simples Nacional, o regime de apuração pode variar de um para outro, exigindo checagem individual de cada um.",
+    "pacciTip": "Cada fornecedor pequeno pode ter uma regrinha diferente, amico! Confere um por um."
+  },
+  {
+    "id": "REF-JR-087",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma marcenaria compra madeira de um pequeno fornecedor optante do Simples Nacional.",
+    "question": "Um fornecedor optante do Simples Nacional está automaticamente proibido de gerar qualquer crédito de IBS/CBS ao comprador?",
+    "correctAnswer": false,
+    "explanation": "Não está proibido. Dependendo do regime escolhido pelo fornecedor, ele pode gerar crédito ao comprador, ainda que em proporção diferente do regime regular.",
+    "pacciTip": "Proibido é palavra forte demais, tesoro! Simples Nacional pode sim gerar crédito."
+  },
+  {
+    "id": "REF-JR-088",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Um salão de beleza compra produtos de diferentes fornecedores optantes do Simples Nacional.",
+    "question": "Todos os fornecedores optantes do Simples Nacional geram exatamente o mesmo percentual de crédito ao comprador, independentemente do regime escolhido?",
+    "correctAnswer": false,
+    "explanation": "Não geram o mesmo percentual. O percentual de crédito pode variar conforme o regime de apuração (simplificado ou regular) escolhido por cada fornecedor.",
+    "pacciTip": "Cada fornecedor pode ter seu próprio percentual, amico! Não generaliza."
+  },
+  {
+    "id": "REF-JR-089",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma pequena transportadora presta frete regularmente para uma indústria e avalia mudar sua forma de apuração de IBS/CBS.",
+    "question": "Uma empresa do Simples Nacional pode optar pelo regime regular de apuração do IBS/CBS quando isso for vantajoso para gerar mais crédito aos seus clientes?",
+    "correctAnswer": true,
+    "explanation": "Sim. O Simples Nacional permite a opção pelo regime regular de apuração quando essa escolha for vantajosa, inclusive para os clientes que recebem o crédito.",
+    "pacciTip": "A porta pro regime regular está aberta, tesoro! Se fizer sentido pro fornecedor."
+  },
+  {
+    "id": "REF-JR-090",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma empresa de limpeza terceirizada, optante do Simples Nacional, emite nota fiscal regularmente para um cliente corporativo, informando o regime aplicado.",
+    "question": "Mesmo optando pelo regime simplificado, um prestador do Simples Nacional deve informar na nota fiscal os dados necessários para o cálculo do crédito do tomador?",
+    "correctAnswer": true,
+    "explanation": "Sim. A nota fiscal deve trazer as informações necessárias para que o tomador do serviço calcule corretamente o crédito de IBS/CBS a que tem direito.",
+    "pacciTip": "Nota tem que contar a história toda, amico! Mesmo no regime simplificado."
+  },
+  {
+    "id": "REF-JR-091",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma loja de informática está avaliando trocar de fornecedor e considera irrelevante saber o regime de apuração de IBS/CBS de cada candidato.",
+    "question": "Ao comparar fornecedores para maximizar crédito de IBS/CBS, o regime de apuração de cada um é uma informação irrelevante para a decisão?",
+    "correctAnswer": false,
+    "explanation": "Não é irrelevante. O regime de apuração de cada fornecedor impacta diretamente o crédito aproveitável, sendo informação central para a decisão.",
+    "pacciTip": "Irrelevante nada, tesoro! É justamente o dado que muda tudo."
+  },
+  {
+    "id": "REF-JR-092",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma doceria artesanal compra embalagens de dois fornecedores diferentes, ambos optantes do Simples Nacional.",
+    "question": "É possível que dois fornecedores diferentes, ambos do Simples Nacional, gerem percentuais de crédito diferentes para o mesmo tipo de compra?",
+    "correctAnswer": true,
+    "explanation": "Sim. Cada fornecedor pode ter optado por um regime de apuração diferente (simplificado ou regular), o que altera o percentual de crédito gerado.",
+    "pacciTip": "Mesmo grupo, resultados diferentes, amico! Depende da escolha de cada um."
+  },
+  {
+    "id": "REF-JR-093",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma papelaria de bairro recebeu uma nota de um fornecedor optante do Simples Nacional e precisa apurar o crédito de IBS/CBS dessa compra.",
+    "question": "Ordene o fluxo correto dessa apuração:",
+    "options": [
+      "Calcular o percentual de crédito de IBS/CBS aplicável",
+      "Lançar o crédito apurado na apuração da empresa compradora",
+      "Receber a nota fiscal do fornecedor optante do Simples Nacional",
+      "Identificar o regime de apuração adotado pelo fornecedor na nota"
+    ],
+    "correctAnswer": [
+      "Receber a nota fiscal do fornecedor optante do Simples Nacional",
+      "Identificar o regime de apuração adotado pelo fornecedor na nota",
+      "Calcular o percentual de crédito de IBS/CBS aplicável",
+      "Lançar o crédito apurado na apuração da empresa compradora"
+    ],
+    "explanation": "O fluxo começa pelo recebimento da nota, identifica o regime do fornecedor, calcula o percentual de crédito e finaliza com o lançamento na apuração.",
+    "pacciTip": "Recebe, identifica o regime, calcula, lança. Assim o crédito não se perde, tesoro!"
+  },
+  {
+    "id": "REF-JR-094",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma fábrica de móveis planejados está avaliando fornecedores candidatos para um insumo, alguns optantes do Simples Nacional.",
+    "question": "Ordene o processo correto dessa avaliação:",
+    "options": [
+      "Escolher o fornecedor considerando preço e crédito gerado",
+      "Levantar os fornecedores candidatos para o insumo necessário",
+      "Estimar o crédito gerado por cada opção de fornecedor",
+      "Verificar o regime de apuração de IBS/CBS de cada fornecedor do Simples Nacional"
+    ],
+    "correctAnswer": [
+      "Levantar os fornecedores candidatos para o insumo necessário",
+      "Verificar o regime de apuração de IBS/CBS de cada fornecedor do Simples Nacional",
+      "Estimar o crédito gerado por cada opção de fornecedor",
+      "Escolher o fornecedor considerando preço e crédito gerado"
+    ],
+    "explanation": "Primeiro levanta-se os candidatos, depois verifica-se o regime de cada um, estima-se o crédito e só então se decide considerando preço e crédito juntos.",
+    "pacciTip": "Levanta, verifica, estima, escolhe. Decisão de fornecedor não é só sobre preço, amico!"
+  },
+  {
+    "id": "REF-JR-095",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma empresa de eventos reuniu notas de diversos fornecedores pequenos após a realização de um evento corporativo.",
+    "question": "Ordene o processo correto de apuração do crédito total desse evento:",
+    "options": [
+      "Consolidar o crédito total de IBS/CBS apurável do evento",
+      "Reunir todas as notas fiscais dos fornecedores do evento",
+      "Verificar o regime de cada um individualmente",
+      "Separar as notas de fornecedores optantes do Simples Nacional"
+    ],
+    "correctAnswer": [
+      "Reunir todas as notas fiscais dos fornecedores do evento",
+      "Separar as notas de fornecedores optantes do Simples Nacional",
+      "Verificar o regime de cada um individualmente",
+      "Consolidar o crédito total de IBS/CBS apurável do evento"
+    ],
+    "explanation": "Reúne-se todas as notas, separam-se as do Simples Nacional, verifica-se o regime de cada fornecedor e consolida-se o crédito total ao final.",
+    "pacciTip": "Evento grande, apuração organizada, tesoro! Passo a passo sem pular nada."
+  },
+  {
+    "id": "REF-JR-096",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma distribuidora de bebidas artesanais negocia com um pequeno fornecedor a possibilidade de mudança de regime de apuração para aumentar o crédito gerado.",
+    "question": "Ordene o processo correto dessa negociação:",
+    "options": [
+      "Fornecedor avalia se a mudança de regime é vantajosa para ele também",
+      "Ambas as partes formalizam a decisão adotada",
+      "Identificar que o fornecedor está no regime simplificado do Simples Nacional",
+      "Apresentar ao fornecedor o impacto da opção pelo regime regular no crédito do comprador"
+    ],
+    "correctAnswer": [
+      "Identificar que o fornecedor está no regime simplificado do Simples Nacional",
+      "Apresentar ao fornecedor o impacto da opção pelo regime regular no crédito do comprador",
+      "Fornecedor avalia se a mudança de regime é vantajosa para ele também",
+      "Ambas as partes formalizam a decisão adotada"
+    ],
+    "explanation": "A negociação parte da identificação do regime atual, passa pela apresentação do impacto no crédito, pela avaliação do fornecedor e pela formalização conjunta.",
+    "pacciTip": "Negociação de regime é conversa de duas vias, amico! Os dois lados precisam concordar."
+  },
+  {
+    "id": "REF-JR-097",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma startup de tecnologia está cadastrando um novo fornecedor de serviços optante do Simples Nacional em seu sistema de compras.",
+    "question": "Ordene o processo correto desse cadastramento:",
+    "options": [
+      "Validar a primeira nota fiscal recebida contra a regra configurada",
+      "Cadastrar o novo fornecedor optante do Simples Nacional no sistema",
+      "Configurar a regra de crédito correspondente no sistema de compras",
+      "Confirmar o regime de apuração informado por ele"
+    ],
+    "correctAnswer": [
+      "Cadastrar o novo fornecedor optante do Simples Nacional no sistema",
+      "Confirmar o regime de apuração informado por ele",
+      "Configurar a regra de crédito correspondente no sistema de compras",
+      "Validar a primeira nota fiscal recebida contra a regra configurada"
+    ],
+    "explanation": "Cadastra-se o fornecedor, confirma-se o regime informado, configura-se a regra de crédito no sistema e valida-se a primeira nota recebida contra essa regra.",
+    "pacciTip": "Cadastro novo pede conferência dobrada logo na primeira nota, tesoro!"
+  },
+  {
+    "id": "REF-JR-098",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma clínica de fisioterapia faz uma revisão periódica dos fornecedores do Simples Nacional cadastrados em seu sistema de compras.",
+    "question": "Ordene o processo correto dessa revisão:",
+    "options": [
+      "Comunicar a atualização à equipe de compras",
+      "Levantar a lista de fornecedores do Simples Nacional cadastrados",
+      "Atualizar as regras de crédito cadastradas para os fornecedores que mudaram",
+      "Verificar se algum mudou de regime de apuração recentemente"
+    ],
+    "correctAnswer": [
+      "Levantar a lista de fornecedores do Simples Nacional cadastrados",
+      "Verificar se algum mudou de regime de apuração recentemente",
+      "Atualizar as regras de crédito cadastradas para os fornecedores que mudaram",
+      "Comunicar a atualização à equipe de compras"
+    ],
+    "explanation": "A revisão periódica levanta a lista de fornecedores, verifica mudanças de regime, atualiza as regras de crédito e comunica a equipe de compras.",
+    "pacciTip": "Revisão periódica evita crédito calculado com regra velha, amico!"
+  },
+  {
+    "id": "REF-JR-099",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de cadastro de fornecedores de uma loja de tintas, há uma frase incompleta sobre o regime padrão do Simples Nacional.",
+    "question": "Um fornecedor optante do Simples Nacional participa do IBS/CBS por meio de um regime ___ e simplificado, salvo se optar pelo regular.",
+    "options": [
+      "específico",
+      "proibido",
+      "internacional",
+      "obrigatório para todos"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "O Simples Nacional participa do IBS/CBS por meio de um regime específico e simplificado, com a possibilidade de opção pelo regime regular.",
+    "pacciTip": "Regime específico é o padrão do Simples, tesoro! Mas pode mudar se o fornecedor quiser."
+  },
+  {
+    "id": "REF-JR-100",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento de compras de uma distribuidora de papelaria, há uma frase incompleta sobre a opção que aumenta o crédito do comprador.",
+    "question": "Fornecedores do Simples Nacional podem optar pelo regime ___ de apuração para gerar mais crédito ao comprador.",
+    "options": [
+      "regular",
+      "isento",
+      "internacional",
+      "duplo"
+    ],
+    "correctAnswer": "regular",
+    "explanation": "A opção pelo regime regular de apuração é o caminho para que o fornecedor do Simples Nacional gere mais crédito ao comprador.",
+    "pacciTip": "Regime regular é a chave pra destravar mais crédito, amico!"
+  },
+  {
+    "id": "REF-JR-101",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de uma marcenaria sobre análise de fornecedores, há uma frase incompleta sobre o que define o percentual de crédito.",
+    "question": "O percentual de crédito de IBS/CBS transferido ao comprador depende do ___ adotado pelo fornecedor do Simples Nacional.",
+    "options": [
+      "regime de apuração",
+      "tamanho da nota fiscal",
+      "horário de entrega",
+      "tipo de embalagem"
+    ],
+    "correctAnswer": "regime de apuração",
+    "explanation": "O regime de apuração escolhido pelo fornecedor (simplificado ou regular) é o fator que determina o percentual de crédito transferido.",
+    "pacciTip": "Regime de apuração é o segredo por trás do percentual, tesoro!"
+  },
+  {
+    "id": "REF-JR-102",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No checklist de lançamento de crédito de uma rede de salões de beleza, há uma frase incompleta sobre o passo antes de lançar o crédito.",
+    "question": "Antes de lançar o crédito de uma compra do Simples Nacional, o analista deve ___ o regime informado na nota.",
+    "options": [
+      "confirmar",
+      "inventar",
+      "ignorar",
+      "apagar"
+    ],
+    "correctAnswer": "confirmar",
+    "explanation": "Confirmar o regime informado na nota evita lançar um percentual de crédito incorreto na apuração da empresa compradora.",
+    "pacciTip": "Confirma antes de lançar, amico! Não custa nada e evita erro."
+  },
+  {
+    "id": "REF-JR-103",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de compras de uma fábrica de embalagens, há uma frase incompleta sobre a variação de crédito entre fornecedores do Simples Nacional.",
+    "question": "Dois fornecedores do Simples Nacional podem gerar percentuais de crédito ___ para o mesmo tipo de compra, dependendo do regime escolhido por cada um.",
+    "options": [
+      "diferentes",
+      "idênticos sempre",
+      "nulos sempre",
+      "dobrados"
+    ],
+    "correctAnswer": "diferentes",
+    "explanation": "O regime de apuração é uma escolha individual de cada fornecedor, por isso dois fornecedores do Simples Nacional podem gerar percentuais diferentes.",
+    "pacciTip": "Cada fornecedor escreve sua própria regra, tesoro!"
+  },
+  {
+    "id": "REF-JR-104",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No procedimento fiscal de uma empresa de jardinagem, há uma frase incompleta sobre a obrigação de nota fiscal dos optantes do Simples Nacional.",
+    "question": "Optantes do Simples Nacional continuam obrigados a emitir nota fiscal com as informações ___ aplicáveis ao seu regime.",
+    "options": [
+      "tributárias",
+      "meteorológicas",
+      "esportivas",
+      "musicais"
+    ],
+    "correctAnswer": "tributárias",
+    "explanation": "A nota fiscal emitida pelo optante do Simples Nacional deve conter as informações tributárias necessárias para o cálculo do crédito do comprador.",
+    "pacciTip": "Nota fiscal sempre com as informações certinhas, amico!"
+  },
+  {
+    "id": "REF-JR-105",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "O dono de uma loja de ferragens pergunta qual regime uma pequena empresa fornecedora provavelmente segue por padrão.",
+    "question": "Digite o nome do regime padrão (simplificado) seguido por uma empresa optante do Simples Nacional, salvo opção em contrário:",
+    "correctAnswer": "simplificado",
+    "explanation": "O regime simplificado é o padrão do Simples Nacional, salvo se a empresa optar formalmente pelo regime regular.",
+    "pacciTip": "Simplificado é o ponto de partida, tesoro!"
+  },
+  {
+    "id": "REF-JR-106",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um analista pleno de uma distribuidora regional pergunta qual regime alternativo um fornecedor do Simples Nacional pode escolher para gerar mais crédito ao comprador.",
+    "question": "Digite o nome do regime alternativo que um fornecedor do Simples Nacional pode escolher para gerar mais crédito ao comprador:",
+    "correctAnswer": "regular",
+    "explanation": "O regime regular é a opção alternativa que um fornecedor do Simples Nacional pode adotar para ampliar o crédito gerado ao comprador.",
+    "pacciTip": "Regular é o caminho pro crédito maior, amico!"
+  },
+  {
+    "id": "REF-JR-107",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "O diretor de compras de uma fábrica de calçados pergunta o que exatamente determina o percentual de crédito gerado por um fornecedor do Simples Nacional.",
+    "question": "Digite, em duas ou três palavras, o que determina o percentual de crédito gerado por um fornecedor do Simples Nacional:",
+    "correctAnswer": "regime de apuração",
+    "explanation": "O regime de apuração escolhido pelo fornecedor é o fator determinante do percentual de crédito gerado ao comprador.",
+    "pacciTip": "Regime de apuração, a resposta certa de novo, tesoro!"
+  },
+  {
+    "id": "REF-JR-108",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um contador de um escritório terceirizado explica a um cliente lojista o nome do regime tributário destinado às micro e pequenas empresas.",
+    "question": "Digite o nome do regime tributário destinado a micro e pequenas empresas mencionado nas análises de fornecedores:",
+    "correctAnswer": "Simples Nacional",
+    "explanation": "O Simples Nacional é o regime tributário voltado a micro e pequenas empresas, com tratamento próprio dentro do novo modelo.",
+    "pacciTip": "Simples Nacional, o nome que não pode faltar, amico!"
+  },
+  {
+    "id": "REF-JR-109",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um gerente financeiro de uma rede de restaurantes pergunta o que deve ser feito com o regime informado na nota antes de lançar o crédito de uma compra do Simples Nacional.",
+    "question": "Digite, em uma palavra, o que o analista deve fazer com o regime informado na nota antes de lançar o crédito:",
+    "correctAnswer": "confirmar",
+    "explanation": "Confirmar o regime informado evita lançar um crédito calculado com base numa premissa errada.",
+    "pacciTip": "Confirma sempre antes de lançar, tesoro!"
+  },
+  {
+    "id": "REF-JR-110",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um auditor de uma loja de autopeças pede para o analista corrigir, com uma palavra, o mito de que fornecedores do Simples Nacional nunca geram crédito.",
+    "question": "Complete: é ___ que fornecedores do Simples Nacional nunca gerem crédito de IBS/CBS ao comprador.",
+    "correctAnswer": "falso",
+    "explanation": "É falso. Fornecedores do Simples Nacional podem gerar crédito ao comprador, em proporção que varia conforme o regime de apuração escolhido.",
+    "pacciTip": "Mito derrubado, amico! Simples Nacional pode sim gerar crédito."
+  },
+  {
+    "id": "REF-JR-111",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um analista está apurando o crédito de IBS/CBS de uma compra de combustível para a frota de veículos da empresa.",
+    "question": "O que caracteriza o crédito nesse tipo de operação, dado o regime específico do setor?",
+    "options": [
+      "O crédito pode seguir regras próprias de apropriação, diferentes das aplicáveis ao regime geral de mercadorias",
+      "Não existe crédito algum em nenhuma hipótese",
+      "O crédito é sempre igual ao de qualquer outra mercadoria",
+      "O crédito só existe se o combustível for importado"
+    ],
+    "correctAnswer": "O crédito pode seguir regras próprias de apropriação, diferentes das aplicáveis ao regime geral de mercadorias",
+    "explanation": "O setor de combustíveis possui regime específico, com regras de apropriação de crédito diferentes das aplicáveis às mercadorias do regime geral.",
+    "pacciTip": "Combustível tem crédito com regrinha própria, tesoro!"
+  },
+  {
+    "id": "REF-JR-112",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa cliente de um banco analisa o comprovante de uma tarifa de serviço financeiro para entender o crédito de IBS/CBS envolvido.",
+    "question": "Por que serviços financeiros exigem atenção redobrada na apuração desse crédito?",
+    "options": [
+      "Porque o setor possui regime específico, com regras de apuração diferentes do regime geral",
+      "Porque bancos nunca emitem comprovante de cobrança",
+      "Porque serviços financeiros são sempre isentos de qualquer tributo",
+      "Porque o crédito de serviços financeiros é sempre o dobro do regime geral"
+    ],
+    "correctAnswer": "Porque o setor possui regime específico, com regras de apuração diferentes do regime geral",
+    "explanation": "Serviços financeiros têm regime específico próprio, cujas regras de apuração de crédito diferem das aplicáveis ao regime geral de operações.",
+    "pacciTip": "Banco também tem sua regrinha especial, amico! Não trata como operação comum."
+  },
+  {
+    "id": "REF-JR-113",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "O RH de uma empresa contrata um plano de saúde corporativo e o financeiro quer entender o crédito de IBS/CBS gerado por essa contratação.",
+    "question": "O que o analista deve ter em mente ao apurar esse crédito?",
+    "options": [
+      "Que planos de saúde seguem regime específico, com regras de apuração próprias distintas do regime geral",
+      "Que planos de saúde nunca aparecem em nota fiscal",
+      "Que o crédito de planos de saúde é sempre proibido por lei",
+      "Que o crédito depende da idade dos beneficiários do plano"
+    ],
+    "correctAnswer": "Que planos de saúde seguem regime específico, com regras de apuração próprias distintas do regime geral",
+    "explanation": "Planos de saúde estão entre os setores com regime específico previsto na reforma, com regras de apuração próprias e distintas do regime geral.",
+    "pacciTip": "Plano de saúde não segue a receita geral, tesoro! Tem a sua própria."
+  },
+  {
+    "id": "REF-JR-114",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um posto de gasolina vende tanto combustível (regime específico) quanto produtos de conveniência (regime geral) na mesma operação de venda.",
+    "question": "Como o analista deve tratar essa venda mista na apuração do crédito?",
+    "options": [
+      "Segregando os itens por natureza tributária, aplicando a cada um a regra do regime correspondente",
+      "Aplicando o regime específico de combustíveis a toda a venda",
+      "Aplicando o regime geral a toda a venda, ignorando o combustível",
+      "Somando tudo e dividindo o crédito igualmente entre os itens"
+    ],
+    "correctAnswer": "Segregando os itens por natureza tributária, aplicando a cada um a regra do regime correspondente",
+    "explanation": "Cada item de uma venda mista deve ser tratado conforme seu próprio regime tributário; misturar tudo numa única regra gera cálculo incorreto.",
+    "pacciTip": "Combustível e salgadinho, cada um com sua regra, amico!"
+  },
+  {
+    "id": "REF-JR-115",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa contrata um seguro empresarial e o analista financeiro avalia o crédito de IBS/CBS gerado pelo prêmio pago.",
+    "question": "Esse tipo de operação, assim como planos de saúde, normalmente se enquadra em qual categoria de tratamento tributário?",
+    "options": [
+      "Regime específico, com regras próprias de apuração",
+      "Regime geral, idêntico ao de qualquer mercadoria",
+      "Isenção total e automática",
+      "Regime do Simples Nacional obrigatoriamente"
+    ],
+    "correctAnswer": "Regime específico, com regras próprias de apuração",
+    "explanation": "Assim como planos de saúde e combustíveis, os seguros integram o setor de serviços financeiros, sujeito a regime específico de apuração.",
+    "pacciTip": "Seguro também entra na turma do regime específico, tesoro!"
+  },
+  {
+    "id": "REF-JR-116",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de investimentos analisa a taxa de corretagem cobrada por uma corretora para entender o tratamento tributário aplicável.",
+    "question": "Taxas de corretagem e outras tarifas de serviços financeiros tendem a seguir qual lógica de apuração de IBS/CBS?",
+    "options": [
+      "A lógica do regime específico do setor financeiro, com regras próprias",
+      "A mesma lógica de venda de mercadoria no varejo",
+      "Nenhuma lógica, pois são sempre isentas",
+      "A lógica do regime específico de combustíveis"
+    ],
+    "correctAnswer": "A lógica do regime específico do setor financeiro, com regras próprias",
+    "explanation": "Tarifas de serviços financeiros seguem a lógica do regime específico previsto para o setor, com regras de apuração próprias e distintas do regime geral.",
+    "pacciTip": "Corretagem segue a regra da casa financeira, amico! Não é venda de loja."
+  },
+  {
+    "id": "REF-JR-117",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma transportadora compra diesel regularmente para abastecer sua frota de veículos.",
+    "question": "O crédito de IBS/CBS sobre a compra de combustível segue exatamente as mesmas regras do crédito sobre a compra de uma mercadoria comum do regime geral?",
+    "correctAnswer": false,
+    "explanation": "Não segue. Combustíveis possuem regime específico, com regras próprias de apuração de crédito, diferentes das aplicáveis ao regime geral.",
+    "pacciTip": "Diesel não segue a receita geral, tesoro! Regrinha própria."
+  },
+  {
+    "id": "REF-JR-118",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma clínica médica aceita diversos convênios e planos de saúde como forma de pagamento de seus pacientes.",
+    "question": "Planos de saúde estão sujeitos ao regime geral de apuração de IBS/CBS, sem qualquer regra própria?",
+    "correctAnswer": false,
+    "explanation": "Não estão. Planos de saúde possuem regime específico previsto na reforma, com regras de apuração próprias, diferentes do regime geral.",
+    "pacciTip": "Plano de saúde tem casa própria no regime específico, amico!"
+  },
+  {
+    "id": "REF-JR-119",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma fintech de pagamentos avalia como classificar corretamente suas operações para fins de apuração de IBS/CBS.",
+    "question": "O fato de uma empresa atuar no setor de serviços financeiros já é, por si só, um indício de que ela pode estar sujeita a um regime específico de apuração?",
+    "correctAnswer": true,
+    "explanation": "Sim. Serviços financeiros estão entre os setores com regime específico previsto na reforma, com regras de apuração próprias.",
+    "pacciTip": "Setor financeiro já liga o sinal de alerta pro regime específico, tesoro!"
+  },
+  {
+    "id": "REF-JR-120",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma distribuidora de GLP (gás de cozinha) analisa o tratamento tributário aplicável às suas vendas.",
+    "question": "Assim como a gasolina e o diesel, o gás de cozinha (GLP), por integrar o setor de combustíveis, pode estar sujeito a regras próprias de apuração?",
+    "correctAnswer": true,
+    "explanation": "Sim. O GLP integra o setor de combustíveis, sujeito a regime específico, com regras de apuração próprias, diferentes do regime geral.",
+    "pacciTip": "Gás de cozinha também mora no bairro dos combustíveis, amico!"
+  },
+  {
+    "id": "REF-JR-121",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Uma corretora de seguros processa uma venda que mistura um item de regime específico com um item de regime geral na mesma nota.",
+    "question": "Uma venda mista, com itens de regime específico e itens de regime geral na mesma nota, pode ser apurada em bloco, sem segregação por natureza do item?",
+    "correctAnswer": false,
+    "explanation": "Não pode. Cada item deve ser tratado conforme seu próprio regime tributário; apurar tudo em bloco gera cálculo incorreto do crédito.",
+    "pacciTip": "Bloco único é receita para erro, tesoro! Segrega sempre."
+  },
+  {
+    "id": "REF-JR-122",
+    "level": "analista_junior",
+    "type": "true_false",
+    "scenario": "Um analista financeiro de uma indústria trata a tarifa de uma operação de câmbio cobrada pelo banco com o mesmo cuidado dedicado a outros itens de regime específico.",
+    "question": "Tarifas de operações bancárias, como câmbio, exigem o mesmo tipo de atenção dedicada a outros itens sob regime específico, como combustíveis e planos de saúde?",
+    "correctAnswer": true,
+    "explanation": "Sim. Todos os regimes específicos compartilham a necessidade de regras próprias de apuração, exigindo atenção redobrada do analista.",
+    "pacciTip": "Câmbio, combustível, plano de saúde: mesma família, mesmo cuidado, amico!"
+  },
+  {
+    "id": "REF-JR-123",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma transportadora de cargas precisa apurar o crédito de IBS/CBS sobre a compra de diesel para sua frota.",
+    "question": "Ordene o fluxo correto dessa apuração:",
+    "options": [
+      "Registrar o crédito apurado na apuração da transportadora",
+      "Identificar que a compra de diesel está sujeita a regime específico de combustíveis",
+      "Calcular o crédito de IBS/CBS conforme essas regras específicas",
+      "Consultar as regras próprias de apuração aplicáveis ao setor"
+    ],
+    "correctAnswer": [
+      "Identificar que a compra de diesel está sujeita a regime específico de combustíveis",
+      "Consultar as regras próprias de apuração aplicáveis ao setor",
+      "Calcular o crédito de IBS/CBS conforme essas regras específicas",
+      "Registrar o crédito apurado na apuração da transportadora"
+    ],
+    "explanation": "Identifica-se o regime específico do combustível, consulta-se a regra própria do setor, calcula-se o crédito conforme essas regras e registra-se o resultado.",
+    "pacciTip": "Combustível pede consulta à regra própria antes de calcular, tesoro!"
+  },
+  {
+    "id": "REF-JR-124",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "O RH de uma empresa recebe a fatura mensal do plano de saúde corporativo e precisa repassar o crédito apurado à contabilidade.",
+    "question": "Ordene o fluxo correto dessa apuração:",
+    "options": [
+      "Repassar o valor de crédito apurado para a contabilidade",
+      "Receber a fatura mensal do plano de saúde corporativo",
+      "Aplicar a regra de crédito própria desse regime",
+      "Confirmar que o serviço se enquadra no regime específico do setor"
+    ],
+    "correctAnswer": [
+      "Receber a fatura mensal do plano de saúde corporativo",
+      "Confirmar que o serviço se enquadra no regime específico do setor",
+      "Aplicar a regra de crédito própria desse regime",
+      "Repassar o valor de crédito apurado para a contabilidade"
+    ],
+    "explanation": "Recebe-se a fatura, confirma-se o enquadramento no regime específico, aplica-se a regra própria de crédito e repassa-se o valor à contabilidade.",
+    "pacciTip": "Fatura de plano de saúde também tem seu caminho certo, amico!"
+  },
+  {
+    "id": "REF-JR-125",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma rede de postos de combustível precisa conciliar a venda do dia, que mistura itens de combustível e itens de conveniência.",
+    "question": "Ordene o fluxo correto dessa conciliação:",
+    "options": [
+      "Somar os resultados para fechar a apuração do dia",
+      "Separar, na venda do dia, os itens de combustível dos itens de conveniência",
+      "Consolidar o crédito e o débito de cada grupo separadamente",
+      "Aplicar a cada grupo a regra do regime tributário correspondente"
+    ],
+    "correctAnswer": [
+      "Separar, na venda do dia, os itens de combustível dos itens de conveniência",
+      "Aplicar a cada grupo a regra do regime tributário correspondente",
+      "Consolidar o crédito e o débito de cada grupo separadamente",
+      "Somar os resultados para fechar a apuração do dia"
+    ],
+    "explanation": "Separam-se os itens por natureza, aplica-se a regra de cada regime, consolida-se cada grupo separadamente e soma-se tudo ao final para fechar o dia.",
+    "pacciTip": "Venda mista pede separação antes de qualquer soma, tesoro!"
+  },
+  {
+    "id": "REF-JR-126",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Um escritório de contabilidade recebe o extrato com as tarifas bancárias cobradas de um cliente no mês e precisa orientá-lo sobre o crédito apurável.",
+    "question": "Ordene o fluxo correto dessa análise:",
+    "options": [
+      "Orientar o cliente sobre o crédito de IBS/CBS apurável",
+      "Receber o extrato com as tarifas bancárias cobradas do cliente no mês",
+      "Aplicar a regra de apuração própria desse regime às tarifas",
+      "Identificar que se trata de serviço sujeito a regime específico do setor financeiro"
+    ],
+    "correctAnswer": [
+      "Receber o extrato com as tarifas bancárias cobradas do cliente no mês",
+      "Identificar que se trata de serviço sujeito a regime específico do setor financeiro",
+      "Aplicar a regra de apuração própria desse regime às tarifas",
+      "Orientar o cliente sobre o crédito de IBS/CBS apurável"
+    ],
+    "explanation": "Recebe-se o extrato, identifica-se o regime específico do setor financeiro, aplica-se a regra própria às tarifas e orienta-se o cliente ao final.",
+    "pacciTip": "Tarifa bancária também merece seu passo a passo certinho, amico!"
+  },
+  {
+    "id": "REF-JR-127",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma seguradora de veículos precisa apurar o crédito relacionado aos prêmios de seguro recebidos no período.",
+    "question": "Ordene o fluxo correto dessa apuração:",
+    "options": [
+      "Reportar o resultado da apuração à área fiscal",
+      "Levantar os prêmios de seguro recebidos no período",
+      "Aplicar a metodologia própria de apuração do setor",
+      "Confirmar o enquadramento no regime específico de serviços financeiros/seguros"
+    ],
+    "correctAnswer": [
+      "Levantar os prêmios de seguro recebidos no período",
+      "Confirmar o enquadramento no regime específico de serviços financeiros/seguros",
+      "Aplicar a metodologia própria de apuração do setor",
+      "Reportar o resultado da apuração à área fiscal"
+    ],
+    "explanation": "Levanta-se os prêmios do período, confirma-se o enquadramento no regime específico, aplica-se a metodologia própria e reporta-se o resultado à área fiscal.",
+    "pacciTip": "Prêmio de seguro segue o mesmo cuidado dos demais regimes específicos, tesoro!"
+  },
+  {
+    "id": "REF-JR-128",
+    "level": "analista_junior",
+    "type": "ordering",
+    "scenario": "Uma indústria comprou insumos e contratou uma operação financeira com um banco no mesmo período, precisando apurar o crédito de ambas.",
+    "question": "Ordene o fluxo correto dessa apuração conjunta:",
+    "options": [
+      "Consolidar o crédito total da empresa no período",
+      "Separar as notas e comprovantes por natureza da operação (insumo x serviço financeiro)",
+      "Calcular o crédito de cada grupo conforme sua regra própria",
+      "Aplicar o regime geral aos insumos e o regime específico aos serviços financeiros"
+    ],
+    "correctAnswer": [
+      "Separar as notas e comprovantes por natureza da operação (insumo x serviço financeiro)",
+      "Aplicar o regime geral aos insumos e o regime específico aos serviços financeiros",
+      "Calcular o crédito de cada grupo conforme sua regra própria",
+      "Consolidar o crédito total da empresa no período"
+    ],
+    "explanation": "Separam-se as operações por natureza, aplica-se o regime correspondente a cada grupo, calcula-se o crédito de cada um e consolida-se o total ao final.",
+    "pacciTip": "Insumo e serviço financeiro não se misturam na apuração, amico!"
+  },
+  {
+    "id": "REF-JR-129",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de uma distribuidora de combustíveis, há uma frase incompleta sobre o tipo de regime do setor.",
+    "question": "O setor de combustíveis possui um regime ___ de apuração do IBS/CBS, com crédito calculado por regras próprias.",
+    "options": [
+      "específico",
+      "inexistente",
+      "universal",
+      "provisório"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Combustíveis integram um dos setores com regime específico previsto na reforma, com regras próprias de apuração de crédito.",
+    "pacciTip": "Regime específico é a marca registrada do combustível, tesoro!"
+  },
+  {
+    "id": "REF-JR-130",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de uma operadora de planos de saúde, há uma frase incompleta comparando o setor ao de combustíveis.",
+    "question": "Assim como combustíveis, os planos de saúde seguem um regime ___, distinto do regime geral aplicável à maioria das operações.",
+    "options": [
+      "específico",
+      "isento",
+      "internacional",
+      "obrigatório apenas para pessoa física"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Planos de saúde também integram os setores com regime específico previsto na reforma, com regras próprias de apuração.",
+    "pacciTip": "Plano de saúde e combustível são da mesma turma especial, amico!"
+  },
+  {
+    "id": "REF-JR-131",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de um banco comercial, há uma frase incompleta sobre o cálculo de crédito de tarifas.",
+    "question": "Serviços financeiros, como tarifas bancárias, têm crédito de IBS/CBS calculado de forma ___ em relação ao regime geral.",
+    "options": [
+      "diferenciada",
+      "idêntica",
+      "proibida",
+      "dobrada"
+    ],
+    "correctAnswer": "diferenciada",
+    "explanation": "O crédito de serviços financeiros segue regras próprias do regime específico, diferentes das aplicáveis ao regime geral de operações.",
+    "pacciTip": "Diferenciada é a palavra certa, tesoro! Banco não segue o regime geral."
+  },
+  {
+    "id": "REF-JR-132",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual de um posto de gasolina com loja de conveniência, há uma frase incompleta sobre como tratar vendas mistas.",
+    "question": "Numa venda que mistura combustível e produtos de conveniência, cada item deve ser tratado conforme o regime ___ a ele.",
+    "options": [
+      "correspondente",
+      "mais barato",
+      "mais antigo",
+      "aleatório"
+    ],
+    "correctAnswer": "correspondente",
+    "explanation": "Cada item de uma venda mista deve seguir o regime tributário correspondente à sua própria natureza, evitando cálculo incorreto do crédito.",
+    "pacciTip": "Cada item com seu regime certinho, amico! Nada de generalizar."
+  },
+  {
+    "id": "REF-JR-133",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de uma seguradora, há uma frase incompleta sobre o enquadramento dos prêmios de seguro.",
+    "question": "Prêmios de seguro, por integrarem o setor de serviços financeiros, também seguem um regime ___ de apuração.",
+    "options": [
+      "específico",
+      "geral padrão",
+      "isento total",
+      "internacional"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Seguros integram o setor de serviços financeiros, sujeito a regime específico de apuração de IBS/CBS.",
+    "pacciTip": "Seguro também tem sua regrinha própria, tesoro!"
+  },
+  {
+    "id": "REF-JR-134",
+    "level": "analista_junior",
+    "type": "fill_blank",
+    "scenario": "No manual fiscal de uma distribuidora de GLP, há uma frase incompleta sobre as regras aplicáveis ao setor.",
+    "question": "O gás de cozinha (GLP), por pertencer ao setor de combustíveis, está sujeito às mesmas regras ___ aplicáveis a esse setor.",
+    "options": [
+      "específicas",
+      "gerais",
+      "internacionais",
+      "opcionais"
+    ],
+    "correctAnswer": "específicas",
+    "explanation": "O GLP integra o setor de combustíveis e segue as mesmas regras específicas de apuração previstas para esse setor.",
+    "pacciTip": "GLP segue a família dos combustíveis, amico! Mesma regra especial."
+  },
+  {
+    "id": "REF-JR-135",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um gestor de frota de uma transportadora de cargas pergunta como se chama o tipo de regime aplicado à compra de diesel.",
+    "question": "Digite a palavra que classifica o tipo de regime tributário aplicado à compra de combustíveis, diferente do regime geral:",
+    "correctAnswer": "específico",
+    "explanation": "A compra de combustíveis segue um regime específico de apuração, com regras próprias distintas do regime geral.",
+    "pacciTip": "Específico, a palavra-chave dos combustíveis, tesoro!"
+  },
+  {
+    "id": "REF-JR-136",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um analista de RH de uma operadora de saúde pergunta qual outro setor, além de combustíveis e planos de saúde, também possui regime específico.",
+    "question": "Digite o nome de um dos outros setores, além de combustíveis e planos de saúde, que também possuem regime específico de apuração (serviços ___):",
+    "correctAnswer": "financeiros",
+    "explanation": "Serviços financeiros também integram o grupo de setores com regime específico previsto na reforma tributária.",
+    "pacciTip": "Financeiro entra na roda dos regimes especiais, amico!"
+  },
+  {
+    "id": "REF-JR-137",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um supervisor de um posto de gasolina pergunta o que deve ser feito com os itens de regimes tributários diferentes numa mesma venda antes de calcular o crédito.",
+    "question": "Digite, em uma palavra, o que deve ser feito com os itens de regimes tributários diferentes numa mesma venda antes de calcular o crédito:",
+    "correctAnswer": "segregados",
+    "explanation": "Os itens devem ser segregados por natureza tributária antes do cálculo, já que cada um segue a regra do seu próprio regime.",
+    "pacciTip": "Segrega primeiro, calcula depois, tesoro!"
+  },
+  {
+    "id": "REF-JR-138",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um diretor financeiro de uma seguradora pergunta qual tipo de regime se aplica à apuração do crédito de IBS/CBS sobre prêmios de seguro.",
+    "question": "Digite 'regime geral' ou 'regime específico': qual se aplica à apuração do crédito de IBS/CBS sobre prêmios de seguro?",
+    "correctAnswer": "regime específico",
+    "explanation": "Prêmios de seguro seguem o regime específico previsto para o setor de serviços financeiros, com regras próprias de apuração.",
+    "pacciTip": "Regime específico é a resposta certa pro seguro, amico!"
+  },
+  {
+    "id": "REF-JR-139",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um contador de uma indústria que compra insumos e contrata serviço bancário pergunta onde são definidas as regras próprias de cada regime específico.",
+    "question": "Digite, em duas palavras, onde são definidas as regras próprias de cada regime específico (ex.: combustíveis, serviços financeiros):",
+    "correctAnswer": "lei complementar",
+    "explanation": "As regras próprias de cada regime específico são definidas em lei complementar, conforme previsto pela reforma tributária.",
+    "pacciTip": "Lei complementar é onde a regrinha específica nasce, tesoro!"
+  },
+  {
+    "id": "REF-JR-140",
+    "level": "analista_junior",
+    "type": "text_input",
+    "scenario": "Um gerente de compliance de uma rede de postos de combustível pergunta que tipo de crédito, diferente do crédito do regime geral, se aplica às operações sob regime específico.",
+    "question": "Digite, em uma palavra, o tipo de crédito (diferente do crédito do regime geral) aplicável às operações sob regime específico:",
+    "correctAnswer": "diferenciado",
+    "explanation": "Operações sob regime específico têm crédito diferenciado, apurado conforme regras próprias, distintas das aplicáveis ao regime geral.",
+    "pacciTip": "Diferenciado é a marca do regime específico, amico!"
+  }
+]

@@ -1,0 +1,2044 @@
+[
+  {
+    "id": "REF-EST-001",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "É o seu primeiro dia de estágio no setor fiscal. Durante a reunião de boas-vindas, o gerente escreve 'IBS' no quadro e pergunta se alguém sabe o que significa.",
+    "question": "O que significa a sigla IBS, criada pela Reforma Tributária?",
+    "options": [
+      "Imposto sobre Bens e Serviços",
+      "Imposto Sobre o Salário",
+      "Imposto de Base Simplificada",
+      "Imposto de Bens Sociais"
+    ],
+    "correctAnswer": "Imposto sobre Bens e Serviços",
+    "explanation": "IBS é a sigla de Imposto sobre Bens e Serviços, o novo tributo estadual/municipal que substitui o ICMS e o ISS.",
+    "pacciTip": "Mamma mia, decore essa: IBS é dos Estados e Municípios! Já a CBS é da União. Dois irmãos, um só modelo!"
+  },
+  {
+    "id": "REF-EST-002",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Em uma call de treinamento, a instrutora explica que dois tributos federais muito conhecidos vão desaparecer e dar lugar a um novo.",
+    "question": "A CBS vai substituir quais dois tributos federais atuais?",
+    "options": [
+      "PIS e Cofins",
+      "IPI e IOF",
+      "IRPJ e CSLL",
+      "INSS e FGTS"
+    ],
+    "correctAnswer": "PIS e Cofins",
+    "explanation": "A CBS (Contribuição sobre Bens e Serviços) unifica o PIS e a Cofins em um único tributo federal.",
+    "pacciTip": "Pensa assim, bambino: PIS + Cofins viram CBS. Dois viram um, é a magia da simplificação!"
+  },
+  {
+    "id": "REF-EST-003",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você ouve um analista comentar que cigarros e bebidas vão ficar mais caros por causa de um imposto específico da Reforma.",
+    "question": "Como esse novo tributo, o Imposto Seletivo, costuma ser apelidado?",
+    "options": [
+      "Imposto do pecado",
+      "Imposto verde",
+      "Imposto turbo",
+      "Imposto único"
+    ],
+    "correctAnswer": "Imposto do pecado",
+    "explanation": "O Imposto Seletivo é conhecido como 'imposto do pecado' por incidir sobre produtos prejudiciais à saúde ou ao meio ambiente, como cigarros e bebidas alcoólicas.",
+    "pacciTip": "Ahh, esse eu conheço bene! Cigarro, bebida, poluição... o Fisco cobra mais caro pra desestimular. Capito?"
+  },
+  {
+    "id": "REF-EST-004",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "No glossário interno da empresa, você lê o termo 'IVA Dual' associado à Reforma Tributária e não entende bem o conceito.",
+    "question": "O que representa o termo 'IVA Dual' no contexto da Reforma?",
+    "options": [
+      "A convivência entre o IBS (estadual/municipal) e a CBS (federal)",
+      "Um imposto cobrado duas vezes sobre o mesmo produto",
+      "Um imposto que muda de alíquota duas vezes ao ano",
+      "Dois impostos estaduais diferentes"
+    ],
+    "correctAnswer": "A convivência entre o IBS (estadual/municipal) e a CBS (federal)",
+    "explanation": "IVA Dual é o modelo em que dois tributos sobre valor agregado convivem: o IBS, de competência estadual/municipal, e a CBS, de competência federal.",
+    "pacciTip": "Dual não é 'cobrar duas vezes', tesoro! É dois tributos irmãos, cada um do seu dono, andando juntos."
+  },
+  {
+    "id": "REF-EST-005",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Um colega de estágio comenta, meio inseguro: 'Acho que o IBS só troca o ICMS, o ISS continua igualzinho.'",
+    "question": "A afirmação do colega está certa: o IBS substitui apenas o ICMS, mantendo o ISS como está?",
+    "correctAnswer": false,
+    "explanation": "Errado! O IBS substitui tanto o ICMS (estadual) quanto o ISS (municipal), unificando os dois em um único tributo.",
+    "pacciTip": "Ei, corrige o amico! IBS engole ICMS E ISS junto. Nenhum dos dois fica de fora, capisce?"
+  },
+  {
+    "id": "REF-EST-006",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Durante o treinamento de integração, o instrutor menciona que a mudança não vai acontecer de uma hora para outra.",
+    "question": "A Reforma Tributária tem um período de transição gradual que vai até 2033?",
+    "correctAnswer": true,
+    "explanation": "Correto! A transição começa em 2026, com fase de testes, e se estende até 2033, quando o novo modelo estará totalmente implementado.",
+    "pacciTip": "Bravo! Roma não foi construída em um dia, e a Reforma também não. Vai com calma, passo a passo, até 2033."
+  },
+  {
+    "id": "REF-EST-007",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Enquanto organiza uma planilha de siglas tributárias, você anota ao lado da CBS: 'competência estadual'.",
+    "question": "Essa anotação está correta: a CBS é um tributo de competência estadual?",
+    "correctAnswer": false,
+    "explanation": "Errado! A CBS é de competência federal (da União). Quem é estadual/municipal é o IBS.",
+    "pacciTip": "Nooo, corrige a planilha, presto! CBS = federal. IBS = estadual e municipal. Não troca essa, é clássica de prova!"
+  },
+  {
+    "id": "REF-EST-008",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Um cliente pergunta por telefone se o Imposto Seletivo vai pesar mais sobre produtos como cigarro e bebida alcoólica.",
+    "question": "O Imposto Seletivo incide sobre produtos considerados prejudiciais à saúde ou ao meio ambiente?",
+    "correctAnswer": true,
+    "explanation": "Correto! Esse é justamente o critério do Imposto Seletivo: desestimular o consumo de itens nocivos à saúde ou ao meio ambiente.",
+    "pacciTip": "Sì, sì! Pode responder o cliente com confiança, esse é o coração do Imposto Seletivo."
+  },
+  {
+    "id": "REF-EST-009",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "No mural do RH, foi fixada uma linha do tempo simplificada da Reforma Tributária para os novos colaboradores entenderem o contexto.",
+    "question": "Coloque os marcos da Reforma na ordem cronológica correta, do mais antigo para o mais recente:",
+    "options": [
+      "Vigência plena do novo modelo (IBS/CBS)",
+      "Promulgação da Emenda Constitucional 132/2023",
+      "Extinção gradual do PIS, Cofins, ICMS e ISS",
+      "Início da fase de testes com alíquota reduzida"
+    ],
+    "correctAnswer": [
+      "Promulgação da Emenda Constitucional 132/2023",
+      "Início da fase de testes com alíquota reduzida",
+      "Extinção gradual do PIS, Cofins, ICMS e ISS",
+      "Vigência plena do novo modelo (IBS/CBS)"
+    ],
+    "explanation": "A Reforma começou com a EC 132/2023, seguiu para uma fase de testes, depois a extinção gradual dos tributos antigos, até a vigência plena do novo modelo.",
+    "pacciTip": "Segue a linha do tempo como uma receita de nonna: primeiro a lei, depois o teste, depois a troca, e no final... pronto!"
+  },
+  {
+    "id": "REF-EST-010",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Você encontrou a sigla 'IS' em um contrato e não sabe se é Imposto Seletivo ou outra coisa. Seu supervisor te ensina o procedimento padrão da equipe.",
+    "question": "Ordene os passos que um estagiário deve seguir ao encontrar uma sigla tributária desconhecida:",
+    "options": [
+      "Registrar o aprendizado para consultas futuras",
+      "Anotar a sigla desconhecida",
+      "Confirmar o significado com o analista responsável",
+      "Consultar o glossário interno de siglas tributárias"
+    ],
+    "correctAnswer": [
+      "Anotar a sigla desconhecida",
+      "Consultar o glossário interno de siglas tributárias",
+      "Confirmar o significado com o analista responsável",
+      "Registrar o aprendizado para consultas futuras"
+    ],
+    "explanation": "O procedimento evita erros: primeiro anota, depois busca no glossário, confirma com quem tem mais experiência e só então registra o aprendizado.",
+    "pacciTip": "Nunca tenha vergonha de perguntar, piccolo! Até Pacci já confundiu sigla no começo. O importante é confirmar antes de errar."
+  },
+  {
+    "id": "REF-EST-011",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Para fixar o conteúdo, seu supervisor pede que você organize os tributos extintos pela Reforma conforme o nível federativo, do federal ao municipal.",
+    "question": "Ordene os tributos extintos do nível federal até o municipal:",
+    "options": [
+      "ISS (municipal)",
+      "PIS (federal)",
+      "ICMS (estadual)",
+      "Cofins (federal)"
+    ],
+    "correctAnswer": [
+      "PIS (federal)",
+      "Cofins (federal)",
+      "ICMS (estadual)",
+      "ISS (municipal)"
+    ],
+    "explanation": "PIS e Cofins são federais, o ICMS é estadual e o ISS é municipal — do nível mais amplo para o mais local.",
+    "pacciTip": "Pensa numa escada, tesoro: federal no topo, depois estadual, depois municipal. Desce degrau por degrau!"
+  },
+  {
+    "id": "REF-EST-012",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "No quadro branco da sala de treinamento, os três principais tributos novos da Reforma estão escritos fora de ordem.",
+    "question": "Ordene os três novos tributos do mais abrangente (geral) para o mais específico:",
+    "options": [
+      "Imposto Seletivo (produtos específicos, prejudiciais à saúde/meio ambiente)",
+      "CBS (bens e serviços em geral, federal)",
+      "IBS (bens e serviços em geral, estadual/municipal)"
+    ],
+    "correctAnswer": [
+      "IBS (bens e serviços em geral, estadual/municipal)",
+      "CBS (bens e serviços em geral, federal)",
+      "Imposto Seletivo (produtos específicos, prejudiciais à saúde/meio ambiente)"
+    ],
+    "explanation": "IBS e CBS incidem de forma ampla sobre o consumo em geral, enquanto o Imposto Seletivo é seletivo por natureza, focado em itens específicos.",
+    "pacciTip": "IBS e CBS são a base de tudo, general! O Imposto Seletivo é o 'extra' que mira só em alguns produtos."
+  },
+  {
+    "id": "REF-EST-013",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "No manual de boas-vindas do TaxLingo, a primeira frase sobre a Reforma Tributária está com uma palavra faltando.",
+    "question": "A Reforma Tributária busca ___ o sistema de impostos sobre o consumo no Brasil.",
+    "options": [
+      "simplificar",
+      "complicar",
+      "extinguir",
+      "duplicar"
+    ],
+    "correctAnswer": "simplificar",
+    "explanation": "O objetivo central da Reforma é simplificar o sistema tributário sobre o consumo, reduzindo o número de tributos e as regras divergentes entre estados e municípios.",
+    "pacciTip": "Simplificare é a palavra mágica, caro estagiário! Menos tributo, menos dor de cabeça."
+  },
+  {
+    "id": "REF-EST-014",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Durante um quiz relâmpago no grupo do WhatsApp da equipe, o analista sênior mandou essa frase incompleta para o time responder.",
+    "question": "O IBS e a CBS seguem o modelo de IVA ___, pois são cobrados em conjunto por entes federativos diferentes.",
+    "options": [
+      "Dual",
+      "Único",
+      "Simples",
+      "Cumulativo"
+    ],
+    "correctAnswer": "Dual",
+    "explanation": "'IVA Dual' descreve exatamente essa convivência entre o tributo estadual/municipal (IBS) e o federal (CBS).",
+    "pacciTip": "Dual, dual, dual! Repete comigo até não esquecer mais, va bene?"
+  },
+  {
+    "id": "REF-EST-015",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Você está revisando um flashcard de estudo sobre o Imposto Seletivo antes de uma prova interna.",
+    "question": "O Imposto Seletivo também é chamado de imposto do ___.",
+    "options": [
+      "pecado",
+      "luxo",
+      "consumo",
+      "lucro"
+    ],
+    "correctAnswer": "pecado",
+    "explanation": "O apelido 'imposto do pecado' vem da lógica de taxar mais pesado produtos como cigarro, bebida alcoólica e itens poluentes.",
+    "pacciTip": "Pecado, pecado! Igual doce demais antes do jantar, capisce a ideia?"
+  },
+  {
+    "id": "REF-EST-016",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "No treinamento sobre o cronograma da Reforma, o instrutor explica a fase inicial de testes, prevista para 2026.",
+    "question": "Durante a fase de testes de 2026, a alíquota do IBS/CBS será apenas ___, sem gerar cobrança real relevante.",
+    "options": [
+      "simbólica",
+      "integral",
+      "dobrada",
+      "isenta"
+    ],
+    "correctAnswer": "simbólica",
+    "explanation": "Em 2026, a cobrança é simbólica (alíquota bem reduzida), servindo apenas para testar os sistemas antes da implementação completa.",
+    "pacciTip": "É só um ensaio geral, piccolo! Ninguém paga a conta cheia ainda em 2026."
+  },
+  {
+    "id": "REF-EST-017",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Seu supervisor pede que você complete rapidamente um formulário de treinamento com as siglas corretas dos novos tributos.",
+    "question": "Digite a sigla do tributo que substituirá o ICMS e o ISS:",
+    "correctAnswer": "IBS",
+    "explanation": "IBS = Imposto sobre Bens e Serviços, o tributo estadual/municipal que unifica ICMS e ISS.",
+    "pacciTip": "Três letrinhas só: I-B-S. Fácil de escrever, fácil de lembrar!"
+  },
+  {
+    "id": "REF-EST-018",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "No mesmo formulário de treinamento, falta preencher a sigla do tributo federal equivalente.",
+    "question": "Digite a sigla do tributo federal que substituirá o PIS e a Cofins:",
+    "correctAnswer": "CBS",
+    "explanation": "CBS = Contribuição sobre Bens e Serviços, o novo tributo federal.",
+    "pacciTip": "C de CBS, C de federal com a União. Não confunde com o IBS, tesoro!"
+  },
+  {
+    "id": "REF-EST-019",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Um colega te pergunta rapidinho no corredor qual é a sigla usada no dia a dia para o imposto que pesa sobre cigarros e bebidas.",
+    "question": "Digite a sigla usada para o tributo que incide sobre produtos prejudiciais à saúde ou ao meio ambiente:",
+    "correctAnswer": "IS",
+    "explanation": "IS é a sigla do Imposto Seletivo.",
+    "pacciTip": "IS de Imposto Seletivo. Pequeno na sigla, mas pesado no bolso de quem consome demais!"
+  },
+  {
+    "id": "REF-EST-020",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Para fechar o treinamento do dia, o instrutor pede uma palavra-chave que resume o modelo criado pela combinação de IBS e CBS.",
+    "question": "Como se chama, em uma palavra, o modelo de IVA formado pela combinação de IBS e CBS?",
+    "correctAnswer": "Dual",
+    "explanation": "O modelo é chamado de IVA Dual, pois combina um tributo estadual/municipal (IBS) com um federal (CBS).",
+    "pacciTip": "Dual! Essa palavra você já vai levar pro resto da carreira, fidato de Pacci!"
+  },
+  {
+    "id": "REF-EST-021",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa loja de roupas, o gerente monta a planilha de precificação e comenta que, com a reforma, o imposto passa a ser cobrado no lugar onde o produto é comprado, não onde a fábrica fica.",
+    "question": "O que muda quanto ao local de cobrança do IBS e da CBS em comparação com o sistema atual?",
+    "options": [
+      "Passam a ser cobrados no local de consumo (destino), e não mais na origem/produção",
+      "Passam a ser cobrados só na origem, como antes",
+      "Deixam de ser cobrados em vendas entre estados",
+      "São cobrados sempre na cidade onde fica a matriz da empresa"
+    ],
+    "correctAnswer": "Passam a ser cobrados no local de consumo (destino), e não mais na origem/produção",
+    "explanation": "A reforma adota o chamado 'princípio do destino': o tributo vai para o local onde o bem ou serviço é efetivamente consumido, não onde é produzido.",
+    "pacciTip": "Destino, não origem, tesoro! O imposto viaja junto com o produto até quem compra, capisce?"
+  },
+  {
+    "id": "REF-EST-022",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa reunião sobre a indústria automotiva, o diretor comenta que hoje alguns estados oferecem benefícios de ICMS para atrair fábricas, criando disputa entre eles.",
+    "question": "Reduzir esse tipo de disputa entre estados é um dos objetivos declarados da Reforma Tributária. Como ela é chamada?",
+    "options": [
+      "Guerra fiscal",
+      "Crise cambial",
+      "Bolha tributária",
+      "Recessão fiscal"
+    ],
+    "correctAnswer": "Guerra fiscal",
+    "explanation": "A guerra fiscal é a disputa entre estados por meio de incentivos de ICMS para atrair empresas. A reforma busca reduzir esse tipo de disputa ao unificar regras no IBS.",
+    "pacciTip": "Guerra sem vencedor, piccolo! Todo mundo perde arrecadação nessa disputa. Por isso a reforma quer acabar com ela."
+  },
+  {
+    "id": "REF-EST-023",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Estudando para uma prova interna de um e-commerce de eletrônicos, você lê uma notícia dizendo que um novo órgão vai administrar o IBS junto com estados e municípios.",
+    "question": "O que é o Comitê Gestor do IBS?",
+    "options": [
+      "Órgão que administra o IBS de forma compartilhada entre estados e municípios",
+      "Órgão federal que fiscaliza apenas a CBS",
+      "Empresa privada contratada para cobrar impostos",
+      "Tribunal que julga somente processos de ICMS antigo"
+    ],
+    "correctAnswer": "Órgão que administra o IBS de forma compartilhada entre estados e municípios",
+    "explanation": "O Comitê Gestor do IBS é a estrutura criada para administrar de forma compartilhada o novo imposto estadual/municipal, já que ele reúne a arrecadação de dois entes federativos.",
+    "pacciTip": "Um comitê, dois donos, um só imposto! Estados e municípios sentam na mesma mesa pra gerir o IBS."
+  },
+  {
+    "id": "REF-EST-024",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa transportadora, o motorista pergunta ao estagiário quantos tributos, no total, vão desaparecer com a chegada do IBS e da CBS.",
+    "question": "Quantos tributos atuais serão substituídos, ao todo, por IBS e CBS?",
+    "options": [
+      "Quatro (PIS, Cofins, ICMS e ISS)",
+      "Dois (apenas PIS e Cofins)",
+      "Seis, incluindo IPI e IOF",
+      "Três (ICMS, ISS e IPI)"
+    ],
+    "correctAnswer": "Quatro (PIS, Cofins, ICMS e ISS)",
+    "explanation": "PIS e Cofins (federais) são substituídos pela CBS, enquanto ICMS (estadual) e ISS (municipal) são substituídos pelo IBS — quatro tributos ao todo.",
+    "pacciTip": "Quattro tributos viram dois, bambino! Conta nos dedos: PIS, Cofins, ICMS, ISS."
+  },
+  {
+    "id": "REF-EST-025",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Na farmácia do hospital, uma colega comenta que remédios essenciais provavelmente não vão pesar tanto no bolso do paciente depois da reforma.",
+    "question": "Como a Reforma tende a tratar itens essenciais, como medicamentos e produtos da cesta básica?",
+    "options": [
+      "Com alíquotas reduzidas ou zero, em regimes diferenciados",
+      "Com alíquota dobrada em relação aos demais produtos",
+      "Ficam de fora da reforma, continuam só com o ICMS antigo",
+      "Passam a pagar exclusivamente o Imposto Seletivo"
+    ],
+    "correctAnswer": "Com alíquotas reduzidas ou zero, em regimes diferenciados",
+    "explanation": "Itens considerados essenciais, como medicamentos e cesta básica, contam com regimes específicos de alíquota reduzida ou zero dentro do novo modelo.",
+    "pacciTip": "Essencial pesa menos no bolso, va bene? A reforma protege quem mais precisa."
+  },
+  {
+    "id": "REF-EST-026",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa fazenda de soja, o gestor financeiro pergunta ao estagiário por que a empresa está investindo tanto em treinamento sobre a Reforma Tributária.",
+    "question": "Qual destes é um objetivo declarado da Reforma Tributária?",
+    "options": [
+      "Simplificar o sistema, reduzindo a quantidade de tributos sobre o consumo",
+      "Aumentar o número de declarações fiscais mensais",
+      "Criar um imposto novo e diferente para cada estado",
+      "Extinguir todos os impostos sobre o consumo sem substituição"
+    ],
+    "correctAnswer": "Simplificar o sistema, reduzindo a quantidade de tributos sobre o consumo",
+    "explanation": "A reforma busca simplificar o sistema tributário sobre o consumo, reduzindo a quantidade de tributos e unificando regras hoje divergentes entre estados e municípios.",
+    "pacciTip": "Menos tributo, menos confusão na colheita e na nota fiscal! Semplificare é a palavra da vez."
+  },
+  {
+    "id": "REF-EST-027",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa startup, o founder pergunta se o aplicativo de assinatura que a empresa vende também vai pagar os novos tributos.",
+    "question": "De forma geral, sobre o que incidem o IBS e a CBS?",
+    "options": [
+      "Sobre o consumo de bens e serviços em geral",
+      "Somente sobre a venda de produtos importados",
+      "Somente sobre serviços prestados por pessoa física",
+      "Somente sobre o lucro das empresas"
+    ],
+    "correctAnswer": "Sobre o consumo de bens e serviços em geral",
+    "explanation": "IBS e CBS têm base ampla de incidência: bens e serviços em geral, incluindo produtos digitais e assinaturas, com poucas exceções previstas em regimes específicos.",
+    "pacciTip": "App, assinatura, produto físico... quase tudo entra na conta do IBS e da CBS, tesoro!"
+  },
+  {
+    "id": "REF-EST-028",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Num escritório de contabilidade terceirizada, o sócio explica à equipe que um dos problemas do sistema atual é o imposto 'em cascata', que encarece a cadeia de produção.",
+    "question": "Reduzir esse efeito cascata da cumulatividade de tributos é um dos motivos da Reforma. Isso beneficia principalmente o quê?",
+    "options": [
+      "A cadeia de produção, que fica menos onerada por tributos repetidos",
+      "Apenas o governo, que arrecada mais",
+      "Somente empresas que não vendem para o consumidor final",
+      "Nenhum setor, é só uma mudança burocrática"
+    ],
+    "correctAnswer": "A cadeia de produção, que fica menos onerada por tributos repetidos",
+    "explanation": "O efeito cascata ocorre quando o tributo incide repetidamente em cada etapa da cadeia produtiva. A reforma busca reduzir essa cumulatividade, tornando a cadeia mais eficiente.",
+    "pacciTip": "Cascata de imposto é como juro sobre juro, capisce? Ninguém gosta de pagar duas vezes pela mesma coisa."
+  },
+  {
+    "id": "REF-EST-029",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa construtora, o engenheiro pergunta ao estagiário qual sigla vai substituir o ISS que hoje incide sobre serviços de construção civil.",
+    "question": "Qual novo tributo vai substituir o ISS cobrado sobre serviços como construção civil?",
+    "options": [
+      "IBS",
+      "CBS",
+      "Imposto Seletivo",
+      "IPI"
+    ],
+    "correctAnswer": "IBS",
+    "explanation": "O IBS substitui tanto o ICMS quanto o ISS, incluindo o ISS que hoje incide sobre serviços prestados, como os de construção civil.",
+    "pacciTip": "ISS vira IBS, semplice così! Serviço municipal migra pro novo imposto compartilhado."
+  },
+  {
+    "id": "REF-EST-030",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa escola particular, o diretor financeiro pergunta se as mensalidades vão ficar mais caras com a chegada do novo sistema tributário.",
+    "question": "Setores como o de educação podem contar, na Reforma, com qual tipo de tratamento tributário?",
+    "options": [
+      "Regime específico com alíquota reduzida",
+      "Isenção total de qualquer fiscalização",
+      "Cobrança em dobro por serem serviços essenciais",
+      "Substituição direta pelo Imposto Seletivo"
+    ],
+    "correctAnswer": "Regime específico com alíquota reduzida",
+    "explanation": "Setores considerados essenciais, como educação e saúde, podem contar com regimes específicos que preveem alíquotas reduzidas dentro do novo modelo.",
+    "pacciTip": "Educação é prioridade, ragazzo! Por isso ganha um tratamento mais leve na conta do imposto."
+  },
+  {
+    "id": "REF-EST-031",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa rede de hotéis, a gerente de atendimento comenta que ouviu falar de um mecanismo que devolve parte do imposto pago por famílias mais pobres.",
+    "question": "Qual é a finalidade do mecanismo de cashback previsto na Reforma?",
+    "options": [
+      "Devolver parte do imposto pago por famílias de baixa renda",
+      "Devolver imposto para todas as empresas do país",
+      "Reembolsar apenas turistas estrangeiros",
+      "Substituir o pagamento do décimo terceiro salário"
+    ],
+    "correctAnswer": "Devolver parte do imposto pago por famílias de baixa renda",
+    "explanation": "O cashback é um mecanismo de devolução de parte do valor pago em tributos para famílias de baixa renda, especialmente em itens essenciais.",
+    "pacciTip": "Um dinheirinho de volta pra quem mais precisa, tesoro! É a reforma cuidando de quem tem menos."
+  },
+  {
+    "id": "REF-EST-032",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa operadora de telecom, o atendente recebe uma ligação de um cliente perguntando quando a conta de telefone vai, de fato, ter só os tributos novos.",
+    "question": "Quando o IBS e a CBS vão substituir integralmente os tributos antigos?",
+    "options": [
+      "A partir de 2033, ao final da transição",
+      "Imediatamente após a promulgação da EC 132/2023",
+      "Somente em 2026",
+      "Nunca, eles vão conviver para sempre com os antigos"
+    ],
+    "correctAnswer": "A partir de 2033, ao final da transição",
+    "explanation": "A transição é gradual: começa em 2026 com uma fase de testes e só se completa em 2033, quando o novo modelo passa a valer integralmente.",
+    "pacciTip": "Paciência, caro! Até 2033 os dois sistemas convivem, aos poucos, até o novo assumir de vez."
+  },
+  {
+    "id": "REF-EST-033",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa rede de farmácias, a balconista pergunta se o Imposto Seletivo vai encarecer os remédios vendidos na loja.",
+    "question": "O Imposto Seletivo se aplica a medicamentos essenciais?",
+    "options": [
+      "Não, ele foca em produtos prejudiciais à saúde ou ao meio ambiente, não em itens essenciais",
+      "Sim, todos os medicamentos entram no Imposto Seletivo",
+      "Sim, mas apenas os medicamentos importados",
+      "Depende exclusivamente do preço do produto"
+    ],
+    "correctAnswer": "Não, ele foca em produtos prejudiciais à saúde ou ao meio ambiente, não em itens essenciais",
+    "explanation": "O Imposto Seletivo mira produtos como cigarro e bebida alcoólica, justamente o oposto de itens essenciais como medicamentos, que tendem a ter tratamento favorecido.",
+    "pacciTip": "Remédio não é pecado, piccola! Pode ficar tranquila, o IS não mira o que é essencial."
+  },
+  {
+    "id": "REF-EST-034",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa indústria de moda, o time jurídico está organizando um mural com os principais marcos legais da empresa, incluindo a reforma tributária.",
+    "question": "Qual é a emenda constitucional que instituiu a Reforma Tributária do consumo?",
+    "options": [
+      "EC 132/2023",
+      "EC 45/2019",
+      "EC 95/2016",
+      "EC 108/2020"
+    ],
+    "correctAnswer": "EC 132/2023",
+    "explanation": "A Emenda Constitucional 132, promulgada em 2023, é o marco legal que criou a Reforma Tributária sobre o consumo, dando origem ao IBS, à CBS e ao Imposto Seletivo.",
+    "pacciTip": "132 de 2023, grava esse número, tesoro! É o RG da reforma."
+  },
+  {
+    "id": "REF-EST-035",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Num restaurante que serve bebidas, o gerente comenta que a cerveja do cardápio pode custar um pouco mais caro por causa de um tributo específico.",
+    "question": "Por que uma cerveja vendida no restaurante pode ser alvo do Imposto Seletivo?",
+    "options": [
+      "Porque bebidas alcoólicas são consideradas prejudiciais à saúde",
+      "Porque todo alimento paga Imposto Seletivo",
+      "Porque é um produto importado",
+      "Porque o restaurante é uma grande rede"
+    ],
+    "correctAnswer": "Porque bebidas alcoólicas são consideradas prejudiciais à saúde",
+    "explanation": "O critério do Imposto Seletivo é o impacto do produto na saúde ou no meio ambiente, e bebidas alcoólicas se enquadram justamente nesse critério.",
+    "pacciTip": "Um brinde com moderação, ragazzo! O Fisco também acha que álcool merece um imposto a mais."
+  },
+  {
+    "id": "REF-EST-036",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa empresa de ônibus urbano, o gestor comenta que espera um tratamento tributário mais leve para o transporte público, por ser um serviço essencial.",
+    "question": "Setores como o transporte público costumam ter, na Reforma, qual característica?",
+    "options": [
+      "Alíquotas reduzidas por serem considerados essenciais",
+      "Isenção apenas do Imposto Seletivo, mas alíquota cheia de IBS/CBS",
+      "Cobrança exclusiva de CBS, sem incidência de IBS",
+      "Tratamento idêntico ao de produtos de luxo"
+    ],
+    "correctAnswer": "Alíquotas reduzidas por serem considerados essenciais",
+    "explanation": "Serviços essenciais, como transporte público, tendem a contar com regimes específicos e alíquotas reduzidas dentro do novo sistema.",
+    "pacciTip": "Ônibus lotado já é difícil, tesoro, imagina com imposto cheio! Por isso o regime é mais leve aqui."
+  },
+  {
+    "id": "REF-EST-037",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa fintech, o analista comenta em uma reunião que até os serviços financeiros vão precisar se adaptar ao novo modelo de tributação sobre consumo.",
+    "question": "De forma geral, o novo modelo de IBS/CBS pretende incidir sobre:",
+    "options": [
+      "Uma base ampla de bens e serviços, com poucas exceções",
+      "Apenas produtos físicos vendidos em loja",
+      "Apenas serviços prestados de forma digital",
+      "Apenas operações do setor público"
+    ],
+    "correctAnswer": "Uma base ampla de bens e serviços, com poucas exceções",
+    "explanation": "O modelo do IVA Dual (IBS + CBS) foi desenhado para ter base ampla de incidência, cobrindo bens e serviços em geral, com exceções pontuais previstas em lei.",
+    "pacciTip": "Base larga, exceção pequena! É assim que funciona o novo modelo, capisce?"
+  },
+  {
+    "id": "REF-EST-038",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa distribuidora de energia elétrica, o técnico comenta que a conta de luz vai passar por uma fase de ajustes antes de mudar de vez.",
+    "question": "O que caracteriza a fase de transição da Reforma, entre 2026 e 2033?",
+    "options": [
+      "Convivência gradual entre os tributos antigos e os novos, com testes iniciais",
+      "A cobrança em dobro de todos os tributos ao mesmo tempo",
+      "A suspensão total de qualquer imposto sobre consumo",
+      "A substituição imediata de todos os tributos em um único dia"
+    ],
+    "correctAnswer": "Convivência gradual entre os tributos antigos e os novos, com testes iniciais",
+    "explanation": "Durante a transição, os tributos antigos e os novos convivem por um tempo, começando por uma fase de testes com alíquota simbólica em 2026.",
+    "pacciTip": "Nada de mudança brusca, tesoro! É tudo por etapas, com calma, até 2033."
+  },
+  {
+    "id": "REF-EST-039",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa mineradora, a engenheira ambiental comenta que atividades muito poluentes podem chamar a atenção do Fisco de um jeito diferente com a reforma.",
+    "question": "O Imposto Seletivo pode incidir sobre produtos ou atividades que causem qual tipo de impacto?",
+    "options": [
+      "Impacto negativo à saúde ou ao meio ambiente",
+      "Impacto positivo à economia local",
+      "Impacto exclusivamente cambial",
+      "Impacto restrito a operações de exportação"
+    ],
+    "correctAnswer": "Impacto negativo à saúde ou ao meio ambiente",
+    "explanation": "O critério central do Imposto Seletivo é justamente mirar produtos e atividades com impacto negativo à saúde das pessoas ou ao meio ambiente.",
+    "pacciTip": "Poluiu, pagou mais caro! É a lógica do imposto do pecado, generale."
+  },
+  {
+    "id": "REF-EST-040",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa imobiliária, o corretor pergunta ao estagiário quem, na prática, fica responsável por administrar a CBS no dia a dia.",
+    "question": "Diferente do IBS, a CBS é administrada por quem?",
+    "options": [
+      "Receita Federal, órgão do governo federal",
+      "Comitê Gestor, compartilhado entre estados",
+      "Prefeituras, cada uma isoladamente",
+      "Um consórcio de bancos privados"
+    ],
+    "correctAnswer": "Receita Federal, órgão do governo federal",
+    "explanation": "Como a CBS é um tributo federal, sua administração cabe à Receita Federal, enquanto o IBS é administrado de forma compartilhada pelo Comitê Gestor.",
+    "pacciTip": "CBS mora na casa da União, tesoro! Quem cuida dela é a Receita Federal."
+  },
+  {
+    "id": "REF-EST-041",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa papelaria de bairro, o dono pergunta ao estagiário qual é, na prática, a vantagem de juntar ICMS e ISS em um só imposto.",
+    "question": "Qual a principal vantagem de unificar ICMS e ISS em um único imposto (o IBS)?",
+    "options": [
+      "Reduzir a complexidade de lidar com regras diferentes de cada estado e município",
+      "Aumentar o número de guias de recolhimento mensal",
+      "Criar mais um tributo para a empresa pagar",
+      "Acabar com a obrigatoriedade de emitir nota fiscal"
+    ],
+    "correctAnswer": "Reduzir a complexidade de lidar com regras diferentes de cada estado e município",
+    "explanation": "Hoje, cada estado e cada município tem regras próprias de ICMS e ISS. Unificar os dois no IBS reduz essa complexidade, especialmente para pequenas empresas.",
+    "pacciTip": "Uma regra só, em vez de milhares! Isso é presente pra pequeno empresário, capisce?"
+  },
+  {
+    "id": "REF-EST-042",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Num pet shop, o dono pergunta se a ração de cachorro vai virar alvo do Imposto Seletivo, já que ouviu falar desse tributo no noticiário.",
+    "question": "Produtos de consumo comuns, como os vendidos em um pet shop, tendem a ser alvo de qual tributação?",
+    "options": [
+      "Do IBS e da CBS, como a maioria dos bens e serviços",
+      "Somente do Imposto Seletivo",
+      "De nenhum tributo, pois ficam isentos por padrão",
+      "Apenas do ICMS, que continua existindo normalmente"
+    ],
+    "correctAnswer": "Do IBS e da CBS, como a maioria dos bens e serviços",
+    "explanation": "Produtos comuns, sem relação com saúde ou meio ambiente, seguem a tributação padrão de IBS e CBS, sem entrar no Imposto Seletivo.",
+    "pacciTip": "Ração de cachorro não é pecado, ragazzo! Aqui a regra é a padrão: IBS e CBS."
+  },
+  {
+    "id": "REF-EST-043",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa empresa de logística internacional, a analista de comércio exterior pergunta se a lógica do novo sistema também vale para produtos vindos de fora do Brasil.",
+    "question": "De forma geral, o novo modelo de tributação sobre consumo pretende abranger:",
+    "options": [
+      "Também as operações de importação, seguindo a lógica do destino",
+      "Somente operações internas, sem tocar em importação",
+      "Somente operações de exportação",
+      "Nenhuma operação relacionada ao comércio exterior"
+    ],
+    "correctAnswer": "Também as operações de importação, seguindo a lógica do destino",
+    "explanation": "Como o princípio é tributar no destino (onde o bem é consumido), a lógica também se aplica a produtos importados que serão consumidos no Brasil.",
+    "pacciTip": "Vem de fora, mas consome aqui? Então paga aqui, tesoro! É a lógica do destino valendo pra importação também."
+  },
+  {
+    "id": "REF-EST-044",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa seguradora, um analista júnior comenta que ficou confuso ao ler uma notícia listando tributos que continuam existindo normalmente, sem qualquer ligação com a Reforma Tributária do consumo.",
+    "question": "Qual destes tributos NÃO é extinto nem substituído pela Reforma Tributária do consumo (IBS/CBS)?",
+    "options": [
+      "IPVA",
+      "ICMS",
+      "ISS",
+      "PIS"
+    ],
+    "correctAnswer": "IPVA",
+    "explanation": "A Reforma Tributária do consumo trata da extinção de PIS, Cofins, ICMS e ISS, substituídos por CBS e IBS. O IPVA, imposto sobre veículos, não faz parte dessa reforma.",
+    "pacciTip": "Nem tudo muda de uma vez, tesoro! O IPVA continua onde sempre esteve."
+  },
+  {
+    "id": "REF-EST-045",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "No caixa de um supermercado, um operador comenta com o estagiário: 'Os itens da cesta básica vão pagar a mesma alíquota cheia dos outros produtos.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! Itens da cesta básica tendem a ter alíquota reduzida ou zero dentro de regimes específicos, justamente por serem essenciais à alimentação da população.",
+    "pacciTip": "Nooo, cesta básica não paga a conta cheia, tesoro! Ela tem um tratamento mais suave."
+  },
+  {
+    "id": "REF-EST-046",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa indústria de bebidas, um colega de estágio afirma: 'Toda bebida, alcoólica ou não, recebe exatamente o mesmo tratamento pelo Imposto Seletivo.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Imposto Seletivo mira produtos prejudiciais à saúde, como bebidas alcoólicas, não bebidas em geral. Um suco comum, por exemplo, não segue a mesma lógica.",
+    "pacciTip": "Cada bebida no seu quadrado, ragazzo! O IS mira o que faz mal, não tudo igual."
+  },
+  {
+    "id": "REF-EST-047",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Num escritório de contabilidade, um estagiário anota na sua caderneta de estudos: 'A CBS é administrada pelos estados.'",
+    "question": "Essa anotação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A CBS é de competência federal, administrada pela Receita Federal. Quem envolve estados e municípios é o IBS, via Comitê Gestor.",
+    "pacciTip": "Corrige a caderneta, presto! CBS mora com a União, não com os estados."
+  },
+  {
+    "id": "REF-EST-048",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa construtora, um engenheiro comenta durante o cafezinho: 'O ISS cobrado sobre serviços de construção civil será substituído pelo IBS.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! O IBS absorve tanto o ICMS quanto o ISS, incluindo o ISS que hoje incide sobre serviços como os de construção civil.",
+    "pacciTip": "Bravo! ISS de serviço vira IBS, sem mistério."
+  },
+  {
+    "id": "REF-EST-049",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa escola, o diretor financeiro afirma em reunião: 'A Reforma Tributária já entrou em vigência plena e imediata assim que a emenda foi promulgada, em 2023.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! Em 2023 houve apenas a promulgação da EC 132/2023. A vigência plena do novo modelo só acontece em 2033, ao final da transição gradual.",
+    "pacciTip": "Calma, ragazzo! Promulgar não é o mesmo que já valer 100%. Isso só chega em 2033."
+  },
+  {
+    "id": "REF-EST-050",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa rede de hotéis, a gerente de atendimento comenta: 'O cashback da Reforma é destinado a famílias de baixa renda.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! O cashback foi criado justamente para devolver parte do imposto pago por famílias de baixa renda, aliviando o peso da tributação no consumo.",
+    "pacciTip": "Sì, sì! Esse dinheirinho de volta é pensado pra quem mais precisa."
+  },
+  {
+    "id": "REF-EST-051",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa operadora de telecom, um atendente novo explica para um colega: 'IVA Dual significa que o cliente paga o mesmo imposto duas vezes pelo mesmo serviço.'",
+    "question": "Essa explicação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! IVA Dual descreve a convivência entre dois tributos diferentes — IBS (estadual/municipal) e CBS (federal) —, e não uma cobrança duplicada do mesmo valor.",
+    "pacciTip": "Não é pagar duas vezes, piccolo! É dois tributos irmãos, cada um com seu dono."
+  },
+  {
+    "id": "REF-EST-052",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa rede de farmácias, a balconista comenta: 'Produtos com Imposto Seletivo são justamente os considerados essenciais à saúde, como remédios.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! É o contrário: o Imposto Seletivo mira produtos prejudiciais à saúde ou ao meio ambiente, como cigarro e bebida alcoólica, não os essenciais.",
+    "pacciTip": "Inverteu tudo, tesoro! Remédio é o oposto do que o IS persegue."
+  },
+  {
+    "id": "REF-EST-053",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa indústria de moda, a analista fiscal afirma: 'A Emenda Constitucional 132/2023 é o marco legal que criou a Reforma Tributária do consumo.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! A EC 132/2023 é exatamente o marco constitucional que deu origem ao IBS, à CBS e ao Imposto Seletivo.",
+    "pacciTip": "Ottimo! 132/2023, o número que resume toda a reforma."
+  },
+  {
+    "id": "REF-EST-054",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Num restaurante, o gerente comenta com a equipe: 'O Comitê Gestor do IBS é um órgão só federal, sem participação de estados e municípios.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! O Comitê Gestor do IBS é justamente compartilhado entre estados e municípios, que administram juntos esse novo tributo.",
+    "pacciTip": "Comitê é de dois, não de um só, capisce? Estados e municípios dividem essa gestão."
+  },
+  {
+    "id": "REF-EST-055",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa empresa de ônibus, um motorista pergunta ao estagiário se o transporte público vai pagar imposto igual a um produto de luxo, e um colega responde: 'Sim, é a mesma alíquota para os dois.'",
+    "question": "A resposta do colega está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! Setores essenciais, como o transporte público, tendem a ter regimes específicos com alíquota reduzida, diferente de produtos de luxo.",
+    "pacciTip": "Ônibus não é joia, ragazzo! O tratamento tributário também é bem diferente."
+  },
+  {
+    "id": "REF-EST-056",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa fintech, um analista financeiro afirma: 'Todos os tributos antigos — PIS, Cofins, ICMS e ISS — somem de uma vez só, em 2026.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A extinção dos tributos antigos é gradual, ao longo da transição que vai de 2026 até 2033, e não acontece de uma só vez.",
+    "pacciTip": "Passo a passo, tesoro, não é um estalar de dedos! A transição é longa de propósito."
+  },
+  {
+    "id": "REF-EST-057",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa distribuidora de energia, um técnico comenta: 'A fase de testes de 2026 já cobra a alíquota cheia do IBS e da CBS.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! Em 2026, a cobrança é simbólica, com alíquota bem reduzida, servindo apenas para testar os sistemas antes da implementação completa.",
+    "pacciTip": "É só um ensaio geral em 2026, piccolo! A conta cheia vem bem mais na frente."
+  },
+  {
+    "id": "REF-EST-058",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa mineradora, um engenheiro ambiental afirma: 'Atividades muito poluentes podem ser alvo do Imposto Seletivo.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! O Imposto Seletivo pode incidir sobre produtos e atividades com impacto negativo relevante ao meio ambiente.",
+    "pacciTip": "Bravo! Poluição pesada também entra no radar do Imposto Seletivo."
+  },
+  {
+    "id": "REF-EST-059",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa papelaria, o dono comenta: 'Unificar ICMS e ISS em um único imposto, o IBS, tende a simplificar as obrigações da minha empresa.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! A unificação reduz a necessidade de lidar com regras diferentes de cada estado e município, simplificando o dia a dia fiscal das empresas.",
+    "pacciTip": "Sì! Menos regra pra decorar, mais tempo pra cuidar do negócio."
+  },
+  {
+    "id": "REF-EST-060",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Num pet shop, o dono comenta: 'Produtos comuns, como ração, não vão pagar nenhum tributo depois da Reforma.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! Produtos comuns continuam sujeitos normalmente ao IBS e à CBS. A isenção ou redução de alíquota vale para casos específicos, não para produtos em geral.",
+    "pacciTip": "Ração ainda paga imposto, tesoro! Só muda o nome e o formato do tributo."
+  },
+  {
+    "id": "REF-EST-061",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa editora, a revisora comenta: 'Bens considerados essenciais podem ter regimes específicos com alíquota reduzida.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! A Reforma prevê regimes específicos para itens essenciais, com alíquotas reduzidas em relação à regra geral.",
+    "pacciTip": "Esatto! Essencial ganha um tratamento mais gentil do Fisco."
+  },
+  {
+    "id": "REF-EST-062",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa empresa de logística internacional, a analista de comércio exterior afirma: 'A lógica de tributação no destino significa que o imposto é pago no local de consumo, não de produção.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! Essa é justamente a lógica do princípio do destino adotado pela Reforma: o imposto vai para onde o bem ou serviço é consumido.",
+    "pacciTip": "Perfetto! Destino é onde o produto termina a viagem, e é lá que o imposto fica."
+  },
+  {
+    "id": "REF-EST-063",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa fazenda de agronegócio, o gestor comenta: 'Um dos objetivos da Reforma é reduzir a guerra fiscal entre estados.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! Ao unificar regras no IBS, a Reforma busca justamente reduzir a disputa por incentivos fiscais entre os estados, conhecida como guerra fiscal.",
+    "pacciTip": "Sì, sì! Menos guerra, mais harmonia entre os estados."
+  },
+  {
+    "id": "REF-EST-064",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa startup de tecnologia, o founder afirma: 'Serviços digitais, como um aplicativo por assinatura, ficam de fora da incidência de IBS e CBS.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A base de incidência de IBS e CBS é ampla, cobrindo bens e serviços em geral, incluindo serviços digitais como assinaturas de aplicativos.",
+    "pacciTip": "App também paga, ragazzo! A base é larga, quase nada escapa."
+  },
+  {
+    "id": "REF-EST-065",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Num hospital, um farmacêutico comenta: 'Medicamentos essenciais tendem a ter tratamento tributário diferenciado, com alíquota menor.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! Medicamentos essenciais costumam se enquadrar em regimes específicos com alíquota reduzida, por serem considerados fundamentais à saúde da população.",
+    "pacciTip": "Bravo! Remédio essencial merece um respiro na hora de pagar imposto."
+  },
+  {
+    "id": "REF-EST-066",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa indústria automotiva, um analista fiscal afirma: 'A Reforma Tributária extingue o IPI, o IOF e o IRPJ, substituindo todos por CBS.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! A CBS substitui especificamente o PIS e a Cofins. IPI, IOF e IRPJ não fazem parte dessa substituição na reforma do consumo.",
+    "pacciTip": "Calma com a lista, tesoro! CBS só troca de lugar com PIS e Cofins, mais ninguém."
+  },
+  {
+    "id": "REF-EST-067",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Num e-commerce de eletrônicos, um estagiário afirma para outro: 'O Comitê Gestor do IBS cuida apenas da CBS, não do IBS.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": false,
+    "explanation": "Errado! É o contrário: o Comitê Gestor cuida do IBS, tributo estadual/municipal. A CBS, por ser federal, é administrada pela Receita Federal.",
+    "pacciTip": "Trocou os nomes, piccolo! Comitê Gestor é a casa do IBS, não da CBS."
+  },
+  {
+    "id": "REF-EST-068",
+    "level": "estagiario",
+    "type": "true_false",
+    "scenario": "Numa seguradora, uma analista comenta: 'Produtos de consumo geral, sem relação com saúde ou meio ambiente, normalmente não sofrem Imposto Seletivo.'",
+    "question": "Essa afirmação está correta?",
+    "correctAnswer": true,
+    "explanation": "Correto! O Imposto Seletivo é direcionado a produtos específicos, prejudiciais à saúde ou ao meio ambiente. Produtos comuns seguem apenas IBS e CBS.",
+    "pacciTip": "Esatto! Produto do dia a dia, sem pecado nenhum, fica de fora do Imposto Seletivo."
+  },
+  {
+    "id": "REF-EST-069",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa indústria de bebidas, o estagiário do setor fiscal precisa aprender o passo a passo para checar se um novo produto do portfólio pode ser alvo do Imposto Seletivo.",
+    "question": "Ordene os passos que o estagiário deve seguir ao avaliar se um produto pode sofrer incidência do Imposto Seletivo:",
+    "options": [
+      "Sinalizar a possível incidência do Imposto Seletivo",
+      "Consultar o analista fiscal responsável",
+      "Verificar se o produto é prejudicial à saúde ou ao meio ambiente",
+      "Identificar o produto que está sendo comercializado"
+    ],
+    "correctAnswer": [
+      "Identificar o produto que está sendo comercializado",
+      "Verificar se o produto é prejudicial à saúde ou ao meio ambiente",
+      "Consultar o analista fiscal responsável",
+      "Sinalizar a possível incidência do Imposto Seletivo"
+    ],
+    "explanation": "O processo começa identificando o produto, depois avaliando o critério de nocividade, confirmando com quem tem mais experiência e só então sinalizando a incidência.",
+    "pacciTip": "Passo a passo, sem pular etapa, tesoro! Assim ninguém erra na hora de classificar o produto."
+  },
+  {
+    "id": "REF-EST-070",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa loja de roupas, o estagiário acompanha o fluxo de uma venda simples no caixa e como os tributos entram na nota fiscal.",
+    "question": "Ordene as etapas de uma venda no varejo, do início ao registro final do tributo:",
+    "options": [
+      "Destacar os tributos na nota fiscal",
+      "Calcular o IBS e a CBS incidentes",
+      "Emitir a nota fiscal eletrônica",
+      "Realizar a venda no caixa"
+    ],
+    "correctAnswer": [
+      "Realizar a venda no caixa",
+      "Emitir a nota fiscal eletrônica",
+      "Calcular o IBS e a CBS incidentes",
+      "Destacar os tributos na nota fiscal"
+    ],
+    "explanation": "Primeiro a venda acontece, depois a nota é emitida, os tributos são calculados e, por fim, destacados formalmente no documento fiscal.",
+    "pacciTip": "Venda, nota, cálculo, destaque! Essa sequência vira rotina rapidinho, vai ver."
+  },
+  {
+    "id": "REF-EST-071",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "No escritório de contabilidade terceirizada, o sócio explica como o dinheiro arrecadado com o IBS chega até estados e municípios.",
+    "question": "Ordene o caminho da arrecadação do IBS, desde a venda até o repasse aos entes federativos:",
+    "options": [
+      "Recursos são repassados aos entes federativos",
+      "Comitê Gestor calcula a parcela de cada estado e município",
+      "Valor é centralizado pelo Comitê Gestor do IBS",
+      "Tributo é recolhido na operação de venda"
+    ],
+    "correctAnswer": [
+      "Tributo é recolhido na operação de venda",
+      "Valor é centralizado pelo Comitê Gestor do IBS",
+      "Comitê Gestor calcula a parcela de cada estado e município",
+      "Recursos são repassados aos entes federativos"
+    ],
+    "explanation": "O IBS é recolhido na venda, centralizado pelo Comitê Gestor, que calcula a parcela de cada ente e depois repassa os valores correspondentes.",
+    "pacciTip": "O dinheiro faz uma viagem organizada, capisce? Recolhe, centraliza, calcula e reparte."
+  },
+  {
+    "id": "REF-EST-072",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Num escritório de advocacia tributária, o sócio conta aos estagiários a trajetória legal que resultou na Reforma Tributária.",
+    "question": "Ordene os marcos do caminho legal da Reforma Tributária, do mais antigo para o mais recente:",
+    "options": [
+      "Leis complementares regulamentam os detalhes da reforma",
+      "EC 132/2023 é promulgada",
+      "Emenda é aprovada pelos parlamentares",
+      "Proposta de reforma é discutida no Congresso"
+    ],
+    "correctAnswer": [
+      "Proposta de reforma é discutida no Congresso",
+      "Emenda é aprovada pelos parlamentares",
+      "EC 132/2023 é promulgada",
+      "Leis complementares regulamentam os detalhes da reforma"
+    ],
+    "explanation": "O caminho legal passa pela discussão no Congresso, aprovação pelos parlamentares, promulgação da emenda e, por fim, regulamentação por leis complementares.",
+    "pacciTip": "Lei também tem receita, tesoro! Discute, aprova, promulga e depois regulamenta os detalhes."
+  },
+  {
+    "id": "REF-EST-073",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Num e-commerce de eletrônicos, o estagiário teve uma dúvida sobre um termo da reforma durante o treinamento e resolveu registrar como ela foi esclarecida.",
+    "question": "Ordene o caminho que a dúvida do estagiário percorreu até virar conteúdo do glossário oficial da empresa:",
+    "options": [
+      "Termo é adicionado ao glossário oficial da empresa",
+      "Sugere incluir o termo no glossário da equipe",
+      "Pergunta ao mentor responsável",
+      "Pesquisa o termo no material de treinamento",
+      "Estagiário tem uma dúvida sobre um termo da reforma"
+    ],
+    "correctAnswer": [
+      "Estagiário tem uma dúvida sobre um termo da reforma",
+      "Pesquisa o termo no material de treinamento",
+      "Pergunta ao mentor responsável",
+      "Sugere incluir o termo no glossário da equipe",
+      "Termo é adicionado ao glossário oficial da empresa"
+    ],
+    "explanation": "A dúvida nasce, é pesquisada, depois confirmada com o mentor, sugerida para o glossário e, por fim, oficialmente incorporada a ele.",
+    "pacciTip": "Nunca joga fora uma dúvida boa, piccolo! Ela pode virar material pra empresa inteira."
+  },
+  {
+    "id": "REF-EST-074",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Num supermercado, o estagiário do setor fiscal explica para um colega novo como funciona, na prática, o cashback para clientes de baixa renda.",
+    "question": "Ordene o caminho do cashback, desde a compra até a devolução do valor ao consumidor:",
+    "options": [
+      "Valor é devolvido ao consumidor",
+      "Sistema identifica o perfil elegível ao cashback",
+      "IBS e CBS são cobrados normalmente na venda",
+      "Consumidor de baixa renda compra um produto essencial"
+    ],
+    "correctAnswer": [
+      "Consumidor de baixa renda compra um produto essencial",
+      "IBS e CBS são cobrados normalmente na venda",
+      "Sistema identifica o perfil elegível ao cashback",
+      "Valor é devolvido ao consumidor"
+    ],
+    "explanation": "A compra acontece com cobrança normal dos tributos, o sistema identifica quem tem direito ao benefício e, então, devolve parte do valor pago.",
+    "pacciTip": "Compra, paga, sistema reconhece, devolve! O cashback trabalha nos bastidores pra ajudar quem precisa."
+  },
+  {
+    "id": "REF-EST-075",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Num banco digital, o analista explica à equipe de estágio quem fica responsável por cada parte dos novos tributos.",
+    "question": "Ordene, do ente federativo mais amplo para o mais local, os responsáveis pela administração dos novos tributos:",
+    "options": [
+      "Municípios participam da administração do IBS",
+      "Estados participam da administração do IBS",
+      "União administra a CBS"
+    ],
+    "correctAnswer": [
+      "União administra a CBS",
+      "Estados participam da administração do IBS",
+      "Municípios participam da administração do IBS"
+    ],
+    "explanation": "A União cuida da CBS de forma exclusiva, enquanto o IBS é administrado de forma compartilhada, primeiro no nível estadual e depois no municipal.",
+    "pacciTip": "Do maior pro menor, tesoro: União, depois Estado, depois Município. Cada um com sua fatia do bolo."
+  },
+  {
+    "id": "REF-EST-076",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "No RH de uma empresa, o time de treinamento organiza a trilha de aprendizado que todo estagiário novo segue sobre a Reforma Tributária.",
+    "question": "Ordene as etapas da trilha de aprendizado de um estagiário novo sobre a Reforma Tributária:",
+    "options": [
+      "Tira dúvidas finais com o mentor",
+      "Participa de uma simulação de atendimento",
+      "Estuda o cronograma de transição",
+      "Aprende as siglas básicas da reforma (IBS, CBS, IS)"
+    ],
+    "correctAnswer": [
+      "Aprende as siglas básicas da reforma (IBS, CBS, IS)",
+      "Estuda o cronograma de transição",
+      "Participa de uma simulação de atendimento",
+      "Tira dúvidas finais com o mentor"
+    ],
+    "explanation": "A trilha começa pelo vocabulário básico, segue para o cronograma, depois uma prática simulada e termina com o esclarecimento de dúvidas com o mentor.",
+    "pacciTip": "Primeiro o vocabulário, depois a prática, tesoro! Assim o conteúdo gruda de verdade."
+  },
+  {
+    "id": "REF-EST-077",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa empresa de tecnologia que desenvolve sistemas de gestão, o time de TI explica como o ERP da empresa está sendo preparado para a Reforma.",
+    "question": "Ordene as etapas de adaptação do sistema ERP de uma empresa à Reforma Tributária:",
+    "options": [
+      "Migrar totalmente para o novo modelo até 2033",
+      "Testar o sistema durante a fase de alíquota simbólica",
+      "Parametrizar o sistema para calcular IBS e CBS",
+      "Mapear os tributos atualmente calculados pelo sistema"
+    ],
+    "correctAnswer": [
+      "Mapear os tributos atualmente calculados pelo sistema",
+      "Parametrizar o sistema para calcular IBS e CBS",
+      "Testar o sistema durante a fase de alíquota simbólica",
+      "Migrar totalmente para o novo modelo até 2033"
+    ],
+    "explanation": "A adaptação começa pelo mapeamento do que já existe, segue com a parametrização dos novos tributos, passa pelos testes da fase de transição e termina na migração completa.",
+    "pacciTip": "Sistema também precisa de treinamento, capisce? Mapeia, ajusta, testa e só depois migra de vez."
+  },
+  {
+    "id": "REF-EST-078",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa loja especializada em bebidas, o estagiário observa o fluxo de compra de um produto que sofre incidência do Imposto Seletivo.",
+    "question": "Ordene as etapas da compra de um produto sujeito ao Imposto Seletivo, do ponto de vista do consumidor:",
+    "options": [
+      "Nota fiscal é emitida com o tributo destacado",
+      "Pagamento é realizado no caixa",
+      "Preço exibido já inclui o Imposto Seletivo",
+      "Consumidor escolhe o produto na prateleira"
+    ],
+    "correctAnswer": [
+      "Consumidor escolhe o produto na prateleira",
+      "Preço exibido já inclui o Imposto Seletivo",
+      "Pagamento é realizado no caixa",
+      "Nota fiscal é emitida com o tributo destacado"
+    ],
+    "explanation": "O consumidor escolhe o item, vê o preço já com o tributo embutido, paga no caixa e recebe a nota com o Imposto Seletivo destacado.",
+    "pacciTip": "O pecado já vem com o preço, tesoro! Nada de surpresa na hora de pagar."
+  },
+  {
+    "id": "REF-EST-079",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa construtora, o engenheiro explica ao estagiário como o ISS, cobrado hoje sobre serviços de construção civil, vai desaparecer aos poucos.",
+    "question": "Ordene as fases de transição do ISS para o IBS nos serviços de construção civil:",
+    "options": [
+      "ISS é extinto e o IBS assume integralmente",
+      "Alíquota do ISS é reduzida gradualmente",
+      "IBS passa a conviver com o ISS durante a transição",
+      "ISS é cobrado normalmente sobre o serviço de construção"
+    ],
+    "correctAnswer": [
+      "ISS é cobrado normalmente sobre o serviço de construção",
+      "IBS passa a conviver com o ISS durante a transição",
+      "Alíquota do ISS é reduzida gradualmente",
+      "ISS é extinto e o IBS assume integralmente"
+    ],
+    "explanation": "A transição começa com o ISS cobrado normalmente, segue com a convivência entre os dois tributos, passa pela redução gradual do ISS e termina com sua extinção.",
+    "pacciTip": "Nada de troca brusca, ragazzo! O ISS vai saindo de mansinho, enquanto o IBS vai assumindo o posto."
+  },
+  {
+    "id": "REF-EST-080",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa escola, o time de RH organiza um treinamento interno rápido para explicar as siglas da reforma aos novos colaboradores.",
+    "question": "Ordene as etapas de um treinamento interno sobre as siglas da Reforma Tributária:",
+    "options": [
+      "Certificação do colaborador ao final",
+      "Quiz de fixação do conteúdo",
+      "Explicação de quais tributos cada uma substitui",
+      "Apresentação das siglas IBS, CBS e IS"
+    ],
+    "correctAnswer": [
+      "Apresentação das siglas IBS, CBS e IS",
+      "Explicação de quais tributos cada uma substitui",
+      "Quiz de fixação do conteúdo",
+      "Certificação do colaborador ao final"
+    ],
+    "explanation": "O treinamento apresenta as siglas, explica o que cada uma substitui, testa o aprendizado com um quiz e certifica o colaborador ao final.",
+    "pacciTip": "Aprende, entende, testa e certifica! Assim ninguém esquece as siglas, va bene?"
+  },
+  {
+    "id": "REF-EST-081",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa indústria de alimentos, o time fiscal monta um gráfico explicando como a alíquota dos tributos antigos vai diminuindo ao longo da transição.",
+    "question": "Ordene as fases de redução da alíquota dos tributos antigos até a extinção completa:",
+    "options": [
+      "Tributos antigos são extintos até 2033",
+      "Alíquotas dos tributos antigos são reduzidas progressivamente",
+      "Fase de testes começa com alíquota simbólica em 2026",
+      "Tributos antigos são cobrados com alíquota cheia"
+    ],
+    "correctAnswer": [
+      "Tributos antigos são cobrados com alíquota cheia",
+      "Fase de testes começa com alíquota simbólica em 2026",
+      "Alíquotas dos tributos antigos são reduzidas progressivamente",
+      "Tributos antigos são extintos até 2033"
+    ],
+    "explanation": "A trajetória começa com a alíquota cheia atual, passa pela fase de testes simbólica em 2026, segue com reduções progressivas e termina na extinção total até 2033.",
+    "pacciTip": "Um gráfico descendo devagarinho, tesoro! Até chegar a zero em 2033."
+  },
+  {
+    "id": "REF-EST-082",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa clínica de saúde, a recepcionista acompanha como a nota fiscal de um atendimento é emitida considerando o IBS.",
+    "question": "Ordene as etapas de emissão de uma nota fiscal de serviço de saúde considerando o IBS:",
+    "options": [
+      "Tributo é recolhido conforme a regra vigente",
+      "Sistema aplica a alíquota reduzida do regime da saúde",
+      "Nota fiscal é emitida com o IBS destacado",
+      "Serviço de saúde é prestado ao paciente"
+    ],
+    "correctAnswer": [
+      "Serviço de saúde é prestado ao paciente",
+      "Nota fiscal é emitida com o IBS destacado",
+      "Sistema aplica a alíquota reduzida do regime da saúde",
+      "Tributo é recolhido conforme a regra vigente"
+    ],
+    "explanation": "Primeiro o serviço é prestado, depois a nota é emitida com o IBS, o sistema aplica a alíquota reduzida própria da saúde e, por fim, o tributo é recolhido.",
+    "pacciTip": "Saúde tem regra própria, capisce? O sistema já sabe aplicar a alíquota certa."
+  },
+  {
+    "id": "REF-EST-083",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa fintech, o time de produto explica como funciona, na prática, a fase de testes da reforma prevista para 2026.",
+    "question": "Ordene as etapas da fase de testes da Reforma, prevista para 2026:",
+    "options": [
+      "Empresas se preparam para a elevação gradual das alíquotas",
+      "Ajustes são feitos com base nos resultados dos testes",
+      "Empresas e Fisco testam a nova operação",
+      "Sistemas passam a calcular IBS e CBS com alíquota simbólica"
+    ],
+    "correctAnswer": [
+      "Sistemas passam a calcular IBS e CBS com alíquota simbólica",
+      "Empresas e Fisco testam a nova operação",
+      "Ajustes são feitos com base nos resultados dos testes",
+      "Empresas se preparam para a elevação gradual das alíquotas"
+    ],
+    "explanation": "A fase de testes começa com o cálculo simbólico dos novos tributos, segue com testes práticos, ajustes com base nos resultados e preparação para as próximas etapas.",
+    "pacciTip": "2026 é o ano do ensaio geral, tesoro! Testa, ajusta e se prepara pro que vem depois."
+  },
+  {
+    "id": "REF-EST-084",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa mineradora, o RH organiza uma reunião de abertura para apresentar a Reforma Tributária a todos os setores da empresa.",
+    "question": "Ordene as etapas de uma reunião de kickoff sobre a Reforma Tributária dentro da empresa:",
+    "options": [
+      "Rodada de perguntas e respostas",
+      "Apresentação do cronograma de transição",
+      "Explicação dos impactos para a empresa",
+      "Apresentação inicial sobre a reforma tributária"
+    ],
+    "correctAnswer": [
+      "Apresentação inicial sobre a reforma tributária",
+      "Explicação dos impactos para a empresa",
+      "Apresentação do cronograma de transição",
+      "Rodada de perguntas e respostas"
+    ],
+    "explanation": "A reunião costuma seguir essa lógica: contextualizar o tema, explicar os impactos, mostrar o cronograma e, por fim, abrir espaço para dúvidas.",
+    "pacciTip": "Contexto, impacto, cronograma, perguntas! Uma boa reunião segue sempre essa receita, tesoro."
+  },
+  {
+    "id": "REF-EST-085",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa empresa de logística internacional, o estagiário precisa confirmar se uma mercadoria importada segue a lógica de tributação no destino.",
+    "question": "Ordene os passos que o estagiário segue para confirmar a aplicação da tributação no destino:",
+    "options": [
+      "Confirma a informação com o time fiscal",
+      "Aplica a lógica de tributação no destino",
+      "Verifica onde o bem será efetivamente consumido",
+      "Estagiário identifica a origem e o destino da mercadoria"
+    ],
+    "correctAnswer": [
+      "Estagiário identifica a origem e o destino da mercadoria",
+      "Verifica onde o bem será efetivamente consumido",
+      "Aplica a lógica de tributação no destino",
+      "Confirma a informação com o time fiscal"
+    ],
+    "explanation": "Primeiro identifica origem e destino, depois verifica onde o consumo ocorre de fato, aplica a lógica do destino e confirma tudo com o time fiscal.",
+    "pacciTip": "Rastreia o caminho da mercadoria, tesoro! O imposto segue até onde ela for consumida."
+  },
+  {
+    "id": "REF-EST-086",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa indústria de moda, o time comercial monta a planilha de precificação de uma nova coleção considerando os novos tributos.",
+    "question": "Ordene as etapas do cálculo do preço final de um produto considerando IBS e CBS:",
+    "options": [
+      "Soma-se tudo para chegar ao preço final ao consumidor",
+      "Calcula-se o valor da CBS incidente",
+      "Calcula-se o valor do IBS incidente",
+      "Define-se o preço do produto sem tributos"
+    ],
+    "correctAnswer": [
+      "Define-se o preço do produto sem tributos",
+      "Calcula-se o valor do IBS incidente",
+      "Calcula-se o valor da CBS incidente",
+      "Soma-se tudo para chegar ao preço final ao consumidor"
+    ],
+    "explanation": "O cálculo parte do preço sem tributos, soma o valor do IBS, depois o da CBS e chega ao preço final que o consumidor paga.",
+    "pacciTip": "Preço base, mais IBS, mais CBS, igual preço final! Uma continha que todo estagiário fiscal aprende."
+  },
+  {
+    "id": "REF-EST-087",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Num supermercado, o time fiscal faz uma checagem simples para garantir que os produtos da cesta básica estão com a alíquota reduzida aplicada corretamente.",
+    "question": "Ordene as etapas dessa auditoria interna sobre o regime da cesta básica:",
+    "options": [
+      "Reportar o resultado ao time fiscal",
+      "Registrar eventuais divergências encontradas",
+      "Conferir se a alíquota reduzida foi aplicada corretamente",
+      "Levantar os produtos classificados como cesta básica"
+    ],
+    "correctAnswer": [
+      "Levantar os produtos classificados como cesta básica",
+      "Conferir se a alíquota reduzida foi aplicada corretamente",
+      "Registrar eventuais divergências encontradas",
+      "Reportar o resultado ao time fiscal"
+    ],
+    "explanation": "A auditoria começa levantando os produtos, conferindo a alíquota aplicada, registrando divergências e, por fim, reportando o resultado para quem cuida da parte fiscal.",
+    "pacciTip": "Conferir sempre é bom, tesoro! Assim nenhum produto essencial paga imposto a mais por engano."
+  },
+  {
+    "id": "REF-EST-088",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa universidade corporativa, o instrutor organiza uma aula sobre o conceito de IVA Dual para os novos estagiários da área fiscal.",
+    "question": "Ordene as etapas dessa aula sobre o funcionamento do IVA Dual:",
+    "options": [
+      "Demonstração de como IBS e CBS convivem no IVA Dual",
+      "Explicação do funcionamento da CBS",
+      "Explicação do funcionamento do IBS",
+      "Apresentação do conceito de IVA"
+    ],
+    "correctAnswer": [
+      "Apresentação do conceito de IVA",
+      "Explicação do funcionamento do IBS",
+      "Explicação do funcionamento da CBS",
+      "Demonstração de como IBS e CBS convivem no IVA Dual"
+    ],
+    "explanation": "A aula parte do conceito geral de IVA, explica o IBS, depois a CBS e, por fim, mostra como os dois convivem no modelo de IVA Dual.",
+    "pacciTip": "Do geral pro específico, tesoro! Primeiro o conceito, depois cada peça, depois o quebra-cabeça montado."
+  },
+  {
+    "id": "REF-EST-089",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa operadora de telecom, o time de atendimento recebe uma reclamação de um cliente sobre um novo tributo destacado na fatura de telefone.",
+    "question": "Ordene as etapas do atendimento a essa reclamação sobre o novo tributo na fatura:",
+    "options": [
+      "Resposta é enviada ao cliente",
+      "Time fiscal explica a incidência do novo tributo",
+      "Atendente verifica os tributos destacados na conta",
+      "Cliente entra em contato reclamando do valor da fatura"
+    ],
+    "correctAnswer": [
+      "Cliente entra em contato reclamando do valor da fatura",
+      "Atendente verifica os tributos destacados na conta",
+      "Time fiscal explica a incidência do novo tributo",
+      "Resposta é enviada ao cliente"
+    ],
+    "explanation": "O atendimento segue a lógica de acolher a reclamação, verificar a fatura, buscar explicação técnica com o time fiscal e só então responder ao cliente.",
+    "pacciTip": "Escuta, verifica, entende, responde! Um bom atendimento nunca pula etapa, capisce?"
+  },
+  {
+    "id": "REF-EST-090",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa rede de farmácias, um cliente pergunta ao atendente se um determinado produto tem incidência do Imposto Seletivo, e ninguém na loja sabe responder de imediato.",
+    "question": "Ordene o caminho dessa dúvida até a resposta oficial ao cliente:",
+    "options": [
+      "Resposta oficial é enviada ao cliente",
+      "Time fiscal verifica se o produto se enquadra no IS",
+      "Atendente registra a dúvida",
+      "Cliente pergunta se um produto tem Imposto Seletivo"
+    ],
+    "correctAnswer": [
+      "Cliente pergunta se um produto tem Imposto Seletivo",
+      "Atendente registra a dúvida",
+      "Time fiscal verifica se o produto se enquadra no IS",
+      "Resposta oficial é enviada ao cliente"
+    ],
+    "explanation": "A dúvida é registrada, encaminhada ao time fiscal para verificação e só depois retorna como resposta oficial ao cliente.",
+    "pacciTip": "Melhor confirmar com quem entende, tesoro! Assim a resposta sai certa da primeira vez."
+  },
+  {
+    "id": "REF-EST-091",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Numa pequena indústria, a diretoria pede um plano simples de preparação para a extinção total dos tributos antigos, prevista para 2033.",
+    "question": "Ordene as etapas desse plano de preparação da empresa para 2033:",
+    "options": [
+      "Operar de forma integral no novo modelo em 2033",
+      "Treinar a equipe sobre IBS, CBS e IS",
+      "Ajustar os sistemas internos para o novo modelo",
+      "Acompanhar o cronograma oficial da transição"
+    ],
+    "correctAnswer": [
+      "Acompanhar o cronograma oficial da transição",
+      "Ajustar os sistemas internos para o novo modelo",
+      "Treinar a equipe sobre IBS, CBS e IS",
+      "Operar de forma integral no novo modelo em 2033"
+    ],
+    "explanation": "O plano começa acompanhando o cronograma oficial, ajustando sistemas, treinando a equipe e, por fim, operando totalmente dentro do novo modelo em 2033.",
+    "pacciTip": "Quem se prepara com calma não sofre correria depois, tesoro! Passo a passo até 2033."
+  },
+  {
+    "id": "REF-EST-092",
+    "level": "estagiario",
+    "type": "ordering",
+    "scenario": "Num escritório de contabilidade, a diretoria pede um relatório resumindo os impactos da Reforma Tributária para os clientes da carteira.",
+    "question": "Ordene as etapas de elaboração desse relatório interno sobre o impacto da Reforma:",
+    "options": [
+      "Apresentar o relatório à diretoria",
+      "Redigir o relatório com as conclusões",
+      "Analisar os impactos esperados por tributo",
+      "Coletar dados sobre os tributos atuais da empresa"
+    ],
+    "correctAnswer": [
+      "Coletar dados sobre os tributos atuais da empresa",
+      "Analisar os impactos esperados por tributo",
+      "Redigir o relatório com as conclusões",
+      "Apresentar o relatório à diretoria"
+    ],
+    "explanation": "O relatório nasce da coleta de dados, segue com a análise dos impactos, a redação das conclusões e termina na apresentação à diretoria.",
+    "pacciTip": "Dado bruto vira relatório fino, tesoro! Coleta, analisa, escreve e apresenta."
+  },
+  {
+    "id": "REF-EST-093",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "No manual interno de uma indústria, o glossário de siglas tributárias está sendo revisado pelo estagiário antes da publicação.",
+    "question": "O IBS é de competência ___ e municipal.",
+    "options": [
+      "estadual",
+      "federal",
+      "nacional",
+      "internacional"
+    ],
+    "correctAnswer": "estadual",
+    "explanation": "O IBS é de competência estadual e municipal, unificando o que hoje é cobrado separadamente por ICMS (estados) e ISS (municípios).",
+    "pacciTip": "Estadual e municipal, de mãos dadas nesse imposto só, tesoro!"
+  },
+  {
+    "id": "REF-EST-094",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Durante uma dinâmica de treinamento numa fintech, o instrutor pede para o grupo completar uma frase sobre a competência da CBS.",
+    "question": "A CBS é de competência ___.",
+    "options": [
+      "federal",
+      "estadual",
+      "municipal",
+      "internacional"
+    ],
+    "correctAnswer": "federal",
+    "explanation": "A CBS é um tributo de competência federal, administrado pela União por meio da Receita Federal.",
+    "pacciTip": "CBS é filha da União, ragazzo! Federal, sem dúvida."
+  },
+  {
+    "id": "REF-EST-095",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "No treinamento de um escritório de contabilidade, o instrutor explica a lógica de cobrança do novo sistema com uma frase para completar.",
+    "question": "Com a reforma, os tributos passam a ser cobrados no local de ___ do bem ou serviço.",
+    "options": [
+      "consumo",
+      "produção",
+      "estoque",
+      "transporte"
+    ],
+    "correctAnswer": "consumo",
+    "explanation": "O novo modelo adota o princípio do destino: o tributo é cobrado no local onde o bem ou serviço é efetivamente consumido, não onde é produzido.",
+    "pacciTip": "Onde se consome, ali fica o imposto, tesoro! Essa é a nova regra do jogo."
+  },
+  {
+    "id": "REF-EST-096",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa fazenda de agronegócio, o gestor financeiro comenta com o estagiário sobre o principal motivo de tanta mudança nas regras fiscais.",
+    "question": "A reforma busca reduzir a ___ tributária enfrentada pelas empresas no dia a dia.",
+    "options": [
+      "complexidade",
+      "lucratividade",
+      "exportação",
+      "inflação"
+    ],
+    "correctAnswer": "complexidade",
+    "explanation": "Um dos principais objetivos da Reforma é reduzir a complexidade do sistema tributário, com regras mais simples e unificadas.",
+    "pacciTip": "Menos complicação, mais clareza! Essa é a promessa central da reforma, capisce?"
+  },
+  {
+    "id": "REF-EST-097",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa startup que vende um aplicativo por assinatura, o founder pergunta ao estagiário qual tributo federal também vai incidir sobre o serviço.",
+    "question": "Produtos e serviços em geral, como um aplicativo por assinatura, tendem a ser tributados pelo IBS e pela ___.",
+    "options": [
+      "CBS",
+      "IPI",
+      "IOF",
+      "INSS"
+    ],
+    "correctAnswer": "CBS",
+    "explanation": "A base de incidência de IBS e CBS é ampla, cobrindo bens e serviços em geral, incluindo assinaturas de aplicativos e outros serviços digitais.",
+    "pacciTip": "App também entra na conta, tesoro! IBS e CBS, os dois juntos."
+  },
+  {
+    "id": "REF-EST-098",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa construtora, o engenheiro pergunta ao estagiário qual sigla vai substituir o ISS cobrado sobre o serviço de construção civil.",
+    "question": "O ISS, cobrado hoje sobre serviços como construção civil, será substituído pelo ___.",
+    "options": [
+      "IBS",
+      "CBS",
+      "IS",
+      "IPI"
+    ],
+    "correctAnswer": "IBS",
+    "explanation": "O IBS absorve tanto o ICMS quanto o ISS, incluindo o que hoje incide sobre serviços prestados, como os de construção civil.",
+    "pacciTip": "ISS vira IBS, semplice così, ragazzo!"
+  },
+  {
+    "id": "REF-EST-099",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Num hospital, a farmacêutica explica ao estagiário como remédios essenciais tendem a ser tratados no novo sistema tributário.",
+    "question": "Itens considerados essenciais, como remédios, podem ter alíquota ___ dentro de regimes específicos.",
+    "options": [
+      "reduzida",
+      "dobrada",
+      "proibida",
+      "estrangeira"
+    ],
+    "correctAnswer": "reduzida",
+    "explanation": "Itens essenciais, como medicamentos, tendem a contar com regimes específicos de alíquota reduzida dentro do novo modelo tributário.",
+    "pacciTip": "Remédio com desconto no imposto, tesoro! Faz sentido, já que é essencial."
+  },
+  {
+    "id": "REF-EST-100",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa rede de hotéis, a gerente de atendimento pergunta ao estagiário o nome do mecanismo que devolve parte do imposto a famílias de baixa renda.",
+    "question": "O mecanismo de ___ devolve parte do imposto pago por famílias de baixa renda.",
+    "options": [
+      "cashback",
+      "split payment",
+      "crédito presumido",
+      "drawback"
+    ],
+    "correctAnswer": "cashback",
+    "explanation": "O cashback é o mecanismo previsto na Reforma para devolver parte do valor pago em tributos por famílias de baixa renda.",
+    "pacciTip": "Cashback, a palavrinha do dinheiro que volta pro bolso de quem mais precisa!"
+  },
+  {
+    "id": "REF-EST-101",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa fintech, a equipe de produto revisa um card do aplicativo explicando quando começa a fase de testes da Reforma.",
+    "question": "A fase de testes da reforma, com alíquota simbólica, começa no ano de ___.",
+    "options": [
+      "2026",
+      "2023",
+      "2033",
+      "2030"
+    ],
+    "correctAnswer": "2026",
+    "explanation": "A fase de testes, com alíquota simbólica, começa em 2026, dando início à longa transição que vai até 2033.",
+    "pacciTip": "2026 é o ano do primeiro ensaio, tesoro! Grava esse número."
+  },
+  {
+    "id": "REF-EST-102",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa rede de farmácias, a balconista revisa um cartaz explicativo sobre o critério do Imposto Seletivo.",
+    "question": "O Imposto Seletivo incide sobre produtos prejudiciais à saúde ou ao ___.",
+    "options": [
+      "meio ambiente",
+      "consumidor",
+      "estoque",
+      "varejo"
+    ],
+    "correctAnswer": "meio ambiente",
+    "explanation": "O critério do Imposto Seletivo envolve dois eixos: produtos prejudiciais à saúde das pessoas ou ao meio ambiente.",
+    "pacciTip": "Saúde de um lado, meio ambiente do outro, tesoro! Os dois pilares do imposto do pecado."
+  },
+  {
+    "id": "REF-EST-103",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa indústria de alimentos, o time fiscal explica ao estagiário como os tributos antigos vão sumir aos poucos, não de uma vez.",
+    "question": "A extinção dos tributos antigos ocorre de forma ___, ao longo da transição até 2033.",
+    "options": [
+      "gradual",
+      "imediata",
+      "aleatória",
+      "proibida"
+    ],
+    "correctAnswer": "gradual",
+    "explanation": "A extinção de PIS, Cofins, ICMS e ISS acontece de forma gradual, ao longo da transição, e não de uma só vez.",
+    "pacciTip": "Devagar e sempre, ragazzo! É assim que os tributos antigos vão saindo de cena."
+  },
+  {
+    "id": "REF-EST-104",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Num restaurante, o gerente comenta com o estagiário sobre o tipo de bebida que pode pesar mais no preço por causa do Imposto Seletivo.",
+    "question": "Bebidas ___ podem ser alvo do Imposto Seletivo, por serem consideradas prejudiciais à saúde.",
+    "options": [
+      "alcoólicas",
+      "geladas",
+      "importadas",
+      "nacionais"
+    ],
+    "correctAnswer": "alcoólicas",
+    "explanation": "Bebidas alcoólicas se enquadram no critério de nocividade à saúde, o que as torna alvo típico do Imposto Seletivo.",
+    "pacciTip": "Álcool no copo, imposto no preço! É a lógica do imposto do pecado, tesoro."
+  },
+  {
+    "id": "REF-EST-105",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa empresa de ônibus urbano, o gestor comenta com o estagiário sobre o tipo de tratamento que o transporte público pode receber na Reforma.",
+    "question": "Serviços considerados essenciais, como o transporte público, podem contar com regime ___ na reforma.",
+    "options": [
+      "específico",
+      "proibido",
+      "internacional",
+      "duplicado"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Serviços essenciais, como o transporte público, tendem a contar com regimes específicos que preveem tratamento tributário diferenciado.",
+    "pacciTip": "Ônibus tem regra especial, tesoro! Faz sentido, é serviço de todo dia pra muita gente."
+  },
+  {
+    "id": "REF-EST-106",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa fintech, o analista explica ao estagiário quem administra, na prática, o tributo federal criado pela Reforma.",
+    "question": "A CBS é administrada pela ___, órgão do governo federal.",
+    "options": [
+      "Receita Federal",
+      "Prefeitura",
+      "Comitê Gestor",
+      "OAB"
+    ],
+    "correctAnswer": "Receita Federal",
+    "explanation": "Como a CBS é um tributo federal, cabe à Receita Federal administrá-la, diferente do IBS, que é gerido pelo Comitê Gestor.",
+    "pacciTip": "CBS mora na casa da Receita Federal, tesoro! Não confunde com o Comitê Gestor."
+  },
+  {
+    "id": "REF-EST-107",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa distribuidora de energia elétrica, o técnico explica ao estagiário quem cuida da administração compartilhada do novo tributo estadual/municipal.",
+    "question": "O IBS é administrado, de forma compartilhada, pelo ___ do IBS.",
+    "options": [
+      "Comitê Gestor",
+      "Tribunal de Contas",
+      "Ministério da Fazenda",
+      "Senado"
+    ],
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS é o órgão responsável por administrar de forma compartilhada esse tributo entre estados e municípios.",
+    "pacciTip": "Comitê Gestor, o nome que você vai repetir bastante na carreira, tesoro!"
+  },
+  {
+    "id": "REF-EST-108",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa mineradora, a engenheira ambiental explica ao estagiário por que atividades poluentes chamam atenção da Reforma.",
+    "question": "Atividades ou produtos que agridem o meio ambiente podem sofrer incidência do Imposto ___.",
+    "options": [
+      "Seletivo",
+      "de Renda",
+      "de Importação",
+      "Territorial"
+    ],
+    "correctAnswer": "Seletivo",
+    "explanation": "O Imposto Seletivo mira, entre outros critérios, produtos e atividades com impacto negativo ao meio ambiente.",
+    "pacciTip": "Poluiu, o Imposto Seletivo aparece, ragazzo! É a lógica do pecado ambiental."
+  },
+  {
+    "id": "REF-EST-109",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa papelaria de bairro, o dono comenta com o estagiário sobre o benefício prático de unir ICMS e ISS num só imposto.",
+    "question": "Unificar ICMS e ISS em um único tributo tende a reduzir a ___ enfrentada pelas pequenas empresas.",
+    "options": [
+      "burocracia",
+      "lucratividade",
+      "concorrência",
+      "exportação"
+    ],
+    "correctAnswer": "burocracia",
+    "explanation": "A unificação de ICMS e ISS no IBS tende a reduzir a burocracia, já que a empresa passa a lidar com um conjunto de regras mais simples.",
+    "pacciTip": "Menos papel, menos regra, mais tempo pra vender, tesoro!"
+  },
+  {
+    "id": "REF-EST-110",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Num pet shop, o dono pergunta ao estagiário se produtos comuns, como ração, entram na mira do Imposto Seletivo.",
+    "question": "Produtos de consumo comuns, sem relação com saúde ou meio ambiente, normalmente não sofrem incidência do Imposto ___.",
+    "options": [
+      "Seletivo",
+      "de Renda",
+      "sobre Serviços",
+      "de Importação"
+    ],
+    "correctAnswer": "Seletivo",
+    "explanation": "Produtos comuns, sem relação com nocividade à saúde ou ao meio ambiente, seguem apenas a tributação padrão de IBS e CBS, fora do Imposto Seletivo.",
+    "pacciTip": "Ração de cachorro não é pecado, tesoro! Fica de fora do Imposto Seletivo."
+  },
+  {
+    "id": "REF-EST-111",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa editora, a revisora pergunta ao estagiário se livros e outros bens culturais podem ter algum tratamento diferenciado na Reforma.",
+    "question": "Bens culturais podem, dependendo da regulamentação, contar com regime ___ de tributação.",
+    "options": [
+      "específico",
+      "duplicado",
+      "internacional",
+      "proibido"
+    ],
+    "correctAnswer": "específico",
+    "explanation": "Assim como outros itens considerados relevantes, bens culturais podem contar com regimes específicos de tributação previstos na regulamentação da Reforma.",
+    "pacciTip": "Cultura também pode ganhar um tratamento especial, tesoro! Depende da regulamentação."
+  },
+  {
+    "id": "REF-EST-112",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa empresa de logística internacional, a analista de comércio exterior explica ao estagiário a lógica de cobrança do novo sistema.",
+    "question": "A lógica de tributação no ___ significa cobrar o imposto onde o bem ou serviço é efetivamente consumido.",
+    "options": [
+      "destino",
+      "origem",
+      "trânsito",
+      "estoque"
+    ],
+    "correctAnswer": "destino",
+    "explanation": "O princípio do destino é a base da nova tributação: o imposto é cobrado no local de consumo, não no local de produção ou de origem.",
+    "pacciTip": "Destino, sempre destino, tesoro! O imposto viaja até onde o produto é consumido."
+  },
+  {
+    "id": "REF-EST-113",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa escola, o time jurídico revisa um documento institucional que cita a base legal da Reforma Tributária.",
+    "question": "A Emenda Constitucional que deu origem à Reforma Tributária é a EC ___.",
+    "options": [
+      "132/2023",
+      "95/2016",
+      "45/2019",
+      "108/2020"
+    ],
+    "correctAnswer": "132/2023",
+    "explanation": "A EC 132/2023 é a emenda constitucional que criou a Reforma Tributária sobre o consumo, dando origem ao IBS, à CBS e ao Imposto Seletivo.",
+    "pacciTip": "132 de 2023, o número que você vai levar pra vida, tesoro!"
+  },
+  {
+    "id": "REF-EST-114",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Num e-commerce de eletrônicos, o estagiário lê uma reportagem que explica por que alguns estados hoje disputam empresas com benefícios fiscais.",
+    "question": "O objetivo de reduzir a guerra fiscal está relacionado à disputa entre ___ por incentivos tributários.",
+    "options": [
+      "estados",
+      "países",
+      "continentes",
+      "bairros"
+    ],
+    "correctAnswer": "estados",
+    "explanation": "A guerra fiscal é a disputa entre estados que oferecem benefícios de ICMS para atrair empresas, algo que a Reforma busca reduzir com regras unificadas.",
+    "pacciTip": "Estado contra estado, tesoro! A reforma quer acabar com essa briga."
+  },
+  {
+    "id": "REF-EST-115",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Numa indústria automotiva, o analista fiscal revisa um slide de treinamento sobre a origem da CBS.",
+    "question": "PIS e Cofins, tributos federais atuais, serão unificados na nova ___.",
+    "options": [
+      "CBS",
+      "IBS",
+      "IS",
+      "ISS"
+    ],
+    "correctAnswer": "CBS",
+    "explanation": "A CBS nasce da unificação de PIS e Cofins, os dois tributos federais que hoje incidem sobre o faturamento das empresas.",
+    "pacciTip": "PIS e Cofins se abraçam e viram CBS, ragazzo! Dois em um."
+  },
+  {
+    "id": "REF-EST-116",
+    "level": "estagiario",
+    "type": "fill_blank",
+    "scenario": "Num supermercado, o gerente de compras pergunta ao estagiário como os itens da cesta básica tendem a ser tratados na Reforma.",
+    "question": "Itens da cesta básica tendem a ter alíquota ___ ou zero dentro do novo sistema.",
+    "options": [
+      "reduzida",
+      "dobrada",
+      "proibida",
+      "internacional"
+    ],
+    "correctAnswer": "reduzida",
+    "explanation": "Itens da cesta básica costumam contar com alíquota reduzida ou zero, por serem considerados essenciais à alimentação da população.",
+    "pacciTip": "Arroz e feijão pesam menos no imposto, tesoro! É assim que deve funcionar."
+  },
+  {
+    "id": "REF-EST-117",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa indústria, o estagiário está fechando um relatório interno e precisa preencher a sigla do tributo que engloba ICMS e ISS.",
+    "question": "Digite a sigla do tributo que engloba o ICMS e o ISS em um só:",
+    "correctAnswer": "IBS",
+    "explanation": "IBS é a sigla de Imposto sobre Bens e Serviços, que substitui o ICMS (estadual) e o ISS (municipal).",
+    "pacciTip": "IBS, três letrinhas que resumem dois impostos antigos, tesoro!"
+  },
+  {
+    "id": "REF-EST-118",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num restaurante, o gerente financeiro pede ao estagiário que preencha rapidamente a sigla do tributo federal unificado que substitui PIS e Cofins na nota do estabelecimento.",
+    "question": "Digite a sigla do tributo federal que reúne o PIS e a Cofins:",
+    "correctAnswer": "CBS",
+    "explanation": "CBS é a sigla de Contribuição sobre Bens e Serviços, o novo tributo federal que substitui PIS e Cofins.",
+    "pacciTip": "CBS, a irmã federal do IBS, tesoro! Não esquece dela."
+  },
+  {
+    "id": "REF-EST-119",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa loja especializada em bebidas, o dono pergunta ao estagiário qual é a sigla do imposto conhecido popularmente como 'imposto do pecado'.",
+    "question": "Digite a sigla do tributo conhecido como imposto do pecado:",
+    "correctAnswer": "IS",
+    "explanation": "IS é a sigla do Imposto Seletivo, apelidado de 'imposto do pecado' por incidir sobre produtos prejudiciais à saúde ou ao meio ambiente.",
+    "pacciTip": "IS de Imposto Seletivo, o vilão dos produtos nocivos, ragazzo!"
+  },
+  {
+    "id": "REF-EST-120",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num escritório de contabilidade, o instrutor pede ao estagiário que complete o nome do modelo formado pela convivência entre IBS e CBS.",
+    "question": "Digite, em uma palavra, o nome do modelo formado pela convivência entre IBS e CBS:",
+    "correctAnswer": "Dual",
+    "explanation": "O modelo é chamado de IVA Dual, pois combina um tributo estadual/municipal (IBS) com um federal (CBS).",
+    "pacciTip": "Dual, dual, dual! Essa palavra já devia estar tatuada na sua memória, tesoro."
+  },
+  {
+    "id": "REF-EST-121",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa fintech, o time de produto revisa um card do aplicativo e pede ao estagiário o ano de início da fase de testes com alíquota simbólica.",
+    "question": "Digite o ano de início da fase de testes da Reforma Tributária:",
+    "correctAnswer": "2026",
+    "explanation": "A fase de testes, com alíquota simbólica, começa em 2026, dando início ao longo período de transição.",
+    "pacciTip": "2026, o ano do primeiro ensaio, tesoro! Grava esse número."
+  },
+  {
+    "id": "REF-EST-122",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa mineradora, o RH pede ao estagiário que preencha o ano em que o novo modelo tributário entra em vigência plena, ao final da transição.",
+    "question": "Digite o ano em que o novo modelo tributário entra em vigência plena:",
+    "correctAnswer": "2033",
+    "explanation": "A vigência plena do novo modelo, com a extinção total dos tributos antigos, ocorre em 2033, ao final da transição.",
+    "pacciTip": "2033, o ano em que tudo se completa, ragazzo! O ponto final da transição."
+  },
+  {
+    "id": "REF-EST-123",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num supermercado, o gerente pergunta ao estagiário qual é o nome do mecanismo que devolve parte do imposto pago por famílias de baixa renda.",
+    "question": "Digite o nome do mecanismo que devolve parte do imposto pago por famílias de baixa renda:",
+    "correctAnswer": "cashback",
+    "explanation": "O cashback é o mecanismo criado pela Reforma para devolver parte do valor pago em tributos por famílias de baixa renda.",
+    "pacciTip": "Cashback, a palavra do dinheiro que volta, tesoro!"
+  },
+  {
+    "id": "REF-EST-124",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa empresa de logística internacional, o analista pergunta ao estagiário qual palavra descreve o princípio de cobrança do IBS e da CBS: origem ou destino?",
+    "question": "Digite a palavra correta: o IBS e a CBS são cobrados no local de origem ou de destino do consumo?",
+    "correctAnswer": "destino",
+    "explanation": "O novo modelo adota o princípio do destino: o imposto é cobrado onde o bem ou serviço é efetivamente consumido.",
+    "pacciTip": "Destino, sempre destino, tesoro! O produto pode nascer num lugar, mas o imposto fica onde ele é consumido."
+  },
+  {
+    "id": "REF-EST-125",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa startup, o founder pede ao estagiário que resuma, em um verbo, o principal objetivo da Reforma Tributária.",
+    "question": "Digite, em uma palavra, o verbo que resume o principal objetivo da Reforma Tributária:",
+    "correctAnswer": "simplificar",
+    "explanation": "O objetivo central da Reforma é simplificar o sistema tributário sobre o consumo, reduzindo tributos e unificando regras.",
+    "pacciTip": "Simplificare, a missão principal da reforma, tesoro!"
+  },
+  {
+    "id": "REF-EST-126",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa indústria de alimentos, o time fiscal pede ao estagiário que descreva, em uma palavra, como ocorre a extinção dos tributos antigos ao longo da transição.",
+    "question": "Digite a palavra que descreve como ocorre a extinção dos tributos antigos ao longo da transição:",
+    "correctAnswer": "gradual",
+    "explanation": "A extinção de PIS, Cofins, ICMS e ISS acontece de forma gradual, ao longo da transição que vai até 2033.",
+    "pacciTip": "Gradual, devagar e sempre, ragazzo! Nada de mudança de uma hora pra outra."
+  },
+  {
+    "id": "REF-EST-127",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa escola, o diretor financeiro pergunta ao estagiário: além de municipal, qual é a outra competência do IBS?",
+    "question": "Digite a outra competência do IBS, além da municipal:",
+    "correctAnswer": "estadual",
+    "explanation": "O IBS é de competência estadual e municipal, unificando o que hoje é dividido entre ICMS (estados) e ISS (municípios).",
+    "pacciTip": "Estadual e municipal, sempre juntinhos nesse imposto, tesoro!"
+  },
+  {
+    "id": "REF-EST-128",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num banco digital, o analista pergunta ao estagiário qual é a competência da CBS.",
+    "question": "Digite a competência da CBS:",
+    "correctAnswer": "federal",
+    "explanation": "A CBS é de competência federal, administrada pela União por meio da Receita Federal.",
+    "pacciTip": "CBS é da União, ragazzo! Federal, sem sombra de dúvida."
+  },
+  {
+    "id": "REF-EST-129",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num hospital, a farmacêutica pergunta ao estagiário: o Imposto Seletivo protege a saúde e o quê? Complete apenas com a primeira palavra da dupla.",
+    "question": "Digite a primeira palavra da dupla protegida pelo critério do Imposto Seletivo: saúde e ___?",
+    "correctAnswer": "saúde",
+    "explanation": "O Imposto Seletivo tem dois critérios centrais: proteger a saúde das pessoas e o meio ambiente, mirando produtos nocivos a ambos.",
+    "pacciTip": "Saúde primeiro, meio ambiente logo depois, tesoro! Os dois pilares do imposto do pecado."
+  },
+  {
+    "id": "REF-EST-130",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num escritório de contabilidade, o sócio pergunta ao estagiário qual é o nome do órgão compartilhado entre estados e municípios que administra o IBS.",
+    "question": "Digite o nome do órgão que administra o IBS de forma compartilhada entre estados e municípios:",
+    "correctAnswer": "Comitê Gestor",
+    "explanation": "O Comitê Gestor do IBS é o órgão responsável por administrar esse tributo de forma compartilhada entre estados e municípios.",
+    "pacciTip": "Comitê Gestor, o nome que você vai repetir bastante na carreira, tesoro!"
+  },
+  {
+    "id": "REF-EST-131",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa fintech, o analista pergunta ao estagiário quem administra a CBS no dia a dia.",
+    "question": "Digite o nome do órgão federal que administra a CBS:",
+    "correctAnswer": "Receita Federal",
+    "explanation": "A CBS, por ser um tributo federal, é administrada pela Receita Federal, órgão do governo federal.",
+    "pacciTip": "Receita Federal cuida da CBS, tesoro! Não confunde com o Comitê Gestor do IBS."
+  },
+  {
+    "id": "REF-EST-132",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num escritório de advocacia, o sócio pergunta ao estagiário qual é o número da emenda constitucional que criou a Reforma Tributária.",
+    "question": "Digite o número da emenda constitucional que criou a Reforma Tributária (formato NNN/AAAA):",
+    "correctAnswer": "132/2023",
+    "explanation": "A EC 132/2023 é o marco legal que criou a Reforma Tributária sobre o consumo, dando origem ao IBS, à CBS e ao Imposto Seletivo.",
+    "pacciTip": "132/2023, o número que resume toda a reforma, tesoro!"
+  },
+  {
+    "id": "REF-EST-133",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa loja de bebidas, o estagiário revisa um material de treinamento e precisa completar o apelido popular do Imposto Seletivo: imposto do quê?",
+    "question": "Digite a palavra final do apelido popular do Imposto Seletivo: 'imposto do ___':",
+    "correctAnswer": "pecado",
+    "explanation": "O Imposto Seletivo é popularmente chamado de 'imposto do pecado', por incidir sobre produtos como cigarro e bebida alcoólica.",
+    "pacciTip": "Pecado, a palavra que gruda na memória, ragazzo!"
+  },
+  {
+    "id": "REF-EST-134",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa rede de farmácias, o atendente pergunta ao estagiário como são chamados, em geral, os produtos que recebem tratamento tributário favorecido, como remédios.",
+    "question": "Digite, em uma palavra, como são chamados os produtos com tratamento tributário favorecido, como os remédios:",
+    "correctAnswer": "essenciais",
+    "explanation": "Produtos considerados essenciais, como medicamentos e itens da cesta básica, costumam contar com regimes específicos de alíquota reduzida.",
+    "pacciTip": "Essenciais ganham um tratamento mais gentil do Fisco, tesoro!"
+  },
+  {
+    "id": "REF-EST-135",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Num supermercado, o gerente de compras pergunta ao estagiário qual é o nome do conjunto de produtos que deve ter alíquota reduzida ou zero por serem indispensáveis à alimentação.",
+    "question": "Digite o nome do conjunto de produtos essenciais à alimentação que deve ter alíquota reduzida ou zero:",
+    "correctAnswer": "cesta básica",
+    "explanation": "A cesta básica reúne os produtos essenciais à alimentação da população e tende a contar com alíquota reduzida ou zero no novo modelo.",
+    "pacciTip": "Arroz, feijão e companhia pesam menos no bolso, tesoro!"
+  },
+  {
+    "id": "REF-EST-136",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa indústria automotiva, o analista fiscal pergunta ao estagiário qual expressão descreve a disputa entre estados por incentivos de ICMS que a Reforma busca reduzir.",
+    "question": "Digite a expressão que descreve a disputa entre estados por incentivos fiscais:",
+    "correctAnswer": "guerra fiscal",
+    "explanation": "Guerra fiscal é o termo usado para descrever a disputa entre estados por meio de incentivos de ICMS para atrair empresas, algo que a Reforma busca reduzir.",
+    "pacciTip": "Guerra fiscal, ragazzo! Uma briga que a reforma quer apaziguar."
+  },
+  {
+    "id": "REF-EST-137",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa universidade corporativa, o instrutor pergunta ao estagiário qual sigla internacional descreve o tipo de imposto sobre valor agregado que IBS e CBS seguem.",
+    "question": "Digite a sigla internacional do tipo de imposto sobre valor agregado seguido por IBS e CBS:",
+    "correctAnswer": "IVA",
+    "explanation": "IBS e CBS seguem o modelo de IVA (Imposto sobre Valor Agregado), amplamente usado em outros países, daí o termo 'IVA Dual'.",
+    "pacciTip": "IVA, a sigla internacional por trás do modelo brasileiro, tesoro!"
+  },
+  {
+    "id": "REF-EST-138",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa loja de roupas, o gerente pergunta ao estagiário sobre o que, de forma geral, incidem o IBS e a CBS.",
+    "question": "Digite, em uma palavra, sobre o que incidem o IBS e a CBS, de forma geral: bens e serviços de ___?",
+    "correctAnswer": "consumo",
+    "explanation": "IBS e CBS incidem sobre o consumo de bens e serviços em geral, com base ampla e poucas exceções.",
+    "pacciTip": "Consumo é a palavra-chave, tesoro! É sobre isso que IBS e CBS trabalham."
+  },
+  {
+    "id": "REF-EST-139",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa indústria, o analista fiscal pergunta ao estagiário qual sigla representa o tributo estadual que será extinto e substituído pelo IBS.",
+    "question": "Digite a sigla do tributo estadual que será substituído pelo IBS:",
+    "correctAnswer": "ICMS",
+    "explanation": "O ICMS é o tributo estadual que, junto com o ISS, será substituído pelo IBS.",
+    "pacciTip": "ICMS vira IBS, ragazzo! Um dos dois pilares do novo imposto."
+  },
+  {
+    "id": "REF-EST-140",
+    "level": "estagiario",
+    "type": "text_input",
+    "scenario": "Numa construtora, o engenheiro pergunta ao estagiário qual sigla representa o tributo municipal que será extinto e substituído pelo IBS.",
+    "question": "Digite a sigla do tributo municipal que será substituído pelo IBS:",
+    "correctAnswer": "ISS",
+    "explanation": "O ISS é o tributo municipal que, junto com o ICMS, será substituído pelo IBS.",
+    "pacciTip": "ISS vira IBS, tesoro! O outro pilar do novo imposto."
+  }
+]
