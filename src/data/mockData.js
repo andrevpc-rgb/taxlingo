@@ -58,6 +58,37 @@ export const DAILY_REVIEW_XP = 15;
 export const HEART_REGEN_HOURS = 4; // horas para recarregar 1 coração perdido
 export const HEART_REFILL_ONE_COST = 100; // gemas para recarregar 1 coração na hora
 export const HEART_REFILL_FULL_COST = 350; // gemas para recarregar todos os corações na hora
+export const INITIAL_GEMS = 1000; // saldo inicial de todo usuário novo — dá pra recarregar vidas de cara
+
+// Planos comerciais — usados tanto pela tela de vendas (SubscriptionModal,
+// AuthModal) quanto espelhados (com os mesmos ids/preços) nas Edge
+// Functions de checkout (create-asaas-checkout, create-nitrus-checkout).
+export const PLANS = {
+  individual: {
+    label: 'Individual',
+    kind: 'individual',
+    price: 'R$ 39,90/mês',
+    seatsLimit: 1,
+    description: 'Pra quem estuda ou trabalha por conta própria — sem precisar cadastrar uma empresa.',
+    features: ['1 conta pessoal', 'Todos os 7 níveis de carreira', 'Sem painel de gestor'],
+  },
+  starter: {
+    label: 'Starter',
+    kind: 'corporate',
+    price: 'R$ 297/mês',
+    seatsLimit: 10,
+    description: 'Pra escritórios pequenos organizarem o treinamento do time.',
+    features: ['Até 10 colaboradores', 'Todos os 7 níveis de carreira', 'Painel do Gestor', 'Suporte por e-mail'],
+  },
+  pro: {
+    label: 'Pro',
+    kind: 'corporate',
+    price: 'R$ 897/mês',
+    seatsLimit: 50,
+    description: 'Pra empresas maiores com times inteiros pra treinar.',
+    features: ['Até 50 colaboradores', 'Todos os 7 níveis de carreira', 'Painel do Gestor', 'Suporte prioritário'],
+  },
+};
 
 // ---------------------------------------------------------------------------
 // Empresas (multi-tenancy local, mockada) — cada usuário pertence a uma
@@ -127,7 +158,7 @@ function timestampDaysAgo(n) {
 export const seedUsers = [
   {
     id: 'u-001', name: 'Andréia Silva', email: 'andreia@alfa.com', password: 'demo123', companyId: 'emp-01',
-    role: 'employee', jobTitle: 'Analista Fiscal', avatarUrl: '👩‍💼', xp: 1240, level: 6, lives: 4, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Analista Fiscal', avatarUrl: '👩‍💼', xp: 1240, level: 6, lives: 4, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 7, lastStudyDate: daysAgo(1), streakFreezes: 1, gems: 50,
     currentLevelId: 'assistente', currentLevelSince: daysAgo(12), timeSpentMinutes: 340,
     examAttempts: [
@@ -137,7 +168,7 @@ export const seedUsers = [
   },
   {
     id: 'u-002', name: 'Marcos Vinícius', email: 'marcos@alfa.com', password: 'demo123', companyId: 'emp-01',
-    role: 'admin', jobTitle: 'Gerente Fiscal', avatarUrl: '🧑‍💼', xp: 2180, level: 10, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'admin', jobTitle: 'Gerente Fiscal', avatarUrl: '🧑‍💼', xp: 2180, level: 10, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 21, lastStudyDate: daysAgo(0), streakFreezes: 2, gems: 120,
     currentLevelId: 'analista_senior', currentLevelSince: daysAgo(3), timeSpentMinutes: 610,
     examAttempts: [
@@ -150,7 +181,7 @@ export const seedUsers = [
   },
   {
     id: 'u-003', name: 'Camila Nogueira', email: 'camila@alfa.com', password: 'demo123', companyId: 'emp-01',
-    role: 'employee', jobTitle: 'Analista Contábil', avatarUrl: '👩‍💻', xp: 1950, level: 9, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Analista Contábil', avatarUrl: '👩‍💻', xp: 1950, level: 9, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 15, lastStudyDate: daysAgo(0), streakFreezes: 0, gems: 30,
     currentLevelId: 'analista_pleno', currentLevelSince: daysAgo(5), timeSpentMinutes: 480,
     examAttempts: [
@@ -162,7 +193,7 @@ export const seedUsers = [
   },
   {
     id: 'u-004', name: 'Rafael Souza', email: 'rafael@alfa.com', password: 'demo123', companyId: 'emp-01',
-    role: 'employee', jobTitle: 'Analista Trabalhista', avatarUrl: '🧑', xp: 1190, level: 6, lives: 3, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Analista Trabalhista', avatarUrl: '🧑', xp: 1190, level: 6, lives: 3, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 4, lastStudyDate: daysAgo(2), streakFreezes: 0, gems: 10,
     currentLevelId: 'assistente', currentLevelSince: daysAgo(14), timeSpentMinutes: 210,
     examAttempts: [
@@ -175,7 +206,7 @@ export const seedUsers = [
 
   {
     id: 'u-005', name: 'Juliana Prado', email: 'juliana@beta.com', password: 'demo123', companyId: 'emp-02',
-    role: 'admin', jobTitle: 'Coordenadora de Legalização', avatarUrl: '👩', xp: 1050, level: 5, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'admin', jobTitle: 'Coordenadora de Legalização', avatarUrl: '👩', xp: 1050, level: 5, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 9, lastStudyDate: daysAgo(0), streakFreezes: 1, gems: 40,
     currentLevelId: 'auxiliar', currentLevelSince: daysAgo(6), timeSpentMinutes: 260,
     examAttempts: [
@@ -184,7 +215,7 @@ export const seedUsers = [
   },
   {
     id: 'u-006', name: 'Bruno Costa', email: 'bruno@beta.com', password: 'demo123', companyId: 'emp-02',
-    role: 'employee', jobTitle: 'Atendimento ao Cliente', avatarUrl: '🧑‍💼', xp: 980, level: 5, lives: 4, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Atendimento ao Cliente', avatarUrl: '🧑‍💼', xp: 980, level: 5, lives: 4, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 3, lastStudyDate: daysAgo(1), streakFreezes: 0, gems: 15,
     currentLevelId: 'auxiliar', currentLevelSince: daysAgo(8), timeSpentMinutes: 190,
     examAttempts: [
@@ -194,7 +225,7 @@ export const seedUsers = [
   },
   {
     id: 'u-007', name: 'Fernanda Lima', email: 'fernanda@beta.com', password: 'demo123', companyId: 'emp-02',
-    role: 'employee', jobTitle: 'Compliance', avatarUrl: '👩‍🏫', xp: 870, level: 4, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Compliance', avatarUrl: '👩‍🏫', xp: 870, level: 4, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 6, lastStudyDate: daysAgo(0), streakFreezes: 0, gems: 5,
     currentLevelId: 'estagiario', currentLevelSince: daysAgo(16), timeSpentMinutes: 150,
     examAttempts: [
@@ -204,7 +235,7 @@ export const seedUsers = [
   },
   {
     id: 'u-008', name: 'Diego Martins', email: 'diego@beta.com', password: 'demo123', companyId: 'emp-02',
-    role: 'employee', jobTitle: 'Analista Fiscal', avatarUrl: '🧑‍💻', xp: 740, level: 4, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Analista Fiscal', avatarUrl: '🧑‍💻', xp: 740, level: 4, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 1, lastStudyDate: daysAgo(6), streakFreezes: 0, gems: 0,
     currentLevelId: 'estagiario', currentLevelSince: daysAgo(20), timeSpentMinutes: 95,
     examAttempts: [
@@ -214,7 +245,7 @@ export const seedUsers = [
 
   {
     id: 'u-009', name: 'Patrícia Alves', email: 'patricia@gamma.com', password: 'demo123', companyId: 'emp-03',
-    role: 'admin', jobTitle: 'Sócia Contábil', avatarUrl: '👩‍💼', xp: 1600, level: 7, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'admin', jobTitle: 'Sócia Contábil', avatarUrl: '👩‍💼', xp: 1600, level: 7, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 18, lastStudyDate: daysAgo(0), streakFreezes: 1, gems: 60,
     currentLevelId: 'analista_junior', currentLevelSince: daysAgo(4), timeSpentMinutes: 400,
     examAttempts: [
@@ -225,7 +256,7 @@ export const seedUsers = [
   },
   {
     id: 'u-010', name: 'Lucas Ferreira', email: 'lucas@gamma.com', password: 'demo123', companyId: 'emp-03',
-    role: 'employee', jobTitle: 'Analista Fiscal', avatarUrl: '🧑', xp: 1420, level: 7, lives: 4, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Analista Fiscal', avatarUrl: '🧑', xp: 1420, level: 7, lives: 4, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 10, lastStudyDate: daysAgo(1), streakFreezes: 0, gems: 25,
     currentLevelId: 'analista_pleno', currentLevelSince: daysAgo(7), timeSpentMinutes: 350,
     examAttempts: [
@@ -236,7 +267,7 @@ export const seedUsers = [
   },
   {
     id: 'u-011', name: 'Renata Souza', email: 'renata@gamma.com', password: 'demo123', companyId: 'emp-03',
-    role: 'employee', jobTitle: 'Analista Trabalhista', avatarUrl: '👩', xp: 1100, level: 6, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Analista Trabalhista', avatarUrl: '👩', xp: 1100, level: 6, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 5, lastStudyDate: daysAgo(2), streakFreezes: 0, gems: 8,
     currentLevelId: 'assistente', currentLevelSince: daysAgo(9), timeSpentMinutes: 230,
     examAttempts: [
@@ -246,7 +277,7 @@ export const seedUsers = [
   },
   {
     id: 'u-012', name: 'Thiago Barros', email: 'thiago@gamma.com', password: 'demo123', companyId: 'emp-03',
-    role: 'employee', jobTitle: 'Legalização', avatarUrl: '🧑‍💻', xp: 690, level: 3, lives: 5, maxLives: 5, lastHeartLostAt: null,
+    role: 'employee', jobTitle: 'Legalização', avatarUrl: '🧑‍💻', xp: 690, level: 3, lives: 5, maxLives: 5, lastHeartLostAt: null, weeklyXp: 0, weekStart: null,
     streak: 0, lastStudyDate: daysAgo(9), streakFreezes: 0, gems: 0,
     currentLevelId: 'estagiario', currentLevelSince: daysAgo(25), timeSpentMinutes: 60,
     examAttempts: [
@@ -259,9 +290,9 @@ export const seedUsers = [
 // Ordena por XP e devolve cada usuário com sua `position` (1º, 2º, ...).
 // Usado tanto para o ranking geral quanto para o ranking de uma empresa
 // específica (basta filtrar `usersList` antes de chamar).
-export function computeLeaderboard(usersList) {
+export function computeLeaderboard(usersList, sortKey = 'xp') {
   return [...usersList]
-    .sort((a, b) => b.xp - a.xp)
+    .sort((a, b) => (b[sortKey] ?? 0) - (a[sortKey] ?? 0))
     .map((user, index) => ({ ...user, position: index + 1 }));
 }
 

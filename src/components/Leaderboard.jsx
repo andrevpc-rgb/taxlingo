@@ -1,6 +1,6 @@
 // src/components/Leaderboard.jsx
 import React, { useState } from 'react';
-import { Crown, Megaphone, Medal, Building2, Globe2 } from 'lucide-react';
+import { Crown, Megaphone, Medal, Building2, Globe2, CalendarClock, Trophy } from 'lucide-react';
 import { useGame } from '../context/GameContext.jsx';
 import { HIGHLIGHT_THRESHOLD } from '../data/mockData';
 
@@ -10,7 +10,7 @@ const PODIUM_STYLES = {
   3: { order: 'order-3', height: 'h-20', ring: 'ring-orange-400', badge: 'bg-orange-400', label: '3º' },
 };
 
-function PodiumSpot({ entry, isYou, subtitle }) {
+function PodiumSpot({ entry, isYou, subtitle, xpValue }) {
   const style = PODIUM_STYLES[entry.position];
 
   return (
@@ -30,7 +30,7 @@ function PodiumSpot({ entry, isYou, subtitle }) {
           {subtitle}
         </p>
       )}
-      <p className="text-[10px] font-bold text-slate-400 sm:text-[11px]">{entry.xp} XP</p>
+      <p className="text-[10px] font-bold text-slate-400 sm:text-[11px]">{xpValue} XP</p>
       <div
         className={`mt-2 flex w-full items-end justify-center rounded-t-xl ${style.badge} ${style.height} pb-2`}
       >
@@ -40,7 +40,7 @@ function PodiumSpot({ entry, isYou, subtitle }) {
   );
 }
 
-function LeaderboardRow({ entry, isYou, subtitle }) {
+function LeaderboardRow({ entry, isYou, subtitle, xpValue }) {
   const isHighlighted = entry.position <= HIGHLIGHT_THRESHOLD;
 
   return (
@@ -61,18 +61,32 @@ function LeaderboardRow({ entry, isYou, subtitle }) {
         <p className="text-xs text-slate-400">{subtitle}</p>
       </div>
       {isHighlighted && <Medal className="h-4 w-4 text-amber-400" />}
-      <span className="text-sm font-extrabold text-slate-600">{entry.xp} XP</span>
+      <span className="text-sm font-extrabold text-slate-600">{xpValue} XP</span>
     </div>
   );
 }
 
 export default function Leaderboard() {
   const [tab, setTab] = useState('company'); // 'company' | 'global'
-  const { user, currentCompany, companyLeaderboard, globalLeaderboard, companies } = useGame();
+  const [period, setPeriod] = useState('weekly'); // 'weekly' | 'alltime'
+  const {
+    user,
+    currentCompany,
+    companyLeaderboard,
+    globalLeaderboard,
+    weeklyCompanyLeaderboard,
+    weeklyGlobalLeaderboard,
+    companies,
+  } = useGame();
 
   if (!user) return null;
 
-  const entries = tab === 'company' ? companyLeaderboard : globalLeaderboard;
+  const scoped = {
+    company: { weekly: weeklyCompanyLeaderboard, alltime: companyLeaderboard },
+    global: { weekly: weeklyGlobalLeaderboard, alltime: globalLeaderboard },
+  };
+  const entries = scoped[tab][period];
+  const xpKey = period === 'weekly' ? 'weeklyXp' : 'xp';
   const sorted = [...entries].sort((a, b) => a.position - b.position);
   const podium = sorted.filter((entry) => entry.position <= 3);
   const rest = sorted.filter((entry) => entry.position > 3);
@@ -91,10 +105,34 @@ export default function Leaderboard() {
     <div className="mx-auto max-w-md px-4 py-6 sm:max-w-2xl">
       <h1 className="mb-1 text-xl font-extrabold text-slate-800">Ranking</h1>
       <p className="mb-4 text-sm text-slate-400">
+        {period === 'weekly' ? 'XP acumulado nos últimos 7 dias. ' : 'Soma histórica de todo o XP já ganho. '}
         {tab === 'company'
           ? `Veja como você está em relação aos colegas de ${currentCompany?.name ?? 'sua empresa'}.`
           : 'Veja como você está em relação a todas as empresas do TaxLingo.'}
       </p>
+
+      <div className="mb-2 flex gap-2 rounded-2xl bg-slate-100 p-1">
+        <button
+          type="button"
+          onClick={() => setPeriod('weekly')}
+          className={`flex min-h-[2.75rem] flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[11px] font-extrabold uppercase tracking-wide transition-colors sm:text-xs ${
+            period === 'weekly' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-400'
+          }`}
+        >
+          <CalendarClock className="h-4 w-4 shrink-0" />
+          Ranking Semanal
+        </button>
+        <button
+          type="button"
+          onClick={() => setPeriod('alltime')}
+          className={`flex min-h-[2.75rem] flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[11px] font-extrabold uppercase tracking-wide transition-colors sm:text-xs ${
+            period === 'alltime' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-400'
+          }`}
+        >
+          <Trophy className="h-4 w-4 shrink-0" />
+          Ranking Geral
+        </button>
+      </div>
 
       <div className="mb-6 flex gap-2 rounded-2xl bg-slate-100 p-1">
         <button
@@ -115,7 +153,7 @@ export default function Leaderboard() {
           }`}
         >
           <Globe2 className="h-4 w-4" />
-          Ranking Geral
+          Todas as Empresas
         </button>
       </div>
 
@@ -131,13 +169,25 @@ export default function Leaderboard() {
 
       <div className="mb-8 flex items-end gap-2 rounded-2xl bg-slate-50 p-3 sm:gap-3 sm:p-4">
         {podium.map((entry) => (
-          <PodiumSpot key={entry.id} entry={entry} isYou={entry.id === user.id} subtitle={getSubtitle(entry)} />
+          <PodiumSpot
+            key={entry.id}
+            entry={entry}
+            isYou={entry.id === user.id}
+            subtitle={getSubtitle(entry)}
+            xpValue={entry[xpKey] ?? 0}
+          />
         ))}
       </div>
 
       <div className="space-y-2">
         {rest.map((entry) => (
-          <LeaderboardRow key={entry.id} entry={entry} isYou={entry.id === user.id} subtitle={getSubtitle(entry)} />
+          <LeaderboardRow
+            key={entry.id}
+            entry={entry}
+            isYou={entry.id === user.id}
+            subtitle={getSubtitle(entry)}
+            xpValue={entry[xpKey] ?? 0}
+          />
         ))}
       </div>
     </div>

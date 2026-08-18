@@ -114,9 +114,10 @@ export default function SubscriptionModal({ onClose }) {
           <X className="h-5 w-5" />
         </button>
 
-        <h2 className="mb-1 text-lg font-extrabold text-slate-800">Assinatura TaxLingo</h2>
+        <h2 className="mb-1 text-lg font-extrabold text-slate-800">Plano Corporativo</h2>
         <p className="mb-5 text-sm text-slate-400">
-          {currentCompany?.name ? `Escolha o plano de ${currentCompany.name}.` : 'Escolha um plano.'}
+          {currentCompany?.name ? `Escolha o plano de ${currentCompany.name}.` : 'Escolha um plano.'} Pra uma conta
+          pessoal (sem empresa), veja o <strong>Plano Individual</strong> na tela de login.
         </p>
 
         {!isSupabaseConfigured && (

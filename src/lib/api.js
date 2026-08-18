@@ -31,6 +31,8 @@ export function mapUserRow(row) {
     streak: row.streak,
     streakFreezes: row.streak_freezes,
     gems: row.gems,
+    weeklyXp: row.weekly_xp,
+    weekStart: row.week_start,
     lastHeartLostAt: row.last_heart_lost_at,
     lastStudyDate: row.last_study_date,
     currentLevelId: row.current_level_id,
@@ -54,6 +56,8 @@ function toUserPatch(patch) {
     streak: 'streak',
     streakFreezes: 'streak_freezes',
     gems: 'gems',
+    weeklyXp: 'weekly_xp',
+    weekStart: 'week_start',
     lastHeartLostAt: 'last_heart_lost_at',
     lastStudyDate: 'last_study_date',
     currentLevelId: 'current_level_id',
@@ -295,7 +299,7 @@ export async function recordLessonProgress({ userId, lessonId, score = null, pas
 export async function fetchCompanyLeaderboard(companyId) {
   const { data, error } = await supabase
     .from('users')
-    .select('id, full_name, avatar_url, job_title, company_id, xp')
+    .select('id, full_name, avatar_url, job_title, company_id, xp, weekly_xp')
     .eq('company_id', companyId)
     .order('xp', { ascending: false });
   if (error) throw error;
@@ -306,6 +310,7 @@ export async function fetchCompanyLeaderboard(companyId) {
     jobTitle: row.job_title,
     companyId: row.company_id,
     xp: row.xp,
+    weeklyXp: row.weekly_xp,
   }));
 }
 
@@ -319,6 +324,7 @@ export async function fetchGlobalLeaderboard() {
     jobTitle: row.job_title,
     companyId: row.company_id,
     xp: row.xp,
+    weeklyXp: row.weekly_xp,
   }));
 }
 

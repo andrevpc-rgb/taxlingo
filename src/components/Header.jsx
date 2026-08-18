@@ -1,9 +1,32 @@
 // src/components/Header.jsx
 import React, { useEffect, useState } from 'react';
-import { Heart, Flame, Gem, Diamond, Snowflake, ShieldCheck, Clock, X } from 'lucide-react';
+import { Heart, Flame, Gem, Diamond, Snowflake, ShieldCheck, Clock, X, Volume2, VolumeX } from 'lucide-react';
 import { useGame, getHeartRegenInfo } from '../context/GameContext.jsx';
 import { STREAK_FREEZE_COST, MAX_STREAK_FREEZES, HEART_REFILL_ONE_COST, HEART_REFILL_FULL_COST } from '../data/mockData';
+import { isSoundMuted, setSoundMuted } from '../utils/sound';
 import UserProfile from './UserProfile';
+
+function SoundToggle() {
+  const [muted, setMuted] = useState(() => isSoundMuted());
+
+  const toggle = () => {
+    const next = !muted;
+    setSoundMuted(next);
+    setMuted(next);
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={toggle}
+      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600 sm:h-9 sm:w-9"
+      aria-label={muted ? 'Ativar efeitos sonoros' : 'Desativar efeitos sonoros'}
+      title={muted ? 'Ativar efeitos sonoros' : 'Desativar efeitos sonoros'}
+    >
+      {muted ? <VolumeX className="h-4 w-4 sm:h-5 sm:w-5" /> : <Volume2 className="h-4 w-4 sm:h-5 sm:w-5" />}
+    </button>
+  );
+}
 
 function StatPill({ icon, value, colorClass, label }) {
   return (
@@ -195,6 +218,8 @@ export default function Header() {
           />
           <HeartsPill onOpen={() => setShowHeartRefill(true)} />
         </div>
+
+        <SoundToggle />
 
         <button
           type="button"

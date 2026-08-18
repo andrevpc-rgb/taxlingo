@@ -12,6 +12,7 @@ import {
   Clock,
 } from 'lucide-react';
 import { useGame, getHeartRegenInfo } from '../context/GameContext.jsx';
+import { playCorrect, playIncorrect, playLessonComplete, playPromotion } from '../utils/sound';
 import {
   QUESTION_TYPES,
   LESSON_TYPES,
@@ -311,6 +312,7 @@ export default function QuizEngine({ onExit }) {
     accelerationResult,
     examResult,
     isDailyReview,
+    justPromotedLevelId,
     setDraftAnswer,
     submitAnswer,
     nextQuestion,
@@ -323,6 +325,28 @@ export default function QuizEngine({ onExit }) {
   // A "Lição de Revisão" não existe no banco de lições — reiniciá-la
   // significa sortear novas questões, não recarregar a mesma lição.
   const handleRestart = isDailyReview ? startDailyReview : restartLesson;
+
+  // Efeitos sonoros: toca uma vez por resposta (o efeito só reage à
+  // TRANSIÇÃO de isAnswered pra true, não fica retocando em cada re-render).
+  useEffect(() => {
+    if (!isAnswered) return;
+    if (isCorrect) playCorrect();
+    else playIncorrect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAnswered]);
+
+  // Efeito sonoro de fim de lição: fanfarra padrão pra qualquer conclusão
+  // vitoriosa (lição regular, revisão diária, Teste de Aceleração, exame
+  // aprovado), e o som especial de promoção quando o exame aprovado destrava
+  // o próximo nível de carreira. Exame reprovado fica em silêncio — não é
+  // uma vitória pra comemorar.
+  useEffect(() => {
+    if (!lessonComplete) return;
+    if (examResult && !examResult.passed) return;
+    if (justPromotedLevelId) playPromotion();
+    else playLessonComplete();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lessonComplete]);
 
   const [confirmedExamLessonId, setConfirmedExamLessonId] = useState(null);
   const isExam = currentLessonType === LESSON_TYPES.EXAM;

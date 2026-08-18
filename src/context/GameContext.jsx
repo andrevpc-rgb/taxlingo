@@ -22,6 +22,7 @@ import {
   HEART_REGEN_HOURS,
   HEART_REFILL_ONE_COST,
   HEART_REFILL_FULL_COST,
+  INITIAL_GEMS,
   getDailyReviewQuestions,
 } from '../data/mockData';
 import { isSupabaseConfigured } from '../lib/supabase';
@@ -131,6 +132,35 @@ function applyDailyStreak(user) {
   }
 
   return { ...user, lastStudyDate: today };
+}
+
+// ---------------------------------------------------------------------------
+// Ranking Semanal — XP acumulado só na semana corrente (segunda a domingo),
+// "resetando" virtualmente a cada nova semana: `weekStart` guarda a
+// segunda-feira da semana em que `weeklyXp` está sendo contado; ao virar a
+// semana, o próximo ganho de XP começa a contagem do zero de novo.
+// ---------------------------------------------------------------------------
+function getWeekStartISO(date = new Date()) {
+  const d = new Date(date);
+  const day = d.getDay(); // 0 = domingo .. 6 = sábado
+  const diffToMonday = day === 0 ? -6 : 1 - day;
+  d.setDate(d.getDate() + diffToMonday);
+  return d.toISOString().slice(0, 10);
+}
+
+// Devolve só o PATCH (não o usuário inteiro) pra poder ser espalhado junto
+// com outras alterações no mesmo objeto de usuário: `{ ...user, ...addXp(user, 10), ... }`.
+// Usado em todo lugar que soma (ou subtrai, no caso de reversão por Game
+// Over) XP — é o único ponto que sabe manter `xp` e `weeklyXp` em sincronia.
+function addXp(user, amount) {
+  if (!amount) return {};
+  const weekStart = getWeekStartISO();
+  const sameWeek = user.weekStart === weekStart;
+  return {
+    xp: user.xp + amount,
+    weeklyXp: Math.max(0, (sameWeek ? user.weeklyXp ?? 0 : 0) + amount),
+    weekStart,
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -345,6 +375,7 @@ function buildSharedGameState() {
     accelerationResult: null, // { passed, skippedCount } | null
     examResult: null, // { passed, scorePct, requiredPct } | null
     isDailyReview: false,
+    justPromotedLevelId: null, // id do próximo nível de carreira, só quando o exame acabou de destravá-lo (som de promoção)
   };
 }
 
@@ -414,6 +445,7 @@ function startLessonState(state, moduleId, lessonId) {
     accelerationResult: null,
     examResult: null,
     isDailyReview: false,
+    justPromotedLevelId: null,
   };
 }
 
@@ -470,7 +502,9 @@ function gameReducerCore(state, action) {
         streak: 0,
         lastStudyDate: null,
         streakFreezes: 0,
-        gems: 0,
+        gems: INITIAL_GEMS,
+        weeklyXp: 0,
+        weekStart: null,
         currentLevelId: CAREER_LEVELS[0]?.id ?? null,
         currentLevelSince: null,
         timeSpentMinutes: 0,
@@ -616,6 +650,7 @@ function gameReducerCore(state, action) {
         pendingAccelerationTest: false,
         accelerationResult: null,
         examResult: null,
+        justPromotedLevelId: null,
       };
     }
 
@@ -658,7 +693,7 @@ function gameReducerCore(state, action) {
         pacciMood: isCorrect ? 'happy' : 'sad',
         user: {
           ...state.user,
-          xp: state.user.xp + xpGain,
+          ...addXp(state.user, xpGain),
           lives: nextLives,
           // Só marca o início da contagem se não houver uma já em andamento
           // (senão, tomar vários erros seguidos ficaria empurrando o
@@ -683,7 +718,7 @@ function gameReducerCore(state, action) {
           ...state,
           gameOver: true,
           sessionXp: 0,
-          user: applyDailyStreak({ ...state.user, xp: state.user.xp - state.sessionXp }),
+          user: applyDailyStreak({ ...state.user, ...addXp(state.user, -state.sessionXp) }),
           perfectLessonStreak: 0,
           accelerationAvailable: false,
           pendingAccelerationTest: false,
@@ -735,9 +770,10 @@ function gameReducerCore(state, action) {
           sessionXp: state.sessionXp + DAILY_REVIEW_XP,
           user: applyDailyStreak({
             ...state.user,
-            xp: state.user.xp + DAILY_REVIEW_XP,
+            ...addXp(state.user, DAILY_REVIEW_XP),
             timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + reviewMinutes,
           }),
+          justPromotedLevelId: null,
         };
       }
 
@@ -792,11 +828,15 @@ function gameReducerCore(state, action) {
           pacciMood: passed ? 'happy' : 'sad',
           sessionXp: state.sessionXp + bonusXp,
           user: passed
-            ? applyDailyStreak({ ...userWithAttempt, xp: userWithAttempt.xp + bonusXp })
+            ? applyDailyStreak({ ...userWithAttempt, ...addXp(userWithAttempt, bonusXp) })
             : userWithAttempt,
           examResult: { passed, scorePct, requiredPct: EXAM_PASS_THRESHOLD },
           perfectLessonStreak: 0,
           accelerationAvailable: false,
+          // Sinaliza pro QuizEngine tocar o som de promoção (em vez do
+          // fanfarrão genérico de lição concluída) quando o exame aprovado
+          // destrava o próximo nível de carreira.
+          justPromotedLevelId: passed ? nextLevelId : null,
         };
       }
 
@@ -833,13 +873,14 @@ function gameReducerCore(state, action) {
           sessionXp: state.sessionXp + bonusXp,
           user: applyDailyStreak({
             ...state.user,
-            xp: state.user.xp + bonusXp,
+            ...addXp(state.user, bonusXp),
             timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + lessonMinutes,
           }),
           perfectLessonStreak: wasPerfect ? state.perfectLessonStreak + 1 : 0,
           accelerationAvailable: false,
           pendingAccelerationTest: false,
           accelerationResult,
+          justPromotedLevelId: null,
         };
       }
 
@@ -869,13 +910,14 @@ function gameReducerCore(state, action) {
         sessionXp: state.sessionXp + bonusXp,
         user: applyDailyStreak({
           ...state.user,
-          xp: state.user.xp + bonusXp,
+          ...addXp(state.user, bonusXp),
           timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + lessonMinutes,
         }),
         perfectLessonStreak: newPerfectStreak,
         accelerationAvailable,
         pendingAccelerationTest: false,
         accelerationResult: null,
+        justPromotedLevelId: null,
       };
     }
 
@@ -952,6 +994,7 @@ function gameReducerCore(state, action) {
         accelerationResult: null,
         examResult: null,
         isDailyReview: false,
+        justPromotedLevelId: null,
       };
     }
 
@@ -1102,6 +1145,8 @@ export function GameProvider({ children }) {
       try {
         await api.updateProfile(state.user.id, {
           xp: state.user.xp,
+          weeklyXp: state.user.weeklyXp,
+          weekStart: state.user.weekStart,
           streak: state.user.streak,
           streakFreezes: state.user.streakFreezes,
           gems: state.user.gems,
@@ -1273,6 +1318,23 @@ export function GameProvider({ children }) {
     return computeLeaderboard(state.users);
   }, [state.users, state.supabaseGlobalLeaderboard]);
 
+  // Ranking Semanal — mesmas listas de base, só ordenadas por `weeklyXp` em
+  // vez de `xp` total (ver addXp/getWeekStartISO). Não precisa "zerar" nada
+  // de verdade: weeklyXp já vem 0 (ou baixo) pra quem não jogou nesta semana.
+  const weeklyCompanyLeaderboard = useMemo(() => {
+    if (isSupabaseConfigured) return computeLeaderboard(state.supabaseCompanyLeaderboard ?? [], 'weeklyXp');
+    if (!state.user) return [];
+    return computeLeaderboard(
+      state.users.filter((u) => u.companyId === state.user.companyId),
+      'weeklyXp'
+    );
+  }, [state.users, state.user?.companyId, state.supabaseCompanyLeaderboard]);
+
+  const weeklyGlobalLeaderboard = useMemo(() => {
+    if (isSupabaseConfigured) return computeLeaderboard(state.supabaseGlobalLeaderboard ?? [], 'weeklyXp');
+    return computeLeaderboard(state.users, 'weeklyXp');
+  }, [state.users, state.supabaseGlobalLeaderboard]);
+
   const activeCompanies = isSupabaseConfigured ? state.supabaseCompanies : companies;
 
   // Acesso ao Painel do Gestor é exclusivo de "admin" e "master".
@@ -1311,6 +1373,8 @@ export function GameProvider({ children }) {
       currentCompany,
       companyLeaderboard,
       globalLeaderboard,
+      weeklyCompanyLeaderboard,
+      weeklyGlobalLeaderboard,
       login,
       register,
       logout,
@@ -1342,6 +1406,8 @@ export function GameProvider({ children }) {
       currentCompany,
       companyLeaderboard,
       globalLeaderboard,
+      weeklyCompanyLeaderboard,
+      weeklyGlobalLeaderboard,
       login,
       register,
       logout,

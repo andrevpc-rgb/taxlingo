@@ -43,7 +43,9 @@ create table if not exists public.users (
   last_heart_lost_at timestamptz, -- início da contagem de recarga (4h) do próximo coração; null = vidas cheias
   streak integer not null default 0,
   streak_freezes integer not null default 0,
-  gems integer not null default 0,
+  gems integer not null default 1000, -- todo usuário novo já começa com saldo pra recarregar vidas na loja
+  weekly_xp integer not null default 0, -- XP da semana corrente (ver week_start) — Ranking Semanal
+  week_start date, -- segunda-feira da semana em que weekly_xp está sendo contado
   last_study_date date,
   current_level_id text,
   current_level_since date,
@@ -54,6 +56,15 @@ create table if not exists public.users (
 
 comment on table public.users is 'Perfil do colaborador. id = auth.users.id. Sem coluna de senha: isso fica em auth.users, gerenciado pelo Supabase Auth.';
 comment on column public.users.role is 'employee = colaborador comum; admin = gestor da própria empresa (Painel do Gestor); master = acesso total (conta do fundador/QA).';
+
+-- "create table if not exists" não adiciona colunas novas a uma tabela que
+-- já existe — estes ALTERs garantem que rodar este arquivo de novo num
+-- projeto que já tinha uma versão anterior do schema também funciona
+-- (idempotente: "add column if not exists" não falha se a coluna já existir).
+alter table public.users add column if not exists last_heart_lost_at timestamptz;
+alter table public.users add column if not exists weekly_xp integer not null default 0;
+alter table public.users add column if not exists week_start date;
+alter table public.users alter column gems set default 1000;
 
 create index if not exists users_company_id_idx on public.users (company_id);
 
@@ -144,7 +155,7 @@ create index if not exists temp_access_tokens_email_idx on public.temp_access_to
 create table if not exists public.subscriptions (
   id uuid primary key default gen_random_uuid(),
   company_id uuid not null references public.companies (id) on delete cascade,
-  plan text not null check (plan in ('starter', 'pro')),
+  plan text not null check (plan in ('individual', 'starter', 'pro')),
   status text not null default 'trialing' check (status in ('trialing', 'active', 'past_due', 'canceled')),
   seats_limit integer not null,
   asaas_customer_id text,
@@ -157,6 +168,15 @@ create table if not exists public.subscriptions (
 );
 
 create index if not exists subscriptions_company_id_idx on public.subscriptions (company_id);
+
+alter table public.subscriptions add column if not exists nitrus_customer_id text;
+alter table public.subscriptions add column if not exists nitrus_subscription_id text;
+
+-- Reaplica o check com 'individual' incluído mesmo em bancos que já tinham
+-- rodado uma versão anterior deste schema.sql (create table if not exists
+-- não altera constraints de uma tabela que já existe).
+alter table public.subscriptions drop constraint if exists subscriptions_plan_check;
+alter table public.subscriptions add constraint subscriptions_plan_check check (plan in ('individual', 'starter', 'pro'));
 
 -- -----------------------------------------------------------------------------
 -- 6b. pending_signups (checkout Nitrus para empresa NOVA — ver
@@ -173,14 +193,17 @@ create table if not exists public.pending_signups (
   company_name text not null,
   admin_name text,
   admin_email text not null,
-  plan text not null check (plan in ('starter', 'pro')),
+  plan text not null check (plan in ('individual', 'starter', 'pro')),
   cpf_cnpj text,
   status text not null default 'pending' check (status in ('pending', 'completed', 'expired')),
   company_id uuid references public.companies (id) on delete set null,
   created_at timestamptz not null default now()
 );
 
-comment on table public.pending_signups is 'Cadastro de empresa aguardando confirmação de pagamento via Nitrus. external_reference é o id que a Nitrus ecoa de volta no webhook.';
+alter table public.pending_signups drop constraint if exists pending_signups_plan_check;
+alter table public.pending_signups add constraint pending_signups_plan_check check (plan in ('individual', 'starter', 'pro'));
+
+comment on table public.pending_signups is 'Cadastro de empresa (ou conta individual) aguardando confirmação de pagamento via Nitrus/Asaas. external_reference é o id ecoado de volta no webhook.';
 
 create or replace function public.set_updated_at()
 returns trigger
@@ -273,13 +296,19 @@ $$;
 -- abaixo). Por isso o "Ranking Geral" não faz um SELECT direto em `users` —
 -- usa esta função SECURITY DEFINER, que só devolve as colunas não sensíveis
 -- necessárias pro pódio/lista (nome, avatar, cargo, empresa, xp).
+-- drop antes do create or replace: mudar as colunas do "returns table" exige
+-- isso (Postgres não deixa alterar o retorno de uma function existente só
+-- com "or replace") — necessário pra quem já tinha rodado uma versão
+-- anterior deste schema.sql, antes de weekly_xp existir.
+drop function if exists public.get_global_leaderboard();
+
 create or replace function public.get_global_leaderboard()
-returns table (id uuid, full_name text, avatar_url text, job_title text, company_id uuid, xp integer)
+returns table (id uuid, full_name text, avatar_url text, job_title text, company_id uuid, xp integer, weekly_xp integer)
 language sql
 security definer set search_path = public
 stable
 as $$
-  select id, full_name, avatar_url, job_title, company_id, xp
+  select id, full_name, avatar_url, job_title, company_id, xp, weekly_xp
   from public.users
   order by xp desc;
 $$;

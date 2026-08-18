@@ -1,7 +1,10 @@
 // src/components/AuthModal.jsx
 import React, { useState } from 'react';
-import { LogIn, UserPlus, AlertCircle, Sparkles, Gift, Mail, Check } from 'lucide-react';
+import { LogIn, UserPlus, AlertCircle, Sparkles, Gift, Mail, Check, User as UserIcon, CreditCard } from 'lucide-react';
 import { useGame } from '../context/GameContext.jsx';
+import { isSupabaseConfigured } from '../lib/supabase';
+import * as api from '../lib/api';
+import { PLANS } from '../data/mockData';
 
 const TEST_ACCOUNTS = [
   { label: 'Andréia · Contabilidade Alfa', email: 'andreia@alfa.com', password: 'demo123' },
@@ -84,6 +87,115 @@ function FreeTrialSection() {
         className="w-full rounded-xl bg-amber-500 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-white disabled:opacity-60"
       >
         {authLoading ? 'Enviando...' : 'Enviar acesso de teste'}
+      </button>
+    </form>
+  );
+}
+
+// Plano Individual: pra quem não tem (nem precisa de) uma empresa — não
+// passa pelo fluxo normal de cadastro (que exige código de empresa). O
+// checkout roda via Nitrus (create-nitrus-checkout), que já sabe lidar com
+// "sem companyId nem companyName" (ver aviso de integração não verificada
+// nos comentários daquela function); a confirmação de pagamento
+// (nitrus-webhook) cria a conta sozinha e manda a senha por e-mail — não
+// tem cadastro nenhum pra fazer aqui, só o pagamento.
+function IndividualPlanSection() {
+  const [expanded, setExpanded] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [cpfCnpj, setCpfCnpj] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const plan = PLANS.individual;
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setError(null);
+    if (!isSupabaseConfigured) {
+      setError('Checkout precisa do Supabase configurado (ver .env.local).');
+      return;
+    }
+    setLoading(true);
+    try {
+      const { checkoutUrl } = await api.createNitrusCheckoutSession({
+        adminName: name.trim(),
+        adminEmail: email.trim(),
+        plan: 'individual',
+        cpfCnpj: cpfCnpj.trim(),
+      });
+      window.location.href = checkoutUrl;
+    } catch (err) {
+      setError(err.message || 'Não foi possível iniciar o checkout.');
+      setLoading(false);
+    }
+  };
+
+  if (!expanded) {
+    return (
+      <button
+        type="button"
+        onClick={() => setExpanded(true)}
+        className="flex w-full items-center justify-between gap-2 rounded-2xl border-2 border-dashed border-sky-300 bg-sky-50 px-4 py-3 text-xs font-extrabold uppercase tracking-wide text-sky-600 transition-colors hover:border-sky-400"
+      >
+        <span className="flex items-center gap-2">
+          <CreditCard className="h-4 w-4" />
+          Plano Individual
+        </span>
+        <span className="normal-case tracking-normal text-sky-500">{plan.price}</span>
+      </button>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-2 rounded-2xl border-2 border-sky-200 bg-sky-50 p-3">
+      <p className="flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wide text-sky-600">
+        <CreditCard className="h-4 w-4" />
+        Plano Individual — {plan.price}
+      </p>
+      <p className="text-[11px] text-sky-600">{plan.description} Sem código de empresa.</p>
+      <div className="relative">
+        <UserIcon className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-sky-400" />
+        <input
+          type="text"
+          required
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Seu nome"
+          className="w-full rounded-xl border-2 border-sky-200 bg-white py-2 pl-9 pr-3 text-xs font-bold text-slate-700 outline-none focus:border-sky-400"
+        />
+      </div>
+      <div className="relative">
+        <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-sky-400" />
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="voce@email.com"
+          className="w-full rounded-xl border-2 border-sky-200 bg-white py-2 pl-9 pr-3 text-xs font-bold text-slate-700 outline-none focus:border-sky-400"
+        />
+      </div>
+      <input
+        type="text"
+        required
+        value={cpfCnpj}
+        onChange={(e) => setCpfCnpj(e.target.value)}
+        placeholder="CPF (só números)"
+        className="w-full rounded-xl border-2 border-sky-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-sky-400"
+      />
+      {error && (
+        <p className="flex items-center gap-1.5 text-[11px] font-bold text-rose-600">
+          <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+          {error}
+        </p>
+      )}
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full rounded-xl bg-sky-500 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-white disabled:opacity-60"
+      >
+        {loading ? 'Abrindo checkout...' : 'Assinar e ir para o pagamento'}
       </button>
     </form>
   );
@@ -175,6 +287,7 @@ function LoginForm() {
       </div>
 
       <FreeTrialSection />
+      <IndividualPlanSection />
     </div>
   );
 }

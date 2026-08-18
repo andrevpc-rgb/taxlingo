@@ -59,7 +59,15 @@ const FAILED_EVENTS = new Set([
   'PAYMENT_CANCELED',
 ]);
 
-const PLAN_SEATS = { starter: 10, pro: 50 };
+const PLAN_SEATS = { individual: 1, starter: 10, pro: 50 };
+
+function generateTempPassword() {
+  // Fácil de digitar/copiar do e-mail, mas com entropia suficiente.
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+  let out = '';
+  for (let i = 0; i < 10; i++) out += alphabet[Math.floor(Math.random() * alphabet.length)];
+  return out;
+}
 
 // Faixa Unicode das marcas de acento combinantes (usada por generateCompanyCode
 // depois de normalize('NFD')) — escrita como \u para não depender de como o
@@ -95,6 +103,39 @@ async function sendActivationEmail({ to, companyName, companyCode, plan }) {
       `,
     }),
   }).catch((err) => console.error('sendActivationEmail failed (non-fatal):', err));
+}
+
+// E-mail do Plano Individual: credenciais de login prontas (a conta já é
+// criada aqui, ao contrário do Starter/Pro, onde só o company_code é
+// mandado e a pessoa se cadastra normalmente depois).
+async function sendIndividualWelcomeEmail({ to, tempPassword }) {
+  const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
+  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <onboarding@resend.dev>';
+  if (!RESEND_API_KEY || !to) return;
+
+  const appUrl = Deno.env.get('APP_URL') || 'https://taxlingo.vercel.app';
+
+  await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: RESEND_FROM_EMAIL,
+      to: [to],
+      subject: 'Sua conta TaxLingo está pronta! 🎉',
+      html: `
+        <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
+          <h2 style="color:#059669;">Pagamento confirmado — bem-vindo(a) ao TaxLingo!</h2>
+          <p>Sua conta individual já está ativa. Seus dados de acesso:</p>
+          <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+            <tr><td style="padding:8px; background:#f0fdf4; border-radius:8px 8px 0 0;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${to}</td></tr>
+            <tr><td style="padding:8px; background:#f0fdf4; border-radius:0 0 8px 8px;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
+          </table>
+          <p><a href="${appUrl}" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
+          <p style="color:#94a3b8; font-size:12px;">Recomendamos trocar essa senha assim que entrar (Meu Perfil → Alterar senha).</p>
+        </div>
+      `,
+    }),
+  }).catch((err) => console.error('sendIndividualWelcomeEmail failed (non-fatal):', err));
 }
 
 // Gera um código curto e legível a partir do nome da empresa (ex.: "Grupo
@@ -166,6 +207,11 @@ async function activateExistingCompany(supabase, companyId, { subscriptionId, pl
 }
 
 async function activatePendingSignup(supabase, pending, { subscriptionId, periodEnd }) {
+  // Toda ativação (Individual ou Corporativa) começa criando uma empresa —
+  // é o que satisfaz a FK obrigatória de `users.company_id`/`subscriptions.company_id`.
+  // A diferença é o que acontece DEPOIS: Corporativo manda o company_code
+  // pra alguém se cadastrar; Individual já cria a própria conta de usuário
+  // (a empresa fica invisível, é só um detalhe de implementação).
   const companyCode = await generateCompanyCode(supabase, pending.company_name);
 
   const { data: company, error: companyError } = await supabase
@@ -188,6 +234,30 @@ async function activatePendingSignup(supabase, pending, { subscriptionId, period
     .from('pending_signups')
     .update({ status: 'completed', company_id: company.id })
     .eq('id', pending.id);
+
+  if (pending.plan === 'individual') {
+    const tempPassword = generateTempPassword();
+    const { error: createUserError } = await supabase.auth.admin.createUser({
+      email: pending.admin_email,
+      password: tempPassword,
+      email_confirm: true,
+      user_metadata: {
+        full_name: pending.admin_name || pending.admin_email.split('@')[0],
+        company_id: company.id,
+        avatar_url: '🙂',
+      },
+    });
+    // Se o e-mail já tiver conta (ex.: reenvio de webhook depois de já ter
+    // criado da primeira vez), não é um erro fatal — só não manda senha
+    // nova (a pessoa já tem acesso).
+    if (createUserError && !createUserError.message?.includes('already been registered')) {
+      throw createUserError;
+    }
+    if (!createUserError) {
+      await sendIndividualWelcomeEmail({ to: pending.admin_email, tempPassword });
+    }
+    return;
+  }
 
   await sendActivationEmail({
     to: pending.admin_email,

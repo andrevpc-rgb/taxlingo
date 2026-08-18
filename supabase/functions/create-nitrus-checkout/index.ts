@@ -33,8 +33,9 @@ const CORS_HEADERS = {
 };
 
 const PLANS = {
-  starter: { label: 'Starter', seatsLimit: 10, value: 297.0, description: 'TaxLingo — Plano Starter (até 10 colaboradores)' },
-  pro: { label: 'Pro', seatsLimit: 50, value: 897.0, description: 'TaxLingo — Plano Pro (até 50 colaboradores)' },
+  individual: { label: 'Individual', kind: 'individual', seatsLimit: 1, value: 39.9, description: 'TaxLingo — Plano Individual' },
+  starter: { label: 'Starter', kind: 'corporate', seatsLimit: 10, value: 297.0, description: 'TaxLingo — Plano Starter (até 10 colaboradores)' },
+  pro: { label: 'Pro', kind: 'corporate', seatsLimit: 50, value: 897.0, description: 'TaxLingo — Plano Pro (até 50 colaboradores)' },
 };
 
 function jsonResponse(body, status = 200) {
@@ -79,13 +80,16 @@ Deno.serve(async (req) => {
   const { companyId, companyName, adminName, adminEmail, plan, cpfCnpj } = payload;
   const planConfig = PLANS[plan];
   if (!planConfig) {
-    return jsonResponse({ error: 'Informe um plano válido ("starter" ou "pro").' }, 400);
+    return jsonResponse({ error: 'Informe um plano válido ("individual", "starter" ou "pro").' }, 400);
   }
-  if (!companyId && !companyName) {
+  // Plano Individual não precisa de empresa nenhuma — cria só uma conta de
+  // usuário (ver nitrus-webhook). Starter/Pro precisam de companyId
+  // (empresa já cadastrada) ou companyName (empresa nova, self-serve).
+  if (planConfig.kind === 'corporate' && !companyId && !companyName) {
     return jsonResponse({ error: 'Informe companyId (empresa existente) ou companyName (empresa nova).' }, 400);
   }
   if (!adminEmail) {
-    return jsonResponse({ error: 'Informe o e-mail do responsável pela cobrança.' }, 400);
+    return jsonResponse({ error: 'Informe o e-mail do comprador.' }, 400);
   }
 
   const supabase = createClient(
@@ -110,13 +114,17 @@ Deno.serve(async (req) => {
       customerName = company.name;
       externalReference = `company:${company.id}`;
     } else {
-      // Empresa nova: guarda os dados em pending_signups até o webhook
-      // confirmar o pagamento — é só nesse momento que a empresa passa a
-      // existir de fato em `companies`.
+      // Empresa nova (Starter/Pro) OU plano Individual (sem empresa
+      // nenhuma, só conta pessoal): guarda os dados em pending_signups até
+      // o webhook confirmar o pagamento — é só nesse momento que a
+      // empresa/conta passa a existir de fato. `pending_signups.company_name`
+      // é obrigatória na tabela; pro Individual usamos um rótulo interno
+      // (nunca aparece pro usuário, é só pra satisfazer a coluna).
       externalReference = `pending:${crypto.randomUUID()}`;
+      customerName = companyName ?? adminName ?? adminEmail;
       const { error: pendingError } = await supabase.from('pending_signups').insert({
         external_reference: externalReference,
-        company_name: companyName,
+        company_name: companyName ?? `Conta Individual — ${adminName ?? adminEmail}`,
         admin_name: adminName ?? null,
         admin_email: adminEmail,
         plan,
