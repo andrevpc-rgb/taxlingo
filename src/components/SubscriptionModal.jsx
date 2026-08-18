@@ -38,9 +38,15 @@ const COLOR_CLASSES = {
   amber: { border: 'border-amber-200', bg: 'bg-amber-50', text: 'text-amber-600', button: 'bg-amber-500 shadow-[0_4px_0_0_#b45309]' },
 };
 
+const PAYMENT_PROVIDERS = [
+  { id: 'asaas', label: 'Asaas' },
+  { id: 'nitrus', label: 'Nitrus' },
+];
+
 export default function SubscriptionModal({ onClose }) {
-  const { currentCompany, isManager } = useGame();
+  const { user, currentCompany, isManager } = useGame();
   const [cpfCnpj, setCpfCnpj] = useState('');
+  const [provider, setProvider] = useState('asaas');
   const [loadingPlan, setLoadingPlan] = useState(null);
   const [error, setError] = useState(null);
   const [subscription, setSubscription] = useState(null);
@@ -72,11 +78,20 @@ export default function SubscriptionModal({ onClose }) {
     }
     setLoadingPlan(planId);
     try {
-      const { checkoutUrl } = await api.createCheckoutSession({
-        companyId: currentCompany.id,
-        plan: planId,
-        cpfCnpj: cpfCnpj.trim(),
-      });
+      const { checkoutUrl } =
+        provider === 'nitrus'
+          ? await api.createNitrusCheckoutSession({
+              companyId: currentCompany.id,
+              adminEmail: user.email,
+              adminName: user.name,
+              plan: planId,
+              cpfCnpj: cpfCnpj.trim(),
+            })
+          : await api.createCheckoutSession({
+              companyId: currentCompany.id,
+              plan: planId,
+              cpfCnpj: cpfCnpj.trim(),
+            });
       window.location.href = checkoutUrl;
     } catch (err) {
       setError(err.message || 'Não foi possível iniciar o checkout.');
@@ -107,7 +122,7 @@ export default function SubscriptionModal({ onClose }) {
         {!isSupabaseConfigured && (
           <div className="mb-4 flex items-center gap-2 rounded-2xl border-2 border-amber-200 bg-amber-50 px-4 py-3 text-xs font-bold text-amber-700">
             <AlertCircle className="h-4 w-4 shrink-0" />
-            Checkout precisa do Supabase + Asaas configurados (ver .env.local e supabase/functions).
+            Checkout precisa do Supabase + Asaas/Nitrus configurados (ver .env.local e supabase/functions).
           </div>
         )}
 
@@ -117,6 +132,28 @@ export default function SubscriptionModal({ onClose }) {
             Plano {subscription.plan} ativo — até {subscription.seatsLimit} colaboradores.
           </div>
         )}
+
+        <div className="mb-4">
+          <label className="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-400">
+            Forma de cobrança
+          </label>
+          <div className="flex gap-2">
+            {PAYMENT_PROVIDERS.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                onClick={() => setProvider(p.id)}
+                className={`flex-1 rounded-2xl border-2 px-4 py-2 text-sm font-extrabold transition-colors ${
+                  provider === p.id
+                    ? 'border-emerald-400 bg-emerald-50 text-emerald-700'
+                    : 'border-slate-200 text-slate-500 hover:border-slate-300'
+                }`}
+              >
+                {p.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
         <div className="mb-4">
           <label htmlFor="checkout-cpf-cnpj" className="mb-1 block text-xs font-bold uppercase tracking-wide text-slate-400">
@@ -172,8 +209,9 @@ export default function SubscriptionModal({ onClose }) {
         )}
 
         <p className="mt-4 text-[11px] text-slate-400">
-          Pagamento processado pelo Asaas (PIX ou cartão recorrente). Depois da confirmação, o código da
-          empresa é enviado por e-mail e o acesso dos colaboradores é liberado automaticamente.
+          Pagamento processado pelo {provider === 'nitrus' ? 'Nitrus' : 'Asaas'} (PIX ou cartão recorrente).
+          Depois da confirmação, o código da empresa é enviado por e-mail e o acesso dos colaboradores é
+          liberado automaticamente.
         </p>
       </div>
     </div>

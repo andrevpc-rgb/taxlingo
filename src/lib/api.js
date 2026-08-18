@@ -31,6 +31,7 @@ export function mapUserRow(row) {
     streak: row.streak,
     streakFreezes: row.streak_freezes,
     gems: row.gems,
+    lastHeartLostAt: row.last_heart_lost_at,
     lastStudyDate: row.last_study_date,
     currentLevelId: row.current_level_id,
     currentLevelSince: row.current_level_since,
@@ -53,6 +54,7 @@ function toUserPatch(patch) {
     streak: 'streak',
     streakFreezes: 'streak_freezes',
     gems: 'gems',
+    lastHeartLostAt: 'last_heart_lost_at',
     lastStudyDate: 'last_study_date',
     currentLevelId: 'current_level_id',
     currentLevelSince: 'current_level_since',
@@ -353,6 +355,22 @@ export async function fetchSubscription(companyId) {
 export async function createCheckoutSession({ companyId, plan, cpfCnpj }) {
   const { data, error } = await supabase.functions.invoke('create-asaas-checkout', {
     body: { companyId, plan, cpfCnpj },
+  });
+  if (error) {
+    const message = data?.error || error.message || 'Não foi possível iniciar o checkout.';
+    throw new Error(message);
+  }
+  return data; // { checkoutUrl }
+}
+
+// Mesma ideia, via Nitrus (ver supabase/functions/create-nitrus-checkout —
+// integração não verificada contra a API real, ver aviso no topo daquele
+// arquivo). Aceita tanto uma empresa já cadastrada (`companyId`) quanto uma
+// empresa nova (`companyName`/`adminName`), caso em que a empresa só passa
+// a existir de fato quando o nitrus-webhook confirmar o pagamento.
+export async function createNitrusCheckoutSession({ companyId, companyName, adminName, adminEmail, plan, cpfCnpj }) {
+  const { data, error } = await supabase.functions.invoke('create-nitrus-checkout', {
+    body: { companyId, companyName, adminName, adminEmail, plan, cpfCnpj },
   });
   if (error) {
     const message = data?.error || error.message || 'Não foi possível iniciar o checkout.';

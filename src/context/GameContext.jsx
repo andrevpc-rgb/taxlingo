@@ -19,6 +19,9 @@ import {
   STREAK_FREEZE_COST,
   MAX_STREAK_FREEZES,
   DAILY_REVIEW_XP,
+  HEART_REGEN_HOURS,
+  HEART_REFILL_ONE_COST,
+  HEART_REFILL_FULL_COST,
   getDailyReviewQuestions,
 } from '../data/mockData';
 import { isSupabaseConfigured } from '../lib/supabase';
@@ -128,6 +131,50 @@ function applyDailyStreak(user) {
   }
 
   return { ...user, lastStudyDate: today };
+}
+
+// ---------------------------------------------------------------------------
+// Recarga de vidas por tempo. Cada coração perdido leva HEART_REGEN_HOURS
+// para recarregar sozinho — `lastHeartLostAt` marca o início da contagem do
+// PRÓXIMO coração a regenerar (não é resetado a cada nova vida perdida
+// enquanto já houver uma contagem em andamento, senão o usuário nunca
+// recuperaria vida tomando erros seguidos). Funciona com o navegador
+// fechado porque o cálculo é sempre feito a partir do timestamp salvo, não
+// de um timer rodando em memória.
+// ---------------------------------------------------------------------------
+const HEART_REGEN_MS = HEART_REGEN_HOURS * 60 * 60 * 1000;
+
+function applyHeartRegen(user) {
+  if (!user || user.lives >= user.maxLives || !user.lastHeartLostAt) return user;
+
+  const lostAt = new Date(user.lastHeartLostAt).getTime();
+  const elapsed = Date.now() - lostAt;
+  const regenerated = Math.floor(elapsed / HEART_REGEN_MS);
+  if (regenerated <= 0) return user;
+
+  const newLives = Math.min(user.maxLives, user.lives + regenerated);
+  const isFull = newLives >= user.maxLives;
+  return {
+    ...user,
+    lives: newLives,
+    lastHeartLostAt: isFull ? null : new Date(lostAt + regenerated * HEART_REGEN_MS).toISOString(),
+  };
+}
+
+// Pura e sem efeitos colaterais — usada pela UI (Header/QuizEngine) pra
+// mostrar "faltam Xh Ymin pro próximo coração" sem precisar ficar
+// dispatchando ações a cada tick; o componente que exibe o contador é quem
+// decide de quanto em quanto tempo re-renderizar.
+export function getHeartRegenInfo(user) {
+  if (!user) return { missing: 0, msUntilNext: 0 };
+  const missing = Math.max(0, user.maxLives - user.lives);
+  // Sem `lastHeartLostAt` não há relógio rodando pra essa vida faltante
+  // (ex.: dado de demonstração antigo) — não dá pra mostrar uma contagem
+  // regressiva sem um ponto de partida real.
+  if (missing <= 0 || !user.lastHeartLostAt) return { missing, msUntilNext: null };
+  const elapsed = Date.now() - new Date(user.lastHeartLostAt).getTime();
+  const msUntilNext = Math.max(0, HEART_REGEN_MS - elapsed);
+  return { missing, msUntilNext };
 }
 
 // ---------------------------------------------------------------------------
@@ -281,7 +328,7 @@ function buildSharedGameState() {
     lessonId: null,
     currentLessonType: null, // 'regular' | 'exam' | 'review'
     questions: [],
-    questionIndex: 0,
+    queue: [], // fila da sessão atual — erros voltam pro final até acertar tudo
     draftAnswer: null,
     isAnswered: false,
     isCorrect: null,
@@ -343,15 +390,17 @@ function buildInitialState() {
 }
 
 function startLessonState(state, moduleId, lessonId) {
+  const user = applyHeartRegen(state.user);
   const lesson = findLesson(state.modules, moduleId, lessonId);
   const questions = questionBank[moduleId]?.[lessonId] ?? [];
   return {
     ...state,
+    user,
     moduleId,
     lessonId,
     currentLessonType: lesson?.type ?? LESSON_TYPES.REGULAR,
     questions,
-    questionIndex: 0,
+    queue: [...questions],
     draftAnswer: null,
     isAnswered: false,
     isCorrect: null,
@@ -360,7 +409,7 @@ function startLessonState(state, moduleId, lessonId) {
     wrongCount: 0,
     combo: 0,
     lessonComplete: false,
-    gameOver: state.user.lives <= 0,
+    gameOver: user.lives <= 0,
     pacciMood: lesson?.type === LESSON_TYPES.EXAM ? 'hint' : 'neutral',
     accelerationResult: null,
     examResult: null,
@@ -417,6 +466,7 @@ function gameReducerCore(state, action) {
         level: 1,
         lives: 5,
         maxLives: 5,
+        lastHeartLostAt: null,
         streak: 0,
         lastStudyDate: null,
         streakFreezes: 0,
@@ -542,13 +592,16 @@ function gameReducerCore(state, action) {
 
     case 'START_DAILY_REVIEW': {
       if (!state.user) return state;
+      const user = applyHeartRegen(state.user);
+      const reviewQuestions = getDailyReviewQuestions();
       return {
         ...state,
+        user,
         moduleId: MODULE_IDS.REFORMA_TRIBUTARIA,
         lessonId: DAILY_REVIEW_LESSON_ID,
         currentLessonType: 'review',
-        questions: getDailyReviewQuestions(),
-        questionIndex: 0,
+        questions: reviewQuestions,
+        queue: [...reviewQuestions],
         draftAnswer: null,
         isAnswered: false,
         isCorrect: null,
@@ -557,7 +610,7 @@ function gameReducerCore(state, action) {
         wrongCount: 0,
         combo: 0,
         lessonComplete: false,
-        gameOver: state.user.lives <= 0,
+        gameOver: user.lives <= 0,
         pacciMood: 'neutral',
         isDailyReview: true,
         pendingAccelerationTest: false,
@@ -578,7 +631,7 @@ function gameReducerCore(state, action) {
 
     case 'CHECK_ANSWER': {
       if (!state.user || state.isAnswered || state.gameOver) return state;
-      const question = state.questions[state.questionIndex];
+      const question = state.queue[0];
       if (!question) return state;
 
       const isCorrect = checkAnswer(question, state.draftAnswer);
@@ -587,7 +640,13 @@ function gameReducerCore(state, action) {
       const livesAreAtStake = state.currentLessonType !== LESSON_TYPES.EXAM;
       const nextLives =
         isCorrect || !livesAreAtStake ? state.user.lives : Math.max(0, state.user.lives - 1);
+      const lostAHeart = nextLives < state.user.lives;
 
+      // Repare que `gameOver` NÃO é setado aqui mesmo que as vidas zerem: o
+      // usuário ainda precisa ver o feedback (resposta certa, explicação,
+      // dica do Pacci) da pergunta fatal antes de cair na tela de "sem
+      // vidas" — isso só acontece quando ele toca em "Continuar" e o
+      // NEXT_QUESTION detecta `lives <= 0`.
       return {
         ...state,
         isAnswered: true,
@@ -597,27 +656,70 @@ function gameReducerCore(state, action) {
         wrongCount: state.wrongCount + (isCorrect ? 0 : 1),
         combo: isCorrect ? state.combo + 1 : 0,
         pacciMood: isCorrect ? 'happy' : 'sad',
-        gameOver: livesAreAtStake && nextLives === 0,
-        user: { ...state.user, xp: state.user.xp + xpGain, lives: nextLives },
+        user: {
+          ...state.user,
+          xp: state.user.xp + xpGain,
+          lives: nextLives,
+          // Só marca o início da contagem se não houver uma já em andamento
+          // (senão, tomar vários erros seguidos ficaria empurrando o
+          // relógio pra sempre e o coração nunca recarregaria).
+          lastHeartLostAt: lostAHeart && !state.user.lastHeartLostAt ? new Date().toISOString() : state.user.lastHeartLostAt,
+        },
       };
     }
 
     case 'NEXT_QUESTION': {
-      if (!state.user || state.gameOver) return state;
-      const isLastQuestion = state.questionIndex >= state.questions.length - 1;
+      if (!state.user) return state;
+      if (state.gameOver) return state;
 
-      if (!isLastQuestion) {
+      // Vidas zeradas: a lição termina imediatamente ao avançar — o
+      // usuário já viu o feedback (resposta certa, explicação, dica) da
+      // pergunta fatal na tela anterior; aqui só transiciona pra "sem
+      // vidas". Nenhum progresso na trilha é concedido, e o XP ganho
+      // nesta tentativa (creditado pergunta a pergunta em CHECK_ANSWER) é
+      // devolvido, já que a lição não foi concluída.
+      if (state.user.lives <= 0) {
         return {
           ...state,
-          questionIndex: state.questionIndex + 1,
-          draftAnswer: null,
-          isAnswered: false,
-          isCorrect: null,
-          pacciMood: state.currentLessonType === LESSON_TYPES.EXAM ? 'hint' : 'neutral',
+          gameOver: true,
+          sessionXp: 0,
+          user: applyDailyStreak({ ...state.user, xp: state.user.xp - state.sessionXp }),
+          perfectLessonStreak: 0,
+          accelerationAvailable: false,
+          pendingAccelerationTest: false,
+          accelerationResult: null,
         };
       }
 
-      const scorePct = state.questions.length > 0 ? state.correctCount / state.questions.length : 0;
+      const isExam = state.currentLessonType === LESSON_TYPES.EXAM;
+      const justAnswered = state.queue[0];
+      // Exame nunca reencaminha (cada questão vale só a resposta de
+      // primeira tentativa, pro cálculo de aproveitamento continuar
+      // fazendo sentido); lição regular e revisão diária reencaminham
+      // toda resposta errada pro final da fila até acertar tudo.
+      const newQueue =
+        isExam || state.isCorrect ? state.queue.slice(1) : [...state.queue.slice(1), justAnswered];
+
+      if (newQueue.length > 0) {
+        return {
+          ...state,
+          queue: newQueue,
+          draftAnswer: null,
+          isAnswered: false,
+          isCorrect: null,
+          pacciMood: isExam ? 'hint' : 'neutral',
+        };
+      }
+
+      // Fila vazia: terminou (exame respondido por completo, ou lição/
+      // revisão com todas as pendências finalmente acertadas) e o usuário
+      // ainda tem vidas — só falta decidir a tela de resultado.
+      // `scorePct` usa respostas certas sobre o TOTAL de respostas dadas
+      // (incluindo reenvios) — pra exame, sem reenvio, isso é idêntico ao
+      // aproveitamento tradicional; pra Teste de Aceleração, mede o quão
+      // "limpa" foi a tentativa mesmo com a fila de erros.
+      const totalAnswers = state.correctCount + state.wrongCount;
+      const scorePct = totalAnswers > 0 ? state.correctCount / totalAnswers : 0;
       const wasPerfect = state.wrongCount === 0;
 
       // --- Lição de Manutenção/Revisão (modo Lenda) ---------------------
@@ -640,7 +742,7 @@ function gameReducerCore(state, action) {
       }
 
       // --- Exame de Transição de Nível -----------------------------------
-      if (state.currentLessonType === LESSON_TYPES.EXAM) {
+      if (isExam) {
         const passed = scorePct >= EXAM_PASS_THRESHOLD;
         let nextModules = updateLessonInModules(state.modules, state.moduleId, state.lessonId, {
           completed: passed,
@@ -700,13 +802,16 @@ function gameReducerCore(state, action) {
 
       // --- Lição regular (ou lição usada como Teste de Aceleração) -------
       const lesson = findLesson(state.modules, state.moduleId, state.lessonId);
-      const bonusXp = lesson?.xpReward ?? 0;
-      let nextModules = updateLessonInModules(state.modules, state.moduleId, state.lessonId, {
-        completed: true,
-      });
-      let accelerationResult = null;
+      const lessonMinutes = estimateMinutesSpent(state.questions.length);
 
+      // Teste de Aceleração: mecânica opcional à parte, com sua própria
+      // regra de aprovação por % de aproveitamento.
       if (state.pendingAccelerationTest) {
+        const bonusXp = lesson?.xpReward ?? 0;
+        let nextModules = updateLessonInModules(state.modules, state.moduleId, state.lessonId, {
+          completed: true,
+        });
+        let accelerationResult;
         const passed = scorePct >= EXAM_PASS_THRESHOLD;
         if (passed) {
           const skipped = skipAheadLessons(nextModules, state.moduleId, state.lessonId, ACCELERATION_SKIP_COUNT);
@@ -716,17 +821,42 @@ function gameReducerCore(state, action) {
           nextModules = unlockNextLesson(nextModules, state.moduleId, state.lessonId);
           accelerationResult = { passed: false, skippedCount: 0 };
         }
-      } else {
-        nextModules = unlockNextLesson(nextModules, state.moduleId, state.lessonId);
+
+        return {
+          ...state,
+          modules: nextModules,
+          lessonComplete: true,
+          draftAnswer: null,
+          isAnswered: false,
+          isCorrect: null,
+          pacciMood: 'happy',
+          sessionXp: state.sessionXp + bonusXp,
+          user: applyDailyStreak({
+            ...state.user,
+            xp: state.user.xp + bonusXp,
+            timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + lessonMinutes,
+          }),
+          perfectLessonStreak: wasPerfect ? state.perfectLessonStreak + 1 : 0,
+          accelerationAvailable: false,
+          pendingAccelerationTest: false,
+          accelerationResult,
+        };
       }
 
+      // Chegar aqui com a fila vazia e vidas de sobra já significa
+      // aprovado — não existe mais um estado intermediário de "reprovado
+      // mas ainda vivo": ou o usuário ficou sem corações no meio do
+      // caminho (Game Over, tratado no topo deste case) ou zerou a fila
+      // de pendências e passa, exatamente como no Duolingo.
+      const bonusXp = lesson?.xpReward ?? 0;
+      const nextModules = unlockNextLesson(
+        updateLessonInModules(state.modules, state.moduleId, state.lessonId, { completed: true }),
+        state.moduleId,
+        state.lessonId
+      );
       const newPerfectStreak = wasPerfect ? state.perfectLessonStreak + 1 : 0;
       const nextLessonAvailable = Boolean(getNextLesson(nextModules, state.moduleId, state.lessonId));
-      const accelerationAvailable =
-        !state.pendingAccelerationTest &&
-        newPerfectStreak >= PERFECT_LESSONS_FOR_ACCELERATION &&
-        nextLessonAvailable;
-      const lessonMinutes = estimateMinutesSpent(state.questions.length);
+      const accelerationAvailable = newPerfectStreak >= PERFECT_LESSONS_FOR_ACCELERATION && nextLessonAvailable;
 
       return {
         ...state,
@@ -745,7 +875,7 @@ function gameReducerCore(state, action) {
         perfectLessonStreak: newPerfectStreak,
         accelerationAvailable,
         pendingAccelerationTest: false,
-        accelerationResult,
+        accelerationResult: null,
       };
     }
 
@@ -754,12 +884,40 @@ function gameReducerCore(state, action) {
       return { ...startLessonState(state, state.moduleId, state.lessonId), pendingAccelerationTest: false };
     }
 
-    case 'REFILL_LIVES': {
+    // Recarga instantânea e grátis foi removida de propósito — vidas agora só
+    // voltam com o tempo (HEART_REGEN_HOURS por coração) ou gastando gemas.
+    case 'BUY_HEART_REFILL': {
       if (!state.user) return state;
+      const missing = state.user.maxLives - state.user.lives;
+      if (missing <= 0) return state;
+      const amount = action.payload; // 'one' | 'full'
+      const cost = amount === 'full' ? HEART_REFILL_FULL_COST : HEART_REFILL_ONE_COST;
+      if (state.user.gems < cost) return state;
+      const newLives = amount === 'full' ? state.user.maxLives : state.user.lives + 1;
+      const isFull = newLives >= state.user.maxLives;
       return {
         ...state,
-        gameOver: false,
-        user: { ...state.user, lives: state.user.maxLives },
+        gameOver: newLives > 0 ? false : state.gameOver,
+        user: {
+          ...state.user,
+          gems: state.user.gems - cost,
+          lives: newLives,
+          lastHeartLostAt: isFull ? null : state.user.lastHeartLostAt,
+        },
+      };
+    }
+
+    // Recomputa vidas regeneradas pelo tempo — chamada tanto por um
+    // intervalo periódico no Provider (mantém Header/tela de game over
+    // atualizados mesmo sem o usuário interagir) quanto sob demanda.
+    case 'APPLY_HEART_REGEN': {
+      if (!state.user) return state;
+      const regenUser = applyHeartRegen(state.user);
+      if (regenUser === state.user) return state;
+      return {
+        ...state,
+        gameOver: regenUser.lives > 0 ? false : state.gameOver,
+        user: regenUser,
       };
     }
 
@@ -784,7 +942,7 @@ function gameReducerCore(state, action) {
         lessonId: null,
         currentLessonType: null,
         questions: [],
-        questionIndex: 0,
+        queue: [],
         draftAnswer: null,
         isAnswered: false,
         isCorrect: null,
@@ -836,6 +994,31 @@ export function GameProvider({ children }) {
     if (isSupabaseConfigured) return;
     saveSessionUserId(state.isAuthenticated ? state.user?.id ?? null : null);
   }, [state.isAuthenticated, state.user?.id]);
+
+  // Recomputa a recarga de vidas por tempo periodicamente — cobre o caso do
+  // usuário só de olho no contador na tela (Header/tela de game over) sem
+  // interagir com nada, pra não parecer travado até a próxima ação.
+  useEffect(() => {
+    const interval = setInterval(() => dispatch({ type: 'APPLY_HEART_REGEN' }), 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Modo Supabase: vidas/timestamp de recarga precisam ser persistidos
+  // assim que mudam (não só ao concluir a lição) — senão fechar o navegador
+  // no meio de uma lição, depois de perder um coração, perderia o
+  // `last_heart_lost_at` e a contagem de 4h reiniciaria do zero errado.
+  const lastPersistedHeartsRef = useRef(null);
+  useEffect(() => {
+    if (!isSupabaseConfigured || !state.user) return;
+    const key = `${state.user.id}:${state.user.lives}:${state.user.lastHeartLostAt}`;
+    if (lastPersistedHeartsRef.current === key) return;
+    lastPersistedHeartsRef.current = key;
+    api
+      .updateProfile(state.user.id, { lives: state.user.lives, lastHeartLostAt: state.user.lastHeartLostAt })
+      .catch(() => {
+        // Best-effort — mesma lógica do efeito de conclusão de lição abaixo.
+      });
+  }, [state.user?.id, state.user?.lives, state.user?.lastHeartLostAt]);
 
   // Modo Supabase: ao montar, checa se já existe uma sessão válida (o
   // Supabase Auth já persiste isso sozinho em localStorage) e mantém em
@@ -922,6 +1105,8 @@ export function GameProvider({ children }) {
           streak: state.user.streak,
           streakFreezes: state.user.streakFreezes,
           gems: state.user.gems,
+          lives: state.user.lives,
+          lastHeartLostAt: state.user.lastHeartLostAt,
           lastStudyDate: state.user.lastStudyDate,
           currentLevelId: state.user.currentLevelId,
           currentLevelSince: state.user.currentLevelSince,
@@ -1055,12 +1240,19 @@ export function GameProvider({ children }) {
   const submitAnswer = useCallback(() => dispatch({ type: 'CHECK_ANSWER' }), []);
   const nextQuestion = useCallback(() => dispatch({ type: 'NEXT_QUESTION' }), []);
   const restartLesson = useCallback(() => dispatch({ type: 'RESTART_LESSON' }), []);
-  const refillLives = useCallback(() => dispatch({ type: 'REFILL_LIVES' }), []);
+  const buyHeartRefill = useCallback((amount) => dispatch({ type: 'BUY_HEART_REFILL', payload: amount }), []);
   const buyStreakFreeze = useCallback(() => dispatch({ type: 'BUY_STREAK_FREEZE' }), []);
   const exitLesson = useCallback(() => dispatch({ type: 'EXIT_LESSON' }), []);
 
-  const currentQuestion = state.questions[state.questionIndex] ?? null;
+  // `currentQuestion` sempre vem da FILA (não do array original de
+  // perguntas) — é ela que decide o que aparece na tela a cada passo,
+  // incluindo repetições de perguntas erradas reencaminhadas pro final.
+  const currentQuestion = state.queue[0] ?? null;
   const totalQuestions = state.questions.length;
+  // Quantas perguntas ÚNICAS já foram respondidas corretamente pelo menos
+  // uma vez nesta sessão — usado pra barra de progresso (uma pergunta só
+  // "conta" quando sai da fila de vez, não na primeira tentativa errada).
+  const masteredCount = totalQuestions - state.queue.length;
 
   const currentCompany = useMemo(() => {
     if (!state.user) return null;
@@ -1112,6 +1304,7 @@ export function GameProvider({ children }) {
       modules: effectiveModules,
       currentQuestion,
       totalQuestions,
+      masteredCount,
       isModuleMastered,
       isManager,
       companies: activeCompanies,
@@ -1133,7 +1326,7 @@ export function GameProvider({ children }) {
       submitAnswer,
       nextQuestion,
       restartLesson,
-      refillLives,
+      buyHeartRefill,
       buyStreakFreeze,
       exitLesson,
     }),
@@ -1143,6 +1336,7 @@ export function GameProvider({ children }) {
       activeCompanies,
       currentQuestion,
       totalQuestions,
+      masteredCount,
       isModuleMastered,
       isManager,
       currentCompany,
@@ -1163,7 +1357,7 @@ export function GameProvider({ children }) {
       submitAnswer,
       nextQuestion,
       restartLesson,
-      refillLives,
+      buyHeartRefill,
       buyStreakFreeze,
       exitLesson,
     ]

@@ -145,6 +145,57 @@ Painel do Gestor) — nada a configurar aqui, é só código.
 
 ---
 
+## 5b. Checkout Nitrus (alternativa ao Asaas)
+
+> ⚠️ **Integração não verificada.** Não há documentação pública da Nitrus
+> disponível pra confirmar nomes de endpoint, campos do payload e do
+> webhook — `create-nitrus-checkout` e `nitrus-webhook` seguem o formato
+> mais comum entre gateways de pagamento (Asaas, Stripe), claramente
+> sinalizado nos comentários de cada arquivo. **Confira contra a
+> documentação real da Nitrus (ou um payload de teste) antes de ir pra
+> produção** — em especial o path do endpoint de checkout, os nomes dos
+> campos do body/resposta, o header de autenticação do webhook e o nome
+> exato dos eventos de pagamento confirmado.
+
+Diferença importante em relação ao Asaas: o checkout da Nitrus também
+suporta **empresa nova** (`companyName`/`adminEmail` sem `companyId`) — o
+pagamento pode vir de alguém que ainda nem tem conta no TaxLingo. Nesse
+caso os dados ficam em `pending_signups` até o `nitrus-webhook` confirmar
+o pagamento, criar a empresa em `companies` (com um `company_code` novo,
+gerado automaticamente) e liberar a licença.
+
+1. Rode o SQL atualizado de [`supabase/schema.sql`](supabase/schema.sql)
+   de novo no **SQL Editor** (adiciona a tabela `pending_signups` e as
+   colunas `nitrus_customer_id`/`nitrus_subscription_id` em
+   `subscriptions` — é seguro rodar de novo, usa `create table if not
+   exists`).
+2. Configure os secrets e publique as duas functions:
+
+   ```bash
+   supabase secrets set NITRUS_API_URL=https://api.nitrus.example/v1 NITRUS_API_KEY=xxx
+   supabase functions deploy create-nitrus-checkout
+
+   supabase secrets set NITRUS_WEBHOOK_TOKEN=escolha-um-token-secreto
+   supabase functions deploy nitrus-webhook --no-verify-jwt
+   ```
+
+3. No painel da Nitrus, cadastre o webhook apontando para:
+
+   ```
+   https://SEU-PROJETO.supabase.co/functions/v1/nitrus-webhook
+   ```
+
+   com o mesmo `NITRUS_WEBHOOK_TOKEN` no header de autenticação do
+   webhook (o nome exato do header depende da Nitrus — ajuste
+   `nitrus-webhook/index.ts` se não for `Nitrus-Webhook-Token` ou
+   `X-Nitrus-Token`), e habilite os eventos de pagamento confirmado.
+4. Teste um checkout completo (idealmente um de empresa nova e um de
+   empresa já existente) antes de divulgar. **Os preços dos planos em
+   `create-nitrus-checkout/index.ts` são ilustrativos — ajuste antes de ir
+   ao ar.**
+
+---
+
 ## 6. Vercel — publicar o front-end
 
 1. No [vercel.com](https://vercel.com), **Add New → Project** → importe o
@@ -184,7 +235,9 @@ Painel do Gestor) — nada a configurar aqui, é só código.
 - [ ] `.env.local` configurado na Vercel (não local, o de produção)
 - [ ] `send-trial-email` publicada e testada (e-mail chegando de verdade)
 - [ ] `create-asaas-checkout` + `asaas-webhook` publicadas e testadas em
-      sandbox
+      sandbox (ou `create-nitrus-checkout` + `nitrus-webhook`, se optar
+      pela Nitrus — confira a integração contra a documentação real antes,
+      ver seção 5b)
 - [ ] Preços dos planos revisados
 - [ ] `ASAAS_ENV` trocado para `production` só depois de validar tudo em
       sandbox

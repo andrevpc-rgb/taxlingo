@@ -1,5 +1,5 @@
 // src/components/QuizEngine.jsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CheckCircle2,
   XCircle,
@@ -9,9 +9,16 @@ import {
   Zap,
   SkipForward,
   Lock,
+  Clock,
 } from 'lucide-react';
-import { useGame } from '../context/GameContext.jsx';
-import { QUESTION_TYPES, LESSON_TYPES, EXAM_PASS_THRESHOLD } from '../data/mockData';
+import { useGame, getHeartRegenInfo } from '../context/GameContext.jsx';
+import {
+  QUESTION_TYPES,
+  LESSON_TYPES,
+  EXAM_PASS_THRESHOLD,
+  HEART_REFILL_ONE_COST,
+  HEART_REFILL_FULL_COST,
+} from '../data/mockData';
 import PacciMascot from './PacciMascot';
 
 // ---------------------------------------------------------------------------
@@ -185,6 +192,63 @@ function pct(value) {
   return `${Math.round(value * 100)}%`;
 }
 
+function formatCountdown(ms) {
+  const totalMinutes = Math.max(1, Math.ceil(ms / 60000));
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+  return hours > 0 ? `${hours}h ${minutes}min` : `${minutes}min`;
+}
+
+// Opções de recarga com gemas — usadas na tela de "sem vidas" (a recarga
+// instantânea e grátis foi removida; agora só volta com o tempo ou gemas).
+function HeartRefillOptions() {
+  const { user, buyHeartRefill } = useGame();
+  const [, setTick] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => setTick((n) => n + 1), 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const { missing, msUntilNext } = getHeartRegenInfo(user);
+  const canBuyOne = missing > 0 && user.gems >= HEART_REFILL_ONE_COST;
+  const canBuyFull = missing > 0 && user.gems >= HEART_REFILL_FULL_COST;
+
+  if (missing <= 0) {
+    return <p className="text-sm font-bold text-emerald-600">Vidas cheias! Pode continuar.</p>;
+  }
+
+  return (
+    <div className="w-full space-y-2.5">
+      {msUntilNext !== null && (
+        <p className="flex items-center justify-center gap-1 text-sm font-bold text-slate-500">
+          <Clock className="h-4 w-4" />
+          Próxima vida em {formatCountdown(msUntilNext)}
+        </p>
+      )}
+      <button
+        type="button"
+        disabled={!canBuyOne}
+        onClick={() => buyHeartRefill('one')}
+        className="w-full rounded-2xl bg-rose-500 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_4px_0_0_#be123c] transition-transform active:translate-y-0.5 active:shadow-none disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
+      >
+        Recarregar 1 vida — {HEART_REFILL_ONE_COST}💎
+      </button>
+      {missing > 1 && (
+        <button
+          type="button"
+          disabled={!canBuyFull}
+          onClick={() => buyHeartRefill('full')}
+          className="w-full rounded-2xl border-2 border-rose-200 bg-rose-50 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-rose-600 transition-transform active:translate-y-0.5 disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-400"
+        >
+          Recarregar todas — {HEART_REFILL_FULL_COST}💎
+        </button>
+      )}
+      <p className="text-xs font-medium text-slate-400">Você tem {user.gems}💎</p>
+    </div>
+  );
+}
+
 // ---------------------------------------------------------------------------
 // Modal de confirmação do Exame de Transição
 // ---------------------------------------------------------------------------
@@ -230,8 +294,8 @@ export default function QuizEngine({ onExit }) {
     currentQuestion,
     currentLessonType,
     lessonId,
-    questionIndex,
     totalQuestions,
+    masteredCount,
     draftAnswer,
     isAnswered,
     isCorrect,
@@ -251,7 +315,6 @@ export default function QuizEngine({ onExit }) {
     submitAnswer,
     nextQuestion,
     restartLesson,
-    refillLives,
     startAccelerationTest,
     declineAcceleration,
     startDailyReview,
@@ -269,12 +332,13 @@ export default function QuizEngine({ onExit }) {
     return (
       <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-16 text-center">
         <PacciMascot mood="sad" size="lg" message="Ohh não! Suas vidas acabaram... mas não desiste, tesoro!" />
+        <HeartRefillOptions />
         <button
           type="button"
-          onClick={refillLives}
-          className="mt-4 rounded-2xl bg-emerald-500 px-6 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_4px_0_0_#047857] active:translate-y-0.5 active:shadow-none"
+          onClick={onExit}
+          className="mt-1 rounded-2xl border-2 border-slate-200 px-5 py-2.5 text-sm font-extrabold uppercase tracking-wide text-slate-600"
         >
-          Recarregar vidas e tentar de novo
+          Sair
         </button>
       </div>
     );
@@ -440,7 +504,10 @@ export default function QuizEngine({ onExit }) {
     );
   }
 
-  const progressPct = Math.round(((questionIndex + (isAnswered ? 1 : 0)) / totalQuestions) * 100);
+  // Só conta como progresso quando a resposta certa é confirmada — uma
+  // pergunta errada não avança a barra, ela volta pro final da fila.
+  const displayMastered = masteredCount + (isAnswered && isCorrect ? 1 : 0);
+  const progressPct = totalQuestions > 0 ? Math.round((displayMastered / totalQuestions) * 100) : 0;
 
   return (
     <div className="mx-auto flex max-w-md flex-col gap-6 px-4 pb-32 pt-4 sm:max-w-2xl sm:pt-6">
@@ -472,7 +539,7 @@ export default function QuizEngine({ onExit }) {
           ) : (
             <Heart className="h-4 w-4 fill-rose-400 text-rose-400" />
           )}
-          {questionIndex + 1}/{totalQuestions}
+          {displayMastered}/{totalQuestions}
         </span>
       </div>
 

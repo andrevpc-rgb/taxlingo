@@ -40,6 +40,7 @@ create table if not exists public.users (
   level integer not null default 1,
   lives integer not null default 5,
   max_lives integer not null default 5,
+  last_heart_lost_at timestamptz, -- início da contagem de recarga (4h) do próximo coração; null = vidas cheias
   streak integer not null default 0,
   streak_freezes integer not null default 0,
   gems integer not null default 0,
@@ -138,7 +139,7 @@ comment on table public.temp_access_tokens is 'Sem RLS liberada para anon/authen
 create index if not exists temp_access_tokens_email_idx on public.temp_access_tokens (email);
 
 -- -----------------------------------------------------------------------------
--- 6. subscriptions (plano da empresa — checkout Asaas)
+-- 6. subscriptions (plano da empresa — checkout Asaas e/ou Nitrus)
 -- -----------------------------------------------------------------------------
 create table if not exists public.subscriptions (
   id uuid primary key default gen_random_uuid(),
@@ -148,12 +149,38 @@ create table if not exists public.subscriptions (
   seats_limit integer not null,
   asaas_customer_id text,
   asaas_subscription_id text,
+  nitrus_customer_id text,
+  nitrus_subscription_id text,
   current_period_end timestamptz,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
 
 create index if not exists subscriptions_company_id_idx on public.subscriptions (company_id);
+
+-- -----------------------------------------------------------------------------
+-- 6b. pending_signups (checkout Nitrus para empresa NOVA — ver
+-- supabase/functions/create-nitrus-checkout e supabase/functions/nitrus-webhook)
+--
+-- A diferença pro fluxo Asaas: no Asaas a empresa já existe e só é
+-- ativada; aqui o pagamento pode vir de alguém que ainda nem tem conta no
+-- TaxLingo, então guardamos os dados da empresa/plano aqui até o webhook
+-- confirmar o pagamento e criar de fato a linha em `companies`.
+-- -----------------------------------------------------------------------------
+create table if not exists public.pending_signups (
+  id uuid primary key default gen_random_uuid(),
+  external_reference text not null unique,
+  company_name text not null,
+  admin_name text,
+  admin_email text not null,
+  plan text not null check (plan in ('starter', 'pro')),
+  cpf_cnpj text,
+  status text not null default 'pending' check (status in ('pending', 'completed', 'expired')),
+  company_id uuid references public.companies (id) on delete set null,
+  created_at timestamptz not null default now()
+);
+
+comment on table public.pending_signups is 'Cadastro de empresa aguardando confirmação de pagamento via Nitrus. external_reference é o id que a Nitrus ecoa de volta no webhook.';
 
 create or replace function public.set_updated_at()
 returns trigger
@@ -270,6 +297,12 @@ alter table public.questions enable row level security;
 alter table public.user_progress enable row level security;
 alter table public.temp_access_tokens enable row level security;
 alter table public.subscriptions enable row level security;
+-- pending_signups não tem policy nenhuma de propósito: só as Edge Functions
+-- (create-nitrus-checkout / nitrus-webhook), que usam a service_role key e
+-- por isso ignoram RLS, têm qualquer motivo pra tocar nessa tabela — ela
+-- carrega e-mail/CPF-CNPJ de gente que ainda nem tem conta, não deve ser
+-- legível por nenhum papel autenticado comum.
+alter table public.pending_signups enable row level security;
 
 -- companies: leitura pública (necessário pra validar company_code no cadastro,
 -- antes mesmo de existir sessão). Nenhuma escrita pelo cliente.
