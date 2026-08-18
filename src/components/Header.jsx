@@ -82,9 +82,11 @@ function HeartsPill({ onOpen }) {
   const [, setTick] = useState(0);
 
   // Só o suficiente pra manter o contador de "próxima vida em..." fresco
-  // sem re-renderizar o app inteiro a cada segundo.
+  // sem re-renderizar o app inteiro a cada segundo. Recarga total agora é
+  // de só 10min, então um tick mais curto que antes (era 30s) evita o
+  // contador da pill parecer "travado" por boa parte da espera.
   useEffect(() => {
-    const interval = setInterval(() => setTick((n) => n + 1), 30000);
+    const interval = setInterval(() => setTick((n) => n + 1), 5000);
     return () => clearInterval(interval);
   }, []);
 

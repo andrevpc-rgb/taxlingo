@@ -19,10 +19,15 @@ import {
   STREAK_FREEZE_COST,
   MAX_STREAK_FREEZES,
   DAILY_REVIEW_XP,
-  HEART_REGEN_HOURS,
+  HEART_REGEN_MINUTES,
   HEART_REFILL_ONE_COST,
   HEART_REFILL_FULL_COST,
   INITIAL_GEMS,
+  PERFECT_LESSON_GEMS,
+  LESSON_COMPLETE_GEMS,
+  LEVEL_UP_CHEST_GEMS,
+  STREAK_BONUS_GEMS,
+  STREAK_BONUS_INTERVAL_DAYS,
   getDailyReviewQuestions,
 } from '../data/mockData';
 import { isSupabaseConfigured } from '../lib/supabase';
@@ -105,33 +110,51 @@ function daysBetween(dateStrA, dateStrB) {
 // - Mais de 1 dia de intervalo: consome 1 Congelamento de Ofensiva por dia
 //   perdido, se houver suficientes; senão, a ofensiva reseta para 1.
 // - `lastStudyDate` nulo (usuário novo, nunca estudou): começa a ofensiva em 1.
+//
+// Devolve `{ user, streakBonusGems }` em vez de só o usuário: a cada
+// STREAK_BONUS_INTERVAL_DAYS dias seguidos (7, 14, 21...) a ofensiva rende
+// STREAK_BONUS_GEMS de bônus — como isso só acontece quando a ofensiva
+// efetivamente incrementa (nunca no reset pra 1, nem no "mesmo dia"), dá pra
+// detectar o marco olhando só o streak NOVO sem precisar comparar com o
+// antigo. `streakBonusGems` é devolvido à parte pra quem chamar poder
+// mostrar esse bônus separado do resto na tela (ver QuizEngine.jsx).
 function applyDailyStreak(user) {
   const today = todayISO();
+  const withStreakBonus = (nextUser, newStreak) => {
+    const bonus = newStreak > 0 && newStreak % STREAK_BONUS_INTERVAL_DAYS === 0 ? STREAK_BONUS_GEMS : 0;
+    return { user: bonus ? { ...nextUser, gems: nextUser.gems + bonus } : nextUser, streakBonusGems: bonus };
+  };
+
   if (!user.lastStudyDate) {
-    return { ...user, streak: 1, lastStudyDate: today };
+    return withStreakBonus({ ...user, streak: 1, lastStudyDate: today }, 1);
   }
-  if (user.lastStudyDate === today) return user;
+  if (user.lastStudyDate === today) return { user, streakBonusGems: 0 };
 
   const gap = daysBetween(user.lastStudyDate, today);
 
   if (gap === 1) {
-    return { ...user, streak: user.streak + 1, lastStudyDate: today };
+    const newStreak = user.streak + 1;
+    return withStreakBonus({ ...user, streak: newStreak, lastStudyDate: today }, newStreak);
   }
 
   if (gap > 1) {
     const freezesNeeded = gap - 1;
     if (user.streakFreezes >= freezesNeeded) {
-      return {
-        ...user,
-        streak: user.streak + 1,
-        lastStudyDate: today,
-        streakFreezes: user.streakFreezes - freezesNeeded,
-      };
+      const newStreak = user.streak + 1;
+      return withStreakBonus(
+        {
+          ...user,
+          streak: newStreak,
+          lastStudyDate: today,
+          streakFreezes: user.streakFreezes - freezesNeeded,
+        },
+        newStreak
+      );
     }
-    return { ...user, streak: 1, lastStudyDate: today };
+    return { user: { ...user, streak: 1, lastStudyDate: today }, streakBonusGems: 0 };
   }
 
-  return { ...user, lastStudyDate: today };
+  return { user: { ...user, lastStudyDate: today }, streakBonusGems: 0 };
 }
 
 // ---------------------------------------------------------------------------
@@ -164,7 +187,7 @@ function addXp(user, amount) {
 }
 
 // ---------------------------------------------------------------------------
-// Recarga de vidas por tempo. Cada coração perdido leva HEART_REGEN_HOURS
+// Recarga de vidas por tempo. Cada coração perdido leva HEART_REGEN_MINUTES
 // para recarregar sozinho — `lastHeartLostAt` marca o início da contagem do
 // PRÓXIMO coração a regenerar (não é resetado a cada nova vida perdida
 // enquanto já houver uma contagem em andamento, senão o usuário nunca
@@ -172,7 +195,7 @@ function addXp(user, amount) {
 // fechado porque o cálculo é sempre feito a partir do timestamp salvo, não
 // de um timer rodando em memória.
 // ---------------------------------------------------------------------------
-const HEART_REGEN_MS = HEART_REGEN_HOURS * 60 * 60 * 1000;
+const HEART_REGEN_MS = HEART_REGEN_MINUTES * 60 * 1000;
 
 function applyHeartRegen(user) {
   if (!user || user.lives >= user.maxLives || !user.lastHeartLostAt) return user;
@@ -376,6 +399,8 @@ function buildSharedGameState() {
     examResult: null, // { passed, scorePct, requiredPct } | null
     isDailyReview: false,
     justPromotedLevelId: null, // id do próximo nível de carreira, só quando o exame acabou de destravá-lo (som de promoção)
+    lessonGemsEarned: 0, // gemas ganhas ao concluir a lição/exame que acabou de terminar (0 até terminar uma)
+    streakBonusGems: 0, // bônus de gemas por marco de ofensiva (a cada 7 dias), só no momento em que é concedido
   };
 }
 
@@ -446,6 +471,8 @@ function startLessonState(state, moduleId, lessonId) {
     examResult: null,
     isDailyReview: false,
     justPromotedLevelId: null,
+    lessonGemsEarned: 0,
+    streakBonusGems: 0,
   };
 }
 
@@ -651,6 +678,8 @@ function gameReducerCore(state, action) {
         accelerationResult: null,
         examResult: null,
         justPromotedLevelId: null,
+        lessonGemsEarned: 0,
+        streakBonusGems: 0,
       };
     }
 
@@ -714,11 +743,20 @@ function gameReducerCore(state, action) {
       // nesta tentativa (creditado pergunta a pergunta em CHECK_ANSWER) é
       // devolvido, já que a lição não foi concluída.
       if (state.user.lives <= 0) {
+        // Mesmo numa lição não concluída, o dia conta como "estudado" pra
+        // ofensiva (e pode bater um marco de 7 dias) — só não há gema de
+        // lição nenhuma, já que ela não foi finalizada.
+        const { user: streakedUser, streakBonusGems } = applyDailyStreak({
+          ...state.user,
+          ...addXp(state.user, -state.sessionXp),
+        });
         return {
           ...state,
           gameOver: true,
           sessionXp: 0,
-          user: applyDailyStreak({ ...state.user, ...addXp(state.user, -state.sessionXp) }),
+          user: streakedUser,
+          lessonGemsEarned: 0,
+          streakBonusGems,
           perfectLessonStreak: 0,
           accelerationAvailable: false,
           pendingAccelerationTest: false,
@@ -758,8 +796,15 @@ function gameReducerCore(state, action) {
       const wasPerfect = state.wrongCount === 0;
 
       // --- Lição de Manutenção/Revisão (modo Lenda) ---------------------
+      // Não rende gema de lição (não é uma lição "de verdade" da trilha),
+      // mas ainda conta o dia pra ofensiva — pode bater o marco de 7 dias.
       if (state.isDailyReview) {
         const reviewMinutes = estimateMinutesSpent(state.questions.length);
+        const { user: streakedReviewUser, streakBonusGems: reviewStreakBonus } = applyDailyStreak({
+          ...state.user,
+          ...addXp(state.user, DAILY_REVIEW_XP),
+          timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + reviewMinutes,
+        });
         return {
           ...state,
           lessonComplete: true,
@@ -768,11 +813,9 @@ function gameReducerCore(state, action) {
           draftAnswer: null,
           pacciMood: 'happy',
           sessionXp: state.sessionXp + DAILY_REVIEW_XP,
-          user: applyDailyStreak({
-            ...state.user,
-            ...addXp(state.user, DAILY_REVIEW_XP),
-            timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + reviewMinutes,
-          }),
+          user: streakedReviewUser,
+          lessonGemsEarned: 0,
+          streakBonusGems: reviewStreakBonus,
           justPromotedLevelId: null,
         };
       }
@@ -818,6 +861,22 @@ function gameReducerCore(state, action) {
             : {}),
         };
 
+        // Baú de Recompensa: passar no exame de transição rende gemas fixas
+        // (não as gemas de "lição concluída" normais — o baú substitui,
+        // não soma com elas), independente de destravar um próximo nível
+        // ou ser o exame do último nível (Especialista).
+        let examUser = userWithAttempt;
+        let examStreakBonus = 0;
+        if (passed) {
+          const { user: streakedExamUser, streakBonusGems } = applyDailyStreak({
+            ...userWithAttempt,
+            ...addXp(userWithAttempt, bonusXp),
+            gems: userWithAttempt.gems + LEVEL_UP_CHEST_GEMS,
+          });
+          examUser = streakedExamUser;
+          examStreakBonus = streakBonusGems;
+        }
+
         return {
           ...state,
           modules: nextModules,
@@ -827,9 +886,9 @@ function gameReducerCore(state, action) {
           draftAnswer: null,
           pacciMood: passed ? 'happy' : 'sad',
           sessionXp: state.sessionXp + bonusXp,
-          user: passed
-            ? applyDailyStreak({ ...userWithAttempt, ...addXp(userWithAttempt, bonusXp) })
-            : userWithAttempt,
+          user: examUser,
+          lessonGemsEarned: passed ? LEVEL_UP_CHEST_GEMS : 0,
+          streakBonusGems: examStreakBonus,
           examResult: { passed, scorePct, requiredPct: EXAM_PASS_THRESHOLD },
           perfectLessonStreak: 0,
           accelerationAvailable: false,
@@ -862,6 +921,17 @@ function gameReducerCore(state, action) {
           accelerationResult = { passed: false, skippedCount: 0 };
         }
 
+        // Ainda é "concluir uma lição", só que na roupagem do Teste de
+        // Aceleração — rende a mesma gema de lição perfeita/normal que a
+        // progressão comum, por cima do resultado (passou ou não) do teste.
+        const accelLessonGems = wasPerfect ? PERFECT_LESSON_GEMS : LESSON_COMPLETE_GEMS;
+        const { user: streakedAccelUser, streakBonusGems: accelStreakBonus } = applyDailyStreak({
+          ...state.user,
+          ...addXp(state.user, bonusXp),
+          gems: state.user.gems + accelLessonGems,
+          timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + lessonMinutes,
+        });
+
         return {
           ...state,
           modules: nextModules,
@@ -871,11 +941,9 @@ function gameReducerCore(state, action) {
           isCorrect: null,
           pacciMood: 'happy',
           sessionXp: state.sessionXp + bonusXp,
-          user: applyDailyStreak({
-            ...state.user,
-            ...addXp(state.user, bonusXp),
-            timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + lessonMinutes,
-          }),
+          user: streakedAccelUser,
+          lessonGemsEarned: accelLessonGems,
+          streakBonusGems: accelStreakBonus,
           perfectLessonStreak: wasPerfect ? state.perfectLessonStreak + 1 : 0,
           accelerationAvailable: false,
           pendingAccelerationTest: false,
@@ -899,6 +967,16 @@ function gameReducerCore(state, action) {
       const nextLessonAvailable = Boolean(getNextLesson(nextModules, state.moduleId, state.lessonId));
       const accelerationAvailable = newPerfectStreak >= PERFECT_LESSONS_FOR_ACCELERATION && nextLessonAvailable;
 
+      // Recompensa de gemas (estilo Duolingo): lição sem nenhum erro rende
+      // mais que uma lição concluída "no susto" via repescagem da fila.
+      const lessonGems = wasPerfect ? PERFECT_LESSON_GEMS : LESSON_COMPLETE_GEMS;
+      const { user: streakedLessonUser, streakBonusGems: lessonStreakBonus } = applyDailyStreak({
+        ...state.user,
+        ...addXp(state.user, bonusXp),
+        gems: state.user.gems + lessonGems,
+        timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + lessonMinutes,
+      });
+
       return {
         ...state,
         modules: nextModules,
@@ -908,11 +986,9 @@ function gameReducerCore(state, action) {
         isCorrect: null,
         pacciMood: 'happy',
         sessionXp: state.sessionXp + bonusXp,
-        user: applyDailyStreak({
-          ...state.user,
-          ...addXp(state.user, bonusXp),
-          timeSpentMinutes: (state.user.timeSpentMinutes ?? 0) + lessonMinutes,
-        }),
+        user: streakedLessonUser,
+        lessonGemsEarned: lessonGems,
+        streakBonusGems: lessonStreakBonus,
         perfectLessonStreak: newPerfectStreak,
         accelerationAvailable,
         pendingAccelerationTest: false,
@@ -927,7 +1003,7 @@ function gameReducerCore(state, action) {
     }
 
     // Recarga instantânea e grátis foi removida de propósito — vidas agora só
-    // voltam com o tempo (HEART_REGEN_HOURS por coração) ou gastando gemas.
+    // voltam com o tempo (HEART_REGEN_MINUTES por coração) ou gastando gemas.
     case 'BUY_HEART_REFILL': {
       if (!state.user) return state;
       const missing = state.user.maxLives - state.user.lives;
@@ -995,6 +1071,8 @@ function gameReducerCore(state, action) {
         examResult: null,
         isDailyReview: false,
         justPromotedLevelId: null,
+        lessonGemsEarned: 0,
+        streakBonusGems: 0,
       };
     }
 
@@ -1042,14 +1120,16 @@ export function GameProvider({ children }) {
   // usuário só de olho no contador na tela (Header/tela de game over) sem
   // interagir com nada, pra não parecer travado até a próxima ação.
   useEffect(() => {
-    const interval = setInterval(() => dispatch({ type: 'APPLY_HEART_REGEN' }), 60000);
+    // 15s (não 60s): com a recarga em 10min, um tick de 1min deixaria o
+    // contador "empacado" por até 1/10 do tempo total antes de atualizar.
+    const interval = setInterval(() => dispatch({ type: 'APPLY_HEART_REGEN' }), 15000);
     return () => clearInterval(interval);
   }, []);
 
   // Modo Supabase: vidas/timestamp de recarga precisam ser persistidos
   // assim que mudam (não só ao concluir a lição) — senão fechar o navegador
   // no meio de uma lição, depois de perder um coração, perderia o
-  // `last_heart_lost_at` e a contagem de 4h reiniciaria do zero errado.
+  // `last_heart_lost_at` e a contagem de recarga reiniciaria do zero errado.
   const lastPersistedHeartsRef = useRef(null);
   useEffect(() => {
     if (!isSupabaseConfigured || !state.user) return;

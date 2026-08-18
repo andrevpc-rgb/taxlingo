@@ -55,10 +55,18 @@ export const STREAK_FREEZE_COST = 20; // custo em gemas do Congelamento de Ofens
 export const MAX_STREAK_FREEZES = 2; // limite de congelamentos acumuláveis
 export const DAILY_REVIEW_QUESTION_COUNT = 5;
 export const DAILY_REVIEW_XP = 15;
-export const HEART_REGEN_HOURS = 4; // horas para recarregar 1 coração perdido
+export const HEART_REGEN_MINUTES = 10; // minutos para recarregar 1 coração perdido (estilo Duolingo)
 export const HEART_REFILL_ONE_COST = 100; // gemas para recarregar 1 coração na hora
 export const HEART_REFILL_FULL_COST = 350; // gemas para recarregar todos os corações na hora
 export const INITIAL_GEMS = 1000; // saldo inicial de todo usuário novo — dá pra recarregar vidas de cara
+
+// Recompensas de Gemas (estilo Duolingo) — concedidas ao finalizar sessões,
+// ver GameContext.jsx (NEXT_QUESTION / applyDailyStreak).
+export const PERFECT_LESSON_GEMS = 15; // lição concluída sem nenhum erro
+export const LESSON_COMPLETE_GEMS = 10; // lição concluída com sucesso, mas com algum erro pelo caminho
+export const LEVEL_UP_CHEST_GEMS = 100; // baú ao passar no Exame de Transição de nível
+export const STREAK_BONUS_GEMS = 50; // bônus a cada STREAK_BONUS_INTERVAL_DAYS dias seguidos de ofensiva
+export const STREAK_BONUS_INTERVAL_DAYS = 7;
 
 // Planos comerciais — usados tanto pela tela de vendas (SubscriptionModal,
 // AuthModal) quanto espelhados (com os mesmos ids/preços) nas Edge

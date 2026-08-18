@@ -40,7 +40,7 @@ create table if not exists public.users (
   level integer not null default 1,
   lives integer not null default 5,
   max_lives integer not null default 5,
-  last_heart_lost_at timestamptz, -- início da contagem de recarga (4h) do próximo coração; null = vidas cheias
+  last_heart_lost_at timestamptz, -- início da contagem de recarga (10min) do próximo coração; null = vidas cheias
   streak integer not null default 0,
   streak_freezes integer not null default 0,
   gems integer not null default 1000, -- todo usuário novo já começa com saldo pra recarregar vidas na loja

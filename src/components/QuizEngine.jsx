@@ -193,6 +193,17 @@ function pct(value) {
   return `${Math.round(value * 100)}%`;
 }
 
+// Bônus de Ofensiva (a cada 7 dias seguidos) — mesmo aviso em qualquer tela
+// de conclusão que tiver disparado o marco (ver applyDailyStreak).
+function StreakBonusBadge({ amount }) {
+  if (!amount) return null;
+  return (
+    <p className="mt-1 flex items-center justify-center gap-1.5 rounded-xl bg-orange-50 px-3 py-1.5 text-xs font-extrabold text-orange-600">
+      🔥 Bônus de Ofensiva: +{amount}💎
+    </p>
+  );
+}
+
 function formatCountdown(ms) {
   const totalMinutes = Math.max(1, Math.ceil(ms / 60000));
   const hours = Math.floor(totalMinutes / 60);
@@ -313,6 +324,8 @@ export default function QuizEngine({ onExit }) {
     examResult,
     isDailyReview,
     justPromotedLevelId,
+    lessonGemsEarned,
+    streakBonusGems,
     setDraftAnswer,
     submitAnswer,
     nextQuestion,
@@ -402,6 +415,18 @@ export default function QuizEngine({ onExit }) {
               Necessário: {pct(examResult.requiredPct)}
             </span>
           </div>
+
+          {examResult.passed && lessonGemsEarned > 0 && (
+            <div className="mt-2 flex items-center gap-3 rounded-2xl border-2 border-amber-300 bg-amber-50 px-4 py-3">
+              <span className="text-2xl" aria-hidden="true">🎁</span>
+              <div className="text-left">
+                <p className="text-sm font-extrabold text-amber-700">Baú de Recompensa!</p>
+                <p className="text-xs font-bold text-amber-600">+{lessonGemsEarned} Gemas por concluir o nível</p>
+              </div>
+            </div>
+          )}
+          <StreakBonusBadge amount={streakBonusGems} />
+
           <div className="mt-4 flex gap-3">
             <button
               type="button"
@@ -439,6 +464,13 @@ export default function QuizEngine({ onExit }) {
                 : 'Não foi dessa vez, mas essa lição já contou normalmente. Segue o jogo!'
             }
           />
+          <div className="mt-2 flex gap-4 text-sm font-bold">
+            <span className="rounded-xl bg-sky-50 px-3 py-1.5 text-sky-700">+{sessionXp} XP</span>
+            {lessonGemsEarned > 0 && (
+              <span className="rounded-xl bg-cyan-50 px-3 py-1.5 text-cyan-700">+{lessonGemsEarned}💎</span>
+            )}
+          </div>
+          <StreakBonusBadge amount={streakBonusGems} />
           <button
             type="button"
             onClick={onExit}
@@ -456,11 +488,17 @@ export default function QuizEngine({ onExit }) {
         <PartyPopper className="h-14 w-14 text-amber-400" />
         <h2 className="text-2xl font-extrabold text-slate-800">Lição concluída!</h2>
         <PacciMascot mood="happy" size="lg" message="Bravissimo! Você mandou bem demais nessa lição!" />
-        <div className="mt-2 flex gap-4 text-sm font-bold">
+        <div className="mt-2 flex flex-wrap justify-center gap-3 text-sm font-bold">
           <span className="rounded-xl bg-sky-50 px-3 py-1.5 text-sky-700">+{sessionXp} XP</span>
+          {lessonGemsEarned > 0 && (
+            <span className="rounded-xl bg-cyan-50 px-3 py-1.5 text-cyan-700">
+              +{lessonGemsEarned}💎{wrongCount === 0 && <span className="ml-1 text-[10px] font-extrabold uppercase text-cyan-500">Perfeita!</span>}
+            </span>
+          )}
           <span className="rounded-xl bg-emerald-50 px-3 py-1.5 text-emerald-700">{correctCount} acertos</span>
           <span className="rounded-xl bg-rose-50 px-3 py-1.5 text-rose-700">{wrongCount} erros</span>
         </div>
+        <StreakBonusBadge amount={streakBonusGems} />
 
         {accelerationAvailable && (
           <div className="mt-2 w-full rounded-2xl border-2 border-violet-200 bg-violet-50 p-4">
