@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TaxLingo, ícone isolado (favicon / avatar)
+  Conceito: Ledger T. Ladrilho quadrado de cor sólida, com o monograma em
+  tom paper e o ponto de destaque em tom accent, funciona sozinho em qualquer
+  fundo (aba do navegador, grade de apps, avatar de usuário).
+  Margem de respiro: 12% em cada lado (28.8px de 240px).
+  Entregue como quadrado de sangria cheia — plataformas (iOS, favicon,
+  avatar circular) aplicam sua própria máscara de cantos por cima.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <symbol id="mark" viewBox="0 0 172 160">
+      <rect x="0" y="0" width="120" height="44" rx="4" fill="#F3F5EF"/>
+      <rect x="38" y="30" width="44" height="130" rx="4" fill="#F3F5EF"/>
+      <circle cx="144" cy="94" r="28" fill="#C98A2C"/>
+    </symbol>
+  </defs>
+  <rect x="0" y="0" width="240" height="240" fill="#0D3B2E"/>
+  <use href="#mark" x="28.8" y="35.16" width="182.4" height="169.68"/>
+</svg>

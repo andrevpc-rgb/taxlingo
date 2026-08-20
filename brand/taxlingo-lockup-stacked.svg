@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TaxLingo, lockup empilhado (ícone acima, wordmark abaixo)
+  Conceito: Ledger T. Feito para tela de carregamento / splash. Canvas
+  transparente por design (é um lockup, não a tela de splash inteira):
+  centralize isto sobre um fundo tom mark-deep (#0D3B2E) ou outra cor sólida
+  da paleta da marca. Cores do próprio lockup (tom paper / tom accent) já
+  pressupõem um fundo escuro; para uso em fundo claro, troque os fills
+  do símbolo e do texto "TaxLingo" para #1E8F5E.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <symbol id="mark" viewBox="0 0 172 160">
+      <rect x="0" y="0" width="120" height="44" rx="4" fill="#F3F5EF"/>
+      <rect x="38" y="30" width="44" height="130" rx="4" fill="#F3F5EF"/>
+      <circle cx="144" cy="94" r="28" fill="#C98A2C"/>
+    </symbol>
+    <style>
+      .wordmark { font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 64px; letter-spacing: -0.64px; }
+    </style>
+  </defs>
+  <use href="#mark" x="103.25" y="60" width="193.5" height="180"/>
+  <text x="200" y="326" text-anchor="middle" class="wordmark">
+    <tspan fill="#F3F5EF">TaxLingo</tspan><tspan fill="#C98A2C">.</tspan>
+  </text>
+</svg>

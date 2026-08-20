@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  TaxLingo — versão monocromática (sem o ponto de destaque)
+  Conceito: Ledger T, para aplicações de baixo contraste: marca d'água,
+  carimbo, impressão preto-e-branco. Um único tom — usa currentColor em
+  vez de cor fixa, então o consumidor define a cor no contexto de uso
+  (troque a "color" no <svg> raiz, ou sobrescreva via CSS externo).
+  Vem em #14201B (tinta escura) por padrão, só pra não abrir invisível.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 120" width="580" height="120" style="color:#14201B">
+  <defs>
+    <symbol id="mark-mono" viewBox="0 0 172 160">
+      <rect x="0" y="0" width="120" height="44" rx="4" fill="currentColor"/>
+      <rect x="38" y="30" width="44" height="130" rx="4" fill="currentColor"/>
+    </symbol>
+    <style>
+      .wordmark { font-family: 'Manrope', 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 76px; letter-spacing: -0.76px; fill: currentColor; }
+    </style>
+  </defs>
+  <use href="#mark-mono" x="24" y="18" width="75.25" height="70"/>
+  <text x="128" y="88" class="wordmark">TaxLingo.</text>
+</svg>
