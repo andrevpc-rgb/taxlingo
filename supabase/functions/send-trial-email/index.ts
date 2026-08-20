@@ -7,7 +7,7 @@
 //
 // Deploy:
 //   supabase functions deploy send-trial-email
-//   supabase secrets set RESEND_API_KEY=re_xxx RESEND_FROM_EMAIL="TaxLingo <onboarding@seudominio.com>"
+//   supabase secrets set RESEND_API_KEY=re_xxx RESEND_FROM_EMAIL="TaxLingo <contato@taxlingo.com.br>"
 //   (SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY já existem automaticamente no
 //   runtime de toda Edge Function — não precisa configurar manualmente.)
 //
@@ -54,9 +54,9 @@ async function ensureTrialCompany(supabase) {
   return created.id;
 }
 
-async function sendTrialEmail({ to, tempPassword, expiresAt, loginUrl }) {
+async function sendTrialEmail({ to, tempPassword, expiresAt }) {
   const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <onboarding@resend.dev>';
+  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <contato@taxlingo.com.br>';
   if (!RESEND_API_KEY) {
     throw new Error('RESEND_API_KEY não configurada nos secrets da função.');
   }
@@ -81,7 +81,7 @@ async function sendTrialEmail({ to, tempPassword, expiresAt, loginUrl }) {
             <tr><td style="padding:8px; background:#f0fdf4; border-radius:8px 8px 0 0;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${to}</td></tr>
             <tr><td style="padding:8px; background:#f0fdf4; border-radius:0 0 8px 8px;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
           </table>
-          <p><a href="${loginUrl}" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
+          <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
           <p style="color:#94a3b8; font-size:12px;">Depois de ${TRIAL_HOURS}h esse acesso expira automaticamente. Gostou? Peça ao seu RH o código da empresa pra criar uma conta definitiva.</p>
         </div>
       `,
@@ -167,8 +167,7 @@ Deno.serve(async (req) => {
       expires_at: expiresAt,
     });
 
-    const appUrl = Deno.env.get('APP_URL') || 'https://taxlingo.vercel.app';
-    await sendTrialEmail({ to: normalizedEmail, tempPassword, expiresAt, loginUrl: appUrl });
+    await sendTrialEmail({ to: normalizedEmail, tempPassword, expiresAt });
 
     return jsonResponse({ ok: true, expiresAt });
   } catch (err) {

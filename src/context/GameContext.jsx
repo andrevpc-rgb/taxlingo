@@ -357,10 +357,13 @@ function getNextLevelFirstLesson(moduleId, lessonId) {
   return { moduleId, lessonId: `${nextLevel.id}-1` };
 }
 
-// Modo Supabase: contas do "Testar Grátis por 24 Horas" têm `trialExpiresAt`
-// preenchido. Depois desse prazo, o acesso é derrubado automaticamente no
-// próximo login/restauração de sessão (não precisa de um job em background
-// pra "banir" a conta — é barato e suficiente checar na entrada).
+// Modo Supabase: contas com acesso por prazo (não vínculo direto com uma
+// empresa) têm `trialExpiresAt` preenchido — tanto o "Testar Grátis por 24
+// Horas" quanto o Plano Individual comprado pelo link do Asaas (nesse caso
+// renovado a cada pagamento mensal, ver asaas-webhook). Depois desse
+// prazo, o acesso é derrubado automaticamente no próximo login/restauração
+// de sessão (não precisa de um job em background pra "banir" a conta — é
+// barato e suficiente checar na entrada).
 function isTrialExpired(profile) {
   return Boolean(profile?.trialExpiresAt) && new Date(profile.trialExpiresAt) < new Date();
 }
@@ -1158,7 +1161,7 @@ export function GameProvider({ children }) {
           const profile = await api.fetchProfile(session.user.id);
           if (isTrialExpired(profile)) {
             await api.signOut();
-            dispatch({ type: 'AUTH_ERROR', payload: 'Seu teste grátis de 24h expirou. Peça o código da sua empresa pra continuar.' });
+            dispatch({ type: 'AUTH_ERROR', payload: 'Seu acesso expirou. Se você tem o Plano Individual, o acesso renova sozinho no próximo pagamento; senão, peça o código da sua empresa.' });
             return;
           }
           dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });

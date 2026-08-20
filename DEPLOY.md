@@ -143,6 +143,21 @@ Painel do Gestor) — nada a configurar aqui, é só código.
    `SubscriptionModal.jsx` e `create-asaas-checkout/index.ts` são
    ilustrativos — ajuste antes de ir ao ar.**
 
+### Plano Individual (link de pagamento fixo)
+
+Diferente do Starter/Pro, o Plano Individual **não** passa pela
+`create-asaas-checkout` — o botão em `AuthModal.jsx`
+(`ASAAS_INDIVIDUAL_PAYMENT_LINK`) aponta direto pra um link de pagamento
+criado manualmente no painel do Asaas (**Cobranças → Link de Pagamento**).
+
+O `asaas-webhook` já sabe lidar com isso: quando chega um `PAYMENT_RECEIVED`
+sem nenhuma assinatura nossa correspondente, ele busca o cliente na API do
+Asaas (por isso a função também precisa de `ASAAS_API_KEY`, já configurada
+acima) e cria a conta na hora — usuário + senha temporária por e-mail,
+acesso válido por 30 dias, renovado automaticamente a cada pagamento
+mensal reconhecido. Se trocar o link de pagamento no painel do Asaas,
+lembre de atualizar `ASAAS_INDIVIDUAL_PAYMENT_LINK` em `AuthModal.jsx`.
+
 ---
 
 ## 5b. Checkout Nitrus (alternativa ao Asaas)

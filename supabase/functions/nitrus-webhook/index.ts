@@ -83,7 +83,7 @@ function jsonResponse(body, status = 200) {
 
 async function sendActivationEmail({ to, companyName, companyCode, plan }) {
   const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <onboarding@resend.dev>';
+  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <contato@taxlingo.com.br>';
   if (!RESEND_API_KEY || !to) return; // e-mail é um "nice to have" — não derruba a ativação se faltar
 
   await fetch('https://api.resend.com/emails', {
@@ -110,7 +110,7 @@ async function sendActivationEmail({ to, companyName, companyCode, plan }) {
 // mandado e a pessoa se cadastra normalmente depois).
 async function sendIndividualWelcomeEmail({ to, tempPassword }) {
   const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <onboarding@resend.dev>';
+  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <contato@taxlingo.com.br>';
   if (!RESEND_API_KEY || !to) return;
 
   const appUrl = Deno.env.get('APP_URL') || 'https://taxlingo.vercel.app';

@@ -4,25 +4,35 @@
 // Asaas > Configurações > Integrações > Webhooks:
 //   https://SEU-PROJETO.supabase.co/functions/v1/asaas-webhook
 //
-// Ao confirmar um pagamento, ativa o plano da empresa e envia um e-mail
-// pro gestor/RH com o company_code (é esse código que os colaboradores
-// usam pra se cadastrar) e libera o acesso.
+// Trata dois casos bem diferentes:
+//   1. Plano Corporativo (Starter/Pro): o pagamento vem de uma assinatura
+//      criada pela nossa própria create-asaas-checkout, então já existe uma
+//      linha em `subscriptions` com o `asaas_subscription_id` — só ativa.
+//   2. Plano Individual: o pagamento vem do link de pagamento FIXO do
+//      Asaas (configurado direto no painel deles, sem passar pela nossa
+//      create-asaas-checkout) — não existe nenhuma assinatura nossa pra
+//      casar. Nesse caso buscamos os dados do cliente na API do Asaas
+//      (nome/e-mail) e criamos a conta na hora, com acesso válido por 30
+//      dias (renovado a cada pagamento mensal reconhecido).
 //
 // Deploy:
 //   supabase functions deploy asaas-webhook --no-verify-jwt
 //   supabase secrets set ASAAS_WEBHOOK_TOKEN=escolha-um-token-secreto
-//   (o mesmo token precisa ser cadastrado no painel do Asaas, no campo
-//   "Token de autenticação" da configuração do webhook — é assim que a
-//   gente confirma que a chamada realmente veio do Asaas.)
+//   supabase secrets set ASAAS_API_KEY=xxx ASAAS_ENV=sandbox
+//   (ASAAS_API_KEY agora também é usada aqui — não só na create-asaas-checkout
+//   — pra buscar nome/e-mail do cliente que pagou pelo link do Plano
+//   Individual. ASAAS_WEBHOOK_TOKEN precisa ser cadastrado no painel do
+//   Asaas, no campo "Token de autenticação" da configuração do webhook —
+//   é assim que confirmamos que a chamada realmente veio do Asaas.
 //   --no-verify-jwt é necessário porque o Asaas não manda um JWT do
 //   Supabase — a autenticação aqui é o ASAAS_WEBHOOK_TOKEN, verificado
-//   manualmente abaixo.
+//   manualmente abaixo.)
 //
 // ATENÇÃO: não testado contra webhooks reais do Asaas nesta sessão — a
-// forma exata do payload (nomes dos eventos, campos de `payment`) segue a
-// documentação pública no momento em que isto foi escrito. Confira contra
-// um evento real (o Asaas deixa reenviar webhooks de teste no painel)
-// antes de confiar nisso em produção.
+// forma exata do payload (nomes dos eventos, campos de `payment`/`customer`)
+// segue a documentação pública no momento em que isto foi escrito. Confira
+// contra um evento real (o Asaas deixa reenviar webhooks de teste no
+// painel) antes de confiar nisso em produção.
 
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
@@ -31,6 +41,13 @@ const CORS_HEADERS = { 'Access-Control-Allow-Origin': '*' };
 const ACTIVATING_EVENTS = new Set(['PAYMENT_CONFIRMED', 'PAYMENT_RECEIVED']);
 const DEACTIVATING_EVENTS = new Set(['PAYMENT_OVERDUE', 'PAYMENT_DELETED', 'SUBSCRIPTION_DELETED']);
 
+// Plano Individual não tem "assinatura" gerenciada por nós (é um link de
+// pagamento fixo do Asaas) — o acesso simplesmente vale por N dias a partir
+// de cada pagamento reconhecido, e é renovado no próximo pagamento do mês
+// seguinte. Reaproveita a mesma coluna `trial_expires_at` do fluxo de
+// "Testar Grátis" — ver isTrialExpired() em GameContext.jsx.
+const INDIVIDUAL_ACCESS_DAYS = 30;
+
 function jsonResponse(body, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
@@ -38,9 +55,63 @@ function jsonResponse(body, status = 200) {
   });
 }
 
+function asaasBaseUrl() {
+  const env = Deno.env.get('ASAAS_ENV') || 'sandbox';
+  return env === 'production' ? 'https://api.asaas.com/v3' : 'https://sandbox.asaas.com/api/v3';
+}
+
+async function asaasFetch(path) {
+  const apiKey = Deno.env.get('ASAAS_API_KEY');
+  if (!apiKey) throw new Error('ASAAS_API_KEY não configurada nos secrets da função.');
+  const res = await fetch(`${asaasBaseUrl()}${path}`, { headers: { access_token: apiKey } });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(`Asaas ${path} falhou (${res.status}): ${JSON.stringify(body)}`);
+  return body;
+}
+
+function generateTempPassword() {
+  // Fácil de digitar/copiar do e-mail, mas com entropia suficiente.
+  const alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+  let out = '';
+  for (let i = 0; i < 10; i++) out += alphabet[Math.floor(Math.random() * alphabet.length)];
+  return out;
+}
+
+// Faixa Unicode das marcas de acento combinantes (usada depois de
+// normalize('NFD')) — escrita como \u pra não depender de como o editor
+// grava caracteres combinantes literais no arquivo.
+const COMBINING_MARKS_RE = /[̀-ͯ]/g;
+
+// Gera um código curto e legível (ex.: "Conta Individual — Ana" ->
+// "CONTAI4821") e tenta até achar um que não colida com
+// `companies.company_code` (unique). O código em si nunca é mostrado pro
+// usuário do Plano Individual — é só o que satisfaz a FK obrigatória de
+// `users.company_id`.
+async function generateCompanyCode(supabase, label) {
+  const slug =
+    label
+      .normalize('NFD')
+      .replace(COMBINING_MARKS_RE, '')
+      .replace(/[^a-zA-Z]/g, '')
+      .toUpperCase()
+      .slice(0, 6) || 'EMPRESA';
+
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const suffix = Math.floor(1000 + Math.random() * 9000);
+    const candidate = `${slug}${suffix}`;
+    const { data: existing } = await supabase
+      .from('companies')
+      .select('id')
+      .eq('company_code', candidate)
+      .maybeSingle();
+    if (!existing) return candidate;
+  }
+  return `${slug}${Date.now().toString().slice(-6)}`;
+}
+
 async function sendActivationEmail({ to, companyName, companyCode, plan }) {
   const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <onboarding@resend.dev>';
+  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <contato@taxlingo.com.br>';
   if (!RESEND_API_KEY || !to) return; // e-mail é um "nice to have" aqui — não derruba a ativação se faltar
 
   await fetch('https://api.resend.com/emails', {
@@ -62,6 +133,126 @@ async function sendActivationEmail({ to, companyName, companyCode, plan }) {
   }).catch((err) => console.error('sendActivationEmail failed (non-fatal):', err));
 }
 
+// E-mail do Plano Individual: credenciais de login prontas (a conta já é
+// criada aqui, ao contrário do Starter/Pro, onde só o company_code é
+// mandado e a pessoa se cadastra normalmente depois).
+async function sendIndividualWelcomeEmail({ to, tempPassword }) {
+  const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
+  const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <contato@taxlingo.com.br>';
+  if (!RESEND_API_KEY || !to) return;
+
+  await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      from: RESEND_FROM_EMAIL,
+      to: [to],
+      subject: 'Sua conta TaxLingo está pronta! 🎉',
+      html: `
+        <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
+          <h2 style="color:#059669;">Pagamento confirmado — bem-vindo(a) ao TaxLingo!</h2>
+          <p>Sua conta individual já está ativa. Seus dados de acesso:</p>
+          <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+            <tr><td style="padding:8px; background:#f0fdf4; border-radius:8px 8px 0 0;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${to}</td></tr>
+            <tr><td style="padding:8px; background:#f0fdf4; border-radius:0 0 8px 8px;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
+          </table>
+          <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
+          <p style="color:#94a3b8; font-size:12px;">Recomendamos trocar essa senha assim que entrar (Meu Perfil → Alterar senha). Seu acesso é renovado automaticamente a cada pagamento mensal.</p>
+        </div>
+      `,
+    }),
+  }).catch((err) => console.error('sendIndividualWelcomeEmail failed (non-fatal):', err));
+}
+
+// Estende `trial_expires_at` (o campo que controla até quando o acesso do
+// Plano Individual vale — ver isTrialExpired() em GameContext.jsx) na linha
+// de public.users já existente. Não mexe em metadata de auth.users: quem
+// decide se o acesso expirou é sempre a coluna, lida via fetchProfile().
+async function extendUserAccess(supabase, { userId, companyId, expiresAt }) {
+  const query = userId
+    ? supabase.from('users').update({ trial_expires_at: expiresAt }).eq('id', userId)
+    : supabase.from('users').update({ trial_expires_at: expiresAt }).eq('company_id', companyId);
+  await query;
+}
+
+// Cria (primeira compra) ou renova (pagamento recorrente do mês seguinte) o
+// acesso do Plano Individual comprado pelo link de pagamento fixo do Asaas.
+async function activateIndividualPayment(supabase, { asaasCustomerId, asaasSubscriptionId, periodEnd, customerEmail, customerName }) {
+  if (!customerEmail) {
+    throw new Error('Pagamento sem e-mail de cliente associado (Asaas) — não dá pra criar/renovar a conta.');
+  }
+  const expiresAt = new Date(Date.now() + INDIVIDUAL_ACCESS_DAYS * 24 * 60 * 60 * 1000).toISOString();
+
+  // Já vimos esse cliente Asaas antes (renovação mensal)? Só estende o
+  // prazo de acesso, sem recriar empresa/usuário.
+  const { data: existingSub } = await supabase
+    .from('subscriptions')
+    .select('id, company_id')
+    .eq('asaas_customer_id', asaasCustomerId)
+    .maybeSingle();
+
+  if (existingSub) {
+    await supabase
+      .from('subscriptions')
+      .update({
+        status: 'active',
+        asaas_subscription_id: asaasSubscriptionId ?? undefined,
+        current_period_end: periodEnd,
+      })
+      .eq('id', existingSub.id);
+    await extendUserAccess(supabase, { companyId: existingSub.company_id, expiresAt });
+    return;
+  }
+
+  // Primeira compra desse cliente Asaas: cria uma empresa invisível (só
+  // pra satisfazer a FK obrigatória de company_id — nunca é mostrada pro
+  // usuário) e a conta de fato.
+  const companyLabel = `Conta Individual — ${customerName || customerEmail}`;
+  const companyCode = await generateCompanyCode(supabase, companyLabel);
+  const { data: company, error: companyError } = await supabase
+    .from('companies')
+    .insert({ name: companyLabel, company_code: companyCode })
+    .select('id')
+    .single();
+  if (companyError) throw companyError;
+
+  await supabase.from('subscriptions').insert({
+    company_id: company.id,
+    plan: 'individual',
+    status: 'active',
+    seats_limit: 1,
+    asaas_customer_id: asaasCustomerId,
+    asaas_subscription_id: asaasSubscriptionId ?? null,
+    current_period_end: periodEnd,
+  });
+
+  const tempPassword = generateTempPassword();
+  const { error: createUserError } = await supabase.auth.admin.createUser({
+    email: customerEmail,
+    password: tempPassword,
+    email_confirm: true,
+    user_metadata: {
+      full_name: customerName || customerEmail.split('@')[0],
+      company_id: company.id,
+      avatar_url: '🙂',
+      trial_expires_at: expiresAt,
+    },
+  });
+
+  if (!createUserError) {
+    await sendIndividualWelcomeEmail({ to: customerEmail, tempPassword });
+    return;
+  }
+  if (!createUserError.message?.includes('already been registered')) {
+    throw createUserError;
+  }
+  // E-mail já tinha conta em outro lugar (ex.: colaborador de uma empresa
+  // corporativa) — não mexe no vínculo de empresa dela, só estende o
+  // prazo de acesso na conta que já existe.
+  const { data: existingUser } = await supabase.from('users').select('id').eq('email', customerEmail).maybeSingle();
+  if (existingUser) await extendUserAccess(supabase, { userId: existingUser.id, expiresAt });
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response(null, { headers: CORS_HEADERS });
   if (req.method !== 'POST') return jsonResponse({ error: 'Método não permitido.' }, 405);
@@ -81,13 +272,15 @@ Deno.serve(async (req) => {
 
   const event = payload?.event;
   const payment = payload?.payment;
-  const asaasSubscriptionId = payment?.subscription;
 
-  if (!event || !asaasSubscriptionId) {
-    // Evento que não envolve assinatura (ex: cobrança avulsa) — confirma
+  if (!event || !payment) {
+    // Evento que não envolve uma cobrança (ex: eventos de conta) — confirma
     // recebimento sem fazer nada, pro Asaas não ficar reenviando.
     return jsonResponse({ ok: true, ignored: true });
   }
+
+  const asaasSubscriptionId = payment.subscription ?? null;
+  const periodEnd = payment.nextDueDate ? new Date(payment.nextDueDate).toISOString() : null;
 
   const supabase = createClient(
     Deno.env.get('SUPABASE_URL'),
@@ -96,52 +289,72 @@ Deno.serve(async (req) => {
   );
 
   try {
-    const { data: subscription } = await supabase
-      .from('subscriptions')
-      .select('id, company_id, plan')
-      .eq('asaas_subscription_id', asaasSubscriptionId)
-      .maybeSingle();
+    // 1. Tenta casar com uma assinatura Corporativa criada pela nossa
+    //    própria create-asaas-checkout.
+    const { data: subscription } = asaasSubscriptionId
+      ? await supabase
+          .from('subscriptions')
+          .select('id, company_id, plan')
+          .eq('asaas_subscription_id', asaasSubscriptionId)
+          .maybeSingle()
+      : { data: null };
 
-    if (!subscription) {
-      console.warn('Webhook recebido para assinatura desconhecida:', asaasSubscriptionId);
+    if (subscription) {
+      if (ACTIVATING_EVENTS.has(event)) {
+        await supabase
+          .from('subscriptions')
+          .update({ status: 'active', current_period_end: periodEnd })
+          .eq('id', subscription.id);
+
+        const { data: company } = await supabase
+          .from('companies')
+          .select('name, company_code')
+          .eq('id', subscription.company_id)
+          .single();
+
+        const { data: admin } = await supabase
+          .from('users')
+          .select('email')
+          .eq('company_id', subscription.company_id)
+          .eq('role', 'admin')
+          .limit(1)
+          .maybeSingle();
+
+        if (company) {
+          await sendActivationEmail({
+            to: admin?.email,
+            companyName: company.name,
+            companyCode: company.company_code,
+            plan: subscription.plan,
+          });
+        }
+      } else if (DEACTIVATING_EVENTS.has(event)) {
+        const status = event === 'PAYMENT_OVERDUE' ? 'past_due' : 'canceled';
+        await supabase.from('subscriptions').update({ status }).eq('id', subscription.id);
+      }
+      return jsonResponse({ ok: true });
+    }
+
+    // 2. Sem assinatura Corporativa correspondente: trata como pagamento do
+    //    Plano Individual feito pelo link de pagamento fixo do Asaas (sem
+    //    checkout prévio no nosso sistema pra correlacionar) — busca os
+    //    dados do cliente direto na API do Asaas pra criar/renovar a conta.
+    if (!payment.customer) {
       return jsonResponse({ ok: true, ignored: true });
     }
 
     if (ACTIVATING_EVENTS.has(event)) {
-      const periodEnd = payment?.nextDueDate
-        ? new Date(payment.nextDueDate).toISOString()
-        : null;
-
-      await supabase
-        .from('subscriptions')
-        .update({ status: 'active', current_period_end: periodEnd })
-        .eq('id', subscription.id);
-
-      const { data: company } = await supabase
-        .from('companies')
-        .select('name, company_code')
-        .eq('id', subscription.company_id)
-        .single();
-
-      const { data: admin } = await supabase
-        .from('users')
-        .select('email')
-        .eq('company_id', subscription.company_id)
-        .eq('role', 'admin')
-        .limit(1)
-        .maybeSingle();
-
-      if (company) {
-        await sendActivationEmail({
-          to: admin?.email,
-          companyName: company.name,
-          companyCode: company.company_code,
-          plan: subscription.plan,
-        });
-      }
+      const customer = await asaasFetch(`/customers/${payment.customer}`);
+      await activateIndividualPayment(supabase, {
+        asaasCustomerId: payment.customer,
+        asaasSubscriptionId,
+        periodEnd,
+        customerEmail: customer?.email,
+        customerName: customer?.name,
+      });
     } else if (DEACTIVATING_EVENTS.has(event)) {
       const status = event === 'PAYMENT_OVERDUE' ? 'past_due' : 'canceled';
-      await supabase.from('subscriptions').update({ status }).eq('id', subscription.id);
+      await supabase.from('subscriptions').update({ status }).eq('asaas_customer_id', payment.customer);
     }
 
     return jsonResponse({ ok: true });
