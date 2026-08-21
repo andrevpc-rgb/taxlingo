@@ -49,6 +49,8 @@ const XP_PER_CORRECT_ANSWER = 10;
 const DAILY_REVIEW_LESSON_ID = 'daily-review';
 const USERS_STORAGE_KEY = 'taxlingo_users';
 const SESSION_STORAGE_KEY = 'taxlingo_session';
+const ACCESS_EXPIRED_MESSAGE =
+  'Seu acesso expirou. Se você tem o Plano Individual, ele renova sozinho no próximo pagamento; se é colaborador de uma empresa, peça ao RH pra renovar o plano corporativo.';
 
 // ---------------------------------------------------------------------------
 // checkAnswer: função pura que sabe validar cada um dos 5 tipos de questão.
@@ -357,15 +359,22 @@ function getNextLevelFirstLesson(moduleId, lessonId) {
   return { moduleId, lessonId: `${nextLevel.id}-1` };
 }
 
-// Modo Supabase: contas com acesso por prazo (não vínculo direto com uma
-// empresa) têm `trialExpiresAt` preenchido — tanto o "Testar Grátis por 24
-// Horas" quanto o Plano Individual comprado pelo link do Asaas (nesse caso
-// renovado a cada pagamento mensal, ver asaas-webhook). Depois desse
-// prazo, o acesso é derrubado automaticamente no próximo login/restauração
-// de sessão (não precisa de um job em background pra "banir" a conta — é
-// barato e suficiente checar na entrada).
-function isTrialExpired(profile) {
-  return Boolean(profile?.trialExpiresAt) && new Date(profile.trialExpiresAt) < new Date();
+// Checa se o acesso do usuário venceu — dois motivos possíveis, os dois
+// derrubados automaticamente no próximo login/restauração de sessão (não
+// precisa de um job em background pra "banir" a conta, é barato e
+// suficiente checar na entrada):
+// - `trialExpiresAt`: contas com acesso por prazo pessoal — "Testar Grátis
+//   por 24 Horas" ou Plano Individual comprado pelo link do Asaas (nesse
+//   caso renovado a cada pagamento mensal, ver asaas-webhook).
+// - `companyExpiresAt`: colaborador de uma empresa Corporativa cujo plano
+//   venceu (ver companies.expires_at / check_company_capacity() no schema).
+// A conta master (fundador) nunca é derrubada por isso — é a conta de
+// contingência, precisa sempre conseguir entrar.
+function isAccessExpired(profile) {
+  if (profile?.role === 'master') return false;
+  const trialExpired = Boolean(profile?.trialExpiresAt) && new Date(profile.trialExpiresAt) < new Date();
+  const companyExpired = Boolean(profile?.companyExpiresAt) && new Date(profile.companyExpiresAt) < new Date();
+  return trialExpired || companyExpired;
 }
 
 // Estimativa de tempo de estudo (mock: ~0.8min por questão, arredondado
@@ -430,6 +439,7 @@ function buildInitialState() {
       isAuthenticated: false,
       authLoading: true,
       authError: null,
+      passwordRecoveryMode: false,
       ...shared,
     };
   }
@@ -444,6 +454,7 @@ function buildInitialState() {
     isAuthenticated: Boolean(sessionUser),
     authLoading: false,
     authError: null,
+    passwordRecoveryMode: false,
     ...shared,
   };
 }
@@ -491,6 +502,14 @@ function gameReducerCore(state, action) {
       if (!found || found.password !== password) {
         return { ...state, authError: 'E-mail ou senha inválidos.' };
       }
+      // Herda o vencimento da empresa (Plano Corporativo) — master nunca é
+      // barrado por isso, é a conta de contingência.
+      if (found.role !== 'master') {
+        const foundCompany = getCompanyById(found.companyId);
+        if (foundCompany?.expiresAt && new Date(foundCompany.expiresAt) < new Date()) {
+          return { ...state, authError: ACCESS_EXPIRED_MESSAGE };
+        }
+      }
       return {
         ...state,
         user: found,
@@ -513,6 +532,15 @@ function gameReducerCore(state, action) {
       const company = getCompanyByCode(companyCode);
       if (!company) {
         return { ...state, authError: 'Código de empresa inválido. Confira com o seu RH.' };
+      }
+      if (company.expiresAt && new Date(company.expiresAt) < new Date()) {
+        return { ...state, authError: 'O plano desta empresa está vencido. Peça ao RH para renovar.' };
+      }
+      if (company.maxUsers != null) {
+        const currentCount = state.users.filter((u) => u.companyId === company.id).length;
+        if (currentCount >= company.maxUsers) {
+          return { ...state, authError: 'Limite de vagas da empresa atingido. Peça ao RH para ampliar o plano.' };
+        }
       }
 
       const newUser = {
@@ -596,6 +624,7 @@ function gameReducerCore(state, action) {
         isAuthenticated: true,
         authLoading: false,
         authError: null,
+        passwordRecoveryMode: false,
       };
     }
 
@@ -611,7 +640,20 @@ function gameReducerCore(state, action) {
         isAuthenticated: false,
         authLoading: false,
         authError: null,
+        passwordRecoveryMode: false,
       };
+    }
+
+    // O clique no link do e-mail de redefinição de senha loga o usuário
+    // numa sessão especial de "recuperação" (evento PASSWORD_RECOVERY do
+    // Supabase Auth) — em vez de cair direto no app, ele precisa passar
+    // pela tela de "defina uma senha nova" primeiro. Ver ResetPasswordForm.
+    case 'PASSWORD_RECOVERY_MODE': {
+      return { ...state, passwordRecoveryMode: true, authLoading: false, authError: null };
+    }
+
+    case 'PASSWORD_RESET_COMPLETE': {
+      return { ...state, passwordRecoveryMode: false };
     }
 
     // Perfil atualizado com sucesso no Supabase — ao contrário de
@@ -1159,9 +1201,9 @@ export function GameProvider({ children }) {
         if (!active) return;
         if (session?.user) {
           const profile = await api.fetchProfile(session.user.id);
-          if (isTrialExpired(profile)) {
+          if (isAccessExpired(profile)) {
             await api.signOut();
-            dispatch({ type: 'AUTH_ERROR', payload: 'Seu acesso expirou. Se você tem o Plano Individual, o acesso renova sozinho no próximo pagamento; senão, peça o código da sua empresa.' });
+            dispatch({ type: 'AUTH_ERROR', payload: ACCESS_EXPIRED_MESSAGE });
             return;
           }
           dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });
@@ -1173,7 +1215,14 @@ export function GameProvider({ children }) {
       }
     })();
 
-    const unsubscribe = api.onAuthStateChange((session) => {
+    const unsubscribe = api.onAuthStateChange((session, event) => {
+      // Clique no link do e-mail de "esqueci minha senha": o Supabase Auth
+      // já autentica numa sessão especial e dispara este evento — desvia
+      // pra tela de definir senha nova em vez de deixar cair no app normal.
+      if (event === 'PASSWORD_RECOVERY') {
+        dispatch({ type: 'PASSWORD_RECOVERY_MODE' });
+        return;
+      }
       // login/registro já disparam AUTH_SUCCESS explicitamente com o perfil
       // buscado; este listener só cobre logout/expiração de token vindos de
       // fora (outra aba, sessão expirada).
@@ -1265,9 +1314,9 @@ export function GameProvider({ children }) {
     try {
       const { user: authUser } = await api.signIn(email, password);
       const profile = await api.fetchProfile(authUser.id);
-      if (isTrialExpired(profile)) {
+      if (isAccessExpired(profile)) {
         await api.signOut();
-        dispatch({ type: 'AUTH_ERROR', payload: 'Seu teste grátis de 24h expirou. Peça o código da sua empresa pra continuar.' });
+        dispatch({ type: 'AUTH_ERROR', payload: ACCESS_EXPIRED_MESSAGE });
         return;
       }
       dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });
@@ -1334,6 +1383,41 @@ export function GameProvider({ children }) {
   }, []);
 
   const clearAuthError = useCallback(() => dispatch({ type: 'CLEAR_AUTH_ERROR' }), []);
+
+  // "Esqueci minha senha": manda o e-mail de redefinição. Não usa
+  // AUTH_ERROR/state.authError de propósito, mesmo motivo do startFreeTrial
+  // — esse erro não tem nada a ver com uma tentativa de login em andamento.
+  const resetPasswordForEmail = useCallback(async (email) => {
+    if (!isSupabaseConfigured) {
+      return { ok: false, error: 'Redefinição de senha por e-mail precisa do Supabase configurado.' };
+    }
+    try {
+      await api.resetPasswordForEmail(email);
+      return { ok: true };
+    } catch (err) {
+      return { ok: false, error: err.message || 'Não foi possível enviar o e-mail de redefinição.' };
+    }
+  }, []);
+
+  // Chamado pela tela de "defina uma senha nova" depois de clicar no link
+  // do e-mail — a sessão de recuperação já está ativa (evento
+  // PASSWORD_RECOVERY, ver o listener acima), só falta trocar a senha e
+  // seguir pro app normalmente.
+  const completePasswordReset = useCallback(async (newPassword) => {
+    try {
+      await api.updatePassword(newPassword);
+      const session = await api.getCurrentSession();
+      if (session?.user) {
+        const profile = await api.fetchProfile(session.user.id);
+        dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });
+      } else {
+        dispatch({ type: 'PASSWORD_RESET_COMPLETE' });
+      }
+      return { ok: true };
+    } catch (err) {
+      return { ok: false, error: err.message || 'Não foi possível trocar a senha.' };
+    }
+  }, []);
 
   const updateProfile = useCallback(
     async (payload) => {
@@ -1463,6 +1547,8 @@ export function GameProvider({ children }) {
       logout,
       startFreeTrial,
       clearAuthError,
+      resetPasswordForEmail,
+      completePasswordReset,
       updateProfile,
       startLesson,
       startAccelerationTest,
@@ -1496,6 +1582,8 @@ export function GameProvider({ children }) {
       logout,
       startFreeTrial,
       clearAuthError,
+      resetPasswordForEmail,
+      completePasswordReset,
       updateProfile,
       startLesson,
       startAccelerationTest,

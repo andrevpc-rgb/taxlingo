@@ -1,7 +1,20 @@
 // src/components/AuthModal.jsx
 import React, { useState } from 'react';
-import { LogIn, UserPlus, AlertCircle, Sparkles, Gift, Mail, Check, CreditCard, Info } from 'lucide-react';
+import {
+  LogIn,
+  UserPlus,
+  AlertCircle,
+  Gift,
+  Mail,
+  Check,
+  CreditCard,
+  Info,
+  KeyRound,
+  Building2,
+} from 'lucide-react';
 import { useGame } from '../context/GameContext.jsx';
+import { isSupabaseConfigured } from '../lib/supabase';
+import * as api from '../lib/api';
 import { PLANS } from '../data/mockData';
 
 // Link de pagamento fixo do Asaas para o Plano Individual — configurado
@@ -12,12 +25,6 @@ import { PLANS } from '../data/mockData';
 // (asaas-webhook, evento PAYMENT_RECEIVED) cria a conta sozinha e manda
 // e-mail/senha de acesso por e-mail.
 const ASAAS_INDIVIDUAL_PAYMENT_LINK = 'https://www.asaas.com/c/4vramk3few3gyne9';
-
-const TEST_ACCOUNTS = [
-  { label: 'Andréia · Contabilidade Alfa', email: 'andreia@alfa.com', password: 'demo123' },
-  { label: 'Juliana · Beta Consultoria', email: 'juliana@beta.com', password: 'demo123' },
-  { label: 'Patrícia · Grupo Gamma', email: 'patricia@gamma.com', password: 'demo123' },
-];
 
 // Lead capture: "Testar Grátis por 24 Horas" — pede só o e-mail, cria uma
 // conta temporária no backend (Edge Function) e manda as credenciais por
@@ -99,6 +106,78 @@ function FreeTrialSection() {
   );
 }
 
+// "Esqueci minha senha": pede só o e-mail e chama
+// supabase.auth.resetPasswordForEmail() (via GameContext.resetPasswordForEmail).
+// O link do e-mail loga numa sessão de recuperação que cai direto na tela
+// de definir senha nova (ver ResetPasswordForm.jsx / App.jsx).
+function ForgotPasswordSection({ onClose }) {
+  const { resetPasswordForEmail } = useGame();
+  const [email, setEmail] = useState('');
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setError(null);
+    setLoading(true);
+    const result = await resetPasswordForEmail(email);
+    setLoading(false);
+    if (result.ok) {
+      setSent(true);
+    } else {
+      setError(result.error);
+    }
+  };
+
+  if (sent) {
+    return (
+      <div className="flex items-center gap-2 rounded-2xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-xs font-bold text-emerald-700">
+        <Check className="h-4 w-4 shrink-0" />
+        Mandamos um link de redefinição para {email}. Confira sua caixa de entrada (e o spam).
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-2 rounded-2xl border-2 border-slate-200 bg-slate-50 p-3">
+      <div className="flex items-center justify-between">
+        <p className="flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wide text-slate-600">
+          <KeyRound className="h-4 w-4" />
+          Redefinir senha
+        </p>
+        <button type="button" onClick={onClose} className="text-[11px] font-bold text-slate-400 hover:text-slate-600">
+          Cancelar
+        </button>
+      </div>
+      <div className="relative">
+        <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="voce@empresa.com"
+          className="w-full rounded-xl border-2 border-slate-200 bg-white py-2 pl-9 pr-3 text-xs font-bold text-slate-700 outline-none focus:border-emerald-400"
+        />
+      </div>
+      {error && (
+        <p className="flex items-center gap-1.5 text-[11px] font-bold text-rose-600">
+          <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+          {error}
+        </p>
+      )}
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full rounded-xl bg-slate-700 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-white disabled:opacity-60"
+      >
+        {loading ? 'Enviando...' : 'Enviar link de redefinição'}
+      </button>
+    </form>
+  );
+}
+
 // Plano Individual: pra quem não tem (nem precisa de) uma empresa. Vai
 // direto pro link de pagamento do Asaas — sem formulário nosso, sem
 // cadastro prévio. A conta só passa a existir quando o pagamento é
@@ -126,20 +205,137 @@ function IndividualPlanSection() {
   );
 }
 
+// Plano Corporativo: ainda não tem checkout próprio (diferente do
+// Individual, que já tem o link fixo do Asaas) — isto é captura de LEAD,
+// não pagamento. Alguém do time comercial (ou o master, pelo Painel de
+// Contingência) entra em contato depois pra fechar e ativar de verdade.
+function CorporatePlanSection() {
+  const [expanded, setExpanded] = useState(false);
+  const [companyName, setCompanyName] = useState('');
+  const [cnpj, setCnpj] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [seatsRequested, setSeatsRequested] = useState('');
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setError(null);
+    if (!isSupabaseConfigured) {
+      setError('Esse formulário precisa do Supabase configurado (ver .env.local).');
+      return;
+    }
+    setLoading(true);
+    try {
+      await api.submitCorporateLead({
+        companyName: companyName.trim(),
+        cnpj: cnpj.trim(),
+        contactEmail: contactEmail.trim(),
+        seatsRequested: seatsRequested ? Number(seatsRequested) : null,
+      });
+      setSent(true);
+    } catch (err) {
+      setError(err.message || 'Não foi possível enviar sua solicitação.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (sent) {
+    return (
+      <div className="flex items-center gap-2 rounded-2xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-xs font-bold text-emerald-700">
+        <Check className="h-4 w-4 shrink-0" />
+        Recebemos sua solicitação! Nosso time entra em contato com {contactEmail} para fechar o Plano Corporativo.
+      </div>
+    );
+  }
+
+  if (!expanded) {
+    return (
+      <button
+        type="button"
+        onClick={() => setExpanded(true)}
+        className="flex w-full items-center justify-between gap-2 rounded-2xl border-2 border-dashed border-indigo-300 bg-indigo-50 px-4 py-3 text-xs font-extrabold uppercase tracking-wide text-indigo-600 transition-colors hover:border-indigo-400"
+      >
+        <span className="flex items-center gap-2">
+          <Building2 className="h-4 w-4" />
+          Plano Corporativo
+        </span>
+        <span className="normal-case tracking-normal text-indigo-500">Fale com a gente</span>
+      </button>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-2 rounded-2xl border-2 border-indigo-200 bg-indigo-50 p-3">
+      <p className="flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wide text-indigo-600">
+        <Building2 className="h-4 w-4" />
+        Plano Corporativo
+      </p>
+      <p className="text-[11px] text-indigo-600">
+        Pra escritórios e empresas treinarem o time inteiro. Deixe os dados que a gente entra em contato pra fechar.
+      </p>
+      <input
+        type="text"
+        required
+        value={companyName}
+        onChange={(e) => setCompanyName(e.target.value)}
+        placeholder="Nome da empresa"
+        className="w-full rounded-xl border-2 border-indigo-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-indigo-400"
+      />
+      <input
+        type="text"
+        value={cnpj}
+        onChange={(e) => setCnpj(e.target.value)}
+        placeholder="CNPJ (opcional)"
+        className="w-full rounded-xl border-2 border-indigo-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-indigo-400"
+      />
+      <div className="relative">
+        <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-indigo-400" />
+        <input
+          type="email"
+          required
+          value={contactEmail}
+          onChange={(e) => setContactEmail(e.target.value)}
+          placeholder="E-mail do responsável"
+          className="w-full rounded-xl border-2 border-indigo-200 bg-white py-2 pl-9 pr-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-400"
+        />
+      </div>
+      <input
+        type="number"
+        min="1"
+        value={seatsRequested}
+        onChange={(e) => setSeatsRequested(e.target.value)}
+        placeholder="Quantidade de vagas desejadas"
+        className="w-full rounded-xl border-2 border-indigo-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-indigo-400"
+      />
+      {error && (
+        <p className="flex items-center gap-1.5 text-[11px] font-bold text-rose-600">
+          <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+          {error}
+        </p>
+      )}
+      <button
+        type="submit"
+        disabled={loading}
+        className="w-full rounded-xl bg-indigo-500 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-white disabled:opacity-60"
+      >
+        {loading ? 'Enviando...' : 'Solicitar contato'}
+      </button>
+    </form>
+  );
+}
+
 function LoginForm() {
-  const { login, authError, clearAuthError } = useGame();
+  const { login, authError } = useGame();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showForgotPassword, setShowForgotPassword] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     login(email, password);
-  };
-
-  const fillTestAccount = (account) => {
-    clearAuthError();
-    setEmail(account.email);
-    setPassword(account.password);
   };
 
   return (
@@ -175,6 +371,16 @@ function LoginForm() {
           />
         </div>
 
+        {!showForgotPassword && (
+          <button
+            type="button"
+            onClick={() => setShowForgotPassword(true)}
+            className="text-xs font-bold text-slate-400 hover:text-slate-600"
+          >
+            Esqueci minha senha
+          </button>
+        )}
+
         {authError && (
           <p className="flex items-center gap-1.5 text-xs font-bold text-rose-600">
             <AlertCircle className="h-4 w-4 shrink-0" />
@@ -191,34 +397,17 @@ function LoginForm() {
         </button>
       </form>
 
+      {showForgotPassword && <ForgotPasswordSection onClose={() => setShowForgotPassword(false)} />}
+
       <p className="flex items-start gap-1.5 text-[11px] text-slate-400">
         <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
         Comprou o Plano Individual? Sua conta já foi criada — só entrar com o e-mail e a senha que mandamos por
         e-mail depois do pagamento. Não precisa de código de empresa.
       </p>
 
-      <div>
-        <p className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-slate-400">
-          <Sparkles className="h-3.5 w-3.5" />
-          Contas de teste
-        </p>
-        <div className="space-y-1.5">
-          {TEST_ACCOUNTS.map((account) => (
-            <button
-              key={account.email}
-              type="button"
-              onClick={() => fillTestAccount(account)}
-              className="w-full rounded-xl border-2 border-slate-100 bg-slate-50 px-3 py-2 text-left text-xs font-bold text-slate-500 transition-colors hover:border-emerald-200 hover:bg-emerald-50"
-            >
-              {account.label}
-              <span className="ml-1 font-normal text-slate-400">— {account.email}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
       <FreeTrialSection />
       <IndividualPlanSection />
+      <CorporatePlanSection />
     </div>
   );
 }

@@ -20,10 +20,15 @@ create table if not exists public.companies (
   name text not null,
   company_code text not null unique,
   logo_url text,
+  max_users integer, -- limite de vagas contratadas; null = sem limite (empresas seed/demo antigas)
+  expires_at timestamptz, -- vencimento do plano corporativo; null = sem vencimento
   created_at timestamptz not null default now()
 );
 
-comment on table public.companies is 'Empresas clientes (multi-tenancy). company_code é usado no cadastro do colaborador para vínculo automático.';
+comment on table public.companies is 'Empresas clientes (multi-tenancy). company_code é usado no cadastro do colaborador para vínculo automático. max_users/expires_at controlam capacidade e vencimento do plano — ver check_company_capacity() e handle_new_auth_user().';
+
+alter table public.companies add column if not exists max_users integer;
+alter table public.companies add column if not exists expires_at timestamptz;
 
 -- -----------------------------------------------------------------------------
 -- 2. users (perfil — vinculado 1:1 a auth.users)
@@ -195,10 +200,13 @@ create table if not exists public.pending_signups (
   admin_email text not null,
   plan text not null check (plan in ('individual', 'starter', 'pro')),
   cpf_cnpj text,
+  seats_requested integer, -- só preenchido pra leads do formulário "Plano Corporativo" (AuthModal.jsx)
   status text not null default 'pending' check (status in ('pending', 'completed', 'expired')),
   company_id uuid references public.companies (id) on delete set null,
   created_at timestamptz not null default now()
 );
+
+alter table public.pending_signups add column if not exists seats_requested integer;
 
 alter table public.pending_signups drop constraint if exists pending_signups_plan_check;
 alter table public.pending_signups add constraint pending_signups_plan_check check (plan in ('individual', 'starter', 'pro'));
@@ -230,14 +238,49 @@ returns trigger
 language plpgsql
 security definer set search_path = public
 as $$
+declare
+  target_company_id uuid;
+  target_max_users integer;
+  target_expires_at timestamptz;
+  current_count integer;
 begin
+  target_company_id := nullif(new.raw_user_meta_data ->> 'company_id', '')::uuid;
+
+  -- Guarda de capacidade/vencimento: roda de novo aqui (além do pré-check em
+  -- check_company_capacity(), chamado pelo cliente antes do signUp) porque
+  -- o pré-check tem uma janela de corrida (duas pessoas podem passar nele
+  -- ao mesmo tempo, com a última vaga). Isto aqui é a garantia de verdade —
+  -- rodar dentro da mesma transação do insert em auth.users garante que,
+  -- se estourar o limite, o cadastro inteiro é desfeito (não sobra usuário
+  -- órfão sem perfil).
+  if target_company_id is not null then
+    select max_users, expires_at into target_max_users, target_expires_at
+    from public.companies
+    where id = target_company_id;
+
+    if not found then
+      raise exception 'Empresa não encontrada.';
+    end if;
+
+    if target_expires_at is not null and target_expires_at < now() then
+      raise exception 'O plano desta empresa está vencido. Peça ao RH para renovar.';
+    end if;
+
+    if target_max_users is not null then
+      select count(*) into current_count from public.users where company_id = target_company_id;
+      if current_count >= target_max_users then
+        raise exception 'Limite de vagas da empresa atingido. Peça ao RH para ampliar o plano.';
+      end if;
+    end if;
+  end if;
+
   insert into public.users (id, email, full_name, job_title, company_id, avatar_url, trial_expires_at)
   values (
     new.id,
     new.email,
     coalesce(new.raw_user_meta_data ->> 'full_name', split_part(new.email, '@', 1)),
     new.raw_user_meta_data ->> 'job_title',
-    nullif(new.raw_user_meta_data ->> 'company_id', '')::uuid,
+    target_company_id,
     coalesce(new.raw_user_meta_data ->> 'avatar_url', '🙂'),
     nullif(new.raw_user_meta_data ->> 'trial_expires_at', '')::timestamptz
   )
@@ -250,6 +293,50 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute function public.handle_new_auth_user();
+
+-- Pré-checagem chamável pelo cliente ANTES de signUp() — dá uma mensagem de
+-- erro amigável sem precisar tentar criar a conta pra descobrir que a
+-- empresa está lotada/vencida. A garantia de verdade continua sendo o
+-- trigger acima (roda dentro da mesma transação do cadastro).
+create or replace function public.check_company_capacity(p_company_code text)
+returns table (is_valid boolean, reason text, company_id uuid)
+language plpgsql
+security definer set search_path = public
+stable
+as $$
+declare
+  target record;
+  current_count integer;
+begin
+  select id, max_users, expires_at into target
+  from public.companies
+  where company_code = upper(trim(p_company_code));
+
+  if target.id is null then
+    return query select false, 'Código de empresa inválido. Confira com o seu RH.'::text, null::uuid;
+    return;
+  end if;
+
+  if target.expires_at is not null and target.expires_at < now() then
+    return query select false, 'O plano desta empresa está vencido. Peça ao RH para renovar.'::text, target.id;
+    return;
+  end if;
+
+  if target.max_users is not null then
+    select count(*) into current_count from public.users where company_id = target.id;
+    if current_count >= target.max_users then
+      return query select false, 'Limite de vagas da empresa atingido. Peça ao RH para ampliar o plano.'::text, target.id;
+      return;
+    end if;
+  end if;
+
+  return query select true, null::text, target.id;
+end;
+$$;
+
+grant execute on function public.check_company_capacity(text) to anon, authenticated;
+
+comment on function public.check_company_capacity(text) is 'Checagem de código de empresa (existe? plano ativo? tem vaga?) chamada pelo cliente antes de signUp(). SECURITY DEFINER porque roda antes de existir sessão.';
 
 -- =============================================================================
 -- Helpers de RLS (SECURITY DEFINER pra evitar recursão de policy em `users`)

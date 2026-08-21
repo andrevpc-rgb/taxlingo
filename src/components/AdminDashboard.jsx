@@ -16,6 +16,7 @@ import {
 import { useGame } from '../context/GameContext.jsx';
 import { CAREER_LEVELS, mockTopicGaps } from '../data/mockData';
 import SubscriptionModal from './SubscriptionModal';
+import MasterContingencyPanel from './MasterContingencyPanel';
 
 const ACTIVE_WITHIN_DAYS = 3; // define o status "Ativo" na tabela e o KPI de colaboradores ativos
 const ENGAGEMENT_WINDOW_DAYS = 7;
@@ -176,6 +177,8 @@ export default function AdminDashboard() {
           <span className="hidden sm:inline">Assinatura</span>
         </button>
       </div>
+
+      {user.role === 'master' && <MasterContingencyPanel />}
 
       {/* A. Métricas Globais */}
       <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">

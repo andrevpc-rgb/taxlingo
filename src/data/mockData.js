@@ -103,10 +103,14 @@ export const PLANS = {
 // delas via `companyId`. `code` é o código que o colaborador informa no
 // cadastro para se vincular automaticamente à empresa certa.
 // ---------------------------------------------------------------------------
+// `maxUsers`/`expiresAt` espelham as colunas novas de public.companies no
+// Supabase (ver schema.sql / check_company_capacity()) — null em ambos
+// significa "sem limite de vagas" / "sem vencimento" (comportamento das
+// empresas demo, igual a antes).
 export const companies = [
-  { id: 'emp-01', name: 'Contabilidade Alfa', code: 'ALFA2026' },
-  { id: 'emp-02', name: 'Beta Consultoria Fiscal', code: 'BETA2026' },
-  { id: 'emp-03', name: 'Grupo Gamma Contábil', code: 'GAMMA2026' },
+  { id: 'emp-01', name: 'Contabilidade Alfa', code: 'ALFA2026', maxUsers: null, expiresAt: null },
+  { id: 'emp-02', name: 'Beta Consultoria Fiscal', code: 'BETA2026', maxUsers: null, expiresAt: null },
+  { id: 'emp-03', name: 'Grupo Gamma Contábil', code: 'GAMMA2026', maxUsers: null, expiresAt: null },
 ];
 
 export function getCompanyById(companyId) {

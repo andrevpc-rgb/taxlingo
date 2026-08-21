@@ -39,6 +39,10 @@ export function mapUserRow(row) {
     currentLevelSince: row.current_level_since,
     timeSpentMinutes: row.time_spent_minutes,
     trialExpiresAt: row.trial_expires_at,
+    // Vem de um select aninhado (`companies(expires_at)`, ver fetchProfile)
+    // quando o usuário tem company_id — vencimento herdado do plano
+    // Corporativo da empresa, ver isAccessExpired() em GameContext.jsx.
+    companyExpiresAt: row.companies?.expires_at ?? null,
   };
 }
 
@@ -127,10 +131,22 @@ export async function getCompanyByCode(code) {
   return data ? { id: data.id, name: data.name, code: data.company_code } : null;
 }
 
+// Checa código de empresa + plano ativo + vaga disponível ANTES de tentar
+// criar a conta (RPC SECURITY DEFINER, ver check_company_capacity() no
+// schema.sql — precisa rodar antes de existir sessão, por isso não é uma
+// query direta em `companies`/`users`). Devolve mensagem amigável pronta
+// pra mostrar; a garantia de verdade continua sendo o trigger
+// handle_new_auth_user() no banco (roda de novo, dentro da transação).
+export async function checkCompanyCapacity(companyCode) {
+  const { data, error } = await supabase.rpc('check_company_capacity', { p_company_code: companyCode });
+  if (error) throw error;
+  return data?.[0] ?? { is_valid: false, reason: 'Código de empresa inválido.', company_id: null };
+}
+
 export async function signUp({ email, password, fullName, jobTitle, companyCode }) {
-  const company = await getCompanyByCode(companyCode);
-  if (!company) {
-    throw new Error('Código de empresa inválido. Confira com o seu RH.');
+  const capacity = await checkCompanyCapacity(companyCode);
+  if (!capacity.is_valid) {
+    throw new Error(capacity.reason || 'Código de empresa inválido. Confira com o seu RH.');
   }
 
   const avatarPool = ['👩‍💼', '🧑‍💼', '👩‍💻', '🧑‍💻', '👩', '🧑'];
@@ -141,7 +157,7 @@ export async function signUp({ email, password, fullName, jobTitle, companyCode 
       data: {
         full_name: fullName,
         job_title: jobTitle || null,
-        company_id: company.id,
+        company_id: capacity.company_id,
         avatar_url: avatarPool[Math.floor(Math.random() * avatarPool.length)],
       },
     },
@@ -187,8 +203,20 @@ export async function getCurrentSession() {
   return data.session;
 }
 
+// "Esqueci minha senha": manda um e-mail com um link que loga o usuário numa
+// sessão de recuperação (evento PASSWORD_RECOVERY, ver onAuthStateChange
+// abaixo) — é essa sessão que permite trocar a senha em updatePassword(),
+// sem precisar saber a senha antiga.
+export async function resetPasswordForEmail(email) {
+  const redirectTo = `${window.location.origin}/`;
+  const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
+  if (error) throw error;
+}
+
+// Repassa o tipo do evento (não só a sessão) — GameContext precisa
+// distinguir PASSWORD_RECOVERY de um logout/expiração de token comuns.
 export function onAuthStateChange(callback) {
-  const { data } = supabase.auth.onAuthStateChange((_event, session) => callback(session));
+  const { data } = supabase.auth.onAuthStateChange((event, session) => callback(session, event));
   return () => data.subscription.unsubscribe();
 }
 
@@ -196,7 +224,14 @@ export function onAuthStateChange(callback) {
 // Perfil
 // ---------------------------------------------------------------------------
 export async function fetchProfile(userId) {
-  const { data, error } = await supabase.from('users').select('*').eq('id', userId).single();
+  // `companies(expires_at)` é um select aninhado via FK (users.company_id
+  // -> companies.id) — traz o vencimento do plano Corporativo (se houver)
+  // na mesma consulta, sem precisar de uma segunda ida ao banco.
+  const { data, error } = await supabase
+    .from('users')
+    .select('*, companies(expires_at)')
+    .eq('id', userId)
+    .single();
   if (error) throw error;
   return mapUserRow(data);
 }
@@ -389,4 +424,63 @@ export async function fetchCompanies() {
   const { data, error } = await supabase.from('companies').select('id, name, company_code');
   if (error) throw error;
   return data.map((c) => ({ id: c.id, name: c.name, code: c.company_code }));
+}
+
+// ---------------------------------------------------------------------------
+// Plano Corporativo — lead público + contingência do master
+// ---------------------------------------------------------------------------
+
+// Formulário público "Plano Corporativo" (AuthModal.jsx) — não é checkout,
+// é captura de lead: alguém do time comercial (ou o master, ver
+// adminProvisionCorporate) entra em contato depois pra fechar e ativar de
+// verdade. Vai para a Edge Function em vez de INSERT direto porque
+// `pending_signups` não tem policy nenhuma de RLS liberada pro cliente
+// (ver schema.sql) — só service_role toca nessa tabela.
+export async function submitCorporateLead({ companyName, cnpj, contactEmail, seatsRequested }) {
+  const { data, error } = await supabase.functions.invoke('submit-corporate-lead', {
+    body: { companyName, cnpj, contactEmail, seatsRequested },
+  });
+  if (error) {
+    const message = data?.error || error.message || 'Não foi possível enviar sua solicitação.';
+    throw new Error(message);
+  }
+  return data;
+}
+
+// Painel de Contingência (master): lista os leads de Plano Corporativo
+// ainda não ativados, e libera Plano Individual/Corporativo manualmente —
+// pro caso do link de pagamento do Asaas falhar. A Edge Function confere
+// de novo, no servidor, que quem está chamando é role='master' (nunca
+// confia só no fato de o botão estar visível no front).
+export async function fetchPendingCorporateLeads() {
+  const { data, error } = await supabase.functions.invoke('admin-provision', {
+    body: { action: 'list_leads' },
+  });
+  if (error) {
+    const message = data?.error || error.message || 'Não foi possível carregar os leads.';
+    throw new Error(message);
+  }
+  return data.leads;
+}
+
+export async function adminProvisionIndividual({ email, name }) {
+  const { data, error } = await supabase.functions.invoke('admin-provision', {
+    body: { action: 'create_individual', email, name },
+  });
+  if (error) {
+    const message = data?.error || error.message || 'Não foi possível criar o acesso individual.';
+    throw new Error(message);
+  }
+  return data;
+}
+
+export async function adminProvisionCorporate({ companyName, cnpj, maxUsers, expiresInDays, pendingSignupId }) {
+  const { data, error } = await supabase.functions.invoke('admin-provision', {
+    body: { action: 'create_corporate', companyName, cnpj, maxUsers, expiresInDays, pendingSignupId },
+  });
+  if (error) {
+    const message = data?.error || error.message || 'Não foi possível criar/ativar a empresa.';
+    throw new Error(message);
+  }
+  return data;
 }

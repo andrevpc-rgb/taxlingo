@@ -26,6 +26,7 @@ import QuizEngine from './components/QuizEngine';
 import Leaderboard from './components/Leaderboard';
 import AuthModal from './components/AuthModal';
 import AdminDashboard from './components/AdminDashboard';
+import ResetPasswordForm from './components/ResetPasswordForm';
 
 const MODULE_ICONS = {
   Landmark,
@@ -245,7 +246,14 @@ function BottomNav({ view, onNavigate, isManager }) {
 function AppShell() {
   // 'home' | 'quiz' | 'leaderboard' | 'admin'
   const [view, setView] = useState('home');
-  const { isAuthenticated, isManager, startLesson, startDailyReview, exitLesson } = useGame();
+  const { isAuthenticated, isManager, passwordRecoveryMode, startLesson, startDailyReview, exitLesson } = useGame();
+
+  // Clicou no link do e-mail de "esqueci minha senha": mostra a tela de
+  // definir senha nova antes de qualquer outra coisa, mesmo já "autenticado"
+  // (a sessão de recuperação do Supabase Auth conta como logado).
+  if (passwordRecoveryMode) {
+    return <ResetPasswordForm />;
+  }
 
   if (!isAuthenticated) {
     return <AuthModal />;
