@@ -85,10 +85,24 @@ async function verifyMaster(req, supabaseAnon) {
   const authHeader = req.headers.get('Authorization');
   if (!authHeader) return null;
 
-  const { data: userData, error: userError } = await supabaseAnon.auth.getUser(authHeader.replace('Bearer ', ''));
+  const token = authHeader.replace('Bearer ', '');
+  const { data: userData, error: userError } = await supabaseAnon.auth.getUser(token);
   if (userError || !userData?.user) return null;
 
-  const { data: profile, error: profileError } = await supabaseAnon
+  // A policy de RLS em public.users libera "id = auth.uid()" pra qualquer
+  // um ler o próprio perfil — mas isso só vale se a chamada carregar o JWT
+  // de quem está pedindo. supabaseAnon sozinho (só a anon key, sem esse
+  // header) é tratado como anônimo pelo Postgrest: auth.uid() vem null, a
+  // policy nunca bate, e a consulta sempre volta vazia (isso derrubava
+  // TODAS as ações do painel com 403, mesmo pra conta master de verdade).
+  // Repassa o Authorization do chamador num client à parte pra essa leitura
+  // rodar com a identidade certa.
+  const supabaseAsCaller = createClient(Deno.env.get('SUPABASE_URL'), Deno.env.get('SUPABASE_ANON_KEY'), {
+    auth: { autoRefreshToken: false, persistSession: false },
+    global: { headers: { Authorization: authHeader } },
+  });
+
+  const { data: profile, error: profileError } = await supabaseAsCaller
     .from('users')
     .select('id, role')
     .eq('id', userData.user.id)
