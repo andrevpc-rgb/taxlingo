@@ -28,6 +28,7 @@ import {
   LEVEL_UP_CHEST_GEMS,
   STREAK_BONUS_GEMS,
   STREAK_BONUS_INTERVAL_DAYS,
+  REPEAT_LESSON_XP,
   getDailyReviewQuestions,
 } from '../data/mockData';
 import { isSupabaseConfigured } from '../lib/supabase';
@@ -345,6 +346,46 @@ function skipAheadLessons(modulesState, moduleId, lessonId, skipCount) {
   return { modules: next, skippedCount: skipped };
 }
 
+// Reconstrói o lock/completed dos módulos a partir do progresso salvo no
+// Supabase (public.user_progress) — sem isso, todo login recomeçava do
+// zero (cloneModules() sempre volta ao estado seed, só a 1ª lição
+// destravada), mesmo com lições já concluídas no banco. Espelha exatamente
+// a mesma lógica de destravamento usada ao vivo em NEXT_QUESTION: lição
+// regular destrava só a próxima dentro do módulo; exame aprovado destrava a
+// 1ª lição do próximo nível de carreira (getNextLevelFirstLesson) quando
+// existir, senão segue o próximo item do módulo como qualquer outra lição.
+function applyProgressToModules(modulesState, progressRows) {
+  if (!progressRows || progressRows.length === 0) return modulesState;
+
+  const completedLessonIds = new Set();
+  const passedExamIds = new Set();
+  for (const row of progressRows) {
+    if (row.passed === true) passedExamIds.add(row.lessonId);
+    else if (row.passed === null) completedLessonIds.add(row.lessonId);
+  }
+
+  let next = modulesState;
+
+  for (const lessonId of completedLessonIds) {
+    const module = next.find((m) => m.lessons.some((l) => l.id === lessonId));
+    if (!module) continue;
+    next = updateLessonInModules(next, module.id, lessonId, { completed: true });
+    next = unlockNextLesson(next, module.id, lessonId);
+  }
+
+  for (const lessonId of passedExamIds) {
+    const module = next.find((m) => m.lessons.some((l) => l.id === lessonId));
+    if (!module) continue;
+    next = updateLessonInModules(next, module.id, lessonId, { completed: true });
+    const nextLevelLesson = getNextLevelFirstLesson(module.id, lessonId);
+    next = nextLevelLesson
+      ? updateLessonInModules(next, nextLevelLesson.moduleId, nextLevelLesson.lessonId, { locked: false })
+      : unlockNextLesson(next, module.id, lessonId);
+  }
+
+  return next;
+}
+
 // Ao passar no Exame de Transição, destrava a primeira lição do próximo
 // nível de carreira dentro do mesmo módulo (Reforma Tributária).
 function getLevelIdFromLessonId(lessonId) {
@@ -382,6 +423,19 @@ function isAccessExpired(profile) {
 // Uso" do Painel do Gestor sem precisar cronometrar de verdade a sessão.
 function estimateMinutesSpent(questionCount) {
   return Math.max(1, Math.round(questionCount * 0.8));
+}
+
+// Busca o progresso salvo no Supabase pra reconstruir o lock/completed dos
+// módulos (ver applyProgressToModules) — best-effort: se a rede falhar
+// aqui, o login ainda funciona, só que sem lembrar de onde o usuário parou
+// até o próximo login com sucesso (mesma filosofia do efeito que persiste
+// resultado de lição, mais abaixo).
+async function loadProgressSafely(userId) {
+  try {
+    return await api.fetchUserProgress(userId);
+  } catch {
+    return [];
+  }
 }
 
 // Campos de estado do "motor de jogo" (lição/quiz em andamento) — os mesmos
@@ -617,9 +671,11 @@ function gameReducerCore(state, action) {
     }
 
     case 'AUTH_SUCCESS': {
+      const shared = buildSharedGameState();
       return {
         ...state,
-        ...buildSharedGameState(),
+        ...shared,
+        modules: applyProgressToModules(shared.modules, action.payload.progress),
         user: action.payload.user,
         isAuthenticated: true,
         authLoading: false,
@@ -883,8 +939,13 @@ function gameReducerCore(state, action) {
           }
         }
 
+        // findLesson lê de state.modules (o estado ANTES desta tentativa) —
+        // se completed já era true, é uma repescagem de um exame já
+        // aprovado antes, e rende só o XP de repescagem (senão dava pra
+        // repetir o mesmo exame pra sempre e inflar o Ranking Geral).
         const examLesson = findLesson(state.modules, state.moduleId, state.lessonId);
-        const bonusXp = passed ? examLesson?.xpReward ?? 0 : 0;
+        const wasAlreadyPassed = Boolean(examLesson?.completed);
+        const bonusXp = passed ? (wasAlreadyPassed ? REPEAT_LESSON_XP : examLesson?.xpReward ?? 0) : 0;
         const examMinutes = estimateMinutesSpent(state.questions.length);
 
         // Toda tentativa (aprovada ou não) fica registrada no histórico do
@@ -945,13 +1006,18 @@ function gameReducerCore(state, action) {
       }
 
       // --- Lição regular (ou lição usada como Teste de Aceleração) -------
+      // findLesson lê de state.modules (o estado ANTES desta tentativa) —
+      // se completed já era true, é repescagem de uma lição já concluída
+      // antes, e rende só o XP de repescagem (senão dava pra repetir a
+      // mesma lição pra sempre e inflar o Ranking Geral).
       const lesson = findLesson(state.modules, state.moduleId, state.lessonId);
+      const wasAlreadyCompleted = Boolean(lesson?.completed);
       const lessonMinutes = estimateMinutesSpent(state.questions.length);
 
       // Teste de Aceleração: mecânica opcional à parte, com sua própria
       // regra de aprovação por % de aproveitamento.
       if (state.pendingAccelerationTest) {
-        const bonusXp = lesson?.xpReward ?? 0;
+        const bonusXp = wasAlreadyCompleted ? REPEAT_LESSON_XP : lesson?.xpReward ?? 0;
         let nextModules = updateLessonInModules(state.modules, state.moduleId, state.lessonId, {
           completed: true,
         });
@@ -1002,7 +1068,7 @@ function gameReducerCore(state, action) {
       // mas ainda vivo": ou o usuário ficou sem corações no meio do
       // caminho (Game Over, tratado no topo deste case) ou zerou a fila
       // de pendências e passa, exatamente como no Duolingo.
-      const bonusXp = lesson?.xpReward ?? 0;
+      const bonusXp = wasAlreadyCompleted ? REPEAT_LESSON_XP : lesson?.xpReward ?? 0;
       const nextModules = unlockNextLesson(
         updateLessonInModules(state.modules, state.moduleId, state.lessonId, { completed: true }),
         state.moduleId,
@@ -1206,7 +1272,9 @@ export function GameProvider({ children }) {
             dispatch({ type: 'AUTH_ERROR', payload: ACCESS_EXPIRED_MESSAGE });
             return;
           }
-          dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });
+          const progress = await loadProgressSafely(profile.id);
+          if (!active) return;
+          dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
         } else {
           dispatch({ type: 'AUTH_SIGNED_OUT' });
         }
@@ -1261,6 +1329,23 @@ export function GameProvider({ children }) {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.user?.id, state.user?.companyId, state.lessonComplete]);
+
+  // Exposto pro Leaderboard.jsx chamar ao montar (aba "Ranking" aberta) —
+  // pega o XP mais recente dos colegas mesmo se ninguém aqui terminou uma
+  // lição nesse meio tempo (o efeito acima só reage a login/lessonComplete
+  // da PRÓPRIA sessão, não ao que outra pessoa da empresa fez).
+  const refreshLeaderboards = useCallback(async () => {
+    if (!isSupabaseConfigured || !state.user) return;
+    try {
+      const [company, global] = await Promise.all([
+        api.fetchCompanyLeaderboard(state.user.companyId),
+        api.fetchGlobalLeaderboard(),
+      ]);
+      dispatch({ type: 'SET_SUPABASE_LEADERBOARDS', payload: { company, global } });
+    } catch {
+      // Ranking é informativo — uma falha aqui não deve travar a tela.
+    }
+  }, [state.user]);
 
   // Modo Supabase: quando uma lição termina, persiste o resultado (xp,
   // streak, tempo de uso, tentativa de exame) de volta pro banco, em
@@ -1319,7 +1404,8 @@ export function GameProvider({ children }) {
         dispatch({ type: 'AUTH_ERROR', payload: ACCESS_EXPIRED_MESSAGE });
         return;
       }
-      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });
+      const progress = await loadProgressSafely(profile.id);
+      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
     } catch (err) {
       dispatch({ type: 'AUTH_ERROR', payload: err.message || 'Não foi possível entrar.' });
     }
@@ -1364,7 +1450,8 @@ export function GameProvider({ children }) {
         return;
       }
       const profile = await api.fetchProfile(authUser.id);
-      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });
+      const progress = await loadProgressSafely(profile.id);
+      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
     } catch (err) {
       dispatch({ type: 'AUTH_ERROR', payload: err.message || 'Não foi possível cadastrar.' });
     }
@@ -1409,7 +1496,8 @@ export function GameProvider({ children }) {
       const session = await api.getCurrentSession();
       if (session?.user) {
         const profile = await api.fetchProfile(session.user.id);
-        dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile } });
+        const progress = await loadProgressSafely(profile.id);
+        dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
       } else {
         dispatch({ type: 'PASSWORD_RESET_COMPLETE' });
       }
@@ -1542,6 +1630,7 @@ export function GameProvider({ children }) {
       globalLeaderboard,
       weeklyCompanyLeaderboard,
       weeklyGlobalLeaderboard,
+      refreshLeaderboards,
       login,
       register,
       logout,
@@ -1577,6 +1666,7 @@ export function GameProvider({ children }) {
       globalLeaderboard,
       weeklyCompanyLeaderboard,
       weeklyGlobalLeaderboard,
+      refreshLeaderboards,
       login,
       register,
       logout,

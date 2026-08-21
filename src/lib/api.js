@@ -331,12 +331,13 @@ export async function recordLessonProgress({ userId, lessonId, score = null, pas
 // ---------------------------------------------------------------------------
 // Rankings
 // ---------------------------------------------------------------------------
+// Usa a RPC get_company_leaderboard em vez de um SELECT direto em `users`:
+// a policy de RLS dessa tabela só deixa admin/master ler os colegas
+// inteiros — um colaborador comum bateria nessa mesma query e só veria a
+// própria linha (RLS filtra em silêncio, sem erro), quebrando o Ranking da
+// Empresa pra todo mundo que não é gestor.
 export async function fetchCompanyLeaderboard(companyId) {
-  const { data, error } = await supabase
-    .from('users')
-    .select('id, full_name, avatar_url, job_title, company_id, xp, weekly_xp')
-    .eq('company_id', companyId)
-    .order('xp', { ascending: false });
+  const { data, error } = await supabase.rpc('get_company_leaderboard', { p_company_id: companyId });
   if (error) throw error;
   return data.map((row) => ({
     id: row.id,

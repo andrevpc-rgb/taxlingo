@@ -229,8 +229,8 @@ function BottomNav({ view, onNavigate, isManager }) {
               key={item.id}
               type="button"
               onClick={() => onNavigate(item.id)}
-              className={`flex min-h-[3rem] min-w-[3.5rem] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-1.5 text-[10px] font-extrabold uppercase leading-tight tracking-wide sm:px-6 sm:text-[11px] ${
-                isActive ? 'text-emerald-500' : 'text-slate-300'
+              className={`flex min-h-[3rem] min-w-[3.5rem] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-1.5 text-[10px] uppercase leading-tight tracking-wide sm:px-6 sm:text-[11px] ${
+                isActive ? 'font-black text-emerald-600' : 'font-bold text-slate-600'
               }`}
             >
               <Icon className="h-5 w-5 shrink-0" />

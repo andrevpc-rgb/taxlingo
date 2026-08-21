@@ -405,6 +405,35 @@ $$;
 
 comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa).';
 
+-- Ranking da Empresa: a policy users_select_self_or_company só deixa
+-- admin/master ler os colegas inteiros (comum lê só a própria linha) — um
+-- SELECT direto em `users` filtrado por company_id devolvia, pra um
+-- colaborador comum, só ele mesmo (sem erro nenhum, RLS filtra em
+-- silêncio). Mesma solução do Ranking Geral acima: function SECURITY
+-- DEFINER com as colunas seguras, mas agora com o guard de empresa embutido
+-- na própria query (não dá pra um usuário pedir o ranking de UMA OUTRA
+-- empresa só trocando o p_company_id — se não bater com a própria empresa
+-- dele, ou ele não for master, a condição fica sempre falsa e a lista volta
+-- vazia, igual RLS negando de verdade faria).
+drop function if exists public.get_company_leaderboard(uuid);
+
+create or replace function public.get_company_leaderboard(p_company_id uuid)
+returns table (id uuid, full_name text, avatar_url text, job_title text, company_id uuid, xp integer, weekly_xp integer)
+language sql
+security definer set search_path = public
+stable
+as $$
+  select id, full_name, avatar_url, job_title, company_id, xp, weekly_xp
+  from public.users
+  where company_id = p_company_id
+    and (public.is_master() or p_company_id = public.current_user_company_id())
+  order by xp desc;
+$$;
+
+grant execute on function public.get_company_leaderboard(uuid) to authenticated;
+
+comment on function public.get_company_leaderboard(uuid) is 'Ranking da Empresa: qualquer colaborador autenticado pode ver XP dos colegas da PRÓPRIA empresa (guard embutido na query — pedir o company_id de outra empresa sempre volta vazio).';
+
 -- =============================================================================
 -- Row Level Security
 -- =============================================================================

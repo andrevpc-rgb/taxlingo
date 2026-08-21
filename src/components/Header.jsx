@@ -31,7 +31,7 @@ function SoundToggle() {
 function StatPill({ icon, value, colorClass, label }) {
   return (
     <div
-      className={`flex shrink-0 items-center gap-1 rounded-2xl border-2 px-2 py-1.5 font-extrabold sm:gap-1.5 sm:px-3 ${colorClass}`}
+      className={`flex shrink-0 items-center gap-1 rounded-2xl border-2 px-1.5 py-1 font-extrabold sm:gap-1.5 sm:px-3 sm:py-1.5 ${colorClass}`}
       aria-label={label}
       title={label}
     >
@@ -56,7 +56,7 @@ function StreakFreezePill() {
           ? 'Você já tem o máximo de Congelamentos de Ofensiva'
           : `Comprar Congelamento de Ofensiva por ${STREAK_FREEZE_COST} gemas`
       }
-      className={`flex min-h-[2.75rem] shrink-0 items-center gap-1 rounded-2xl border-2 px-2 py-1.5 font-extrabold transition-colors sm:gap-1.5 sm:px-3 ${
+      className={`flex min-h-[2.75rem] shrink-0 items-center gap-1 rounded-2xl border-2 px-1.5 py-1 font-extrabold transition-colors sm:gap-1.5 sm:px-3 sm:py-1.5 ${
         canBuy
           ? 'border-sky-200 bg-sky-50 text-sky-600 hover:border-sky-300'
           : 'border-slate-200 bg-slate-50 text-slate-400'
@@ -96,7 +96,7 @@ function HeartsPill({ onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="flex min-h-[2.75rem] shrink-0 items-center gap-1 rounded-2xl border-2 border-rose-200 bg-rose-50 px-2 py-1.5 font-extrabold text-rose-600 transition-colors hover:border-rose-300 sm:gap-1.5 sm:px-3"
+      className="flex min-h-[2.75rem] shrink-0 items-center gap-1 rounded-2xl border-2 border-rose-200 bg-rose-50 px-1.5 py-1 font-extrabold text-rose-600 transition-colors hover:border-rose-300 sm:gap-1.5 sm:px-3 sm:py-1.5"
       aria-label="Vidas — toque para recarregar"
       title="Vidas — toque para recarregar"
     >
@@ -188,7 +188,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-20 overflow-hidden border-b-2 border-slate-200 bg-white">
-      <div className="mx-auto flex max-w-md items-center gap-1.5 px-2 py-2.5 sm:max-w-2xl sm:gap-3 sm:px-4 sm:py-3 md:max-w-4xl">
+      <div className="mx-auto flex max-w-md items-center gap-1 px-2 py-2 sm:max-w-2xl sm:gap-3 sm:px-4 sm:py-3 md:max-w-4xl">
         <div className="flex shrink-0 items-center gap-2">
           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-lg font-black text-white sm:h-9 sm:w-9">
             T
@@ -198,7 +198,7 @@ export default function Header() {
           </span>
         </div>
 
-        <div className="flex min-w-0 flex-1 items-center gap-1.5 overflow-x-auto sm:gap-3">
+        <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-1 gap-y-1 sm:gap-x-3">
           <StatPill
             icon={<Flame className="h-4 w-4 shrink-0 fill-orange-500 text-orange-500 sm:h-5 sm:w-5" />}
             value={user.streak}

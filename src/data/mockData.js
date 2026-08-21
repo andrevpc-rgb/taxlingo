@@ -68,6 +68,13 @@ export const LEVEL_UP_CHEST_GEMS = 100; // baú ao passar no Exame de Transiçã
 export const STREAK_BONUS_GEMS = 50; // bônus a cada STREAK_BONUS_INTERVAL_DAYS dias seguidos de ofensiva
 export const STREAK_BONUS_INTERVAL_DAYS = 7;
 
+// XP de repescagem: repetir uma lição/exame já concluído ainda soma pouco
+// XP (pra não deixar a prática sem graça nenhuma), mas bem menos que o XP
+// cheio da primeira vez — senão dava pra farmar Ranking Geral só repetindo
+// a Lição 1 pra sempre. Gemas continuam cheias em qualquer repetição (não é
+// XP/Ranking, não tem o mesmo risco de acúmulo infinito).
+export const REPEAT_LESSON_XP = 5;
+
 // Planos comerciais — usados tanto pela tela de vendas (SubscriptionModal,
 // AuthModal) quanto espelhados (com os mesmos ids/preços) nas Edge
 // Functions de checkout (create-asaas-checkout, create-nitrus-checkout).

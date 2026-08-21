@@ -1,5 +1,5 @@
 // src/components/Leaderboard.jsx
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Crown, Megaphone, Medal, Building2, Globe2, CalendarClock, Trophy } from 'lucide-react';
 import { useGame } from '../context/GameContext.jsx';
 import { HIGHLIGHT_THRESHOLD } from '../data/mockData';
@@ -77,7 +77,17 @@ export default function Leaderboard() {
     weeklyCompanyLeaderboard,
     weeklyGlobalLeaderboard,
     companies,
+    refreshLeaderboards,
   } = useGame();
+
+  // Busca o XP mais recente dos colegas ao abrir a aba — o contexto só
+  // refaz isso sozinho quando A PRÓPRIA sessão loga ou termina uma lição,
+  // não quando outra pessoa da empresa progride enquanto você já estava
+  // com o app aberto.
+  useEffect(() => {
+    refreshLeaderboards?.();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (!user) return null;
 
