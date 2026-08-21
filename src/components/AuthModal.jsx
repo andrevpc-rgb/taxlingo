@@ -205,15 +205,17 @@ function IndividualPlanSection() {
   );
 }
 
-// Plano Corporativo: ainda não tem checkout próprio (diferente do
-// Individual, que já tem o link fixo do Asaas) — isto é captura de LEAD,
-// não pagamento. Alguém do time comercial (ou o master, pelo Painel de
-// Contingência) entra em contato depois pra fechar e ativar de verdade.
+// Plano Corporativo: preenche o formulário e já recebe por e-mail uma
+// proposta com o link de pagamento pronto (gerado no Asaas pela Edge
+// Function create-corporate-lead) — não precisa esperar contato manual.
+// O CNPJ é obrigatório aqui porque a function usa ele pra achar/criar o
+// cliente de cobrança no Asaas antes de gerar o link.
 function CorporatePlanSection() {
   const [expanded, setExpanded] = useState(false);
   const [companyName, setCompanyName] = useState('');
   const [cnpj, setCnpj] = useState('');
   const [contactEmail, setContactEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [seatsRequested, setSeatsRequested] = useState('');
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -232,6 +234,7 @@ function CorporatePlanSection() {
         companyName: companyName.trim(),
         cnpj: cnpj.trim(),
         contactEmail: contactEmail.trim(),
+        phone: phone.trim(),
         seatsRequested: seatsRequested ? Number(seatsRequested) : null,
       });
       setSent(true);
@@ -246,7 +249,8 @@ function CorporatePlanSection() {
     return (
       <div className="flex items-center gap-2 rounded-2xl border-2 border-emerald-200 bg-emerald-50 px-4 py-3 text-xs font-bold text-emerald-700">
         <Check className="h-4 w-4 shrink-0" />
-        Recebemos sua solicitação! Nosso time entra em contato com {contactEmail} para fechar o Plano Corporativo.
+        Mandamos a proposta com o link de pagamento pra {contactEmail} — o acesso da equipe é liberado
+        automaticamente assim que o pagamento for confirmado.
       </div>
     );
   }
@@ -286,9 +290,10 @@ function CorporatePlanSection() {
       />
       <input
         type="text"
+        required
         value={cnpj}
         onChange={(e) => setCnpj(e.target.value)}
-        placeholder="CNPJ (opcional)"
+        placeholder="CNPJ (só números)"
         className="w-full rounded-xl border-2 border-indigo-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-indigo-400"
       />
       <div className="relative">
@@ -302,6 +307,13 @@ function CorporatePlanSection() {
           className="w-full rounded-xl border-2 border-indigo-200 bg-white py-2 pl-9 pr-3 text-xs font-bold text-slate-700 outline-none focus:border-indigo-400"
         />
       </div>
+      <input
+        type="tel"
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        placeholder="Telefone (opcional)"
+        className="w-full rounded-xl border-2 border-indigo-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-indigo-400"
+      />
       <input
         type="number"
         min="1"

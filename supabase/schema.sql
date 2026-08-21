@@ -200,15 +200,21 @@ create table if not exists public.pending_signups (
   company_name text not null,
   admin_name text,
   admin_email text not null,
+  admin_phone text,
   plan text not null check (plan in ('individual', 'starter', 'pro')),
   cpf_cnpj text,
   seats_requested integer, -- só preenchido pra leads do formulário "Plano Corporativo" (AuthModal.jsx)
+  payment_link_id text, -- id do Payment Link do Asaas (create-corporate-lead) — é assim que o asaas-webhook casa o pagamento confirmado com esta proposta e libera a empresa certa
   status text not null default 'pending' check (status in ('pending', 'completed', 'expired')),
   company_id uuid references public.companies (id) on delete set null,
   created_at timestamptz not null default now()
 );
 
 alter table public.pending_signups add column if not exists seats_requested integer;
+alter table public.pending_signups add column if not exists admin_phone text;
+alter table public.pending_signups add column if not exists payment_link_id text;
+
+create index if not exists pending_signups_payment_link_id_idx on public.pending_signups (payment_link_id);
 
 alter table public.pending_signups drop constraint if exists pending_signups_plan_check;
 alter table public.pending_signups add constraint pending_signups_plan_check check (plan in ('individual', 'starter', 'pro'));

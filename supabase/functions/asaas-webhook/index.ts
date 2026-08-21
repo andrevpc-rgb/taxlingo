@@ -4,24 +4,30 @@
 // Asaas > Configurações > Integrações > Webhooks:
 //   https://SEU-PROJETO.supabase.co/functions/v1/asaas-webhook
 //
-// Trata três casos bem diferentes:
+// Trata quatro casos bem diferentes:
 //   1. Plano Corporativo (Starter/Pro), caminho normal: o pagamento vem de
 //      uma assinatura criada pela nossa própria create-asaas-checkout
 //      (SubscriptionModal.jsx, modo Renovação/Upgrade), então já existe uma
 //      linha em `subscriptions` com o `asaas_subscription_id` — soma 30
 //      dias em companies.expires_at e ajusta companies.max_users conforme
 //      o plano (ver applyCorporateRenewal).
-//   2. Plano Corporativo, fallback por CNPJ: pagamento sem essa assinatura
-//      correlacionada (ex.: cobrança avulsa feita direto no painel do
-//      Asaas) mas cujo CNPJ do cliente bate com `companies.cnpj` — mesma
-//      renovação do caso 1, e a assinatura é correlacionada aqui pra a
-//      PRÓXIMA renovação já cair no caminho normal.
-//   3. Plano Individual: o pagamento vem do link de pagamento FIXO do
+//   2. Plano Corporativo, primeira venda via lead (create-corporate-lead):
+//      o pagamento vem de um Link de Pagamento (payment.paymentLink) que
+//      correlaciona com uma linha `pending_signups.payment_link_id` — a
+//      empresa AINDA NÃO EXISTE (só a proposta), então cria `companies` na
+//      hora (mesmo padrão do Plano Individual), soma 30 dias e ajusta
+//      max_users, e marca o lead como concluído (ver activateCorporateLead).
+//   3. Plano Corporativo, fallback por CNPJ: pagamento sem assinatura nem
+//      payment link correlacionados (ex.: cobrança avulsa feita direto no
+//      painel do Asaas) mas cujo CNPJ do cliente bate com `companies.cnpj`
+//      — mesma renovação do caso 1, e a assinatura é correlacionada aqui
+//      pra a PRÓXIMA renovação já cair no caminho normal.
+//   4. Plano Individual: o pagamento vem do link de pagamento FIXO do
 //      Asaas (configurado direto no painel deles, sem passar pela nossa
-//      create-asaas-checkout) e sem CNPJ correspondente — buscamos os
-//      dados do cliente na API do Asaas (nome/e-mail) e criamos a conta na
-//      hora, com acesso válido por 30 dias (renovado a cada pagamento
-//      mensal reconhecido).
+//      create-asaas-checkout) e sem payment link/CNPJ correspondente —
+//      buscamos os dados do cliente na API do Asaas (nome/e-mail) e
+//      criamos a conta na hora, com acesso válido por 30 dias (renovado a
+//      cada pagamento mensal reconhecido).
 //
 // Deploy:
 //   supabase functions deploy asaas-webhook --no-verify-jwt
@@ -251,6 +257,51 @@ function planFromPaymentValue(value) {
   return rounded === Math.round(CORPORATE_PLANS.pro.value) ? 'pro' : 'starter';
 }
 
+// Pagamento veio de um Link de Pagamento gerado pela create-corporate-lead
+// (payment.paymentLink casado com pending_signups.payment_link_id). Duas
+// situações:
+//   - lead ainda não convertido (company_id nulo): a empresa AINDA NÃO
+//     EXISTE — só a proposta. Cria `companies` agora (mesmo padrão do
+//     Plano Individual: código gerado, nunca escolhido pelo cliente) e
+//     `subscriptions`, marca o lead como concluído e manda o e-mail de
+//     ativação com o company_code pro RH repassar aos colaboradores.
+//   - lead já convertido (ex.: o mesmo Link de Pagamento reaproveitado
+//     numa renovação seguinte): só renova a empresa que já existe.
+async function activateCorporateLead(supabase, { lead, asaasSubscriptionId, periodEnd }) {
+  if (lead.company_id) {
+    await applyCorporateRenewal(supabase, { companyId: lead.company_id, plan: lead.plan });
+    return;
+  }
+
+  const companyCode = await generateCompanyCode(supabase, lead.company_name);
+  const { data: company, error: companyError } = await supabase
+    .from('companies')
+    .insert({ name: lead.company_name, company_code: companyCode, cnpj: lead.cpf_cnpj })
+    .select('id, name, company_code')
+    .single();
+  if (companyError) throw companyError;
+
+  await applyCorporateRenewal(supabase, { companyId: company.id, plan: lead.plan });
+
+  await supabase.from('subscriptions').insert({
+    company_id: company.id,
+    plan: lead.plan,
+    status: 'active',
+    seats_limit: (CORPORATE_PLANS[lead.plan] ?? CORPORATE_PLANS.starter).maxUsers,
+    asaas_subscription_id: asaasSubscriptionId,
+    current_period_end: periodEnd,
+  });
+
+  await supabase.from('pending_signups').update({ status: 'completed', company_id: company.id }).eq('id', lead.id);
+
+  await sendActivationEmail({
+    to: lead.admin_email,
+    companyName: company.name,
+    companyCode: company.company_code,
+    plan: lead.plan,
+  });
+}
+
 // Cria (primeira compra) ou renova (pagamento recorrente do mês seguinte) o
 // acesso do Plano Individual comprado pelo link de pagamento fixo do Asaas.
 async function activateIndividualPayment(supabase, { asaasCustomerId, asaasSubscriptionId, periodEnd, customerEmail, customerName }) {
@@ -429,7 +480,23 @@ Deno.serve(async (req) => {
       return jsonResponse({ ok: true });
     }
 
-    // 2. Sem assinatura correspondente por asaas_subscription_id. Duas
+    // 2. Pagamento veio de um Link de Pagamento gerado pela
+    //    create-corporate-lead — casa por payment.paymentLink com
+    //    pending_signups.payment_link_id (ver activateCorporateLead).
+    if (payment.paymentLink && ACTIVATING_EVENTS.has(event)) {
+      const { data: lead } = await supabase
+        .from('pending_signups')
+        .select('id, company_id, company_name, admin_email, cpf_cnpj, plan')
+        .eq('payment_link_id', payment.paymentLink)
+        .maybeSingle();
+
+      if (lead) {
+        await activateCorporateLead(supabase, { lead, asaasSubscriptionId, periodEnd });
+        return jsonResponse({ ok: true });
+      }
+    }
+
+    // 3. Sem assinatura nem payment link correspondentes. Duas
     //    possibilidades:
     //    a) Plano Corporativo cobrado avulso — ex.: renovação feita direto
     //       no painel do Asaas, sem passar pela nossa create-asaas-checkout

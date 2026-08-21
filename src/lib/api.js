@@ -447,15 +447,15 @@ async function functionErrorMessage(error, fallback) {
   return error?.message || fallback;
 }
 
-// Formulário público "Plano Corporativo" (AuthModal.jsx) — não é checkout,
-// é captura de lead: alguém do time comercial (ou o master, ver
-// adminProvisionCorporate) entra em contato depois pra fechar e ativar de
-// verdade. Vai para a Edge Function em vez de INSERT direto porque
+// Formulário público "Plano Corporativo" (AuthModal.jsx) — a Edge Function
+// já gera o cliente + Link de Pagamento no Asaas e manda a proposta por
+// e-mail (não é mais só uma captura de lead pro time comercial ligar
+// depois). Vai para a Edge Function em vez de INSERT direto porque
 // `pending_signups` não tem policy nenhuma de RLS liberada pro cliente
 // (ver schema.sql) — só service_role toca nessa tabela.
-export async function submitCorporateLead({ companyName, cnpj, contactEmail, seatsRequested }) {
-  const { data, error } = await supabase.functions.invoke('submit-corporate-lead', {
-    body: { companyName, cnpj, contactEmail, seatsRequested },
+export async function submitCorporateLead({ companyName, cnpj, contactEmail, phone, seatsRequested }) {
+  const { data, error } = await supabase.functions.invoke('create-corporate-lead', {
+    body: { companyName, cnpj, contactEmail, phone, seatsRequested },
   });
   if (error) {
     throw new Error(await functionErrorMessage(error, 'Não foi possível enviar sua solicitação.'));
