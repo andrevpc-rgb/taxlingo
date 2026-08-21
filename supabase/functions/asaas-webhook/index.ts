@@ -18,8 +18,10 @@
 // Deploy:
 //   supabase functions deploy asaas-webhook --no-verify-jwt
 //   supabase secrets set ASAAS_WEBHOOK_TOKEN=escolha-um-token-secreto
-//   supabase secrets set ASAAS_API_KEY=xxx ASAAS_ENV=sandbox
-//   (ASAAS_API_KEY agora também é usada aqui — não só na create-asaas-checkout
+//   supabase secrets set ASAAS_API_KEY=xxx
+//   (ASAAS_ENV é opcional e o padrão já é 'production' — só defina como
+//   ASAAS_ENV=sandbox se ASAAS_API_KEY for uma chave de sandbox ($aact_hmlg_...).
+//   ASAAS_API_KEY agora também é usada aqui — não só na create-asaas-checkout
 //   — pra buscar nome/e-mail do cliente que pagou pelo link do Plano
 //   Individual. ASAAS_WEBHOOK_TOKEN precisa ser cadastrado no painel do
 //   Asaas, no campo "Token de autenticação" da configuração do webhook —
@@ -56,8 +58,13 @@ function jsonResponse(body, status = 200) {
 }
 
 function asaasBaseUrl() {
-  const env = Deno.env.get('ASAAS_ENV') || 'sandbox';
-  return env === 'production' ? 'https://api.asaas.com/v3' : 'https://sandbox.asaas.com/api/v3';
+  // Padrão 'production': a chave configurada em ASAAS_API_KEY normalmente é
+  // a de produção (prefixo $aact_prod_...) — se ASAAS_ENV não estiver
+  // definida, é mais seguro assumir produção do que cair silenciosamente no
+  // sandbox e gerar erro "invalid_environment" (chave de prod contra URL de
+  // sandbox). Pra testar em sandbox, defina ASAAS_ENV=sandbox explicitamente.
+  const env = Deno.env.get('ASAAS_ENV') || 'production';
+  return env === 'production' ? 'https://api.asaas.com/v3' : 'https://api-sandbox.asaas.com/v3';
 }
 
 async function asaasFetch(path) {
@@ -112,25 +119,40 @@ async function generateCompanyCode(supabase, label) {
 async function sendActivationEmail({ to, companyName, companyCode, plan }) {
   const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
   const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <contato@taxlingo.com.br>';
-  if (!RESEND_API_KEY || !to) return; // e-mail é um "nice to have" aqui — não derruba a ativação se faltar
+  if (!RESEND_API_KEY || !to) {
+    // e-mail é um "nice to have" aqui — não derruba a ativação se faltar,
+    // mas registra por quê pra não ficar em silêncio nos logs.
+    console.error('sendActivationEmail: RESEND_API_KEY ou destinatário ausente — e-mail não enviado.', { to: Boolean(to), hasKey: Boolean(RESEND_API_KEY) });
+    return;
+  }
 
-  await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      from: RESEND_FROM_EMAIL,
-      to: [to],
-      subject: `Assinatura TaxLingo ativada — plano ${plan}`,
-      html: `
-        <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
-          <h2 style="color:#059669;">Pagamento confirmado! 🎉</h2>
-          <p>A assinatura do plano <strong>${plan}</strong> de <strong>${companyName}</strong> está ativa.</p>
-          <p>Compartilhe este código com os colaboradores pra eles se cadastrarem no TaxLingo:</p>
-          <p style="font-size:24px; font-weight:bold; background:#f0fdf4; padding:12px 20px; border-radius:12px; text-align:center;">${companyCode}</p>
-        </div>
-      `,
-    }),
-  }).catch((err) => console.error('sendActivationEmail failed (non-fatal):', err));
+  console.log('Enviando e-mail para:', to);
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from: RESEND_FROM_EMAIL,
+        to: [to],
+        subject: `Assinatura TaxLingo ativada — plano ${plan}`,
+        html: `
+          <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
+            <h2 style="color:#059669;">Pagamento confirmado! 🎉</h2>
+            <p>A assinatura do plano <strong>${plan}</strong> de <strong>${companyName}</strong> está ativa.</p>
+            <p>Compartilhe este código com os colaboradores pra eles se cadastrarem no TaxLingo:</p>
+            <p style="font-size:24px; font-weight:bold; background:#f0fdf4; padding:12px 20px; border-radius:12px; text-align:center;">${companyCode}</p>
+          </div>
+        `,
+      }),
+    });
+    const resendData = await res.json().catch(() => ({}));
+    console.log('Resposta Resend:', JSON.stringify(resendData));
+    if (!res.ok) {
+      console.error('Erro Resend:', resendData);
+    }
+  } catch (resendError) {
+    console.error('Erro Resend:', resendError);
+  }
 }
 
 // E-mail do Plano Individual: credenciais de login prontas (a conta já é
@@ -139,29 +161,42 @@ async function sendActivationEmail({ to, companyName, companyCode, plan }) {
 async function sendIndividualWelcomeEmail({ to, tempPassword }) {
   const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
   const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'TaxLingo <contato@taxlingo.com.br>';
-  if (!RESEND_API_KEY || !to) return;
+  if (!RESEND_API_KEY || !to) {
+    console.error('sendIndividualWelcomeEmail: RESEND_API_KEY ou destinatário ausente — e-mail não enviado.', { to: Boolean(to), hasKey: Boolean(RESEND_API_KEY) });
+    return;
+  }
 
-  await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      from: RESEND_FROM_EMAIL,
-      to: [to],
-      subject: 'Sua conta TaxLingo está pronta! 🎉',
-      html: `
-        <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
-          <h2 style="color:#059669;">Pagamento confirmado — bem-vindo(a) ao TaxLingo!</h2>
-          <p>Sua conta individual já está ativa. Seus dados de acesso:</p>
-          <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
-            <tr><td style="padding:8px; background:#f0fdf4; border-radius:8px 8px 0 0;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${to}</td></tr>
-            <tr><td style="padding:8px; background:#f0fdf4; border-radius:0 0 8px 8px;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
-          </table>
-          <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
-          <p style="color:#94a3b8; font-size:12px;">Recomendamos trocar essa senha assim que entrar (Meu Perfil → Alterar senha). Seu acesso é renovado automaticamente a cada pagamento mensal.</p>
-        </div>
-      `,
-    }),
-  }).catch((err) => console.error('sendIndividualWelcomeEmail failed (non-fatal):', err));
+  console.log('Enviando e-mail para:', to);
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from: RESEND_FROM_EMAIL,
+        to: [to],
+        subject: 'Sua conta TaxLingo está pronta! 🎉',
+        html: `
+          <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
+            <h2 style="color:#059669;">Pagamento confirmado — bem-vindo(a) ao TaxLingo!</h2>
+            <p>Sua conta individual já está ativa. Seus dados de acesso:</p>
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+              <tr><td style="padding:8px; background:#f0fdf4; border-radius:8px 8px 0 0;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${to}</td></tr>
+              <tr><td style="padding:8px; background:#f0fdf4; border-radius:0 0 8px 8px;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
+            </table>
+            <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
+            <p style="color:#94a3b8; font-size:12px;">Recomendamos trocar essa senha assim que entrar (Meu Perfil → Alterar senha). Seu acesso é renovado automaticamente a cada pagamento mensal.</p>
+          </div>
+        `,
+      }),
+    });
+    const resendData = await res.json().catch(() => ({}));
+    console.log('Resposta Resend:', JSON.stringify(resendData));
+    if (!res.ok) {
+      console.error('Erro Resend:', resendData);
+    }
+  } catch (resendError) {
+    console.error('Erro Resend:', resendError);
+  }
 }
 
 // Estende `trial_expires_at` (o campo que controla até quando o acesso do
@@ -246,11 +281,27 @@ async function activateIndividualPayment(supabase, { asaasCustomerId, asaasSubsc
   if (!createUserError.message?.includes('already been registered')) {
     throw createUserError;
   }
-  // E-mail já tinha conta em outro lugar (ex.: colaborador de uma empresa
-  // corporativa) — não mexe no vínculo de empresa dela, só estende o
-  // prazo de acesso na conta que já existe.
+
+  // E-mail já tinha conta — o caso real que motivou este bloco é alguém que
+  // usou o "Testar Grátis por 24h" (empresa TRIAL compartilhada) e depois
+  // comprou o Plano Individual: antes, esse caminho só estendia o prazo em
+  // silêncio e NUNCA mandava o e-mail de boas-vindas (a pessoa pagava e não
+  // recebia credencial nenhuma). Agora migra pra essa empresa dedicada que
+  // acabamos de criar (junto com a assinatura logo acima), gera uma senha
+  // nova — a antiga pode ter sido só de um teste esquecido — e manda o
+  // e-mail normalmente.
   const { data: existingUser } = await supabase.from('users').select('id').eq('email', customerEmail).maybeSingle();
-  if (existingUser) await extendUserAccess(supabase, { userId: existingUser.id, expiresAt });
+  if (!existingUser) {
+    console.error('activateIndividualPayment: e-mail já registrado no Auth, mas sem linha correspondente em public.users — não foi possível ativar.', customerEmail);
+    return;
+  }
+
+  await supabase
+    .from('users')
+    .update({ company_id: company.id, trial_expires_at: expiresAt })
+    .eq('id', existingUser.id);
+  await supabase.auth.admin.updateUserById(existingUser.id, { password: tempPassword });
+  await sendIndividualWelcomeEmail({ to: customerEmail, tempPassword });
 }
 
 Deno.serve(async (req) => {

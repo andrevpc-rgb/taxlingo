@@ -150,25 +150,39 @@ async function createIndividual(supabaseService, { email, name }) {
     throw createUserError;
   }
 
-  if (!createUserError) {
-    await sendEmail({
-      to: normalizedEmail,
-      subject: 'Sua conta TaxLingo está pronta! 🎉',
-      html: `
-        <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
-          <h2 style="color:#059669;">Bem-vindo(a) ao TaxLingo!</h2>
-          <p>Sua conta individual foi liberada manualmente pelo nosso time. Seus dados de acesso:</p>
-          <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
-            <tr><td style="padding:8px; background:#f0fdf4;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${normalizedEmail}</td></tr>
-            <tr><td style="padding:8px; background:#f0fdf4;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
-          </table>
-          <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
-        </div>
-      `,
-    });
+  // E-mail já tinha conta (ex.: veio do "Testar Grátis") — migra pra essa
+  // empresa dedicada que acabamos de criar e gera uma senha nova, em vez de
+  // só devolver "já existia" sem liberar nada de fato (era exatamente esse
+  // silêncio que deixava clientes pagantes sem e-mail de acesso).
+  if (createUserError) {
+    const { data: existingUser } = await supabaseService.from('users').select('id').eq('email', normalizedEmail).maybeSingle();
+    if (!existingUser) {
+      throw new Error('E-mail já cadastrado no Auth, mas sem perfil correspondente em public.users — não deu pra liberar automaticamente.');
+    }
+    await supabaseService
+      .from('users')
+      .update({ company_id: company.id, trial_expires_at: expiresAt })
+      .eq('id', existingUser.id);
+    await supabaseService.auth.admin.updateUserById(existingUser.id, { password: tempPassword });
   }
 
-  return { companyCode, tempPassword: createUserError ? null : tempPassword, alreadyExisted: Boolean(createUserError) };
+  await sendEmail({
+    to: normalizedEmail,
+    subject: 'Sua conta TaxLingo está pronta! 🎉',
+    html: `
+      <div style="font-family: sans-serif; max-width: 480px; margin:0 auto;">
+        <h2 style="color:#059669;">Bem-vindo(a) ao TaxLingo!</h2>
+        <p>Sua conta individual foi liberada manualmente pelo nosso time. Seus dados de acesso:</p>
+        <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+          <tr><td style="padding:8px; background:#f0fdf4;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${normalizedEmail}</td></tr>
+          <tr><td style="padding:8px; background:#f0fdf4;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
+        </table>
+        <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
+      </div>
+    `,
+  });
+
+  return { companyCode, tempPassword, alreadyExisted: false };
 }
 
 async function createCorporate(supabaseService, { companyName, cnpj, maxUsers, expiresInDays, pendingSignupId }) {

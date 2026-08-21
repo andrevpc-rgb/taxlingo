@@ -63,34 +63,42 @@ async function sendTrialEmail({ to, tempPassword, expiresAt }) {
 
   const expiresLabel = new Date(expiresAt).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
 
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${RESEND_API_KEY}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from: RESEND_FROM_EMAIL,
-      to: [to],
-      subject: 'Seu acesso de teste ao TaxLingo (válido por 24h)',
-      html: `
-        <div style="font-family: sans-serif; max-width: 480px; margin: 0 auto;">
-          <h2 style="color:#059669;">Ciao! Bem-vindo(a) ao TaxLingo 🧾</h2>
-          <p>Sua conta de teste grátis está pronta. Acesso válido por <strong>${TRIAL_HOURS} horas</strong>, até <strong>${expiresLabel}</strong>.</p>
-          <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
-            <tr><td style="padding:8px; background:#f0fdf4; border-radius:8px 8px 0 0;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${to}</td></tr>
-            <tr><td style="padding:8px; background:#f0fdf4; border-radius:0 0 8px 8px;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
-          </table>
-          <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
-          <p style="color:#94a3b8; font-size:12px;">Depois de ${TRIAL_HOURS}h esse acesso expira automaticamente. Gostou? Peça ao seu RH o código da empresa pra criar uma conta definitiva.</p>
-        </div>
-      `,
-    }),
-  });
+  console.log('Enviando e-mail para:', to);
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: RESEND_FROM_EMAIL,
+        to: [to],
+        subject: 'Seu acesso de teste ao TaxLingo (válido por 24h)',
+        html: `
+          <div style="font-family: sans-serif; max-width: 480px; margin: 0 auto;">
+            <h2 style="color:#059669;">Ciao! Bem-vindo(a) ao TaxLingo 🧾</h2>
+            <p>Sua conta de teste grátis está pronta. Acesso válido por <strong>${TRIAL_HOURS} horas</strong>, até <strong>${expiresLabel}</strong>.</p>
+            <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+              <tr><td style="padding:8px; background:#f0fdf4; border-radius:8px 8px 0 0;"><strong>E-mail:</strong></td><td style="padding:8px; background:#f0fdf4;">${to}</td></tr>
+              <tr><td style="padding:8px; background:#f0fdf4; border-radius:0 0 8px 8px;"><strong>Senha temporária:</strong></td><td style="padding:8px; background:#f0fdf4;"><code>${tempPassword}</code></td></tr>
+            </table>
+            <p><a href="https://taxlingo.com.br" style="background:#10b981; color:white; padding:10px 20px; border-radius:12px; text-decoration:none; font-weight:bold;">Entrar no TaxLingo</a></p>
+            <p style="color:#94a3b8; font-size:12px;">Depois de ${TRIAL_HOURS}h esse acesso expira automaticamente. Gostou? Peça ao seu RH o código da empresa pra criar uma conta definitiva.</p>
+          </div>
+        `,
+      }),
+    });
 
-  if (!res.ok) {
-    const detail = await res.text().catch(() => '');
-    throw new Error(`Falha ao enviar e-mail via Resend: ${res.status} ${detail}`);
+    const resendData = await res.json().catch(() => ({}));
+    console.log('Resposta Resend:', JSON.stringify(resendData));
+
+    if (!res.ok) {
+      throw new Error(`Falha ao enviar e-mail via Resend: ${res.status} ${JSON.stringify(resendData)}`);
+    }
+  } catch (resendError) {
+    console.error('Erro Resend:', resendError);
+    throw resendError;
   }
 }
 
