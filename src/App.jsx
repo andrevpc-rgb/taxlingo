@@ -27,6 +27,7 @@ import Leaderboard from './components/Leaderboard';
 import AuthModal from './components/AuthModal';
 import AdminDashboard from './components/AdminDashboard';
 import ResetPasswordForm from './components/ResetPasswordForm';
+import WhatsAppSupportButton from './components/WhatsAppSupportButton';
 
 const MODULE_ICONS = {
   Landmark,
@@ -294,6 +295,7 @@ export default function App() {
   return (
     <GameProvider>
       <AppShell />
+      <WhatsAppSupportButton />
     </GameProvider>
   );
 }
