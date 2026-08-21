@@ -1,13 +1,20 @@
 // src/components/SubscriptionModal.jsx
 //
-// Seleção de plano + checkout Asaas (PIX/cartão recorrente). Chama a Edge
-// Function create-asaas-checkout (ver supabase/functions/) e redireciona
-// pra URL de pagamento que ela devolve. A ativação de fato (liberar acesso
-// ilimitado, avisar o RH com o company_code) acontece depois, via webhook
-// (supabase/functions/asaas-webhook) — o front só inicia o checkout.
+// Renovação/Upgrade do Plano Corporativo DA EMPRESA JÁ LOGADA (currentCompany
+// — nunca cria empresa nova por aqui, isso é o Painel de Contingência do
+// master ou o fluxo de lead em AuthModal.jsx). Ao clicar "Assinar", chama a
+// Edge Function create-asaas-checkout e mostra o QR Code/copia-e-cola do
+// PIX (ou o link da fatura, se o PIX não vier) DIRETO NA TELA — sem
+// redirecionar pra fora do app. A ativação de fato (somar 30 dias em
+// companies.expires_at, ajustar max_users) acontece depois, via webhook
+// (supabase/functions/asaas-webhook), quando o Asaas confirma o pagamento;
+// esta tela só gera a cobrança.
+//
+// Nitrus continua com o fluxo antigo de redirecionamento (não devolve
+// QR/copia-e-cola) — ver createNitrusCheckoutSession.
 
 import React, { useEffect, useState } from 'react';
-import { X, Check, Crown, Zap, AlertCircle } from 'lucide-react';
+import { X, Check, Crown, Zap, AlertCircle, Copy, ExternalLink } from 'lucide-react';
 import { useGame } from '../context/GameContext.jsx';
 import { isSupabaseConfigured } from '../lib/supabase';
 import * as api from '../lib/api';
@@ -17,15 +24,15 @@ const PLANS = [
     id: 'starter',
     label: 'Starter',
     price: 'R$ 297/mês',
-    seatsLimit: 10,
+    seatsLimit: 30,
     icon: Zap,
     color: 'sky',
-    features: ['Até 10 colaboradores', 'Todos os 7 níveis de carreira', 'Painel do Gestor', 'Suporte por e-mail'],
+    features: ['Até 30 colaboradores', 'Todos os 7 níveis de carreira', 'Painel do Gestor', 'Suporte por e-mail'],
   },
   {
     id: 'pro',
     label: 'Pro',
-    price: 'R$ 897/mês',
+    price: 'R$ 497/mês',
     seatsLimit: 50,
     icon: Crown,
     color: 'amber',
@@ -51,6 +58,8 @@ export default function SubscriptionModal({ onClose }) {
   const [error, setError] = useState(null);
   const [subscription, setSubscription] = useState(null);
   const [loadingSubscription, setLoadingSubscription] = useState(isSupabaseConfigured);
+  const [checkoutResult, setCheckoutResult] = useState(null); // { checkoutUrl, pixQrCode, pixCopyPaste, plan } | null
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     if (!isSupabaseConfigured || !currentCompany) {
@@ -68,34 +77,58 @@ export default function SubscriptionModal({ onClose }) {
     };
   }, [currentCompany]);
 
+  // Pré-preenche com o CNPJ já cadastrado na empresa (companies.cnpj), se
+  // existir — a pessoa só precisa digitar na primeira renovação.
+  useEffect(() => {
+    if (currentCompany?.cnpj) setCpfCnpj(currentCompany.cnpj);
+  }, [currentCompany?.cnpj]);
+
   if (!isManager) return null;
 
   const handleSubscribe = async (planId) => {
     setError(null);
+    setCheckoutResult(null);
     if (!cpfCnpj.trim()) {
       setError('Informe o CPF/CNPJ da empresa para gerar a cobrança.');
       return;
     }
     setLoadingPlan(planId);
     try {
-      const { checkoutUrl } =
-        provider === 'nitrus'
-          ? await api.createNitrusCheckoutSession({
-              companyId: currentCompany.id,
-              adminEmail: user.email,
-              adminName: user.name,
-              plan: planId,
-              cpfCnpj: cpfCnpj.trim(),
-            })
-          : await api.createCheckoutSession({
-              companyId: currentCompany.id,
-              plan: planId,
-              cpfCnpj: cpfCnpj.trim(),
-            });
-      window.location.href = checkoutUrl;
+      if (provider === 'nitrus') {
+        // Nitrus não devolve QR/copia-e-cola pra mostrar na tela — mantém o
+        // redirecionamento de sempre.
+        const { checkoutUrl } = await api.createNitrusCheckoutSession({
+          companyId: currentCompany.id,
+          adminEmail: user.email,
+          adminName: user.name,
+          plan: planId,
+          cpfCnpj: cpfCnpj.trim(),
+        });
+        window.location.href = checkoutUrl;
+        return;
+      }
+
+      const result = await api.createCheckoutSession({
+        companyId: currentCompany.id,
+        plan: planId,
+        cpfCnpj: cpfCnpj.trim(),
+      });
+      setCheckoutResult({ ...result, plan: planId });
     } catch (err) {
       setError(err.message || 'Não foi possível iniciar o checkout.');
+    } finally {
       setLoadingPlan(null);
+    }
+  };
+
+  const copyPixCode = async () => {
+    if (!checkoutResult?.pixCopyPaste) return;
+    try {
+      await navigator.clipboard.writeText(checkoutResult.pixCopyPaste);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // clipboard indisponível — o código já está visível na tela pra copiar na mão.
     }
   };
 
@@ -114,10 +147,10 @@ export default function SubscriptionModal({ onClose }) {
           <X className="h-5 w-5" />
         </button>
 
-        <h2 className="mb-1 text-lg font-extrabold text-slate-800">Plano Corporativo</h2>
+        <h2 className="mb-1 text-lg font-extrabold text-slate-800">Renovação e Upgrade do Plano Corporativo</h2>
         <p className="mb-5 text-sm text-slate-400">
-          {currentCompany?.name ? `Escolha o plano de ${currentCompany.name}.` : 'Escolha um plano.'} Pra uma conta
-          pessoal (sem empresa), veja o <strong>Plano Individual</strong> na tela de login.
+          {currentCompany?.name ? `Renove ou troque o plano de ${currentCompany.name}.` : 'Renove ou troque de plano.'}{' '}
+          Pra uma conta pessoal (sem empresa), veja o <strong>Plano Individual</strong> na tela de login.
         </p>
 
         {!isSupabaseConfigured && (
@@ -195,7 +228,7 @@ export default function SubscriptionModal({ onClose }) {
                   onClick={() => handleSubscribe(plan.id)}
                   className={`w-full rounded-2xl px-4 py-2.5 text-xs font-extrabold uppercase tracking-wide text-white transition-transform active:translate-y-0.5 active:shadow-none disabled:cursor-not-allowed disabled:opacity-60 ${classes.button}`}
                 >
-                  {loadingPlan === plan.id ? 'Abrindo checkout...' : 'Assinar'}
+                  {loadingPlan === plan.id ? 'Gerando cobrança...' : 'Assinar'}
                 </button>
               </div>
             );
@@ -209,10 +242,61 @@ export default function SubscriptionModal({ onClose }) {
           </p>
         )}
 
+        {checkoutResult && (
+          <div className="mt-5 rounded-2xl border-2 border-emerald-200 bg-emerald-50 p-4">
+            <p className="mb-3 text-sm font-extrabold text-emerald-700">
+              Cobrança do plano {PLANS.find((p) => p.id === checkoutResult.plan)?.label ?? checkoutResult.plan} gerada!
+              Pague por PIX abaixo ou pela fatura — o acesso é liberado automaticamente assim que o Asaas confirmar.
+            </p>
+
+            {checkoutResult.pixQrCode && (
+              <div className="mb-3 flex justify-center">
+                <img
+                  src={checkoutResult.pixQrCode}
+                  alt="QR Code PIX para pagamento"
+                  className="h-48 w-48 rounded-xl border-2 border-white bg-white p-1"
+                />
+              </div>
+            )}
+
+            {checkoutResult.pixCopyPaste && (
+              <div className="mb-3">
+                <label className="mb-1 block text-xs font-bold uppercase tracking-wide text-emerald-700">
+                  PIX Copia e Cola
+                </label>
+                <div className="flex items-center gap-2 rounded-xl border-2 border-emerald-200 bg-white px-3 py-2">
+                  <code className="flex-1 truncate text-xs text-slate-600">{checkoutResult.pixCopyPaste}</code>
+                  <button
+                    type="button"
+                    onClick={copyPixCode}
+                    className="shrink-0 text-emerald-600 hover:text-emerald-800"
+                    aria-label="Copiar código PIX"
+                  >
+                    <Copy className="h-4 w-4" />
+                  </button>
+                </div>
+                {copied && <p className="mt-1 text-xs font-bold text-emerald-600">Copiado!</p>}
+              </div>
+            )}
+
+            {checkoutResult.checkoutUrl && (
+              <a
+                href={checkoutResult.checkoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-1.5 rounded-xl border-2 border-emerald-300 bg-white px-4 py-2.5 text-xs font-extrabold uppercase tracking-wide text-emerald-700 hover:border-emerald-400"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+                Ver fatura (boleto ou cartão)
+              </a>
+            )}
+          </div>
+        )}
+
         <p className="mt-4 text-[11px] text-slate-400">
-          Pagamento processado pelo {provider === 'nitrus' ? 'Nitrus' : 'Asaas'} (PIX ou cartão recorrente).
-          Depois da confirmação, o código da empresa é enviado por e-mail e o acesso dos colaboradores é
-          liberado automaticamente.
+          Pagamento processado pelo {provider === 'nitrus' ? 'Nitrus' : 'Asaas'} (PIX, boleto ou cartão). Depois da
+          confirmação, o plano é renovado por mais 30 dias automaticamente — sem precisar trocar o código da
+          empresa nem recadastrar ninguém.
         </p>
       </div>
     </div>

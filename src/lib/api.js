@@ -392,17 +392,18 @@ export async function fetchSubscription(companyId) {
   };
 }
 
-// Chama a Edge Function que cria a assinatura no Asaas e devolve a URL de
-// checkout (PIX/cartão) pra redirecionar o navegador.
+// Chama a Edge Function que cria (Starter/Pro) ou renova a assinatura no
+// Asaas pra empresa atual e devolve o link da fatura e, quando disponível,
+// o QR Code/copia-e-cola do PIX — exibidos direto no SubscriptionModal.jsx
+// em vez de redirecionar pra fora do app.
 export async function createCheckoutSession({ companyId, plan, cpfCnpj }) {
   const { data, error } = await supabase.functions.invoke('create-asaas-checkout', {
     body: { companyId, plan, cpfCnpj },
   });
   if (error) {
-    const message = data?.error || error.message || 'Não foi possível iniciar o checkout.';
-    throw new Error(message);
+    throw new Error(await functionErrorMessage(error, 'Não foi possível iniciar o checkout.'));
   }
-  return data; // { checkoutUrl }
+  return data; // { checkoutUrl, pixQrCode?, pixCopyPaste? }
 }
 
 // Mesma ideia, via Nitrus (ver supabase/functions/create-nitrus-checkout —
@@ -422,9 +423,9 @@ export async function createNitrusCheckoutSession({ companyId, companyName, admi
 }
 
 export async function fetchCompanies() {
-  const { data, error } = await supabase.from('companies').select('id, name, company_code');
+  const { data, error } = await supabase.from('companies').select('id, name, company_code, cnpj');
   if (error) throw error;
-  return data.map((c) => ({ id: c.id, name: c.name, code: c.company_code }));
+  return data.map((c) => ({ id: c.id, name: c.name, code: c.company_code, cnpj: c.cnpj }));
 }
 
 // ---------------------------------------------------------------------------

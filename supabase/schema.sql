@@ -22,6 +22,7 @@ create table if not exists public.companies (
   logo_url text,
   max_users integer, -- limite de vagas contratadas; null = sem limite (empresas seed/demo antigas)
   expires_at timestamptz, -- vencimento do plano corporativo; null = sem vencimento
+  cnpj text, -- CNPJ usado na cobrança Asaas — pré-preenche o modal de Renovação/Upgrade (SubscriptionModal.jsx) e correlaciona pagamentos avulsos no webhook quando não há assinatura correspondente por id
   created_at timestamptz not null default now()
 );
 
@@ -29,6 +30,7 @@ comment on table public.companies is 'Empresas clientes (multi-tenancy). company
 
 alter table public.companies add column if not exists max_users integer;
 alter table public.companies add column if not exists expires_at timestamptz;
+alter table public.companies add column if not exists cnpj text;
 
 -- -----------------------------------------------------------------------------
 -- 2. users (perfil — vinculado 1:1 a auth.users)

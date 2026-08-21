@@ -4,16 +4,24 @@
 // Asaas > Configurações > Integrações > Webhooks:
 //   https://SEU-PROJETO.supabase.co/functions/v1/asaas-webhook
 //
-// Trata dois casos bem diferentes:
-//   1. Plano Corporativo (Starter/Pro): o pagamento vem de uma assinatura
-//      criada pela nossa própria create-asaas-checkout, então já existe uma
-//      linha em `subscriptions` com o `asaas_subscription_id` — só ativa.
-//   2. Plano Individual: o pagamento vem do link de pagamento FIXO do
+// Trata três casos bem diferentes:
+//   1. Plano Corporativo (Starter/Pro), caminho normal: o pagamento vem de
+//      uma assinatura criada pela nossa própria create-asaas-checkout
+//      (SubscriptionModal.jsx, modo Renovação/Upgrade), então já existe uma
+//      linha em `subscriptions` com o `asaas_subscription_id` — soma 30
+//      dias em companies.expires_at e ajusta companies.max_users conforme
+//      o plano (ver applyCorporateRenewal).
+//   2. Plano Corporativo, fallback por CNPJ: pagamento sem essa assinatura
+//      correlacionada (ex.: cobrança avulsa feita direto no painel do
+//      Asaas) mas cujo CNPJ do cliente bate com `companies.cnpj` — mesma
+//      renovação do caso 1, e a assinatura é correlacionada aqui pra a
+//      PRÓXIMA renovação já cair no caminho normal.
+//   3. Plano Individual: o pagamento vem do link de pagamento FIXO do
 //      Asaas (configurado direto no painel deles, sem passar pela nossa
-//      create-asaas-checkout) — não existe nenhuma assinatura nossa pra
-//      casar. Nesse caso buscamos os dados do cliente na API do Asaas
-//      (nome/e-mail) e criamos a conta na hora, com acesso válido por 30
-//      dias (renovado a cada pagamento mensal reconhecido).
+//      create-asaas-checkout) e sem CNPJ correspondente — buscamos os
+//      dados do cliente na API do Asaas (nome/e-mail) e criamos a conta na
+//      hora, com acesso válido por 30 dias (renovado a cada pagamento
+//      mensal reconhecido).
 //
 // Deploy:
 //   supabase functions deploy asaas-webhook --no-verify-jwt
@@ -42,6 +50,18 @@ const CORS_HEADERS = { 'Access-Control-Allow-Origin': '*' };
 
 const ACTIVATING_EVENTS = new Set(['PAYMENT_CONFIRMED', 'PAYMENT_RECEIVED']);
 const DEACTIVATING_EVENTS = new Set(['PAYMENT_OVERDUE', 'PAYMENT_DELETED', 'SUBSCRIPTION_DELETED']);
+
+// Plano Corporativo (Starter/Pro): cada pagamento confirmado soma 30 dias
+// em companies.expires_at — a partir do vencimento atual se ele ainda for
+// válido, ou a partir de hoje se já tiver vencido (renovação atrasada não
+// "perde" dias, mas também não empilha em cima de um vencimento passado) —
+// e garante max_users de acordo com o plano pago. Espelha os preços/vagas
+// de create-asaas-checkout/index.ts.
+const CORPORATE_RENEWAL_DAYS = 30;
+const CORPORATE_PLANS = {
+  starter: { maxUsers: 30, value: 297.0 },
+  pro: { maxUsers: 50, value: 497.0 },
+};
 
 // Plano Individual não tem "assinatura" gerenciada por nós (é um link de
 // pagamento fixo do Asaas) — o acesso simplesmente vale por N dias a partir
@@ -210,6 +230,27 @@ async function extendUserAccess(supabase, { userId, companyId, expiresAt }) {
   await query;
 }
 
+// Soma CORPORATE_RENEWAL_DAYS ao vencimento do plano Corporativo da empresa
+// e ajusta max_users pro plano pago — chamada tanto no caminho normal
+// (assinatura correlacionada por asaas_subscription_id) quanto no fallback
+// por CNPJ (pagamento avulso sem essa correlação).
+async function applyCorporateRenewal(supabase, { companyId, plan }) {
+  const planConfig = CORPORATE_PLANS[plan] ?? CORPORATE_PLANS.starter;
+  const { data: company } = await supabase.from('companies').select('expires_at').eq('id', companyId).maybeSingle();
+  const currentExpiresAt = company?.expires_at ? new Date(company.expires_at) : null;
+  const base = currentExpiresAt && currentExpiresAt > new Date() ? currentExpiresAt : new Date();
+  const newExpiresAt = new Date(base.getTime() + CORPORATE_RENEWAL_DAYS * 24 * 60 * 60 * 1000).toISOString();
+  await supabase.from('companies').update({ expires_at: newExpiresAt, max_users: planConfig.maxUsers }).eq('id', companyId);
+}
+
+// Usada só no fallback por CNPJ (path sem assinatura correlacionada) pra
+// adivinhar qual plano foi pago — o valor da cobrança é o único sinal
+// disponível nesse caminho.
+function planFromPaymentValue(value) {
+  const rounded = Math.round(Number(value) || 0);
+  return rounded === Math.round(CORPORATE_PLANS.pro.value) ? 'pro' : 'starter';
+}
+
 // Cria (primeira compra) ou renova (pagamento recorrente do mês seguinte) o
 // acesso do Plano Individual comprado pelo link de pagamento fixo do Asaas.
 async function activateIndividualPayment(supabase, { asaasCustomerId, asaasSubscriptionId, periodEnd, customerEmail, customerName }) {
@@ -357,6 +398,8 @@ Deno.serve(async (req) => {
           .update({ status: 'active', current_period_end: periodEnd })
           .eq('id', subscription.id);
 
+        await applyCorporateRenewal(supabase, { companyId: subscription.company_id, plan: subscription.plan });
+
         const { data: company } = await supabase
           .from('companies')
           .select('name, company_code')
@@ -386,23 +429,66 @@ Deno.serve(async (req) => {
       return jsonResponse({ ok: true });
     }
 
-    // 2. Sem assinatura Corporativa correspondente: trata como pagamento do
-    //    Plano Individual feito pelo link de pagamento fixo do Asaas (sem
-    //    checkout prévio no nosso sistema pra correlacionar) — busca os
-    //    dados do cliente direto na API do Asaas pra criar/renovar a conta.
+    // 2. Sem assinatura correspondente por asaas_subscription_id. Duas
+    //    possibilidades:
+    //    a) Plano Corporativo cobrado avulso — ex.: renovação feita direto
+    //       no painel do Asaas, sem passar pela nossa create-asaas-checkout
+    //       — o CNPJ do cliente bate com companies.cnpj: trata como
+    //       renovação corporativa (soma os 30 dias, ajusta max_users) e
+    //       correlaciona a assinatura pro próximo pagamento já cair no
+    //       caminho 1 acima.
+    //    b) Plano Individual, comprado pelo link de pagamento fixo do
+    //       Asaas — sem CNPJ correspondente, cai no fluxo de sempre.
     if (!payment.customer) {
       return jsonResponse({ ok: true, ignored: true });
     }
 
     if (ACTIVATING_EVENTS.has(event)) {
       const customer = await asaasFetch(`/customers/${payment.customer}`);
-      await activateIndividualPayment(supabase, {
-        asaasCustomerId: payment.customer,
-        asaasSubscriptionId,
-        periodEnd,
-        customerEmail: customer?.email,
-        customerName: customer?.name,
-      });
+      const normalizedCnpj = String(customer?.cpfCnpj ?? '').replace(/\D/g, '');
+
+      const { data: matchedCompany } =
+        normalizedCnpj.length === 14
+          ? await supabase.from('companies').select('id').eq('cnpj', normalizedCnpj).maybeSingle()
+          : { data: null };
+
+      if (matchedCompany) {
+        const plan = planFromPaymentValue(payment.value);
+        await supabase.from('subscriptions').insert({
+          company_id: matchedCompany.id,
+          plan,
+          status: 'active',
+          seats_limit: CORPORATE_PLANS[plan].maxUsers,
+          asaas_customer_id: payment.customer,
+          asaas_subscription_id: asaasSubscriptionId,
+          current_period_end: periodEnd,
+        });
+        await applyCorporateRenewal(supabase, { companyId: matchedCompany.id, plan });
+
+        const { data: company } = await supabase
+          .from('companies')
+          .select('name, company_code')
+          .eq('id', matchedCompany.id)
+          .single();
+        const { data: admin } = await supabase
+          .from('users')
+          .select('email')
+          .eq('company_id', matchedCompany.id)
+          .eq('role', 'admin')
+          .limit(1)
+          .maybeSingle();
+        if (company) {
+          await sendActivationEmail({ to: admin?.email, companyName: company.name, companyCode: company.company_code, plan });
+        }
+      } else {
+        await activateIndividualPayment(supabase, {
+          asaasCustomerId: payment.customer,
+          asaasSubscriptionId,
+          periodEnd,
+          customerEmail: customer?.email,
+          customerName: customer?.name,
+        });
+      }
     } else if (DEACTIVATING_EVENTS.has(event)) {
       const status = event === 'PAYMENT_OVERDUE' ? 'past_due' : 'canceled';
       await supabase.from('subscriptions').update({ status }).eq('asaas_customer_id', payment.customer);

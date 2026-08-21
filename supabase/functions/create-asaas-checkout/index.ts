@@ -1,20 +1,27 @@
 // supabase/functions/create-asaas-checkout/index.ts
 //
-// Edge Function chamada pelo SubscriptionModal.jsx quando o gestor escolhe
-// um plano. Cria (ou reaproveita) o cliente no Asaas, cria a assinatura
-// recorrente e devolve a URL de checkout (PIX/cartão) do Asaas pra
-// redirecionar o navegador.
+// Edge Function chamada pelo SubscriptionModal.jsx (agora só no modo
+// Renovação/Upgrade da empresa já logada) quando o gestor escolhe um plano.
+// Cria (ou reaproveita) o cliente no Asaas, cria a assinatura recorrente e
+// devolve o QR Code + copia-e-cola do PIX (quando disponíveis) e o link da
+// fatura — o modal mostra isso direto na tela, sem redirecionar pra fora
+// do app. A ativação de fato (somar os 30 dias em companies.expires_at,
+// atualizar max_users) acontece depois, via webhook
+// (supabase/functions/asaas-webhook), quando o pagamento é confirmado.
 //
 // Deploy:
 //   supabase functions deploy create-asaas-checkout
-//   supabase secrets set ASAAS_API_KEY=xxx ASAAS_ENV=sandbox
-//   (ASAAS_ENV: "sandbox" ou "production" — troca a base URL da API)
+//   supabase secrets set ASAAS_API_KEY=xxx
+//   (ASAAS_ENV é opcional, padrão 'production' — mesma convenção do
+//   asaas-webhook. Só defina ASAAS_ENV=sandbox se ASAAS_API_KEY for uma
+//   chave de sandbox.)
 //
 // ATENÇÃO: não testado contra a API real do Asaas nesta sessão (não há
 // como criar/validar uma conta Asaas por aqui). A forma dos campos segue a
 // documentação pública da API v3 no momento em que isto foi escrito —
 // confira https://docs.asaas.com antes de ir pra produção, principalmente
-// os nomes exatos dos campos de /subscriptions e /payments.
+// os nomes exatos dos campos de /subscriptions, /payments e
+// /payments/{id}/pixQrCode.
 
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
@@ -23,9 +30,12 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// Preços/vagas do Plano Corporativo — espelhados em
+// supabase/functions/asaas-webhook/index.ts (CORPORATE_PLANS), que é quem
+// realmente credita max_users/expires_at quando o pagamento é confirmado.
 const PLANS = {
-  starter: { label: 'Starter', seatsLimit: 10, value: 297.0, description: 'TaxLingo — Plano Starter (até 10 colaboradores)' },
-  pro: { label: 'Pro', seatsLimit: 50, value: 897.0, description: 'TaxLingo — Plano Pro (até 50 colaboradores)' },
+  starter: { label: 'Starter', seatsLimit: 30, value: 297.0, description: 'TaxLingo — Plano Starter (até 30 colaboradores)' },
+  pro: { label: 'Pro', seatsLimit: 50, value: 497.0, description: 'TaxLingo — Plano Pro (até 50 colaboradores)' },
 };
 
 function jsonResponse(body, status = 200) {
@@ -36,8 +46,11 @@ function jsonResponse(body, status = 200) {
 }
 
 function asaasBaseUrl() {
-  const env = Deno.env.get('ASAAS_ENV') || 'sandbox';
-  return env === 'production' ? 'https://api.asaas.com/v3' : 'https://sandbox.asaas.com/api/v3';
+  // Mesmo padrão do asaas-webhook: assume produção por padrão (a chave
+  // configurada normalmente é $aact_prod_...), só cai pro sandbox se
+  // ASAAS_ENV=sandbox for definida explicitamente.
+  const env = Deno.env.get('ASAAS_ENV') || 'production';
+  return env === 'production' ? 'https://api.asaas.com/v3' : 'https://api-sandbox.asaas.com/v3';
 }
 
 async function asaasFetch(path, options = {}) {
@@ -162,7 +175,22 @@ Deno.serve(async (req) => {
       { onConflict: 'id' }
     );
 
-    return jsonResponse({ checkoutUrl });
+    // QR Code + copia-e-cola do PIX pra mostrar direto no
+    // SubscriptionModal.jsx (em vez de só redirecionar pro link de fatura).
+    // Best-effort: o Asaas só gera isso quando PIX é uma opção de pagamento
+    // válida pra essa cobrança — se falhar por qualquer motivo, o modal
+    // ainda funciona com o checkoutUrl sozinho.
+    let pixQrCode = null;
+    let pixCopyPaste = null;
+    try {
+      const pix = await asaasFetch(`/payments/${firstPayment.id}/pixQrCode`);
+      pixQrCode = pix?.encodedImage ? `data:image/png;base64,${pix.encodedImage}` : null;
+      pixCopyPaste = pix?.payload ?? null;
+    } catch (pixError) {
+      console.error('create-asaas-checkout: PIX QR Code indisponível para esta cobrança (segue só com o link de fatura):', pixError);
+    }
+
+    return jsonResponse({ checkoutUrl, pixQrCode, pixCopyPaste });
   } catch (err) {
     console.error('create-asaas-checkout failed:', err);
     return jsonResponse({ error: err.message || 'Falha ao iniciar o checkout.' }, 500);
