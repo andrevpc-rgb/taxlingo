@@ -253,6 +253,41 @@ async function createCorporate(supabaseService, { companyName, cnpj, maxUsers, e
   return { companyId: company.id, companyCode: company.company_code, notified: Boolean(leadEmail) };
 }
 
+// Cadastro normal (REGISTER/signUp) sempre cria role='employee' — não existe
+// hoje nenhum jeito de virar admin de empresa sozinho. Isso promove/rebaixa
+// quem já se cadastrou com o código da empresa (precisa ter se cadastrado
+// antes; não cria conta nova).
+async function setUserRole(supabaseService, { email, role }) {
+  if (!['employee', 'admin'].includes(role)) {
+    throw new Error('Papel inválido — use "employee" ou "admin".');
+  }
+  const normalizedEmail = String(email ?? '').trim().toLowerCase();
+  if (!normalizedEmail || !normalizedEmail.includes('@')) {
+    throw new Error('Informe um e-mail válido.');
+  }
+
+  const { data: user, error: userError } = await supabaseService
+    .from('users')
+    .select('id, role, company_id, companies(name)')
+    .eq('email', normalizedEmail)
+    .maybeSingle();
+  if (userError) throw userError;
+  if (!user) {
+    throw new Error('Não achei nenhuma conta com esse e-mail. A pessoa precisa se cadastrar primeiro com o código da empresa.');
+  }
+  if (!user.company_id) {
+    throw new Error('Essa conta não está vinculada a nenhuma empresa.');
+  }
+  if (user.role === 'master') {
+    throw new Error('Essa conta é master — não mexe no papel dela por aqui.');
+  }
+
+  const { error: updateError } = await supabaseService.from('users').update({ role }).eq('id', user.id);
+  if (updateError) throw updateError;
+
+  return { email: normalizedEmail, role, companyName: user.companies?.name ?? null };
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response(null, { headers: CORS_HEADERS });
   if (req.method !== 'POST') return jsonResponse({ error: 'Método não permitido.' }, 405);
@@ -286,6 +321,8 @@ Deno.serve(async (req) => {
         return jsonResponse(await createIndividual(supabaseService, payload));
       case 'create_corporate':
         return jsonResponse(await createCorporate(supabaseService, payload));
+      case 'set_role':
+        return jsonResponse(await setUserRole(supabaseService, payload));
       default:
         return jsonResponse({ error: 'Ação inválida.' }, 400);
     }

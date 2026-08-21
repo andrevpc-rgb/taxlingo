@@ -323,7 +323,10 @@ begin
   end if;
 
   if target.max_users is not null then
-    select count(*) into current_count from public.users where company_id = target.id;
+    -- "company_id" sem apelido aqui seria ambíguo: o RETURNS TABLE acima
+    -- declara uma variável implícita chamada company_id, que colide com a
+    -- coluna public.users.company_id — por isso o "u." explícito.
+    select count(*) into current_count from public.users u where u.company_id = target.id;
     if current_count >= target.max_users then
       return query select false, 'Limite de vagas da empresa atingido. Peça ao RH para ampliar o plano.'::text, target.id;
       return;

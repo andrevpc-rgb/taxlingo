@@ -430,6 +430,21 @@ export async function fetchCompanies() {
 // Plano Corporativo — lead público + contingência do master
 // ---------------------------------------------------------------------------
 
+// Em erro (status não-2xx), supabase-js devolve `data: null` — o corpo
+// JSON que a Edge Function mandou (com a mensagem amigável, ex.: "Código de
+// empresa inválido") só existe dentro de `error.context`, um Response bruto
+// que precisa ser lido à parte. Sem isso, toda falha aparecia só como
+// "Edge Function returned a non-2xx status code" pro usuário.
+async function functionErrorMessage(error, fallback) {
+  try {
+    const body = await error?.context?.json();
+    if (body?.error) return body.error;
+  } catch {
+    // corpo não era JSON (ou já foi consumido) — cai no fallback abaixo.
+  }
+  return error?.message || fallback;
+}
+
 // Formulário público "Plano Corporativo" (AuthModal.jsx) — não é checkout,
 // é captura de lead: alguém do time comercial (ou o master, ver
 // adminProvisionCorporate) entra em contato depois pra fechar e ativar de
@@ -441,8 +456,7 @@ export async function submitCorporateLead({ companyName, cnpj, contactEmail, sea
     body: { companyName, cnpj, contactEmail, seatsRequested },
   });
   if (error) {
-    const message = data?.error || error.message || 'Não foi possível enviar sua solicitação.';
-    throw new Error(message);
+    throw new Error(await functionErrorMessage(error, 'Não foi possível enviar sua solicitação.'));
   }
   return data;
 }
@@ -457,8 +471,7 @@ export async function fetchPendingCorporateLeads() {
     body: { action: 'list_leads' },
   });
   if (error) {
-    const message = data?.error || error.message || 'Não foi possível carregar os leads.';
-    throw new Error(message);
+    throw new Error(await functionErrorMessage(error, 'Não foi possível carregar os leads.'));
   }
   return data.leads;
 }
@@ -468,8 +481,7 @@ export async function adminProvisionIndividual({ email, name }) {
     body: { action: 'create_individual', email, name },
   });
   if (error) {
-    const message = data?.error || error.message || 'Não foi possível criar o acesso individual.';
-    throw new Error(message);
+    throw new Error(await functionErrorMessage(error, 'Não foi possível criar o acesso individual.'));
   }
   return data;
 }
@@ -479,8 +491,20 @@ export async function adminProvisionCorporate({ companyName, cnpj, maxUsers, exp
     body: { action: 'create_corporate', companyName, cnpj, maxUsers, expiresInDays, pendingSignupId },
   });
   if (error) {
-    const message = data?.error || error.message || 'Não foi possível criar/ativar a empresa.';
-    throw new Error(message);
+    throw new Error(await functionErrorMessage(error, 'Não foi possível criar/ativar a empresa.'));
+  }
+  return data;
+}
+
+// Promove/rebaixa quem já se cadastrou com o código da empresa entre
+// colaborador e gestor (cadastro normal sempre cria role='employee' — não
+// existe hoje nenhum jeito de virar admin sozinho).
+export async function adminSetUserRole({ email, role }) {
+  const { data, error } = await supabase.functions.invoke('admin-provision', {
+    body: { action: 'set_role', email, role },
+  });
+  if (error) {
+    throw new Error(await functionErrorMessage(error, 'Não foi possível definir o papel dessa conta.'));
   }
   return data;
 }

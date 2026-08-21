@@ -8,7 +8,7 @@
 // é master mesmo (nunca confia só nisto aqui estar visível na tela).
 
 import React, { useEffect, useState } from 'react';
-import { ShieldAlert, UserPlus, Building2, RefreshCcw, Check, AlertCircle, Copy } from 'lucide-react';
+import { ShieldAlert, UserPlus, Building2, RefreshCcw, Check, AlertCircle, Copy, UserCog } from 'lucide-react';
 import * as api from '../lib/api';
 import { isSupabaseConfigured } from '../lib/supabase.js';
 
@@ -229,6 +229,81 @@ function CorporateForm({ prefill, onConsumePrefill }) {
   );
 }
 
+function SetRoleForm() {
+  const [email, setEmail] = useState('');
+  const [role, setRole] = useState('admin');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [result, setResult] = useState(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setError(null);
+    setResult(null);
+    setLoading(true);
+    try {
+      const data = await api.adminSetUserRole({ email: email.trim(), role });
+      setResult(data);
+      setEmail('');
+    } catch (err) {
+      setError(err.message || 'Não foi possível definir o papel dessa conta.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-2 rounded-2xl border-2 border-slate-200 bg-white p-4">
+      <p className="flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wide text-slate-600">
+        <UserCog className="h-4 w-4" />
+        Definir Gestor / Colaborador
+      </p>
+      <p className="text-[11px] text-slate-400">
+        A pessoa precisa já ter se cadastrado com o código da empresa. Use pra dar acesso ao Painel do Gestor pra
+        quem vai administrar a conta corporativa.
+      </p>
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="E-mail já cadastrado"
+          className="flex-1 rounded-xl border-2 border-slate-200 px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-emerald-400"
+        />
+        <select
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+          className="rounded-xl border-2 border-slate-200 px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-emerald-400"
+        >
+          <option value="admin">Gestor (admin)</option>
+          <option value="employee">Colaborador</option>
+        </select>
+      </div>
+      {error && (
+        <p className="flex items-center gap-1.5 text-[11px] font-bold text-rose-600">
+          <AlertCircle className="h-3.5 w-3.5 shrink-0" />
+          {error}
+        </p>
+      )}
+      {result && (
+        <p className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-700">
+          <Check className="h-3.5 w-3.5 shrink-0" />
+          {result.email} agora é {result.role === 'admin' ? 'Gestor' : 'Colaborador'}
+          {result.companyName ? ` de ${result.companyName}` : ''}.
+        </p>
+      )}
+      <button
+        type="submit"
+        disabled={loading}
+        className="rounded-xl bg-slate-700 px-3 py-2 text-xs font-extrabold uppercase tracking-wide text-white disabled:opacity-60"
+      >
+        {loading ? 'Salvando...' : 'Definir papel'}
+      </button>
+    </form>
+  );
+}
+
 function PendingLeadsList({ onActivate }) {
   const [leads, setLeads] = useState(null);
   const [error, setError] = useState(null);
@@ -316,7 +391,8 @@ export default function MasterContingencyPanel() {
             <IndividualForm />
             <CorporateForm prefill={prefill} onConsumePrefill={() => setPrefill(null)} />
           </div>
-          <div className="mt-4">
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <SetRoleForm />
             <PendingLeadsList onActivate={setPrefill} />
           </div>
         </>
