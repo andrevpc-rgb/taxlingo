@@ -408,10 +408,11 @@ stable
 as $$
   select id, full_name, avatar_url, job_title, company_id, xp, weekly_xp
   from public.users
+  where role != 'master'
   order by xp desc;
 $$;
 
-comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa).';
+comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa). Exclui role=master: a conta do fundador não compete no ranking.';
 
 -- Ranking da Empresa: a policy users_select_self_or_company só deixa
 -- admin/master ler os colegas inteiros (comum lê só a própria linha) — um
@@ -434,13 +435,14 @@ as $$
   select id, full_name, avatar_url, job_title, company_id, xp, weekly_xp
   from public.users
   where company_id = p_company_id
+    and role != 'master'
     and (public.is_master() or p_company_id = public.current_user_company_id())
   order by xp desc;
 $$;
 
 grant execute on function public.get_company_leaderboard(uuid) to authenticated;
 
-comment on function public.get_company_leaderboard(uuid) is 'Ranking da Empresa: qualquer colaborador autenticado pode ver XP dos colegas da PRÓPRIA empresa (guard embutido na query — pedir o company_id de outra empresa sempre volta vazio).';
+comment on function public.get_company_leaderboard(uuid) is 'Ranking da Empresa: qualquer colaborador autenticado pode ver XP dos colegas da PRÓPRIA empresa (guard embutido na query — pedir o company_id de outra empresa sempre volta vazio). Exclui role=master: a conta do fundador não compete no ranking.';
 
 -- =============================================================================
 -- Row Level Security

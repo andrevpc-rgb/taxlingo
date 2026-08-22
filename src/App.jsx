@@ -49,7 +49,7 @@ const MODULE_COLOR_CLASSES = {
   indigo: 'bg-indigo-100 text-indigo-600',
 };
 
-function LessonRow({ lesson, onStart }) {
+function LessonRow({ lesson, onStart, isHighlighted, highlightRef }) {
   const isExam = lesson.type === 'exam';
   const Icon = lesson.locked ? Lock : lesson.completed ? CheckCircle2 : isExam ? ClipboardCheck : Play;
   const iconColor = lesson.locked
@@ -62,11 +62,14 @@ function LessonRow({ lesson, onStart }) {
 
   return (
     <button
+      ref={isHighlighted ? highlightRef : undefined}
       type="button"
       disabled={lesson.locked}
       onClick={() => onStart(lesson.id)}
       className={`flex min-h-[3.25rem] w-full items-center gap-3 rounded-2xl border-2 px-4 py-3 text-left transition-colors active:scale-[0.99] disabled:cursor-not-allowed disabled:active:scale-100 ${
-        lesson.locked
+        isHighlighted
+          ? 'border-emerald-400 bg-emerald-50 ring-4 ring-emerald-200'
+          : lesson.locked
           ? 'border-slate-100 bg-slate-50'
           : isExam
           ? 'border-indigo-200 bg-indigo-50 hover:border-indigo-300'
@@ -82,11 +85,16 @@ function LessonRow({ lesson, onStart }) {
           +{lesson.xpReward} XP
         </p>
       </div>
+      {isHighlighted && (
+        <span className="shrink-0 rounded-full bg-emerald-500 px-2 py-1 text-[10px] font-extrabold uppercase tracking-wide text-white">
+          Continuar
+        </span>
+      )}
     </button>
   );
 }
 
-function ModuleCard({ module, onStartLesson }) {
+function ModuleCard({ module, onStartLesson, highlightLessonId, highlightRef }) {
   const Icon = MODULE_ICONS[module.icon] ?? BookOpen;
   const colorClasses = MODULE_COLOR_CLASSES[module.color] ?? 'bg-slate-100 text-slate-600';
 
@@ -116,7 +124,13 @@ function ModuleCard({ module, onStartLesson }) {
           </div>
           <div className="space-y-2">
             {module.lessons.map((lesson) => (
-              <LessonRow key={lesson.id} lesson={lesson} onStart={(lessonId) => onStartLesson(module.id, lessonId)} />
+              <LessonRow
+                key={lesson.id}
+                lesson={lesson}
+                onStart={(lessonId) => onStartLesson(module.id, lessonId)}
+                isHighlighted={lesson.id === highlightLessonId}
+                highlightRef={highlightRef}
+              />
             ))}
           </div>
         </>
@@ -149,7 +163,7 @@ function LegendModeBanner({ onStartDailyReview }) {
   );
 }
 
-function HomeScreen({ onStartLesson, onStartDailyReview }) {
+function HomeScreen({ onStartLesson, onStartDailyReview, highlightLessonId, highlightRef }) {
   const { modules, isModuleMastered } = useGame();
 
   return (
@@ -166,7 +180,13 @@ function HomeScreen({ onStartLesson, onStartDailyReview }) {
 
       <div className="space-y-4">
         {modules.map((module) => (
-          <ModuleCard key={module.id} module={module} onStartLesson={onStartLesson} />
+          <ModuleCard
+            key={module.id}
+            module={module}
+            onStartLesson={onStartLesson}
+            highlightLessonId={highlightLessonId}
+            highlightRef={highlightRef}
+          />
         ))}
       </div>
     </div>
@@ -245,8 +265,8 @@ function BottomNav({ view, onNavigate, isManager }) {
 }
 
 // Acha a próxima lição não concluída e destravada, na ordem dos módulos —
-// é "onde o usuário parou". Usada só pra redirecionar direto pra ela ao
-// entrar no app (ver efeito de auto-continuar em AppShell); a navegação
+// é "onde o usuário parou". Usada pra destacar/rolar até ela na Home ao
+// entrar no app (ver efeito de auto-destaque em AppShell); a navegação
 // manual pela Home continua funcionando normalmente depois disso.
 function findContinueLesson(modules) {
   for (const module of modules) {
@@ -266,11 +286,12 @@ function AppShell() {
   const { isAuthenticated, isManager, passwordRecoveryMode, startLesson, startDailyReview, exitLesson, modules } =
     useGame();
 
-  // Ao entrar no app (login, cadastro ou sessão restaurada), pula direto pra
-  // lição onde o usuário parou, em vez de deixar a Home como um passo a
-  // mais no meio do caminho. Dispara só uma vez por sessão autenticada — o
+  // Ao entrar no app (login, cadastro ou sessão restaurada), fica na Home mas
+  // já destaca e rola até o card da lição onde o usuário parou, em vez de
+  // pular direto pro exercício. Dispara só uma vez por sessão autenticada — o
   // ref garante isso mesmo que `modules` mude depois (ex.: ao concluir uma
   // lição), e é resetado quando desloga, pra disparar de novo no próximo login.
+  const [highlightLessonId, setHighlightLessonId] = useState(null);
   const hasAutoContinuedRef = useRef(false);
   useEffect(() => {
     if (!isAuthenticated) {
@@ -282,11 +303,18 @@ function AppShell() {
 
     const target = findContinueLesson(modules);
     if (target) {
-      startLesson(target.moduleId, target.lessonId);
-      setView('quiz');
+      setHighlightLessonId(target.lessonId);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
+
+  // Ref-callback: assim que o card destacado é montado na tela, rola até ele
+  // suavemente. Só é atribuído à lição que bate com highlightLessonId.
+  const highlightRef = (node) => {
+    if (node) {
+      node.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
 
   // Clicou no link do e-mail de "esqueci minha senha": mostra a tela de
   // definir senha nova antes de qualquer outra coisa, mesmo já "autenticado"
@@ -300,6 +328,7 @@ function AppShell() {
   }
 
   const handleStartLesson = (moduleId, lessonId) => {
+    setHighlightLessonId(null);
     startLesson(moduleId, lessonId);
     setView('quiz');
   };
@@ -319,7 +348,12 @@ function AppShell() {
       <Header />
 
       {view === 'home' && (
-        <HomeScreen onStartLesson={handleStartLesson} onStartDailyReview={handleStartDailyReview} />
+        <HomeScreen
+          onStartLesson={handleStartLesson}
+          onStartDailyReview={handleStartDailyReview}
+          highlightLessonId={highlightLessonId}
+          highlightRef={highlightRef}
+        />
       )}
       {view === 'quiz' && <QuizEngine onExit={handleExitQuiz} />}
       {view === 'leaderboard' && <LeaderboardScreen onBack={() => setView('home')} />}

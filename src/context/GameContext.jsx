@@ -1586,16 +1586,23 @@ export function GameProvider({ children }) {
     return getCompanyById(state.user.companyId);
   }, [state.user, state.supabaseCompanies]);
 
+  // A conta master (fundador) não entra em nenhum ranking — é a conta de
+  // contingência/QA, não faz sentido ela "competir" com os colaboradores.
+  // No modo Supabase esse filtro é feito no servidor (get_global_leaderboard/
+  // get_company_leaderboard, ver schema.sql), já que as RPCs nem devolvem a
+  // coluna role pro cliente filtrar de novo aqui.
+  const nonMasterUsers = useMemo(() => state.users.filter((u) => u.role !== 'master'), [state.users]);
+
   const companyLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseCompanyLeaderboard ?? []);
     if (!state.user) return [];
-    return computeLeaderboard(state.users.filter((u) => u.companyId === state.user.companyId));
-  }, [state.users, state.user?.companyId, state.supabaseCompanyLeaderboard]);
+    return computeLeaderboard(nonMasterUsers.filter((u) => u.companyId === state.user.companyId));
+  }, [nonMasterUsers, state.user?.companyId, state.supabaseCompanyLeaderboard]);
 
   const globalLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseGlobalLeaderboard ?? []);
-    return computeLeaderboard(state.users);
-  }, [state.users, state.supabaseGlobalLeaderboard]);
+    return computeLeaderboard(nonMasterUsers);
+  }, [nonMasterUsers, state.supabaseGlobalLeaderboard]);
 
   // Ranking Semanal — mesmas listas de base, só ordenadas por `weeklyXp` em
   // vez de `xp` total (ver addXp/getWeekStartISO). Não precisa "zerar" nada
@@ -1604,15 +1611,15 @@ export function GameProvider({ children }) {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseCompanyLeaderboard ?? [], 'weeklyXp');
     if (!state.user) return [];
     return computeLeaderboard(
-      state.users.filter((u) => u.companyId === state.user.companyId),
+      nonMasterUsers.filter((u) => u.companyId === state.user.companyId),
       'weeklyXp'
     );
-  }, [state.users, state.user?.companyId, state.supabaseCompanyLeaderboard]);
+  }, [nonMasterUsers, state.user?.companyId, state.supabaseCompanyLeaderboard]);
 
   const weeklyGlobalLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseGlobalLeaderboard ?? [], 'weeklyXp');
-    return computeLeaderboard(state.users, 'weeklyXp');
-  }, [state.users, state.supabaseGlobalLeaderboard]);
+    return computeLeaderboard(nonMasterUsers, 'weeklyXp');
+  }, [nonMasterUsers, state.supabaseGlobalLeaderboard]);
 
   const activeCompanies = isSupabaseConfigured ? state.supabaseCompanies : companies;
 
