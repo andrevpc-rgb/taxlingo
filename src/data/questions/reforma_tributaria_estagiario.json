@@ -146,6 +146,22 @@
     "pacciTip": "Nunca tenha vergonha de perguntar, piccolo! Até Pacci já confundiu sigla no começo. O importante é confirmar antes de errar."
   },
   {
+    "id": "REF-EST-141",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Na campanha de fim de ano, a empresa distribui canecas de brinde para os clientes que compraram acima de um certo valor.",
+    "question": "Segundo a Reforma, o fornecimento gratuito de um brinde a consumidor final é tributado pelo IBS e pela CBS?",
+    "options": [
+      "Não, brinde fornecido gratuitamente ao consumidor final não é tributado",
+      "Sim, todo fornecimento gratuito é tributado normalmente",
+      "Só se o brinde custar mais de R$ 100",
+      "Depende exclusivamente da vontade do fornecedor"
+    ],
+    "correctAnswer": "Não, brinde fornecido gratuitamente ao consumidor final não é tributado",
+    "explanation": "Brinde é o bem ou serviço fornecido gratuitamente a consumidor final que não constitui objeto das atividades do fornecedor — por isso não há incidência de IBS e CBS.",
+    "pacciTip": "Brinde de verdade, tesoro, é aquele que a empresa dá de graça e que ela normalmente não vende. Esse escapa do IBS e da CBS!"
+  },
+  {
     "id": "REF-EST-011",
     "level": "estagiario",
     "type": "ordering",
@@ -288,6 +304,22 @@
     "correctAnswer": "Dual",
     "explanation": "O modelo é chamado de IVA Dual, pois combina um tributo estadual/municipal (IBS) com um federal (CBS).",
     "pacciTip": "Dual! Essa palavra você já vai levar pro resto da carreira, fidato de Pacci!"
+  },
+  {
+    "id": "REF-EST-142",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma loja de perfumes distribui frasquinhos pequenos pra quem quiser experimentar antes de comprar o produto de verdade.",
+    "question": "O que caracteriza uma \"amostra grátis\" que não é tributada pela Reforma?",
+    "options": [
+      "Bem de diminuto ou nenhum valor comercial, fornecido para dar conhecimento do produto",
+      "Qualquer produto entregue sem nota fiscal",
+      "Um produto vendido com desconto de 90%",
+      "Um produto usado, de segunda mão"
+    ],
+    "correctAnswer": "Bem de diminuto ou nenhum valor comercial, fornecido para dar conhecimento do produto",
+    "explanation": "Amostra grátis é o bem ou serviço de diminuto ou nenhum valor comercial que constitui objeto da atividade do fornecedor, dado pra apresentar a natureza e qualidade do produto — por isso não incide o IBS e a CBS.",
+    "pacciTip": "Amostra grátis é aquela \"provadinha\" pra você conhecer o produto, capito? Pequena, sem graça comercial — e isenta!"
   },
   {
     "id": "REF-EST-021",
@@ -466,6 +498,22 @@
     "pacciTip": "Um dinheirinho de volta pra quem mais precisa, tesoro! É a reforma cuidando de quem tem menos."
   },
   {
+    "id": "REF-EST-143",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "No material de estudo, você vê que existem dois \"regimes\" diferentes de apuração do novo imposto.",
+    "question": "Quais são os dois regimes de apuração do IBS e da CBS?",
+    "options": [
+      "Simples Nacional e Regime Regular",
+      "Regime Simplificado e Regime Complexo",
+      "Regime Federal e Regime Estadual",
+      "Regime Provisório e Regime Definitivo"
+    ],
+    "correctAnswer": "Simples Nacional e Regime Regular",
+    "explanation": "A Reforma prevê dois tipos de regime de apuração: o Simples Nacional (com regras próprias) e o Regime Regular, para quem não optar pelo Simples.",
+    "pacciTip": "Dois caminhos, bambino: Simples Nacional pros pequenos negócios, Regime Regular pros demais."
+  },
+  {
     "id": "REF-EST-032",
     "level": "estagiario",
     "type": "multiple_choice",
@@ -626,6 +674,22 @@
     "pacciTip": "Uma regra só, em vez de milhares! Isso é presente pra pequeno empresário, capisce?"
   },
   {
+    "id": "REF-EST-144",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um colega comenta que uma empresa do Simples Nacional está \"presa\" àquele regime pro resto da vida.",
+    "question": "É verdade que quem está no Simples Nacional pode optar por apurar o IBS e a CBS pelo Regime Regular?",
+    "options": [
+      "Sim, o optante pelo Simples Nacional pode exercer essa opção",
+      "Não, isso é proibido por lei",
+      "Só empresas com mais de 100 funcionários podem",
+      "Só no primeiro ano de abertura da empresa"
+    ],
+    "correctAnswer": "Sim, o optante pelo Simples Nacional pode exercer essa opção",
+    "explanation": "A legislação permite que os optantes pelo Simples Nacional exerçam a opção de apurar e recolher o IBS e a CBS pelo regime regular, quando isso for vantajoso.",
+    "pacciTip": "Ninguém fica preso, tesoro! Quem é do Simples pode escolher jogar no Regime Regular se fizer mais sentido pro negócio."
+  },
+  {
     "id": "REF-EST-042",
     "level": "estagiario",
     "type": "multiple_choice",
@@ -744,6 +808,22 @@
     "pacciTip": "Não é pagar duas vezes, piccolo! É dois tributos irmãos, cada um com seu dono."
   },
   {
+    "id": "REF-EST-145",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Na aula, o professor explica que o Fato Gerador do IBS e da CBS não depende de alguns detalhes que muita gente acha importantes.",
+    "question": "O Fato Gerador do IBS e da CBS independe de qual destes fatores?",
+    "options": [
+      "A obtenção de lucro com a operação",
+      "A existência de um documento fiscal",
+      "O valor da operação",
+      "A localização do fornecedor"
+    ],
+    "correctAnswer": "A obtenção de lucro com a operação",
+    "explanation": "O Fato Gerador independe da obtenção de lucro com a operação, da espécie ou forma jurídica do negócio, do título pelo qual o bem está na posse do fornecedor, e do cumprimento de exigências legais.",
+    "pacciTip": "Lucrou ou não lucrou, o Fisco não tá nem aí pra isso na hora de saber se incide o imposto, capito?"
+  },
+  {
     "id": "REF-EST-052",
     "level": "estagiario",
     "type": "true_false",
@@ -842,6 +922,22 @@
     "correctAnswer": true,
     "explanation": "Correto! A Reforma prevê regimes específicos para itens essenciais, com alíquotas reduzidas em relação à regra geral.",
     "pacciTip": "Esatto! Essencial ganha um tratamento mais gentil do Fisco."
+  },
+  {
+    "id": "REF-EST-146",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "A empresa onde você estagia vai emitir sua primeira nota fiscal eletrônica já nas regras da Reforma.",
+    "question": "O que passa a ser obrigatório para quase toda operação com bens ou serviços, segundo a Reforma?",
+    "options": [
+      "A emissão de documento fiscal eletrônico",
+      "O pagamento obrigatório em dinheiro",
+      "A presença de um contador em cada venda",
+      "O registro da venda em cartório"
+    ],
+    "correctAnswer": "A emissão de documento fiscal eletrônico",
+    "explanation": "O sujeito passivo do IBS e da CBS, ao realizar operações com bens ou serviços — inclusive exportações e importações — deve emitir documento fiscal eletrônico.",
+    "pacciTip": "Documento fiscal eletrônico é obrigatório até em operação isenta ou com alíquota zero. Registra tudo, tesoro!"
   },
   {
     "id": "REF-EST-062",
@@ -975,6 +1071,22 @@
     ],
     "explanation": "O IBS é recolhido na venda, centralizado pelo Comitê Gestor, que calcula a parcela de cada ente e depois repassa os valores correspondentes.",
     "pacciTip": "O dinheiro faz uma viagem organizada, capisce? Recolhe, centraliza, calcula e reparte."
+  },
+  {
+    "id": "REF-EST-147",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "No grupo de WhatsApp da equipe, alguém diz que \"só quem vende bastante\" precisa se preocupar com o IBS e a CBS.",
+    "question": "Quem é considerado contribuinte do IBS e da CBS?",
+    "options": [
+      "Quem realiza operações de forma habitual ou que caracterize atividade econômica",
+      "Só empresas com mais de 10 funcionários",
+      "Só quem tem CNPJ há mais de 5 anos",
+      "Só pessoas jurídicas do Lucro Real"
+    ],
+    "correctAnswer": "Quem realiza operações de forma habitual ou que caracterize atividade econômica",
+    "explanation": "São considerados contribuintes os fornecedores que realizam operações no desenvolvimento de atividade econômica, de modo habitual ou em volume que caracterize essa atividade, ou de forma profissional.",
+    "pacciTip": "Não precisa ser gigante, tesoro — se você vende com habitualidade, já é contribuinte!"
   },
   {
     "id": "REF-EST-072",
@@ -1185,6 +1297,22 @@
     ],
     "explanation": "A trajetória começa com a alíquota cheia atual, passa pela fase de testes simbólica em 2026, segue com reduções progressivas e termina na extinção total até 2033.",
     "pacciTip": "Um gráfico descendo devagarinho, tesoro! Até chegar a zero em 2033."
+  },
+  {
+    "id": "REF-EST-148",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você lê sobre um novo cadastro que vai identificar imóveis rurais e urbanos no Brasil.",
+    "question": "Como se chama o novo cadastro nacional de imóveis criado para a Reforma Tributária?",
+    "options": [
+      "CIB (Cadastro Imobiliário Brasileiro)",
+      "CPF Imobiliário",
+      "RENAVAM de Imóveis",
+      "Cadastro Único da Receita"
+    ],
+    "correctAnswer": "CIB (Cadastro Imobiliário Brasileiro)",
+    "explanation": "Os cadastros usados pela legislação do IBS e da CBS são: CPF (pessoas físicas), CNPJ (pessoas jurídicas) e o CIB — Cadastro Imobiliário Brasileiro (imóveis rurais e urbanos).",
+    "pacciTip": "CPF pra gente, CNPJ pra empresa, CIB pra imóvel. Três cadastros, três donos diferentes!"
   },
   {
     "id": "REF-EST-082",
@@ -1418,6 +1546,22 @@
     "pacciTip": "Dado bruto vira relatório fino, tesoro! Coleta, analisa, escreve e apresenta."
   },
   {
+    "id": "REF-EST-149",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Durante o treinamento, o instrutor menciona um novo mecanismo que já separa o imposto na hora do pagamento, antes mesmo de o dinheiro chegar ao vendedor.",
+    "question": "Como se chama esse mecanismo, que segrega o valor do IBS e da CBS já no momento do pagamento da compra?",
+    "options": [
+      "Split Payment",
+      "Nota Fiscal Antecipada",
+      "Retenção na Fonte Estadual",
+      "Débito Automático Fiscal"
+    ],
+    "correctAnswer": "Split Payment",
+    "explanation": "O Split Payment é o mecanismo que, no momento da liquidação financeira da compra, já separa o valor do produto do valor dos tributos, recolhendo o IBS e a CBS diretamente aos cofres públicos.",
+    "pacciTip": "Imagina dividir a conta na hora de pagar: uma parte pro vendedor, outra direto pro Fisco. É o Split Payment, tesoro!"
+  },
+  {
     "id": "REF-EST-093",
     "level": "estagiario",
     "type": "fill_blank",
@@ -1576,6 +1720,22 @@
     "correctAnswer": "meio ambiente",
     "explanation": "O critério do Imposto Seletivo envolve dois eixos: produtos prejudiciais à saúde das pessoas ou ao meio ambiente.",
     "pacciTip": "Saúde de um lado, meio ambiente do outro, tesoro! Os dois pilares do imposto do pecado."
+  },
+  {
+    "id": "REF-EST-150",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Ao emitir uma nota fiscal, o sistema pede pra preencher dois códigos que você nunca tinha visto antes: CST e cClassTrib.",
+    "question": "Para que servem os códigos CST e cClassTrib nas notas fiscais da Reforma?",
+    "options": [
+      "Para classificar como cada operação é tributada pelo IBS e pela CBS",
+      "Para identificar o banco usado no pagamento",
+      "Para calcular o frete da mercadoria",
+      "Para registrar o CPF do vendedor"
+    ],
+    "correctAnswer": "Para classificar como cada operação é tributada pelo IBS e pela CBS",
+    "explanation": "CST (Código de Situação Tributária) e cClassTrib (Código de Classificação Tributária) codificam toda operação — com incidência ou não — pra ela entrar corretamente na apuração assistida.",
+    "pacciTip": "Todo documento fiscal precisa desses dois códigos, capito? Sem eles, o Fisco não sabe como te tributar."
   },
   {
     "id": "REF-EST-103",
@@ -1738,6 +1898,22 @@
     "pacciTip": "Destino, sempre destino, tesoro! O imposto viaja até onde o produto é consumido."
   },
   {
+    "id": "REF-EST-151",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de ônibus vende uma passagem de ida partindo de São Paulo com destino ao Rio de Janeiro.",
+    "question": "No transporte de passageiros, onde é considerado devido o IBS?",
+    "options": [
+      "No local de início do transporte",
+      "No local de destino do transporte",
+      "Na metade do trajeto",
+      "No local da sede da empresa de ônibus, sempre"
+    ],
+    "correctAnswer": "No local de início do transporte",
+    "explanation": "O serviço de transporte de passageiros tem como local do fornecimento o local de início do transporte — por isso, inclusive, não é possível agrupar ida e volta em um único documento fiscal.",
+    "pacciTip": "Transporte de gente, o imposto nasce onde a viagem começa. Simples assim!"
+  },
+  {
     "id": "REF-EST-113",
     "level": "estagiario",
     "type": "fill_blank",
@@ -1860,6 +2036,22 @@
     "correctAnswer": "2033",
     "explanation": "A vigência plena do novo modelo, com a extinção total dos tributos antigos, ocorre em 2033, ao final da transição.",
     "pacciTip": "2033, o ano em que tudo se completa, ragazzo! O ponto final da transição."
+  },
+  {
+    "id": "REF-EST-152",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um fornecedor entrega uma quantidade extra de produto ao cliente, sem cobrar por ela, em vez de dar um desconto no preço.",
+    "question": "Como se chama esse fornecimento de bem a maior, em substituição a um desconto no valor da operação?",
+    "options": [
+      "Bonificação",
+      "Brinde",
+      "Amostra grátis",
+      "Devolução de mercadoria"
+    ],
+    "correctAnswer": "Bonificação",
+    "explanation": "Bonificação é o fornecimento a maior de bem ou serviço objeto da atividade do contribuinte, em substituição a desconto no valor da operação — diferente do brinde, que é fornecido gratuitamente e não é objeto das atividades do fornecedor.",
+    "pacciTip": "Bonificação é \"leve mais, pague o mesmo\". Brinde é um presente à parte. Não confunda os dois, tesoro!"
   },
   {
     "id": "REF-EST-123",

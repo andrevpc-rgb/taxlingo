@@ -188,6 +188,22 @@
     "pacciTip": "Calcula, compara, identifica, ajusta. O teto não deixa a carga tributária fugir do combinado!"
   },
   {
+    "id": "REF-ESP-161",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de planos de assistência à saúde precisa classificar corretamente suas operações no novo sistema de códigos.",
+    "question": "Em qual grupo de cClassTrib se enquadram os planos de assistência à saúde e assistência funerária?",
+    "options": [
+      "011 — Tributação com alíquotas uniformes reduzidas",
+      "000 — Tributação integral",
+      "400 — Isenção",
+      "620 — Tributação Monofásica"
+    ],
+    "correctAnswer": "011 — Tributação com alíquotas uniformes reduzidas",
+    "explanation": "O grupo 011 (Tributação com alíquotas uniformes reduzidas) abrange planos de assistência à saúde e assistência funerária, além de concursos e prognósticos.",
+    "pacciTip": "Saúde e funerária entram no mesmo grupo de alíquota reduzida uniforme — decore esse par, tesoro!"
+  },
+  {
     "id": "REF-ESP-013",
     "level": "especialista",
     "type": "fill_blank",
@@ -338,6 +354,22 @@
     "correctAnswer": "Observar os prazos e condições específicos definidos na legislação de transição para aproveitamento ou compensação do saldo remanescente",
     "explanation": "A legislação de transição estabelece prazos e condições específicos para o aproveitamento ou compensação dos créditos remanescentes; ignorar essas regras pode implicar perda do direito.",
     "pacciTip": "Prazo é prazo, tesoro! Fica de olho nas regras de transição pra não perder nada."
+  },
+  {
+    "id": "REF-ESP-162",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma incorporadora imobiliária aderiu ao regime optativo que mantém a carga tributária para incorporação e loteamento.",
+    "question": "Qual cClassTrib representa esse regime optativo do setor imobiliário?",
+    "options": [
+      "220 — Alíquota Fixa",
+      "221 — Alíquota Fixa Proporcional",
+      "222 — Redução de Base de Cálculo",
+      "010 — Tributação com alíquotas uniformes"
+    ],
+    "correctAnswer": "220 — Alíquota Fixa",
+    "explanation": "O CST/cClassTrib 220 (Alíquota Fixa) é aplicável aos regimes optativos do setor imobiliário que mantêm a carga tributária para incorporação e loteamento.",
+    "pacciTip": "Imobiliário optativo de incorporação e loteamento é sempre 220 — não confunda com o 221, que é de locação!"
   },
   {
     "id": "REF-ESP-024",
@@ -532,6 +564,22 @@
     "pacciTip": "Cada setor tem sua peculiaridade, tesoro! Por isso existem regimes específicos."
   },
   {
+    "id": "REF-ESP-163",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma imobiliária loca um imóvel comercial e aplica alíquota sobre a receita bruta, mantendo a carga equivalente ao regime cumulativo antigo.",
+    "question": "Qual cClassTrib se aplica à locação de bem imóvel com alíquota sobre a receita bruta?",
+    "options": [
+      "221 — Alíquota Fixa Proporcional",
+      "220 — Alíquota Fixa",
+      "222 — Redução de Base de Cálculo",
+      "510 — Diferimento"
+    ],
+    "correctAnswer": "221 — Alíquota Fixa Proporcional",
+    "explanation": "O cClassTrib 221 (Alíquota Fixa Proporcional) é aplicável aos regimes optativos para locação de bens imóveis, mantendo a carga tributária equivalente ao regime cumulativo do PIS e da Cofins.",
+    "pacciTip": "Locação de imóvel com alíquota sobre receita bruta é 221 — irmão do 220, mas pra locação, não incorporação!"
+  },
+  {
     "id": "REF-ESP-036",
     "level": "especialista",
     "type": "multiple_choice",
@@ -724,6 +772,22 @@
     "pacciTip": "Locação tem regra própria, tesoro! Vale estudar bem antes de reestruturar."
   },
   {
+    "id": "REF-ESP-164",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma companhia aérea vende passagens internacionais com trechos de ida e volta cobrados em conjunto no mesmo bilhete.",
+    "question": "Qual é a única hipótese prevista de redução da base de cálculo (cClassTrib 222)?",
+    "options": [
+      "Transporte internacional de passageiros, quando os trechos de ida e volta são vendidos em conjunto",
+      "Qualquer venda de passagem aérea nacional",
+      "Transporte de cargas perigosas",
+      "Transporte marítimo de qualquer natureza"
+    ],
+    "correctAnswer": "Transporte internacional de passageiros, quando os trechos de ida e volta são vendidos em conjunto",
+    "explanation": "A única hipótese de redução da base de cálculo (222) é o transporte internacional de passageiros, quando os trechos de ida e volta são cobrados/vendidos em conjunto.",
+    "pacciTip": "Redução de base de cálculo é raridade nesse sistema — só essa hipótese específica de voo internacional!"
+  },
+  {
     "id": "REF-ESP-048",
     "level": "especialista",
     "type": "multiple_choice",
@@ -838,6 +902,22 @@
     "correctAnswer": false,
     "explanation": "Errado! Cada ente federativo (Estado ou Município) tem sua própria alíquota de referência, calculada conforme sua realidade de arrecadação, podendo variar entre eles.",
     "pacciTip": "Cada Município tem sua conta, amico! Não é número único pro Brasil todo."
+  },
+  {
+    "id": "REF-ESP-165",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa da Zona Franca de Manaus apura crédito presumido de IBS sobre suas operações de fornecimento.",
+    "question": "Qual cClassTrib é usado especificamente para o ajuste de crédito presumido de IBS na ZFM?",
+    "options": [
+      "810 — Ajuste de IBS na ZFM",
+      "800 — Transferência de Crédito",
+      "811 — Ajustes",
+      "820 — Tributação em declaração de regime específico"
+    ],
+    "correctAnswer": "810 — Ajuste de IBS na ZFM",
+    "explanation": "O cClassTrib 810 trata do lançamento do crédito presumido do IBS para indústrias incentivadas na Zona Franca de Manaus, sobre o valor apurado nos fornecimentos a partir de lá.",
+    "pacciTip": "ZFM tem código só dela, o 810 — benefício de crédito presumido bem específico da região!"
   },
   {
     "id": "REF-ESP-059",
@@ -958,6 +1038,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O cashback é direcionado a famílias inscritas em programas sociais e cadastros específicos definidos em lei, não sendo um benefício automático e universal.",
     "pacciTip": "Precisa de cadastro, amico! Não é benefício pra qualquer um, sem critério."
+  },
+  {
+    "id": "REF-ESP-166",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa foi desenquadrada do Simples Nacional no meio do ano e precisa emitir os ajustes fiscais correspondentes.",
+    "question": "Qual cClassTrib é usado para representar o desenquadramento do Simples Nacional, entre outros ajustes de apuração?",
+    "options": [
+      "811 — Ajustes",
+      "810 — Ajuste de IBS na ZFM",
+      "620 — Tributação Monofásica",
+      "400 — Isenção"
+    ],
+    "correctAnswer": "811 — Ajustes",
+    "explanation": "O grupo 811 (Ajustes) é usado exclusivamente em NF-e de débito e de crédito para ajustes na apuração assistida — incluindo, por exemplo, o desenquadramento do Simples Nacional.",
+    "pacciTip": "811 é a \"gaveta\" de ajustes finos da apuração, capito? Cabe até o desenquadramento do Simples ali."
   },
   {
     "id": "REF-ESP-071",
@@ -1144,6 +1240,22 @@
     ],
     "explanation": "A apuração registra a transferência entre filiais, identifica o destino da venda final, aplica a regra de destino a essa venda e consolida o total da cadeia.",
     "pacciTip": "Registra, identifica, aplica, consolida, bello! Cada etapa da cadeia conta."
+  },
+  {
+    "id": "REF-ESP-167",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma operadora de planos de saúde emite um documento cuja tributação ocorre inteiramente por meio da DeRE.",
+    "question": "Qual CST é aplicável à emissão de documentos fiscais cuja tributação ocorre por meio da Declaração de Regimes Específicos (DeRE)?",
+    "options": [
+      "820 — Tributação em declaração de regime específico",
+      "830 — Exclusão da Base de Cálculo",
+      "510 — Diferimento",
+      "011 — Tributação com alíquotas uniformes reduzidas"
+    ],
+    "correctAnswer": "820 — Tributação em declaração de regime específico",
+    "explanation": "O CST 820 é aplicável para a emissão de documentos fiscais cuja tributação ocorre por meio da DeRE — como planos de assistência à saúde e concursos de prognósticos.",
+    "pacciTip": "820 é o código de quem \"declara à parte\" pela DeRE, em vez de tributar direto no documento fiscal."
   },
   {
     "id": "REF-ESP-083",
@@ -1375,6 +1487,22 @@
     ],
     "explanation": "O mapeamento levanta o portfólio completo, verifica a incidência do Imposto Seletivo, calcula o impacto no preço e reavalia a estratégia comercial dos produtos mais afetados.",
     "pacciTip": "Levanta, verifica, calcula, reavalia, bello! Seletivo pede atenção produto a produto."
+  },
+  {
+    "id": "REF-ESP-168",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa segrega valores no Split Payment de forma que garanta o crédito ao adquirente proporcionalmente ao que foi efetivamente pago.",
+    "question": "Qual dispositivo legal ampara a regra de que o débito liquidado por Split Payment garante crédito proporcional ao adquirente, sem compensar débitos de outras notas?",
+    "options": [
+      "Art. 27, parágrafo único, II da Lcp nº 214/2025",
+      "Art. 4º, § 4º da Lcp nº 214/2025",
+      "Art. 57 da Lcp nº 214/2025",
+      "Art. 60 da Lcp nº 214/2025"
+    ],
+    "correctAnswer": "Art. 27, parágrafo único, II da Lcp nº 214/2025",
+    "explanation": "O art. 27, parágrafo único, II da Lcp nº 214/2025 é a base legal para a vinculação do Split Payment à respectiva operação, com crédito proporcional ao adquirente.",
+    "pacciTip": "No nível de especialista, decorar o artigo certo faz diferença — 27, parágrafo único, inciso II!"
   },
   {
     "id": "REF-ESP-094",
@@ -1624,6 +1752,22 @@
     "pacciTip": "Decrescente, tesoro! Vai diminuindo devagarinho até sumir."
   },
   {
+    "id": "REF-ESP-169",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte não consegue identificar exatamente qual aquisição gerou o bem agora destinado a uso pessoal, entre várias compras recentes.",
+    "question": "Quando não for possível identificar a aquisição correspondente ao bem de uso pessoal, como deve ser feito o estorno do crédito?",
+    "options": [
+      "Seguindo a ordem cronológica das aquisições, a partir da mais recente",
+      "Estornando o crédito da aquisição de menor valor, sempre",
+      "Não é necessário estornar nada nesse caso",
+      "Estornando o crédito de todas as aquisições do ano, proporcionalmente"
+    ],
+    "correctAnswer": "Seguindo a ordem cronológica das aquisições, a partir da mais recente",
+    "explanation": "Se não for possível identificar a aquisição correspondente ao bem de uso pessoal, o estorno de crédito seguirá a ordem cronológica das aquisições, a partir da mais recente.",
+    "pacciTip": "Sem rastro claro, a lei manda começar pelo mais recente e ir \"descendo\" no tempo, tesoro!"
+  },
+  {
     "id": "REF-ESP-106",
     "level": "especialista",
     "type": "fill_blank",
@@ -1816,6 +1960,22 @@
     "pacciTip": "Liquidação, tesoro! É na hora do pagamento que o imposto já se separa."
   },
   {
+    "id": "REF-ESP-170",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma mercadoria se perde no estoque por furto, e a empresa precisa emitir a NF-e de saída correspondente.",
+    "question": "Qual código de CFOP deve constar na NF-e de saída emitida em caso de perda em estoque por furto, perecimento ou extravio?",
+    "options": [
+      "5.927",
+      "1.102",
+      "6.108",
+      "3.949"
+    ],
+    "correctAnswer": "5.927",
+    "explanation": "No caso de perda no estoque de mercadoria por extravio, perecimento, deterioração, furto ou roubo, deve-se emitir NF-e de Saída com o CFOP 5.927 e a natureza de operação \"Baixa de Estoque\".",
+    "pacciTip": "CFOP 5.927 é o código específico de \"baixa de estoque\" por perda — memoriza esse número, tesoro!"
+  },
+  {
     "id": "REF-ESP-118",
     "level": "especialista",
     "type": "fill_blank",
@@ -1992,6 +2152,22 @@
     "pacciTip": "Destino, tesoro! No fim da travessia, ele reina sozinho."
   },
   {
+    "id": "REF-ESP-171",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um auditor fiscal revisa se a apropriação de créditos de uma empresa cumpriu todas as condicionantes legais.",
+    "question": "Além de não poder compensar crédito de CBS com IBS, qual outra condicionante é exigida para a apropriação de créditos?",
+    "options": [
+      "O crédito é condicionado à comprovação da operação por meio de documento fiscal eletrônico hábil e idôneo",
+      "O crédito só pode ser apropriado se o fornecedor for do regime regular",
+      "O crédito exige aprovação prévia do Comitê Gestor do IBS, caso a caso",
+      "O crédito só é válido se a operação for maior que R$ 1.000,00"
+    ],
+    "correctAnswer": "O crédito é condicionado à comprovação da operação por meio de documento fiscal eletrônico hábil e idôneo",
+    "explanation": "Entre as condicionantes para apropriação de créditos: não é possível compensar créditos de CBS com IBS e vice-versa, e o crédito é condicionado à comprovação da operação por documento fiscal eletrônico hábil e idôneo.",
+    "pacciTip": "Sem documento fiscal hábil e idôneo, não tem crédito que se sustente numa fiscalização, capito?"
+  },
+  {
     "id": "REF-ESP-129",
     "level": "especialista",
     "type": "fill_blank",
@@ -2134,6 +2310,22 @@
     "correctAnswer": "vinculante",
     "explanation": "O teto tem caráter vinculante: seu descumprimento projetado obriga o ajuste das alíquotas de referência.",
     "pacciTip": "Vinculante, amico! Palavra que mostra a força do mecanismo."
+  },
+  {
+    "id": "REF-ESP-172",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora recebe uma cobrança de energia elétrica que envolve tanto valores de consumo quanto de disponibilização multilateral via câmara de comercialização.",
+    "question": "Na aquisição de energia elétrica realizada de forma multilateral, qual é o local do fornecimento considerado?",
+    "options": [
+      "O local do estabelecimento do agente ou de seus representados que figurem na posição devedora da liquidação financeira apurada pela Câmara de Comercialização de Energia Elétrica",
+      "O local da usina geradora de energia",
+      "O local do estabelecimento principal do fornecedor, sempre",
+      "A capital do estado onde a câmara de comercialização está sediada"
+    ],
+    "correctAnswer": "O local do estabelecimento do agente ou de seus representados que figurem na posição devedora da liquidação financeira apurada pela Câmara de Comercialização de Energia Elétrica",
+    "explanation": "Nas aquisições de energia elétrica realizadas de forma multilateral, o local do fornecimento é o do estabelecimento do agente (ou de seus representados) na posição devedora da liquidação financeira apurada pela Câmara de Comercialização de Energia Elétrica.",
+    "pacciTip": "Energia multilateral é um mercado complexo — o local segue quem \"deve\" na liquidação da câmara, tesoro!"
   },
   {
     "id": "REF-ESP-141",

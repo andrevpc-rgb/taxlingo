@@ -146,6 +146,22 @@
     "pacciTip": "Extrai, compara, investiga, reporta. Assim nenhum centavo se perde no caminho!"
   },
   {
+    "id": "REF-JR-141",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "A empresa precisa escolher qual dos três tipos de Split Payment vai adotar no seu sistema de vendas.",
+    "question": "Os três tipos de Split Payment previstos na Reforma são:",
+    "options": [
+      "Super Inteligente, Inteligente Offline e Simplificado",
+      "Automático, Manual e Assistido",
+      "Nacional, Regional e Local",
+      "Preventivo, Corretivo e Emergencial"
+    ],
+    "correctAnswer": "Super Inteligente, Inteligente Offline e Simplificado",
+    "explanation": "A base legal (art. 31, § 1º da Lcp 214/2025) prevê três tipos: Split Payment Super Inteligente, Split Payment Inteligente Offline e Split Payment Simplificado.",
+    "pacciTip": "Três variações, uma missão: segregar o imposto assim que o dinheiro entra, tesoro!"
+  },
+  {
     "id": "REF-JR-011",
     "level": "analista_junior",
     "type": "ordering",
@@ -292,6 +308,22 @@
     "pacciTip": "Específico é a palavra-chave, tesoro! Combustível não joga com as regras de todo mundo."
   },
   {
+    "id": "REF-JR-142",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa recolheu o IBS e a CBS via Split Payment em todas as suas vendas do mês, mas ainda apurou saldo a recolher.",
+    "question": "O Split Payment sempre elimina completamente a necessidade de recolhimento adicional pelo contribuinte?",
+    "options": [
+      "Não, o Split Payment não afasta eventual saldo a recolher pelo contribuinte",
+      "Sim, o Split Payment sempre zera qualquer saldo devedor",
+      "Sim, mas só para empresas do Simples Nacional",
+      "Não, o Split Payment só se aplica a serviços, nunca a bens"
+    ],
+    "correctAnswer": "Não, o Split Payment não afasta eventual saldo a recolher pelo contribuinte",
+    "explanation": "Uma das regras do Split Payment é que ele não afasta eventual saldo a recolher pelo contribuinte — pode haver diferença apurada que ainda precise ser paga.",
+    "pacciTip": "Split Payment ajuda bastante, mas não substitui a apuração completa do período, capito?"
+  },
+  {
     "id": "REF-JR-021",
     "level": "analista_junior",
     "type": "multiple_choice",
@@ -436,6 +468,22 @@
     "correctAnswer": true,
     "explanation": "Sim. Quando o cálculo confere com o esperado, é um forte indício de que cClassTrib e alíquota foram aplicados corretamente na operação.",
     "pacciTip": "Bateu certinho? Ótimo sinal, tesoro! O cClassTrib provavelmente está feliz e correto."
+  },
+  {
+    "id": "REF-JR-143",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "A empresa comprou uma máquina nova e a integrou ao ativo imobilizado, gerando crédito de IBS e CBS.",
+    "question": "Por que é importante emitir o evento de \"Imobilização de Item\" nesse caso?",
+    "options": [
+      "Para permitir que o sistema identifique o prazo correto de análise de um eventual pedido de ressarcimento desse crédito",
+      "Para reduzir o valor do IBS devido na compra",
+      "Para transferir automaticamente o bem para outra empresa do grupo",
+      "Para cancelar a nota fiscal de compra"
+    ],
+    "correctAnswer": "Para permitir que o sistema identifique o prazo correto de análise de um eventual pedido de ressarcimento desse crédito",
+    "explanation": "O evento de Imobilização de Item permite que o sistema do CG-IBS identifique as hipóteses de aplicação, ao crédito apropriado na aquisição, do prazo de análise de pedidos de ressarcimento definido em lei.",
+    "pacciTip": "Sem esse evento, o pedido de ressarcimento pode não ter o prazo mais rápido garantido, tesoro!"
   },
   {
     "id": "REF-JR-032",
@@ -622,6 +670,22 @@
     "pacciTip": "Alíquota desatualizada é traiçoeira, tesoro! Confere sempre a vigência."
   },
   {
+    "id": "REF-JR-144",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa participa de um programa de conformidade fiscal desenvolvido pelo Comitê Gestor do IBS e pela RFB.",
+    "question": "Qual o benefício, em termos de prazo, para contribuintes enquadrados nesses programas de conformidade ao pedir ressarcimento?",
+    "options": [
+      "O prazo de análise passa a ser de 30 dias",
+      "O ressarcimento é automaticamente dobrado em valor",
+      "A empresa fica isenta de qualquer fiscalização futura",
+      "Não há nenhum benefício de prazo, apenas de valor"
+    ],
+    "correctAnswer": "O prazo de análise passa a ser de 30 dias",
+    "explanation": "O prazo será de 30 dias para os contribuintes enquadrados em programas de conformidade desenvolvidos pelo Comitê Gestor do IBS e pela RFB.",
+    "pacciTip": "Ser \"bom aluno\" fiscal compensa: prazos mais curtos pra reaver seu dinheiro!"
+  },
+  {
     "id": "REF-JR-042",
     "level": "analista_junior",
     "type": "fill_blank",
@@ -744,6 +808,22 @@
     "correctAnswer": "Comparar, venda a venda, o valor retido pelo split payment com o valor esperado pela alíquota da operação",
     "explanation": "A comparação individualizada por venda é o caminho mais eficiente para isolar exatamente onde está a diferença no lote do dia.",
     "pacciTip": "Venda por venda é trabalhoso, mas é o jeito certo de achar a agulha no palheiro, tesoro!"
+  },
+  {
+    "id": "REF-JR-145",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Ao classificar duas operações diferentes, você percebe que uma delas não gera direito a manutenção de crédito, e a outra sim.",
+    "question": "Qual a principal diferença entre o CST 400 (Isenção) e o CST 410 (Imunidade e não incidência)?",
+    "options": [
+      "A isenção exclui o crédito tributário e não permite manutenção do crédito, enquanto a imunidade trata de hipóteses de não incidência do imposto",
+      "Não há diferença nenhuma entre os dois códigos",
+      "Isenção é usada só por exportadores, imunidade só por importadores",
+      "Imunidade é temporária, isenção é permanente sempre"
+    ],
+    "correctAnswer": "A isenção exclui o crédito tributário e não permite manutenção do crédito, enquanto a imunidade trata de hipóteses de não incidência do imposto",
+    "explanation": "O CST 400 (Isenção) representa exclusão do crédito tributário, sem direito à manutenção de crédito. Já o CST 410 (Imunidade e não incidência) trata das hipóteses em que o IBS e a CBS simplesmente não incidem.",
+    "pacciTip": "Isenção \"perdoa\" o imposto de um jeito, imunidade nem deixa ele nascer — são coisas diferentes, tesoro!"
   },
   {
     "id": "REF-JR-052",
@@ -874,6 +954,22 @@
     "correctAnswer": false,
     "explanation": "Não elimina totalmente. O split payment reduz o risco ao automatizar a retenção, mas erros de parametrização ainda podem gerar recolhimento incorreto.",
     "pacciTip": "Reduz o risco, sim, mas não apaga ele por completo, tesoro!"
+  },
+  {
+    "id": "REF-JR-146",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma operação com energia elétrica precisa ser classificada entre \"postergar o imposto\" e \"suspender temporariamente a incidência\".",
+    "question": "O que diferencia o CST 510 (Diferimento) do CST 550 (Suspensão)?",
+    "options": [
+      "O diferimento posterga o imposto para uma etapa posterior, sem direito a crédito ao adquirente; a suspensão depende de um critério, e se ele for quebrado, o imposto volta a ser exigido",
+      "Diferimento é permanente, suspensão nunca acaba",
+      "Suspensão só existe para exportação, diferimento só para importação",
+      "Não há diferença de efeito prático entre os dois"
+    ],
+    "correctAnswer": "O diferimento posterga o imposto para uma etapa posterior, sem direito a crédito ao adquirente; a suspensão depende de um critério, e se ele for quebrado, o imposto volta a ser exigido",
+    "explanation": "Diferimento (510) é a postergação do IBS/CBS para etapa posterior, sem pagamento nem crédito ao adquirente nessa etapa. Suspensão (550) é a incidência suspensa por um critério — se ele for quebrado, o imposto passa a ser exigido.",
+    "pacciTip": "Diferir é \"empurrar pra depois\". Suspender é \"pausar até quebrar a regra\". Guarda essa distinção!"
   },
   {
     "id": "REF-JR-062",
@@ -1060,6 +1156,22 @@
     "pacciTip": "Erro que mora sempre no mesmo lugar tem endereço certo, tesoro!"
   },
   {
+    "id": "REF-JR-147",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Duas empresas se fusionam, e uma delas tinha um saldo de crédito de IBS e CBS acumulado.",
+    "question": "O que acontece com o crédito acumulado de IBS e CBS numa fusão, cisão ou incorporação?",
+    "options": [
+      "É possível transferir o crédito para a pessoa jurídica sucessora, usando o CST 800",
+      "O crédito é perdido automaticamente na fusão",
+      "O crédito só pode ser usado pela empresa original, mesmo depois de deixar de existir",
+      "O crédito vira automaticamente lucro tributável"
+    ],
+    "correctAnswer": "É possível transferir o crédito para a pessoa jurídica sucessora, usando o CST 800",
+    "explanation": "O CST 800 (Transferência de Crédito) é aplicável às transformações societárias — fusão, cisão ou incorporação — e ao regime específico das cooperativas, permitindo levar o crédito para a sucessora.",
+    "pacciTip": "Quando a empresa \"muda de roupa\" (fusão, cisão, incorporação), o crédito pode seguir junto, tesoro!"
+  },
+  {
     "id": "REF-JR-072",
     "level": "analista_junior",
     "type": "fill_blank",
@@ -1182,6 +1294,22 @@
     "correctAnswer": "O regime de apuração escolhido pelo fornecedor optante do Simples Nacional (simplificado ou regular)",
     "explanation": "O percentual de crédito transferido ao comprador depende diretamente do regime de apuração adotado pelo fornecedor do Simples Nacional.",
     "pacciTip": "O regime do fornecedor é quem manda no crédito, tesoro!"
+  },
+  {
+    "id": "REF-JR-148",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "A empresa de telecomunicações precisa emitir um documento fiscal eletrônico específico para os serviços que presta.",
+    "question": "Qual documento fiscal eletrônico foi criado especificamente para serviços de comunicação, como telefonia?",
+    "options": [
+      "NFCom (Nota Fiscal Fatura de Serviços de Comunicação Eletrônica)",
+      "NF3e",
+      "CT-e OS",
+      "DC-e"
+    ],
+    "correctAnswer": "NFCom (Nota Fiscal Fatura de Serviços de Comunicação Eletrônica)",
+    "explanation": "Entre os documentos fiscais eletrônicos instituídos está a NFCom, modelo 62 — Nota Fiscal Fatura de Serviços de Comunicação Eletrônica, usada por empresas de telecomunicação.",
+    "pacciTip": "Cada setor ganhou seu próprio documento fiscal eletrônico: NF3e pra energia, NFCom pra telecom, e por aí vai!"
   },
   {
     "id": "REF-JR-082",
@@ -1322,6 +1450,22 @@
     "correctAnswer": true,
     "explanation": "Sim. Cada fornecedor pode ter optado por um regime de apuração diferente (simplificado ou regular), o que altera o percentual de crédito gerado.",
     "pacciTip": "Mesmo grupo, resultados diferentes, amico! Depende da escolha de cada um."
+  },
+  {
+    "id": "REF-JR-149",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma matriz transfere mercadorias para uma filial da mesma empresa, sem que haja venda para terceiros.",
+    "question": "Essa transferência entre estabelecimentos do mesmo contribuinte precisa de documento fiscal eletrônico?",
+    "options": [
+      "Sim, a obrigação de emissão se aplica inclusive à transferência de bens entre estabelecimentos do mesmo contribuinte",
+      "Não, só operações de venda para terceiros exigem documento fiscal",
+      "Só se a filial estiver em outro país",
+      "Só se o valor transferido for maior que R$ 1 milhão"
+    ],
+    "correctAnswer": "Sim, a obrigação de emissão se aplica inclusive à transferência de bens entre estabelecimentos do mesmo contribuinte",
+    "explanation": "A obrigação de emissão de documentos fiscais aplica-se inclusive à transferência de bens entre estabelecimentos pertencentes ao mesmo contribuinte, além de operações imunes, isentas, com alíquota zero ou suspensão.",
+    "pacciTip": "Mesmo \"dentro de casa\", entre matriz e filial, o documento fiscal continua sendo obrigatório, capito?"
   },
   {
     "id": "REF-JR-093",
@@ -1514,6 +1658,22 @@
     "pacciTip": "Confirma antes de lançar, amico! Não custa nada e evita erro."
   },
   {
+    "id": "REF-JR-150",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um médico autônomo vende seu carro pessoal usado, que nunca utilizou no consultório.",
+    "question": "Essa venda de bem pessoal, não relacionado à atividade profissional, é tributada pelo IBS e pela CBS?",
+    "options": [
+      "Não, aquisição e fornecimento de bens não relacionados à atividade econômica seguem as mesmas regras dos não contribuintes",
+      "Sim, todo profissional liberal é sempre contribuinte em qualquer venda que fizer",
+      "Só se o carro tiver menos de 3 anos de uso",
+      "Só se a venda for feita para outro médico"
+    ],
+    "correctAnswer": "Não, aquisição e fornecimento de bens não relacionados à atividade econômica seguem as mesmas regras dos não contribuintes",
+    "explanation": "A aquisição e o fornecimento, por pessoa física caracterizada como contribuinte, de bens e serviços não relacionados ao desenvolvimento de sua atividade econômica sujeitam-se às mesmas regras dos não contribuintes — ou seja, não há incidência.",
+    "pacciTip": "O médico é contribuinte na consulta, não na venda do carro pessoal. Contexto importa, tesoro!"
+  },
+  {
     "id": "REF-JR-103",
     "level": "analista_junior",
     "type": "fill_blank",
@@ -1638,6 +1798,22 @@
     "pacciTip": "Banco também tem sua regrinha especial, amico! Não trata como operação comum."
   },
   {
+    "id": "REF-JR-151",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa precisa identificar, em cada tipo de operação, onde o fato gerador do IBS e da CBS efetivamente ocorre.",
+    "question": "Para que serve o código cIndOp (Código Indicador de Operação) nos documentos fiscais?",
+    "options": [
+      "Identificar o local do fornecimento a partir do tipo de operação realizada",
+      "Definir o valor do frete cobrado na operação",
+      "Registrar o histórico de pagamentos do cliente",
+      "Calcular automaticamente o desconto aplicado"
+    ],
+    "correctAnswer": "Identificar o local do fornecimento a partir do tipo de operação realizada",
+    "explanation": "O cIndOp associa cada tipo de operação (bem móvel, imóvel, serviço, transporte, telefonia etc.) ao respectivo local do fornecimento a ser identificado no documento fiscal eletrônico, conforme o art. 11 da Lcp 214/2025.",
+    "pacciTip": "cIndOp é a \"bússola\" que aponta onde o imposto nasce pra cada tipo de operação, capito?"
+  },
+  {
     "id": "REF-JR-113",
     "level": "analista_junior",
     "type": "multiple_choice",
@@ -1760,6 +1936,22 @@
     "correctAnswer": true,
     "explanation": "Sim. Todos os regimes específicos compartilham a necessidade de regras próprias de apuração, exigindo atenção redobrada do analista.",
     "pacciTip": "Câmbio, combustível, plano de saúde: mesma família, mesmo cuidado, amico!"
+  },
+  {
+    "id": "REF-JR-152",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma cooperativa precisa transferir crédito de IBS e CBS entre seus cooperados.",
+    "question": "Qual código de CST é aplicável às transferências de crédito envolvendo cooperativas?",
+    "options": [
+      "CST 800 (Transferência de Crédito)",
+      "CST 400 (Isenção)",
+      "CST 620 (Tributação Monofásica)",
+      "CST 200 (Alíquota Reduzida)"
+    ],
+    "correctAnswer": "CST 800 (Transferência de Crédito)",
+    "explanation": "O CST 800 é aplicável tanto às transformações societárias (fusão, cisão, incorporação) quanto ao regime específico das cooperativas, incluindo a transferência de crédito do associado.",
+    "pacciTip": "Cooperativa também tem regra própria pra transferir crédito entre os associados — mesmo CST das fusões!"
   },
   {
     "id": "REF-JR-123",

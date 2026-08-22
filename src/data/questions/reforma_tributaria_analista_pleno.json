@@ -146,6 +146,22 @@
     "pacciTip": "Apura, compensa, sobra, pede de volta. Assim o dinheiro do exportador não fica esquecido!"
   },
   {
+    "id": "REF-PL-141",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma agência de publicidade cede espaço publicitário para uma empresa domiciliada no Brasil.",
+    "question": "Nesse tipo de operação, qual costuma ser o local do fornecimento considerado para fins de IBS e CBS?",
+    "options": [
+      "O domicílio principal do adquirente residente ou domiciliado no País",
+      "O local onde o anúncio será fisicamente exibido, sempre",
+      "A sede da agência de publicidade",
+      "O local de nascimento do responsável pela empresa contratante"
+    ],
+    "correctAnswer": "O domicílio principal do adquirente residente ou domiciliado no País",
+    "explanation": "Na cessão de espaço para prestação de serviços publicitários em operações onerosas, o local do fornecimento é o domicílio principal do adquirente residente ou domiciliado no País (art. 11, X, \"a\").",
+    "pacciTip": "Publicidade segue o domicílio de quem contrata, não de onde o anúncio aparece, tesoro!"
+  },
+  {
     "id": "REF-PL-011",
     "level": "analista_pleno",
     "type": "ordering",
@@ -290,6 +306,22 @@
     "correctAnswer": "diferenciado",
     "explanation": "Regimes específicos possuem crédito diferenciado, com regras próprias distintas do regime geral.",
     "pacciTip": "Diferenciado, tesoro! Regime específico nunca segue a receita padrão."
+  },
+  {
+    "id": "REF-PL-142",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma consultoria presta um serviço à distância para um cliente localizado em outro estado, sem se enquadrar em nenhum indicador específico de local.",
+    "question": "Nos \"demais serviços\" prestados à distância, sem indicador específico, qual é o critério de local do fornecimento?",
+    "options": [
+      "O domicílio principal do adquirente residente ou domiciliado no País",
+      "O local onde o prestador de serviço mora",
+      "A capital do estado do prestador",
+      "O local do primeiro contato comercial entre as partes"
+    ],
+    "correctAnswer": "O domicílio principal do adquirente residente ou domiciliado no País",
+    "explanation": "Para os demais serviços em operações onerosas não especificados em outros indicadores, e naqueles prestados à distância, o local do fornecimento é o domicílio principal do adquirente residente ou domiciliado no País.",
+    "pacciTip": "Quando não há regra específica, cai na regra geral: domicílio de quem compra, tesoro!"
   },
   {
     "id": "REF-PL-021",
@@ -468,6 +500,22 @@
     "pacciTip": "Margem se calcula no custo líquido, tesoro! O tributo por fora entra só no final, sem bagunçar a conta."
   },
   {
+    "id": "REF-PL-143",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de energia elétrica realiza operações de geração, distribuição e comercialização, sem que haja consumo efetivo naquele ponto.",
+    "question": "Nas operações de energia elétrica que não envolvem consumo efetivo (geração, distribuição, comercialização), qual é o local do fornecimento?",
+    "options": [
+      "O local do estabelecimento principal do adquirente (matriz)",
+      "O local onde a usina geradora está localizada, sempre",
+      "A capital do estado de origem da energia",
+      "O local de instalação do medidor do consumidor final"
+    ],
+    "correctAnswer": "O local do estabelecimento principal do adquirente (matriz)",
+    "explanation": "Nas operações com energia elétrica que não envolvam efetivo consumo (como transmissão, geração, distribuição ou comercialização), o local do fornecimento é o do estabelecimento principal do adquirente, conforme o § 4º do art. 11.",
+    "pacciTip": "Consumo de verdade tem um local, mas operações \"de bastidor\" na cadeia de energia seguem o adquirente principal!"
+  },
+  {
     "id": "REF-PL-032",
     "level": "analista_pleno",
     "type": "multiple_choice",
@@ -628,6 +676,22 @@
     "pacciTip": "Seguro também tem regra própria de crédito, amico! Vale checar antes de fechar a apólice."
   },
   {
+    "id": "REF-PL-144",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa contrata capacidade de entrada de gás natural em um duto para transporte dutoviário.",
+    "question": "Nesse caso, qual é o local do fornecimento considerado para o serviço de transporte dutoviário de gás natural?",
+    "options": [
+      "O local do estabelecimento principal do fornecedor",
+      "O local do estabelecimento principal do adquirente",
+      "A capital do estado onde nasce o duto",
+      "O ponto médio do trajeto do duto"
+    ],
+    "correctAnswer": "O local do estabelecimento principal do fornecedor",
+    "explanation": "Na contratação de capacidade de ENTRADA de gás natural no duto, o local do fornecimento é o do estabelecimento principal do fornecedor; já na contratação de capacidade de SAÍDA, é o do estabelecimento principal do adquirente.",
+    "pacciTip": "Entrada olha pro fornecedor, saída olha pro adquirente — dois lados do mesmo duto, tesoro!"
+  },
+  {
     "id": "REF-PL-042",
     "level": "analista_pleno",
     "type": "multiple_choice",
@@ -746,6 +810,22 @@
     "pacciTip": "Não é só nome novo, tesoro! O cálculo por fora muda a conta de verdade."
   },
   {
+    "id": "REF-PL-145",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte identifica que pagou IBS e CBS além do devido numa operação já concluída, sem ter aproveitado crédito nela.",
+    "question": "Além de não ter gerado crédito ao adquirente, o que mais é necessário para a restituição de pagamento indevido?",
+    "options": [
+      "Prova de que o fornecedor assumiu o encargo financeiro, ou está expressamente autorizado por terceiro",
+      "Autorização judicial prévia obrigatória em todos os casos",
+      "Que o valor pago indevidamente seja superior a R$ 50.000,00",
+      "Que a operação tenha ocorrido há menos de 90 dias"
+    ],
+    "correctAnswer": "Prova de que o fornecedor assumiu o encargo financeiro, ou está expressamente autorizado por terceiro",
+    "explanation": "A restituição do pagamento indevido depende de a operação não ter gerado crédito ao adquirente, e de prova de que o fornecedor assumiu o encargo financeiro do tributo ou está expressamente autorizado por quem o assumiu.",
+    "pacciTip": "A lei evita que alguém receba de volta um valor que outra pessoa já usou como crédito, capito?"
+  },
+  {
     "id": "REF-PL-052",
     "level": "analista_pleno",
     "type": "true_false",
@@ -844,6 +924,22 @@
     "correctAnswer": false,
     "explanation": "Errado! Qualquer empresa pode ter saldo credor temporário quando os créditos do período superam os débitos, como em meses de investimento elevado, independente de vender para o mercado interno ou externo.",
     "pacciTip": "Saldo credor não é exclusividade de exportador, tesoro! Investimento forte também pode gerar sobra."
+  },
+  {
+    "id": "REF-PL-146",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa foi incorporada por outra e possuía um saldo credor relevante de IBS e CBS acumulado.",
+    "question": "O saldo credor de IBS e CBS pode ser transferido livremente para qualquer terceiro?",
+    "options": [
+      "Não, o saldo credor só pode ser transferido para a pessoa jurídica sucessora, nas hipóteses legais de sucessão",
+      "Sim, pode ser vendido livremente no mercado",
+      "Sim, mas só para empresas do mesmo setor",
+      "Sim, desde que autorizado por qualquer sócio da empresa"
+    ],
+    "correctAnswer": "Não, o saldo credor só pode ser transferido para a pessoa jurídica sucessora, nas hipóteses legais de sucessão",
+    "explanation": "O saldo credor de IBS e CBS não pode ser transferido a terceiros, salvo para a pessoa jurídica sucessora, nas hipóteses legais de sucessão (como fusão, cisão ou incorporação).",
+    "pacciTip": "Crédito não é mercadoria pra vender por aí — só \"viaja\" dentro de uma sucessão legal, tesoro!"
   },
   {
     "id": "REF-PL-062",
@@ -977,6 +1073,22 @@
     ],
     "explanation": "Registra-se a compra, identifica-se o uso pessoal, verifica-se a ausência de vínculo com a atividade e conclui-se pela impossibilidade de crédito.",
     "pacciTip": "Sem vínculo com o negócio, sem crédito, tesoro! Essa é a ordem da lógica."
+  },
+  {
+    "id": "REF-PL-147",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um cliente faz uma transferência bancária manual, definindo por conta própria o valor e o destinatário do pagamento.",
+    "question": "Essa transação é um exemplo de operação iniciada por quem, no contexto do Split Payment?",
+    "options": [
+      "Pelo pagador",
+      "Pelo recebedor",
+      "Por um terceiro intermediário obrigatório",
+      "Pelo Comitê Gestor do IBS diretamente"
+    ],
+    "correctAnswer": "Pelo pagador",
+    "explanation": "Transações iniciadas pelo pagador incluem a transferência bancária manual e o PIX em que o próprio pagador define, sem intervenção prévia do recebedor, o valor e o destinatário.",
+    "pacciTip": "Quem decide sozinho valor e destino do pagamento é o pagador que está no controle da transação!"
   },
   {
     "id": "REF-PL-072",
@@ -1187,6 +1299,22 @@
     ],
     "explanation": "Apura-se créditos e débitos, compensa-se o que for possível, confirma-se o saldo remanescente e formaliza-se o pedido de ressarcimento.",
     "pacciTip": "Apura, compensa, confirma, pede, tesoro! O ciclo do exportador não pode travar."
+  },
+  {
+    "id": "REF-PL-148",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um Estado decide que não vai simplesmente adotar a alíquota de referência fixada pelo Senado para o IBS.",
+    "question": "Que alternativas a legislação permite ao ente federativo que não adota a alíquota de referência?",
+    "options": [
+      "Dispor um ajuste aumentativo ou diminutivo em pontos percentuais, ou aplicar diretamente um percentual específico",
+      "Ele é obrigado a usar exatamente a alíquota de referência, sem exceções",
+      "Pode aplicar qualquer alíquota, sem qualquer limite legal",
+      "Precisa de aprovação do Senado Federal para cada operação individual"
+    ],
+    "correctAnswer": "Dispor um ajuste aumentativo ou diminutivo em pontos percentuais, ou aplicar diretamente um percentual específico",
+    "explanation": "Caso não utilize a alíquota de referência, o ente federativo pode dispor em sua legislação um ajuste aumentativo ou diminutivo em pontos percentuais sobre a referência, ou aplicar diretamente um percentual específico.",
+    "pacciTip": "A alíquota de referência é o ponto de partida, mas cada ente tem certa liberdade pra ajustar, tesoro!"
   },
   {
     "id": "REF-PL-082",
@@ -1420,6 +1548,22 @@
     "pacciTip": "Assina, identifica, calcula, ajusta, tesoro! Regime específico pede sempre esse cuidado."
   },
   {
+    "id": "REF-PL-149",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa opta pelo procedimento opcional e simplificado de Split Payment em suas vendas.",
+    "question": "O que caracteriza o Split Payment Simplificado em relação ao valor segregado?",
+    "options": [
+      "É opcional, e o valor segregado não guarda relação direta com o valor dos débitos de IBS e CBS da operação",
+      "É obrigatório para todas as empresas do regime regular",
+      "Sempre segrega exatamente o valor do débito apurado na operação",
+      "Só pode ser usado por empresas do Simples Nacional"
+    ],
+    "correctAnswer": "É opcional, e o valor segregado não guarda relação direta com o valor dos débitos de IBS e CBS da operação",
+    "explanation": "O procedimento simplificado do Split Payment é opcional, e o valor a ser segregado não guarda relação com o valor dos débitos de IBS e CBS da operação — o eventual excedente recolhido é ajustado depois da apuração.",
+    "pacciTip": "O Simplificado segrega um valor \"estimado\", não o valor exato do débito — o ajuste fino vem depois!"
+  },
+  {
     "id": "REF-PL-093",
     "level": "analista_pleno",
     "type": "fill_blank",
@@ -1578,6 +1722,22 @@
     "correctAnswer": "líquido",
     "explanation": "Para preservar a margem real, o markup é calculado sobre o custo líquido de créditos, e o tributo por fora é somado somente depois.",
     "pacciTip": "Líquido é a palavra certa, tesoro! Assim a margem não se distorce."
+  },
+  {
+    "id": "REF-PL-150",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um posto de combustíveis recebe o IBS e a CBS já recolhidos em etapa anterior da cadeia produtiva.",
+    "question": "Qual CST está associado ao regime específico dos combustíveis, com recolhimento em uma única etapa?",
+    "options": [
+      "CST 620 (Tributação Monofásica)",
+      "CST 220 (Alíquota Fixa)",
+      "CST 410 (Imunidade e não incidência)",
+      "CST 830 (Exclusão da Base de Cálculo)"
+    ],
+    "correctAnswer": "CST 620 (Tributação Monofásica)",
+    "explanation": "O CST 620 representa o Regime Específico dos Combustíveis, no qual o IBS e a CBS são recolhidos em uma única etapa da cadeia (tributação monofásica).",
+    "pacciTip": "Combustível é tributado uma vez só, lá atrás na cadeia — por isso o nome \"monofásica\"!"
   },
   {
     "id": "REF-PL-103",
@@ -1740,6 +1900,22 @@
     "pacciTip": "Combustíveis, sempre eles, tesoro! Regime especial de ponta a ponta."
   },
   {
+    "id": "REF-PL-151",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de energia elétrica precisa excluir da base de cálculo um valor relativo à energia fornecida à unidade consumidora.",
+    "question": "Qual CST é utilizado para essa exclusão específica da base de cálculo de energia elétrica?",
+    "options": [
+      "CST 830 (Exclusão da Base de Cálculo)",
+      "CST 800 (Transferência de Crédito)",
+      "CST 510 (Diferimento)",
+      "CST 011 (Tributação com alíquotas uniformes reduzidas)"
+    ],
+    "correctAnswer": "CST 830 (Exclusão da Base de Cálculo)",
+    "explanation": "O CST 830 trata da exclusão da base de cálculo, aplicável especificamente à distribuidora de energia que exclui da base o valor fornecido pela unidade consumidora.",
+    "pacciTip": "Energia elétrica tem regra própria de ajuste na base de cálculo — CST 830, direto ao ponto!"
+  },
+  {
     "id": "REF-PL-113",
     "level": "analista_pleno",
     "type": "fill_blank",
@@ -1862,6 +2038,22 @@
     "correctAnswer": "marketing",
     "explanation": "Despesas com ações de marketing vinculadas à atividade comercial da empresa se enquadram na ampla base de crédito da não cumulatividade plena.",
     "pacciTip": "Marketing, tesoro! Divulgar a marca também ajuda a construir crédito."
+  },
+  {
+    "id": "REF-PL-152",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma seguradora quer entender como o IOF sobre operações de seguro se relaciona com a nova estrutura tributária.",
+    "question": "O que acontece com o IOF-Seguros na transição da Reforma Tributária?",
+    "options": [
+      "É substituído pela CBS, no âmbito federal",
+      "Continua existindo exatamente como hoje, sem qualquer mudança",
+      "É substituído pelo IBS",
+      "Vira parte do Imposto Seletivo"
+    ],
+    "correctAnswer": "É substituído pela CBS, no âmbito federal",
+    "explanation": "No desenho do IVA Dual brasileiro, a CBS (federal) substitui o PIS, a Cofins e o IOF-Seguros; já o IBS (subnacional) substitui o ICMS e o ISS.",
+    "pacciTip": "PIS, Cofins e IOF-Seguros somem, e no lugar entra só a CBS. Três viram um, de novo!"
   },
   {
     "id": "REF-PL-123",

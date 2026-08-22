@@ -1,5 +1,5 @@
 // src/App.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Landmark,
   Calculator,
@@ -244,10 +244,49 @@ function BottomNav({ view, onNavigate, isManager }) {
   );
 }
 
+// Acha a próxima lição não concluída e destravada, na ordem dos módulos —
+// é "onde o usuário parou". Usada só pra redirecionar direto pra ela ao
+// entrar no app (ver efeito de auto-continuar em AppShell); a navegação
+// manual pela Home continua funcionando normalmente depois disso.
+function findContinueLesson(modules) {
+  for (const module of modules) {
+    if (module.locked) continue;
+    for (const lesson of module.lessons) {
+      if (!lesson.locked && !lesson.completed) {
+        return { moduleId: module.id, lessonId: lesson.id };
+      }
+    }
+  }
+  return null;
+}
+
 function AppShell() {
   // 'home' | 'quiz' | 'leaderboard' | 'admin'
   const [view, setView] = useState('home');
-  const { isAuthenticated, isManager, passwordRecoveryMode, startLesson, startDailyReview, exitLesson } = useGame();
+  const { isAuthenticated, isManager, passwordRecoveryMode, startLesson, startDailyReview, exitLesson, modules } =
+    useGame();
+
+  // Ao entrar no app (login, cadastro ou sessão restaurada), pula direto pra
+  // lição onde o usuário parou, em vez de deixar a Home como um passo a
+  // mais no meio do caminho. Dispara só uma vez por sessão autenticada — o
+  // ref garante isso mesmo que `modules` mude depois (ex.: ao concluir uma
+  // lição), e é resetado quando desloga, pra disparar de novo no próximo login.
+  const hasAutoContinuedRef = useRef(false);
+  useEffect(() => {
+    if (!isAuthenticated) {
+      hasAutoContinuedRef.current = false;
+      return;
+    }
+    if (hasAutoContinuedRef.current) return;
+    hasAutoContinuedRef.current = true;
+
+    const target = findContinueLesson(modules);
+    if (target) {
+      startLesson(target.moduleId, target.lessonId);
+      setView('quiz');
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated]);
 
   // Clicou no link do e-mail de "esqueci minha senha": mostra a tela de
   // definir senha nova antes de qualquer outra coisa, mesmo já "autenticado"

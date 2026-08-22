@@ -146,6 +146,22 @@
     "pacciTip": "Mapeia, simula, negocia, formaliza. Assim nenhum contrato pega a empresa de surpresa!"
   },
   {
+    "id": "REF-SR-141",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A empresa está decidindo entre os três tipos de Split Payment para implementar no seu sistema de recebimentos.",
+    "question": "O que diferencia, na essência, o Split Payment \"Inteligente Offline\" dos demais tipos?",
+    "options": [
+      "Ele é pensado para operar mesmo quando não há comunicação em tempo real com o sistema central no momento da transação",
+      "Ele só pode ser usado por instituições financeiras",
+      "Ele elimina totalmente a necessidade de apuração posterior",
+      "Ele é obrigatório apenas para o comércio exterior"
+    ],
+    "correctAnswer": "Ele é pensado para operar mesmo quando não há comunicação em tempo real com o sistema central no momento da transação",
+    "explanation": "Os três tipos de Split Payment (Super Inteligente, Inteligente Offline e Simplificado) atendem a diferentes cenários de conectividade e complexidade de segregação — o \"Offline\" é voltado a situações sem comunicação em tempo real plena.",
+    "pacciTip": "Nem toda transação tem conexão perfeita o tempo todo — por isso existe uma versão \"offline\" do mecanismo!"
+  },
+  {
     "id": "REF-SR-011",
     "level": "analista_senior",
     "type": "ordering",
@@ -290,6 +306,22 @@
     "correctAnswer": "caixa",
     "explanation": "O caixa é o recurso diretamente impactado, já que o valor do tributo deixa de transitar pelo fluxo financeiro da empresa.",
     "pacciTip": "Caixa, sempre caixa! É ele quem sente o split payment primeiro."
+  },
+  {
+    "id": "REF-SR-142",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa pede ressarcimento de crédito relativo à compra de uma máquina que foi incorporada ao ativo imobilizado.",
+    "question": "Esse tipo de pedido de ressarcimento se enquadra em qual prazo de análise mais célere?",
+    "options": [
+      "Até 30 ou 60 dias, por ser crédito relativo a bens incorporados ao ativo imobilizado",
+      "Sempre 180 dias, sem exceção",
+      "Não há prazo específico para esse tipo de crédito",
+      "1 dia útil, por força de lei"
+    ],
+    "correctAnswer": "Até 30 ou 60 dias, por ser crédito relativo a bens incorporados ao ativo imobilizado",
+    "explanation": "Os pedidos de ressarcimento são apreciados em 30 ou 60 dias quando o crédito apropriado for relativo à aquisição de bens e serviços incorporados ao ativo imobilizado do contribuinte, entre outros critérios.",
+    "pacciTip": "Investimento em ativo imobilizado tem prioridade na fila do ressarcimento, tesoro!"
   },
   {
     "id": "REF-SR-021",
@@ -468,6 +500,22 @@
     "pacciTip": "Faturamento bruto não conta a história toda, tesoro! Olha o efeito na margem do franqueado."
   },
   {
+    "id": "REF-SR-143",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa pede ressarcimento de um valor relativamente pequeno perto da sua média mensal de créditos e débitos de IBS.",
+    "question": "Qual critério de valor permite que um pedido de ressarcimento seja analisado em prazo mais curto (30 ou 60 dias)?",
+    "options": [
+      "O valor ser igual ou inferior a 150% do valor médio mensal da diferença entre créditos e débitos de IBS",
+      "O valor ser exatamente R$ 10.000,00",
+      "O valor ser maior que o dobro do faturamento anual",
+      "Não existe critério de valor, apenas de tipo de bem"
+    ],
+    "correctAnswer": "O valor ser igual ou inferior a 150% do valor médio mensal da diferença entre créditos e débitos de IBS",
+    "explanation": "Um dos critérios para prazo mais célere é o pedido de ressarcimento cujo valor seja igual ou inferior a 150% do valor médio mensal da diferença entre os créditos e débitos de IBS do contribuinte.",
+    "pacciTip": "Pedido \"proporcional\" ao seu histórico de créditos passa mais rápido — o Fisco confia no seu padrão!"
+  },
+  {
     "id": "REF-SR-032",
     "level": "analista_senior",
     "type": "multiple_choice",
@@ -628,6 +676,22 @@
     "pacciTip": "Ver o problema na hora vale ouro, tesoro! Corrige rápido, evita dor de cabeça."
   },
   {
+    "id": "REF-SR-144",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa atrasou o pagamento do IBS e da CBS por 4 meses seguidos.",
+    "question": "Além da multa de mora limitada a 20%, o que mais incide sobre o valor em atraso?",
+    "options": [
+      "Juros de mora pela Taxa Selic, com 1% no mês do pagamento",
+      "Uma multa fixa adicional de R$ 5.000,00",
+      "Apenas correção monetária pelo IPCA, sem juros",
+      "Nenhum outro encargo além da multa de mora"
+    ],
+    "correctAnswer": "Juros de mora pela Taxa Selic, com 1% no mês do pagamento",
+    "explanation": "Além da multa de mora de 0,33% ao dia (limitada a 20%), incidem juros de mora pela Taxa Selic, do primeiro dia do mês subsequente ao vencimento até o mês anterior ao pagamento, sendo 1% no mês do próprio pagamento.",
+    "pacciTip": "Multa e juros andam juntos no atraso, tesoro — a Selic cobra sua parte também!"
+  },
+  {
     "id": "REF-SR-042",
     "level": "analista_senior",
     "type": "multiple_choice",
@@ -746,6 +810,22 @@
     "pacciTip": "IPCA e imposto não falam a mesma língua, tesoro! Cada risco precisa da sua cláusula."
   },
   {
+    "id": "REF-SR-145",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Duas notas fiscais da mesma empresa estão em aberto: a NF-e nº 1, mais antiga, e a NF-e nº 2, que acabou de sofrer Split Payment.",
+    "question": "O valor liquidado pelo Split Payment na NF-e nº 2 pode ser usado para compensar o débito da NF-e nº 1?",
+    "options": [
+      "Não, o débito liquidado pelo Split Payment garante crédito ao adquirente apenas proporcionalmente à própria operação, sem compensar débitos de outras notas",
+      "Sim, sempre que as duas notas forem do mesmo período de apuração",
+      "Sim, automaticamente, priorizando a nota mais antiga",
+      "Sim, mas só mediante autorização judicial"
+    ],
+    "correctAnswer": "Não, o débito liquidado pelo Split Payment garante crédito ao adquirente apenas proporcionalmente à própria operação, sem compensar débitos de outras notas",
+    "explanation": "O Split Payment e o RAD extinguem débitos apenas da respectiva operação — o débito liquidado na NF-e nº 2 não compensa o débito da NF-e nº 1, ainda que esta seja mais antiga, mas sempre garante crédito ao adquirente proporcional ao pago.",
+    "pacciTip": "Cada nota é uma \"ilha\" no Split Payment — o pagamento de uma não resgata a dívida da vizinha!"
+  },
+  {
     "id": "REF-SR-052",
     "level": "analista_senior",
     "type": "true_false",
@@ -844,6 +924,22 @@
     "correctAnswer": false,
     "explanation": "Errado! Prazos longos de recebimento podem, ao contrário, ampliar o hiato de caixa gerado pela retenção do tributo, exigindo planejamento de liquidez, e não esperar que o problema \"se resolva sozinho\".",
     "pacciTip": "Tempo não resolve caixa apertado sozinho, tesoro! Planeja."
+  },
+  {
+    "id": "REF-SR-146",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "A empresa fornece computadores e celulares corporativos para os vendedores externos usarem no trabalho.",
+    "question": "Esses equipamentos de informática e comunicação preservam o direito ao crédito de IBS e CBS?",
+    "options": [
+      "Sim, desde que compatíveis com a função e usados em atividades estritamente vinculadas ao trabalho",
+      "Não, qualquer equipamento eletrônico é sempre vedado ao crédito",
+      "Só se forem novos, nunca usados anteriormente",
+      "Só se custarem menos de R$ 2.000,00 cada"
+    ],
+    "correctAnswer": "Sim, desde que compatíveis com a função e usados em atividades estritamente vinculadas ao trabalho",
+    "explanation": "Veículos, equipamentos de informática, comunicação, transporte, telefonia e dados podem preservar o crédito quando compatíveis com a função e usados em atividades estritamente vinculadas ao trabalho.",
+    "pacciTip": "Ferramenta de trabalho de verdade mantém o crédito — mesmo que também dê pra usar em casa, se a função é do trabalho, capito?"
   },
   {
     "id": "REF-SR-062",
@@ -977,6 +1073,22 @@
     ],
     "explanation": "A capacitação segue o cronograma legal: teste (2026), extinção do PIS/Cofins (2027), redução gradual (2029-2032) e operação plena (2033).",
     "pacciTip": "Capacita em ordem, tesoro! Cada fase tem seu próprio desafio."
+  },
+  {
+    "id": "REF-SR-147",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma pessoa física com inscrição estadual regular está esperando a geração do seu CNPJ pela nova regra da Reforma.",
+    "question": "O que orienta o Guia da Reforma Tributária para pessoas físicas que já têm inscrição estadual ou municipal regular?",
+    "options": [
+      "Devem aguardar a geração automática do CNPJ pelas administrações tributárias",
+      "Devem solicitar imediatamente um CNPJ novo por conta própria",
+      "Perdem automaticamente a inscrição estadual anterior",
+      "Precisam abrir uma empresa formal antes de continuar"
+    ],
+    "correctAnswer": "Devem aguardar a geração automática do CNPJ pelas administrações tributárias",
+    "explanation": "A pessoa física com inscrição estadual ou municipal regular deve aguardar a geração automática do CNPJ pelas administrações tributárias; já quem não tem essa inscrição precisa solicitá-la conforme as regras vigentes.",
+    "pacciTip": "Se já está regular no Estado/Município, o CNPJ \"nasce sozinho\" — não precisa correr atrás, tesoro!"
   },
   {
     "id": "REF-SR-072",
@@ -1187,6 +1299,22 @@
     ],
     "explanation": "A avaliação parte do levantamento dos prazos, passa pela simulação do novo ciclo de caixa, pela comparação com os pagamentos e termina nas ações de mitigação.",
     "pacciTip": "Levanta, simula, compara, mitiga, tesoro!"
+  },
+  {
+    "id": "REF-SR-148",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa faz uma doação de mercadorias sem qualquer contraprestação, mas o benefício reverte para o próprio doador (por exemplo, marketing institucional).",
+    "question": "Essa doação sem contraprestação, em benefício do doador, exige documento fiscal eletrônico?",
+    "options": [
+      "Sim, a obrigação de emissão de documento fiscal se aplica inclusive às doações sem contraprestação em benefício do doador",
+      "Não, doações nunca precisam de documento fiscal",
+      "Só se o valor da doação ultrapassar R$ 100.000,00",
+      "Só se a doação for para uma entidade filantrópica registrada"
+    ],
+    "correctAnswer": "Sim, a obrigação de emissão de documento fiscal se aplica inclusive às doações sem contraprestação em benefício do doador",
+    "explanation": "A obrigação de emissão de documentos fiscais eletrônicos aplica-se inclusive às doações sem contraprestação em benefício do doador, além de operações imunes, isentas, com alíquota zero ou suspensão.",
+    "pacciTip": "Doação \"estratégica\" que beneficia quem doou também entra na obrigação de emitir documento fiscal!"
   },
   {
     "id": "REF-SR-082",
@@ -1420,6 +1548,22 @@
     "pacciTip": "Diagnostica, estrutura, mede, comunica, amico! Compliance forte também é reputação."
   },
   {
+    "id": "REF-SR-149",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa sucessora recebe créditos apropriados e ainda não utilizados por uma empresa incorporada.",
+    "question": "A transferência desses créditos para a sucessora, na fusão/cisão/incorporação, precisa de documento fiscal eletrônico?",
+    "options": [
+      "Sim, a obrigação de emissão de documento fiscal se aplica à transferência de créditos apropriados e ainda não utilizados para a sucessora",
+      "Não, essa transferência é sempre feita apenas por contrato, sem documento fiscal",
+      "Só se a operação envolver mais de duas empresas",
+      "Só se as empresas forem do mesmo setor econômico"
+    ],
+    "correctAnswer": "Sim, a obrigação de emissão de documento fiscal se aplica à transferência de créditos apropriados e ainda não utilizados para a sucessora",
+    "explanation": "A obrigação de emissão de documentos fiscais aplica-se inclusive à transferência de créditos apropriados e ainda não utilizados para a pessoa jurídica sucessora, na hipótese de fusão, cisão ou incorporação.",
+    "pacciTip": "Até o crédito \"mudando de dono\" numa fusão precisa do documento fiscal certo, capito?"
+  },
+  {
     "id": "REF-SR-093",
     "level": "analista_senior",
     "type": "fill_blank",
@@ -1578,6 +1722,22 @@
     "correctAnswer": "revisão",
     "explanation": "A revisão periódica de preços permite que o contrato de obra se ajuste a cada marco relevante da transição.",
     "pacciTip": "Revisão em capítulos, amico! Obra longa pede acompanhamento constante."
+  },
+  {
+    "id": "REF-SR-150",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um cliente inicia uma cobrança recorrente via PIX automático para pagar uma assinatura mensal de um serviço.",
+    "question": "Essa cobrança recorrente é considerada uma transação iniciada por quem, no contexto do Split Payment?",
+    "options": [
+      "Pelo recebedor",
+      "Pelo pagador",
+      "Por um agente regulador externo",
+      "Pelo Comitê Gestor do IBS"
+    ],
+    "correctAnswer": "Pelo recebedor",
+    "explanation": "Exemplos de transações iniciadas pelo recebedor incluem boleto/fatura de cobrança, link de pagamento, PIX Cobrança/QR Code dinâmico e cobrança recorrente — é o recebedor (ou terceiro) quem emite a instrução que origina a transação.",
+    "pacciTip": "Cobrança recorrente é o recebedor \"chamando\" o pagamento todo mês — por isso ele é quem origina!"
   },
   {
     "id": "REF-SR-103",
@@ -1740,6 +1900,22 @@
     "pacciTip": "Time desalinhado erra rápido demais, amico!"
   },
   {
+    "id": "REF-SR-151",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de segurança patrimonial adquire armas e munições para uso exclusivo em suas atividades de proteção.",
+    "question": "Nesse caso específico, a aquisição de armas e munições permite crédito de IBS e CBS?",
+    "options": [
+      "Sim, é permitido o crédito quando as armas e munições forem utilizadas por empresas de segurança ou na fabricação de bens comercializados",
+      "Não, armas e munições vedam o crédito em qualquer hipótese, sem exceção",
+      "Sim, mas só para órgãos públicos",
+      "Sim, apenas se a empresa tiver mais de 500 funcionários"
+    ],
+    "correctAnswer": "Sim, é permitido o crédito quando as armas e munições forem utilizadas por empresas de segurança ou na fabricação de bens comercializados",
+    "explanation": "A vedação geral ao crédito de armas e munições não se aplica quando forem utilizadas para fabricação de bens comercializados ou por empresas de segurança — nesses casos, o crédito é permitido.",
+    "pacciTip": "Regra geral veda, mas empresa de segurança e indústria têm exceção específica, tesoro!"
+  },
+  {
     "id": "REF-SR-113",
     "level": "analista_senior",
     "type": "fill_blank",
@@ -1862,6 +2038,22 @@
     "correctAnswer": "paralelo",
     "explanation": "Durante boa parte da transição, os dois sistemas funcionam em paralelo, exigindo apuração e obrigações acessórias de ambos.",
     "pacciTip": "Dois motores rodando juntos, amico! É assim até 2033."
+  },
+  {
+    "id": "REF-SR-152",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma academia de ginástica oferece aulas de step e musculação, usadas predominantemente pelos próprios clientes que compram os planos.",
+    "question": "Bens e serviços recreativos, esportivos e estéticos, nesse contexto, podem gerar crédito de IBS e CBS?",
+    "options": [
+      "Sim, quando forem utilizados preponderantemente pelos adquirentes dos bens e serviços em estabelecimento físico",
+      "Não, essa categoria nunca gera crédito, sem exceções",
+      "Sim, mas só para academias com mais de uma unidade",
+      "Sim, apenas se o serviço for gratuito para o cliente final"
+    ],
+    "correctAnswer": "Sim, quando forem utilizados preponderantemente pelos adquirentes dos bens e serviços em estabelecimento físico",
+    "explanation": "Também se permite o crédito na aquisição de bens e serviços recreativos, esportivos e estéticos quando forem utilizados, preponderantemente, pelos próprios adquirentes desses bens e serviços em estabelecimento físico.",
+    "pacciTip": "Se o serviço recreativo é o próprio produto vendido ao cliente no estabelecimento, o crédito se preserva!"
   },
   {
     "id": "REF-SR-123",

@@ -146,6 +146,22 @@
     "pacciTip": "Confere como um detetive, passo a passo! Primeiro o quê, depois o tributo, depois o valor. Só no final você fecha o caso."
   },
   {
+    "id": "REF-AUX-141",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma loja vende, na mesma nota, um celular e uma capinha protetora, cobrando um valor único pelos dois.",
+    "question": "Ao fornecer diferentes bens em uma mesma operação, o que a Reforma exige do fornecedor?",
+    "options": [
+      "A especificação de cada fornecimento e de seu respectivo valor",
+      "A emissão de duas notas fiscais separadas obrigatoriamente",
+      "A proibição de vender os dois itens juntos",
+      "A aplicação automática da alíquota mais alta entre os dois"
+    ],
+    "correctAnswer": "A especificação de cada fornecimento e de seu respectivo valor",
+    "explanation": "Quando há fornecimento de diferentes bens e serviços numa mesma operação, é obrigatória a especificação de cada fornecimento e de seu respectivo valor no documento fiscal.",
+    "pacciTip": "Cada item com seu valor separado, capito? Só assim o Fisco sabe tributar cada um do jeito certo."
+  },
+  {
     "id": "REF-AUX-011",
     "level": "auxiliar",
     "type": "ordering",
@@ -290,6 +306,22 @@
     "correctAnswer": "NF-e",
     "explanation": "NF-e = Nota Fiscal Eletrônica, o documento fiscal padrão para vendas de mercadorias no Brasil.",
     "pacciTip": "NF-e é o documento que você vai emitir todo santo dia, decora bem esse!"
+  },
+  {
+    "id": "REF-AUX-142",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Dois fornecimentos diferentes, dentro da mesma venda, têm regras de incidência e de alíquota totalmente diferentes entre si.",
+    "question": "O que caracteriza um \"tratamento tributário distinto\" entre dois fornecimentos, segundo a Reforma?",
+    "options": [
+      "Regras diferentes de incidência, alíquota, isenção ou não cumulatividade, entre outras",
+      "Serem vendidos em cidades diferentes",
+      "Terem cores ou tamanhos diferentes",
+      "Serem fabricados por fornecedores diferentes"
+    ],
+    "correctAnswer": "Regras diferentes de incidência, alíquota, isenção ou não cumulatividade, entre outras",
+    "explanation": "Tratamento tributário distinto envolve regras diferentes quanto à incidência, regime de tributação, isenção, momento do fato gerador, local da operação, alíquota, sujeição passiva ou não cumulatividade.",
+    "pacciTip": "Se as regras do jogo mudam entre um item e outro, eles não podem ser agrupados como se fossem um só, tesoro!"
   },
   {
     "id": "REF-AUX-021",
@@ -468,6 +500,22 @@
     "pacciTip": "SaaS é serviço, então NBS na certa! Software não é mercadoria que se pega na mão."
   },
   {
+    "id": "REF-AUX-143",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa vende, em 2037, uma máquina que havia comprado dez anos antes e que já estava no seu ativo imobilizado.",
+    "question": "A venda de um bem do ativo imobilizado, mesmo anos depois da compra, é tributada pelo IBS e pela CBS?",
+    "options": [
+      "Sim, mesmo bens do ativo não circulante estão sujeitos ao IBS e à CBS",
+      "Não, ativo imobilizado nunca é tributado",
+      "Só se a venda ocorrer no mesmo ano da compra",
+      "Só se a máquina for vendida para o exterior"
+    ],
+    "correctAnswer": "Sim, mesmo bens do ativo não circulante estão sujeitos ao IBS e à CBS",
+    "explanation": "O IBS e a CBS incidem sobre qualquer operação com bem ou serviço, incluindo as realizadas com ativo não circulante ou no exercício de atividade econômica não habitual — como a venda de um bem do imobilizado.",
+    "pacciTip": "Não interessa se o bem tá parado há anos na empresa: se ele for vendido, o imposto entra em cena!"
+  },
+  {
     "id": "REF-AUX-032",
     "level": "auxiliar",
     "type": "multiple_choice",
@@ -628,6 +676,22 @@
     "pacciTip": "NCM diz o que é, cClassTrib diz como é tributado, tesoro! Os dois andam juntos."
   },
   {
+    "id": "REF-AUX-144",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um clube recreativo cobra mensalidade dos associados para eles usarem a piscina e a quadra esportiva.",
+    "question": "Essa cobrança de mensalidade por acesso ao clube é tributada pelo IBS e pela CBS?",
+    "options": [
+      "Sim, porque é contraprestação por acesso a um serviço, não uma contribuição estatutária pura",
+      "Não, associações nunca pagam IBS e CBS",
+      "Só se o clube tiver fins lucrativos declarados",
+      "Só se a piscina for aquecida"
+    ],
+    "correctAnswer": "Sim, porque é contraprestação por acesso a um serviço, não uma contribuição estatutária pura",
+    "explanation": "A incidência não está ligada à obtenção de lucro. A exceção só abrange contribuições associativas estatutárias, não contraprestacionais, destinadas à manutenção da associação — se a cobrança é contraprestação por acesso ao clube, há incidência.",
+    "pacciTip": "Pagou pra usar a piscina? É contraprestação, tesoro — e isso é tributado, mesmo em associação sem fins lucrativos."
+  },
+  {
     "id": "REF-AUX-042",
     "level": "auxiliar",
     "type": "multiple_choice",
@@ -746,6 +810,22 @@
     "pacciTip": "Nooo, cClassTrib não escolhe cliente, tesoro! Vale pra toda nota sujeita ao IBS/CBS."
   },
   {
+    "id": "REF-AUX-145",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "O sistema de emissão de notas da empresa passou a exigir a segregação do imposto já no ato do pagamento de qualquer venda.",
+    "question": "O que o Split Payment efetivamente faz no momento da liquidação financeira de uma operação?",
+    "options": [
+      "Segrega o valor do produto do valor dos tributos e recolhe o IBS e a CBS aos cofres públicos",
+      "Cancela automaticamente a venda se houver erro na nota",
+      "Converte o pagamento em boleto bancário",
+      "Aumenta o preço final do produto em 10%"
+    ],
+    "correctAnswer": "Segrega o valor do produto do valor dos tributos e recolhe o IBS e a CBS aos cofres públicos",
+    "explanation": "O Split Payment é o mecanismo que segrega, no momento da liquidação financeira, o valor do produto/serviço e o dos tributos, recolhendo ao Comitê Gestor do IBS e à Receita Federal os valores devidos, e repassando a diferença ao fornecedor.",
+    "pacciTip": "É como se o pagamento chegasse já \"fatiado\": uma parte pro Fisco, o resto pro vendedor. Automático!"
+  },
+  {
     "id": "REF-AUX-052",
     "level": "auxiliar",
     "type": "true_false",
@@ -844,6 +924,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O cClassTrib é apenas um campo dentro da NF-e, e não um documento novo.",
     "pacciTip": "cClassTrib é campo, não documento, capisce? A NF-e continua sendo a rainha."
+  },
+  {
+    "id": "REF-AUX-146",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No material do curso, você vê que existem três variações do mesmo mecanismo de segregação de pagamento.",
+    "question": "Quais são os três tipos de Split Payment previstos na Reforma?",
+    "options": [
+      "Super Inteligente, Inteligente Offline e Simplificado",
+      "Básico, Intermediário e Avançado",
+      "Nacional, Estadual e Municipal",
+      "Automático, Manual e Híbrido"
+    ],
+    "correctAnswer": "Super Inteligente, Inteligente Offline e Simplificado",
+    "explanation": "Na prática, existem três tipos de Split Payment: Split Payment Super Inteligente, Split Payment Inteligente Offline e Split Payment Simplificado.",
+    "pacciTip": "Três sabores do mesmo mecanismo, tesoro — mas todos com a mesma missão: segregar o imposto na hora do pagamento."
   },
   {
     "id": "REF-AUX-062",
@@ -977,6 +1073,22 @@
     ],
     "explanation": "A conferência começa pela identificação do produto (NCM), passa pelo enquadramento no Imposto Seletivo, confirma o valor destacado e só então é registrada.",
     "pacciTip": "Confere o produto, confere a regra, confere o valor, aí sim fecha o caso, capisce?"
+  },
+  {
+    "id": "REF-AUX-147",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um fiscal em treinamento pergunta pra que servem, na prática, os códigos CST e cClassTrib no dia a dia da apuração.",
+    "question": "Qual a principal função de toda operação ser codificada por CST e cClassTrib?",
+    "options": [
+      "Permitir que a operação seja incorporada corretamente na apuração assistida",
+      "Definir o prazo de entrega da mercadoria",
+      "Calcular o seguro do transporte",
+      "Identificar o vendedor que atendeu o cliente"
+    ],
+    "correctAnswer": "Permitir que a operação seja incorporada corretamente na apuração assistida",
+    "explanation": "Toda operação, com incidência ou não, deve ser codificada por CST e cClassTrib para ser incorporada corretamente na apuração assistida do IBS e da CBS.",
+    "pacciTip": "Sem o código certo, a apuração assistida não sabe o que fazer com aquela operação. Codifica direitinho, capito?"
   },
   {
     "id": "REF-AUX-072",
@@ -1187,6 +1299,22 @@
     ],
     "explanation": "Primeiro compara-se descrição e código, confirma-se na tabela oficial, comunica-se o fornecedor e registra-se a ocorrência para acompanhamento.",
     "pacciTip": "Desconfiou do NCM? Confere na tabela antes de acusar, tesoro! Depois é só avisar e acompanhar."
+  },
+  {
+    "id": "REF-AUX-148",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um condomínio residencial não é optante pelo regime regular do IBS e da CBS, mas ainda assim precisa de um cadastro específico.",
+    "question": "Mesmo sem optar pelo regime regular, quem é obrigado a se cadastrar no CNPJ?",
+    "options": [
+      "Condomínio edilício, nanoempreendedor, produtor rural e transportador autônomo de cargas (TAC)",
+      "Somente empresas do Lucro Real",
+      "Somente empresas com filiais em mais de um estado",
+      "Ninguém — o cadastro é sempre opcional"
+    ],
+    "correctAnswer": "Condomínio edilício, nanoempreendedor, produtor rural e transportador autônomo de cargas (TAC)",
+    "explanation": "Ainda que não optantes pelo regime regular da CBS e do IBS, o condomínio edilício, o nanoempreendedor, o produtor rural e o transportador autônomo de cargas (TAC) têm obrigatoriedade de cadastro no CNPJ.",
+    "pacciTip": "Regime regular é uma coisa, cadastro obrigatório no CNPJ é outra — nem sempre andam juntos, tesoro!"
   },
   {
     "id": "REF-AUX-082",
@@ -1420,6 +1548,22 @@
     "pacciTip": "Auditoria boa não só aponta erro, tesoro! Ela repassa a correção pra não repetir."
   },
   {
+    "id": "REF-AUX-149",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte percebe que pagou IBS e CBS a mais do que devia numa operação e quer reaver o valor.",
+    "question": "O que é necessário para que o contribuinte tenha direito à restituição do pagamento indevido?",
+    "options": [
+      "A operação não ter gerado crédito ao adquirente, e prova de que o fornecedor assumiu o encargo ou está autorizado por terceiro",
+      "Basta pedir por e-mail ao Comitê Gestor do IBS",
+      "Só é possível restituir valores pagos há menos de 30 dias",
+      "A restituição é sempre automática, sem necessidade de prova"
+    ],
+    "correctAnswer": "A operação não ter gerado crédito ao adquirente, e prova de que o fornecedor assumiu o encargo ou está autorizado por terceiro",
+    "explanation": "Em caso de pagamento indevido, a restituição depende de a operação não ter gerado crédito ao adquirente e de prova de que o fornecedor assumiu o encargo financeiro, ou está expressamente autorizado por terceiro.",
+    "pacciTip": "Não é só pedir e receber, tesoro — tem que provar que ninguém mais vai se beneficiar duas vezes daquele valor."
+  },
+  {
     "id": "REF-AUX-093",
     "level": "auxiliar",
     "type": "fill_blank",
@@ -1578,6 +1722,22 @@
     "correctAnswer": "municipal",
     "explanation": "O IBS reúne, numa só cobrança, a parcela devida ao Estado e a parcela devida ao Município.",
     "pacciTip": "Estadual e municipal, de mãos dadas, tesoro! Assim nasce o IBS."
+  },
+  {
+    "id": "REF-AUX-150",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa atrasou o pagamento do IBS e da CBS de um período de apuração em 10 dias.",
+    "question": "Qual o percentual de multa de mora por dia de atraso no pagamento do IBS e da CBS, segundo a Reforma?",
+    "options": [
+      "0,33% por dia de atraso, limitada a 20%",
+      "1% por dia de atraso, sem limite",
+      "5% fixos, independente dos dias de atraso",
+      "0,1% por dia, limitada a 5%"
+    ],
+    "correctAnswer": "0,33% por dia de atraso, limitada a 20%",
+    "explanation": "O pagamento em atraso incorre em multa de mora de 0,33% por dia de atraso, limitada a 20%, além de juros de mora pela taxa Selic.",
+    "pacciTip": "Atrasou, paga um pouquinho a mais por dia — mas o teto é 20%, não sobe pra sempre, capito?"
   },
   {
     "id": "REF-AUX-103",
@@ -1740,6 +1900,22 @@
     "pacciTip": "É treino, tesoro, alíquota pequena! O valor cheio chega mais pra frente."
   },
   {
+    "id": "REF-AUX-151",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma transportadora leva uma carga de São Paulo até Curitiba, com entrega na porta do cliente.",
+    "question": "No serviço de transporte de carga, um dos critérios de local do fornecimento é:",
+    "options": [
+      "O endereço fornecido para entrega do bem",
+      "A sede da transportadora, sempre",
+      "O local onde o motorista mora",
+      "O ponto médio geográfico da viagem"
+    ],
+    "correctAnswer": "O endereço fornecido para entrega do bem",
+    "explanation": "No serviço de transporte de carga, o local do fornecimento a ser identificado no documento fiscal eletrônico pode ser o endereço fornecido para entrega do bem (ou, em outra hipótese, o local da retirada do bem).",
+    "pacciTip": "Carga que anda, o local do imposto anda com ela — depende de onde ela é entregue ou retirada, tesoro!"
+  },
+  {
     "id": "REF-AUX-113",
     "level": "auxiliar",
     "type": "fill_blank",
@@ -1862,6 +2038,22 @@
     "correctAnswer": "DANFE",
     "explanation": "O DANFE é a representação impressa e simplificada da NF-e, usada para acompanhar a mercadoria.",
     "pacciTip": "DANFE, tesoro! O retrato de bolso da nota fiscal."
+  },
+  {
+    "id": "REF-AUX-152",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma operadora de telefonia instala uma linha fixa na casa de um cliente em outra cidade.",
+    "question": "No serviço de telefonia fixa, qual é o critério que define o local do fornecimento?",
+    "options": [
+      "O local de instalação do terminal",
+      "O local da sede da operadora",
+      "O local de nascimento do cliente",
+      "O local onde a conta é paga"
+    ],
+    "correctAnswer": "O local de instalação do terminal",
+    "explanation": "Para serviços de telefonia fixa e demais serviços de comunicação prestados por cabos, fios ou fibras, o local do fornecimento é o local de instalação do terminal.",
+    "pacciTip": "Onde o aparelho fica instalado, é lá que nasce o imposto. Fácil de guardar, capito?"
   },
   {
     "id": "REF-AUX-123",

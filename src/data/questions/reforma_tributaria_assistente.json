@@ -146,6 +146,22 @@
     "pacciTip": "Emite, reparte, credita, fecha a conta! Assim nenhuma filial fica no prejuízo."
   },
   {
+    "id": "REF-ASS-141",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Ao estudar o novo sistema de créditos, você percebe que existem duas lógicas diferentes de creditamento sendo comparadas.",
+    "question": "Qual a diferença entre crédito físico e crédito financeiro (não cumulatividade plena)?",
+    "options": [
+      "No crédito físico só dá crédito o que está ligado ao produto final; no financeiro, toda aquisição com IBS/CBS extinto dá direito a crédito, salvo vedações",
+      "Crédito físico é só para bens materiais e crédito financeiro é só para serviços",
+      "Não existe diferença prática entre os dois modelos",
+      "Crédito físico é usado só pelo Simples Nacional"
+    ],
+    "correctAnswer": "No crédito físico só dá crédito o que está ligado ao produto final; no financeiro, toda aquisição com IBS/CBS extinto dá direito a crédito, salvo vedações",
+    "explanation": "Na lógica do crédito físico, só as aquisições diretamente ligadas ao produto final dão direito ao creditamento. Já na lógica do crédito financeiro (não cumulatividade plena) adotada pela Reforma, em regra toda aquisição com IBS/CBS efetivamente extinto dá direito a crédito, salvo uso pessoal e vedações legais.",
+    "pacciTip": "A Reforma escolheu o crédito financeiro, o mais amplo dos dois — quase tudo vira crédito, com poucas exceções!"
+  },
+  {
     "id": "REF-ASS-011",
     "level": "assistente",
     "type": "ordering",
@@ -290,6 +306,22 @@
     "correctAnswer": "destino",
     "explanation": "A arrecadação do IBS é direcionada principalmente ao local de destino, ou seja, de consumo do bem ou serviço.",
     "pacciTip": "Destino, sempre destino! Onde o produto é consumido, é lá que o imposto fica."
+  },
+  {
+    "id": "REF-ASS-142",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "O departamento de compras da empresa adquiriu joias e obras de arte para decorar o escritório da diretoria.",
+    "question": "Essas aquisições permitem a apropriação de crédito de IBS e CBS?",
+    "options": [
+      "Não, joias, pedras preciosas e obras de arte são consideradas uso ou consumo pessoal, vedando o crédito",
+      "Sim, qualquer bem do escritório gera crédito integral",
+      "Só se o valor for menor que R$ 10.000,00",
+      "Só se forem doadas para um museu depois"
+    ],
+    "correctAnswer": "Não, joias, pedras preciosas e obras de arte são consideradas uso ou consumo pessoal, vedando o crédito",
+    "explanation": "São consideradas uso ou consumo pessoal, sem direito a crédito: joias, pedras e metais preciosos; obras de arte e antiguidades; bebidas alcoólicas; derivados do tabaco; armas e munições; e bens/serviços recreativos, esportivos e estéticos.",
+    "pacciTip": "Luxo e bens de \"uso pessoal\" costumam vedar o crédito, tesoro — decore essa lista pro exame!"
   },
   {
     "id": "REF-ASS-021",
@@ -468,6 +500,22 @@
     "pacciTip": "O molho de tomate é seu, mas o imposto já saiu direto pro Fisco, capisce?"
   },
   {
+    "id": "REF-ASS-143",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "A empresa fornece uniformes, vale-refeição e vale-alimentação para os funcionários, ligados diretamente ao trabalho deles.",
+    "question": "Esses benefícios vinculados à atividade econômica preservam o direito ao crédito de IBS e CBS?",
+    "options": [
+      "Sim, uniformes, EPIs, vale-refeição e vale-alimentação não são considerados uso ou consumo pessoal quando vinculados à atividade",
+      "Não, todo benefício ao empregado veda o crédito",
+      "Só vale-transporte preserva o crédito",
+      "Só empresas do Lucro Presumido podem manter esse crédito"
+    ],
+    "correctAnswer": "Sim, uniformes, EPIs, vale-refeição e vale-alimentação não são considerados uso ou consumo pessoal quando vinculados à atividade",
+    "explanation": "Não são considerados uso ou consumo pessoal, quando vinculados à atividade econômica: uniformes, fardamentos, EPIs, alimentação/bebida não alcoólica no estabelecimento, vale-transporte, vale-refeição, vale-alimentação e benefícios educacionais, entre outros.",
+    "pacciTip": "Benefício que serve o trabalho, o crédito continua de pé. É luxo pessoal que quebra essa regra!"
+  },
+  {
     "id": "REF-ASS-032",
     "level": "assistente",
     "type": "multiple_choice",
@@ -628,6 +676,22 @@
     "pacciTip": "Não confunde caderno com arroz no cadastro, tesoro! Cada um tem sua alíquota."
   },
   {
+    "id": "REF-ASS-144",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um lote de mercadorias estragou no depósito da empresa por causa de uma infiltração de água.",
+    "question": "O que o contribuinte deve fazer com o crédito de IBS e CBS já apropriado na compra dessa mercadoria perdida?",
+    "options": [
+      "Estornar o crédito, já que o bem pereceu ou se deteriorou",
+      "Manter o crédito normalmente, sem nenhuma ação",
+      "Dobrar o valor do crédito como compensação pelo prejuízo",
+      "Transferir o crédito para outro contribuinte"
+    ],
+    "correctAnswer": "Estornar o crédito, já que o bem pereceu ou se deteriorou",
+    "explanation": "O adquirente deve estornar o crédito apropriado caso o bem adquirido venha a perecer, deteriorar-se, ou ser objeto de roubo, furto ou extravio — emitindo NF-e de saída com o código de Nota de Débito \"Perda em estoque\".",
+    "pacciTip": "Se o bem sumiu ou estragou, o crédito que ele gerou também precisa ser devolvido ao sistema, tesoro!"
+  },
+  {
     "id": "REF-ASS-042",
     "level": "assistente",
     "type": "multiple_choice",
@@ -746,6 +810,22 @@
     "pacciTip": "Sì, é isso mesmo! Só entra na lista quem a lei escolher."
   },
   {
+    "id": "REF-ASS-145",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa apurou um crédito de IBS há alguns anos e nunca chegou a usá-lo.",
+    "question": "Qual o prazo para o contribuinte utilizar um crédito de IBS e CBS já apropriado, antes que ele se extinga?",
+    "options": [
+      "Cinco anos, contados do primeiro dia do período de apuração subsequente à apropriação",
+      "Um ano, contado da data da compra",
+      "O crédito nunca expira",
+      "Trinta dias, contados da emissão da nota fiscal"
+    ],
+    "correctAnswer": "Cinco anos, contados do primeiro dia do período de apuração subsequente à apropriação",
+    "explanation": "O direito de utilização dos créditos extingue-se em cinco anos, contados do primeiro dia do período de apuração subsequente àquele em que ocorreu a apropriação.",
+    "pacciTip": "Cinco anos parece muito, mas passa rápido — não deixa o crédito acumulado passar da validade, capito?"
+  },
+  {
     "id": "REF-ASS-052",
     "level": "assistente",
     "type": "true_false",
@@ -844,6 +924,22 @@
     "correctAnswer": true,
     "explanation": "Correto! O split payment segrega o IBS/CBS automaticamente no momento do pagamento, fazendo com que o vendedor receba apenas o valor líquido.",
     "pacciTip": "A diferença na conta tem nome e sobrenome: split payment, tesoro!"
+  },
+  {
+    "id": "REF-ASS-146",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa tem saldo credor de IBS, mas está devendo CBS no mesmo período de apuração.",
+    "question": "É possível compensar o crédito de IBS com o débito de CBS diretamente?",
+    "options": [
+      "Não, não é possível compensar créditos de CBS com IBS e vice-versa",
+      "Sim, sempre que o valor for igual",
+      "Sim, mas só uma vez por ano",
+      "Sim, automaticamente pelo sistema do Comitê Gestor"
+    ],
+    "correctAnswer": "Não, não é possível compensar créditos de CBS com IBS e vice-versa",
+    "explanation": "Uma das condicionantes da apropriação de créditos é que não será possível compensar créditos de CBS com IBS e vice-versa — IBS e CBS são compensados separadamente.",
+    "pacciTip": "IBS e CBS são \"irmãos\", mas cada um cuida da própria conta — não se misturam na hora de compensar!"
   },
   {
     "id": "REF-ASS-062",
@@ -977,6 +1073,22 @@
     ],
     "explanation": "Confirma-se primeiro o enquadramento na lista oficial, configura-se a alíquota zero, garante-se o crédito das compras e testa-se com uma nota simulada antes de liberar.",
     "pacciTip": "Confirma a lista, zera a alíquota, guarda o crédito, testa a nota! Passo a passo, tesoro."
+  },
+  {
+    "id": "REF-ASS-147",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa pede o ressarcimento do saldo credor acumulado de IBS e CBS ao final do período de apuração.",
+    "question": "Qual o prazo máximo, nos casos comuns (não qualificados), para a análise de um pedido de ressarcimento?",
+    "options": [
+      "Até 180 dias",
+      "Até 10 dias",
+      "Até 365 dias",
+      "Não há prazo definido em lei"
+    ],
+    "correctAnswer": "Até 180 dias",
+    "explanation": "O prazo para apreciação do pedido de ressarcimento é de até 30 dias (conformidade), até 60 dias (hipóteses qualificadas) ou até 180 dias nos demais casos, contados da data da solicitação.",
+    "pacciTip": "Quanto mais \"arrumada\" a empresa estiver com o Fisco, mais rápido sai o ressarcimento, tesoro!"
   },
   {
     "id": "REF-ASS-072",
@@ -1187,6 +1299,22 @@
     ],
     "explanation": "Identifica-se a hipótese de retenção, calcula-se o valor sobre a fatura, desconta-se no pagamento e recolhe-se o tributo retido ao ente competente.",
     "pacciTip": "Identifica, calcula, desconta, recolhe! Sem pressa, mas sem pular passo."
+  },
+  {
+    "id": "REF-ASS-148",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma loja recebeu o pagamento de uma venda antiga por Split Payment, mas ainda tem uma nota fiscal mais antiga em aberto.",
+    "question": "O valor liquidado pelo Split Payment de uma nota fiscal pode ser usado para quitar o débito de outra nota fiscal mais antiga?",
+    "options": [
+      "Não, o Split Payment extingue débitos apenas da respectiva operação",
+      "Sim, sempre que o valor for suficiente",
+      "Sim, mas só se as duas notas forem do mesmo cliente",
+      "Sim, automaticamente, começando pela nota mais antiga"
+    ],
+    "correctAnswer": "Não, o Split Payment extingue débitos apenas da respectiva operação",
+    "explanation": "Tanto o Split Payment quanto o Recolhimento pelo Adquirente (RAD) são formas de liquidação que extinguem os débitos apenas da respectiva operação — o débito liquidado numa nota não compensa o débito de outra, ainda que mais antiga.",
+    "pacciTip": "Cada nota paga a própria conta, capito? O Split Payment não \"empresta\" pagamento de uma pra outra."
   },
   {
     "id": "REF-ASS-082",
@@ -1420,6 +1548,22 @@
     "pacciTip": "Cadastra, avalia, vincula, testa! Assim a compra de insumo começa sem sustos."
   },
   {
+    "id": "REF-ASS-149",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente gera um boleto de cobrança para receber de outra empresa, iniciando assim a transação de pagamento.",
+    "question": "Esse boleto de cobrança é um exemplo de transação iniciada por quem, no contexto do Split Payment?",
+    "options": [
+      "Pelo recebedor",
+      "Pelo pagador",
+      "Por um terceiro completamente alheio à operação",
+      "Pelo Comitê Gestor do IBS"
+    ],
+    "correctAnswer": "Pelo recebedor",
+    "explanation": "Transações iniciadas pelo recebedor incluem boleto ou fatura de cobrança, link de pagamento, PIX Cobrança ou QR Code dinâmico e cobrança recorrente — é o recebedor (ou terceiro) que emite a instrução que origina a transação.",
+    "pacciTip": "Quem manda o boleto, \"inicia o jogo\" do pagamento — por isso é o recebedor quem origina a transação!"
+  },
+  {
     "id": "REF-ASS-093",
     "level": "assistente",
     "type": "fill_blank",
@@ -1578,6 +1722,22 @@
     "correctAnswer": "crédito",
     "explanation": "A alíquota zero não retira o direito ao crédito das etapas anteriores da cadeia, apenas elimina a cobrança na saída.",
     "pacciTip": "Crédito é a palavra que não pode sumir do seu vocabulário, tesoro!"
+  },
+  {
+    "id": "REF-ASS-150",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Cada Estado quer ter liberdade para fixar sua própria alíquota do IBS, mas precisa de um ponto de partida comum.",
+    "question": "Quem fixa a alíquota de referência do IBS, usada como parâmetro pelos entes federativos?",
+    "options": [
+      "O Senado Federal",
+      "A Câmara dos Deputados",
+      "O Comitê Gestor do IBS, sozinho",
+      "Cada prefeitura, individualmente"
+    ],
+    "correctAnswer": "O Senado Federal",
+    "explanation": "Haverá uma alíquota de referência do IBS fixada pelo Senado Federal; a alíquota da CBS, por sua vez, será divulgada por Lei Ordinária Federal.",
+    "pacciTip": "O Senado dá o \"ponto de partida\", e cada Estado/Município decide se segue ou ajusta a própria alíquota."
   },
   {
     "id": "REF-ASS-103",
@@ -1740,6 +1900,22 @@
     "pacciTip": "Loja física ou aplicativo, o split payment está presente nos dois!"
   },
   {
+    "id": "REF-ASS-151",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma venda tem como Estado e Município de destino, respectivamente, São Paulo capital.",
+    "question": "Como é calculada a alíquota do IBS incidente sobre uma operação?",
+    "options": [
+      "É a soma das alíquotas do Estado e do Município (ou do Distrito Federal) de destino da operação",
+      "É sempre uma alíquota única nacional, igual em todo o Brasil",
+      "É a média das alíquotas de todos os estados",
+      "É definida pelo fornecedor, livremente"
+    ],
+    "correctAnswer": "É a soma das alíquotas do Estado e do Município (ou do Distrito Federal) de destino da operação",
+    "explanation": "Para o IBS, a alíquota incidente sobre cada operação corresponde à soma das alíquotas do Estado e do Município (ou do Distrito Federal) de destino da operação, conforme as regras de local da operação.",
+    "pacciTip": "IBS é dose dupla: uma parte do Estado, outra do Município — e as duas de destino, não de origem!"
+  },
+  {
     "id": "REF-ASS-113",
     "level": "assistente",
     "type": "fill_blank",
@@ -1862,6 +2038,22 @@
     "correctAnswer": "Receita Federal",
     "explanation": "A CBS, tributo de competência federal, é administrada pela Receita Federal do Brasil.",
     "pacciTip": "Receita Federal cuida da CBS, sempre no mesmo endereço!"
+  },
+  {
+    "id": "REF-ASS-152",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cadastro imobiliário passa a identificar de forma única cada imóvel rural e urbano do país.",
+    "question": "Qual sigla identifica esse cadastro imobiliário nacional criado para a Reforma Tributária?",
+    "options": [
+      "CIB",
+      "CAR",
+      "ITR-e",
+      "RGI Nacional"
+    ],
+    "correctAnswer": "CIB",
+    "explanation": "O CIB (Cadastro Imobiliário Brasileiro) é o cadastro usado pela legislação do IBS e da CBS para identificar de forma única os imóveis rurais e urbanos do país.",
+    "pacciTip": "Assim como CPF e CNPJ identificam pessoas e empresas, o CIB identifica os imóveis, tesoro!"
   },
   {
     "id": "REF-ASS-123",

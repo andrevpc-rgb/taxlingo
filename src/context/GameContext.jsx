@@ -93,6 +93,30 @@ export function checkAnswer(question, userAnswer) {
 }
 
 // ---------------------------------------------------------------------------
+// Embaralha as alternativas de múltipla escolha antes de exibir — no banco
+// de questões (src/data/questions/*.json), a opção certa é sempre a
+// primeira do array. checkAnswer() compara por VALOR (normalize(userAnswer)
+// === normalize(question.correctAnswer)), não por índice, então só
+// reordenar `options` já basta: não precisa "ajustar" correctAnswer, ele
+// continua sendo o mesmo texto, só que agora em outra posição no array.
+// Chamado uma vez ao montar a fila da lição (startLessonState/START_DAILY_REVIEW)
+// — não a cada render, senão as opções trocariam de lugar debaixo do dedo
+// do usuário a cada re-render.
+function shuffleArray(array) {
+  const result = [...array];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+function withShuffledOptions(question) {
+  if (question.type !== QUESTION_TYPES.MULTIPLE_CHOICE || !Array.isArray(question.options)) return question;
+  return { ...question, options: shuffleArray(question.options) };
+}
+
+// ---------------------------------------------------------------------------
 // Helpers de data — usados pela mecânica de Ofensiva (Streak).
 // Datas são comparadas como strings 'YYYY-MM-DD' (sem fuso), o suficiente
 // para um mock client-side.
@@ -516,7 +540,7 @@ function buildInitialState() {
 function startLessonState(state, moduleId, lessonId) {
   const user = applyHeartRegen(state.user);
   const lesson = findLesson(state.modules, moduleId, lessonId);
-  const questions = questionBank[moduleId]?.[lessonId] ?? [];
+  const questions = (questionBank[moduleId]?.[lessonId] ?? []).map(withShuffledOptions);
   return {
     ...state,
     user,
@@ -755,7 +779,7 @@ function gameReducerCore(state, action) {
     case 'START_DAILY_REVIEW': {
       if (!state.user) return state;
       const user = applyHeartRegen(state.user);
-      const reviewQuestions = getDailyReviewQuestions();
+      const reviewQuestions = getDailyReviewQuestions().map(withShuffledOptions);
       return {
         ...state,
         user,
