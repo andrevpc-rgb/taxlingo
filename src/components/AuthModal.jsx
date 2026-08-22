@@ -548,7 +548,12 @@ export default function AuthModal() {
           <div className="mb-2 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500 text-lg font-black text-white">
             T
           </div>
-          <h1 className="text-lg font-extrabold text-slate-800">TaxLingo</h1>
+          <div className="flex items-center gap-2">
+            <h1 className="text-lg font-extrabold text-slate-800">TaxLingo</h1>
+            <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-600">
+              by OneAct
+            </span>
+          </div>
           <p className="text-xs font-medium text-slate-400">Treinamento gamificado de Reforma Tributária</p>
         </div>
 
@@ -574,6 +579,19 @@ export default function AuthModal() {
         </div>
 
         {tab === 'login' ? <LoginForm /> : <RegisterForm />}
+
+        <p className="mt-6 text-center text-xs text-slate-400">
+          TaxLingo é um produto{' '}
+          <a
+            href="https://1act.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-slate-400 underline decoration-slate-300 underline-offset-2 hover:text-slate-600"
+          >
+            OneAct Contabilidade Digital
+          </a>{' '}
+          • 1act.com.br
+        </p>
       </div>
     </div>
   );

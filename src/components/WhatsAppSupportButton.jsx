@@ -8,7 +8,7 @@ import React from 'react';
 import { useGame } from '../context/GameContext.jsx';
 
 const WHATSAPP_URL =
-  'https://wa.me/5521978623069?text=Ol%C3%A1!%20Realizei%20o%20pagamento%20no%20TaxLingo%20e%20preciso%20de%20ajuda%20com%20o%20acesso';
+  'https://wa.me/5521978623069?text=Ol%C3%A1!%20Estou%20no%20TaxLingo%20e%20gostaria%20de%20falar%20com%20o%20suporte%20da%20OneAct';
 
 export default function WhatsAppSupportButton() {
   const { isAuthenticated } = useGame();

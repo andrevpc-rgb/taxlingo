@@ -196,6 +196,9 @@ export default function Header() {
           <span className="hidden text-lg font-extrabold tracking-tight text-slate-700 sm:inline">
             TaxLingo
           </span>
+          <span className="hidden rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-600 md:inline">
+            by OneAct
+          </span>
         </div>
 
         <div className="flex min-w-0 flex-1 flex-wrap items-center gap-x-1 gap-y-1 sm:gap-x-3">
