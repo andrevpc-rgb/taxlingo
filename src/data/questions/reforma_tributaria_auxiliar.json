@@ -74,6 +74,22 @@
     "pacciTip": "Nooo, isso está trocado! NCM é só pra mercadoria. Serviço pede NBS, sempre!"
   },
   {
+    "id": "REF-AUX-153",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um hospital presta serviços de saúde e quer saber o impacto da Reforma na alíquota cobrada dos pacientes.",
+    "question": "Serviços de saúde e dispositivos médicos têm que tipo de tratamento de alíquota do IBS na Reforma?",
+    "options": [
+      "Redução de 60% da alíquota",
+      "Isenção total",
+      "Aumento de alíquota",
+      "Nenhuma alteração em relação ao regime atual"
+    ],
+    "correctAnswer": "Redução de 60% da alíquota",
+    "explanation": "Ficam reduzidas em 60% as alíquotas do IBS incidentes sobre serviços de educação, serviços de saúde, dispositivos médicos, dispositivos de acessibilidade e medicamentos, entre outros.",
+    "pacciTip": "Saúde e educação ganham 60% de redução — um baita alívio na conta, tesoro!"
+  },
+  {
     "id": "REF-AUX-006",
     "level": "auxiliar",
     "type": "true_false",
@@ -123,6 +139,22 @@
     ],
     "explanation": "Primeiro identifica-se o produto (NCM), depois a natureza da operação (CFOP), em seguida a classificação tributária do IBS/CBS e, por fim, valida-se e transmite-se a nota.",
     "pacciTip": "Um passo de cada vez, bambino! Produto, operação, tributo, transmissão. Assim ninguém erra a nota!"
+  },
+  {
+    "id": "REF-AUX-154",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma farmácia vende medicamentos e produtos de cuidado da saúde menstrual.",
+    "question": "Medicamentos e produtos de cuidados básicos à saúde menstrual têm qual alíquota de IBS?",
+    "options": [
+      "Alíquota zero (0%)",
+      "Redução de apenas 10%",
+      "Alíquota integral",
+      "Redução de 60%, igual serviços de saúde"
+    ],
+    "correctAnswer": "Alíquota zero (0%)",
+    "explanation": "Ficam reduzidas a zero as alíquotas do IBS sobre dispositivos médicos, dispositivos de acessibilidade, medicamentos e produtos de cuidados básicos à saúde menstrual, entre outros bens listados no art. 143 da LC 214/2025.",
+    "pacciTip": "Alguns itens de saúde vão além dos 60% de redução — chegam a zero por cento, tesoro!"
   },
   {
     "id": "REF-AUX-010",
@@ -220,6 +252,22 @@
     "pacciTip": "Mercadoria pede NCM, sempre! Grava essa igual musiquinha."
   },
   {
+    "id": "REF-AUX-155",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma montadora vende um automóvel adaptado para uma pessoa com deficiência física.",
+    "question": "A venda de automóvel de passageiros para pessoa com deficiência tem qual alíquota de IBS?",
+    "options": [
+      "Alíquota zero (0%)",
+      "Redução de 30%",
+      "Redução de 60%",
+      "Nenhuma redução"
+    ],
+    "correctAnswer": "Alíquota zero (0%)",
+    "explanation": "Automóveis de passageiros adquiridos por pessoas com deficiência ou transtorno do espectro autista, e por motoristas profissionais de táxi, têm alíquota zero de IBS.",
+    "pacciTip": "Acessibilidade e mobilidade profissional (táxi) ganham alíquota zero na compra do carro, tesoro!"
+  },
+  {
     "id": "REF-AUX-014",
     "level": "auxiliar",
     "type": "fill_blank",
@@ -286,6 +334,22 @@
     "correctAnswer": "NBS",
     "explanation": "NBS = Nomenclatura Brasileira de Serviços, código usado para classificar serviços.",
     "pacciTip": "N-B-S, o irmão do NCM só que pra serviço!"
+  },
+  {
+    "id": "REF-AUX-156",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa devolve uma compra para o fornecedor, mas não é contribuinte do regime regular.",
+    "question": "Na devolução ou cancelamento, quando o adquirente não é contribuinte do regime regular, quem normalmente emite o documento fiscal correspondente?",
+    "options": [
+      "O fornecedor, se o adquirente não for emitente de documento fiscal",
+      "Sempre o adquirente, mesmo sem ser emitente",
+      "O Comitê Gestor do IBS diretamente",
+      "Nenhum documento é necessário nesse caso"
+    ],
+    "correctAnswer": "O fornecedor, se o adquirente não for emitente de documento fiscal",
+    "explanation": "Na devolução, o documento fiscal é emitido pelo adquirente, se ele for emitente de documento fiscal, ou pelo fornecedor, se o adquirente não for emitente. No cancelamento, sempre pelo fornecedor.",
+    "pacciTip": "Quem \"sabe emitir nota\" assume a emissão — senão, a responsabilidade volta pro fornecedor!"
   },
   {
     "id": "REF-AUX-019",
@@ -356,6 +420,22 @@
     "pacciTip": "Esse é o 'imposto do pecadinho', capisce? Quanto mais nocivo, mais ele aparece."
   },
   {
+    "id": "REF-AUX-157",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma operação que já tinha gerado crédito ao adquirente é devolvida integralmente ao fornecedor.",
+    "question": "Se o crédito da operação original já tinha sido apropriado E utilizado pelo adquirente, o que acontece na devolução?",
+    "options": [
+      "É gerado um débito para o adquirente, já que o crédito usado não desaparece",
+      "O crédito simplesmente desaparece, sem gerar nada",
+      "O fornecedor perde automaticamente o direito de receber a mercadoria de volta",
+      "Nada acontece, pois devoluções não afetam a apuração"
+    ],
+    "correctAnswer": "É gerado um débito para o adquirente, já que o crédito usado não desaparece",
+    "explanation": "A ordem de efeitos na devolução é: estorno do crédito a apropriar, estorno do crédito apropriado e não utilizado, e geração de débito se o crédito já foi apropriado e utilizado — o crédito usado \"vira\" débito.",
+    "pacciTip": "Crédito já gasto não some no ar — ele \"se transforma\" em débito na devolução, tesoro!"
+  },
+  {
     "id": "REF-AUX-023",
     "level": "auxiliar",
     "type": "multiple_choice",
@@ -418,6 +498,22 @@
     "correctAnswer": "Porque a reforma prevê redução de alíquota para setores como saúde e educação",
     "explanation": "Setores considerados essenciais, como saúde e educação, têm previsão de redução de alíquota de IBS/CBS.",
     "pacciTip": "Saúde e educação ganham um desconto especial, amico! É pra cuidar do que importa."
+  },
+  {
+    "id": "REF-AUX-158",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um exportador brasileiro precisa comprovar ao Fisco que uma mercadoria realmente saiu do país.",
+    "question": "Qual o prazo padrão para a comprovação da exportação de bens materiais, contado da emissão do documento fiscal?",
+    "options": [
+      "Até 180 dias",
+      "Até 30 dias",
+      "Até 365 dias",
+      "Não há prazo definido"
+    ],
+    "correctAnswer": "Até 180 dias",
+    "explanation": "A comprovação de exportação deve ser realizada no prazo de até 180 dias, contado da emissão do documento fiscal relativo à exportação.",
+    "pacciTip": "180 dias pra provar que o produto realmente cruzou a fronteira, tesoro — quase meio ano de prazo!"
   },
   {
     "id": "REF-AUX-027",
@@ -500,6 +596,22 @@
     "pacciTip": "SaaS é serviço, então NBS na certa! Software não é mercadoria que se pega na mão."
   },
   {
+    "id": "REF-AUX-159",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um exportador perdeu o prazo de comprovação da exportação por causa de uma greve portuária que atrasou o embarque.",
+    "question": "Nesse tipo de situação excepcional, o prazo de comprovação da exportação pode ser prorrogado?",
+    "options": [
+      "Sim, por até mais 180 dias, quando a falta de comprovação não for imputável ao exportador",
+      "Não, o prazo é sempre improrrogável",
+      "Sim, mas só por 10 dias",
+      "Sim, indefinidamente, sem necessidade de justificativa"
+    ],
+    "correctAnswer": "Sim, por até mais 180 dias, quando a falta de comprovação não for imputável ao exportador",
+    "explanation": "O prazo pode ser prorrogado por até 180 dias quando a falta de comprovação decorrer de situação não imputável ao exportador — como força maior, greve ou atraso logístico relevante — mas não pode ser usado de forma genérica ou por prazo indeterminado.",
+    "pacciTip": "Greve, calamidade, conflito armado... situações fora do controle do exportador merecem mais prazo, tesoro!"
+  },
+  {
     "id": "REF-AUX-143",
     "level": "auxiliar",
     "type": "multiple_choice",
@@ -580,6 +692,22 @@
     "pacciTip": "DANFE é o retrato impresso da nota, amico! A nota de verdade mora no sistema."
   },
   {
+    "id": "REF-AUX-160",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma cooperativa agrícola vende hortaliças e ovos in natura direto ao consumidor.",
+    "question": "Produtos hortícolas, frutas e ovos têm qual alíquota de IBS, segundo os regimes diferenciados?",
+    "options": [
+      "Alíquota zero (0%)",
+      "Redução de apenas 30%",
+      "Alíquota integral",
+      "Redução de 60%, mesmo grupo dos alimentos em geral"
+    ],
+    "correctAnswer": "Alíquota zero (0%)",
+    "explanation": "Produtos hortícolas, frutas e ovos têm alíquota zero de IBS, conforme o art. 143 da LC 214/2025, indo além da redução de 60% aplicada a alimentos em geral.",
+    "pacciTip": "Hortifruti in natura tem tratamento ainda mais favorável — alíquota zero, não só redução!"
+  },
+  {
     "id": "REF-AUX-036",
     "level": "auxiliar",
     "type": "multiple_choice",
@@ -642,6 +770,22 @@
     "correctAnswer": "Cada item deve ser classificado conforme sua natureza: mercadoria com NCM, serviço com NBS",
     "explanation": "Quando uma nota mistura mercadoria e serviço, cada item deve levar seu código próprio: NCM para o bem físico e NBS para o serviço.",
     "pacciTip": "Buquê é NCM, entrega é NBS, tesoro! Cada coisa no seu devido código."
+  },
+  {
+    "id": "REF-AUX-161",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de contabilidade quer entender melhor as cinco formas pelas quais o IBS e a CBS podem ser pagos.",
+    "question": "Qual das alternativas abaixo é uma das formas de pagamento do IBS e da CBS previstas na Reforma?",
+    "options": [
+      "Compensação com créditos das aquisições de bens e serviços",
+      "Pagamento em espécie diretamente ao fiscal",
+      "Permuta de mercadorias com o Fisco",
+      "Doação de bens ao Comitê Gestor do IBS"
+    ],
+    "correctAnswer": "Compensação com créditos das aquisições de bens e serviços",
+    "explanation": "O pagamento do IBS e da CBS pode se dar por cinco formas, entre elas a compensação com créditos das aquisições de bens e serviços.",
+    "pacciTip": "Usar o crédito acumulado pra \"abater\" o que se deve é uma das formas oficiais de pagar, tesoro!"
   },
   {
     "id": "REF-AUX-040",
@@ -724,6 +868,22 @@
     "pacciTip": "Campo tem regra sua, tesoro! A reforma pensou no agro com carinho especial."
   },
   {
+    "id": "REF-AUX-162",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa nova está abrindo o CNPJ e já quer entrar no Simples Nacional desde o primeiro dia de atividade.",
+    "question": "Para empresas em início de atividade, quando a opção pelo Simples Nacional é solicitada?",
+    "options": [
+      "Simultaneamente à inscrição no CNPJ",
+      "Só depois de completar um ano de faturamento",
+      "Só em setembro do ano seguinte à abertura",
+      "Nunca — só empresas antigas podem optar"
+    ],
+    "correctAnswer": "Simultaneamente à inscrição no CNPJ",
+    "explanation": "Para empresas em início de atividade, a solicitação de opção pelo Simples Nacional ocorre simultaneamente à inscrição no CNPJ, pelo Portal Redesim — se deferida, a opção produz efeitos desde a data de inscrição.",
+    "pacciTip": "Empresa nova já nasce podendo escolher o Simples, sem esperar a janela de setembro, tesoro!"
+  },
+  {
     "id": "REF-AUX-044",
     "level": "auxiliar",
     "type": "multiple_choice",
@@ -778,6 +938,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O Comitê Gestor do IBS reúne representantes dos Estados e dos Municípios, e não é vinculado à Receita Federal.",
     "pacciTip": "É um comitê de Estados e Municípios, amico! A União nem participa dessa mesa."
+  },
+  {
+    "id": "REF-AUX-163",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa importa uma peça de reposição idêntica a outra que veio com defeito de fábrica, na mesma quantidade e valor.",
+    "question": "Nesse caso de substituição de item defeituoso, quais condições os bens de reposição precisam atender para não haver incidência do IBS e da CBS?",
+    "options": [
+      "Mesmo código da NCM/SH, mesmas funções, mesma qualidade e especificações",
+      "Apenas ter o mesmo preço de compra",
+      "Serem fabricados no mesmo país",
+      "Serem importados pela mesma transportadora"
+    ],
+    "correctAnswer": "Mesmo código da NCM/SH, mesmas funções, mesma qualidade e especificações",
+    "explanation": "Os bens de reposição devem ser classificados sob o mesmo código da NCM/SH, ter as mesmas funções ou utilidades, e ter a mesma qualidade e especificações (dimensões, características, propriedades físicas).",
+    "pacciTip": "Reposição de verdade precisa ser \"gêmea\" do bem defeituoso — mesmo código, função e qualidade!"
   },
   {
     "id": "REF-AUX-049",
@@ -836,6 +1012,22 @@
     "pacciTip": "Veio de fora, mas o IBS/CBS não perdoa, amico! Importação paga igual à venda interna."
   },
   {
+    "id": "REF-AUX-164",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa contrata um serviço de consultoria no exterior e precisa comprovar a operação perante o Fisco.",
+    "question": "O que o documento fiscal de importação de serviço ou bem imaterial deve conter, segundo o regulamento?",
+    "options": [
+      "A identificação do contrato de câmbio e da fatura de serviços ou documento que comprove a transação",
+      "Apenas o nome do prestador do serviço",
+      "Apenas o CPF do responsável pela empresa",
+      "A assinatura de um despachante aduaneiro"
+    ],
+    "correctAnswer": "A identificação do contrato de câmbio e da fatura de serviços ou documento que comprove a transação",
+    "explanation": "O documento fiscal de importação de serviço ou bem imaterial deve conter a identificação do contrato de câmbio e da fatura de serviços, ou do documento que comprove a transação ou o pagamento.",
+    "pacciTip": "Câmbio e fatura são as \"provas\" da importação de serviço — guarda tudo direitinho, tesoro!"
+  },
+  {
     "id": "REF-AUX-053",
     "level": "auxiliar",
     "type": "true_false",
@@ -874,6 +1066,22 @@
     "correctAnswer": false,
     "explanation": "Errado! Empresas do Simples Nacional podem manter suas regras próprias ou, conforme o caso, optar por aderir ao regime regular do IBS/CBS.",
     "pacciTip": "Simples continua de pé, tesoro! Ninguém apagou ele do mapa."
+  },
+  {
+    "id": "REF-AUX-165",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa contratada pelo governo municipal presta serviços de manutenção predial para uma prefeitura.",
+    "question": "A partir de que ano entraram em vigor as três medidas implementadas para as Compras Governamentais na Reforma?",
+    "options": [
+      "A partir de 2027",
+      "A partir de 2023",
+      "A partir de 2033",
+      "A partir de 2020"
+    ],
+    "correctAnswer": "A partir de 2027",
+    "explanation": "Três medidas foram implementadas para as Compras Governamentais, a partir de 2027, com regras próprias de transição e destinação da arrecadação para os entes federativos.",
+    "pacciTip": "2027 é o ano-chave de várias regras da Reforma, incluindo as Compras Governamentais, tesoro!"
   },
   {
     "id": "REF-AUX-057",
@@ -924,6 +1132,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O cClassTrib é apenas um campo dentro da NF-e, e não um documento novo.",
     "pacciTip": "cClassTrib é campo, não documento, capisce? A NF-e continua sendo a rainha."
+  },
+  {
+    "id": "REF-AUX-166",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma pousada oferece um imóvel residencial mobiliado para hospedagem de turistas por temporada.",
+    "question": "Um imóvel residencial mobiliado usado para hospedagem, mesmo sem uso exclusivo dos hóspedes, pode se enquadrar no regime específico de hospedagem?",
+    "options": [
+      "Sim, esse é um dos casos previstos no regime específico",
+      "Não, só imóveis de uso exclusivo se enquadram",
+      "Sim, mas só se tiver mais de 5 quartos",
+      "Não, imóveis residenciais nunca entram nesse regime"
+    ],
+    "correctAnswer": "Sim, esse é um dos casos previstos no regime específico",
+    "explanation": "O regime específico de hospedagem abrange tanto unidades de uso exclusivo dos hóspedes quanto o imóvel residencial mobiliado, ainda que de uso não exclusivo dos hóspedes, desde que destinado à hospedagem.",
+    "pacciTip": "Não precisa ser hotel tradicional — imóvel mobiliado pra hospedagem também entra no regime!"
   },
   {
     "id": "REF-AUX-146",
@@ -982,6 +1206,22 @@
     "pacciTip": "CFOP não vai embora, amico! Ele fica trabalhando junto com os campos novos."
   },
   {
+    "id": "REF-AUX-167",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma pessoa física aluga vários imóveis próprios e recebe uma renda considerável com isso todos os meses.",
+    "question": "Pessoas físicas que alugam imóveis podem, em certas condições, ser consideradas contribuintes do regime regular do IBS e da CBS?",
+    "options": [
+      "Sim, há critérios de enquadramento para locação e para alienação/cessão de direitos de bens imóveis",
+      "Não, pessoa física nunca é contribuinte em operações imobiliárias",
+      "Sim, mas só se for dona de mais de 50 imóveis",
+      "Não, apenas empresas podem ser contribuintes nesse setor"
+    ],
+    "correctAnswer": "Sim, há critérios de enquadramento para locação e para alienação/cessão de direitos de bens imóveis",
+    "explanation": "As pessoas físicas que realizam operações com bens imóveis podem ser consideradas contribuintes do regime regular do IBS e da CBS, havendo critérios específicos de enquadramento para locação e para alienação ou cessão de direitos.",
+    "pacciTip": "Pessoa física também pode \"virar\" contribuinte no mercado imobiliário, dependendo do volume de operações!"
+  },
+  {
     "id": "REF-AUX-066",
     "level": "auxiliar",
     "type": "true_false",
@@ -1031,6 +1271,22 @@
     ],
     "explanation": "A devolução parte da nota original, referencia-a, repete a classificação usada na venda e só então é transmitida.",
     "pacciTip": "Devolução começa olhando pra trás, tesoro! Acha a nota original antes de qualquer coisa."
+  },
+  {
+    "id": "REF-AUX-168",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa aluga um galpão comercial de terceiros e quer saber a redução de alíquota aplicável.",
+    "question": "Qual a redução de alíquota aplicada às operações de locação, cessão onerosa e arrendamento de bens imóveis?",
+    "options": [
+      "70%",
+      "50%",
+      "30%",
+      "10%"
+    ],
+    "correctAnswer": "70%",
+    "explanation": "As alíquotas do IBS e da CBS relativas às operações de locação, cessão onerosa e arrendamento de bens imóveis ficam reduzidas em 70% — maior que a redução de 50% aplicada à venda de imóveis.",
+    "pacciTip": "Locação de imóvel tem a maior redução do setor imobiliário: 70%, bem mais que a venda (50%)!"
   },
   {
     "id": "REF-AUX-070",
@@ -1131,6 +1387,22 @@
     ],
     "explanation": "Primeiro mapeia-se o problema, depois confirma-se a informação correta, corrige-se o cadastro e, por fim, decide-se o tratamento das notas já emitidas.",
     "pacciTip": "Achou o erro? Mapeia tudo antes de sair corrigindo, tesoro! Ordem evita bagunça."
+  },
+  {
+    "id": "REF-AUX-169",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer saber se rendimentos financeiros entram na base de cálculo comum do IBS e da CBS.",
+    "question": "Rendimentos financeiros costumam ter tratamento tributário diferente, salvo exceção do regime específico de qual setor?",
+    "options": [
+      "Serviços financeiros",
+      "Bares e restaurantes",
+      "Construção civil",
+      "Comércio varejista"
+    ],
+    "correctAnswer": "Serviços financeiros",
+    "explanation": "Rendimentos financeiros têm tratamento próprio, com exceção do disposto no regime específico de serviços financeiros, que trata especificamente da tributação desse tipo de receita.",
+    "pacciTip": "Serviços financeiros têm um \"capítulo à parte\" na Reforma — rendimento financeiro segue regra própria!"
   },
   {
     "id": "REF-AUX-074",
@@ -1238,6 +1510,22 @@
     "pacciTip": "Fornecedor do Simples também merece conferência caprichada, amico! Passo a passo, sem pular etapa."
   },
   {
+    "id": "REF-AUX-170",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma plataforma digital de e-commerce vende produtos de vendedores estrangeiros para consumidores no Brasil.",
+    "question": "A plataforma digital pode ser considerada responsável tributária em relação às importações realizadas por seu intermédio?",
+    "options": [
+      "Sim, pela operação e importação realizada por seu intermédio",
+      "Não, a responsabilidade é sempre exclusiva do consumidor final",
+      "Sim, mas só se a plataforma for brasileira",
+      "Não, plataformas digitais são sempre imunes"
+    ],
+    "correctAnswer": "Sim, pela operação e importação realizada por seu intermédio",
+    "explanation": "A plataforma digital pode responder como responsável tributária em relação às operações e importações realizadas por seu intermédio, o que reforça o controle fiscal sobre o comércio eletrônico internacional.",
+    "pacciTip": "Marketplace que intermedeia venda internacional também entra na responsabilidade tributária, tesoro!"
+  },
+  {
     "id": "REF-AUX-079",
     "level": "auxiliar",
     "type": "ordering",
@@ -1338,6 +1626,22 @@
     "pacciTip": "Primeiro conta, depois confere o código, depois o tributo, aí sim guarda no estoque, capisce?"
   },
   {
+    "id": "REF-AUX-171",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma trading importa mercadorias por conta e ordem de um cliente que efetivamente vai usar o produto.",
+    "question": "Na importação por conta e ordem de terceiros, quem é considerado contribuinte do IBS e da CBS?",
+    "options": [
+      "O adquirente",
+      "Sempre a trading importadora",
+      "O transportador internacional",
+      "O banco que processou o câmbio"
+    ],
+    "correctAnswer": "O adquirente",
+    "explanation": "Na importação por conta e ordem de terceiros, o contribuinte do IBS e da CBS é o adquirente — quem efetivamente encomendou e vai usar a mercadoria, e não apenas a empresa que processou a importação.",
+    "pacciTip": "Quem \"manda fazer\" a importação por conta e ordem é quem responde pelo imposto, não só quem processa!"
+  },
+  {
     "id": "REF-AUX-083",
     "level": "auxiliar",
     "type": "ordering",
@@ -1420,6 +1724,22 @@
     ],
     "explanation": "Primeiro identifica-se o destino, confirma-se a alíquota daquele ente, preenchem-se os dados e só então a nota é emitida.",
     "pacciTip": "O destino manda no IBS, tesoro! Descobre pra onde vai antes de emitir."
+  },
+  {
+    "id": "REF-AUX-172",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa importadora recebe uma mercadoria no porto e faz o despacho aduaneiro para consumo interno.",
+    "question": "O que se entende por \"despacho para consumo\" na importação, para fins de apuração do momento do fato gerador?",
+    "options": [
+      "O despacho aduaneiro a que são submetidos os bens destinados ao mercado interno",
+      "Qualquer movimentação de carga dentro do porto",
+      "A simples chegada do navio ao território nacional",
+      "O pagamento do frete internacional"
+    ],
+    "correctAnswer": "O despacho aduaneiro a que são submetidos os bens destinados ao mercado interno",
+    "explanation": "Entende-se por despacho para consumo, na importação, o despacho aduaneiro a que são submetidos os bens destinados ao mercado interno — é esse o momento relevante para apuração do fato gerador.",
+    "pacciTip": "Despacho para consumo é o \"carimbo final\" que libera o bem pro mercado interno — aí nasce o fato gerador!"
   },
   {
     "id": "REF-AUX-087",
@@ -1527,6 +1847,22 @@
     "pacciTip": "Cancelou? Confirma antes de reemitir, tesoro! Assim não cria confusão no sistema."
   },
   {
+    "id": "REF-AUX-173",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa está calculando o valor sobre o qual vai incidir o IBS e a CBS numa importação de bens materiais.",
+    "question": "Qual é a base de cálculo do IBS e da CBS na importação de bens materiais?",
+    "options": [
+      "O valor aduaneiro, incluindo o Imposto de Importação (II)",
+      "Apenas o valor do frete internacional",
+      "O valor de revenda do produto no Brasil",
+      "Um valor fixo definido pelo Comitê Gestor"
+    ],
+    "correctAnswer": "O valor aduaneiro, incluindo o Imposto de Importação (II)",
+    "explanation": "A base de cálculo do IBS e da CBS na importação de bens materiais é o valor aduaneiro, que inclui, entre outros componentes, o Imposto de Importação (II).",
+    "pacciTip": "Valor aduaneiro é o ponto de partida — e o próprio Imposto de Importação já entra nessa conta!"
+  },
+  {
     "id": "REF-AUX-092",
     "level": "auxiliar",
     "type": "ordering",
@@ -1612,6 +1948,22 @@
     "pacciTip": "Comitê Gestor, tesoro! Ele cuida do IBS pra todo mundo junto."
   },
   {
+    "id": "REF-AUX-174",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria da Zona Franca de Manaus recebe insumos e quer entender o benefício de crédito presumido aplicável.",
+    "question": "O crédito presumido do IBS para indústrias incentivadas na ZFM é lançado usando qual cClassTrib?",
+    "options": [
+      "810 — Ajuste de IBS na ZFM",
+      "800 — Transferência de Crédito",
+      "620 — Tributação Monofásica",
+      "011 — Tributação com alíquotas uniformes reduzidas"
+    ],
+    "correctAnswer": "810 — Ajuste de IBS na ZFM",
+    "explanation": "O cClassTrib 810 trata do lançamento do crédito presumido do IBS para indústrias incentivadas na Zona Franca de Manaus, sobre o valor apurado nos fornecimentos a partir de lá.",
+    "pacciTip": "ZFM tem código exclusivo, o 810 — não confunda com o 800, que é de fusão/cisão/incorporação!"
+  },
+  {
     "id": "REF-AUX-096",
     "level": "auxiliar",
     "type": "fill_blank",
@@ -1674,6 +2026,22 @@
     "correctAnswer": "2033",
     "explanation": "A transição vai de 2026 a 2033, ano em que os tributos antigos são extintos por completo.",
     "pacciTip": "2033, tesoro! É quando os tributos antigos se despedem de vez."
+  },
+  {
+    "id": "REF-AUX-175",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um posto de gasolina compra combustível já com o IBS e a CBS recolhidos anteriormente na cadeia.",
+    "question": "No regime monofásico dos combustíveis, em quantas etapas o IBS e a CBS são recolhidos?",
+    "options": [
+      "Em uma única etapa",
+      "Em todas as etapas da cadeia, igualmente",
+      "Em duas etapas apenas",
+      "O recolhimento é sempre mensal, independente de etapas"
+    ],
+    "correctAnswer": "Em uma única etapa",
+    "explanation": "No Regime Específico dos Combustíveis, o IBS e a CBS são recolhidos em uma única etapa da cadeia produtiva (tributação monofásica), representado pelo cClassTrib 620.",
+    "pacciTip": "Combustível paga uma vez só, lá atrás — depois disso, ninguém mais paga de novo na cadeia!"
   },
   {
     "id": "REF-AUX-100",
@@ -1756,6 +2124,22 @@
     "pacciTip": "Livro sempre teve esse carinho, amico! A reforma não mexeu nisso."
   },
   {
+    "id": "REF-AUX-176",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber quais operações continuam sendo tributadas normalmente mesmo dentro do regime específico de serviços financeiros.",
+    "question": "Serviços financeiros são, em regra, tributados nas hipóteses legais previstas, ou totalmente isentos?",
+    "options": [
+      "Tributados nas hipóteses legais previstas, dentro de um regime específico",
+      "Totalmente isentos, sem qualquer exceção",
+      "Tributados só se prestados por bancos estrangeiros",
+      "Isentos apenas para pessoas físicas"
+    ],
+    "correctAnswer": "Tributados nas hipóteses legais previstas, dentro de um regime específico",
+    "explanation": "Os serviços financeiros são tributados nas hipóteses legais previstas, dentro de um regime específico próprio — não há isenção geral para o setor financeiro.",
+    "pacciTip": "Banco também paga IBS e CBS, só que seguindo um regime específico próprio do setor financeiro!"
+  },
+  {
     "id": "REF-AUX-104",
     "level": "auxiliar",
     "type": "fill_blank",
@@ -1834,6 +2218,22 @@
     "correctAnswer": "NCM",
     "explanation": "A ração é uma mercadoria (bem físico), então usa o NCM; a NBS seria apenas para o serviço veterinário.",
     "pacciTip": "Ração é NCM, tesoro! Bem físico não passeia pela NBS."
+  },
+  {
+    "id": "REF-AUX-177",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de hotelaria também presta outros serviços de conforto, cobrados junto com a diária.",
+    "question": "Outros serviços incluídos no valor cobrado pela hospedagem também podem se enquadrar no regime específico de hospedagem?",
+    "options": [
+      "Sim, desde que vinculados ao valor cobrado pela hospedagem",
+      "Não, apenas o valor da diária básica entra no regime",
+      "Sim, mas só serviços de lavanderia",
+      "Não, esses serviços seguem sempre o regime regular"
+    ],
+    "correctAnswer": "Sim, desde que vinculados ao valor cobrado pela hospedagem",
+    "explanation": "O regime específico de hospedagem também abrange outros serviços incluídos no valor cobrado pela hospedagem, desde que a função do estabelecimento seja exclusivamente de hospedagem.",
+    "pacciTip": "Serviço \"grudado\" na diária de hospedagem segue o mesmo regime específico, tesoro!"
   },
   {
     "id": "REF-AUX-109",
@@ -1916,6 +2316,22 @@
     "pacciTip": "Carga que anda, o local do imposto anda com ela — depende de onde ela é entregue ou retirada, tesoro!"
   },
   {
+    "id": "REF-AUX-178",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa que fornece alimentação para funcionários de outra empresa, sob contrato corporativo, quer saber se entra no regime de bares e restaurantes.",
+    "question": "O fornecimento de alimentação para pessoa jurídica, sob contrato, entra no regime específico de bares e restaurantes?",
+    "options": [
+      "Não, esse tipo de fornecimento fica fora desse regime específico",
+      "Sim, sempre entra, com a mesma redução",
+      "Sim, mas só se o contrato for anual",
+      "Não, mas apenas se a empresa contratante for pequena"
+    ],
+    "correctAnswer": "Não, esse tipo de fornecimento fica fora desse regime específico",
+    "explanation": "Não está sujeito ao regime específico de bares e restaurantes o fornecimento de alimentação para pessoa jurídica sob contrato, classificado em posições específicas da NBS ou CNAE (como refeições coletivas corporativas).",
+    "pacciTip": "Alimentação corporativa por contrato tem classificação própria, fora do regime do bar/restaurante!"
+  },
+  {
     "id": "REF-AUX-113",
     "level": "auxiliar",
     "type": "fill_blank",
@@ -1980,6 +2396,22 @@
     "pacciTip": "IVA dual, tesoro! Dois tributos dançando juntos, no mesmo compasso."
   },
   {
+    "id": "REF-AUX-179",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de contabilidade presta serviço de hotelaria através de um imóvel residencial mobiliado alugado por temporada.",
+    "question": "Para um imóvel residencial mobiliado se enquadrar no regime de hospedagem, o que se exige do estabelecimento?",
+    "options": [
+      "Que sua função seja exclusivamente de hospedagem",
+      "Que tenha no mínimo 10 quartos disponíveis",
+      "Que seja administrado por uma rede hoteleira internacional",
+      "Que fique localizado em capital de estado"
+    ],
+    "correctAnswer": "Que sua função seja exclusivamente de hospedagem",
+    "explanation": "Para o imóvel residencial mobiliado se enquadrar no regime específico de hospedagem, é preciso que sua função seja exclusivamente de hospedagem, ainda que o uso não seja exclusivo dos hóspedes.",
+    "pacciTip": "A função do imóvel importa: se é \"de verdade\" pra hospedar, entra no regime específico!"
+  },
+  {
     "id": "REF-AUX-117",
     "level": "auxiliar",
     "type": "text_input",
@@ -2028,6 +2460,22 @@
     "correctAnswer": "Comitê Gestor",
     "explanation": "O Comitê Gestor do IBS é o órgão que reúne Estados e Municípios para administrar o imposto.",
     "pacciTip": "Comitê Gestor, tesoro! O time que cuida do IBS pra todo mundo."
+  },
+  {
+    "id": "REF-AUX-180",
+    "level": "auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber o que muda na apuração de bares e restaurantes em relação à proposta original da Reforma.",
+    "question": "A proposta original da Reforma pretendia retirar bares e restaurantes de qual sistemática de apuração?",
+    "options": [
+      "Da sistemática não cumulativa (compensação de créditos)",
+      "Da obrigatoriedade de emitir documento fiscal",
+      "Do cadastro obrigatório no CNPJ",
+      "Da fiscalização estadual"
+    ],
+    "correctAnswer": "Da sistemática não cumulativa (compensação de créditos)",
+    "explanation": "O projeto inicial previa retirar bares e restaurantes da sistemática não cumulativa; na versão publicada, optou-se por mantê-los na apuração normal, com redução de 40% na alíquota, em vez disso.",
+    "pacciTip": "A versão final foi mais branda: manteve a apuração normal, só reduzindo a alíquota em 40%!"
   },
   {
     "id": "REF-AUX-122",

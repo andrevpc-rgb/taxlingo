@@ -74,6 +74,22 @@
     "pacciTip": "2026 é o ensaio geral, tesoro! Ninguém sente o peso ainda no bolso."
   },
   {
+    "id": "REF-SR-153",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um auditor calcula a multa devida por uma empresa que tinha, no período de referência, uma UPF/IBS já reajustada pelo IPCA.",
+    "question": "A UPF/IBS (Unidade Padrão Fiscal dos Tributos sobre Bens e Serviços) inicia com qual valor de referência?",
+    "options": [
+      "R$ 200,00",
+      "R$ 1.000,00",
+      "R$ 50,00",
+      "R$ 500,00"
+    ],
+    "correctAnswer": "R$ 200,00",
+    "explanation": "A UPF é a Unidade Padrão Fiscal dos Tributos sobre Bens e Serviços, e inicia com o valor de R$ 200,00, sendo atualizada anualmente pelo IPCA (Art. 341-C da Lcp nº 214/2025).",
+    "pacciTip": "R$ 200,00 é o \"ponto zero\" da UPF — depois disso, só sobe com a inflação medida pelo IPCA!"
+  },
+  {
     "id": "REF-SR-006",
     "level": "analista_senior",
     "type": "true_false",
@@ -144,6 +160,22 @@
     ],
     "explanation": "O processo começa pelo mapeamento dos contratos, segue com a simulação de impacto, a negociação de repactuação e a formalização dos aditivos.",
     "pacciTip": "Mapeia, simula, negocia, formaliza. Assim nenhum contrato pega a empresa de surpresa!"
+  },
+  {
+    "id": "REF-SR-154",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa é multada em lançamento de ofício e decide contestar administrativamente, sem pagar nem parcelar de imediato.",
+    "question": "Se a empresa não pagar nem parcelar dentro do prazo de impugnação, mas ainda não tiver sido inscrita em dívida ativa, quais reduções de multa continuam disponíveis?",
+    "options": [
+      "30% (pagamento integral) ou 20% (parcelamento), antes da inscrição em dívida ativa",
+      "50% (pagamento) ou 40% (parcelamento), sem limite de prazo",
+      "Nenhuma redução mais é possível depois do prazo de impugnação",
+      "75% de redução automática, por decurso de prazo"
+    ],
+    "correctAnswer": "30% (pagamento integral) ou 20% (parcelamento), antes da inscrição em dívida ativa",
+    "explanation": "Passado o prazo de impugnação, mas antes da inscrição em dívida ativa, ainda é possível reduzir a multa em 30% (pagamento integral) ou 20% (parcelamento) — reduções menores que as de 50%/40% disponíveis no prazo de impugnação.",
+    "pacciTip": "A \"janela de desconto\" vai encolhendo com o tempo: de 50/40% pra 30/20%, até a inscrição em dívida ativa!"
   },
   {
     "id": "REF-SR-141",
@@ -236,6 +268,22 @@
     "pacciTip": "Repactuação é o seguro do contrato, amico! Protege as duas partes da mudança tributária."
   },
   {
+    "id": "REF-SR-155",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um fiscal explica que a responsabilidade tributária do IBS não se importa se o contribuinte \"quis\" ou não cometer a infração.",
+    "question": "A responsabilidade por infrações do IBS é, portanto, classificada de que forma na doutrina tributária?",
+    "options": [
+      "Responsabilidade objetiva, independente de dolo ou culpa",
+      "Responsabilidade subjetiva, exigindo prova de dolo",
+      "Responsabilidade solidária apenas entre sócios",
+      "Responsabilidade pessoal, restrita ao representante legal"
+    ],
+    "correctAnswer": "Responsabilidade objetiva, independente de dolo ou culpa",
+    "explanation": "Como a responsabilidade por infrações do IBS independe da intenção do agente e da efetividade dos efeitos do ato, ela se caracteriza como responsabilidade objetiva.",
+    "pacciTip": "Não interessa a intenção — a infração do IBS é apurada de forma objetiva, tesoro!"
+  },
+  {
     "id": "REF-SR-015",
     "level": "analista_senior",
     "type": "fill_blank",
@@ -298,6 +346,22 @@
     "pacciTip": "Repactuação, tesoro! Essa palavra protege o contrato dos solavancos da transição."
   },
   {
+    "id": "REF-SR-156",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa exportadora de bens materiais quer garantir que o crédito das compras internas relacionadas às exportações não se perca.",
+    "question": "Além de não pagar IBS e CBS na exportação, o que mais a imunidade nas exportações garante ao exportador?",
+    "options": [
+      "O uso de créditos fiscais relacionados às compras internas",
+      "Isenção de todos os outros tributos federais, sem exceção",
+      "A dispensa total de qualquer documento fiscal",
+      "A redução automática do Imposto de Renda da empresa"
+    ],
+    "correctAnswer": "O uso de créditos fiscais relacionados às compras internas",
+    "explanation": "Além de não pagarem IBS e CBS ao exportar, os exportadores podem usar créditos fiscais relacionados às suas compras internas — a imunidade não implica perda do direito ao crédito.",
+    "pacciTip": "Exportar é \"premium\" de novo: não paga o imposto e ainda guarda o crédito das compras internas!"
+  },
+  {
     "id": "REF-SR-020",
     "level": "analista_senior",
     "type": "text_input",
@@ -354,6 +418,22 @@
     "correctAnswer": "Extinção do PIS e da Cofins, com a CBS plenamente em vigor, mas ICMS e ISS ainda continuam sendo cobrados normalmente",
     "explanation": "Em 2027 apenas os tributos federais PIS e Cofins são extintos e substituídos pela CBS. ICMS e ISS só começam a reduzir a partir de 2029.",
     "pacciTip": "Um de cada vez, amico! Em 2027 só os federais saem de cena."
+  },
+  {
+    "id": "REF-SR-157",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte do regime específico de bens imóveis vende um lote residencial com valor menor que o redutor de ajuste permitido.",
+    "question": "O redutor de ajuste pode reduzir a base de cálculo do IBS/CBS a um valor negativo?",
+    "options": [
+      "Não, o redutor é aplicado até o limite do valor da base de cálculo",
+      "Sim, o excedente vira crédito para uso futuro",
+      "Sim, o excedente é ressarcido em dinheiro automaticamente",
+      "Não, o redutor só pode ser usado uma única vez na vida do contribuinte"
+    ],
+    "correctAnswer": "Não, o redutor é aplicado até o limite do valor da base de cálculo",
+    "explanation": "O redutor de ajuste (seja o de imóvel novo, lote residencial ou locação residencial) é deduzido da base de cálculo até o limite do valor da própria base de cálculo — não gera valor negativo nem crédito adicional.",
+    "pacciTip": "O redutor \"zera\" a base, no máximo — não vira crédito extra se for maior que o valor da operação!"
   },
   {
     "id": "REF-SR-023",
@@ -436,6 +516,22 @@
     "pacciTip": "Aditivo bem feito hoje evita dor de cabeça amanhã, tesoro!"
   },
   {
+    "id": "REF-SR-158",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa avalia se o regime específico de bens imóveis pode ser combinado livremente com o regime de bares e restaurantes, num empreendimento misto.",
+    "question": "Regimes específicos distintos (como imóveis e bares/restaurantes) podem ser livremente cumulados para a mesma operação?",
+    "options": [
+      "Não, segue a mesma regra geral de não cumulação, salvo previsão expressa em lei",
+      "Sim, sempre que a empresa tiver as duas atividades registradas",
+      "Sim, automaticamente, sem necessidade de previsão legal",
+      "Não, essa cumulação é impossível mesmo com previsão em lei"
+    ],
+    "correctAnswer": "Não, segue a mesma regra geral de não cumulação, salvo previsão expressa em lei",
+    "explanation": "Regimes diferenciados e específicos seguem a regra geral de não cumulação entre si, exceto quando expressamente previsto em lei — vale tanto para regimes diferenciados quanto para os regimes específicos setoriais.",
+    "pacciTip": "Regra geral vale pra quase tudo: sem previsão expressa, não dá pra empilhar regime sobre regime!"
+  },
+  {
     "id": "REF-SR-028",
     "level": "analista_senior",
     "type": "multiple_choice",
@@ -514,6 +610,22 @@
     "correctAnswer": "O valor ser igual ou inferior a 150% do valor médio mensal da diferença entre créditos e débitos de IBS",
     "explanation": "Um dos critérios para prazo mais célere é o pedido de ressarcimento cujo valor seja igual ou inferior a 150% do valor médio mensal da diferença entre os créditos e débitos de IBS do contribuinte.",
     "pacciTip": "Pedido \"proporcional\" ao seu histórico de créditos passa mais rápido — o Fisco confia no seu padrão!"
+  },
+  {
+    "id": "REF-SR-159",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma multinacional identifica que sua filial cometeu uma infração, mas o benefício financeiro dela foi repassado à matriz no exterior.",
+    "question": "O fato de o benefício da infração ter sido repassado a terceiro (como a matriz) afasta a responsabilidade de quem cometeu o ato no Brasil?",
+    "options": [
+      "Não, quem concorreu para a infração continua respondendo, mesmo que outra parte tenha se beneficiado",
+      "Sim, a responsabilidade é sempre transferida a quem recebeu o benefício",
+      "Sim, mas só se o valor transferido for menor que R$ 50.000,00",
+      "Não, mas apenas se a matriz estiver em país sem acordo tributário com o Brasil"
+    ],
+    "correctAnswer": "Não, quem concorreu para a infração continua respondendo, mesmo que outra parte tenha se beneficiado",
+    "explanation": "Respondem pela infração, conjunta ou isoladamente, todos os que concorreram para a sua prática OU que dela se beneficiaram — ou seja, pode haver responsabilização de mais de uma parte simultaneamente.",
+    "pacciTip": "Quem praticou o ato responde, e quem se beneficiou também pode responder — a lei não escolhe só um!"
   },
   {
     "id": "REF-SR-032",
@@ -596,6 +708,22 @@
     "pacciTip": "O que já saiu direto pro Fisco não conta como seu, amico!"
   },
   {
+    "id": "REF-SR-160",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte do Simples Nacional decide, dentro da janela de setembro, migrar para o regime regular do IBS e da CBS a partir do ano seguinte.",
+    "question": "Quais fatores essa escolha de regime tende a afetar, segundo o material do curso?",
+    "options": [
+      "Créditos, documentos fiscais, sistemas, fluxo de caixa e competitividade",
+      "Somente o valor do capital social da empresa",
+      "Apenas o quadro societário da empresa",
+      "Somente a razão social registrada no CNPJ"
+    ],
+    "correctAnswer": "Créditos, documentos fiscais, sistemas, fluxo de caixa e competitividade",
+    "explanation": "A escolha entre manter o IBS/CBS dentro do Simples Nacional ou recolher pelo regime regular afeta créditos, documentos fiscais, sistemas, fluxo de caixa e competitividade da empresa — uma decisão estratégica, não só operacional.",
+    "pacciTip": "Não é só uma \"opção de imposto\" — mexe com toda a estrutura de créditos e competitividade da empresa!"
+  },
+  {
     "id": "REF-SR-037",
     "level": "analista_senior",
     "type": "multiple_choice",
@@ -676,6 +804,22 @@
     "pacciTip": "Ver o problema na hora vale ouro, tesoro! Corrige rápido, evita dor de cabeça."
   },
   {
+    "id": "REF-SR-161",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa registra corretamente uma bonificação no documento fiscal, sem que ela dependa de qualquer evento futuro.",
+    "question": "Por que uma bonificação registrada no documento fiscal, sem depender de evento posterior, não é tributada?",
+    "options": [
+      "Porque é considerada uma redução do valor da operação, e não um fornecimento à parte tributável",
+      "Porque toda bonificação é imune por definição constitucional",
+      "Porque bonificações só existem no comércio atacadista",
+      "Porque o valor da bonificação é sempre inferior a R$ 100,00"
+    ],
+    "correctAnswer": "Porque é considerada uma redução do valor da operação, e não um fornecimento à parte tributável",
+    "explanation": "Não são tributadas as bonificações que constem do respectivo documento fiscal e não dependam de evento posterior — na prática, funcionam como um desconto embutido na própria operação, e não como um fornecimento gratuito à parte.",
+    "pacciTip": "Bonificação bem registrada é \"desconto disfarçado\" — por isso não vira fornecimento tributável extra!"
+  },
+  {
     "id": "REF-SR-144",
     "level": "analista_senior",
     "type": "multiple_choice",
@@ -750,6 +894,22 @@
     "pacciTip": "Dois calendários fiscais rodando juntos, tesoro! É assim até a poeira baixar."
   },
   {
+    "id": "REF-SR-162",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de tecnologia da informação presta serviços de segurança cibernética para o governo federal.",
+    "question": "Esse tipo de serviço, ligado à segurança da informação, tem previsão específica de redução de alíquota do IBS?",
+    "options": [
+      "Sim, está entre os itens com redução de 60% (art. 128 da LC 214/2025)",
+      "Não, segue sempre a alíquota integral, sem qualquer benefício",
+      "Sim, mas com alíquota zero, igual a medicamentos",
+      "Não, esse tipo de serviço não é mencionado na Reforma"
+    ],
+    "correctAnswer": "Sim, está entre os itens com redução de 60% (art. 128 da LC 214/2025)",
+    "explanation": "Bens e serviços relacionados à soberania e segurança nacional, segurança da informação e segurança cibernética estão entre os itens com redução de 60% da alíquota do IBS, conforme o art. 128 da LC 214/2025.",
+    "pacciTip": "Segurança cibernética entrou no radar da Reforma com 60% de redução — um setor estratégico reconhecido!"
+  },
+  {
     "id": "REF-SR-046",
     "level": "analista_senior",
     "type": "true_false",
@@ -798,6 +958,22 @@
     "correctAnswer": true,
     "explanation": "Correto! Como a transição tem vários marcos ao longo de quase uma década, o treinamento contínuo mantém as equipes preparadas em cada fase.",
     "pacciTip": "Aprender aos poucos gruda melhor, amico! Treinamento faseado é o caminho."
+  },
+  {
+    "id": "REF-SR-163",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa avalia se um regime diferenciado pode ser cumulado com o próprio regime regular de apuração, sem que isso seja considerado \"acumulação de benefícios\".",
+    "question": "A aplicação simultânea de um regime diferenciado (redução de alíquota) COM o regime regular de apuração normal é considerada uma cumulação vedada?",
+    "options": [
+      "Não, o regime diferenciado normalmente atua dentro da apuração regular, ajustando só a alíquota ou o crédito",
+      "Sim, é sempre proibido combinar qualquer regime diferenciado com o regime regular",
+      "Sim, mas apenas para empresas do Lucro Presumido",
+      "Não, mas apenas se a empresa não tiver funcionários registrados"
+    ],
+    "correctAnswer": "Não, o regime diferenciado normalmente atua dentro da apuração regular, ajustando só a alíquota ou o crédito",
+    "explanation": "Os regimes diferenciados normalmente operam DENTRO da apuração regular — ajustando alíquotas ou concedendo créditos presumidos — a vedação de cumulação é entre regimes diferenciados/específicos/favorecidos ENTRE SI, não com o regime regular em si.",
+    "pacciTip": "Regime diferenciado não substitui o regime regular — ele \"tempera\" a apuração normal com um benefício!"
   },
   {
     "id": "REF-SR-051",
@@ -856,6 +1032,22 @@
     "pacciTip": "Obra longa, revisão em capítulos, amico!"
   },
   {
+    "id": "REF-SR-164",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa vende energia elétrica fora do consumo efetivo, numa operação puramente de transmissão entre agentes do setor.",
+    "question": "Nesse tipo específico de operação (transmissão, sem consumo efetivo), o local do fornecimento segue qual critério, entre os vistos no cIndOp?",
+    "options": [
+      "O local do estabelecimento principal do adquirente (matriz)",
+      "O local da usina geradora, sempre",
+      "O local do consumidor final da rede",
+      "A capital do estado onde nasce a energia"
+    ],
+    "correctAnswer": "O local do estabelecimento principal do adquirente (matriz)",
+    "explanation": "Nas operações com energia elétrica que não envolvem efetivo consumo (transmissão, geração, distribuição, comercialização), o local do fornecimento é o do estabelecimento principal do adquirente, conforme o § 4º do art. 11.",
+    "pacciTip": "Sem consumo de verdade, o local segue o adquirente principal — igual outras operações \"de bastidor\"!"
+  },
+  {
     "id": "REF-SR-055",
     "level": "analista_senior",
     "type": "true_false",
@@ -906,6 +1098,22 @@
     "pacciTip": "Mais vendedores, mais cuidado no repasse, tesoro!"
   },
   {
+    "id": "REF-SR-165",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de construção civil aplica o redutor de ajuste numa obra de incorporação imobiliária sujeita ao regime específico.",
+    "question": "O redutor de ajuste e a redução de 50% na alíquota de bens imóveis podem ser aplicados na MESMA operação de venda de imóvel novo?",
+    "options": [
+      "Sim, ambos os benefícios (redutor de base de cálculo e redução de alíquota) operam de forma combinada nesse regime específico",
+      "Não, é preciso escolher apenas um dos dois benefícios",
+      "Sim, mas apenas em imóveis comerciais, nunca residenciais",
+      "Não, o redutor de ajuste substitui totalmente a redução de alíquota"
+    ],
+    "correctAnswer": "Sim, ambos os benefícios (redutor de base de cálculo e redução de alíquota) operam de forma combinada nesse regime específico",
+    "explanation": "No regime específico de bens imóveis, o redutor de ajuste (que reduz a BASE de cálculo) e a redução de 50% na ALÍQUOTA operam de forma combinada — primeiro se aplica o redutor à base, depois a alíquota reduzida sobre o valor restante.",
+    "pacciTip": "Dois benefícios, uma operação só: primeiro reduz a base com o redutor, depois aplica a alíquota menor!"
+  },
+  {
     "id": "REF-SR-060",
     "level": "analista_senior",
     "type": "true_false",
@@ -950,6 +1158,22 @@
     "correctAnswer": true,
     "explanation": "Correto! Com menos caixa disponível por venda, ferramentas de antecipação de recebíveis passam a ter papel mais relevante na estratégia de liquidez.",
     "pacciTip": "Quando o caixa aperta, a antecipação vira aliada, amico!"
+  },
+  {
+    "id": "REF-SR-166",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de tecnologia identifica que sua filial cometeu uma infração de forma involuntária, por um erro de sistema.",
+    "question": "O caráter involuntário da ação ou omissão afasta a caracterização de infração à legislação do IBS?",
+    "options": [
+      "Não, a infração pode ser caracterizada mesmo que a ação ou omissão seja involuntária",
+      "Sim, só há infração se houver intenção comprovada",
+      "Sim, mas apenas para empresas de pequeno porte",
+      "Não, mas apenas se o erro persistir por mais de 90 dias"
+    ],
+    "correctAnswer": "Não, a infração pode ser caracterizada mesmo que a ação ou omissão seja involuntária",
+    "explanation": "Constitui infração toda ação ou omissão, AINDA QUE INVOLUNTÁRIA, que importe em inobservância de obrigação principal ou acessória estabelecida pela legislação do imposto.",
+    "pacciTip": "Erro de sistema não é desculpa pro Fisco — mesmo involuntária, a ação pode configurar infração!"
   },
   {
     "id": "REF-SR-063",
@@ -1000,6 +1224,22 @@
     "correctAnswer": false,
     "explanation": "Errado! Nenhum sistema corrige sozinho um erro de parametrização feito por uma pessoa sem o devido controle. A governança de acesso segue essencial, e até mais crítica, no novo modelo.",
     "pacciTip": "Sistema não lê mente, tesoro! Governança de acesso continua fundamental."
+  },
+  {
+    "id": "REF-SR-167",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer entender por que, mesmo com uma apuração assistida totalmente automatizada, ainda existe risco de autuação.",
+    "question": "Por que a automação da apuração assistida NÃO elimina o risco de lançamento de ofício para o contribuinte?",
+    "options": [
+      "Porque o fato de existir apuração assistida não afasta a prerrogativa de lançamento de ofício do Fisco",
+      "Porque a apuração assistida só vale para empresas do Simples Nacional",
+      "Porque o lançamento de ofício só existia antes da Reforma e foi extinto",
+      "Porque a automação é apenas uma sugestão, sem qualquer efeito legal"
+    ],
+    "correctAnswer": "Porque o fato de existir apuração assistida não afasta a prerrogativa de lançamento de ofício do Fisco",
+    "explanation": "Mesmo com toda a automação da apuração assistida (alimentada pelos DF-e), o Fisco mantém a prerrogativa de lançamento de ofício — a tecnologia auxilia, mas não substitui o poder-dever de fiscalizar.",
+    "pacciTip": "Automação ajuda a apurar, mas o poder de fiscalizar e autuar do Fisco continua de pé, tesoro!"
   },
   {
     "id": "REF-SR-068",
@@ -1089,6 +1329,22 @@
     "correctAnswer": "Devem aguardar a geração automática do CNPJ pelas administrações tributárias",
     "explanation": "A pessoa física com inscrição estadual ou municipal regular deve aguardar a geração automática do CNPJ pelas administrações tributárias; já quem não tem essa inscrição precisa solicitá-la conforme as regras vigentes.",
     "pacciTip": "Se já está regular no Estado/Município, o CNPJ \"nasce sozinho\" — não precisa correr atrás, tesoro!"
+  },
+  {
+    "id": "REF-SR-168",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer comparar a multa por cancelamento de documento fiscal com a multa padrão de lançamento de ofício.",
+    "question": "A multa de cancelamento de documento fiscal após o fato gerador (66%) é maior ou menor que a multa padrão de lançamento de ofício (75%)?",
+    "options": [
+      "Menor — 66% é inferior aos 75% do lançamento de ofício padrão",
+      "Maior — 66% supera os 75% do lançamento de ofício",
+      "Exatamente igual, ambas valem 66%",
+      "Não há relação entre as duas, pois são tributos diferentes"
+    ],
+    "correctAnswer": "Menor — 66% é inferior aos 75% do lançamento de ofício padrão",
+    "explanation": "A multa de cancelamento de documento fiscal após o fato gerador (66%) é menor que a multa padrão de lançamento de ofício sobre tributo não declarado ou crédito indevido (75%) — são infrações distintas, com penalidades específicas.",
+    "pacciTip": "Cada infração tem sua régua própria — cancelamento indevido (66%) não é igual a sonegação (75%)!"
   },
   {
     "id": "REF-SR-072",
@@ -1196,6 +1452,22 @@
     "pacciTip": "Quantifica antes de negociar, amico! Argumento embasado convence mais."
   },
   {
+    "id": "REF-SR-169",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa avalia a real economia gerada pela redução de 70% na alíquota de locação de imóveis, comparada à alíquota de referência padrão.",
+    "question": "Se a alíquota de referência for de 26,5% e a redução para locação de imóveis for de 70%, qual seria a alíquota final aproximada?",
+    "options": [
+      "Cerca de 7,95%",
+      "Cerca de 13,25%",
+      "Cerca de 18,55%",
+      "Cerca de 21,2%"
+    ],
+    "correctAnswer": "Cerca de 7,95%",
+    "explanation": "Com redução de 70% sobre a alíquota de referência de 26,5%, a alíquota final do regime específico de locação de imóveis fica em cerca de 7,95% — exatamente o exemplo dado no material do curso.",
+    "pacciTip": "26,5% menos 70% dá 7,95% — o exemplo exato usado no material pra locação de imóveis!"
+  },
+  {
     "id": "REF-SR-077",
     "level": "analista_senior",
     "type": "ordering",
@@ -1301,6 +1573,22 @@
     "pacciTip": "Levanta, simula, compara, mitiga, tesoro!"
   },
   {
+    "id": "REF-SR-170",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa avalia a alíquota final aplicável a profissões intelectuais, comparando com a alíquota de referência padrão.",
+    "question": "Qual é a alíquota final estimada para profissões intelectuais, após a redução de 30% sobre a alíquota de referência?",
+    "options": [
+      "Cerca de 18,55%",
+      "Cerca de 7,95%",
+      "Cerca de 13,25%",
+      "Cerca de 26,5%, sem qualquer redução"
+    ],
+    "correctAnswer": "Cerca de 18,55%",
+    "explanation": "A redução de 30% para profissões intelectuais resulta numa alíquota estimada de cerca de 18,55%, conforme mencionado no material do curso, partindo da alíquota de referência estimada.",
+    "pacciTip": "Profissão intelectual: alíquota estimada de 18,55%, depois da redução de 30% aplicada, tesoro!"
+  },
+  {
     "id": "REF-SR-148",
     "level": "analista_senior",
     "type": "multiple_choice",
@@ -1399,6 +1687,22 @@
     ],
     "explanation": "O processo começa pelo cálculo do hiato de caixa, segue com a apresentação ao banco, a negociação das condições e a formalização do crédito.",
     "pacciTip": "Calcula antes de bater na porta do banco, tesoro! Argumento numérico convence mais."
+  },
+  {
+    "id": "REF-SR-171",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte percebe que uma bonificação foi corretamente registrada no documento fiscal, mas o comprador insiste que isso configura um desconto disfarçado irregular.",
+    "question": "Do ponto de vista técnico da Reforma, a bonificação registrada corretamente é, na prática, equivalente a que mecanismo comercial?",
+    "options": [
+      "Um desconto no valor da operação, formalizado através de bem ou serviço a maior",
+      "Uma doação pura e simples, sem qualquer efeito comercial",
+      "Um empréstimo disfarçado entre as partes",
+      "Uma antecipação de pagamento de fornecimento futuro"
+    ],
+    "correctAnswer": "Um desconto no valor da operação, formalizado através de bem ou serviço a maior",
+    "explanation": "A bonificação é, por definição legal, o fornecimento a maior de bem ou serviço EM SUBSTITUIÇÃO a desconto no valor da operação — tecnicamente equivale a um desconto comercial, só que dado em produto/serviço a mais, em vez de redução de preço.",
+    "pacciTip": "Bonificação é desconto \"disfarçado\" de jeito legal e correto — dar mais produto em vez de baixar o preço!"
   },
   {
     "id": "REF-SR-086",
@@ -1506,6 +1810,22 @@
     "pacciTip": "Diagnostica, identifica, previne, acompanha, amico! Assim o compliance vira hábito, não susto."
   },
   {
+    "id": "REF-SR-172",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de tecnologia quer confirmar se instituições de pesquisa sem fins lucrativos concorrentes têm exatamente o mesmo benefício fiscal que ela.",
+    "question": "O benefício de alíquota zero para ICT (Instituição Científica, Tecnológica e de Inovação) exige que tipo de natureza jurídica da instituição?",
+    "options": [
+      "Sem fins lucrativos",
+      "Sociedade anônima de capital aberto",
+      "Autarquia federal, exclusivamente",
+      "Empresa pública estadual, exclusivamente"
+    ],
+    "correctAnswer": "Sem fins lucrativos",
+    "explanation": "Os serviços prestados por Instituição Científica, Tecnológica e de Inovação (ICT) SEM FINS LUCRATIVOS têm alíquota zero de IBS — a natureza sem fins lucrativos é condição expressa do benefício.",
+    "pacciTip": "O benefício de alíquota zero da ICT exige claramente a ausência de fins lucrativos, tesoro!"
+  },
+  {
     "id": "REF-SR-091",
     "level": "analista_senior",
     "type": "ordering",
@@ -1596,6 +1916,22 @@
     "pacciTip": "Extintos de vez, amico! A CBS assume o posto."
   },
   {
+    "id": "REF-SR-173",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer entender por que a multa de 30 UPF (com intimação) é maior que a de 20 UPF (sem intimação) pelo mesmo tipo de omissão.",
+    "question": "O que justifica a multa AGRAVADA de 30 UPF, em comparação com a multa base de 20 UPF, para a mesma omissão de entrega de arquivo eletrônico?",
+    "options": [
+      "O descumprimento do prazo fixado numa intimação fiscal específica, que já alertou o contribuinte",
+      "O valor do tributo devido na operação, que dobra automaticamente",
+      "A reincidência da mesma empresa em anos anteriores",
+      "O tamanho da empresa, medido pelo faturamento anual"
+    ],
+    "correctAnswer": "O descumprimento do prazo fixado numa intimação fiscal específica, que já alertou o contribuinte",
+    "explanation": "A multa sobe de 20 para 30 UPF quando há descumprimento de prazo fixado em intimação fiscal — ou seja, quando o Fisco já alertou formalmente o contribuinte e mesmo assim a obrigação não foi cumprida.",
+    "pacciTip": "Ser alertado e mesmo assim não cumprir pesa mais a multa — de 20 pra 30 UPF, tesoro!"
+  },
+  {
     "id": "REF-SR-095",
     "level": "analista_senior",
     "type": "fill_blank",
@@ -1676,6 +2012,22 @@
     "pacciTip": "IPCA não cobre imposto, tesoro! São riscos diferentes."
   },
   {
+    "id": "REF-SR-174",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de food service avalia abrir uma unidade que só vende produtos industrializados prontos, sem cozinha própria no local.",
+    "question": "Uma unidade que só revende produtos alimentícios prontos, sem qualquer preparo local, teria a mesma redução de 40% dos bares e restaurantes tradicionais?",
+    "options": [
+      "Não, esse tipo de revenda pura fica fora do regime específico de bares e restaurantes",
+      "Sim, exatamente a mesma redução se aplicaria",
+      "Sim, mas com redução ainda maior, de 60%",
+      "Não, esse tipo de operação seria isenta totalmente"
+    ],
+    "correctAnswer": "Não, esse tipo de revenda pura fica fora do regime específico de bares e restaurantes",
+    "explanation": "O fornecimento de produtos alimentícios adquiridos prontos de terceiros, sem preparo no estabelecimento, não está sujeito ao regime específico de bares e restaurantes — logo, não tem a redução de 40% nem a vedação de crédito associada a esse regime.",
+    "pacciTip": "Sem preparo próprio, não é \"bar/restaurante\" pra fins fiscais — segue as regras gerais comuns!"
+  },
+  {
     "id": "REF-SR-100",
     "level": "analista_senior",
     "type": "fill_blank",
@@ -1738,6 +2090,22 @@
     "correctAnswer": "Pelo recebedor",
     "explanation": "Exemplos de transações iniciadas pelo recebedor incluem boleto/fatura de cobrança, link de pagamento, PIX Cobrança/QR Code dinâmico e cobrança recorrente — é o recebedor (ou terceiro) quem emite a instrução que origina a transação.",
     "pacciTip": "Cobrança recorrente é o recebedor \"chamando\" o pagamento todo mês — por isso ele é quem origina!"
+  },
+  {
+    "id": "REF-SR-175",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de comércio exterior avalia se a substituição de item defeituoso por outro igual, mas de valor levemente diferente, ainda se enquadra na hipótese de não incidência.",
+    "question": "Para a substituição de item defeituoso não ser tributada, os bens de reposição precisam ter EXATAMENTE o mesmo valor da importação original?",
+    "options": [
+      "Sim, a hipótese exige bens idênticos, em igual quantidade E valor",
+      "Não, qualquer diferença de valor é aceita, desde que a quantidade seja igual",
+      "Não, o valor pode ser até 20% maior, sem perder o benefício",
+      "Sim, mas só quando o valor original for inferior a R$ 5.000,00"
+    ],
+    "correctAnswer": "Sim, a hipótese exige bens idênticos, em igual quantidade E valor",
+    "explanation": "A não incidência na substituição de itens defeituosos exige que os bens de reposição sejam idênticos, em IGUAL QUANTIDADE E VALOR ao bem originalmente importado e defeituoso — qualquer diferença relevante pode descaracterizar a hipótese.",
+    "pacciTip": "Reposição de verdade precisa ser \"espelho\" do bem original: mesma quantidade, mesmo valor, tesoro!"
   },
   {
     "id": "REF-SR-103",
@@ -1820,6 +2188,22 @@
     "pacciTip": "Repasse correto é questão de confiança, tesoro!"
   },
   {
+    "id": "REF-SR-176",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte de bares e restaurantes tenta aproveitar crédito da compra de insumos usados no preparo dos pratos vendidos.",
+    "question": "A vedação de crédito no regime específico de bares e restaurantes se aplica apenas aos ADQUIRENTES da refeição, ou também ao próprio bar/restaurante nas suas compras de insumos?",
+    "options": [
+      "A vedação mencionada no material recai sobre os ADQUIRENTES da alimentação, não sobre o crédito de insumos do próprio bar/restaurante",
+      "A vedação recai igualmente sobre insumos e sobre a venda final, sem distinção",
+      "Não existe vedação de crédito em nenhuma ponta desse regime",
+      "A vedação só recai sobre insumos importados, nunca nacionais"
+    ],
+    "correctAnswer": "A vedação mencionada no material recai sobre os ADQUIRENTES da alimentação, não sobre o crédito de insumos do próprio bar/restaurante",
+    "explanation": "A vedação de crédito descrita no material atinge os ADQUIRENTES de alimentação e bebidas fornecidas por bares e restaurantes no regime específico — é uma limitação na ponta de quem compra a refeição, distinta da apuração de crédito de insumos do próprio estabelecimento.",
+    "pacciTip": "Repara de qual lado da mesa está a vedação: é quem COME que não credita, não quem cozinha!"
+  },
+  {
     "id": "REF-SR-108",
     "level": "analista_senior",
     "type": "fill_blank",
@@ -1898,6 +2282,22 @@
     "correctAnswer": "mais crítica",
     "explanation": "Com dados em tempo real, falhas em qualquer uma dessas áreas aparecem rapidamente para o Fisco, exigindo integração mais forte entre elas.",
     "pacciTip": "Time desalinhado erra rápido demais, amico!"
+  },
+  {
+    "id": "REF-SR-177",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte pergunta se a redução de 60% (saúde, educação, alimentos) e a redução de 0% (medicamentos, hortifruti) seguem a mesma lógica jurídica.",
+    "question": "As reduções de 60% (art. 128) e as de alíquota zero (art. 143) da LC 214/2025 estão previstas no MESMO dispositivo legal?",
+    "options": [
+      "Não, são artigos distintos da mesma lei — o art. 128 trata da redução de 60%, e o art. 143 da alíquota zero",
+      "Sim, ambas estão previstas exatamente no mesmo artigo",
+      "Não, uma está na Constituição e outra na Lei Complementar",
+      "Sim, mas em incisos diferentes do mesmo artigo 128"
+    ],
+    "correctAnswer": "Não, são artigos distintos da mesma lei — o art. 128 trata da redução de 60%, e o art. 143 da alíquota zero",
+    "explanation": "O art. 128 da LC 214/2025 trata da redução de 60% (educação, saúde, alimentos, etc.), enquanto o art. 143 trata da alíquota zero (medicamentos, hortifruti, dispositivos médicos, entre outros) — são dispositivos distintos, com listas próprias.",
+    "pacciTip": "Dois artigos, duas listas: 128 pra redução de 60%, 143 pra alíquota zero — não confunda os números!"
   },
   {
     "id": "REF-SR-151",
@@ -1980,6 +2380,22 @@
     "pacciTip": "Compliance forte também é vitrine para o mercado, amico!"
   },
   {
+    "id": "REF-SR-178",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa contesta uma autuação de 75% de multa, alegando que o erro foi um lapso de sistema sem qualquer intenção de sonegar.",
+    "question": "Essa alegação de ausência de intenção, por si só, tende a afastar a multa padrão de lançamento de ofício?",
+    "options": [
+      "Não, já que a responsabilidade por infrações do IBS independe da intenção do agente",
+      "Sim, sempre que houver boa-fé comprovada por laudo técnico",
+      "Sim, mas só se a empresa nunca tiver sido autuada antes",
+      "Não, mas a multa cai automaticamente para 10% nesses casos"
+    ],
+    "correctAnswer": "Não, já que a responsabilidade por infrações do IBS independe da intenção do agente",
+    "explanation": "Como a responsabilidade por infrações da legislação do IBS independe da intenção do agente ou do responsável, a mera alegação de ausência de dolo não afasta, por si só, a aplicação da multa padrão de lançamento de ofício.",
+    "pacciTip": "Alegar \"não foi por querer\" não basta — a responsabilidade objetiva não perdoa por falta de intenção!"
+  },
+  {
     "id": "REF-SR-117",
     "level": "analista_senior",
     "type": "text_input",
@@ -2028,6 +2444,22 @@
     "correctAnswer": "simbólica",
     "explanation": "Em 2026, a alíquota é simbólica, servindo apenas para testar os sistemas, sem representar a carga tributária final.",
     "pacciTip": "Alíquota de treino, efeito de treino, tesoro!"
+  },
+  {
+    "id": "REF-SR-179",
+    "level": "analista_senior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa avalia se pode reduzir a multa de lançamento de ofício optando por parcelar exatamente dentro do prazo de impugnação administrativa.",
+    "question": "Comparando as quatro reduções possíveis de multa (50/40/30/20%), qual delas está condicionada ao PARCELAMENTO dentro do prazo de impugnação (não ao pagamento integral)?",
+    "options": [
+      "A redução de 40%",
+      "A redução de 50%",
+      "A redução de 30%",
+      "A redução de 20%"
+    ],
+    "correctAnswer": "A redução de 40%",
+    "explanation": "A redução de 40% (inciso II do Art. 341-H) é a que se aplica ao PARCELAMENTO do crédito tributário dentro do prazo de impugnação administrativa — diferente da redução de 50%, que exige pagamento INTEGRAL dentro do mesmo prazo.",
+    "pacciTip": "Dentro do prazo de impugnação: pagar tudo dá 50%, parcelar dá 40% — a diferença está na forma de quitação!"
   },
   {
     "id": "REF-SR-122",

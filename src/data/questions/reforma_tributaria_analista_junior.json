@@ -74,6 +74,22 @@
     "pacciTip": "Divergência pequena hoje vira problema grande amanhã, capisce? Sempre investiga!"
   },
   {
+    "id": "REF-JR-153",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma clínica presta serviços de fisioterapia e quer entender melhor o grupo de redução de alíquotas em que se enquadra.",
+    "question": "Além da saúde, qual outro setor está no grupo de redução de 60% da alíquota do IBS, ao lado de educação e medicamentos?",
+    "options": [
+      "Atividades desportivas",
+      "Serviços bancários",
+      "Serviços de tecnologia da informação",
+      "Serviços de consultoria empresarial"
+    ],
+    "correctAnswer": "Atividades desportivas",
+    "explanation": "O art. 128 da LC 214/2025 lista, entre os beneficiados pela redução de 60%: educação, saúde, dispositivos médicos, medicamentos, alimentos, produções artísticas/culturais, comunicação institucional e atividades desportivas, entre outros.",
+    "pacciTip": "Esporte entra no mesmo grupo de redução da saúde e educação — um incentivo e tanto, tesoro!"
+  },
+  {
     "id": "REF-JR-006",
     "level": "analista_junior",
     "type": "true_false",
@@ -123,6 +139,22 @@
     ],
     "explanation": "A análise segue do diagnóstico (identificar) para a causa (cClassTrib/alíquota), depois o esclarecimento com o fornecedor e, por fim, a decisão registrada.",
     "pacciTip": "Detetive fiscal trabalha em ordem, tesoro! Identifica, investiga, pergunta, decide."
+  },
+  {
+    "id": "REF-JR-154",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma revista cultural produz conteúdo jornalístico e audiovisual nacional.",
+    "question": "Produções nacionais artísticas, culturais, jornalísticas e audiovisuais têm redução de quanto na alíquota do IBS?",
+    "options": [
+      "60%",
+      "30%",
+      "100% (isenção total)",
+      "0%, sem qualquer redução"
+    ],
+    "correctAnswer": "60%",
+    "explanation": "Produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais estão entre as operações com redução de 60% da alíquota do IBS, conforme o art. 128 da LC 214/2025.",
+    "pacciTip": "Cultura nacional tem tratamento favorecido, mas não é isenção total — 60% de redução, tesoro!"
   },
   {
     "id": "REF-JR-010",
@@ -220,6 +252,22 @@
     "pacciTip": "cClassTrib é sempre o primeiro suspeito da investigação, tesoro. Confere ele primeiro!"
   },
   {
+    "id": "REF-JR-155",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um instituto de pesquisa sem fins lucrativos presta serviços de inovação tecnológica para empresas parceiras.",
+    "question": "Serviços prestados por Instituição Científica, Tecnológica e de Inovação (ICT) sem fins lucrativos têm qual alíquota de IBS?",
+    "options": [
+      "Alíquota zero (0%)",
+      "Redução de 60%",
+      "Redução de 30%",
+      "Alíquota integral"
+    ],
+    "correctAnswer": "Alíquota zero (0%)",
+    "explanation": "Os serviços prestados por Instituição Científica, Tecnológica e de Inovação (ICT) sem fins lucrativos têm alíquota zero de IBS, conforme o art. 143 da LC 214/2025.",
+    "pacciTip": "Pesquisa e inovação sem fins lucrativos ganham o mesmo tratamento zero dos remédios e dispositivos médicos!"
+  },
+  {
     "id": "REF-JR-014",
     "level": "analista_junior",
     "type": "fill_blank",
@@ -286,6 +334,22 @@
     "correctAnswer": "Simples Nacional",
     "explanation": "O Simples Nacional é o regime simplificado voltado a micro e pequenas empresas, com tratamento próprio dentro do novo modelo tributário.",
     "pacciTip": "Simples Nacional, tesoro! Pequena empresa, regrinha própria."
+  },
+  {
+    "id": "REF-JR-156",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa altera a lista de produtos beneficiados por um regime diferenciado, incluindo novos itens.",
+    "question": "Quando entra em vigor a alteração (acréscimo, exclusão ou substituição) de operações beneficiadas por um regime diferenciado?",
+    "options": [
+      "Somente após os ajustes nas alíquotas de referência do IBS e da CBS para reequilibrar a arrecadação",
+      "Imediatamente, na data da publicação da alteração",
+      "Só no ano seguinte ao da publicação, sem outra condição",
+      "Nunca — regimes diferenciados são imutáveis"
+    ],
+    "correctAnswer": "Somente após os ajustes nas alíquotas de referência do IBS e da CBS para reequilibrar a arrecadação",
+    "explanation": "A alteração das operações beneficiadas pelos regimes diferenciados só entra em vigor após os ajustes nas alíquotas de referência do IBS e da CBS, pra reequilibrar a arrecadação perdida ou ganha com a mudança.",
+    "pacciTip": "Mexeu no benefício de um lado, precisa reequilibrar a alíquota de referência do outro, tesoro!"
   },
   {
     "id": "REF-JR-019",
@@ -356,6 +420,22 @@
     "pacciTip": "cClassTrib e alíquota são a dupla dinâmica da investigação, amico! Confere os dois."
   },
   {
+    "id": "REF-JR-157",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa já usufrui de um regime específico de tributação e agora também quer aplicar um regime diferenciado geral.",
+    "question": "É possível cumular um regime diferenciado com outro regime diferenciado, específico ou favorecido?",
+    "options": [
+      "Não, salvo quando expressamente previsto na Lei Complementar",
+      "Sim, sempre, sem restrição",
+      "Sim, mas só entre dois regimes diferenciados, nunca com regime específico",
+      "Não, em nenhuma hipótese, mesmo com previsão legal"
+    ],
+    "correctAnswer": "Não, salvo quando expressamente previsto na Lei Complementar",
+    "explanation": "Os regimes diferenciados não podem ser cumulados com outros regimes diferenciados, específicos ou favorecidos, exceto quando previsto expressamente na Lei Complementar.",
+    "pacciTip": "Regra geral: um benefício de cada vez — só acumula se a lei disser expressamente que pode, tesoro!"
+  },
+  {
     "id": "REF-JR-023",
     "level": "analista_junior",
     "type": "multiple_choice",
@@ -420,6 +500,22 @@
     "pacciTip": "Centavo também conta história, tesoro! Não julga o tamanho, investiga a causa."
   },
   {
+    "id": "REF-JR-158",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma sociedade de arquitetos presta serviços de projeto e quer confirmar se toda a receita da empresa tem o benefício de redução.",
+    "question": "A redução de 30% para profissões intelectuais se aplica a qual tipo de prestação de serviço?",
+    "options": [
+      "Apenas às prestações efetuadas por pessoa física, vinculadas à habilitação profissional",
+      "A qualquer receita da sociedade, mesmo sem relação com a profissão",
+      "Somente a serviços prestados no exterior",
+      "A qualquer prestação, desde que feita por pessoa jurídica"
+    ],
+    "correctAnswer": "Apenas às prestações efetuadas por pessoa física, vinculadas à habilitação profissional",
+    "explanation": "A redução das profissões intelectuais se aplica às prestações de serviços efetuadas por pessoa física, desde que os serviços estejam vinculados à habilitação profissional exigida.",
+    "pacciTip": "O benefício segue a pessoa habilitada e o serviço da sua área — não vale pra qualquer receita da empresa!"
+  },
+  {
     "id": "REF-JR-027",
     "level": "analista_junior",
     "type": "true_false",
@@ -468,6 +564,22 @@
     "correctAnswer": true,
     "explanation": "Sim. Quando o cálculo confere com o esperado, é um forte indício de que cClassTrib e alíquota foram aplicados corretamente na operação.",
     "pacciTip": "Bateu certinho? Ótimo sinal, tesoro! O cClassTrib provavelmente está feliz e correto."
+  },
+  {
+    "id": "REF-JR-159",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa em início de atividade solicita a opção pelo Simples Nacional pelo Portal Redesim.",
+    "question": "A partir de quando produz efeitos a opção pelo Simples Nacional de uma empresa em início de atividade, se deferida?",
+    "options": [
+      "Desde a data de inscrição no CNPJ",
+      "Só a partir do ano seguinte à abertura",
+      "Desde o primeiro faturamento da empresa",
+      "Só depois de um ano de atividade"
+    ],
+    "correctAnswer": "Desde a data de inscrição no CNPJ",
+    "explanation": "Para empresas em início de atividade, se a opção pelo Simples Nacional for deferida, ela produz efeitos desde a data de inscrição no CNPJ.",
+    "pacciTip": "Empresa nova, se aprovada, já nasce dentro do Simples desde o CNPJ — sem esperar nada, tesoro!"
   },
   {
     "id": "REF-JR-143",
@@ -559,6 +671,22 @@
     "pacciTip": "Ativo imobilizado exige passo a passo caprichado, amico! Não pula etapa."
   },
   {
+    "id": "REF-JR-160",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer transformar produtos agropecuários e aquícolas com um regime que adia o imposto e ainda reduz a alíquota futura.",
+    "question": "Insumos agropecuários e aquícolas sujeitos a diferimento com redução de alíquota estão previstos em qual anexo da LC 214/2025?",
+    "options": [
+      "Anexo IX",
+      "Anexo I",
+      "Anexo II",
+      "Anexo V"
+    ],
+    "correctAnswer": "Anexo IX",
+    "explanation": "Operações sujeitas a diferimento com insumos agropecuários e aquícolas estão previstas no Anexo IX da LC 214/2025, correspondendo ao cClassTrib 515.",
+    "pacciTip": "Cada anexo da lei cataloga um grupo de produtos — Anexo IX é o dos insumos agropecuários/aquícolas!"
+  },
+  {
     "id": "REF-JR-036",
     "level": "analista_junior",
     "type": "ordering",
@@ -636,6 +764,22 @@
     "correctAnswer": "parametrização",
     "explanation": "Classificações diferentes para o mesmo produto em operações equivalentes normalmente indicam erro de parametrização cadastral.",
     "pacciTip": "Parametrização errada é a vilã mais comum dessa história, tesoro!"
+  },
+  {
+    "id": "REF-JR-161",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um veículo com IPI ainda incidente, mesmo depois da Reforma, está sendo vendido por uma concessionária da Zona Franca de Manaus.",
+    "question": "Por quanto tempo o IPI será mantido para os produtos ainda alcançados por ele durante a transição da Reforma?",
+    "options": [
+      "Pelo mesmo prazo da transição da Zona Franca de Manaus (ZFM)",
+      "Para sempre, sem prazo de extinção",
+      "Só até o fim de 2026",
+      "Não há qualquer manutenção do IPI"
+    ],
+    "correctAnswer": "Pelo mesmo prazo da transição da Zona Franca de Manaus (ZFM)",
+    "explanation": "O IPI será mantido para cerca de 5% dos produtos hoje alcançados e será extinto no mesmo prazo da transição da Zona Franca de Manaus (ZFM).",
+    "pacciTip": "IPI não desaparece de uma vez — segue o mesmo cronograma especial da ZFM, tesoro!"
   },
   {
     "id": "REF-JR-040",
@@ -718,6 +862,22 @@
     "pacciTip": "Mesma operação, mesmo cClassTrib. Simples assim, tesoro!"
   },
   {
+    "id": "REF-JR-162",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma incorporadora vende, no mesmo empreendimento, um imóvel residencial novo e um lote residencial separado.",
+    "question": "Comparando os dois redutores de ajuste, o valor dedutível na venda de um imóvel novo é maior ou menor que o de um lote residencial?",
+    "options": [
+      "Maior — R$ 100.000,00 contra R$ 30.000,00 do lote",
+      "Menor — R$ 30.000,00 contra R$ 100.000,00 do lote",
+      "Os dois valores são idênticos",
+      "Não existe redutor para nenhum dos dois casos"
+    ],
+    "correctAnswer": "Maior — R$ 100.000,00 contra R$ 30.000,00 do lote",
+    "explanation": "O redutor social é de até R$ 100.000,00 por imóvel residencial novo, e de até R$ 30.000,00 por lote residencial — o benefício do imóvel construído é maior que o do lote vazio.",
+    "pacciTip": "Imóvel pronto tem redutor mais generoso que lote vazio — mais de 3x maior, tesoro!"
+  },
+  {
     "id": "REF-JR-044",
     "level": "analista_junior",
     "type": "fill_blank",
@@ -772,6 +932,22 @@
     "correctAnswer": "parametrização",
     "explanation": "Erros de parametrização cadastral são a causa mais comum de divergência de classificação entre notas de operações equivalentes.",
     "pacciTip": "Parametrização, sempre ela, amico! A vilã mais frequente."
+  },
+  {
+    "id": "REF-JR-163",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma trading precisa decidir entre emitir a Duimp ou a DIR para uma importação específica.",
+    "question": "A escolha entre Duimp (Declaração Única de Importação) e DIR (Declaração de Importação de Remessa) depende de quê?",
+    "options": [
+      "Do caso concreto da importação, conforme previsto na regulamentação",
+      "Da nacionalidade do fornecedor estrangeiro",
+      "Do valor em reais convertido pela cotação do dia",
+      "Da vontade exclusiva do importador, sem critério legal"
+    ],
+    "correctAnswer": "Do caso concreto da importação, conforme previsto na regulamentação",
+    "explanation": "Na importação de bens materiais, é exigida a emissão de Duimp ou DIR, conforme o caso — a escolha entre uma ou outra segue critérios definidos na regulamentação e no cronograma de obrigatoriedade.",
+    "pacciTip": "Duimp e DIR não são intercambiáveis à vontade — o caso concreto de importação define qual se aplica!"
   },
   {
     "id": "REF-JR-049",
@@ -842,6 +1018,22 @@
     "pacciTip": "A resposta pro motorista está na classificação da corrida, amico! Não no trânsito."
   },
   {
+    "id": "REF-JR-164",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "A Receita Federal divulga um cronograma prevendo quando a Duimp se torna obrigatória para todas as importações.",
+    "question": "A partir de quando a Duimp (Declaração Única de Importação) se torna obrigatória, segundo o cronograma do material?",
+    "options": [
+      "A partir de 1º de janeiro de um ano determinado no cronograma oficial",
+      "Imediatamente após a promulgação da EC 132/2023",
+      "Só a partir de 2033, junto com o fim da transição",
+      "Nunca — a Duimp é sempre facultativa"
+    ],
+    "correctAnswer": "A partir de 1º de janeiro de um ano determinado no cronograma oficial",
+    "explanation": "A Duimp será obrigatória a partir de 1º de janeiro de um ano específico definido no cronograma oficial — e, na importação de bens materiais, o prazo de obrigatoriedade acompanha o da Duimp.",
+    "pacciTip": "Assim como os outros documentos fiscais, a Duimp tem um cronograma escalonado de entrada em vigor!"
+  },
+  {
     "id": "REF-JR-053",
     "level": "analista_junior",
     "type": "multiple_choice",
@@ -906,6 +1098,22 @@
     "pacciTip": "Pacote misto pede cálculo separado por item, amico! Não dá pra jogar tudo no mesmo balaio."
   },
   {
+    "id": "REF-JR-165",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa vende diretamente para o governo estadual e quer entender a destinação da arrecadação nesse tipo de operação.",
+    "question": "O tratamento dado às Compras Governamentais tem exceções previstas para os primeiros anos de vigência da Reforma?",
+    "options": [
+      "Sim, há regras de transição específicas que não se aplicam nos primeiros anos",
+      "Não, o tratamento vale integralmente desde o primeiro dia da Reforma",
+      "Sim, mas só para compras de até R$ 1.000,00",
+      "Não, esse tema não tem qualquer regra de transição"
+    ],
+    "correctAnswer": "Sim, há regras de transição específicas que não se aplicam nos primeiros anos",
+    "explanation": "O tratamento previsto para compras governamentais não se aplica de 1º de janeiro a 31 de dezembro de 2026, e a destinação da CBS nas aquisições estaduais/municipais segue proporções crescentes entre 2029 e 2032.",
+    "pacciTip": "Compras governamentais têm uma \"rampa de acesso\" própria, com regras de transição escalonadas!"
+  },
+  {
     "id": "REF-JR-057",
     "level": "analista_junior",
     "type": "true_false",
@@ -954,6 +1162,22 @@
     "correctAnswer": false,
     "explanation": "Não elimina totalmente. O split payment reduz o risco ao automatizar a retenção, mas erros de parametrização ainda podem gerar recolhimento incorreto.",
     "pacciTip": "Reduz o risco, sim, mas não apaga ele por completo, tesoro!"
+  },
+  {
+    "id": "REF-JR-166",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma imobiliária vende um apartamento usado, não classificado como \"novo\", para um comprador pessoa física.",
+    "question": "O redutor de ajuste de R$ 100.000,00 se aplica a qualquer venda de imóvel residencial, mesmo usado?",
+    "options": [
+      "Não, esse redutor específico se aplica a imóvel residencial NOVO",
+      "Sim, vale para qualquer imóvel residencial, novo ou usado",
+      "Sim, mas só imóveis com mais de 20 anos",
+      "Não, esse redutor não existe para nenhum tipo de imóvel"
+    ],
+    "correctAnswer": "Não, esse redutor específico se aplica a imóvel residencial NOVO",
+    "explanation": "O redutor social de até R$ 100.000,00 se aplica especificamente à venda de bem imóvel residencial NOVO, realizada por contribuinte sujeito ao regime regular do IBS e da CBS.",
+    "pacciTip": "Repara no detalhe: é redutor pra imóvel NOVO, não pra qualquer imóvel usado no mercado, tesoro!"
   },
   {
     "id": "REF-JR-146",
@@ -1045,6 +1269,22 @@
     "pacciTip": "Consolida, padroniza, compara, escala. Fechamento com múltiplos meios de pagamento pede ordem, tesoro!"
   },
   {
+    "id": "REF-JR-167",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um consórcio de construção decide não optar pelo regime regular do IBS e da CBS.",
+    "question": "Nesse caso, o consórcio tem alguma obrigação de cadastro no CNPJ?",
+    "options": [
+      "Não, só é obrigado ao cadastro se exercer a opção pelo regime regular",
+      "Sim, é sempre obrigado, independente da opção de regime",
+      "Sim, mas só se tiver mais de 3 empresas participantes",
+      "Não, consórcios são sempre dispensados de CNPJ"
+    ],
+    "correctAnswer": "Não, só é obrigado ao cadastro se exercer a opção pelo regime regular",
+    "explanation": "O consórcio é obrigado ao cadastro no CNPJ apenas caso exerça a opção pelo regime regular da CBS e do IBS — se não optar, não há essa obrigatoriedade específica.",
+    "pacciTip": "Consórcio só \"ganha\" a obrigação do CNPJ se escolher o regime regular — sem essa opção, fica de fora!"
+  },
+  {
     "id": "REF-JR-066",
     "level": "analista_junior",
     "type": "ordering",
@@ -1122,6 +1362,22 @@
     "correctAnswer": "alíquota",
     "explanation": "A comparação com o valor calculado pela alíquota vigente é o ponto de partida para identificar a origem da diferença.",
     "pacciTip": "Alíquota é a régua de comparação, tesoro!"
+  },
+  {
+    "id": "REF-JR-168",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma seguradora processa prêmios de seguro e precisa entender o regime tributário aplicável ao setor financeiro.",
+    "question": "O regime específico de serviços financeiros abrange, entre outras receitas, qual tipo de rendimento citado no material?",
+    "options": [
+      "Rendimentos financeiros",
+      "Vendas de produtos agropecuários",
+      "Locação de bens móveis",
+      "Serviços de transporte de carga"
+    ],
+    "correctAnswer": "Rendimentos financeiros",
+    "explanation": "O regime específico de serviços financeiros trata da tributação de rendimentos financeiros, que têm tratamento tributário diferenciado em relação às regras gerais do IBS e da CBS.",
+    "pacciTip": "Rendimento financeiro tem regramento específico — não segue a regra geral de qualquer outra operação!"
   },
   {
     "id": "REF-JR-070",
@@ -1204,6 +1460,22 @@
     "pacciTip": "Documenta sempre, mesmo quando está tudo certo, tesoro!"
   },
   {
+    "id": "REF-JR-169",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber se apenas bares e restaurantes físicos, com salão de atendimento, entram no regime específico.",
+    "question": "O regime específico de bares e restaurantes se restringe a estabelecimentos com salão físico de atendimento?",
+    "options": [
+      "Não, o material menciona expressamente que inclui lanchonetes também",
+      "Sim, food trucks e lanchonetes ficam sempre de fora",
+      "Sim, apenas restaurantes com mais de 50 mesas",
+      "Não, apenas serviços de delivery puro entram no regime"
+    ],
+    "correctAnswer": "Não, o material menciona expressamente que inclui lanchonetes também",
+    "explanation": "As operações de fornecimento de alimentação por bares e restaurantes, inclusive lanchonetes, ficam sujeitas ao regime específico — não se restringe a um formato específico de estabelecimento.",
+    "pacciTip": "Lanchonete entra no mesmo balaio de bares e restaurantes — o regime não é só pra \"restaurante chique\"!"
+  },
+  {
     "id": "REF-JR-074",
     "level": "analista_junior",
     "type": "fill_blank",
@@ -1258,6 +1530,22 @@
     "correctAnswer": "cClassTrib",
     "explanation": "Assim como nas notas fiscais, o cClassTrib usado na operação é o principal ponto de checagem quando o valor retido diverge do esperado.",
     "pacciTip": "cClassTrib aparece até no split payment, amico! Ele está em todo lugar."
+  },
+  {
+    "id": "REF-JR-170",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa avalia se pode aplicar tanto o regime específico de bens imóveis quanto um crédito presumido de outro programa ao mesmo tempo.",
+    "question": "Regimes específicos, de forma geral, seguem a mesma regra de não cumulação com outros regimes diferenciados?",
+    "options": [
+      "Sim, a regra de não cumulação (salvo previsão expressa em lei) é comum aos regimes diferenciados e específicos",
+      "Não, regimes específicos podem sempre ser somados livremente a qualquer outro benefício",
+      "Sim, mas só entre dois regimes específicos, nunca com diferenciados",
+      "Não, essa regra só vale para o regime de bares e restaurantes"
+    ],
+    "correctAnswer": "Sim, a regra de não cumulação (salvo previsão expressa em lei) é comum aos regimes diferenciados e específicos",
+    "explanation": "A regra de que os regimes diferenciados não podem ser cumulados com outros regimes diferenciados, específicos ou favorecidos (salvo previsão expressa) é uma regra geral que orienta a interpretação de vários regimes na Reforma.",
+    "pacciTip": "Regra de ouro: benefício não empilha com benefício, a menos que a lei diga expressamente que pode!"
   },
   {
     "id": "REF-JR-079",
@@ -1328,6 +1616,22 @@
     "pacciTip": "Regime regular, crédito maior pro comprador, amico! Vale a pena comparar."
   },
   {
+    "id": "REF-JR-171",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma pessoa física vende um terreno que possuía há anos, sem qualquer outra operação imobiliária recorrente.",
+    "question": "Uma única venda esporádica de imóvel por pessoa física, sem habitualidade, tende a caracterizar contribuinte do regime regular?",
+    "options": [
+      "Não necessariamente — o material prevê critérios de habitualidade/volume para o enquadramento",
+      "Sim, qualquer venda de imóvel por pessoa física já torna ela contribuinte",
+      "Sim, mas só se o valor for maior que R$ 10 milhões",
+      "Não, pessoa física nunca pode ser contribuinte em nenhuma hipótese"
+    ],
+    "correctAnswer": "Não necessariamente — o material prevê critérios de habitualidade/volume para o enquadramento",
+    "explanation": "As pessoas físicas que realizam operações com imóveis podem ser consideradas contribuintes do regime regular, mas há critérios específicos de habitualidade e volume que definem o enquadramento — não é qualquer operação isolada que gera esse efeito.",
+    "pacciTip": "Uma venda isolada não necessariamente vira contribuinte — tem critério de volume/habitualidade envolvido!"
+  },
+  {
     "id": "REF-JR-083",
     "level": "analista_junior",
     "type": "multiple_choice",
@@ -1392,6 +1696,22 @@
     "pacciTip": "Cada fornecedor pequeno pode ter uma regrinha diferente, amico! Confere um por um."
   },
   {
+    "id": "REF-JR-172",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa exportadora tem parte de sua produção com destino aos programas oficiais de incentivo à cidadania fiscal.",
+    "question": "Os Programas de Incentivo à Cidadania Fiscal têm relação direta com incentivar qual comportamento do consumidor final?",
+    "options": [
+      "Exigir a emissão de documentos fiscais nas compras",
+      "Comprar exclusivamente produtos importados",
+      "Reduzir o consumo de produtos com Imposto Seletivo",
+      "Optar sempre pelo pagamento via boleto bancário"
+    ],
+    "correctAnswer": "Exigir a emissão de documentos fiscais nas compras",
+    "explanation": "Os Programas de Incentivo à Cidadania Fiscal, previstos no art. 61 da Lcp 214/2025, estimulam os consumidores a exigirem a emissão de documentos fiscais em suas compras, com informações de pagamento podendo identificar o adquirente.",
+    "pacciTip": "O objetivo é simples: fazer o consumidor pedir a nota — e assim melhorar o controle fiscal geral!"
+  },
+  {
     "id": "REF-JR-087",
     "level": "analista_junior",
     "type": "true_false",
@@ -1440,6 +1760,22 @@
     "correctAnswer": false,
     "explanation": "Não é irrelevante. O regime de apuração de cada fornecedor impacta diretamente o crédito aproveitável, sendo informação central para a decisão.",
     "pacciTip": "Irrelevante nada, tesoro! É justamente o dado que muda tudo."
+  },
+  {
+    "id": "REF-JR-173",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de tecnologia contrata serviços de nuvem de um fornecedor internacional, pagando em dólar via contrato de câmbio.",
+    "question": "Qual documento comprova, entre outros, a importação de um serviço contratado no exterior?",
+    "options": [
+      "O documento fiscal com identificação do contrato de câmbio e da fatura de serviços",
+      "Apenas o comprovante de conversão de moeda do banco",
+      "Uma simples troca de e-mails com o fornecedor",
+      "O extrato do cartão de crédito corporativo"
+    ],
+    "correctAnswer": "O documento fiscal com identificação do contrato de câmbio e da fatura de serviços",
+    "explanation": "O ato conjunto da RFB e do CGIBS pode exigir a emissão de documento fiscal para acobertar a importação de serviço ou bem imaterial, contendo a identificação do contrato de câmbio e da fatura de serviços (ou documento equivalente).",
+    "pacciTip": "Câmbio + fatura de serviço = a dupla que comprova a importação de serviço perante o Fisco!"
   },
   {
     "id": "REF-JR-092",
@@ -1531,6 +1867,22 @@
     "pacciTip": "Evento grande, apuração organizada, tesoro! Passo a passo sem pular nada."
   },
   {
+    "id": "REF-JR-174",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de fast-food avalia expandir para um modelo de \"dark kitchen\" que só vende por aplicativos de entrega.",
+    "question": "Os valores retidos por uma plataforma digital de entrega, sem repasse ao restaurante, entram na base de cálculo do restaurante?",
+    "options": [
+      "Não, ficam excluídos da base de cálculo do restaurante",
+      "Sim, sempre entram integralmente",
+      "Sim, mas com alíquota reduzida",
+      "Não, mas apenas se o restaurante for uma \"dark kitchen\""
+    ],
+    "correctAnswer": "Não, ficam excluídos da base de cálculo do restaurante",
+    "explanation": "Os valores não repassados aos bares e restaurantes pelo serviço de entrega e intermediação de pedidos por plataforma digital ficam excluídos da base de cálculo do restaurante.",
+    "pacciTip": "A parte que fica com o app de entrega não entra na base de cálculo de quem realmente cozinhou!"
+  },
+  {
     "id": "REF-JR-096",
     "level": "analista_junior",
     "type": "ordering",
@@ -1608,6 +1960,22 @@
     "correctAnswer": "específico",
     "explanation": "O Simples Nacional participa do IBS/CBS por meio de um regime específico e simplificado, com a possibilidade de opção pelo regime regular.",
     "pacciTip": "Regime específico é o padrão do Simples, tesoro! Mas pode mudar se o fornecedor quiser."
+  },
+  {
+    "id": "REF-JR-175",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um restaurante recebe uma gorjeta de 18% sobre o valor da conta, acima do limite normalmente admitido pra exclusão da base de cálculo.",
+    "question": "Se a gorjeta ultrapassar o limite de 15% do valor total do fornecimento, o que acontece com o valor excedente, em regra?",
+    "options": [
+      "O excedente não se beneficia da exclusão da base de cálculo",
+      "Todo o valor da gorjeta passa a ser isento, mesmo o excedente",
+      "O restaurante é multado automaticamente",
+      "A venda inteira fica isenta de IBS e CBS"
+    ],
+    "correctAnswer": "O excedente não se beneficia da exclusão da base de cálculo",
+    "explanation": "A gorjeta fica excluída da base de cálculo desde que repassada integralmente ao empregado E que seu valor não exceda 15% do valor total do fornecimento — o que ultrapassar esse limite não tem esse mesmo benefício.",
+    "pacciTip": "Passou de 15%? Só a faixa dentro do limite tem o benefício de exclusão da base de cálculo!"
   },
   {
     "id": "REF-JR-100",
@@ -1690,6 +2058,22 @@
     "pacciTip": "Cada fornecedor escreve sua própria regra, tesoro!"
   },
   {
+    "id": "REF-JR-176",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de tecnologia trabalha com segurança da informação e segurança cibernética para grandes clientes corporativos.",
+    "question": "Bens e serviços relacionados à segurança da informação e à segurança cibernética têm que tipo de tratamento na Reforma?",
+    "options": [
+      "Redução de 60% da alíquota do IBS",
+      "Isenção total",
+      "Alíquota zero",
+      "Nenhum tratamento diferenciado"
+    ],
+    "correctAnswer": "Redução de 60% da alíquota do IBS",
+    "explanation": "Bens e serviços relacionados à soberania e segurança nacional, segurança da informação e segurança cibernética estão no grupo de redução de 60% da alíquota do IBS, junto com saúde, educação e outros itens do art. 128 da LC 214/2025.",
+    "pacciTip": "Segurança cibernética entrou na lista de setores estratégicos com 60% de redução, tesoro!"
+  },
+  {
     "id": "REF-JR-104",
     "level": "analista_junior",
     "type": "fill_blank",
@@ -1744,6 +2128,22 @@
     "correctAnswer": "Simples Nacional",
     "explanation": "O Simples Nacional é o regime tributário voltado a micro e pequenas empresas, com tratamento próprio dentro do novo modelo.",
     "pacciTip": "Simples Nacional, o nome que não pode faltar, amico!"
+  },
+  {
+    "id": "REF-JR-177",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Um taxista profissional compra um carro zero-quilômetro para usar exclusivamente no trabalho de transporte remunerado de passageiros.",
+    "question": "A compra desse automóvel por motorista profissional de táxi tem alíquota de IBS reduzida a zero?",
+    "options": [
+      "Sim, desde que destinado à utilização na categoria de aluguel (táxi)",
+      "Não, só pessoas com deficiência têm esse benefício",
+      "Sim, mas só em automóveis usados, nunca zero-quilômetro",
+      "Não, motoristas de aplicativo e táxi nunca têm esse benefício"
+    ],
+    "correctAnswer": "Sim, desde que destinado à utilização na categoria de aluguel (táxi)",
+    "explanation": "Automóveis de passageiros adquiridos por motoristas profissionais que destinem o veículo à utilização na categoria de aluguel (táxi) têm alíquota zero de IBS, ao lado do benefício para pessoas com deficiência.",
+    "pacciTip": "Táxi e mobilidade acessível estão no mesmo grupo de alíquota zero na compra do veículo, tesoro!"
   },
   {
     "id": "REF-JR-109",
@@ -1814,6 +2214,22 @@
     "pacciTip": "cIndOp é a \"bússola\" que aponta onde o imposto nasce pra cada tipo de operação, capito?"
   },
   {
+    "id": "REF-JR-178",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de eventos organiza feiras e congressos empresariais em diferentes estados do país.",
+    "question": "No serviço de planejamento, organização e administração de feiras, exposições e congêneres, qual é o local do fornecimento considerado?",
+    "options": [
+      "O local do evento a que se refere o serviço",
+      "O domicílio principal do organizador do evento",
+      "A capital do estado onde a empresa organizadora está sediada",
+      "O local de residência do maior número de participantes"
+    ],
+    "correctAnswer": "O local do evento a que se refere o serviço",
+    "explanation": "No serviço de planejamento, organização e administração de feiras, exposições, congressos, espetáculos e congêneres, o local do fornecimento a ser identificado no documento fiscal é o local do evento.",
+    "pacciTip": "Evento define o próprio local do imposto — onde a feira acontece, é lá que o IBS \"mora\"!"
+  },
+  {
     "id": "REF-JR-113",
     "level": "analista_junior",
     "type": "multiple_choice",
@@ -1878,6 +2294,22 @@
     "pacciTip": "Corretagem segue a regra da casa financeira, amico! Não é venda de loja."
   },
   {
+    "id": "REF-JR-179",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa presta serviço de exploração de uma rodovia que atravessa mais de um estado.",
+    "question": "No serviço de exploração de via que atravessa mais de um ente federativo, como é considerado o local da prestação?",
+    "options": [
+      "Proporcional ao território de cada ente tributante ao longo da via explorada",
+      "Sempre no estado de origem da rodovia",
+      "Sempre no estado onde fica a sede da concessionária",
+      "No estado com a maior população ao longo do trajeto"
+    ],
+    "correctAnswer": "Proporcional ao território de cada ente tributante ao longo da via explorada",
+    "explanation": "No serviço de exploração de via, o local da prestação corresponde à extensão da via explorada, proporcionalmente ao território dos entes tributantes envolvidos.",
+    "pacciTip": "Rodovia que passa por vários estados reparte o imposto proporcionalmente à extensão em cada um!"
+  },
+  {
     "id": "REF-JR-117",
     "level": "analista_junior",
     "type": "true_false",
@@ -1926,6 +2358,22 @@
     "correctAnswer": false,
     "explanation": "Não pode. Cada item deve ser tratado conforme seu próprio regime tributário; apurar tudo em bloco gera cálculo incorreto do crédito.",
     "pacciTip": "Bloco único é receita para erro, tesoro! Segrega sempre."
+  },
+  {
+    "id": "REF-JR-180",
+    "level": "analista_junior",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de gás canalizado fornece o produto para consumo direto de uma indústria.",
+    "question": "Nas operações de abastecimento de água, gás canalizado e energia elétrica destinadas a consumo, qual é o local do fornecimento?",
+    "options": [
+      "O local da entrega ou disponibilização",
+      "Sempre a sede da distribuidora",
+      "O local de nascimento da matéria-prima",
+      "A capital do estado do consumidor"
+    ],
+    "correctAnswer": "O local da entrega ou disponibilização",
+    "explanation": "Nas operações de abastecimento de água, gás canalizado e energia elétrica destinadas a consumo, o local do fornecimento é o local da entrega ou disponibilização do produto.",
+    "pacciTip": "Consumo de verdade tem local simples: onde o produto é entregue ou disponibilizado ao cliente!"
   },
   {
     "id": "REF-JR-122",

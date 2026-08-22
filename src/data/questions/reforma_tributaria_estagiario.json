@@ -74,6 +74,22 @@
     "pacciTip": "Ei, corrige o amico! IBS engole ICMS E ISS junto. Nenhum dos dois fica de fora, capisce?"
   },
   {
+    "id": "REF-EST-153",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um colega comenta que alimentos básicos como arroz e feijão não devem ficar mais caros com a Reforma.",
+    "question": "Qual é a alíquota do IBS e da CBS para os produtos da Cesta Básica Nacional de Alimentos?",
+    "options": [
+      "Alíquota zero (0%)",
+      "Alíquota reduzida em 30%",
+      "Alíquota integral, sem redução",
+      "Alíquota de 10%, fixa"
+    ],
+    "correctAnswer": "Alíquota zero (0%)",
+    "explanation": "A Cesta Básica Nacional de Alimentos tem alíquota zero de IBS e CBS, buscando garantir alimentação saudável e nutricionalmente adequada, respeitando a diversidade regional do país.",
+    "pacciTip": "Cesta básica é zero, tesoro — nem um pontinho percentual de imposto em cima dela!"
+  },
+  {
     "id": "REF-EST-006",
     "level": "estagiario",
     "type": "true_false",
@@ -123,6 +139,22 @@
     ],
     "explanation": "A Reforma começou com a EC 132/2023, seguiu para uma fase de testes, depois a extinção gradual dos tributos antigos, até a vigência plena do novo modelo.",
     "pacciTip": "Segue a linha do tempo como uma receita de nonna: primeiro a lei, depois o teste, depois a troca, e no final... pronto!"
+  },
+  {
+    "id": "REF-EST-154",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente de baixa renda ouve falar que vai \"receber de volta\" parte do imposto que pagou em algumas compras.",
+    "question": "Como se chama o mecanismo que devolve parte do IBS e da CBS especificamente para pessoas de baixa renda?",
+    "options": [
+      "Cashback",
+      "Desconto Fiscal",
+      "Restituição Universal",
+      "Crédito Presumido Social"
+    ],
+    "correctAnswer": "Cashback",
+    "explanation": "O cashback é uma medida que beneficia especificamente as pessoas de baixa renda, ao contrário de isenções ou alíquota zero, que beneficiam ricos e pobres indiscriminadamente.",
+    "pacciTip": "Cashback é \"dinheiro de volta\" — e mirado só em quem mais precisa, capito?"
   },
   {
     "id": "REF-EST-010",
@@ -218,6 +250,22 @@
     "pacciTip": "Simplificare é a palavra mágica, caro estagiário! Menos tributo, menos dor de cabeça."
   },
   {
+    "id": "REF-EST-155",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma mercadoria foi entregue ao cliente, mas ele decidiu devolvê-la à loja dias depois.",
+    "question": "Como se chama o desfazimento de uma operação que já ocorreu DEPOIS da mercadoria ter sido entregue?",
+    "options": [
+      "Devolução",
+      "Cancelamento",
+      "Correção do débito",
+      "Estorno automático"
+    ],
+    "correctAnswer": "Devolução",
+    "explanation": "Devolução é o desfazimento da operação após o fornecimento — a mercadoria já foi entregue, mas o adquirente a devolve total ou parcialmente. Já o cancelamento ocorre antes da entrega.",
+    "pacciTip": "Chegou e voltou: devolução. Nem chegou a sair: cancelamento. Simples de guardar!"
+  },
+  {
     "id": "REF-EST-014",
     "level": "estagiario",
     "type": "fill_blank",
@@ -284,6 +332,22 @@
     "correctAnswer": "CBS",
     "explanation": "CBS = Contribuição sobre Bens e Serviços, o novo tributo federal.",
     "pacciTip": "C de CBS, C de federal com a União. Não confunde com o IBS, tesoro!"
+  },
+  {
+    "id": "REF-EST-156",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma NF-e foi emitida, mas a mercadoria nunca chegou a ser entregue ao cliente, que desistiu da compra.",
+    "question": "Como se chama esse desfazimento da operação, que ocorre ANTES da entrega da mercadoria?",
+    "options": [
+      "Cancelamento",
+      "Devolução",
+      "Correção do débito",
+      "Imunidade"
+    ],
+    "correctAnswer": "Cancelamento",
+    "explanation": "Cancelamento é o desfazimento da operação antes do fornecimento — a NF-e foi emitida, mas a mercadoria não chegou a ser entregue.",
+    "pacciTip": "Cancelamento é \"desistiu antes de sair da loja\". Devolução é \"voltou depois de chegar em casa\"!"
   },
   {
     "id": "REF-EST-019",
@@ -354,6 +418,22 @@
     "pacciTip": "Guerra sem vencedor, piccolo! Todo mundo perde arrecadação nessa disputa. Por isso a reforma quer acabar com ela."
   },
   {
+    "id": "REF-EST-157",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um contador percebe que colocou um valor errado de IBS destacado numa nota fiscal já emitida.",
+    "question": "Como se chama o ajuste do valor do IBS/CBS destacado em documento fiscal, quando há erro no valor informado?",
+    "options": [
+      "Correção do débito",
+      "Devolução",
+      "Cancelamento",
+      "Imunidade"
+    ],
+    "correctAnswer": "Correção do débito",
+    "explanation": "Correção do débito é o ajuste do valor do IBS/CBS destacado em documento fiscal quando há erro no valor informado — diferente de devolução e cancelamento, que tratam do desfazimento da operação em si.",
+    "pacciTip": "Errou o valor? Não desfaz a venda, só corrige o débito. É outra categoria, tesoro!"
+  },
+  {
     "id": "REF-EST-023",
     "level": "estagiario",
     "type": "multiple_choice",
@@ -416,6 +496,22 @@
     "correctAnswer": "Simplificar o sistema, reduzindo a quantidade de tributos sobre o consumo",
     "explanation": "A reforma busca simplificar o sistema tributário sobre o consumo, reduzindo a quantidade de tributos e unificando regras hoje divergentes entre estados e municípios.",
     "pacciTip": "Menos tributo, menos confusão na colheita e na nota fiscal! Semplificare é a palavra da vez."
+  },
+  {
+    "id": "REF-EST-158",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma editora vende livros e jornais, e o contador quer saber se essas vendas pagam IBS e CBS.",
+    "question": "Livros, jornais, periódicos e o papel destinado à sua impressão são tributados pelo IBS e pela CBS?",
+    "options": [
+      "Não, são imunes, e essa imunidade ainda garante a manutenção dos créditos",
+      "Sim, são tributados normalmente como qualquer outro produto",
+      "Só jornais são imunes, livros não",
+      "Só livros digitais são imunes"
+    ],
+    "correctAnswer": "Não, são imunes, e essa imunidade ainda garante a manutenção dos créditos",
+    "explanation": "As operações com livros, jornais, periódicos e o papel destinado à sua impressão são imunes ao IBS e à CBS — e essa imunidade garante a manutenção dos créditos das aquisições relacionadas.",
+    "pacciTip": "Cultura e informação são imunes, tesoro — e ainda por cima mantêm o crédito, um \"combo\" e tanto!"
   },
   {
     "id": "REF-EST-027",
@@ -498,6 +594,22 @@
     "pacciTip": "Um dinheirinho de volta pra quem mais precisa, tesoro! É a reforma cuidando de quem tem menos."
   },
   {
+    "id": "REF-EST-159",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma fábrica brasileira vende seus produtos para uma empresa nos Estados Unidos.",
+    "question": "Uma exportação de bens para o exterior é tributada pelo IBS e pela CBS?",
+    "options": [
+      "Não, exportações são imunes ao IBS e à CBS",
+      "Sim, com alíquota reduzida pela metade",
+      "Sim, integralmente, como qualquer venda interna",
+      "Só se o comprador estrangeiro for pessoa física"
+    ],
+    "correctAnswer": "Não, exportações são imunes ao IBS e à CBS",
+    "explanation": "Exportações de bens e serviços para o exterior são imunes à CBS e ao IBS — os exportadores não pagam esses impostos na venda e ainda podem usar créditos das compras internas relacionadas.",
+    "pacciTip": "Brasil não exporta imposto, tesoro! Só o produto sai, o IBS e a CBS ficam por aqui."
+  },
+  {
     "id": "REF-EST-143",
     "level": "estagiario",
     "type": "multiple_choice",
@@ -578,6 +690,22 @@
     "pacciTip": "Um brinde com moderação, ragazzo! O Fisco também acha que álcool merece um imposto a mais."
   },
   {
+    "id": "REF-EST-160",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma pequena empresa optante pelo Simples Nacional está decidindo se muda de regime a partir do próximo ano.",
+    "question": "Quando as empresas do Simples Nacional devem formalizar a opção de regime tributário para valer no ano seguinte?",
+    "options": [
+      "Entre 1º e 30 de setembro",
+      "Entre 1º e 31 de janeiro",
+      "A qualquer momento do ano",
+      "Só no aniversário de abertura da empresa"
+    ],
+    "correctAnswer": "Entre 1º e 30 de setembro",
+    "explanation": "A opção de regime deve ser formalizada em setembro, e produz efeitos a partir de 1º de janeiro do ano seguinte — assim a empresa já começa o ano sabendo qual regime vai aplicar.",
+    "pacciTip": "Setembro é o mês da escolha, tesoro — decide com calma antes do próximo ano começar!"
+  },
+  {
     "id": "REF-EST-036",
     "level": "estagiario",
     "type": "multiple_choice",
@@ -640,6 +768,22 @@
     "correctAnswer": "Impacto negativo à saúde ou ao meio ambiente",
     "explanation": "O critério central do Imposto Seletivo é justamente mirar produtos e atividades com impacto negativo à saúde das pessoas ou ao meio ambiente.",
     "pacciTip": "Poluiu, pagou mais caro! É a lógica do imposto do pecado, generale."
+  },
+  {
+    "id": "REF-EST-161",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um escritório de advocacia presta serviços jurídicos e quer saber se tem algum benefício fiscal na Reforma.",
+    "question": "Profissões intelectuais regulamentadas (como advogados e contadores) podem ter que tipo de benefício na alíquota?",
+    "options": [
+      "Redução de 30% da alíquota de referência",
+      "Isenção total",
+      "Redução de 60%, igual à saúde",
+      "Nenhum benefício específico"
+    ],
+    "correctAnswer": "Redução de 30% da alíquota de referência",
+    "explanation": "Profissões intelectuais de natureza científica, literária ou artística, submetidas à fiscalização por conselho profissional, têm redução de 30% da alíquota de referência (estimada em cerca de 18,55%).",
+    "pacciTip": "Advogado, contador, médico veterinário... profissão regulamentada por conselho ganha 30% de desconto na alíquota!"
   },
   {
     "id": "REF-EST-040",
@@ -722,6 +866,22 @@
     "pacciTip": "Vem de fora, mas consome aqui? Então paga aqui, tesoro! É a lógica do destino valendo pra importação também."
   },
   {
+    "id": "REF-EST-162",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa optante pelo Simples Nacional vende insumos para uma indústria do regime regular.",
+    "question": "A compra de um fornecedor optante pelo Simples Nacional gera crédito de IBS/CBS para quem compra?",
+    "options": [
+      "Sim, gera crédito equivalente ao IBS e à CBS devidos no regime, conforme informado no documento fiscal",
+      "Não, compras de optantes do Simples nunca geram crédito",
+      "Sim, mas só o dobro do valor pago",
+      "Só se o comprador também for do Simples Nacional"
+    ],
+    "correctAnswer": "Sim, gera crédito equivalente ao IBS e à CBS devidos no regime, conforme informado no documento fiscal",
+    "explanation": "A aquisição de optante pelo Simples Nacional gera crédito equivalente ao IBS e à CBS devidos no regime, conforme informado no documento fiscal — preservando a não cumulatividade na cadeia.",
+    "pacciTip": "Comprar de quem é do Simples não \"quebra\" a cadeia de crédito, tesoro — o crédito passa adiante!"
+  },
+  {
     "id": "REF-EST-044",
     "level": "estagiario",
     "type": "multiple_choice",
@@ -776,6 +936,22 @@
     "correctAnswer": true,
     "explanation": "Correto! O IBS absorve tanto o ICMS quanto o ISS, incluindo o ISS que hoje incide sobre serviços como os de construção civil.",
     "pacciTip": "Bravo! ISS de serviço vira IBS, sem mistério."
+  },
+  {
+    "id": "REF-EST-163",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um posto de gasolina emite documentos fiscais eletrônicos para cada abastecimento realizado.",
+    "question": "De onde vêm as informações que alimentam automaticamente a apuração assistida do IBS e da CBS?",
+    "options": [
+      "Dos documentos fiscais eletrônicos (DF-e), como a NF-e e o CT-e",
+      "De uma planilha enviada manualmente pela empresa",
+      "Apenas da declaração anual de imposto de renda",
+      "De uma auditoria presencial da Receita Federal"
+    ],
+    "correctAnswer": "Dos documentos fiscais eletrônicos (DF-e), como a NF-e e o CT-e",
+    "explanation": "A NF-e e o CT-e deixam de ser apenas documentos da operação: passam a alimentar automaticamente a apuração assistida do IBS e da CBS.",
+    "pacciTip": "O documento fiscal eletrônico virou o \"coração\" da apuração — tudo nasce dele, capito?"
   },
   {
     "id": "REF-EST-049",
@@ -834,6 +1010,22 @@
     "pacciTip": "Inverteu tudo, tesoro! Remédio é o oposto do que o IS persegue."
   },
   {
+    "id": "REF-EST-164",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de supermercados quer incentivar seus clientes a sempre pedirem a nota fiscal na hora da compra.",
+    "question": "Como se chamam os programas que estimulam os consumidores a exigir a emissão de documentos fiscais?",
+    "options": [
+      "Programas de Incentivo à Cidadania Fiscal",
+      "Programas de Auditoria Popular",
+      "Programas de Fiscalização Compartilhada",
+      "Programas de Split Payment Social"
+    ],
+    "correctAnswer": "Programas de Incentivo à Cidadania Fiscal",
+    "explanation": "O Comitê Gestor do IBS e a RFB podem instituir Programas de Incentivo à Cidadania Fiscal, estimulando os consumidores a exigirem a emissão de documentos fiscais — inclusive com sorteios.",
+    "pacciTip": "Pedir a nota vira \"bilhete de sorteio\", tesoro — é a Reforma incentivando todo mundo a cobrar o documento!"
+  },
+  {
     "id": "REF-EST-053",
     "level": "estagiario",
     "type": "true_false",
@@ -872,6 +1064,22 @@
     "correctAnswer": false,
     "explanation": "Errado! A extinção dos tributos antigos é gradual, ao longo da transição que vai de 2026 até 2033, e não acontece de uma só vez.",
     "pacciTip": "Passo a passo, tesoro, não é um estalar de dedos! A transição é longa de propósito."
+  },
+  {
+    "id": "REF-EST-165",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa importa uma peça de reposição idêntica a outra que havia importado antes, mas que veio com defeito de fábrica.",
+    "question": "A importação de um bem material de reposição, idêntico e destinado a substituir outro defeituoso, é tributada pelo IBS e pela CBS?",
+    "options": [
+      "Não, desde que idêntico em quantidade e valor ao bem defeituoso substituído",
+      "Sim, toda importação é sempre tributada",
+      "Só se o bem for fabricado no Brasil",
+      "Sim, com o dobro da alíquota normal"
+    ],
+    "correctAnswer": "Não, desde que idêntico em quantidade e valor ao bem defeituoso substituído",
+    "explanation": "O IBS e a CBS não incidem na importação de bens materiais idênticos, em igual quantidade e valor, destinados a repor outros anteriormente importados que eram defeituosos ou imprestáveis.",
+    "pacciTip": "Reposição de peça com defeito não é uma \"nova compra\" pro Fisco — por isso não paga de novo!"
   },
   {
     "id": "REF-EST-057",
@@ -922,6 +1130,22 @@
     "correctAnswer": true,
     "explanation": "Correto! A Reforma prevê regimes específicos para itens essenciais, com alíquotas reduzidas em relação à regra geral.",
     "pacciTip": "Esatto! Essencial ganha um tratamento mais gentil do Fisco."
+  },
+  {
+    "id": "REF-EST-166",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa brasileira contrata uma consultoria de um profissional que mora no exterior.",
+    "question": "O IBS e a CBS incidem sobre a importação de serviços fornecidos por residente no exterior?",
+    "options": [
+      "Sim, quando o serviço é fornecido por residente no exterior e consumido no país",
+      "Não, serviços nunca são tributados na importação",
+      "Só se o valor for maior que R$ 1 milhão",
+      "Só se o prestador for pessoa jurídica"
+    ],
+    "correctAnswer": "Sim, quando o serviço é fornecido por residente no exterior e consumido no país",
+    "explanation": "O IBS e a CBS incidem na importação de bens materiais, bens imateriais e serviços — no caso de serviços e bens imateriais, quando fornecidos por residente no exterior e consumidos no país.",
+    "pacciTip": "Serviço de fora que você usa aqui dentro também entra na conta do IBS e da CBS, tesoro!"
   },
   {
     "id": "REF-EST-146",
@@ -980,6 +1204,22 @@
     "pacciTip": "Bravo! Remédio essencial merece um respiro na hora de pagar imposto."
   },
   {
+    "id": "REF-EST-167",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma pizzaria vende pratos preparados na hora, junto com refrigerantes gelados.",
+    "question": "O regime específico de bares e restaurantes se aplica também ao fornecimento de bebidas não alcoólicas preparadas no local?",
+    "options": [
+      "Sim, o regime específico se aplica também a essas bebidas",
+      "Não, só se aplica à comida",
+      "Sim, mas só a sucos naturais",
+      "Não, bebidas nunca entram nesse regime"
+    ],
+    "correctAnswer": "Sim, o regime específico se aplica também a essas bebidas",
+    "explanation": "O regime específico de bares e restaurantes aplica-se também ao fornecimento de bebidas não alcoólicas preparadas no próprio estabelecimento.",
+    "pacciTip": "Refrigerante batido no restaurante entra no mesmo regime da comida — mas bebida alcoólica, não!"
+  },
+  {
     "id": "REF-EST-066",
     "level": "estagiario",
     "type": "true_false",
@@ -1029,6 +1269,22 @@
     ],
     "explanation": "O processo começa identificando o produto, depois avaliando o critério de nocividade, confirmando com quem tem mais experiência e só então sinalizando a incidência.",
     "pacciTip": "Passo a passo, sem pular etapa, tesoro! Assim ninguém erra na hora de classificar o produto."
+  },
+  {
+    "id": "REF-EST-168",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um garçom recebe uma gorjeta de 10% sobre o valor da conta, que é integralmente repassada a ele pelo restaurante.",
+    "question": "Essa gorjeta repassada integralmente ao empregado entra na base de cálculo do IBS e da CBS do restaurante?",
+    "options": [
+      "Não, fica excluída da base de cálculo, desde que não exceda 15% do valor total",
+      "Sim, sempre integra a base de cálculo normalmente",
+      "Só se for paga em dinheiro",
+      "Sim, mas com alíquota reduzida pela metade"
+    ],
+    "correctAnswer": "Não, fica excluída da base de cálculo, desde que não exceda 15% do valor total",
+    "explanation": "A gorjeta incidente no fornecimento de alimentação fica excluída da base de cálculo, desde que repassada integralmente ao empregado e que seu valor não exceda 15% do valor total do fornecimento.",
+    "pacciTip": "Gorjeta que vai pro garçom de verdade não vira base de cálculo — até o limite de 15%, tesoro!"
   },
   {
     "id": "REF-EST-070",
@@ -1131,6 +1387,22 @@
     ],
     "explanation": "A dúvida nasce, é pesquisada, depois confirmada com o mentor, sugerida para o glossário e, por fim, oficialmente incorporada a ele.",
     "pacciTip": "Nunca joga fora uma dúvida boa, piccolo! Ela pode virar material pra empresa inteira."
+  },
+  {
+    "id": "REF-EST-169",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um casal aluga um apartamento residencial de terceiros para morar.",
+    "question": "Na locação residencial de bem imóvel, existe algum valor fixo que pode ser deduzido da base de cálculo do IBS e da CBS?",
+    "options": [
+      "Sim, um redutor social de R$ 600,00 por mês, por imóvel",
+      "Não, não existe redutor para locação residencial",
+      "Sim, mas só R$ 50,00 por mês",
+      "Sim, um redutor de R$ 100.000,00, igual à venda de imóvel novo"
+    ],
+    "correctAnswer": "Sim, um redutor social de R$ 600,00 por mês, por imóvel",
+    "explanation": "Na locação, cessão onerosa ou arrendamento de bem imóvel para uso residencial, pode ser deduzido da base de cálculo um redutor social de R$ 600,00 por mês, por imóvel, atualizado pelo IPCA.",
+    "pacciTip": "R$ 600 por mês de \"desconto\" na base de cálculo do aluguel residencial — vale lembrar esse número!"
   },
   {
     "id": "REF-EST-074",
@@ -1236,6 +1508,22 @@
     "pacciTip": "O pecado já vem com o preço, tesoro! Nada de surpresa na hora de pagar."
   },
   {
+    "id": "REF-EST-170",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma construtora vende um apartamento residencial novo para uma família.",
+    "question": "Na venda de um imóvel residencial novo, existe um valor que pode ser deduzido da base de cálculo do IBS e da CBS, chamado de redutor de ajuste?",
+    "options": [
+      "Sim, até R$ 100.000,00 por imóvel residencial novo",
+      "Não, esse redutor não existe para imóveis novos",
+      "Sim, mas só R$ 5.000,00",
+      "Sim, um redutor de 100% do valor do imóvel"
+    ],
+    "correctAnswer": "Sim, até R$ 100.000,00 por imóvel residencial novo",
+    "explanation": "Na venda de bem imóvel residencial novo, pode ser deduzido da base de cálculo o redutor social de até R$ 100.000,00 por imóvel (e de até R$ 30.000,00 por lote residencial).",
+    "pacciTip": "Imóvel novo tem redutor de até R$ 100 mil na base de cálculo — um alívio e tanto na conta final!"
+  },
+  {
     "id": "REF-EST-079",
     "level": "estagiario",
     "type": "ordering",
@@ -1336,6 +1624,22 @@
     "pacciTip": "Saúde tem regra própria, capisce? O sistema já sabe aplicar a alíquota certa."
   },
   {
+    "id": "REF-EST-171",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "O governo de um município compra materiais de escritório de um fornecedor local.",
+    "question": "Existe um tratamento específico para as chamadas \"Compras Governamentais\" na Reforma Tributária?",
+    "options": [
+      "Sim, há medidas específicas previstas em lei para compras feitas pelo poder público",
+      "Não, o governo compra exatamente como qualquer empresa privada, sem regra própria",
+      "Sim, mas só para compras acima de R$ 1 bilhão",
+      "Não, esse tema não é tratado na Reforma"
+    ],
+    "correctAnswer": "Sim, há medidas específicas previstas em lei para compras feitas pelo poder público",
+    "explanation": "A Reforma prevê medidas específicas para as Compras Governamentais, com base no art. 472 da Lcp nº 214/2025, incluindo regras de transição e destinação da arrecadação.",
+    "pacciTip": "Governo comprando também tem regra própria na Reforma — não é tratado como um consumidor qualquer!"
+  },
+  {
     "id": "REF-EST-083",
     "level": "estagiario",
     "type": "ordering",
@@ -1418,6 +1722,22 @@
     ],
     "explanation": "O cálculo parte do preço sem tributos, soma o valor do IBS, depois o da CBS e chega ao preço final que o consumidor paga.",
     "pacciTip": "Preço base, mais IBS, mais CBS, igual preço final! Uma continha que todo estagiário fiscal aprende."
+  },
+  {
+    "id": "REF-EST-172",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um hotel oferece hospedagem com café da manhã incluso e outros serviços de conforto para os hóspedes.",
+    "question": "O regime específico de hospedagem se aplica a unidades de uso exclusivo dos hóspedes num estabelecimento destinado a isso?",
+    "options": [
+      "Sim, esse é um dos casos previstos no regime específico de hospedagem",
+      "Não, hotéis seguem sempre o regime regular comum",
+      "Sim, mas só para hospedagem de mais de 30 dias",
+      "Não, apenas pousadas têm regime específico"
+    ],
+    "correctAnswer": "Sim, esse é um dos casos previstos no regime específico de hospedagem",
+    "explanation": "O regime específico de hospedagem abrange unidades de uso exclusivo dos hóspedes em estabelecimento destinado a isso, e também o imóvel residencial mobiliado usado para hospedagem, ainda que não exclusivo.",
+    "pacciTip": "Hospedagem ganhou regramento próprio, cobrindo tanto o hotel tradicional quanto o imóvel mobiliado!"
   },
   {
     "id": "REF-EST-087",
@@ -1525,6 +1845,22 @@
     "pacciTip": "Quem se prepara com calma não sofre correria depois, tesoro! Passo a passo até 2033."
   },
   {
+    "id": "REF-EST-173",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa vai importar uma máquina do exterior e precisa saber quais documentos vai precisar emitir.",
+    "question": "Na importação de bens materiais, quais documentos costumam ser exigidos, além da NF-e?",
+    "options": [
+      "A Duimp ou a DIR, conforme o caso",
+      "Somente um contrato social",
+      "Somente uma nota promissória",
+      "Nenhum documento adicional é exigido"
+    ],
+    "correctAnswer": "A Duimp ou a DIR, conforme o caso",
+    "explanation": "Na importação de bens materiais é exigida a emissão de Duimp (Declaração Única de Importação) ou DIR (Declaração de Importação de Remessa), conforme o caso, além da NF-e — que pode até ser dispensada ou emitida automaticamente por ato conjunto da RFB e do CGIBS.",
+    "pacciTip": "Duimp e DIR são os \"passaportes fiscais\" da importação — decore essas duas siglas, tesoro!"
+  },
+  {
     "id": "REF-EST-092",
     "level": "estagiario",
     "type": "ordering",
@@ -1610,6 +1946,22 @@
     "pacciTip": "Onde se consome, ali fica o imposto, tesoro! Essa é a nova regra do jogo."
   },
   {
+    "id": "REF-EST-174",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma imobiliária administra a locação de vários imóveis comerciais para diferentes proprietários.",
+    "question": "Serviços de administração e intermediação de bem imóvel estão sujeitos ao regime específico de bens imóveis?",
+    "options": [
+      "Sim, esse é um dos serviços sujeitos a esse regime específico",
+      "Não, apenas a venda direta do imóvel está sujeita",
+      "Sim, mas só para imóveis rurais",
+      "Não, esses serviços seguem sempre o regime regular comum"
+    ],
+    "correctAnswer": "Sim, esse é um dos serviços sujeitos a esse regime específico",
+    "explanation": "Ficam sujeitas ao regime específico de bens imóveis, entre outras: alienação, cessão de direitos reais, locação/cessão/arrendamento, serviços de administração e intermediação de bem imóvel, e serviços de construção civil.",
+    "pacciTip": "Não é só vender ou alugar — até administrar/intermediar imóvel entra no regime específico, tesoro!"
+  },
+  {
     "id": "REF-EST-096",
     "level": "estagiario",
     "type": "fill_blank",
@@ -1672,6 +2024,22 @@
     "correctAnswer": "reduzida",
     "explanation": "Itens essenciais, como medicamentos, tendem a contar com regimes específicos de alíquota reduzida dentro do novo modelo tributário.",
     "pacciTip": "Remédio com desconto no imposto, tesoro! Faz sentido, já que é essencial."
+  },
+  {
+    "id": "REF-EST-175",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma construtora vende um imóvel comercial cuja alíquota de referência seria de 26,5%.",
+    "question": "Se a alíquota do regime específico de bens imóveis (alienação) tem redução de 50%, qual seria a alíquota final, partindo de 26,5%?",
+    "options": [
+      "13,25%",
+      "26,5%, sem alteração",
+      "5,3%",
+      "19,875%"
+    ],
+    "correctAnswer": "13,25%",
+    "explanation": "A alíquota aplicável nas operações com bens imóveis e serviços de construção civil sujeitas ao regime específico fica reduzida em 50% — de 26,5% para 13,25%, no exemplo dado no material do curso.",
+    "pacciTip": "Metade da alíquota de referência — 26,5% vira 13,25% na venda de imóvel sujeita ao regime específico!"
   },
   {
     "id": "REF-EST-100",
@@ -1754,6 +2122,22 @@
     "pacciTip": "Devagar e sempre, ragazzo! É assim que os tributos antigos vão saindo de cena."
   },
   {
+    "id": "REF-EST-176",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pede pra levar comida pronta pra casa, comprada de um mercado, sem que tenha sido preparada no local.",
+    "question": "Produtos alimentícios comprados prontos de terceiros, sem preparo no estabelecimento, entram no regime específico de bares e restaurantes?",
+    "options": [
+      "Não, ficam fora desse regime específico",
+      "Sim, sempre entram nesse regime",
+      "Sim, mas só se forem doces",
+      "Não, mas só se o valor for menor que R$ 20,00"
+    ],
+    "correctAnswer": "Não, ficam fora desse regime específico",
+    "explanation": "Não está sujeito ao regime específico de bares e restaurantes o fornecimento de produtos alimentícios e bebidas não alcoólicas adquiridos de terceiros, que não foram submetidos a preparo no estabelecimento.",
+    "pacciTip": "Só entra no regime especial quem realmente \"cozinha\" no local — revenda pura fica de fora!"
+  },
+  {
     "id": "REF-EST-104",
     "level": "estagiario",
     "type": "fill_blank",
@@ -1832,6 +2216,22 @@
     "correctAnswer": "Seletivo",
     "explanation": "O Imposto Seletivo mira, entre outros critérios, produtos e atividades com impacto negativo ao meio ambiente.",
     "pacciTip": "Poluiu, o Imposto Seletivo aparece, ragazzo! É a lógica do pecado ambiental."
+  },
+  {
+    "id": "REF-EST-177",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um bar serve tanto refrigerantes quanto bebidas alcoólicas para os clientes.",
+    "question": "Bebidas alcoólicas, mesmo preparadas no bar, entram no regime específico reduzido de bares e restaurantes?",
+    "options": [
+      "Não, bebidas alcoólicas ficam fora desse regime específico",
+      "Sim, sempre entram, com a mesma redução da comida",
+      "Sim, mas com o dobro da redução",
+      "Não, porque bebida alcoólica é sempre isenta"
+    ],
+    "correctAnswer": "Não, bebidas alcoólicas ficam fora desse regime específico",
+    "explanation": "Não está sujeito ao regime específico de bares e restaurantes o fornecimento de bebidas alcoólicas, ainda que preparadas no estabelecimento — elas seguem as regras tributárias comuns (ou até o Imposto Seletivo).",
+    "pacciTip": "Álcool fica de fora do desconto do bar — faz sentido, já que bebida alcoólica tem tributação própria!"
   },
   {
     "id": "REF-EST-109",
@@ -1914,6 +2314,22 @@
     "pacciTip": "Transporte de gente, o imposto nasce onde a viagem começa. Simples assim!"
   },
   {
+    "id": "REF-EST-178",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pede comida por um aplicativo de entrega, que fica com uma parte do valor pago.",
+    "question": "Os valores retidos pela plataforma digital de entrega, e não repassados ao restaurante, entram na base de cálculo do IBS e da CBS do restaurante?",
+    "options": [
+      "Não, ficam excluídos da base de cálculo do restaurante",
+      "Sim, sempre entram na base de cálculo do restaurante",
+      "Sim, mas só metade do valor retido",
+      "Não, mas apenas para pedidos acima de R$ 100,00"
+    ],
+    "correctAnswer": "Não, ficam excluídos da base de cálculo do restaurante",
+    "explanation": "Ficam excluídos da base de cálculo do restaurante os valores não repassados a ele pelo serviço de entrega e intermediação de pedidos por plataforma digital.",
+    "pacciTip": "O que a plataforma de delivery fica pra ela mesma não entra na conta de imposto do restaurante!"
+  },
+  {
     "id": "REF-EST-113",
     "level": "estagiario",
     "type": "fill_blank",
@@ -1978,6 +2394,22 @@
     "pacciTip": "Arroz e feijão pesam menos no imposto, tesoro! É assim que deve funcionar."
   },
   {
+    "id": "REF-EST-179",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente de um restaurante compra um prato completo e quer saber se o restaurante pode aproveitar crédito nessa venda.",
+    "question": "Os adquirentes de alimentação de bares e restaurantes no regime específico podem aproveitar crédito de IBS e CBS dessa compra?",
+    "options": [
+      "Não, ficam vedados desse aproveitamento de crédito, por limitação legal específica",
+      "Sim, sempre podem aproveitar o crédito integralmente",
+      "Sim, mas só empresas do Lucro Real",
+      "Sim, desde que a nota seja emitida em nome da empresa"
+    ],
+    "correctAnswer": "Não, ficam vedados desse aproveitamento de crédito, por limitação legal específica",
+    "explanation": "Os adquirentes de alimentação e bebidas fornecidas por bares e restaurantes no regime específico ficam vedados do aproveitamento do crédito, mesmo que não seja uso ou consumo pessoal, por limitação do próprio dispositivo legal.",
+    "pacciTip": "Nesse regime especial, nem empresa comprando pra reunião de trabalho aproveita o crédito, tesoro!"
+  },
+  {
     "id": "REF-EST-117",
     "level": "estagiario",
     "type": "text_input",
@@ -2026,6 +2458,22 @@
     "correctAnswer": "2026",
     "explanation": "A fase de testes, com alíquota simbólica, começa em 2026, dando início ao longo período de transição.",
     "pacciTip": "2026, o ano do primeiro ensaio, tesoro! Grava esse número."
+  },
+  {
+    "id": "REF-EST-180",
+    "level": "estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um restaurante popular está calculando a nova alíquota que vai pagar depois da Reforma.",
+    "question": "Qual a redução de alíquota aplicada aos contribuintes no regime específico de bar e restaurante?",
+    "options": [
+      "40%",
+      "60%",
+      "100% (isenção total)",
+      "10%"
+    ],
+    "correctAnswer": "40%",
+    "explanation": "As alíquotas do IBS e da CBS relativas às operações com contribuintes no regime específico de bar e restaurante ficam reduzidas em 40%, mantendo-os na sistemática não cumulativa (apuração normal).",
+    "pacciTip": "Bar e restaurante têm 40% de redução — menos que saúde/educação (60%), mas ainda um bom desconto!"
   },
   {
     "id": "REF-EST-122",

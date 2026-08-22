@@ -84,6 +84,22 @@
     "pacciTip": "Nada é gravado em pedra, amico! A alíquota de referência é calculada e pode ser ajustada."
   },
   {
+    "id": "REF-ESP-173",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um auditor calcula a multa de 20 UPF aplicável a uma empresa que não entregou arquivos eletrônicos obrigatórios, com a UPF já atualizada pelo IPCA do ano.",
+    "question": "Segundo o Art. 341-G da Lcp nº 214/2025, quantas UPF são devidas por período de apuração quando o contribuinte deixa de entregar arquivo eletrônico obrigatório SEM intimação fiscal prévia?",
+    "options": [
+      "20 UPF",
+      "30 UPF",
+      "1 UPF",
+      "75 UPF"
+    ],
+    "correctAnswer": "20 UPF",
+    "explanation": "O Art. 341-G prevê 20 UPF por período de apuração, independentemente de intimação fiscal, para quem deixa de entregar/registrar/disponibilizar arquivos eletrônicos obrigatórios — subindo a 30 UPF se já houve intimação fiscal.",
+    "pacciTip": "Guarde os dois números do 341-G: 20 UPF sem intimação, 30 UPF com intimação já feita, tesoro!"
+  },
+  {
     "id": "REF-ESP-007",
     "level": "especialista",
     "type": "true_false",
@@ -188,6 +204,22 @@
     "pacciTip": "Calcula, compara, identifica, ajusta. O teto não deixa a carga tributária fugir do combinado!"
   },
   {
+    "id": "REF-ESP-174",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um auditor precisa calcular a redução de multa aplicável a um contribuinte que parcelou o crédito tributário depois do prazo de impugnação, mas antes da inscrição em dívida ativa.",
+    "question": "Segundo o Art. 341-H da Lcp nº 214/2025, qual a redução de multa aplicável ao PARCELAMENTO feito depois do prazo de impugnação, mas antes da inscrição em dívida ativa?",
+    "options": [
+      "20%",
+      "30%",
+      "40%",
+      "50%"
+    ],
+    "correctAnswer": "20%",
+    "explanation": "O inciso IV do Art. 341-H prevê redução de 20% para o parcelamento do crédito tributário feito após o prazo do inciso II (impugnação), e antes da inscrição em dívida ativa — a menor das quatro reduções possíveis.",
+    "pacciTip": "A escala do Art. 341-H é 50/40/30/20% — decore a ordem: pagamento e parcelamento, prazo e depois do prazo!"
+  },
+  {
     "id": "REF-ESP-161",
     "level": "especialista",
     "type": "multiple_choice",
@@ -278,6 +310,22 @@
     "pacciTip": "FCBF, quatro letrinhas que salvam muita reestruturação, tesoro!"
   },
   {
+    "id": "REF-ESP-175",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte precisa calcular exatamente o valor aduaneiro de uma importação de bens materiais, somando todos os componentes previstos em lei.",
+    "question": "O Imposto de Importação (II) compõe a base de cálculo (valor aduaneiro) do IBS e da CBS na importação de bens materiais?",
+    "options": [
+      "Sim, o II integra o valor aduaneiro que serve de base de cálculo",
+      "Não, o II é sempre calculado à parte, sem relação com o IBS/CBS",
+      "Sim, mas apenas para importações acima de US$ 10.000",
+      "Não, apenas o ICMS-Importação (extinto) compunha essa base"
+    ],
+    "correctAnswer": "Sim, o II integra o valor aduaneiro que serve de base de cálculo",
+    "explanation": "A base de cálculo do IBS e da CBS na importação de bens materiais é o valor aduaneiro, que inclui o Imposto de Importação (II) entre seus componentes — um imposto compondo a base de cálculo de outro.",
+    "pacciTip": "\"Imposto sobre imposto\" na importação: o II entra na base antes do IBS e da CBS incidirem, tesoro!"
+  },
+  {
     "id": "REF-ESP-018",
     "level": "especialista",
     "type": "text_input",
@@ -354,6 +402,22 @@
     "correctAnswer": "Observar os prazos e condições específicos definidos na legislação de transição para aproveitamento ou compensação do saldo remanescente",
     "explanation": "A legislação de transição estabelece prazos e condições específicos para o aproveitamento ou compensação dos créditos remanescentes; ignorar essas regras pode implicar perda do direito.",
     "pacciTip": "Prazo é prazo, tesoro! Fica de olho nas regras de transição pra não perder nada."
+  },
+  {
+    "id": "REF-ESP-176",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte do regime regular vende um lote residencial por valor exatamente igual ao redutor de ajuste de R$ 30.000,00.",
+    "question": "Nesse caso específico, qual seria a base de cálculo final do IBS e da CBS na venda desse lote?",
+    "options": [
+      "Zero, já que o redutor absorve integralmente o valor da base de cálculo",
+      "R$ 30.000,00 integralmente, sem qualquer dedução",
+      "Metade do valor, ou seja, R$ 15.000,00",
+      "O dobro do valor do redutor, por regra de ajuste"
+    ],
+    "correctAnswer": "Zero, já que o redutor absorve integralmente o valor da base de cálculo",
+    "explanation": "Como o redutor de ajuste é deduzido da base de cálculo até o limite do próprio valor da base, se o valor do lote for exatamente igual ao redutor (R$ 30.000,00), a base de cálculo final do IBS e da CBS será zero.",
+    "pacciTip": "Redutor igual ao valor do lote zera a base — mas nunca fica negativo, é sempre até o limite!"
   },
   {
     "id": "REF-ESP-162",
@@ -452,6 +516,22 @@
     "pacciTip": "Teto vinculante, tesoro! Se passar do limite, ajusta a alíquota."
   },
   {
+    "id": "REF-ESP-177",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte que responde por fraude em uma operação de IBS quer saber se, além da multa tributária majorada, pode responder em outras esferas.",
+    "question": "A majoração da multa em casos de sonegação, fraude, simulação ou conluio afasta a aplicação de outras penalidades administrativas ou criminais?",
+    "options": [
+      "Não, a majoração é aplicada independentemente de outras penalidades administrativas ou criminais cabíveis",
+      "Sim, a multa tributária substitui qualquer outra sanção possível",
+      "Sim, mas só se o valor sonegado for inferior a R$ 500.000,00",
+      "Não, mas apenas nos casos de reincidência comprovada"
+    ],
+    "correctAnswer": "Não, a majoração é aplicada independentemente de outras penalidades administrativas ou criminais cabíveis",
+    "explanation": "Nos casos de sonegação, fraude, simulação ou conluio, a multa será majorada INDEPENDENTEMENTE de outras penalidades administrativas ou criminais cabíveis — ou seja, as esferas são cumulativas, não substitutivas.",
+    "pacciTip": "Multa tributária majorada não \"perdoa\" outras sanções — administrativa e criminal seguem valendo à parte!"
+  },
+  {
     "id": "REF-ESP-029",
     "level": "especialista",
     "type": "multiple_choice",
@@ -546,6 +626,22 @@
     "correctAnswer": "A unidade franqueada passa a receber o valor líquido da venda, já descontado o tributo segregado automaticamente no pagamento",
     "explanation": "Com o split payment, o valor recebido pela unidade franqueada já vem líquido do tributo, que foi segregado e recolhido automaticamente no momento do pagamento, impactando diretamente a gestão do fluxo de caixa.",
     "pacciTip": "O caixa já chega líquido, tesoro! Bom planejar o fluxo pensando nisso."
+  },
+  {
+    "id": "REF-ESP-178",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer saber se a exclusão de bonificações registradas em documento fiscal, sem evento posterior, tem amparo legal específico e preciso.",
+    "question": "Qual artigo da Lcp nº 214/2025 ampara a não tributação das bonificações registradas em documento fiscal, sem depender de evento posterior?",
+    "options": [
+      "Art. 5º, II e §§ 1º e 2º",
+      "Art. 4º, § 4º",
+      "Art. 57",
+      "Art. 60"
+    ],
+    "correctAnswer": "Art. 5º, II e §§ 1º e 2º",
+    "explanation": "O Art. 5º, II e §§ 1º e 2º da Lcp nº 214/2025 é a base legal para a não tributação das bonificações que constem do respectivo documento fiscal e não dependam de evento posterior.",
+    "pacciTip": "No nível de especialista, associar cada regra ao artigo certo faz toda a diferença — Art. 5º, II!"
   },
   {
     "id": "REF-ESP-035",
@@ -660,6 +756,22 @@
     "pacciTip": "Serviço terceirizado também dá crédito, tesoro! A regra ficou bem mais generosa."
   },
   {
+    "id": "REF-ESP-179",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte do regime específico de bares e restaurantes precisa reconstituir, numa auditoria, a régua completa de reduções de alíquota do setor imobiliário para comparar com a do seu próprio setor.",
+    "question": "Comparando as três reduções do setor imobiliário e de bares/restaurantes vistas no curso, qual é a ordem CORRETA da maior para a menor redução percentual?",
+    "options": [
+      "Locação de imóveis (70%) > Alienação/construção civil (50%) > Bares e restaurantes (40%)",
+      "Bares e restaurantes (40%) > Locação de imóveis (70%) > Alienação/construção civil (50%)",
+      "Alienação/construção civil (50%) > Bares e restaurantes (40%) > Locação de imóveis (70%)",
+      "As três reduções são exatamente iguais, em 50%"
+    ],
+    "correctAnswer": "Locação de imóveis (70%) > Alienação/construção civil (50%) > Bares e restaurantes (40%)",
+    "explanation": "Na ordem decrescente: locação/cessão/arrendamento de imóveis tem redução de 70%; alienação de imóveis e serviços de construção civil têm redução de 50%; e bares e restaurantes têm redução de 40%.",
+    "pacciTip": "Guarda a régua 70/50/40 — locação de imóvel, venda de imóvel, e bar/restaurante, nessa ordem!"
+  },
+  {
     "id": "REF-ESP-041",
     "level": "especialista",
     "type": "multiple_choice",
@@ -756,6 +868,22 @@
     "pacciTip": "Cliente final não usa crédito, tesoro! Esse argumento pesa menos aqui."
   },
   {
+    "id": "REF-ESP-180",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte do regime regular pretende compensar, indevidamente, um crédito de IBS que sabia não ter direito de usar.",
+    "question": "A multa de 75% do lançamento de ofício também se aplica ao valor do crédito indevido utilizado pelo contribuinte?",
+    "options": [
+      "Sim, aplica-se sobre o valor do crédito indevido, pela sua utilização indevida",
+      "Não, o crédito indevido tem multa própria de apenas 10%",
+      "Sim, mas somente em dobro do valor do crédito, isto é, 150%",
+      "Não, o crédito indevido não gera multa, apenas estorno"
+    ],
+    "correctAnswer": "Sim, aplica-se sobre o valor do crédito indevido, pela sua utilização indevida",
+    "explanation": "A multa de 75% do lançamento de ofício se aplica tanto sobre o valor do tributo não declarado/pago quanto sobre o valor do crédito indevido, pela sua utilização indevida (Art. 341-F, incisos I e II).",
+    "pacciTip": "A multa de 75% \"mira\" dois alvos: tributo não pago E crédito usado indevidamente, no mesmo artigo!"
+  },
+  {
     "id": "REF-ESP-047",
     "level": "especialista",
     "type": "multiple_choice",
@@ -834,6 +962,22 @@
     "pacciTip": "Nada desaparece assim do nada, amico! Existe regra de transição pra isso."
   },
   {
+    "id": "REF-ESP-181",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um consórcio de construção decide não exercer a opção pelo regime regular e, portanto, avalia se ainda tem alguma obrigação de CNPJ.",
+    "question": "Comparando consórcio e condomínio edilício quanto à obrigatoriedade de CNPJ: qual dos dois é obrigado ao cadastro MESMO sem optar pelo regime regular?",
+    "options": [
+      "O condomínio edilício",
+      "O consórcio",
+      "Nenhum dos dois, em nenhuma hipótese",
+      "Ambos, apenas se sediados no mesmo estado"
+    ],
+    "correctAnswer": "O condomínio edilício",
+    "explanation": "O condomínio edilício está entre os que são obrigados ao cadastro no CNPJ mesmo sem optar pelo regime regular; já o consórcio e a SCP só têm essa obrigação SE exercerem a opção pelo regime regular.",
+    "pacciTip": "Condomínio edilício tem obrigação \"automática\" de CNPJ; consórcio só se escolher o regime regular!"
+  },
+  {
     "id": "REF-ESP-052",
     "level": "especialista",
     "type": "true_false",
@@ -892,6 +1036,22 @@
     "correctAnswer": false,
     "explanation": "Errado! A alíquota de referência é recalculada periodicamente conforme metodologia própria, podendo ser ajustada ao longo do tempo.",
     "pacciTip": "Nada é definitivo pra sempre, amico! A alíquota pode ser recalculada."
+  },
+  {
+    "id": "REF-ESP-182",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte recebe uma NF-e de terceiro e não confirma a operação nem informa desconhecimento, ignorando completamente o documento.",
+    "question": "Segundo os incisos VIII e IX do Art. 341-G da Lcp nº 214/2025, essa omissão do destinatário gera quantas UPF/IBS de multa por documento?",
+    "options": [
+      "Uma UPF/IBS por documento",
+      "Vinte UPF por documento",
+      "Trinta UPF por documento",
+      "Não há previsão de multa para essa omissão"
+    ],
+    "correctAnswer": "Uma UPF/IBS por documento",
+    "explanation": "Os incisos VIII e IX do Art. 341-G preveem 1 UPF/IBS por documento para o destinatário que deixa de confirmar a operação, informar desconhecimento, ou informar devolução de bens relativos a DF-e emitido por terceiro.",
+    "pacciTip": "Ignorar a Manifestação do Destinatário custa pouco por documento (1 UPF), mas soma rápido em volume!"
   },
   {
     "id": "REF-ESP-058",
@@ -960,6 +1120,22 @@
     "pacciTip": "Sì, tesoro! Automatizar o recolhimento evita muito esquecimento chato."
   },
   {
+    "id": "REF-ESP-183",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer entender por que a multa de cancelamento de documento fiscal depois do fato gerador (66%) é exatamente o dobro da multa por cancelamento fora do prazo comum (33%).",
+    "question": "O que justifica a multa de cancelamento SER MAIOR quando o fato gerador já ocorreu, em vez de apenas ter passado o prazo comum de cancelamento?",
+    "options": [
+      "Porque, após o fato gerador, o cancelamento tenta desfazer uma obrigação tributária já nascida, e não apenas um prazo administrativo",
+      "Não há qualquer razão prática, é apenas um valor arbitrário da lei",
+      "Porque o valor dobra automaticamente a cada 30 dias de atraso",
+      "Porque a multa após o fato gerador inclui também o Imposto Seletivo"
+    ],
+    "correctAnswer": "Porque, após o fato gerador, o cancelamento tenta desfazer uma obrigação tributária já nascida, e não apenas um prazo administrativo",
+    "explanation": "O cancelamento após a ocorrência do fato gerador busca desfazer uma obrigação tributária que já efetivamente nasceu — daí a multa mais severa (66%) em comparação ao cancelamento apenas fora do prazo administrativo comum (33%), antes do fato gerador.",
+    "pacciTip": "Cancelar antes do fato gerador é \"atraso administrativo\"; depois dele, é tentar desfazer o que já nasceu!"
+  },
+  {
     "id": "REF-ESP-063",
     "level": "especialista",
     "type": "true_false",
@@ -1018,6 +1194,22 @@
     "correctAnswer": true,
     "explanation": "Correto! Ao ampliar o direito a crédito para praticamente todas as aquisições relacionadas à atividade, a não-cumulatividade plena reduz o acúmulo de tributos sobre tributos ao longo da cadeia produtiva.",
     "pacciTip": "Sì, tesoro! Crédito amplo é o antídoto contra o efeito cascata."
+  },
+  {
+    "id": "REF-ESP-184",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte do Simples Nacional avalia a real vantagem econômica de migrar para o regime regular, considerando toda a cadeia de créditos que perderia ou ganharia.",
+    "question": "Por que a decisão de migrar do Simples Nacional para o regime regular do IBS/CBS é descrita como estratégica, e não meramente formal?",
+    "options": [
+      "Porque afeta simultaneamente créditos, documentos fiscais, sistemas, fluxo de caixa e competitividade da empresa",
+      "Porque só muda o nome do regime no CNPJ, sem qualquer efeito prático",
+      "Porque é uma decisão irreversível para toda a vida da empresa",
+      "Porque exige aprovação prévia do Comitê Gestor do IBS em cada caso"
+    ],
+    "correctAnswer": "Porque afeta simultaneamente créditos, documentos fiscais, sistemas, fluxo de caixa e competitividade da empresa",
+    "explanation": "A escolha de regime (Simples Nacional x regime regular) impacta simultaneamente créditos apropriáveis, documentos fiscais exigidos, sistemas de gestão, fluxo de caixa e a própria competitividade da empresa perante clientes que buscam crédito.",
+    "pacciTip": "É decisão de CFO, não só de contador — mexe com preço, crédito do cliente e caixa da empresa!"
   },
   {
     "id": "REF-ESP-069",
@@ -1084,6 +1276,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O Simples Nacional continua existindo como regime opcional; a Reforma não impõe migração obrigatória, embora traga considerações estratégicas sobre a vantagem de permanecer ou não nesse regime.",
     "pacciTip": "Simples não acaba, amico! Continua sendo uma opção, não uma obrigação de sair."
+  },
+  {
+    "id": "REF-ESP-185",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer aplicar simultaneamente o redutor de ajuste e a redução de 50% de alíquota na venda de um imóvel novo, na ordem correta de cálculo.",
+    "question": "Qual é a ordem correta de aplicação dos dois benefícios na venda de imóvel novo sujeita ao regime específico?",
+    "options": [
+      "Primeiro deduz o redutor de ajuste da base de cálculo, depois aplica a alíquota já reduzida em 50% sobre o valor restante",
+      "Primeiro aplica a alíquota reduzida sobre o valor total, depois deduz o redutor do imposto já calculado",
+      "Os dois benefícios se anulam mutuamente e não podem ser somados",
+      "A ordem é indiferente, o resultado final é sempre o mesmo valor"
+    ],
+    "correctAnswer": "Primeiro deduz o redutor de ajuste da base de cálculo, depois aplica a alíquota já reduzida em 50% sobre o valor restante",
+    "explanation": "O redutor de ajuste atua sobre a BASE DE CÁLCULO (reduzindo o valor tributável), e a redução de 50% atua sobre a ALÍQUOTA aplicada a essa base já ajustada — os dois benefícios operam em etapas sucessivas, não simultâneas sobre o mesmo valor.",
+    "pacciTip": "Base primeiro, alíquota depois — a ordem de cálculo importa pro valor final do imposto, tesoro!"
   },
   {
     "id": "REF-ESP-074",
@@ -1177,6 +1385,22 @@
     ],
     "explanation": "O processo começa pelo levantamento do saldo, passa pela conferência documental, pelo enquadramento nas regras de transição e termina na definição da forma de aproveitamento.",
     "pacciTip": "Levanta, confere, enquadra, define, bello! Passo a passo sem pressa."
+  },
+  {
+    "id": "REF-ESP-186",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer confirmar o dispositivo exato que ampara a natureza objetiva da responsabilidade por infrações do IBS.",
+    "question": "Qual artigo da Lcp nº 214/2025 estabelece que a responsabilidade por infrações do IBS independe da intenção do agente?",
+    "options": [
+      "Art. 341-A",
+      "Art. 341-C",
+      "Art. 341-F",
+      "Art. 341-H"
+    ],
+    "correctAnswer": "Art. 341-A",
+    "explanation": "O Art. 341-A da Lcp nº 214/2025 estabelece que constitui infração toda ação ou omissão, ainda que involuntária, e que a responsabilidade independe da intenção do agente ou da efetividade dos efeitos do ato.",
+    "pacciTip": "No nível de especialista, cada artigo tem seu papel: 341-A é o da responsabilidade objetiva em si!"
   },
   {
     "id": "REF-ESP-080",
@@ -1298,6 +1522,22 @@
     ],
     "explanation": "A simulação parte dos dados históricos, projeta as alíquotas futuras, avalia o risco frente ao teto e constrói cenários alternativos de ajuste.",
     "pacciTip": "Histórico, projeção, risco, cenário, bello! Assim a simulação fica completa."
+  },
+  {
+    "id": "REF-ESP-187",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer confirmar o dispositivo exato que trata da destinação das penalidades aos entes federativos e da criação da UPF/IBS.",
+    "question": "Qual artigo da Lcp nº 214/2025 trata da destinação das penalidades aos entes federativos e da criação da UPF/IBS?",
+    "options": [
+      "Art. 341-C",
+      "Art. 341-A",
+      "Art. 341-G",
+      "Art. 341-H"
+    ],
+    "correctAnswer": "Art. 341-C",
+    "explanation": "O Art. 341-C da Lcp nº 214/2025 trata da destinação do valor das penalidades aos entes federativos que promoverem a fiscalização, e institui a UPF (Unidade Padrão Fiscal) como base de valoração das multas.",
+    "pacciTip": "341-C é o artigo do \"dinheiro da multa\" — quem fiscaliza e em que unidade (UPF) se mede a penalidade!"
   },
   {
     "id": "REF-ESP-085",
@@ -1426,6 +1666,22 @@
     "pacciTip": "Paga, segrega, consulta, ajusta, bello! Franqueado bem treinado não se assusta com o novo fluxo."
   },
   {
+    "id": "REF-ESP-188",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer localizar exatamente o dispositivo que trata da multa de 75% de lançamento de ofício.",
+    "question": "Qual artigo da Lcp nº 214/2025 prevê a multa de 75% aplicável em lançamento de ofício sobre tributo não declarado ou crédito indevido?",
+    "options": [
+      "Art. 341-F",
+      "Art. 341-A",
+      "Art. 341-C",
+      "Art. 341-G"
+    ],
+    "correctAnswer": "Art. 341-F",
+    "explanation": "O Art. 341-F da Lcp nº 214/2025 prevê a multa de 75% em lançamento de ofício, tanto sobre o tributo não declarado/pago quanto sobre o crédito indevido utilizado, além da majoração em casos de fraude.",
+    "pacciTip": "341-F é o artigo da multa \"carro-chefe\": os 75% do lançamento de ofício, tesoro!"
+  },
+  {
     "id": "REF-ESP-091",
     "level": "especialista",
     "type": "ordering",
@@ -1545,6 +1801,22 @@
     ],
     "explanation": "A reestruturação levanta as aquisições do período, classifica quais geram crédito, ajusta o sistema para captura desses créditos e consolida o saldo para compensação.",
     "pacciTip": "Levanta, classifica, ajusta, consolida, bello! Crédito amplo pede sistema afiado."
+  },
+  {
+    "id": "REF-ESP-189",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer localizar o dispositivo que trata das multas específicas por descumprimento de obrigações acessórias (arquivos eletrônicos, cancelamento indevido, manifestação do destinatário).",
+    "question": "Qual artigo da Lcp nº 214/2025 reúne as multas específicas de obrigações acessórias, como entrega de arquivos e cancelamento de documento fiscal?",
+    "options": [
+      "Art. 341-G",
+      "Art. 341-A",
+      "Art. 341-C",
+      "Art. 341-F"
+    ],
+    "correctAnswer": "Art. 341-G",
+    "explanation": "O Art. 341-G da Lcp nº 214/2025 reúne as multas específicas por descumprimento de obrigações acessórias, como a entrega de arquivos eletrônicos (20/30 UPF), a manifestação do destinatário (1 UPF) e o cancelamento indevido de documento fiscal (33%/66%).",
+    "pacciTip": "341-G é o \"catálogo\" das multas acessórias — arquivo, manifestação, cancelamento, tudo ali!"
   },
   {
     "id": "REF-ESP-096",
@@ -1671,6 +1943,22 @@
     ],
     "explanation": "A análise levanta o perfil da carteira de clientes, simula o efeito comercial dos créditos, compara a carga tributária efetiva nos dois regimes e conclui com a decisão estratégica.",
     "pacciTip": "Levanta, simula, compara, decide, bello! Decisão de regime não pode ser no achismo."
+  },
+  {
+    "id": "REF-ESP-190",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer localizar o dispositivo exato que trata das reduções de multa por pagamento ou parcelamento em diferentes prazos.",
+    "question": "Qual artigo da Lcp nº 214/2025 prevê as reduções escalonadas de 50%, 40%, 30% e 20% na multa de lançamento de ofício?",
+    "options": [
+      "Art. 341-H",
+      "Art. 341-A",
+      "Art. 341-C",
+      "Art. 341-G"
+    ],
+    "correctAnswer": "Art. 341-H",
+    "explanation": "O Art. 341-H da Lcp nº 214/2025, em seus incisos I a IV, prevê as reduções escalonadas de 50%, 40%, 30% e 20% na multa de lançamento de ofício, conforme o momento e a forma de quitação do crédito tributário.",
+    "pacciTip": "341-H é o artigo dos \"descontos\" — sempre associe a régua 50/40/30/20% a esse artigo, tesoro!"
   },
   {
     "id": "REF-ESP-102",
@@ -1800,6 +2088,22 @@
     "pacciTip": "Imobilizado, tesoro! Máquina e equipamento geram crédito que merece atenção na transição."
   },
   {
+    "id": "REF-ESP-191",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte de bares e restaurantes quer entender por que o legislador optou por manter a sistemática não cumulativa nesse setor, ao invés de excluí-lo dela.",
+    "question": "Segundo o material, qual foi a mudança entre o projeto inicial e a versão final da Reforma quanto a bares e restaurantes?",
+    "options": [
+      "O projeto inicial retiraria o setor da não cumulatividade; a versão final manteve a apuração normal, com redução de alíquota de 40%",
+      "O projeto inicial previa isenção total; a versão final aplicou tributação integral",
+      "Não houve qualquer mudança entre as versões do projeto",
+      "O projeto inicial já prometia a mesma redução de 40% final"
+    ],
+    "correctAnswer": "O projeto inicial retiraria o setor da não cumulatividade; a versão final manteve a apuração normal, com redução de alíquota de 40%",
+    "explanation": "Inicialmente, o projeto retiraria bares e restaurantes da sistemática não cumulativa; na versão publicada, optou-se por colocar os contribuintes na apuração normal, com redução de 40% na alíquota, em vez de excluí-los da não cumulatividade.",
+    "pacciTip": "A versão final foi um meio-termo: manteve a não cumulatividade, só compensando com a redução de 40%!"
+  },
+  {
     "id": "REF-ESP-108",
     "level": "especialista",
     "type": "fill_blank",
@@ -1894,6 +2198,22 @@
     "correctAnswer": "calculada",
     "explanation": "A alíquota de referência é calculada periodicamente, segundo metodologia própria definida em lei, e não fixada de forma imutável no texto constitucional.",
     "pacciTip": "Calculada, tesoro! Sempre com base em metodologia, nunca no chute."
+  },
+  {
+    "id": "REF-ESP-192",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer comparar precisamente os dois artigos que tratam de redução de alíquota (60%) e alíquota zero, para saber quais itens específicos cada um lista.",
+    "question": "Dispositivos médicos e medicamentos aparecem, ao mesmo tempo, tanto no art. 128 (redução de 60%) quanto no art. 143 (alíquota zero) da LC 214/2025 — como se explica essa aparente sobreposição?",
+    "options": [
+      "Um mesmo grupo de bens pode ter um tratamento de redução geral (60%) e, para itens específicos dentro dele, um benefício ainda maior de alíquota zero",
+      "É um erro de redação da lei, sem explicação técnica",
+      "Dispositivos médicos só aparecem no art. 143, nunca no art. 128",
+      "Medicamentos só aparecem no art. 128, nunca no art. 143"
+    ],
+    "correctAnswer": "Um mesmo grupo de bens pode ter um tratamento de redução geral (60%) e, para itens específicos dentro dele, um benefício ainda maior de alíquota zero",
+    "explanation": "Dispositivos médicos e medicamentos aparecem no art. 128 (redução geral de 60% para o setor de saúde) e também no art. 143 (alíquota zero para itens específicos, mais essenciais) — o art. 143 aprofunda o benefício pra um subconjunto mais sensível de produtos.",
+    "pacciTip": "Não é contradição: o art. 143 é um \"upgrade\" de benefício pra itens ainda mais essenciais dentro da saúde!"
   },
   {
     "id": "REF-ESP-114",
@@ -1992,6 +2312,22 @@
     "pacciTip": "Líquido, tesoro! O bruto já vem com o imposto separado antes de chegar no caixa."
   },
   {
+    "id": "REF-ESP-193",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte avalia se a redução de 60% de um serviço de educação pode ser cumulada com a redução de 30% de uma profissão intelectual, no caso de um professor autônomo regulamentado.",
+    "question": "Um professor autônomo que também é profissional regulamentado por conselho pode somar a redução de 60% (educação) com a de 30% (profissão intelectual) na mesma operação?",
+    "options": [
+      "Não, a regra geral de não cumulação de regimes diferenciados impede a soma, salvo previsão legal expressa",
+      "Sim, sempre, somando os dois percentuais (90% de redução total)",
+      "Sim, mas apenas multiplicando os percentuais",
+      "Não, porque educação e profissão intelectual são mutuamente excludentes por definição"
+    ],
+    "correctAnswer": "Não, a regra geral de não cumulação de regimes diferenciados impede a soma, salvo previsão legal expressa",
+    "explanation": "Seguindo a regra geral de que os regimes diferenciados não podem ser cumulados entre si (salvo previsão expressa em lei), a operação seguiria apenas UM dos regimes aplicáveis — normalmente o mais específico ou o expressamente indicado para o caso — não a soma dos dois percentuais.",
+    "pacciTip": "Benefícios não se somam por padrão — a regra de não cumulação vale mesmo entre reduções diferentes!"
+  },
+  {
     "id": "REF-ESP-119",
     "level": "especialista",
     "type": "fill_blank",
@@ -2086,6 +2422,22 @@
     "correctAnswer": "cascata",
     "explanation": "O efeito cascata (tributo sobre tributo) é justamente o que a não-cumulatividade plena busca reduzir, ao ampliar o direito a crédito ao longo da cadeia.",
     "pacciTip": "Cascata, tesoro! É esse efeito que a reforma quer represar."
+  },
+  {
+    "id": "REF-ESP-194",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte quer entender a lógica por trás de o cashback beneficiar só a baixa renda, em contraste com isenções gerais.",
+    "question": "Por que o material do curso descreve o cashback como \"mais efetivo\" que uma isenção ou alíquota zero geral?",
+    "options": [
+      "Porque a isenção/alíquota zero beneficia rico e pobre indiscriminadamente, enquanto o cashback é direcionado apenas à baixa renda",
+      "Porque o cashback custa menos aos cofres públicos em termos absolutos",
+      "Porque o cashback é mais fácil de fiscalizar que uma isenção",
+      "Porque o cashback substitui integralmente o Imposto de Renda"
+    ],
+    "correctAnswer": "Porque a isenção/alíquota zero beneficia rico e pobre indiscriminadamente, enquanto o cashback é direcionado apenas à baixa renda",
+    "explanation": "O argumento da SERT era que medidas de isenção ou alíquota zero beneficiam rico e pobre indiscriminadamente, enquanto o cashback é uma medida que beneficia especificamente as pessoas de baixa renda, sendo mais efetiva na progressividade social.",
+    "pacciTip": "Isenção geral \"erra o alvo\"; cashback mira certinho em quem mais precisa do benefício, tesoro!"
   },
   {
     "id": "REF-ESP-125",
@@ -2184,6 +2536,22 @@
     "pacciTip": "Integrais, tesoro! Crédito completo pesa na decisão comercial."
   },
   {
+    "id": "REF-ESP-195",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte de serviços de exploração de via, que atravessa três estados diferentes, quer calcular corretamente a proporcionalidade do IBS devido a cada ente.",
+    "question": "Como é calculada a proporcionalidade do IBS devido a cada ente federativo, no serviço de exploração de via que atravessa mais de um território?",
+    "options": [
+      "Proporcionalmente à extensão da via explorada dentro do território de cada ente tributante",
+      "Igualmente dividido entre os entes, independente da extensão da via",
+      "Integralmente para o ente onde a via começa, sem qualquer partilha",
+      "Proporcionalmente à população de cada ente ao longo do trajeto"
+    ],
+    "correctAnswer": "Proporcionalmente à extensão da via explorada dentro do território de cada ente tributante",
+    "explanation": "No serviço de exploração de via, a proporcionalidade do IBS devido a cada ente é calculada com base na extensão da via explorada dentro do território de cada ente tributante (art. 11, VIII da Lcp 214/2025).",
+    "pacciTip": "Quanto mais km de rodovia dentro do território, maior a fatia do IBS que aquele ente recebe!"
+  },
+  {
     "id": "REF-ESP-130",
     "level": "especialista",
     "type": "fill_blank",
@@ -2262,6 +2630,22 @@
     "pacciTip": "Remanescente, amico! O que sobra também tem seu caminho."
   },
   {
+    "id": "REF-ESP-196",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte do regime específico de bens imóveis quer confirmar se o redutor de ajuste de locação residencial (R$ 600,00/mês) se aplica também a imóveis comerciais alugados.",
+    "question": "O redutor social de R$ 600,00 por mês se aplica à locação de imóveis de uso comercial, e não apenas residencial?",
+    "options": [
+      "Não, esse redutor específico se aplica à locação de imóveis para uso RESIDENCIAL",
+      "Sim, vale igualmente para uso comercial e residencial",
+      "Sim, mas apenas para imóveis comerciais de grande porte",
+      "Não, esse redutor não existe para nenhum tipo de locação"
+    ],
+    "correctAnswer": "Não, esse redutor específico se aplica à locação de imóveis para uso RESIDENCIAL",
+    "explanation": "O redutor social de R$ 600,00 por mês se aplica especificamente à locação, cessão onerosa ou arrendamento de bem imóvel para uso RESIDENCIAL — imóveis comerciais não têm esse redutor específico, embora possam ter a redução geral de 70% na alíquota.",
+    "pacciTip": "O redutor de R$600 é \"social\", pensado pra moradia — comercial fica só com a redução geral de alíquota!"
+  },
+  {
     "id": "REF-ESP-136",
     "level": "especialista",
     "type": "text_input",
@@ -2326,6 +2710,22 @@
     "correctAnswer": "O local do estabelecimento do agente ou de seus representados que figurem na posição devedora da liquidação financeira apurada pela Câmara de Comercialização de Energia Elétrica",
     "explanation": "Nas aquisições de energia elétrica realizadas de forma multilateral, o local do fornecimento é o do estabelecimento do agente (ou de seus representados) na posição devedora da liquidação financeira apurada pela Câmara de Comercialização de Energia Elétrica.",
     "pacciTip": "Energia multilateral é um mercado complexo — o local segue quem \"deve\" na liquidação da câmara, tesoro!"
+  },
+  {
+    "id": "REF-ESP-197",
+    "level": "especialista",
+    "type": "multiple_choice",
+    "scenario": "Um auditor sênior revisa todas as multas do Art. 341-G aplicadas a uma empresa num único período de apuração, somando arquivo em atraso, cancelamento indevido e omissão de manifestação do destinatário.",
+    "question": "É juridicamente possível que uma mesma empresa acumule, no mesmo período, multas de diferentes incisos do Art. 341-G simultaneamente (arquivo em atraso, cancelamento indevido, e omissão de manifestação)?",
+    "options": [
+      "Sim, cada inciso pune uma conduta distinta, e nada impede a cumulação de infrações diferentes no mesmo período",
+      "Não, só é possível aplicar uma multa por período de apuração, mesmo com múltiplas condutas",
+      "Não, a aplicação de uma multa do Art. 341-G exclui automaticamente as demais",
+      "Sim, mas o valor total nunca pode superar 75% do tributo devido"
+    ],
+    "correctAnswer": "Sim, cada inciso pune uma conduta distinta, e nada impede a cumulação de infrações diferentes no mesmo período",
+    "explanation": "Como cada inciso do Art. 341-G pune uma conduta distinta (entrega em atraso, cancelamento indevido, omissão de manifestação, etc.), é juridicamente possível a cumulação de multas de incisos diferentes numa mesma empresa e período, caso ela pratique mais de uma infração.",
+    "pacciTip": "Infrações diferentes, multas diferentes — não há uma \"regra do desconto único\" que limite a soma no 341-G!"
   },
   {
     "id": "REF-ESP-141",

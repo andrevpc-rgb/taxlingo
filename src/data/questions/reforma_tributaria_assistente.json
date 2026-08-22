@@ -74,6 +74,22 @@
     "pacciTip": "Sì! Cada operação tem sua regrinha própria. Não existe fórmula única pra todas."
   },
   {
+    "id": "REF-ASS-153",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma editora de jornais vende assinaturas digitais e impressas, e quer saber o alcance da imunidade cultural.",
+    "question": "A imunidade do IBS e da CBS para livros, jornais e periódicos garante algum direito extra ao contribuinte?",
+    "options": [
+      "Sim, garante a manutenção dos créditos das aquisições relacionadas",
+      "Não, é apenas a ausência de tributação, sem direito a crédito",
+      "Sim, mas só se o jornal for impresso em papel reciclado",
+      "Não, essa imunidade foi extinta pela Reforma"
+    ],
+    "correctAnswer": "Sim, garante a manutenção dos créditos das aquisições relacionadas",
+    "explanation": "A imunidade de livros, jornais, periódicos e o papel destinado à sua impressão garante a manutenção dos créditos — diferente de uma isenção comum, que normalmente não preserva o crédito.",
+    "pacciTip": "Imunidade cultural vem \"premium\": nem paga imposto, nem perde o crédito das compras. Combo raro!"
+  },
+  {
     "id": "REF-ASS-006",
     "level": "assistente",
     "type": "true_false",
@@ -123,6 +139,22 @@
     ],
     "explanation": "Primeiro identifica-se se há previsão legal, depois parametriza-se o cadastro, calcula-se o valor e, por fim, recolhe-se o tributo retido.",
     "pacciTip": "Sem identificar a lei primeiro, nada de reter, amico! A ordem certa evita retenção indevida."
+  },
+  {
+    "id": "REF-ASS-154",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma trading exporta bens materiais e processa a declaração de exportação pelo Siscomex.",
+    "question": "Como é feita a comprovação da exportação de bens materiais processada pelo Siscomex?",
+    "options": [
+      "Mediante registro no documento fiscal relativo à exportação",
+      "Por uma simples declaração verbal ao fiscal",
+      "Automaticamente, sem qualquer registro",
+      "Só por meio de auditoria presencial anual"
+    ],
+    "correctAnswer": "Mediante registro no documento fiscal relativo à exportação",
+    "explanation": "A exportação de bens materiais é comprovada mediante registro no documento fiscal relativo à exportação, nos casos em que a declaração de exportação é processada no Siscomex.",
+    "pacciTip": "O Siscomex \"conversa\" com o documento fiscal — o registro ali já vale como comprovação, tesoro!"
   },
   {
     "id": "REF-ASS-010",
@@ -220,6 +252,22 @@
     "pacciTip": "Reter é separar antes de pagar, tesoro! O fornecedor recebe só o que sobra depois do tributo."
   },
   {
+    "id": "REF-ASS-155",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma sociedade de engenheiros presta serviços técnicos e quer confirmar se todos os sócios precisam ter a mesma formação.",
+    "question": "Para uma sociedade de profissão intelectual ter direito à redução de 30% na alíquota, o que se exige dos sócios?",
+    "options": [
+      "Que possuam habilitações profissionais diretamente relacionadas aos objetivos da sociedade",
+      "Que sejam todos da mesma cidade",
+      "Que a sociedade tenha no mínimo 10 sócios",
+      "Que nenhum sócio seja pessoa física"
+    ],
+    "correctAnswer": "Que possuam habilitações profissionais diretamente relacionadas aos objetivos da sociedade",
+    "explanation": "Para a redução das profissões intelectuais, os sócios devem possuir habilitações profissionais diretamente relacionadas com os objetivos da sociedade, além da prestação de serviço estar vinculada à habilitação profissional.",
+    "pacciTip": "Sociedade de profissão regulamentada precisa que TODOS os sócios tenham a habilitação certa, tesoro!"
+  },
+  {
     "id": "REF-ASS-014",
     "level": "assistente",
     "type": "fill_blank",
@@ -286,6 +334,22 @@
     "correctAnswer": "zero",
     "explanation": "A cesta básica nacional terá alíquota zero de IBS/CBS, mantendo o direito a crédito nas etapas anteriores.",
     "pacciTip": "Zero na cobrança, mas o crédito segue firme! Não confunde com isenção, tesoro."
+  },
+  {
+    "id": "REF-ASS-156",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma indústria compra insumos agropecuários sujeitos a um regime que adia o pagamento do imposto para uma etapa futura, mas com alíquota menor quando isso ocorrer.",
+    "question": "Qual cClassTrib representa a postergação do imposto com redução de alíquota na etapa futura, aplicável a insumos agropecuários e aquícolas?",
+    "options": [
+      "515 — Diferimento com redução de alíquota",
+      "510 — Diferimento",
+      "550 — Suspensão",
+      "200 — Alíquota Reduzida"
+    ],
+    "correctAnswer": "515 — Diferimento com redução de alíquota",
+    "explanation": "O cClassTrib 515 trata do diferimento com redução de alíquota, aplicável a operações sujeitas a diferimento com insumos agropecuários e aquícolas (Anexo IX).",
+    "pacciTip": "515 é \"irmão\" do 510, mas com desconto na etapa futura. Detalhe que faz diferença na prova!"
   },
   {
     "id": "REF-ASS-019",
@@ -356,6 +420,22 @@
     "pacciTip": "IBS é com o Comitê Gestor, sempre! Guarda esse nome na cabeça."
   },
   {
+    "id": "REF-ASS-157",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Depois de uma devolução afetar a apuração do adquirente, o efeito também chega até o fornecedor da mercadoria.",
+    "question": "Se o débito da operação já foi extinto por compensação, o que pode ocorrer na apuração do fornecedor após a devolução?",
+    "options": [
+      "Restabelecimento de crédito",
+      "Perda definitiva do direito de venda futura",
+      "Multa automática de 20%",
+      "Cancelamento do CNPJ do fornecedor"
+    ],
+    "correctAnswer": "Restabelecimento de crédito",
+    "explanation": "Na apuração do fornecedor, após os efeitos no adquirente, podem ocorrer: transferência em dinheiro (se houve Split Payment/RAD), estorno da parcela não extinta do débito, restabelecimento de crédito (se extinto por compensação), ou apropriação de crédito (se extinto por guia).",
+    "pacciTip": "Cada forma de extinção do débito tem seu próprio \"efeito espelho\" na devolução, tesoro!"
+  },
+  {
     "id": "REF-ASS-023",
     "level": "assistente",
     "type": "multiple_choice",
@@ -418,6 +498,22 @@
     "correctAnswer": "Registrar os dados cadastrais e o regime tributário do fornecedor",
     "explanation": "Antes de qualquer operação, é preciso registrar corretamente os dados cadastrais e o regime tributário do fornecedor, base para todas as demais parametrizações.",
     "pacciTip": "Cadastro bem-feito no início evita dor de cabeça depois, tesoro!"
+  },
+  {
+    "id": "REF-ASS-158",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber se o mero destaque do IBS numa nota fiscal já garante o crédito ao comprador.",
+    "question": "Apenas o destaque do IBS/CBS no documento fiscal eletrônico já é suficiente para gerar o crédito ao adquirente?",
+    "options": [
+      "Não, o crédito depende também da extinção do débito correspondente",
+      "Sim, o destaque sozinho sempre basta",
+      "Sim, mas só para empresas do Lucro Real",
+      "Não, crédito nunca depende de documento fiscal"
+    ],
+    "correctAnswer": "Não, o crédito depende também da extinção do débito correspondente",
+    "explanation": "O crédito de IBS e CBS depende de documento fiscal eletrônico hábil E da extinção do débito correspondente — o mero destaque no documento fiscal eletrônico não é suficiente.",
+    "pacciTip": "Não basta \"aparecer\" no documento — o débito de verdade precisa ter sido extinto pra virar crédito!"
   },
   {
     "id": "REF-ASS-027",
@@ -500,6 +596,22 @@
     "pacciTip": "O molho de tomate é seu, mas o imposto já saiu direto pro Fisco, capisce?"
   },
   {
+    "id": "REF-ASS-159",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um posto de combustíveis compra produtos sujeitos a um regime tributário próprio, diferente das regras gerais de crédito.",
+    "question": "Nas aquisições de combustíveis submetidas ao regime específico, o que ainda é exigido para a apropriação do crédito?",
+    "options": [
+      "Documento fiscal hábil, mesmo com as regras próprias do regime",
+      "Nenhum documento é necessário nesse regime",
+      "Só é permitido o crédito uma vez por ano",
+      "O crédito é sempre proibido nesse regime"
+    ],
+    "correctAnswer": "Documento fiscal hábil, mesmo com as regras próprias do regime",
+    "explanation": "Nas aquisições de combustíveis submetidas ao regime específico, aplicam-se regras próprias, mas sempre exigindo documento fiscal hábil para a apropriação do crédito.",
+    "pacciTip": "Regime específico tem regra própria, mas o documento fiscal hábil continua sendo obrigatório, capito?"
+  },
+  {
     "id": "REF-ASS-143",
     "level": "assistente",
     "type": "multiple_choice",
@@ -580,6 +692,22 @@
     "pacciTip": "Leite com alíquota zero, mas crédito de insumo intacto! Não esquece de cadastrar certinho."
   },
   {
+    "id": "REF-ASS-160",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um consumidor final começa a pedir sempre a nota fiscal, na esperança de participar de sorteios do governo.",
+    "question": "Até qual percentual da arrecadação do IBS e da CBS pode financiar os Programas de Incentivo à Cidadania Fiscal?",
+    "options": [
+      "Até 0,05%",
+      "Até 5%",
+      "Até 20%",
+      "Não há limite de financiamento"
+    ],
+    "correctAnswer": "Até 0,05%",
+    "explanation": "Os Programas de Incentivo à Cidadania Fiscal podem ser financiados pelo montante equivalente a até 0,05% da arrecadação do IBS e da CBS.",
+    "pacciTip": "Parece pouco, mas 0,05% de toda a arrecadação nacional já dá pra bancar um bom programa de sorteios!"
+  },
+  {
     "id": "REF-ASS-036",
     "level": "assistente",
     "type": "multiple_choice",
@@ -642,6 +770,22 @@
     "correctAnswer": "Se esse tipo específico de serviço está previsto como hipótese de retenção na fonte",
     "explanation": "A verificação essencial é se o serviço se enquadra em alguma das hipóteses legais específicas de retenção de IBS/CBS na fonte.",
     "pacciTip": "Antes de pagar, confere se essa prestação entra na lista de retenção, amico!"
+  },
+  {
+    "id": "REF-ASS-161",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma pessoa que presta serviço de tecnologia recebe pagamento identificado nos documentos fiscais eletrônicos sem ser contribuinte.",
+    "question": "O regulamento pode usar informações de pagamento para identificar um adquirente não contribuinte nos documentos fiscais eletrônicos?",
+    "options": [
+      "Sim, mas é garantida a opção do adquirente por outra forma de identificação",
+      "Não, isso é proibido em qualquer hipótese",
+      "Sim, e é a única forma de identificação permitida",
+      "Só é permitido para adquirentes do exterior"
+    ],
+    "correctAnswer": "Sim, mas é garantida a opção do adquirente por outra forma de identificação",
+    "explanation": "O regulamento pode prever que as informações de pagamento sejam usadas para identificar o adquirente não contribuinte nos documentos fiscais eletrônicos, garantida a opção do adquirente por outra forma de identificação.",
+    "pacciTip": "O sistema tenta facilitar identificando pelo pagamento, mas o adquirente sempre tem alternativa, tesoro!"
   },
   {
     "id": "REF-ASS-040",
@@ -724,6 +868,22 @@
     "pacciTip": "O sorriso fica por conta do dentista, o tributo já foi separado no pagamento!"
   },
   {
+    "id": "REF-ASS-162",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um consórcio de empresas está decidindo se vai optar pelo regime regular de apuração do IBS e da CBS.",
+    "question": "O consórcio é obrigado ao cadastro no CNPJ caso exerça a opção pelo regime regular da CBS e do IBS?",
+    "options": [
+      "Sim, o consórcio é obrigado ao cadastro caso exerça essa opção",
+      "Não, consórcios nunca precisam de CNPJ",
+      "Sim, mas só se tiver mais de 5 empresas",
+      "Não, apenas sociedades em conta de participação precisam"
+    ],
+    "correctAnswer": "Sim, o consórcio é obrigado ao cadastro caso exerça essa opção",
+    "explanation": "Caso exerçam a opção pelo regime regular da CBS e do IBS, o consórcio e a sociedade em conta de participação (SCP) são obrigados ao cadastro no CNPJ.",
+    "pacciTip": "Optar pelo regime regular traz junto a obrigação do CNPJ, mesmo pra estruturas como o consórcio!"
+  },
+  {
     "id": "REF-ASS-044",
     "level": "assistente",
     "type": "multiple_choice",
@@ -778,6 +938,22 @@
     "correctAnswer": false,
     "explanation": "Errado! Durante a transição, o Estado de origem ainda recebe uma parcela residual, que diminui gradualmente ano a ano até desaparecer.",
     "pacciTip": "É uma despedida gradual, não um corte seco, capisce?"
+  },
+  {
+    "id": "REF-ASS-163",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma incorporadora vende um lote residencial dentro de um loteamento novo.",
+    "question": "Qual o valor máximo do redutor de ajuste dedutível da base de cálculo na venda de um lote residencial?",
+    "options": [
+      "R$ 30.000,00 por lote residencial",
+      "R$ 100.000,00 por lote residencial",
+      "R$ 600,00 por lote residencial",
+      "Não há redutor para lotes, só para imóveis construídos"
+    ],
+    "correctAnswer": "R$ 30.000,00 por lote residencial",
+    "explanation": "Na venda de bem imóvel residencial novo, pode ser deduzido redutor social de R$ 100.000,00 por imóvel; já para lote residencial, o redutor é de R$ 30.000,00, até o limite da base de cálculo.",
+    "pacciTip": "Imóvel construído tem redutor maior (R$100 mil) que lote vazio (R$30 mil) — faz sentido, tesoro!"
   },
   {
     "id": "REF-ASS-049",
@@ -836,6 +1012,22 @@
     "pacciTip": "CBS é território da Receita Federal, sempre foi assim!"
   },
   {
+    "id": "REF-ASS-164",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "O valor do redutor social de locação residencial precisa ser atualizado com o passar dos anos.",
+    "question": "Por qual índice o redutor social de R$ 600,00 na locação residencial será atualizado?",
+    "options": [
+      "IPCA",
+      "Taxa Selic",
+      "Salário mínimo",
+      "Câmbio do dólar"
+    ],
+    "correctAnswer": "IPCA",
+    "explanation": "O valor do redutor social de R$ 600,00 na locação residencial será atualizado, a partir da data de publicação da Lei Complementar, pelo IPCA.",
+    "pacciTip": "IPCA é o índice de correção — o redutor não fica \"congelado\" no tempo, tesoro!"
+  },
+  {
     "id": "REF-ASS-053",
     "level": "assistente",
     "type": "true_false",
@@ -874,6 +1066,22 @@
     "correctAnswer": true,
     "explanation": "Correto! Testar com uma nota simulada antes da primeira operação real ajuda a identificar erros de parametrização e evita inconsistências fiscais.",
     "pacciTip": "Ensaio geral antes da estreia, tesoro! Sempre vale a pena."
+  },
+  {
+    "id": "REF-ASS-165",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa importadora processa o despacho aduaneiro de bens destinados ao mercado interno.",
+    "question": "O momento do despacho para consumo, na importação de bens materiais, é relevante para definir o quê?",
+    "options": [
+      "O momento da apuração do fato gerador do IBS e da CBS",
+      "Apenas o valor do frete a ser pago",
+      "O prazo de garantia do produto importado",
+      "A necessidade de tradução juramentada dos documentos"
+    ],
+    "correctAnswer": "O momento da apuração do fato gerador do IBS e da CBS",
+    "explanation": "O despacho para consumo — despacho aduaneiro a que são submetidos os bens destinados ao mercado interno — define o momento da apuração do fato gerador do IBS e da CBS na importação de bens materiais.",
+    "pacciTip": "O \"carimbo de liberação\" da aduana marca exatamente quando nasce o fato gerador na importação!"
   },
   {
     "id": "REF-ASS-057",
@@ -924,6 +1132,22 @@
     "correctAnswer": true,
     "explanation": "Correto! O split payment segrega o IBS/CBS automaticamente no momento do pagamento, fazendo com que o vendedor receba apenas o valor líquido.",
     "pacciTip": "A diferença na conta tem nome e sobrenome: split payment, tesoro!"
+  },
+  {
+    "id": "REF-ASS-166",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um marketplace internacional vende produtos de fornecedores estrangeiros para consumidores brasileiros, processando o pagamento diretamente.",
+    "question": "A plataforma digital pode responder pelo pagamento do IBS e da CBS relativos às operações e importações realizadas por seu intermédio?",
+    "options": [
+      "Sim, ela pode responder como responsável tributário nessas hipóteses",
+      "Não, a responsabilidade é sempre apenas do fornecedor estrangeiro",
+      "Sim, mas somente se sediada no Brasil",
+      "Não, plataformas são sempre isentas dessa responsabilidade"
+    ],
+    "correctAnswer": "Sim, ela pode responder como responsável tributário nessas hipóteses",
+    "explanation": "A plataforma digital pode figurar como responsável tributário pelo pagamento do IBS e da CBS relativos às operações e importações realizadas por seu intermédio — um mecanismo de controle do comércio eletrônico internacional.",
+    "pacciTip": "Marketplace intermediando venda internacional carrega junto a responsabilidade tributária, capito?"
   },
   {
     "id": "REF-ASS-146",
@@ -982,6 +1206,22 @@
     "pacciTip": "Cada item tem sua própria etiqueta tributária, mesmo dividindo a nota com outros produtos!"
   },
   {
+    "id": "REF-ASS-167",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber se, ao importar uma diferença de IBS ou CBS apurada depois do desembaraço, ela precisa fazer algo.",
+    "question": "Eventual diferença de IBS ou CBS devida na importação, apurada posteriormente, deve ser tratada de que forma?",
+    "options": [
+      "Recolhida conforme as regras específicas previstas em lei para essa diferença",
+      "Ignorada, pois a apuração original é sempre definitiva",
+      "Descontada automaticamente do próximo pedido de importação",
+      "Perdoada, se o valor for inferior a R$ 1.000,00"
+    ],
+    "correctAnswer": "Recolhida conforme as regras específicas previstas em lei para essa diferença",
+    "explanation": "Eventual diferença do IBS ou da CBS devida na operação ou importação deverá seguir as regras específicas previstas na legislação para tratamento e recolhimento dessa diferença.",
+    "pacciTip": "Diferença apurada depois não é \"esquecida\" — a lei já prevê como tratar esse ajuste, tesoro!"
+  },
+  {
     "id": "REF-ASS-066",
     "level": "assistente",
     "type": "true_false",
@@ -1031,6 +1271,22 @@
     ],
     "explanation": "Primeiro confirma-se a hipótese legal, depois retém-se o valor no pagamento, paga-se o líquido ao fornecedor e, por fim, recolhe-se o tributo retido ao Fisco.",
     "pacciTip": "Confirma, retém, paga o líquido, recolhe! Essa é a sequência que não falha."
+  },
+  {
+    "id": "REF-ASS-168",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um restaurante popular presta serviço de alimentação e quer confirmar se pode se beneficiar tanto do regime específico quanto de outro regime diferenciado ao mesmo tempo.",
+    "question": "O regime específico de bares e restaurantes pode ser cumulado livremente com outros regimes diferenciados?",
+    "options": [
+      "Não, salvo se houver previsão expressa em lei, seguindo a regra geral dos regimes diferenciados",
+      "Sim, sempre, sem qualquer restrição",
+      "Sim, mas só com o regime de imóveis",
+      "Não, em nenhuma hipótese, mesmo com previsão legal"
+    ],
+    "correctAnswer": "Não, salvo se houver previsão expressa em lei, seguindo a regra geral dos regimes diferenciados",
+    "explanation": "Assim como os demais regimes diferenciados, o regime de bares e restaurantes não pode ser cumulado livremente com outros regimes diferenciados, específicos ou favorecidos, salvo previsão expressa em lei.",
+    "pacciTip": "A regra de \"não cumular sem previsão legal\" vale pra praticamente todo regime diferenciado, tesoro!"
   },
   {
     "id": "REF-ASS-070",
@@ -1131,6 +1387,22 @@
     ],
     "explanation": "O cliente paga, o gateway calcula o tributo embutido, direciona essa parcela ao Fisco automaticamente e só então repassa o valor líquido à loja.",
     "pacciTip": "Paga, calcula, separa, repassa! O split payment não pula nenhuma etapa."
+  },
+  {
+    "id": "REF-ASS-169",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma seguradora presta serviços financeiros e precisa entender melhor a regra de tributação aplicável ao setor.",
+    "question": "O regime específico de serviços financeiros é o que trata da tributação de qual tipo de receita, com exceção do tratamento geral?",
+    "options": [
+      "Rendimentos financeiros",
+      "Vendas de produtos agrícolas",
+      "Prestação de serviços de transporte de carga",
+      "Locação de bens imóveis comerciais"
+    ],
+    "correctAnswer": "Rendimentos financeiros",
+    "explanation": "Rendimentos financeiros têm tratamento próprio, com exceção do disposto no regime específico de serviços financeiros — que estabelece as regras de tributação aplicáveis a esse tipo de receita.",
+    "pacciTip": "Rendimento financeiro tem \"casa própria\" na Reforma — o regime específico de serviços financeiros!"
   },
   {
     "id": "REF-ASS-074",
@@ -1238,6 +1510,22 @@
     "pacciTip": "Emite, calcula, direciona pro destino, consolida! O café segue esse trajeto certinho."
   },
   {
+    "id": "REF-ASS-170",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma pessoa física começa a alugar vários imóveis próprios com frequência e volume relevantes.",
+    "question": "Segundo o material, em que condição a pessoa física passa a ser considerada contribuinte na locação de imóveis?",
+    "options": [
+      "Quando atinge critérios de habitualidade/volume estabelecidos para o ano-calendário anterior",
+      "Assim que aluga o primeiro imóvel, sem qualquer critério",
+      "Somente se for proprietária de mais de 100 imóveis",
+      "Nunca — pessoa física jamais é contribuinte nesse setor"
+    ],
+    "correctAnswer": "Quando atinge critérios de habitualidade/volume estabelecidos para o ano-calendário anterior",
+    "explanation": "A pessoa física será contribuinte do IBS e da CBS na locação de bem imóvel quando, no ano-calendário anterior, atingir os critérios de habitualidade e volume estabelecidos na legislação.",
+    "pacciTip": "Não é o primeiro aluguel que já torna a pessoa contribuinte — existe um critério de volume no ano anterior!"
+  },
+  {
     "id": "REF-ASS-079",
     "level": "assistente",
     "type": "ordering",
@@ -1338,6 +1626,22 @@
     "pacciTip": "Um tributo de cada vez, amico! IBS com o Comitê, CBS com a Receita."
   },
   {
+    "id": "REF-ASS-171",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber a diferença de tratamento entre a alienação de um imóvel e a locação do mesmo imóvel.",
+    "question": "Comparando os dois regimes, qual operação imobiliária tem a MAIOR redução percentual de alíquota?",
+    "options": [
+      "A locação, cessão onerosa e arrendamento (70%)",
+      "A alienação e a construção civil (50%)",
+      "Ambas têm exatamente a mesma redução",
+      "Nenhuma das duas tem redução, apenas o redutor de ajuste"
+    ],
+    "correctAnswer": "A locação, cessão onerosa e arrendamento (70%)",
+    "explanation": "A locação, cessão onerosa e arrendamento de bens imóveis têm redução de 70% na alíquota, maior que a redução de 50% aplicada à alienação de imóveis e aos serviços de construção civil.",
+    "pacciTip": "Alugar tem desconto maior que vender, no regime específico de imóveis — 70% contra 50%!"
+  },
+  {
     "id": "REF-ASS-083",
     "level": "assistente",
     "type": "ordering",
@@ -1420,6 +1724,22 @@
     ],
     "explanation": "Registram-se os dados e o regime, define-se a retenção aplicável, vincula-se a tabela de alíquotas e só então se emite a primeira fatura.",
     "pacciTip": "Cadastro, retenção, alíquota, fatura! Segue essa receita e não erra."
+  },
+  {
+    "id": "REF-ASS-172",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma rede de fast-food avalia se pode aproveitar créditos de IBS e CBS relativos à compra de insumos usados no preparo dos lanches.",
+    "question": "A vedação de crédito aos adquirentes de alimentação de bares e restaurantes se aplica mesmo quando a compra não é de uso pessoal?",
+    "options": [
+      "Sim, a vedação se aplica mesmo assim, por limitação legal específica desse regime",
+      "Não, se não for uso pessoal o crédito é sempre permitido",
+      "Sim, mas apenas para compras acima de R$ 500,00",
+      "Não, essa vedação não existe na legislação"
+    ],
+    "correctAnswer": "Sim, a vedação se aplica mesmo assim, por limitação legal específica desse regime",
+    "explanation": "Os adquirentes de alimentação e bebidas fornecidas por bares e restaurantes no regime específico ficam vedados do aproveitamento do crédito, mesmo quando a aquisição não é de uso ou consumo pessoal — é uma limitação própria desse regime.",
+    "pacciTip": "Regime específico de bar/restaurante tem regra própria de vedação — nem reunião de trabalho escapa!"
   },
   {
     "id": "REF-ASS-087",
@@ -1527,6 +1847,22 @@
     "pacciTip": "Paga, identifica, direciona, deposita! O livro chega, o imposto já foi entregue antes."
   },
   {
+    "id": "REF-ASS-173",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma sociedade em conta de participação (SCP) decide não optar pelo regime regular do IBS e da CBS.",
+    "question": "Quem, dentro de uma SCP, é obrigado ao cadastro no CNPJ caso a sociedade não exerça a opção pelo regime regular?",
+    "options": [
+      "O sócio ostensivo da SCP",
+      "Apenas os sócios ocultos, nunca o ostensivo",
+      "Nenhum dos sócios precisa se cadastrar nesse caso",
+      "Só é obrigatório se a SCP tiver mais de 3 sócios"
+    ],
+    "correctAnswer": "O sócio ostensivo da SCP",
+    "explanation": "O sócio ostensivo da sociedade em conta de participação (SCP) é obrigado ao cadastro no CNPJ, na hipótese de a sociedade não exercer a opção pelo regime regular.",
+    "pacciTip": "Na SCP, quem \"aparece\" (o sócio ostensivo) carrega a obrigação do CNPJ quando não há opção pelo regular!"
+  },
+  {
     "id": "REF-ASS-092",
     "level": "assistente",
     "type": "ordering",
@@ -1612,6 +1948,22 @@
     "pacciTip": "Quem contrata, retém! O prestador só recebe o valor líquido depois."
   },
   {
+    "id": "REF-ASS-174",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa recebe uma cobrança de importação de serviço e precisa manter documentação, mesmo sem emitir documento fiscal formalmente.",
+    "question": "Mesmo nas hipóteses de dispensa de emissão de documento fiscal na importação de serviço, o que o contribuinte ainda deve fazer?",
+    "options": [
+      "Manter sob sua guarda o documento que comprove a transação ou pagamento, pelo prazo decadencial",
+      "Emitir uma declaração verbal ao fiscal responsável",
+      "Não precisa fazer nada, a dispensa é total",
+      "Pagar uma taxa adicional de regularização"
+    ],
+    "correctAnswer": "Manter sob sua guarda o documento que comprove a transação ou pagamento, pelo prazo decadencial",
+    "explanation": "O contribuinte, mesmo nas hipóteses de dispensa de emissão do documento fiscal, deve manter sob sua guarda o documento que comprove a transação ou pagamento, pelo prazo decadencial.",
+    "pacciTip": "Dispensa de emitir não é dispensa de guardar prova — o comprovante precisa ficar arquivado, tesoro!"
+  },
+  {
     "id": "REF-ASS-096",
     "level": "assistente",
     "type": "fill_blank",
@@ -1674,6 +2026,22 @@
     "correctAnswer": "federal",
     "explanation": "A CBS é um tributo federal, diferente do IBS, que é compartilhado entre Estados e Municípios.",
     "pacciTip": "Federal é CBS, compartilhado é IBS. Não troca essa etiqueta, amico!"
+  },
+  {
+    "id": "REF-ASS-175",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer entender melhor o conceito de \"redutor de ajuste\" no regime específico de bens imóveis.",
+    "question": "O que é o \"redutor de ajuste\" no regime específico de bens imóveis?",
+    "options": [
+      "O valor que pode ser deduzido da base de cálculo do IBS/CBS na alienação do imóvel",
+      "Um desconto automático de 100% do imposto",
+      "Uma multa aplicada em vendas irregulares de imóveis",
+      "O valor do ITBI pago ao município"
+    ],
+    "correctAnswer": "O valor que pode ser deduzido da base de cálculo do IBS/CBS na alienação do imóvel",
+    "explanation": "O redutor de ajuste é o valor que pode ser deduzido da base de cálculo do IBS e da CBS na alienação de imóvel — como os R$ 100.000,00 por imóvel novo ou R$ 30.000,00 por lote residencial.",
+    "pacciTip": "Redutor de ajuste é o \"abatimento\" que reduz a base antes de calcular o imposto na venda do imóvel!"
   },
   {
     "id": "REF-ASS-100",
@@ -1756,6 +2124,22 @@
     "pacciTip": "Quem decide a lista é a lei, não o dono da loja, capisce?"
   },
   {
+    "id": "REF-ASS-176",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um posto retira produtos beneficiados por regime diferenciado da lista de itens favorecidos, incluindo um produto novo em seu lugar.",
+    "question": "Por que a substituição de itens beneficiados por um regime diferenciado não entra em vigor imediatamente?",
+    "options": [
+      "Porque depende dos ajustes nas alíquotas de referência do IBS e da CBS, pra reequilibrar a arrecadação",
+      "Porque precisa de aprovação do Senado a cada substituição individual",
+      "Porque toda substituição exige uma nova Emenda Constitucional",
+      "Não há esse tipo de restrição — a substituição é sempre imediata"
+    ],
+    "correctAnswer": "Porque depende dos ajustes nas alíquotas de referência do IBS e da CBS, pra reequilibrar a arrecadação",
+    "explanation": "A alteração de operações beneficiadas por regime diferenciado (acréscimo, exclusão, substituição) só entra em vigor após os ajustes nas alíquotas de referência do IBS e da CBS, para reequilibrar a arrecadação.",
+    "pacciTip": "Mudar quem ganha benefício mexe na arrecadação — por isso a alíquota de referência precisa se ajustar antes!"
+  },
+  {
     "id": "REF-ASS-104",
     "level": "assistente",
     "type": "fill_blank",
@@ -1834,6 +2218,22 @@
     "correctAnswer": "consumido",
     "explanation": "O princípio do destino direciona a arrecadação para onde o bem ou serviço é efetivamente consumido, e não onde é produzido.",
     "pacciTip": "Segue o consumo, não a fábrica! É a lógica do destino."
+  },
+  {
+    "id": "REF-ASS-177",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma pessoa jurídica de contabilidade quer saber que tipo de \"conselho\" precisa fiscalizar sua profissão pra ter direito à redução de 30%.",
+    "question": "Para uma profissão intelectual ter direito à redução de 30% na alíquota, ela precisa estar submetida a que tipo de fiscalização?",
+    "options": [
+      "Fiscalização por conselho profissional",
+      "Fiscalização apenas do Ministério Público",
+      "Fiscalização exclusiva da Receita Federal",
+      "Nenhuma fiscalização é exigida"
+    ],
+    "correctAnswer": "Fiscalização por conselho profissional",
+    "explanation": "As profissões intelectuais de natureza científica, literária ou artística, submetidas à fiscalização por conselho profissional (como CRC, OAB, CREA), têm redução de 30% da alíquota de referência.",
+    "pacciTip": "Conselho profissional é o \"selo\" que garante o benefício de 30% às profissões intelectuais, tesoro!"
   },
   {
     "id": "REF-ASS-109",
@@ -1916,6 +2316,22 @@
     "pacciTip": "IBS é dose dupla: uma parte do Estado, outra do Município — e as duas de destino, não de origem!"
   },
   {
+    "id": "REF-ASS-178",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma pequena mercearia de bairro compra doces prontos de um fornecedor e revende sem qualquer preparo.",
+    "question": "A revenda pura de produtos alimentícios comprados prontos de terceiros, sem preparo, tem o mesmo tratamento do regime de bares e restaurantes?",
+    "options": [
+      "Não, esse tipo de revenda fica fora do regime específico de bares e restaurantes",
+      "Sim, sempre é tratada igual, com a mesma redução de 40%",
+      "Sim, mas com o dobro da redução",
+      "Não, porque revenda pura é sempre isenta"
+    ],
+    "correctAnswer": "Não, esse tipo de revenda fica fora do regime específico de bares e restaurantes",
+    "explanation": "O fornecimento de produtos alimentícios e bebidas não alcoólicas adquiridos prontos de terceiros, sem preparo no estabelecimento, não está sujeito ao regime específico de bares e restaurantes.",
+    "pacciTip": "Preparar no local é o que diferencia o regime do bar/restaurante da simples revenda de mercearia!"
+  },
+  {
     "id": "REF-ASS-113",
     "level": "assistente",
     "type": "fill_blank",
@@ -1980,6 +2396,22 @@
     "pacciTip": "Avalia a retenção antes de soltar o pagamento, tesoro!"
   },
   {
+    "id": "REF-ASS-179",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa importa componentes eletrônicos do exterior e o valor aduaneiro já embute o custo do frete internacional.",
+    "question": "Além do Imposto de Importação, o que mais costuma compor o valor aduaneiro, base de cálculo do IBS e da CBS na importação?",
+    "options": [
+      "Custos como frete e seguro internacional, entre outros componentes previstos em lei",
+      "Somente o valor do produto em moeda estrangeira, sem qualquer acréscimo",
+      "Apenas taxas bancárias de câmbio",
+      "O valor de revenda esperado no Brasil"
+    ],
+    "correctAnswer": "Custos como frete e seguro internacional, entre outros componentes previstos em lei",
+    "explanation": "A base de cálculo do IBS e da CBS na importação de bens materiais é o valor aduaneiro, que engloba o Imposto de Importação e outros custos como frete e seguro internacional, conforme a legislação aduaneira.",
+    "pacciTip": "Valor aduaneiro é \"tudo incluído\" — produto, frete, seguro e o próprio Imposto de Importação!"
+  },
+  {
     "id": "REF-ASS-117",
     "level": "assistente",
     "type": "text_input",
@@ -2028,6 +2460,22 @@
     "correctAnswer": "Comitê Gestor",
     "explanation": "O Comitê Gestor do IBS administra esse tributo de forma compartilhada entre Estados e Municípios.",
     "pacciTip": "Comitê Gestor, duas palavras que valem ouro na sua rotina fiscal!"
+  },
+  {
+    "id": "REF-ASS-180",
+    "level": "assistente",
+    "type": "multiple_choice",
+    "scenario": "Um consumidor final passa a pedir a nota fiscal sempre, e sua empresa contratante quer saber se isso pode ser incentivado oficialmente.",
+    "question": "O Comitê Gestor do IBS e a RFB podem usar sorteios como parte dos Programas de Incentivo à Cidadania Fiscal?",
+    "options": [
+      "Sim, os sorteios fazem parte desses programas de incentivo",
+      "Não, sorteios são proibidos nesse contexto",
+      "Sim, mas só uma vez por ano, no Natal",
+      "Não, apenas descontos em tributos são permitidos"
+    ],
+    "correctAnswer": "Sim, os sorteios fazem parte desses programas de incentivo",
+    "explanation": "Os Programas de Incentivo à Cidadania Fiscal podem incluir sorteios como forma de estimular os consumidores a exigirem a emissão de documentos fiscais.",
+    "pacciTip": "Pedir a nota pode virar bilhete de sorteio — um jeito lúdico de estimular a cidadania fiscal!"
   },
   {
     "id": "REF-ASS-122",

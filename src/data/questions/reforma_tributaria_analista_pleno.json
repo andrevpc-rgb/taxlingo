@@ -74,6 +74,22 @@
     "pacciTip": "Sì! Quase tudo que você compra pra trabalhar agora ajuda a gerar crédito."
   },
   {
+    "id": "REF-PL-153",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa é autuada pela Receita Federal por não ter declarado corretamente o valor de IBS devido em um período de apuração.",
+    "question": "Qual a multa aplicada, em lançamento de ofício, sobre o valor do tributo não declarado ou declarado a menor e não pago?",
+    "options": [
+      "75%",
+      "20%",
+      "33%",
+      "100%"
+    ],
+    "correctAnswer": "75%",
+    "explanation": "Aplica-se a multa de 75% nos casos de lançamento de ofício, sobre o valor do tributo não declarado ou declarado a menor e não pago/recolhido, ou sobre o valor do crédito indevido utilizado.",
+    "pacciTip": "Lançamento de ofício \"pesa a mão\": multa de 75% sobre o valor não declarado, tesoro!"
+  },
+  {
     "id": "REF-PL-006",
     "level": "analista_pleno",
     "type": "true_false",
@@ -144,6 +160,22 @@
     ],
     "explanation": "Primeiro apura-se o total de crédito, compensa-se com os débitos, identifica-se o saldo remanescente e, só então, solicita-se o ressarcimento.",
     "pacciTip": "Apura, compensa, sobra, pede de volta. Assim o dinheiro do exportador não fica esquecido!"
+  },
+  {
+    "id": "REF-PL-154",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer entender em que unidade as multas do IBS são calculadas antes de virarem reais.",
+    "question": "Em que unidade estão valoradas as penalidades relativas ao IBS, para serem atualizadas anualmente?",
+    "options": [
+      "UPF/IBS (Unidade Padrão Fiscal dos Tributos sobre Bens e Serviços)",
+      "Salários mínimos",
+      "UFIR nacional",
+      "Dólares comerciais"
+    ],
+    "correctAnswer": "UPF/IBS (Unidade Padrão Fiscal dos Tributos sobre Bens e Serviços)",
+    "explanation": "Todas as penalidades relativas ao IBS estão valoradas em UPF/IBS (Unidade Padrão Fiscal dos Tributos sobre Bens e Serviços), atualizada anualmente pelo IPCA, iniciando em R$ 200,00.",
+    "pacciTip": "UPF é a \"régua\" das multas do IBS — nasce valendo R$200 e sobe todo ano com o IPCA!"
   },
   {
     "id": "REF-PL-141",
@@ -236,6 +268,22 @@
     "pacciTip": "Fora é a palavra certa, amico! O imposto some sem se esconder dentro do preço."
   },
   {
+    "id": "REF-PL-155",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte paga integralmente o crédito tributário logo no prazo de impugnação administrativa, após um lançamento de ofício.",
+    "question": "Qual a redução máxima possível na multa de lançamento de ofício, se paga integralmente dentro do prazo de impugnação?",
+    "options": [
+      "50%",
+      "40%",
+      "30%",
+      "20%"
+    ],
+    "correctAnswer": "50%",
+    "explanation": "A multa de lançamento de ofício pode ser reduzida em 50% se o pagamento integral do crédito tributário for feito no prazo previsto para apresentação de impugnação administrativa — a maior redução disponível.",
+    "pacciTip": "Pagar rápido e à vista rende o maior desconto na multa: 50%, logo no prazo de impugnação!"
+  },
+  {
     "id": "REF-PL-015",
     "level": "analista_pleno",
     "type": "fill_blank",
@@ -298,6 +346,22 @@
     "pacciTip": "Ressarcimento é a palavra do dia, tesoro! Decora ela bem."
   },
   {
+    "id": "REF-PL-156",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte cancela um documento fiscal depois que o fato gerador da operação já havia ocorrido.",
+    "question": "Qual a multa aplicável ao cancelamento de documento fiscal APÓS a ocorrência do fato gerador?",
+    "options": [
+      "66% do valor do tributo de referência",
+      "33% do valor do tributo de referência",
+      "75% do valor do tributo de referência",
+      "Não há multa nesse caso"
+    ],
+    "correctAnswer": "66% do valor do tributo de referência",
+    "explanation": "Cancelar documento fiscal após a ocorrência do fato gerador gera multa de 66% do valor do tributo de referência; já o cancelamento após o prazo normal (mas antes do fato gerador) gera multa de 33%.",
+    "pacciTip": "Cancelar depois que o imposto já \"nasceu\" custa o dobro (66%) de cancelar fora do prazo comum (33%)!"
+  },
+  {
     "id": "REF-PL-020",
     "level": "analista_pleno",
     "type": "text_input",
@@ -354,6 +418,22 @@
     "correctAnswer": "Gera direito a crédito, pois é uma aquisição vinculada à atividade da empresa",
     "explanation": "A não cumulatividade plena amplia o crédito também para serviços contratados que estejam vinculados à atividade da empresa, como a limpeza das instalações.",
     "pacciTip": "Escritório limpo e crédito em dia, capisce? Serviço vinculado à atividade também conta."
+  },
+  {
+    "id": "REF-PL-157",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa deixa de entregar um arquivo eletrônico obrigatório de escrituração fiscal, sem sequer ter sido intimada.",
+    "question": "Qual multa se aplica ao contribuinte que deixa de entregar arquivo eletrônico obrigatório, independentemente de intimação fiscal?",
+    "options": [
+      "20 UPF por período de apuração",
+      "30 UPF por período de apuração",
+      "75 UPF por período de apuração",
+      "1 UPF por período de apuração"
+    ],
+    "correctAnswer": "20 UPF por período de apuração",
+    "explanation": "O contribuinte que deixa de entregar, registrar ou disponibilizar arquivos eletrônicos obrigatórios incorre em multa de 20 UPF por período de apuração, independentemente de intimação fiscal — que sobe para 30 UPF se houver intimação fiscal.",
+    "pacciTip": "Não entregou o arquivo? 20 UPF de cara — e sobe pra 30 UPF se o Fisco já tiver cobrado antes!"
   },
   {
     "id": "REF-PL-023",
@@ -436,6 +516,22 @@
     "pacciTip": "Por fora é soma limpa, tesoro! Nada de imposto se escondendo dentro do próprio cálculo."
   },
   {
+    "id": "REF-PL-158",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa esquece de comunicar a inutilização de um número de documento fiscal eletrônico dentro do prazo.",
+    "question": "Qual a multa para quem deixa de comunicar, no prazo, a inutilização de número de documento fiscal eletrônico?",
+    "options": [
+      "1 UPF por número",
+      "20 UPF por período de apuração",
+      "66% do valor do tributo",
+      "30 UPF por documento"
+    ],
+    "correctAnswer": "1 UPF por número",
+    "explanation": "Deixar de comunicar, ou comunicar fora do prazo, a inutilização de número de documento fiscal eletrônico incorre em multa de 1 UPF por número.",
+    "pacciTip": "Multa pequena, mas existe — 1 UPF por número de documento não comunicado a tempo!"
+  },
+  {
     "id": "REF-PL-028",
     "level": "analista_pleno",
     "type": "multiple_choice",
@@ -514,6 +610,22 @@
     "correctAnswer": "O local do estabelecimento principal do adquirente (matriz)",
     "explanation": "Nas operações com energia elétrica que não envolvam efetivo consumo (como transmissão, geração, distribuição ou comercialização), o local do fornecimento é o do estabelecimento principal do adquirente, conforme o § 4º do art. 11.",
     "pacciTip": "Consumo de verdade tem um local, mas operações \"de bastidor\" na cadeia de energia seguem o adquirente principal!"
+  },
+  {
+    "id": "REF-PL-159",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um destinatário de mercadoria recebe um documento fiscal eletrônico de terceiro e simplesmente não faz nada com ele.",
+    "question": "O destinatário que deixa de confirmar a operação (Manifestação do Destinatário) de um DF-e recebido incorre em qual penalidade?",
+    "options": [
+      "1 UPF/IBS por documento",
+      "Multa de 75% sobre o valor da operação",
+      "20 UPF por período de apuração",
+      "Nenhuma penalidade, é uma faculdade do destinatário"
+    ],
+    "correctAnswer": "1 UPF/IBS por documento",
+    "explanation": "O destinatário que deixa de confirmar a operação, informar desconhecimento ou informar devolução de bens relativos a documento fiscal eletrônico emitido por terceiro incorre em 1 UPF/IBS por documento — é a multa do evento de Manifestação do Destinatário.",
+    "pacciTip": "A Manifestação do Destinatário não é \"opcional\" — ignorar o evento também gera multa, tesoro!"
   },
   {
     "id": "REF-PL-032",
@@ -596,6 +708,22 @@
     "pacciTip": "Comprou máquina pra caramba num mês só? Pode sobrar crédito, tesoro, mesmo vendendo aqui dentro!"
   },
   {
+    "id": "REF-PL-160",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um auditor fiscal explica que a responsabilidade por infrações do IBS não depende de o contribuinte ter agido de má-fé.",
+    "question": "A responsabilidade por infrações da legislação do IBS depende da intenção do agente?",
+    "options": [
+      "Não, independe da intenção do agente ou da efetividade dos efeitos do ato",
+      "Sim, só há infração se houver dolo comprovado",
+      "Sim, mas só em casos de reincidência",
+      "Não, mas só se o valor for superior a R$ 100.000,00"
+    ],
+    "correctAnswer": "Não, independe da intenção do agente ou da efetividade dos efeitos do ato",
+    "explanation": "A responsabilidade por infrações da legislação do IBS independe da intenção do agente ou do responsável, e da efetividade, natureza e extensão dos efeitos do ato — é uma responsabilidade objetiva.",
+    "pacciTip": "Não precisa \"querer\" errar pra ser multado — a responsabilidade aqui é objetiva, tesoro!"
+  },
+  {
     "id": "REF-PL-037",
     "level": "analista_pleno",
     "type": "multiple_choice",
@@ -676,6 +804,22 @@
     "pacciTip": "Seguro também tem regra própria de crédito, amico! Vale checar antes de fechar a apólice."
   },
   {
+    "id": "REF-PL-161",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um funcionário de uma empresa se beneficia diretamente de uma infração cometida por seu empregador, mesmo sem ter participado dela diretamente.",
+    "question": "Quem responde pela infração da legislação do IBS, segundo a regra geral?",
+    "options": [
+      "Todos os que tenham concorrido para a prática da infração ou dela se beneficiado, conjunta ou isoladamente",
+      "Apenas o representante legal da empresa, isoladamente",
+      "Apenas quem assinou o documento fiscal irregular",
+      "Ninguém, se a infração for involuntária"
+    ],
+    "correctAnswer": "Todos os que tenham concorrido para a prática da infração ou dela se beneficiado, conjunta ou isoladamente",
+    "explanation": "Respondem pela infração, conjunta ou isoladamente, todos os que tenham concorrido de qualquer forma para a sua prática, ou que dela se tenham beneficiado.",
+    "pacciTip": "Quem colabora OU quem se beneficia da infração pode responder — não precisa ser só quem \"apertou o botão\"!"
+  },
+  {
     "id": "REF-PL-144",
     "level": "analista_pleno",
     "type": "multiple_choice",
@@ -750,6 +894,22 @@
     "pacciTip": "Sì, tesoro! Cartucho de impressora agora também ajuda no crédito."
   },
   {
+    "id": "REF-PL-162",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um Estado promove uma fiscalização e identifica uma infração de IBS cometida por uma empresa local.",
+    "question": "A quem pertence o valor das penalidades de IBS aplicadas numa fiscalização?",
+    "options": [
+      "Aos entes federativos que promoveram a fiscalização, observada a proporcionalidade legal",
+      "Sempre à União, independentemente de quem fiscalizou",
+      "Ao Comitê Gestor do IBS, integralmente",
+      "Ao contribuinte, como forma de compensação futura"
+    ],
+    "correctAnswer": "Aos entes federativos que promoveram a fiscalização, observada a proporcionalidade legal",
+    "explanation": "O valor integrante do crédito tributário correspondente às penalidades pertence aos entes federativos que promoverem a fiscalização, observada a proporcionalidade prevista na legislação do IBS.",
+    "pacciTip": "Quem fiscaliza \"fica\" com a penalidade — dentro da proporcionalidade que a lei já define, tesoro!"
+  },
+  {
     "id": "REF-PL-046",
     "level": "analista_pleno",
     "type": "true_false",
@@ -798,6 +958,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O direito a crédito decorre do vínculo do bem com a atividade da empresa e da tributação incidente na operação, não da origem nacional ou importada do bem.",
     "pacciTip": "Origem do bem não é o que decide o crédito, tesoro! O que importa é o vínculo com o negócio."
+  },
+  {
+    "id": "REF-PL-163",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber se, mesmo com a apuração assistida automatizada, o Fisco ainda pode autuar diretamente um contribuinte.",
+    "question": "A existência da apuração assistida afasta a possibilidade de lançamento de ofício pelo Fisco?",
+    "options": [
+      "Não, o fato de existir apuração assistida não afasta a prerrogativa de lançamento de ofício",
+      "Sim, a apuração assistida substitui totalmente a fiscalização",
+      "Sim, mas só para empresas do Simples Nacional",
+      "Não, mas apenas nos primeiros 2 anos da Reforma"
+    ],
+    "correctAnswer": "Não, o fato de existir apuração assistida não afasta a prerrogativa de lançamento de ofício",
+    "explanation": "O fato de existir a apuração assistida não afasta a prerrogativa de lançamento de ofício do Fisco — a automação ajuda na apuração, mas não substitui o poder de fiscalizar e autuar.",
+    "pacciTip": "Sistema automatizado não \"aposenta\" o fiscal — o lançamento de ofício continua sendo possível!"
   },
   {
     "id": "REF-PL-051",
@@ -856,6 +1032,22 @@
     "pacciTip": "Sì! Imposto sobre imposto é exatamente o efeito cascata que o novo modelo ataca."
   },
   {
+    "id": "REF-PL-164",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa participa de uma licitação pública e arremata um bem móvel apreendido pelo poder público.",
+    "question": "Nesse tipo de licitação de bem apreendido, qual é o local do fornecimento considerado, segundo o cIndOp?",
+    "options": [
+      "O local onde se encontra o bem móvel material",
+      "O domicílio do arrematante, sempre",
+      "A sede do órgão público licitante",
+      "A capital do estado onde ocorreu o leilão"
+    ],
+    "correctAnswer": "O local onde se encontra o bem móvel material",
+    "explanation": "Na licitação promovida pelo poder público de bem apreendido ou abandonado, ou em leilão judicial, o local do fornecimento é o local onde se encontra o bem móvel material (cIndOp 010104).",
+    "pacciTip": "Bem apreendido em licitação segue a regra simples: onde o bem está fisicamente, é lá que \"mora\" o imposto!"
+  },
+  {
     "id": "REF-PL-055",
     "level": "analista_pleno",
     "type": "true_false",
@@ -906,6 +1098,22 @@
     "pacciTip": "Tamanho da empresa não é o que decide o ressarcimento, tesoro! A regra vale pra todo mundo que se enquadra."
   },
   {
+    "id": "REF-PL-165",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa loca vários veículos de forma centralizada para seus escritórios em diferentes estados, a partir da matriz.",
+    "question": "Na locação de bem móvel material centralizada por contribuinte com mais de um estabelecimento, qual costuma ser o local do fornecimento?",
+    "options": [
+      "O local do domicílio principal do adquirente (estabelecimento matriz)",
+      "O local de cada filial individualmente, sempre",
+      "O local da locadora do veículo",
+      "A capital do estado da matriz, independente de regras"
+    ],
+    "correctAnswer": "O local do domicílio principal do adquirente (estabelecimento matriz)",
+    "explanation": "Na locação de bem móvel material em aquisições realizadas de forma centralizada por contribuinte com mais de um estabelecimento (não sujeitas a vedação de crédito), o local é o do domicílio principal do adquirente — a matriz.",
+    "pacciTip": "Compra centralizada na matriz simplifica: o local do imposto segue a matriz, não cada filial!"
+  },
+  {
     "id": "REF-PL-060",
     "level": "analista_pleno",
     "type": "true_false",
@@ -950,6 +1158,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O ressarcimento depende de solicitação formal da empresa ao Fisco, ainda que o novo modelo preveja prazos mais ágeis de análise e devolução.",
     "pacciTip": "Ressarcimento não cai do céu, tesoro! Precisa pedir direitinho pro Fisco."
+  },
+  {
+    "id": "REF-PL-166",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma concessionária vende um veículo automotor terrestre para um cliente final.",
+    "question": "Na aquisição de veículo automotor terrestre, aquático ou aéreo, qual é o local do fornecimento considerado?",
+    "options": [
+      "O domicílio principal do destinatário",
+      "Sempre a sede da fábrica do veículo",
+      "O local do primeiro emplacamento",
+      "A capital do estado do fabricante"
+    ],
+    "correctAnswer": "O domicílio principal do destinatário",
+    "explanation": "Na aquisição de veículo automotor terrestre, aquático ou aéreo, o local do fornecimento a ser identificado no documento fiscal é o domicílio principal do destinatário.",
+    "pacciTip": "Carro, barco ou avião — o local do imposto segue o domicílio de quem recebe o bem, tesoro!"
   },
   {
     "id": "REF-PL-063",
@@ -1000,6 +1224,22 @@
     "correctAnswer": false,
     "explanation": "Errado! O setor financeiro está sujeito a regime específico, com regras próprias de crédito que costumam ser mais restritivas do que as do regime geral.",
     "pacciTip": "Juro de banco não segue a régua do regime geral, tesoro! Regime financeiro é mais restrito."
+  },
+  {
+    "id": "REF-PL-167",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um cliente compra uma peça defeituosa que apresenta irregularidade por falta de documentação fiscal na sua origem.",
+    "question": "Na constatação de irregularidade de bem móvel material por falta de documentação fiscal, qual é o local do fornecimento considerado?",
+    "options": [
+      "O local onde se encontra o bem móvel material (local da retirada)",
+      "O domicílio do consumidor final, sempre",
+      "A sede da empresa fiscalizadora",
+      "O local de fabricação original do bem"
+    ],
+    "correctAnswer": "O local onde se encontra o bem móvel material (local da retirada)",
+    "explanation": "Na constatação de irregularidade pela falta de documentação fiscal ou pelo acobertamento por documentação inidônea, o local do fornecimento é o local onde se encontra o bem móvel material — o local da retirada.",
+    "pacciTip": "Mercadoria irregular \"aponta\" pro local onde ela realmente está — a retirada define o imposto!"
   },
   {
     "id": "REF-PL-068",
@@ -1089,6 +1329,22 @@
     "correctAnswer": "Pelo pagador",
     "explanation": "Transações iniciadas pelo pagador incluem a transferência bancária manual e o PIX em que o próprio pagador define, sem intervenção prévia do recebedor, o valor e o destinatário.",
     "pacciTip": "Quem decide sozinho valor e destino do pagamento é o pagador que está no controle da transação!"
+  },
+  {
+    "id": "REF-PL-168",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber se pode reduzir o valor da multa de lançamento de ofício optando por parcelar a dívida, em vez de pagar à vista.",
+    "question": "Qual redução se aplica à multa se o contribuinte optar por PARCELAR o crédito tributário no prazo de impugnação administrativa?",
+    "options": [
+      "40%",
+      "50%",
+      "30%",
+      "20%"
+    ],
+    "correctAnswer": "40%",
+    "explanation": "Se o contribuinte optar por parcelar (em vez de pagar integralmente à vista) o crédito tributário no prazo de impugnação administrativa, a redução da multa é de 40% — menor que os 50% do pagamento integral à vista.",
+    "pacciTip": "Parcelar rende desconto (40%), mas menor que pagar tudo de uma vez (50%) — a pressa vale a pena!"
   },
   {
     "id": "REF-PL-072",
@@ -1196,6 +1452,22 @@
     "pacciTip": "Primeiro o problema, depois a solução, tesoro! Assim a diretoria entende o cálculo por fora."
   },
   {
+    "id": "REF-PL-169",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa perde o prazo de impugnação administrativa, mas paga integralmente o crédito tributário antes de ser inscrita em dívida ativa.",
+    "question": "Nesse caso, qual redução ainda é possível na multa de lançamento de ofício?",
+    "options": [
+      "30%",
+      "50%",
+      "40%",
+      "20%"
+    ],
+    "correctAnswer": "30%",
+    "explanation": "Se o pagamento integral do crédito tributário ocorrer após o prazo de impugnação, mas antes da inscrição em dívida ativa, a redução da multa cai para 30% (ou 20% no caso de parcelamento nessa mesma janela).",
+    "pacciTip": "Perdeu o prazo de impugnação, mas ainda não foi inscrito em dívida ativa? Ainda dá pra ganhar 30% de desconto!"
+  },
+  {
     "id": "REF-PL-077",
     "level": "analista_pleno",
     "type": "ordering",
@@ -1301,6 +1573,22 @@
     "pacciTip": "Apura, compensa, confirma, pede, tesoro! O ciclo do exportador não pode travar."
   },
   {
+    "id": "REF-PL-170",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa foi flagrada em esquema de simulação de operações para reduzir artificialmente o IBS devido.",
+    "question": "Em casos de sonegação, fraude, simulação ou conluio, o que acontece com a multa de lançamento de ofício?",
+    "options": [
+      "A multa será majorada, independentemente de outras penalidades cabíveis",
+      "A multa é reduzida pela metade, como incentivo à regularização",
+      "Não há qualquer alteração na multa padrão de 75%",
+      "A multa é substituída por advertência simples"
+    ],
+    "correctAnswer": "A multa será majorada, independentemente de outras penalidades cabíveis",
+    "explanation": "Nos casos de sonegação, fraude, simulação ou conluio, a multa será majorada, independentemente de outras penalidades administrativas ou criminais cabíveis.",
+    "pacciTip": "Fraude e simulação pesam mais a mão do Fisco — a multa sobe além do padrão de 75%, tesoro!"
+  },
+  {
     "id": "REF-PL-148",
     "level": "analista_pleno",
     "type": "multiple_choice",
@@ -1399,6 +1687,22 @@
     ],
     "explanation": "Identificam-se os meses críticos, apura-se o crédito gerado, compara-se com os débitos e trata-se o saldo remanescente conforme o caso.",
     "pacciTip": "Sazonalidade pede rotina firme, tesoro! Identifica, apura, compara, resolve."
+  },
+  {
+    "id": "REF-PL-171",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa exportadora de serviços de tecnologia presta consultoria remota para clientes em outros países.",
+    "question": "A exportação de serviços, assim como a de bens, tem o mesmo tratamento de imunidade do IBS e da CBS?",
+    "options": [
+      "Sim, exportações de bens E serviços são imunes ao IBS e à CBS",
+      "Não, só bens materiais têm imunidade na exportação",
+      "Sim, mas só serviços prestados presencialmente no exterior",
+      "Não, serviços exportados pagam alíquota integral"
+    ],
+    "correctAnswer": "Sim, exportações de bens E serviços são imunes ao IBS e à CBS",
+    "explanation": "Exportações de bens E serviços para o exterior são imunes à CBS e ao IBS — os exportadores, sejam de bens ou de serviços, não pagam esses impostos e ainda podem usar créditos das compras internas.",
+    "pacciTip": "A imunidade de exportação não escolhe: vale tanto pra bens quanto pra serviços exportados, tesoro!"
   },
   {
     "id": "REF-PL-086",
@@ -1506,6 +1810,22 @@
     "pacciTip": "Negocia, identifica, apura, ajusta, tesoro! Imóvel também segue seu próprio fluxo."
   },
   {
+    "id": "REF-PL-172",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma pessoa jurídica recebe uma intimação fiscal cobrando arquivos eletrônicos já entregues fora do prazo original.",
+    "question": "Se o contribuinte entrega o arquivo eletrônico com atraso, mas somente após intimação fiscal, qual multa se aplica?",
+    "options": [
+      "30 UPF por período de apuração e a cada intimação fiscal",
+      "20 UPF por período de apuração, sem qualquer agravamento",
+      "1 UPF por período de apuração",
+      "75% do valor do tributo devido"
+    ],
+    "correctAnswer": "30 UPF por período de apuração e a cada intimação fiscal",
+    "explanation": "A entrega em desacordo com prazo fixado em intimação fiscal gera multa de 30 UPF por período de apuração e a cada intimação fiscal — mais grave que a multa de 20 UPF sem intimação.",
+    "pacciTip": "Precisar ser intimado pra cumprir a obrigação custa mais caro: 30 UPF em vez de 20 UPF!"
+  },
+  {
     "id": "REF-PL-091",
     "level": "analista_pleno",
     "type": "ordering",
@@ -1596,6 +1916,22 @@
     "pacciTip": "Vinculada é a palavra-chave, tesoro! O que importa é a ligação com o negócio."
   },
   {
+    "id": "REF-PL-173",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer entender melhor a diferença entre o cancelamento de um documento antes e depois do prazo normal de cancelamento.",
+    "question": "Qual a multa para o cancelamento de documento fiscal APÓS o prazo normal de cancelamento (mas antes do fato gerador)?",
+    "options": [
+      "33% do valor do tributo de referência",
+      "66% do valor do tributo de referência",
+      "20 UPF por período de apuração",
+      "Não há multa nesse caso específico"
+    ],
+    "correctAnswer": "33% do valor do tributo de referência",
+    "explanation": "Cancelar documento fiscal após o prazo normal previsto na legislação (mas antes da ocorrência do fato gerador) gera multa de 33% do valor do tributo de referência — metade da multa aplicável após o fato gerador (66%).",
+    "pacciTip": "Cancelar fora do prazo já custa 33% — mas se o fato gerador já ocorreu, dobra pra 66%!"
+  },
+  {
     "id": "REF-PL-095",
     "level": "analista_pleno",
     "type": "fill_blank",
@@ -1676,6 +2012,22 @@
     "pacciTip": "Base é a palavra certa, tesoro! O tributo não se mistura na base do cálculo."
   },
   {
+    "id": "REF-PL-174",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Um contribuinte não confirma nem informa desconhecimento sobre uma NF-e recebida de um fornecedor, deixando o evento de manifestação em aberto por meses.",
+    "question": "Esse tipo de omissão contínua do destinatário pode gerar multa mesmo que o documento fiscal esteja correto?",
+    "options": [
+      "Sim, a multa de 1 UPF/IBS por documento se aplica pela omissão em si, independente do conteúdo do documento",
+      "Não, só há multa se o documento tiver erro de valor",
+      "Sim, mas só se o valor da nota for superior a R$ 10.000,00",
+      "Não, a Manifestação do Destinatário é sempre facultativa"
+    ],
+    "correctAnswer": "Sim, a multa de 1 UPF/IBS por documento se aplica pela omissão em si, independente do conteúdo do documento",
+    "explanation": "A multa de 1 UPF/IBS por documento se aplica pela simples omissão do destinatário em confirmar, informar desconhecimento ou informar devolução — independentemente de o documento em si estar correto ou não.",
+    "pacciTip": "A obrigação é de \"responder\", não de \"achar erro\" — a omissão em si já gera a multa, tesoro!"
+  },
+  {
     "id": "REF-PL-100",
     "level": "analista_pleno",
     "type": "fill_blank",
@@ -1738,6 +2090,22 @@
     "correctAnswer": "CST 620 (Tributação Monofásica)",
     "explanation": "O CST 620 representa o Regime Específico dos Combustíveis, no qual o IBS e a CBS são recolhidos em uma única etapa da cadeia (tributação monofásica).",
     "pacciTip": "Combustível é tributado uma vez só, lá atrás na cadeia — por isso o nome \"monofásica\"!"
+  },
+  {
+    "id": "REF-PL-175",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de comércio eletrônico vende para consumidores finais em vários estados e quer confirmar a regra geral de local do fornecimento para \"demais bens\".",
+    "question": "Para \"demais bens\" em operações onerosas não especificadas em outros indicadores, qual é o local do fornecimento padrão?",
+    "options": [
+      "O domicílio principal do adquirente residente ou domiciliado no país",
+      "Sempre a sede do vendedor",
+      "O local do centro de distribuição mais próximo",
+      "A capital do estado com maior população"
+    ],
+    "correctAnswer": "O domicílio principal do adquirente residente ou domiciliado no país",
+    "explanation": "Para demais operações com bens não especificadas em outros indicadores, em operações onerosas, o local do fornecimento é o domicílio principal do adquirente residente ou domiciliado no País (cIndOp 100501).",
+    "pacciTip": "Quando não há regra específica pro bem, cai na regra geral: domicílio de quem compra, tesoro!"
   },
   {
     "id": "REF-PL-103",
@@ -1820,6 +2188,22 @@
     "pacciTip": "Credor é a palavra, tesoro! Sobra de crédito também acontece em mês de compra grande."
   },
   {
+    "id": "REF-PL-176",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa entrega uma bonificação a um cliente e depois muda de ideia, tentando vincular essa bonificação a um desconto futuro condicional.",
+    "question": "Se a bonificação passar a depender de evento posterior, ela continua sendo não tributada?",
+    "options": [
+      "Não, a não tributação exige que a bonificação NÃO dependa de evento posterior",
+      "Sim, bonificação nunca é tributada, com ou sem condição",
+      "Sim, desde que o evento futuro seja informado em até 30 dias",
+      "Não, bonificação é sempre tributada, mesmo sem condição"
+    ],
+    "correctAnswer": "Não, a não tributação exige que a bonificação NÃO dependa de evento posterior",
+    "explanation": "A não tributação das bonificações exige que elas constem do documento fiscal e NÃO dependam de evento posterior — se passar a depender de uma condição futura, essa característica de \"desconto embutido\" se perde.",
+    "pacciTip": "Bonificação \"condicionada\" a evento futuro perde o tratamento especial — tem que ser incondicional!"
+  },
+  {
     "id": "REF-PL-108",
     "level": "analista_pleno",
     "type": "fill_blank",
@@ -1898,6 +2282,22 @@
     "correctAnswer": "combustíveis",
     "explanation": "Combustíveis estão entre os setores com regime específico de tributação, com regras próprias de apuração e crédito.",
     "pacciTip": "Combustíveis, sempre eles, tesoro! Regime especial de ponta a ponta."
+  },
+  {
+    "id": "REF-PL-177",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma revendedora de veículos vende um carro usado como parte de pagamento (troca) em uma nova aquisição.",
+    "question": "Nessa operação de troca (dação em pagamento de veículo), qual costuma ser o local de fornecimento considerado, segundo o cIndOp de aquisição de veículos?",
+    "options": [
+      "O domicílio principal do destinatário",
+      "A sede da revendedora, sempre",
+      "O local de fabricação do veículo",
+      "O local do primeiro proprietário do veículo"
+    ],
+    "correctAnswer": "O domicílio principal do destinatário",
+    "explanation": "Na aquisição de veículo automotor terrestre, aquático ou aéreo, o local do fornecimento a ser identificado no documento fiscal é o domicílio principal do destinatário, independente da forma de pagamento usada na operação.",
+    "pacciTip": "Não importa se pagou em dinheiro ou trocou por outro carro — o local segue sempre o destinatário!"
   },
   {
     "id": "REF-PL-151",
@@ -1980,6 +2380,22 @@
     "pacciTip": "Específicos, sempre eles, tesoro! Cada setor com sua regrinha de crédito."
   },
   {
+    "id": "REF-PL-178",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa exportadora de bens e serviços quer confirmar se, além da imunidade, ela também precisa cumprir alguma obrigação acessória.",
+    "question": "A imunidade nas exportações dispensa totalmente o exportador de emitir documentos fiscais?",
+    "options": [
+      "Não, a obrigação de emissão de documentos fiscais eletrônicos aplica-se inclusive às exportações",
+      "Sim, exportação é totalmente dispensada de qualquer documento fiscal",
+      "Não, mas só para exportações acima de US$ 1 milhão",
+      "Sim, mas apenas para exportação de serviços, não de bens"
+    ],
+    "correctAnswer": "Não, a obrigação de emissão de documentos fiscais eletrônicos aplica-se inclusive às exportações",
+    "explanation": "O sujeito passivo do IBS e da CBS, ao realizar operações com bens ou serviços, inclusive exportações, deve emitir documento fiscal eletrônico — a imunidade não dispensa a obrigação acessória de emitir o documento.",
+    "pacciTip": "Imunidade tributária não é dispensa de obrigação acessória — o documento fiscal continua sendo exigido!"
+  },
+  {
     "id": "REF-PL-117",
     "level": "analista_pleno",
     "type": "text_input",
@@ -2028,6 +2444,22 @@
     "correctAnswer": "vínculo",
     "explanation": "O vínculo com a atividade da empresa é o critério que determina o direito ao crédito de IBS/CBS na não cumulatividade plena.",
     "pacciTip": "Vínculo de novo, tesoro! Essa palavra é a chave-mestra do crédito."
+  },
+  {
+    "id": "REF-PL-179",
+    "level": "analista_pleno",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa quer saber se penalidades de IBS podem ser aplicadas cumulativamente com penalidades de CBS na mesma infração.",
+    "question": "Como o IBS e a CBS são tributos distintos (subnacional e federal), as regras de infração e penalidade tendem a ser tratadas de que forma?",
+    "options": [
+      "De forma paralela, cada tributo com sua própria legislação de infrações e penalidades",
+      "Sempre de forma unificada numa única multa combinada",
+      "A CBS nunca tem penalidades próprias, só o IBS",
+      "O IBS nunca tem penalidades próprias, só a CBS"
+    ],
+    "correctAnswer": "De forma paralela, cada tributo com sua própria legislação de infrações e penalidades",
+    "explanation": "Como o IBS (subnacional) e a CBS (federal) são tributos distintos com legislações próprias, as infrações e penalidades tendem a ser tratadas de forma paralela — o material do curso, por exemplo, foca nas infrações relativas ao IBS especificamente.",
+    "pacciTip": "IBS e CBS são \"irmãos\" na cobrança, mas cada um com seu próprio capítulo de infrações e penalidades!"
   },
   {
     "id": "REF-PL-122",
