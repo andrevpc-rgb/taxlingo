@@ -444,6 +444,23 @@ grant execute on function public.get_company_leaderboard(uuid) to authenticated;
 
 comment on function public.get_company_leaderboard(uuid) is 'Ranking da Empresa: qualquer colaborador autenticado pode ver XP dos colegas da PRÓPRIA empresa (guard embutido na query — pedir o company_id de outra empresa sempre volta vazio). Exclui role=master: a conta do fundador não compete no ranking.';
 
+-- Lead "morno" capturado em public/comece.html (landing de topo de funil
+-- para contadores/donos de escritório vindos do Instagram) — via a Edge
+-- Function capture-marketing-lead. Diferente de pending_signups, não tem
+-- CNPJ nem cobrança automática: é só um contato pro time comercial fazer
+-- o follow-up manual via WhatsApp.
+create table if not exists public.marketing_leads (
+  id uuid primary key default gen_random_uuid(),
+  full_name text not null,
+  email text not null,
+  phone text not null,
+  company_name text,
+  source text,
+  created_at timestamptz not null default now()
+);
+
+comment on table public.marketing_leads is 'Leads de topo de funil (ex.: landing pages de tráfego pago/orgânico) aguardando contato comercial manual — sem CNPJ nem cobrança, diferente de pending_signups.';
+
 -- =============================================================================
 -- Row Level Security
 -- =============================================================================
@@ -461,6 +478,11 @@ alter table public.subscriptions enable row level security;
 -- carrega e-mail/CPF-CNPJ de gente que ainda nem tem conta, não deve ser
 -- legível por nenhum papel autenticado comum.
 alter table public.pending_signups enable row level security;
+-- marketing_leads segue o mesmo raciocínio de pending_signups: só a Edge
+-- Function capture-marketing-lead (service_role key, ignora RLS) tem
+-- motivo pra gravar/ler aqui — carrega e-mail/WhatsApp de gente que nem
+-- visitante autenticado é, não deve ser legível por nenhum papel comum.
+alter table public.marketing_leads enable row level security;
 
 -- companies: leitura pública (necessário pra validar company_code no cadastro,
 -- antes mesmo de existir sessão). Nenhuma escrita pelo cliente.
