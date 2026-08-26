@@ -19,6 +19,10 @@
 //     empresa invisível de 1 vaga + conta de usuário + 30 dias de acesso.
 //   - "create_corporate": cria (ou ativa, se pendingSignupId for passado)
 //     uma empresa Corporativa com código, limite de vagas e vencimento.
+//   - "list_users" / "create_user" / "update_user_company": aba "Gerenciar
+//     Usuários" — lista todo mundo (todas as empresas), cria um colaborador
+//     manualmente já confirmado, ou reatribui um usuário existente pra
+//     outra empresa.
 //
 // Deploy:
 //   supabase functions deploy admin-provision
@@ -288,6 +292,113 @@ async function setUserRole(supabaseService, { email, role }) {
   return { email: normalizedEmail, role, companyName: user.companies?.name ?? null };
 }
 
+// Aba "Gerenciar Usuários" do Painel de Contingência: lista todo mundo, de
+// todas as empresas (o master enxerga o TaxLingo inteiro, diferente do
+// Painel do Gestor comum, que só vê a própria empresa). Limite de 500 é só
+// uma trava de bom senso — não existe paginação nessa tela ainda.
+async function listUsers(supabaseService) {
+  const { data, error } = await supabaseService
+    .from('users')
+    .select('id, full_name, email, job_title, role, company_id, companies(name, company_code)')
+    .order('full_name', { ascending: true })
+    .limit(500);
+  if (error) throw error;
+  return data;
+}
+
+// Cria um colaborador manualmente (sem o convidado precisar se cadastrar
+// sozinho com o código da empresa) — mesmo mecanismo de account criada já
+// confirmada (email_confirm: true) do resto do painel. Sempre nasce
+// role='employee'; o master promove depois pelo SetRoleForm se precisar.
+async function createUser(supabaseService, { fullName, email, password, jobTitle, companyId }) {
+  const normalizedFullName = String(fullName ?? '').trim();
+  const normalizedEmail = String(email ?? '').trim().toLowerCase();
+  const normalizedPassword = String(password ?? '');
+  const normalizedJobTitle = String(jobTitle ?? '').trim() || null;
+
+  if (!normalizedFullName) throw new Error('Informe o nome completo.');
+  if (!normalizedEmail || !normalizedEmail.includes('@')) throw new Error('Informe um e-mail válido.');
+  if (!normalizedPassword || normalizedPassword.length < 4) {
+    throw new Error('A senha inicial precisa ter pelo menos 4 caracteres.');
+  }
+  if (!companyId) throw new Error('Selecione a empresa.');
+
+  const { data: company, error: companyError } = await supabaseService
+    .from('companies')
+    .select('id, name')
+    .eq('id', companyId)
+    .maybeSingle();
+  if (companyError) throw companyError;
+  if (!company) throw new Error('Empresa não encontrada.');
+
+  const { data: created, error: createError } = await supabaseService.auth.admin.createUser({
+    email: normalizedEmail,
+    password: normalizedPassword,
+    email_confirm: true,
+    user_metadata: {
+      full_name: normalizedFullName,
+      job_title: normalizedJobTitle,
+      company_id: company.id,
+      avatar_url: '🙂',
+    },
+  });
+  if (createError) {
+    if (createError.message?.includes('already been registered')) {
+      throw new Error('Já existe uma conta com esse e-mail.');
+    }
+    // Erro do trigger handle_new_auth_user() (empresa vencida/lotada) chega
+    // aqui embrulhado, já com a mensagem amigável definida lá no banco.
+    throw createError;
+  }
+
+  return { userId: created.user?.id, email: normalizedEmail, companyName: company.name };
+}
+
+// Reatribui um usuário já existente pra outra empresa — não passa pelo
+// trigger handle_new_auth_user() (esse só roda em INSERT em auth.users),
+// então repete aqui a mesma checagem de vencimento/capacidade que o
+// cadastro normal teria, pra não criar uma situação que o resto do app
+// não esperaria (colaborador void numa empresa vencida ou acima do limite).
+async function updateUserCompany(supabaseService, { userId, companyId }) {
+  if (!userId) throw new Error('Usuário não informado.');
+  if (!companyId) throw new Error('Selecione a empresa de destino.');
+
+  const { data: user, error: userError } = await supabaseService
+    .from('users')
+    .select('id, role')
+    .eq('id', userId)
+    .maybeSingle();
+  if (userError) throw userError;
+  if (!user) throw new Error('Usuário não encontrado.');
+  if (user.role === 'master') throw new Error('Essa conta é master — não muda de empresa.');
+
+  const { data: company, error: companyError } = await supabaseService
+    .from('companies')
+    .select('id, name, max_users, expires_at')
+    .eq('id', companyId)
+    .maybeSingle();
+  if (companyError) throw companyError;
+  if (!company) throw new Error('Empresa não encontrada.');
+  if (company.expires_at && new Date(company.expires_at) < new Date()) {
+    throw new Error('O plano dessa empresa está vencido. Renove antes de mover colaboradores pra lá.');
+  }
+  if (company.max_users != null) {
+    const { count, error: countError } = await supabaseService
+      .from('users')
+      .select('id', { count: 'exact', head: true })
+      .eq('company_id', company.id);
+    if (countError) throw countError;
+    if ((count ?? 0) >= company.max_users) {
+      throw new Error('Limite de vagas dessa empresa já atingido.');
+    }
+  }
+
+  const { error: updateError } = await supabaseService.from('users').update({ company_id: company.id }).eq('id', user.id);
+  if (updateError) throw updateError;
+
+  return { userId: user.id, companyId: company.id, companyName: company.name };
+}
+
 Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response(null, { headers: CORS_HEADERS });
   if (req.method !== 'POST') return jsonResponse({ error: 'Método não permitido.' }, 405);
@@ -323,6 +434,12 @@ Deno.serve(async (req) => {
         return jsonResponse(await createCorporate(supabaseService, payload));
       case 'set_role':
         return jsonResponse(await setUserRole(supabaseService, payload));
+      case 'list_users':
+        return jsonResponse({ users: await listUsers(supabaseService) });
+      case 'create_user':
+        return jsonResponse(await createUser(supabaseService, payload));
+      case 'update_user_company':
+        return jsonResponse(await updateUserCompany(supabaseService, payload));
       default:
         return jsonResponse({ error: 'Ação inválida.' }, 400);
     }

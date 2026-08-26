@@ -1473,8 +1473,11 @@ export function GameProvider({ children }) {
         companyCode: payload.companyCode,
       });
       if (!authUser) {
-        // Projeto com confirmação de e-mail ativada: não há sessão imediata.
-        dispatch({ type: 'AUTH_ERROR', payload: 'Cadastro criado! Confirme seu e-mail para poder entrar.' });
+        // Não deveria acontecer: public-register já cria a conta confirmada
+        // (email_confirm: true) e api.signUp() faz o signInWithPassword logo
+        // em seguida — mas mantém o aviso por segurança, caso a sessão não
+        // volte por algum motivo inesperado.
+        dispatch({ type: 'AUTH_ERROR', payload: 'Cadastro criado, mas não foi possível entrar automaticamente. Tente fazer login.' });
         return;
       }
       const profile = await api.fetchProfile(authUser.id);

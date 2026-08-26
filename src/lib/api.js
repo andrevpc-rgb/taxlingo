@@ -143,26 +143,22 @@ export async function checkCompanyCapacity(companyCode) {
   return data?.[0] ?? { is_valid: false, reason: 'Código de empresa inválido.', company_id: null };
 }
 
+// Cadastro público — vai pra Edge Function public-register em vez de
+// supabase.auth.signUp() direto: essa function cria a conta já confirmada
+// (email_confirm: true) igual ao "Testar Grátis"/Painel de Contingência,
+// então não depende do "Confirm email" do painel do Supabase nem do envio
+// de e-mail de ninguém. Uma vez criada, faz signInWithPassword logo em
+// seguida com as mesmas credenciais pra já devolver uma sessão ativa.
 export async function signUp({ email, password, fullName, jobTitle, companyCode }) {
-  const capacity = await checkCompanyCapacity(companyCode);
-  if (!capacity.is_valid) {
-    throw new Error(capacity.reason || 'Código de empresa inválido. Confira com o seu RH.');
+  const { error: registerError } = await supabase.functions.invoke('public-register', {
+    body: { email, password, fullName, jobTitle, companyCode },
+  });
+  if (registerError) {
+    throw new Error(await functionErrorMessage(registerError, 'Não foi possível cadastrar.'));
   }
 
-  const avatarPool = ['👩‍💼', '🧑‍💼', '👩‍💻', '🧑‍💻', '👩', '🧑'];
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-    options: {
-      data: {
-        full_name: fullName,
-        job_title: jobTitle || null,
-        company_id: capacity.company_id,
-        avatar_url: avatarPool[Math.floor(Math.random() * avatarPool.length)],
-      },
-    },
-  });
-  if (error) throw error;
+  const { data, error: signInError } = await supabase.auth.signInWithPassword({ email, password });
+  if (signInError) throw signInError;
   return data;
 }
 
@@ -534,6 +530,39 @@ export async function adminSetUserRole({ email, role }) {
   });
   if (error) {
     throw new Error(await functionErrorMessage(error, 'Não foi possível definir o papel dessa conta.'));
+  }
+  return data;
+}
+
+// Aba "Gerenciar Usuários" do Painel de Contingência (master): lista todo
+// mundo, de todas as empresas — diferente da tabela "Equipe" do Painel do
+// Gestor comum, que só mostra a própria empresa.
+export async function adminListUsers() {
+  const { data, error } = await supabase.functions.invoke('admin-provision', {
+    body: { action: 'list_users' },
+  });
+  if (error) {
+    throw new Error(await functionErrorMessage(error, 'Não foi possível carregar os usuários.'));
+  }
+  return data.users;
+}
+
+export async function adminCreateUser({ fullName, email, password, jobTitle, companyId }) {
+  const { data, error } = await supabase.functions.invoke('admin-provision', {
+    body: { action: 'create_user', fullName, email, password, jobTitle, companyId },
+  });
+  if (error) {
+    throw new Error(await functionErrorMessage(error, 'Não foi possível criar o usuário.'));
+  }
+  return data;
+}
+
+export async function adminUpdateUserCompany({ userId, companyId }) {
+  const { data, error } = await supabase.functions.invoke('admin-provision', {
+    body: { action: 'update_user_company', userId, companyId },
+  });
+  if (error) {
+    throw new Error(await functionErrorMessage(error, 'Não foi possível trocar a empresa desse usuário.'));
   }
   return data;
 }
