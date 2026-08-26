@@ -174,8 +174,8 @@ export async function signIn(email, password) {
 
 // Chama a Edge Function que cria a conta de teste de 24h e dispara o
 // e-mail com as credenciais (ver supabase/functions/send-trial-email).
-export async function requestTrialAccess(email) {
-  const { data, error } = await supabase.functions.invoke('send-trial-email', { body: { email } });
+export async function requestTrialAccess(email, fullName) {
+  const { data, error } = await supabase.functions.invoke('send-trial-email', { body: { email, fullName } });
   if (error) {
     // supabase-js embrulha erros HTTP não-2xx em FunctionsHttpError; o corpo
     // com a mensagem amigável da function fica em error.context.
@@ -183,6 +183,21 @@ export async function requestTrialAccess(email) {
     throw new Error(message);
   }
   return data;
+}
+
+// Best-effort: registra o lead (mesma Edge Function/tabela/e-mail de aviso
+// "Novo lead recebido" usada por public/comece.html) sempre que alguém
+// inicia o Teste Grátis pelo próprio app. Nunca deve travar o fluxo de
+// criação da conta de teste — por isso engole o erro em vez de lançar.
+export async function captureMarketingLead({ fullName, email, phone, companyName, source }) {
+  try {
+    const { error } = await supabase.functions.invoke('capture-marketing-lead', {
+      body: { fullName, email, phone, companyName, source },
+    });
+    if (error) console.error('captureMarketingLead failed (non-fatal):', error);
+  } catch (err) {
+    console.error('captureMarketingLead failed (non-fatal):', err);
+  }
 }
 
 export async function signOut() {
@@ -211,6 +226,18 @@ export async function resetPasswordForEmail(email) {
   const redirectTo = `${window.location.origin}/`;
   const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
   if (error) throw error;
+}
+
+// Checagem por e-mail (sem sessão/senha) se o acesso já está expirado —
+// usada por "Esqueci minha senha" pra mostrar ACCESS_EXPIRED_MESSAGE em vez
+// de mandar um link de redefinição que não resolveria nada (ver
+// isAccessExpired() em GameContext.jsx, mesma regra aplicada no login).
+// RPC SECURITY DEFINER porque roda sem sessão; se o e-mail não existir,
+// devolve false (não revela se a conta existe) e o fluxo normal segue.
+export async function checkAccessExpiredByEmail(email) {
+  const { data, error } = await supabase.rpc('check_access_expired_by_email', { p_email: email });
+  if (error) throw error;
+  return Boolean(data);
 }
 
 // Repassa o tipo do evento (não só a sessão) — GameContext precisa

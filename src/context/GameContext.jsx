@@ -1439,14 +1439,18 @@ export function GameProvider({ children }) {
   // exibido pelo LoginForm/RegisterForm, e um erro do teste grátis não tem
   // nada a ver com uma tentativa de login — apareceria duplicado nos dois
   // lugares. O componente lê o erro do valor de retorno em vez do contexto.
-  const startFreeTrial = useCallback(async (email) => {
+  const startFreeTrial = useCallback(async ({ email, fullName, phone, companyName }) => {
     if (!isSupabaseConfigured) {
       return { ok: false, error: 'O teste grátis por e-mail precisa do Supabase configurado (ver .env.local).' };
     }
     dispatch({ type: 'AUTH_LOADING' });
     try {
-      await api.requestTrialAccess(email);
+      await api.requestTrialAccess(email, fullName);
       dispatch({ type: 'CLEAR_AUTH_ERROR' });
+      // Best-effort e fire-and-forget: avisa o time comercial (mesmo padrão
+      // de "Novo lead recebido" das landing pages) sem atrasar a resposta
+      // pro usuário nem travar o teste grátis se isso falhar.
+      api.captureMarketingLead({ fullName, email, phone, companyName, source: 'teste_gratuito' });
       return { ok: true };
     } catch (err) {
       dispatch({ type: 'CLEAR_AUTH_ERROR' });
@@ -1503,6 +1507,16 @@ export function GameProvider({ children }) {
       return { ok: false, error: 'Redefinição de senha por e-mail precisa do Supabase configurado.' };
     }
     try {
+      // Conta com acesso vencido: redefinir a senha não resolve nada — mostra
+      // a mesma orientação de renovação do login em vez de mandar o e-mail.
+      // Best-effort: se a checagem falhar (ex.: RPC ainda não existe no
+      // banco), não trava quem só quer redefinir a senha normalmente.
+      try {
+        const expired = await api.checkAccessExpiredByEmail(email);
+        if (expired) return { ok: false, error: ACCESS_EXPIRED_MESSAGE };
+      } catch (checkErr) {
+        console.error('checkAccessExpiredByEmail failed (non-fatal):', checkErr);
+      }
       await api.resetPasswordForEmail(email);
       return { ok: true };
     } catch (err) {

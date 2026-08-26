@@ -106,14 +106,15 @@ Deno.serve(async (req) => {
   if (req.method === 'OPTIONS') return new Response(null, { headers: CORS_HEADERS });
   if (req.method !== 'POST') return jsonResponse({ error: 'Método não permitido.' }, 405);
 
-  let email;
+  let email, fullName;
   try {
-    ({ email } = await req.json());
+    ({ email, fullName } = await req.json());
   } catch {
     return jsonResponse({ error: 'Corpo da requisição inválido.' }, 400);
   }
 
   const normalizedEmail = String(email ?? '').trim().toLowerCase();
+  const normalizedFullName = String(fullName ?? '').trim();
   if (!normalizedEmail || !normalizedEmail.includes('@')) {
     return jsonResponse({ error: 'Informe um e-mail válido.' }, 400);
   }
@@ -152,7 +153,7 @@ Deno.serve(async (req) => {
       password: tempPassword,
       email_confirm: true,
       user_metadata: {
-        full_name: normalizedEmail.split('@')[0],
+        full_name: normalizedFullName || normalizedEmail.split('@')[0],
         company_id: companyId,
         avatar_url: '🎟️',
         trial_expires_at: expiresAt,

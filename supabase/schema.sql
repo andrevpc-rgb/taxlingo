@@ -349,6 +349,38 @@ grant execute on function public.check_company_capacity(text) to anon, authentic
 
 comment on function public.check_company_capacity(text) is 'Checagem de código de empresa (existe? plano ativo? tem vaga?) chamada pelo cliente antes de signUp(). SECURITY DEFINER porque roda antes de existir sessão.';
 
+-- Pré-checagem chamável pelo cliente ANTES de mandar o e-mail de "esqueci
+-- minha senha" (sem sessão, só o e-mail digitado) — mesma regra de
+-- isAccessExpired() em GameContext.jsx (checada de novo no login de
+-- verdade), só que aqui sem precisar de senha. Devolve false se o e-mail
+-- não existir (não revela se a conta existe) ou se for a conta master
+-- (nunca é barrada por vencimento).
+create or replace function public.check_access_expired_by_email(p_email text)
+returns boolean
+language sql
+security definer set search_path = public
+stable
+as $$
+  select coalesce(
+    (
+      select
+        u.role != 'master'
+        and (
+          (u.trial_expires_at is not null and u.trial_expires_at < now())
+          or (c.expires_at is not null and c.expires_at < now())
+        )
+      from public.users u
+      left join public.companies c on c.id = u.company_id
+      where lower(u.email) = lower(trim(p_email))
+    ),
+    false
+  );
+$$;
+
+grant execute on function public.check_access_expired_by_email(text) to anon, authenticated;
+
+comment on function public.check_access_expired_by_email(text) is 'Checagem de expiração de acesso (trial ou plano Corporativo da empresa) por e-mail, sem sessão — usada por "Esqueci minha senha" antes de mandar o link de redefinição. SECURITY DEFINER porque roda sem sessão.';
+
 -- =============================================================================
 -- Helpers de RLS (SECURITY DEFINER pra evitar recursão de policy em `users`)
 -- =============================================================================

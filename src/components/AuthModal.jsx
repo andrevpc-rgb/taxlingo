@@ -15,7 +15,6 @@ import {
 import { useGame } from '../context/GameContext.jsx';
 import { isSupabaseConfigured } from '../lib/supabase';
 import * as api from '../lib/api';
-import { PLANS } from '../data/mockData';
 
 // Link de pagamento fixo do Asaas para o Plano Individual — configurado
 // direto no painel do Asaas (não é um checkout gerado dinamicamente pela
@@ -32,14 +31,17 @@ const ASAAS_INDIVIDUAL_PAYMENT_LINK = 'https://www.asaas.com/c/4vramk3few3gyne9'
 function FreeTrialSection() {
   const { startFreeTrial, authLoading } = useGame();
   const [expanded, setExpanded] = useState(false);
+  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [companyName, setCompanyName] = useState('');
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError(null);
-    const result = await startFreeTrial(email);
+    const result = await startFreeTrial({ email, fullName, phone, companyName });
     if (result.ok) {
       setSent(true);
     } else {
@@ -78,6 +80,14 @@ function FreeTrialSection() {
       <p className="text-[11px] text-amber-600">
         Sem cadastro de empresa. Mandamos uma senha temporária pro seu e-mail, válida por 24h.
       </p>
+      <input
+        type="text"
+        required
+        value={fullName}
+        onChange={(e) => setFullName(e.target.value)}
+        placeholder="Nome completo"
+        className="w-full rounded-xl border-2 border-amber-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-amber-400"
+      />
       <div className="relative">
         <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-amber-400" />
         <input
@@ -89,6 +99,21 @@ function FreeTrialSection() {
           className="w-full rounded-xl border-2 border-amber-200 bg-white py-2 pl-9 pr-3 text-xs font-bold text-slate-700 outline-none focus:border-amber-400"
         />
       </div>
+      <input
+        type="tel"
+        required
+        value={phone}
+        onChange={(e) => setPhone(e.target.value)}
+        placeholder="WhatsApp com DDD"
+        className="w-full rounded-xl border-2 border-amber-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-amber-400"
+      />
+      <input
+        type="text"
+        value={companyName}
+        onChange={(e) => setCompanyName(e.target.value)}
+        placeholder="Escritório/empresa (opcional)"
+        className="w-full rounded-xl border-2 border-amber-200 bg-white px-3 py-2 text-xs font-bold text-slate-700 outline-none focus:border-amber-400"
+      />
       {error && (
         <p className="flex items-center gap-1.5 text-[11px] font-bold text-rose-600">
           <AlertCircle className="h-3.5 w-3.5 shrink-0" />
@@ -183,24 +208,15 @@ function ForgotPasswordSection({ onClose }) {
 // cadastro prévio. A conta só passa a existir quando o pagamento é
 // confirmado (ver asaas-webhook).
 function IndividualPlanSection() {
-  const plan = PLANS.individual;
-
   return (
-    <div className="space-y-1.5 rounded-2xl border-2 border-dashed border-sky-300 bg-sky-50 p-3">
+    <div className="rounded-2xl border-2 border-dashed border-sky-300 bg-sky-50 p-3">
       <a
         href={ASAAS_INDIVIDUAL_PAYMENT_LINK}
-        className="flex w-full items-center justify-between gap-2 rounded-xl bg-sky-500 px-3 py-2.5 text-xs font-extrabold uppercase tracking-wide text-white transition-transform active:translate-y-0.5"
+        className="flex w-full items-center justify-center gap-2 rounded-xl bg-sky-500 px-3 py-2.5 text-xs font-extrabold uppercase tracking-wide text-white transition-transform active:translate-y-0.5"
       >
-        <span className="flex items-center gap-2">
-          <CreditCard className="h-4 w-4" />
-          Assinar Plano Individual
-        </span>
-        <span className="normal-case tracking-normal">{plan.price}</span>
+        <CreditCard className="h-4 w-4" />
+        Assinar Plano Individual
       </a>
-      <p className="text-[11px] text-sky-600">
-        {plan.description} Pagamento direto pelo Asaas — sem código de empresa. Depois de confirmado, mandamos seu
-        e-mail e senha de acesso por e-mail.
-      </p>
     </div>
   );
 }
