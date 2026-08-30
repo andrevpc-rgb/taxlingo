@@ -44,6 +44,15 @@ function getLevelTitle(levelId) {
   return CAREER_LEVELS.find((level) => level.id === levelId)?.title ?? '—';
 }
 
+// current_level_id só é gravado no perfil ao PASSAR num Exame de Transição
+// (ver GameContext.jsx) — quem ainda está no primeiro nível (Estagiário)
+// nunca teve essa coluna setada, então null aqui significa "ainda no
+// primeiro nível", não "sem nível". Mesmo com o backfill feito no banco
+// (ver supabase/schema.sql), mantém esse fallback no cliente por segurança.
+function resolveLevelId(levelId) {
+  return levelId ?? CAREER_LEVELS[0]?.id ?? null;
+}
+
 function pct(value) {
   return `${Math.round(value * 100)}%`;
 }
@@ -180,8 +189,9 @@ export default function AdminDashboard() {
   const levelDistribution = useMemo(() => {
     const counts = {};
     team.forEach((u) => {
-      if (!u.currentLevelId) return;
-      counts[u.currentLevelId] = (counts[u.currentLevelId] ?? 0) + 1;
+      const levelId = resolveLevelId(u.currentLevelId);
+      if (!levelId) return;
+      counts[levelId] = (counts[levelId] ?? 0) + 1;
     });
     const total = team.length || 1;
     return CAREER_LEVELS.map((level) => ({
@@ -371,7 +381,7 @@ export default function AdminDashboard() {
                           </div>
                         </div>
                       </td>
-                      <td className="px-4 py-3 text-slate-600">{getLevelTitle(row.currentLevelId)}</td>
+                      <td className="px-4 py-3 text-slate-600">{getLevelTitle(resolveLevelId(row.currentLevelId))}</td>
                       <td className="px-4 py-3 font-bold text-slate-700">{row.xp}</td>
                       <td className="px-4 py-3 text-slate-600">{row.streak} dias</td>
                       <td className="px-4 py-3 text-slate-600">{formatMinutes(row.timeSpentMinutes ?? 0)}</td>

@@ -54,7 +54,7 @@ create table if not exists public.users (
   weekly_xp integer not null default 0, -- XP da semana corrente (ver week_start) — Ranking Semanal
   week_start date, -- segunda-feira da semana em que weekly_xp está sendo contado
   last_study_date date,
-  current_level_id text,
+  current_level_id text default 'estagiario', -- nunca fica null: todo mundo começa no primeiro nível da trilha
   current_level_since date,
   time_spent_minutes integer not null default 0,
   trial_expires_at timestamptz, -- só preenchido pra contas do "Testar Grátis por 24 Horas"
@@ -72,6 +72,13 @@ alter table public.users add column if not exists last_heart_lost_at timestamptz
 alter table public.users add column if not exists weekly_xp integer not null default 0;
 alter table public.users add column if not exists week_start date;
 alter table public.users alter column gems set default 1000;
+-- current_level_id só era preenchido ao PASSAR num Exame de Transição (ver
+-- GameContext.jsx) — quem ainda está no primeiro nível (Estagiário) nunca
+-- tinha essa coluna setada, o que fazia "Nível atual" e "Distribuição por
+-- Nível" no Painel do Gestor aparecerem vazios pra maioria da equipe. Backfill
+-- pontual pra quem já existia antes do default acima existir.
+alter table public.users alter column current_level_id set default 'estagiario';
+update public.users set current_level_id = 'estagiario' where current_level_id is null;
 
 create index if not exists users_company_id_idx on public.users (company_id);
 
