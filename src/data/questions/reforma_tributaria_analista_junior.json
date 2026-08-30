@@ -13,7 +13,8 @@
     ],
     "correctAnswer": "Verificar se o cClassTrib aplicado está correto para a operação",
     "explanation": "Grande parte das divergências de valor nasce de uma classificação tributária incorreta. Conferir o cClassTrib é o primeiro passo lógico da análise.",
-    "pacciTip": "Antes de gritar 'erro!', confere o cClassTrib, tesoro. Muita divergência nasce ali."
+    "pacciTip": "Antes de gritar 'erro!', confere o cClassTrib, tesoro. Muita divergência nasce ali.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-002",
@@ -29,7 +30,8 @@
     ],
     "correctAnswer": "Por meio de um regime específico e simplificado, podendo optar pelo regime regular para gerar mais créditos ao comprador",
     "explanation": "O Simples Nacional mantém um regime simplificado próprio, mas a empresa pode optar por apurar pelo regime regular quando isso for vantajoso para os créditos de seus clientes.",
-    "pacciTip": "Simples Nacional não é tudo igual, amico! Tem opção de gerar mais crédito pro comprador, se o fornecedor escolher."
+    "pacciTip": "Simples Nacional não é tudo igual, amico! Tem opção de gerar mais crédito pro comprador, se o fornecedor escolher.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-003",
@@ -45,7 +47,8 @@
     ],
     "correctAnswer": "Erro na classificação tributária (cClassTrib) ou na alíquota aplicada na transação",
     "explanation": "Como o split payment calcula o tributo a reter com base na classificação e alíquota da operação, erros nesses parâmetros são a causa mais frequente de divergência no repasse.",
-    "pacciTip": "Quando o split payment não bate, olha primeiro pra classificação e alíquota. É quase sempre ali o problema."
+    "pacciTip": "Quando o split payment não bate, olha primeiro pra classificação e alíquota. É quase sempre ali o problema.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-004",
@@ -61,7 +64,8 @@
     ],
     "correctAnswer": "Regras próprias de apuração e alíquota, diferentes do regime geral, definidas em lei complementar para setores específicos",
     "explanation": "Setores como combustíveis, serviços financeiros e planos de saúde têm regimes específicos, com regras próprias de apuração previstas em lei complementar.",
-    "pacciTip": "Combustível não segue a regra geral, tesoro! Ele tem regrinha própria, feita sob medida pro setor."
+    "pacciTip": "Combustível não segue a regra geral, tesoro! Ele tem regrinha própria, feita sob medida pro setor.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-005",
@@ -71,7 +75,8 @@
     "question": "Divergências entre o IBS/CBS destacado e o valor calculado pela alíquota vigente devem sempre ser investigadas, independentemente do valor?",
     "correctAnswer": true,
     "explanation": "Correto! Mesmo divergências pequenas podem indicar erro de parametrização recorrente, que se multiplica em outras notas e gera passivo fiscal.",
-    "pacciTip": "Divergência pequena hoje vira problema grande amanhã, capisce? Sempre investiga!"
+    "pacciTip": "Divergência pequena hoje vira problema grande amanhã, capisce? Sempre investiga!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-153",
@@ -87,7 +92,8 @@
     ],
     "correctAnswer": "Atividades desportivas",
     "explanation": "O art. 128 da LC 214/2025 lista, entre os beneficiados pela redução de 60%: educação, saúde, dispositivos médicos, medicamentos, alimentos, produções artísticas/culturais, comunicação institucional e atividades desportivas, entre outros.",
-    "pacciTip": "Esporte entra no mesmo grupo de redução da saúde e educação — um incentivo e tanto, tesoro!"
+    "pacciTip": "Esporte entra no mesmo grupo de redução da saúde e educação — um incentivo e tanto, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-006",
@@ -97,7 +103,8 @@
     "question": "O split payment elimina totalmente a necessidade de conciliação entre o valor pago pelo cliente e o valor recebido pela empresa?",
     "correctAnswer": false,
     "explanation": "Errado! O split payment automatiza a separação do tributo, mas erros de parametrização, sistêmicos ou de classificação ainda podem ocorrer, exigindo conciliação.",
-    "pacciTip": "Automação ajuda, mas não dorme no ponto, amico! Conciliação continua sendo seu trabalho."
+    "pacciTip": "Automação ajuda, mas não dorme no ponto, amico! Conciliação continua sendo seu trabalho.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-007",
@@ -107,7 +114,8 @@
     "question": "Uma empresa do Simples Nacional, ao vender para outra empresa, nunca gera qualquer crédito de IBS/CBS ao comprador?",
     "correctAnswer": false,
     "explanation": "Errado! Dependendo do regime escolhido pelo fornecedor (simplificado ou regular), pode haver geração de crédito, ainda que em proporção diferente do regime regular.",
-    "pacciTip": "Nunca é uma palavra forte demais, tesoro! Simples Nacional pode sim gerar crédito, depende da opção do fornecedor."
+    "pacciTip": "Nunca é uma palavra forte demais, tesoro! Simples Nacional pode sim gerar crédito, depende da opção do fornecedor.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-008",
@@ -117,7 +125,8 @@
     "question": "Setores como serviços financeiros e planos de saúde possuem regimes específicos de apuração do IBS/CBS, diferentes do regime geral?",
     "correctAnswer": true,
     "explanation": "Correto! Esses setores têm particularidades operacionais que justificaram a criação de regimes específicos, com regras próprias de apuração.",
-    "pacciTip": "Plano de saúde, banco, seguradora... todos têm sua regrinha especial. Não tenta encaixar no regime geral!"
+    "pacciTip": "Plano de saúde, banco, seguradora... todos têm sua regrinha especial. Não tenta encaixar no regime geral!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-009",
@@ -138,7 +147,8 @@
       "Registrar a ocorrência e decidir pela aceitação ou glosa do crédito"
     ],
     "explanation": "A análise segue do diagnóstico (identificar) para a causa (cClassTrib/alíquota), depois o esclarecimento com o fornecedor e, por fim, a decisão registrada.",
-    "pacciTip": "Detetive fiscal trabalha em ordem, tesoro! Identifica, investiga, pergunta, decide."
+    "pacciTip": "Detetive fiscal trabalha em ordem, tesoro! Identifica, investiga, pergunta, decide.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-154",
@@ -154,7 +164,8 @@
     ],
     "correctAnswer": "60%",
     "explanation": "Produções nacionais artísticas, culturais, de eventos, jornalísticas e audiovisuais estão entre as operações com redução de 60% da alíquota do IBS, conforme o art. 128 da LC 214/2025.",
-    "pacciTip": "Cultura nacional tem tratamento favorecido, mas não é isenção total — 60% de redução, tesoro!"
+    "pacciTip": "Cultura nacional tem tratamento favorecido, mas não é isenção total — 60% de redução, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-010",
@@ -175,7 +186,8 @@
       "Reportar o resultado da conciliação ao analista pleno"
     ],
     "explanation": "A conciliação começa pela extração dos dados, segue com a comparação, a investigação de divergências e o reporte do resultado final.",
-    "pacciTip": "Extrai, compara, investiga, reporta. Assim nenhum centavo se perde no caminho!"
+    "pacciTip": "Extrai, compara, investiga, reporta. Assim nenhum centavo se perde no caminho!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-141",
@@ -191,7 +203,8 @@
     ],
     "correctAnswer": "Super Inteligente, Inteligente Offline e Simplificado",
     "explanation": "A base legal (art. 31, § 1º da Lcp 214/2025) prevê três tipos: Split Payment Super Inteligente, Split Payment Inteligente Offline e Split Payment Simplificado.",
-    "pacciTip": "Três variações, uma missão: segregar o imposto assim que o dinheiro entra, tesoro!"
+    "pacciTip": "Três variações, uma missão: segregar o imposto assim que o dinheiro entra, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-011",
@@ -212,7 +225,8 @@
       "Registrar o crédito correto na apuração da empresa compradora"
     ],
     "explanation": "Primeiro identifica-se o regime do fornecedor, depois se verifica a opção por regime regular, confirma-se o percentual de crédito e, por fim, registra-se corretamente.",
-    "pacciTip": "Simples Nacional exige atenção extra na hora do crédito, tesoro! Segue a ordem certinha pra não perder dinheiro."
+    "pacciTip": "Simples Nacional exige atenção extra na hora do crédito, tesoro! Segue a ordem certinha pra não perder dinheiro.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-012",
@@ -233,7 +247,8 @@
       "Validar o resultado com a área fiscal antes de finalizar"
     ],
     "explanation": "A análise de regimes específicos exige identificar o enquadramento, consultar a regra própria, aplicar a apuração correspondente e validar com a área fiscal.",
-    "pacciTip": "Regime específico não se resolve de cabeça, amico! Sempre confirma com a área fiscal antes de fechar."
+    "pacciTip": "Regime específico não se resolve de cabeça, amico! Sempre confirma com a área fiscal antes de fechar.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-013",
@@ -249,7 +264,8 @@
     ],
     "correctAnswer": "cClassTrib",
     "explanation": "O cClassTrib determina o tratamento tributário da operação; é o principal suspeito quando o valor de IBS/CBS não bate com o esperado.",
-    "pacciTip": "cClassTrib é sempre o primeiro suspeito da investigação, tesoro. Confere ele primeiro!"
+    "pacciTip": "cClassTrib é sempre o primeiro suspeito da investigação, tesoro. Confere ele primeiro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-155",
@@ -265,7 +281,8 @@
     ],
     "correctAnswer": "Alíquota zero (0%)",
     "explanation": "Os serviços prestados por Instituição Científica, Tecnológica e de Inovação (ICT) sem fins lucrativos têm alíquota zero de IBS, conforme o art. 143 da LC 214/2025.",
-    "pacciTip": "Pesquisa e inovação sem fins lucrativos ganham o mesmo tratamento zero dos remédios e dispositivos médicos!"
+    "pacciTip": "Pesquisa e inovação sem fins lucrativos ganham o mesmo tratamento zero dos remédios e dispositivos médicos!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-014",
@@ -281,7 +298,8 @@
     ],
     "correctAnswer": "Simples Nacional",
     "explanation": "O Simples Nacional mantém regras próprias e simplificadas de participação no IBS/CBS, distintas do regime regular.",
-    "pacciTip": "Simples Nacional tem seu próprio caminho no novo modelo. Não trata como se fosse regime regular!"
+    "pacciTip": "Simples Nacional tem seu próprio caminho no novo modelo. Não trata como se fosse regime regular!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-015",
@@ -297,7 +315,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "Regimes específicos existem para setores com características operacionais particulares, como combustíveis, serviços financeiros e planos de saúde.",
-    "pacciTip": "Regime específico é feito sob medida, tesoro! Não confunde com o regime geral."
+    "pacciTip": "Regime específico é feito sob medida, tesoro! Não confunde com o regime geral.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-016",
@@ -313,7 +332,8 @@
     ],
     "correctAnswer": "investigada",
     "explanation": "Toda divergência deve ser investigada; presumir que é 'normal' sem checar pode mascarar erros sistêmicos de parametrização.",
-    "pacciTip": "Nunca assume que é normal sem checar, amico! Investiga primeiro, conclui depois."
+    "pacciTip": "Nunca assume que é normal sem checar, amico! Investiga primeiro, conclui depois.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-017",
@@ -323,7 +343,8 @@
     "question": "Digite o nome do campo da nota fiscal que deve ser conferido primeiro ao identificar divergência no valor de IBS/CBS:",
     "correctAnswer": "cClassTrib",
     "explanation": "O cClassTrib é o campo que determina o tratamento tributário da operação e a principal causa de divergências de valor.",
-    "pacciTip": "cClassTrib de novo, tesoro! Ele é o personagem principal de quase toda divergência."
+    "pacciTip": "cClassTrib de novo, tesoro! Ele é o personagem principal de quase toda divergência.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-018",
@@ -333,7 +354,8 @@
     "question": "Digite o nome do regime tributário simplificado destinado a micro e pequenas empresas, que possui tratamento diferenciado no IBS/CBS:",
     "correctAnswer": "Simples Nacional",
     "explanation": "O Simples Nacional é o regime simplificado voltado a micro e pequenas empresas, com tratamento próprio dentro do novo modelo tributário.",
-    "pacciTip": "Simples Nacional, tesoro! Pequena empresa, regrinha própria."
+    "pacciTip": "Simples Nacional, tesoro! Pequena empresa, regrinha própria.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-156",
@@ -349,7 +371,8 @@
     ],
     "correctAnswer": "Somente após os ajustes nas alíquotas de referência do IBS e da CBS para reequilibrar a arrecadação",
     "explanation": "A alteração das operações beneficiadas pelos regimes diferenciados só entra em vigor após os ajustes nas alíquotas de referência do IBS e da CBS, pra reequilibrar a arrecadação perdida ou ganha com a mudança.",
-    "pacciTip": "Mexeu no benefício de um lado, precisa reequilibrar a alíquota de referência do outro, tesoro!"
+    "pacciTip": "Mexeu no benefício de um lado, precisa reequilibrar a alíquota de referência do outro, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-019",
@@ -359,7 +382,8 @@
     "question": "Digite o termo (em inglês, duas palavras) do mecanismo de pagamento revisado na conciliação bancária do mês:",
     "correctAnswer": "split payment",
     "explanation": "O split payment é o mecanismo que segrega automaticamente o tributo no pagamento, sendo o foco da conciliação mensal.",
-    "pacciTip": "Split payment sempre no radar da conciliação, amico! Ele é o protagonista do mês."
+    "pacciTip": "Split payment sempre no radar da conciliação, amico! Ele é o protagonista do mês.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-020",
@@ -369,7 +393,8 @@
     "question": "Digite a palavra que classifica o tipo de regime aplicado a setores como combustíveis, distinto do regime geral:",
     "correctAnswer": "específico",
     "explanation": "Regimes específicos são criados para setores com características próprias, como o de combustíveis, com regras diferentes do regime geral.",
-    "pacciTip": "Específico é a palavra-chave, tesoro! Combustível não joga com as regras de todo mundo."
+    "pacciTip": "Específico é a palavra-chave, tesoro! Combustível não joga com as regras de todo mundo.",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-142",
@@ -385,7 +410,8 @@
     ],
     "correctAnswer": "Não, o Split Payment não afasta eventual saldo a recolher pelo contribuinte",
     "explanation": "Uma das regras do Split Payment é que ele não afasta eventual saldo a recolher pelo contribuinte — pode haver diferença apurada que ainda precise ser paga.",
-    "pacciTip": "Split Payment ajuda bastante, mas não substitui a apuração completa do período, capito?"
+    "pacciTip": "Split Payment ajuda bastante, mas não substitui a apuração completa do período, capito?",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-021",
@@ -401,7 +427,8 @@
     ],
     "correctAnswer": "Confirmar se o cClassTrib informado corresponde de fato à natureza da operação registrada no pedido",
     "explanation": "A checagem interna do cClassTrib evita abrir ocorrências desnecessárias com o vendedor quando o erro está na própria parametrização do pedido.",
-    "pacciTip": "Antes de incomodar o vendedor, olha pra dentro de casa primeiro, tesoro!"
+    "pacciTip": "Antes de incomodar o vendedor, olha pra dentro de casa primeiro, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-022",
@@ -417,7 +444,8 @@
     ],
     "correctAnswer": "A alíquota vigente aplicada à operação",
     "explanation": "cClassTrib e alíquota caminham juntos no cálculo do tributo; um erro em qualquer um dos dois altera o valor final destacado na nota.",
-    "pacciTip": "cClassTrib e alíquota são a dupla dinâmica da investigação, amico! Confere os dois."
+    "pacciTip": "cClassTrib e alíquota são a dupla dinâmica da investigação, amico! Confere os dois.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-157",
@@ -433,7 +461,8 @@
     ],
     "correctAnswer": "Não, salvo quando expressamente previsto na Lei Complementar",
     "explanation": "Os regimes diferenciados não podem ser cumulados com outros regimes diferenciados, específicos ou favorecidos, exceto quando previsto expressamente na Lei Complementar.",
-    "pacciTip": "Regra geral: um benefício de cada vez — só acumula se a lei disser expressamente que pode, tesoro!"
+    "pacciTip": "Regra geral: um benefício de cada vez — só acumula se a lei disser expressamente que pode, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-023",
@@ -449,7 +478,8 @@
     ],
     "correctAnswer": "Erro de parametrização em uma das notas, já que operações equivalentes deveriam manter o mesmo cClassTrib",
     "explanation": "Operações de mesma natureza devem manter classificação consistente; divergência entre notas do mesmo item é sinal de erro cadastral em uma delas.",
-    "pacciTip": "Mesmo produto, mesma operação, mesmo cClassTrib. Se mudou, alguém errou a receita!"
+    "pacciTip": "Mesmo produto, mesma operação, mesmo cClassTrib. Se mudou, alguém errou a receita!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-024",
@@ -465,7 +495,8 @@
     ],
     "correctAnswer": "Pagar a nota integralmente sem registrar a divergência em nenhum controle",
     "explanation": "Pagar sem registrar nada elimina o rastro da divergência e impede que o erro seja corrigido ou usado como aprendizado para casos futuros.",
-    "pacciTip": "Pagar e esquecer nunca é o caminho, tesoro! Registra sempre, mesmo pagando."
+    "pacciTip": "Pagar e esquecer nunca é o caminho, tesoro! Registra sempre, mesmo pagando.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-025",
@@ -481,7 +512,8 @@
     ],
     "correctAnswer": "Porque IBS e CBS são tributos distintos, apurados de forma independente, e um erro pode afetar apenas um deles",
     "explanation": "IBS (subnacional) e CBS (federal) têm apuração própria; um erro de parametrização pode atingir apenas um dos dois cálculos.",
-    "pacciTip": "IBS e CBS são dois pratos diferentes no cardápio, amico! Um pode vir errado sem estragar o outro."
+    "pacciTip": "IBS e CBS são dois pratos diferentes no cardápio, amico! Um pode vir errado sem estragar o outro.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-026",
@@ -497,7 +529,8 @@
     ],
     "correctAnswer": "Como uma possível divergência de arredondamento ou parametrização, que ainda merece registro e verificação",
     "explanation": "Diferenças pequenas não devem ser descartadas sem checagem: podem indicar arredondamento aceitável ou um erro recorrente de parametrização.",
-    "pacciTip": "Centavo também conta história, tesoro! Não julga o tamanho, investiga a causa."
+    "pacciTip": "Centavo também conta história, tesoro! Não julga o tamanho, investiga a causa.",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-158",
@@ -513,7 +546,8 @@
     ],
     "correctAnswer": "Apenas às prestações efetuadas por pessoa física, vinculadas à habilitação profissional",
     "explanation": "A redução das profissões intelectuais se aplica às prestações de serviços efetuadas por pessoa física, desde que os serviços estejam vinculados à habilitação profissional exigida.",
-    "pacciTip": "O benefício segue a pessoa habilitada e o serviço da sua área — não vale pra qualquer receita da empresa!"
+    "pacciTip": "O benefício segue a pessoa habilitada e o serviço da sua área — não vale pra qualquer receita da empresa!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-027",
@@ -523,7 +557,8 @@
     "question": "É normal que o cClassTrib varie entre notas de uma mesma operação recorrente, sem motivo aparente?",
     "correctAnswer": false,
     "explanation": "Não é normal. Operações de mesma natureza devem manter a mesma classificação tributária; variação sem justificativa indica erro em uma das notas.",
-    "pacciTip": "Se a operação é igual, o cClassTrib também deveria ser igual, tesoro!"
+    "pacciTip": "Se a operação é igual, o cClassTrib também deveria ser igual, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-028",
@@ -533,7 +568,8 @@
     "question": "É esperado que operações de mesma natureza mantenham o mesmo cClassTrib entre as notas emitidas?",
     "correctAnswer": true,
     "explanation": "Sim. Operações equivalentes devem manter classificação tributária consistente; isso é, inclusive, um bom sinal de parametrização correta.",
-    "pacciTip": "Consistência é sinal de que o sistema está bem-comportado, amico!"
+    "pacciTip": "Consistência é sinal de que o sistema está bem-comportado, amico!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-029",
@@ -543,7 +579,8 @@
     "question": "O histórico de confiança com um fornecedor dispensa a verificação de divergências no valor de IBS/CBS das notas?",
     "correctAnswer": false,
     "explanation": "Não dispensa. Mesmo fornecedores confiáveis podem ter erros de parametrização em seus sistemas, então toda divergência merece checagem.",
-    "pacciTip": "Confiança é bonita, mas não substitui a conferência, tesoro!"
+    "pacciTip": "Confiança é bonita, mas não substitui a conferência, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-030",
@@ -553,7 +590,8 @@
     "question": "O simples preenchimento do campo cClassTrib garante, por si só, que o valor calculado esteja correto?",
     "correctAnswer": false,
     "explanation": "Não garante. O campo pode estar preenchido com um código que não corresponde à real natureza da operação, gerando cálculo incorreto mesmo estando preenchido.",
-    "pacciTip": "Preenchido não é sinônimo de certo, amico! Confere se o código bate com a operação de verdade."
+    "pacciTip": "Preenchido não é sinônimo de certo, amico! Confere se o código bate com a operação de verdade.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-031",
@@ -563,7 +601,8 @@
     "question": "Quando o valor destacado bate exatamente com o esperado, isso é um bom indício de que a classificação usada está correta?",
     "correctAnswer": true,
     "explanation": "Sim. Quando o cálculo confere com o esperado, é um forte indício de que cClassTrib e alíquota foram aplicados corretamente na operação.",
-    "pacciTip": "Bateu certinho? Ótimo sinal, tesoro! O cClassTrib provavelmente está feliz e correto."
+    "pacciTip": "Bateu certinho? Ótimo sinal, tesoro! O cClassTrib provavelmente está feliz e correto.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-159",
@@ -579,7 +618,8 @@
     ],
     "correctAnswer": "Desde a data de inscrição no CNPJ",
     "explanation": "Para empresas em início de atividade, se a opção pelo Simples Nacional for deferida, ela produz efeitos desde a data de inscrição no CNPJ.",
-    "pacciTip": "Empresa nova, se aprovada, já nasce dentro do Simples desde o CNPJ — sem esperar nada, tesoro!"
+    "pacciTip": "Empresa nova, se aprovada, já nasce dentro do Simples desde o CNPJ — sem esperar nada, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-143",
@@ -595,7 +635,8 @@
     ],
     "correctAnswer": "Para permitir que o sistema identifique o prazo correto de análise de um eventual pedido de ressarcimento desse crédito",
     "explanation": "O evento de Imobilização de Item permite que o sistema do CG-IBS identifique as hipóteses de aplicação, ao crédito apropriado na aquisição, do prazo de análise de pedidos de ressarcimento definido em lei.",
-    "pacciTip": "Sem esse evento, o pedido de ressarcimento pode não ter o prazo mais rápido garantido, tesoro!"
+    "pacciTip": "Sem esse evento, o pedido de ressarcimento pode não ter o prazo mais rápido garantido, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-032",
@@ -605,7 +646,8 @@
     "question": "Um cClassTrib de exportação aplicado a uma venda interna para consumidor final pode gerar divergência relevante no valor do IBS/CBS?",
     "correctAnswer": true,
     "explanation": "Sim. Classificações incompatíveis com a natureza real da operação alteram diretamente o cálculo do tributo, gerando divergência de valor.",
-    "pacciTip": "Exportação e venda interna não se vestem igual, amico! Cada uma tem seu código certo."
+    "pacciTip": "Exportação e venda interna não se vestem igual, amico! Cada uma tem seu código certo.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-033",
@@ -626,7 +668,8 @@
       "Validar a nota complementar recebida antes de liberar o pagamento"
     ],
     "explanation": "O fluxo começa pela detecção da divergência, passa pela checagem do cClassTrib, segue com a solicitação de correção e termina com a validação do ajuste antes de liberar o pagamento.",
-    "pacciTip": "Detecta, confere, pede correção, valida. Assim ninguém libera pagamento errado, tesoro!"
+    "pacciTip": "Detecta, confere, pede correção, valida. Assim ninguém libera pagamento errado, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-034",
@@ -647,7 +690,8 @@
       "Decidir se a mercadoria é recebida com ressalva fiscal ou não"
     ],
     "explanation": "Primeiro recebe-se a nota, depois compara-se o valor, investiga-se cClassTrib e alíquota e só então se decide sobre o recebimento com ou sem ressalva.",
-    "pacciTip": "Recebe, compara, investiga, decide. Nessa ordem o estoque não vira bagunça fiscal!"
+    "pacciTip": "Recebe, compara, investiga, decide. Nessa ordem o estoque não vira bagunça fiscal!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-035",
@@ -668,7 +712,8 @@
       "Ajustar o lançamento contábil e o crédito a apropriar"
     ],
     "explanation": "Identifica-se a divergência, verifica-se o cClassTrib do ativo, confirma-se a natureza da aquisição com compras e só então se ajusta o lançamento contábil.",
-    "pacciTip": "Ativo imobilizado exige passo a passo caprichado, amico! Não pula etapa."
+    "pacciTip": "Ativo imobilizado exige passo a passo caprichado, amico! Não pula etapa.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-160",
@@ -684,7 +729,8 @@
     ],
     "correctAnswer": "Anexo IX",
     "explanation": "Operações sujeitas a diferimento com insumos agropecuários e aquícolas estão previstas no Anexo IX da LC 214/2025, correspondendo ao cClassTrib 515.",
-    "pacciTip": "Cada anexo da lei cataloga um grupo de produtos — Anexo IX é o dos insumos agropecuários/aquícolas!"
+    "pacciTip": "Cada anexo da lei cataloga um grupo de produtos — Anexo IX é o dos insumos agropecuários/aquícolas!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-036",
@@ -705,7 +751,8 @@
       "Corrigir o lançamento após resposta do fornecedor"
     ],
     "explanation": "A análise começa notando a divergência, comparando com o histórico de compras, confirmando com o fornecedor e corrigindo o lançamento ao final.",
-    "pacciTip": "Comparar com o histórico é um truque esperto, tesoro! Ele revela rápido se algo mudou."
+    "pacciTip": "Comparar com o histórico é um truque esperto, tesoro! Ele revela rápido se algo mudou.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-037",
@@ -726,7 +773,8 @@
       "Encaminhar a lista para tratativa com os fornecedores envolvidos"
     ],
     "explanation": "A auditoria periódica segue da amostragem para a comparação, da comparação para a listagem de suspeitas e, por fim, o encaminhamento para tratativa.",
-    "pacciTip": "Amostra boa é a base de toda auditoria, amico! Depois é só seguir o fio da meada."
+    "pacciTip": "Amostra boa é a base de toda auditoria, amico! Depois é só seguir o fio da meada.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-038",
@@ -747,7 +795,8 @@
       "Atualizar o crédito apropriado com base no valor corrigido"
     ],
     "explanation": "Depois da confirmação do erro, solicita-se a nota complementar, confere-se o novo valor e só então se atualiza o crédito apropriado.",
-    "pacciTip": "Erro confirmado, nota complementar a caminho! Sempre confere antes de atualizar o crédito, tesoro."
+    "pacciTip": "Erro confirmado, nota complementar a caminho! Sempre confere antes de atualizar o crédito, tesoro.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-039",
@@ -763,7 +812,8 @@
     ],
     "correctAnswer": "parametrização",
     "explanation": "Classificações diferentes para o mesmo produto em operações equivalentes normalmente indicam erro de parametrização cadastral.",
-    "pacciTip": "Parametrização errada é a vilã mais comum dessa história, tesoro!"
+    "pacciTip": "Parametrização errada é a vilã mais comum dessa história, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-161",
@@ -779,7 +829,8 @@
     ],
     "correctAnswer": "Pelo mesmo prazo da transição da Zona Franca de Manaus (ZFM)",
     "explanation": "O IPI será mantido para cerca de 5% dos produtos hoje alcançados e será extinto no mesmo prazo da transição da Zona Franca de Manaus (ZFM).",
-    "pacciTip": "IPI não desaparece de uma vez — segue o mesmo cronograma especial da ZFM, tesoro!"
+    "pacciTip": "IPI não desaparece de uma vez — segue o mesmo cronograma especial da ZFM, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-040",
@@ -795,7 +846,8 @@
     ],
     "correctAnswer": "cClassTrib",
     "explanation": "O cClassTrib determina o tratamento tributário da operação, sendo o principal suspeito em divergências de valor.",
-    "pacciTip": "cClassTrib no banco dos réus de novo, amico!"
+    "pacciTip": "cClassTrib no banco dos réus de novo, amico!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-041",
@@ -811,7 +863,8 @@
     ],
     "correctAnswer": "alíquota",
     "explanation": "A alíquota vigente também influencia diretamente o valor calculado; usar uma alíquota desatualizada gera divergência mesmo com cClassTrib correto.",
-    "pacciTip": "Alíquota desatualizada é traiçoeira, tesoro! Confere sempre a vigência."
+    "pacciTip": "Alíquota desatualizada é traiçoeira, tesoro! Confere sempre a vigência.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-144",
@@ -827,7 +880,8 @@
     ],
     "correctAnswer": "O prazo de análise passa a ser de 30 dias",
     "explanation": "O prazo será de 30 dias para os contribuintes enquadrados em programas de conformidade desenvolvidos pelo Comitê Gestor do IBS e pela RFB.",
-    "pacciTip": "Ser \"bom aluno\" fiscal compensa: prazos mais curtos pra reaver seu dinheiro!"
+    "pacciTip": "Ser \"bom aluno\" fiscal compensa: prazos mais curtos pra reaver seu dinheiro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-042",
@@ -843,7 +897,8 @@
     ],
     "correctAnswer": "registradas",
     "explanation": "Registrar toda divergência, ainda que pequena, cria histórico e evita que erros recorrentes passem despercebidos.",
-    "pacciTip": "Toda divergência merece um registrinho, amico! Por menor que seja."
+    "pacciTip": "Toda divergência merece um registrinho, amico! Por menor que seja.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-043",
@@ -859,7 +914,8 @@
     ],
     "correctAnswer": "cClassTrib",
     "explanation": "Operações equivalentes devem manter a mesma classificação tributária; variação sem justificativa indica erro de cadastro.",
-    "pacciTip": "Mesma operação, mesmo cClassTrib. Simples assim, tesoro!"
+    "pacciTip": "Mesma operação, mesmo cClassTrib. Simples assim, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-162",
@@ -875,7 +931,8 @@
     ],
     "correctAnswer": "Maior — R$ 100.000,00 contra R$ 30.000,00 do lote",
     "explanation": "O redutor social é de até R$ 100.000,00 por imóvel residencial novo, e de até R$ 30.000,00 por lote residencial — o benefício do imóvel construído é maior que o do lote vazio.",
-    "pacciTip": "Imóvel pronto tem redutor mais generoso que lote vazio — mais de 3x maior, tesoro!"
+    "pacciTip": "Imóvel pronto tem redutor mais generoso que lote vazio — mais de 3x maior, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-044",
@@ -891,7 +948,8 @@
     ],
     "correctAnswer": "investigar",
     "explanation": "Investigar internamente primeiro evita contatos desnecessários e ajuda a apresentar o problema de forma clara ao fornecedor.",
-    "pacciTip": "Faz o dever de casa antes de ligar pro fornecedor, amico!"
+    "pacciTip": "Faz o dever de casa antes de ligar pro fornecedor, amico!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-045",
@@ -901,7 +959,8 @@
     "question": "Digite o nome do campo da nota fiscal que define o tratamento tributário aplicado à operação e deve ser conferido diante de uma divergência de valor:",
     "correctAnswer": "cClassTrib",
     "explanation": "O cClassTrib determina o tratamento tributário da operação e é o principal ponto de checagem em divergências de valor.",
-    "pacciTip": "cClassTrib de novo no centro das atenções, tesoro!"
+    "pacciTip": "cClassTrib de novo no centro das atenções, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-046",
@@ -911,7 +970,8 @@
     "question": "Além do cClassTrib, digite o nome do outro parâmetro numérico que deve ser conferido quando o valor de IBS/CBS diverge do esperado:",
     "correctAnswer": "alíquota",
     "explanation": "A alíquota vigente, junto com o cClassTrib, forma a base do cálculo do tributo destacado na nota.",
-    "pacciTip": "cClassTrib e alíquota, a dupla imbatível da investigação, amico!"
+    "pacciTip": "cClassTrib e alíquota, a dupla imbatível da investigação, amico!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-047",
@@ -921,7 +981,8 @@
     "question": "Digite o termo usado para o documento que corrige uma nota fiscal emitida com erro de classificação tributária (duas palavras):",
     "correctAnswer": "nota complementar",
     "explanation": "A nota complementar é o documento emitido pelo fornecedor para corrigir valores ou classificações de uma nota original com erro.",
-    "pacciTip": "Nota complementar é o remédio pra nota fiscal doente, tesoro!"
+    "pacciTip": "Nota complementar é o remédio pra nota fiscal doente, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-048",
@@ -931,7 +992,8 @@
     "question": "Digite, em uma palavra, o tipo de erro mais comum que faz duas notas do mesmo produto terem cClassTrib diferentes:",
     "correctAnswer": "parametrização",
     "explanation": "Erros de parametrização cadastral são a causa mais comum de divergência de classificação entre notas de operações equivalentes.",
-    "pacciTip": "Parametrização, sempre ela, amico! A vilã mais frequente."
+    "pacciTip": "Parametrização, sempre ela, amico! A vilã mais frequente.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-163",
@@ -947,7 +1009,8 @@
     ],
     "correctAnswer": "Do caso concreto da importação, conforme previsto na regulamentação",
     "explanation": "Na importação de bens materiais, é exigida a emissão de Duimp ou DIR, conforme o caso — a escolha entre uma ou outra segue critérios definidos na regulamentação e no cronograma de obrigatoriedade.",
-    "pacciTip": "Duimp e DIR não são intercambiáveis à vontade — o caso concreto de importação define qual se aplica!"
+    "pacciTip": "Duimp e DIR não são intercambiáveis à vontade — o caso concreto de importação define qual se aplica!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-049",
@@ -957,7 +1020,8 @@
     "question": "Digite a sigla do tributo federal que, junto com o IBS, compõe o valor total de tributo destacado na nota fiscal:",
     "correctAnswer": "CBS",
     "explanation": "O IBS (subnacional) e o CBS (federal) formam, juntos, o valor total de tributo destacado numa nota sob o novo modelo.",
-    "pacciTip": "CBS é o parceiro federal do IBS nessa dupla, tesoro!"
+    "pacciTip": "CBS é o parceiro federal do IBS nessa dupla, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-050",
@@ -967,7 +1031,8 @@
     "question": "Digite o nome do campo que, junto com a alíquota, deve ser conferido diante de uma divergência de valor de IBS/CBS:",
     "correctAnswer": "cClassTrib",
     "explanation": "cClassTrib e alíquota são os dois pontos centrais de checagem sempre que o valor destacado numa nota diverge do esperado.",
-    "pacciTip": "Sempre os dois juntos na investigação, amico! cClassTrib e alíquota."
+    "pacciTip": "Sempre os dois juntos na investigação, amico! cClassTrib e alíquota.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-051",
@@ -983,7 +1048,8 @@
     ],
     "correctAnswer": "Comparar, venda a venda, o valor retido pelo split payment com o valor esperado pela alíquota da operação",
     "explanation": "A comparação individualizada por venda é o caminho mais eficiente para isolar exatamente onde está a diferença no lote do dia.",
-    "pacciTip": "Venda por venda é trabalhoso, mas é o jeito certo de achar a agulha no palheiro, tesoro!"
+    "pacciTip": "Venda por venda é trabalhoso, mas é o jeito certo de achar a agulha no palheiro, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-145",
@@ -999,7 +1065,8 @@
     ],
     "correctAnswer": "A isenção exclui o crédito tributário e não permite manutenção do crédito, enquanto a imunidade trata de hipóteses de não incidência do imposto",
     "explanation": "O CST 400 (Isenção) representa exclusão do crédito tributário, sem direito à manutenção de crédito. Já o CST 410 (Imunidade e não incidência) trata das hipóteses em que o IBS e a CBS simplesmente não incidem.",
-    "pacciTip": "Isenção \"perdoa\" o imposto de um jeito, imunidade nem deixa ele nascer — são coisas diferentes, tesoro!"
+    "pacciTip": "Isenção \"perdoa\" o imposto de um jeito, imunidade nem deixa ele nascer — são coisas diferentes, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-052",
@@ -1015,7 +1082,8 @@
     ],
     "correctAnswer": "Se a classificação tributária e a alíquota usadas na corrida estavam corretas no momento do pagamento",
     "explanation": "O valor retido pelo split payment depende diretamente da classificação e da alíquota aplicadas à operação no momento do pagamento.",
-    "pacciTip": "A resposta pro motorista está na classificação da corrida, amico! Não no trânsito."
+    "pacciTip": "A resposta pro motorista está na classificação da corrida, amico! Não no trânsito.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-164",
@@ -1031,7 +1099,8 @@
     ],
     "correctAnswer": "A partir de 1º de janeiro de um ano determinado no cronograma oficial",
     "explanation": "A Duimp será obrigatória a partir de 1º de janeiro de um ano específico definido no cronograma oficial — e, na importação de bens materiais, o prazo de obrigatoriedade acompanha o da Duimp.",
-    "pacciTip": "Assim como os outros documentos fiscais, a Duimp tem um cronograma escalonado de entrada em vigor!"
+    "pacciTip": "Assim como os outros documentos fiscais, a Duimp tem um cronograma escalonado de entrada em vigor!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-053",
@@ -1047,7 +1116,8 @@
     ],
     "correctAnswer": "Possível erro sistemático de parametrização tributária no cadastro daquele parceiro",
     "explanation": "Quando o erro se concentra sempre no mesmo parceiro, o mais provável é uma falha pontual e recorrente na parametrização do cadastro dele.",
-    "pacciTip": "Se o erro sempre mora no mesmo endereço, vai lá direto investigar, tesoro!"
+    "pacciTip": "Se o erro sempre mora no mesmo endereço, vai lá direto investigar, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-054",
@@ -1063,7 +1133,8 @@
     ],
     "correctAnswer": "Se a operação foi classificada corretamente conforme sua real natureza (nacional, exportação etc.)",
     "explanation": "O split payment calcula a retenção com base na classificação informada; se a natureza real da operação não bate com a classificação usada, o valor sai errado.",
-    "pacciTip": "Operação errada classificada é operação errada calculada, amico!"
+    "pacciTip": "Operação errada classificada é operação errada calculada, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-055",
@@ -1079,7 +1150,8 @@
     ],
     "correctAnswer": "Erro de parametrização em uma das parcelas, já que o tributo retido deveria seguir o mesmo cálculo proporcional em todas",
     "explanation": "Todas as parcelas de uma mesma venda devem seguir o mesmo cálculo proporcional de retenção; uma parcela fora do padrão indica erro pontual.",
-    "pacciTip": "Parcelas de uma mesma venda deveriam ser irmãs gêmeas no cálculo, tesoro! Uma diferente chama atenção."
+    "pacciTip": "Parcelas de uma mesma venda deveriam ser irmãs gêmeas no cálculo, tesoro! Uma diferente chama atenção.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-056",
@@ -1095,7 +1167,8 @@
     ],
     "correctAnswer": "Porque cada item do pacote pode ter classificação e alíquota próprias, exigindo cálculo segregado do tributo retido",
     "explanation": "Cada componente de um pacote (passagem, hospedagem, serviços) pode ter natureza tributária própria, exigindo cálculo individualizado, e não único, da retenção.",
-    "pacciTip": "Pacote misto pede cálculo separado por item, amico! Não dá pra jogar tudo no mesmo balaio."
+    "pacciTip": "Pacote misto pede cálculo separado por item, amico! Não dá pra jogar tudo no mesmo balaio.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-165",
@@ -1111,7 +1184,8 @@
     ],
     "correctAnswer": "Sim, há regras de transição específicas que não se aplicam nos primeiros anos",
     "explanation": "O tratamento previsto para compras governamentais não se aplica de 1º de janeiro a 31 de dezembro de 2026, e a destinação da CBS nas aquisições estaduais/municipais segue proporções crescentes entre 2029 e 2032.",
-    "pacciTip": "Compras governamentais têm uma \"rampa de acesso\" própria, com regras de transição escalonadas!"
+    "pacciTip": "Compras governamentais têm uma \"rampa de acesso\" própria, com regras de transição escalonadas!",
+    "topic": "transicao"
   },
   {
     "id": "REF-JR-057",
@@ -1121,7 +1195,8 @@
     "question": "O fato de o valor ter sido processado automaticamente pelo split payment garante, por si só, que ele está correto?",
     "correctAnswer": false,
     "explanation": "Não garante. A automação executa o cálculo com base nos parâmetros informados; se esses parâmetros estiverem errados, o valor processado também sai errado.",
-    "pacciTip": "Automático não é sinônimo de infalível, tesoro! Sempre confere."
+    "pacciTip": "Automático não é sinônimo de infalível, tesoro! Sempre confere.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-058",
@@ -1131,7 +1206,8 @@
     "question": "Uma diferença recorrente ao longo de vários meses deixa de precisar de investigação simplesmente por já ter acontecido antes?",
     "correctAnswer": false,
     "explanation": "Não deixa. Diferenças recorrentes indicam um erro sistemático que se repete mês a mês e deveria ter sido investigado desde a primeira ocorrência.",
-    "pacciTip": "Repetir o erro não vira tradição, amico! Continua precisando de investigação."
+    "pacciTip": "Repetir o erro não vira tradição, amico! Continua precisando de investigação.",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-059",
@@ -1141,7 +1217,8 @@
     "question": "A conciliação do split payment deve ser feita como rotina periódica, independentemente de haver reclamação de vendedores?",
     "correctAnswer": true,
     "explanation": "Sim. A conciliação proativa evita que erros se acumulem antes de serem percebidos, em vez de depender apenas de reclamações para serem notados.",
-    "pacciTip": "Rotina proativa é o segredo, tesoro! Não espera reclamação pra agir."
+    "pacciTip": "Rotina proativa é o segredo, tesoro! Não espera reclamação pra agir.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-060",
@@ -1151,7 +1228,8 @@
     "question": "É esperado que produtos de naturezas tributárias diferentes, vendidos no mesmo estabelecimento, tenham valores de tributo retido calculados de forma distinta pelo split payment?",
     "correctAnswer": true,
     "explanation": "Sim. Cada item segue sua própria classificação e alíquota, então é natural haver cálculos diferentes entre produtos de naturezas distintas vendidos juntos.",
-    "pacciTip": "Combustível e salgadinho não seguem a mesma receita tributária, amico!"
+    "pacciTip": "Combustível e salgadinho não seguem a mesma receita tributária, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-061",
@@ -1161,7 +1239,8 @@
     "question": "A adoção do split payment elimina totalmente o risco de passivo fiscal por tributo não recolhido corretamente?",
     "correctAnswer": false,
     "explanation": "Não elimina totalmente. O split payment reduz o risco ao automatizar a retenção, mas erros de parametrização ainda podem gerar recolhimento incorreto.",
-    "pacciTip": "Reduz o risco, sim, mas não apaga ele por completo, tesoro!"
+    "pacciTip": "Reduz o risco, sim, mas não apaga ele por completo, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-166",
@@ -1177,7 +1256,8 @@
     ],
     "correctAnswer": "Não, esse redutor específico se aplica a imóvel residencial NOVO",
     "explanation": "O redutor social de até R$ 100.000,00 se aplica especificamente à venda de bem imóvel residencial NOVO, realizada por contribuinte sujeito ao regime regular do IBS e da CBS.",
-    "pacciTip": "Repara no detalhe: é redutor pra imóvel NOVO, não pra qualquer imóvel usado no mercado, tesoro!"
+    "pacciTip": "Repara no detalhe: é redutor pra imóvel NOVO, não pra qualquer imóvel usado no mercado, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-146",
@@ -1193,7 +1273,8 @@
     ],
     "correctAnswer": "O diferimento posterga o imposto para uma etapa posterior, sem direito a crédito ao adquirente; a suspensão depende de um critério, e se ele for quebrado, o imposto volta a ser exigido",
     "explanation": "Diferimento (510) é a postergação do IBS/CBS para etapa posterior, sem pagamento nem crédito ao adquirente nessa etapa. Suspensão (550) é a incidência suspensa por um critério — se ele for quebrado, o imposto passa a ser exigido.",
-    "pacciTip": "Diferir é \"empurrar pra depois\". Suspender é \"pausar até quebrar a regra\". Guarda essa distinção!"
+    "pacciTip": "Diferir é \"empurrar pra depois\". Suspender é \"pausar até quebrar a regra\". Guarda essa distinção!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-062",
@@ -1203,7 +1284,8 @@
     "question": "Mesmo quando a conciliação mensal do split payment fecha sem divergências, ainda é uma boa prática documentar o resultado da conciliação?",
     "correctAnswer": true,
     "explanation": "Sim. Documentar o resultado, mesmo sem divergências, cria um histórico auditável e evidencia que a rotina de controle foi de fato executada.",
-    "pacciTip": "Bateu certinho? Documenta assim mesmo, amico! Prova que o trabalho foi feito."
+    "pacciTip": "Bateu certinho? Documenta assim mesmo, amico! Prova que o trabalho foi feito.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-063",
@@ -1224,7 +1306,8 @@
       "Abrir chamado interno para tratar as divergências encontradas"
     ],
     "explanation": "A conciliação começa pela extração do relatório, segue com o cruzamento dos valores, a separação das divergências e o registro em chamado interno.",
-    "pacciTip": "Extrai, cruza, separa, registra. Assim nenhuma venda escapa da conferência, tesoro!"
+    "pacciTip": "Extrai, cruza, separa, registra. Assim nenhuma venda escapa da conferência, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-064",
@@ -1245,7 +1328,8 @@
       "Responder ao paciente com a explicação ou corrigir o erro identificado"
     ],
     "explanation": "O atendimento começa recebendo o questionamento, localizando a transação, verificando a classificação usada e respondendo ao paciente com a conclusão.",
-    "pacciTip": "Recebe, localiza, verifica, responde. Assim o paciente sai satisfeito, amico!"
+    "pacciTip": "Recebe, localiza, verifica, responde. Assim o paciente sai satisfeito, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-065",
@@ -1266,7 +1350,8 @@
       "Registrar e escalar as divergências relevantes para o time fiscal"
     ],
     "explanation": "Primeiro consolidam-se os relatórios, depois padronizam-se os dados, compara-se o total com o esperado e, por fim, escalam-se as divergências relevantes.",
-    "pacciTip": "Consolida, padroniza, compara, escala. Fechamento com múltiplos meios de pagamento pede ordem, tesoro!"
+    "pacciTip": "Consolida, padroniza, compara, escala. Fechamento com múltiplos meios de pagamento pede ordem, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-167",
@@ -1282,7 +1367,8 @@
     ],
     "correctAnswer": "Não, só é obrigado ao cadastro se exercer a opção pelo regime regular",
     "explanation": "O consórcio é obrigado ao cadastro no CNPJ apenas caso exerça a opção pelo regime regular da CBS e do IBS — se não optar, não há essa obrigatoriedade específica.",
-    "pacciTip": "Consórcio só \"ganha\" a obrigação do CNPJ se escolher o regime regular — sem essa opção, fica de fora!"
+    "pacciTip": "Consórcio só \"ganha\" a obrigação do CNPJ se escolher o regime regular — sem essa opção, fica de fora!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-066",
@@ -1303,7 +1389,8 @@
       "Reportar o problema à equipe técnica responsável pelo sistema"
     ],
     "explanation": "A investigação começa notando o aumento, isolando as transações do período afetado, checando se a atualização mexeu em parâmetros e reportando à equipe técnica.",
-    "pacciTip": "Atualização suspeita? Isola, investiga e chama o time técnico, amico!"
+    "pacciTip": "Atualização suspeita? Isola, investiga e chama o time técnico, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-067",
@@ -1324,7 +1411,8 @@
       "Ajustar o registro contábil conforme o resultado da conferência"
     ],
     "explanation": "Levanta-se as taxas do período, confirma-se a classificação de cada uma, compara-se o valor retido com o esperado e ajusta-se o registro contábil ao final.",
-    "pacciTip": "Taxas de aluguel também merecem conferência caprichada, tesoro!"
+    "pacciTip": "Taxas de aluguel também merecem conferência caprichada, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-068",
@@ -1345,7 +1433,8 @@
       "Investigar a causa das assinaturas identificadas como fora do padrão"
     ],
     "explanation": "A revisão parte da listagem das mensalidades, verifica a proporcionalidade da retenção, identifica as fora do padrão e investiga a causa de cada uma.",
-    "pacciTip": "Mensalidade recorrente também pode esconder erro recorrente, amico! Revisa sempre."
+    "pacciTip": "Mensalidade recorrente também pode esconder erro recorrente, amico! Revisa sempre.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-069",
@@ -1361,7 +1450,8 @@
     ],
     "correctAnswer": "alíquota",
     "explanation": "A comparação com o valor calculado pela alíquota vigente é o ponto de partida para identificar a origem da diferença.",
-    "pacciTip": "Alíquota é a régua de comparação, tesoro!"
+    "pacciTip": "Alíquota é a régua de comparação, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-168",
@@ -1377,7 +1467,8 @@
     ],
     "correctAnswer": "Rendimentos financeiros",
     "explanation": "O regime específico de serviços financeiros trata da tributação de rendimentos financeiros, que têm tratamento tributário diferenciado em relação às regras gerais do IBS e da CBS.",
-    "pacciTip": "Rendimento financeiro tem regramento específico — não segue a regra geral de qualquer outra operação!"
+    "pacciTip": "Rendimento financeiro tem regramento específico — não segue a regra geral de qualquer outra operação!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-070",
@@ -1393,7 +1484,8 @@
     ],
     "correctAnswer": "conciliação",
     "explanation": "Mesmo com a automação da retenção, a conciliação periódica continua sendo necessária para identificar eventuais erros de parametrização.",
-    "pacciTip": "Automação ajuda, mas conciliação continua no cardápio, amico!"
+    "pacciTip": "Automação ajuda, mas conciliação continua no cardápio, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-071",
@@ -1409,7 +1501,8 @@
     ],
     "correctAnswer": "parametrização",
     "explanation": "Quando o erro se repete sempre no mesmo parceiro, a causa mais provável é uma falha específica na parametrização do cadastro tributário dele.",
-    "pacciTip": "Erro que mora sempre no mesmo lugar tem endereço certo, tesoro!"
+    "pacciTip": "Erro que mora sempre no mesmo lugar tem endereço certo, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-147",
@@ -1425,7 +1518,8 @@
     ],
     "correctAnswer": "É possível transferir o crédito para a pessoa jurídica sucessora, usando o CST 800",
     "explanation": "O CST 800 (Transferência de Crédito) é aplicável às transformações societárias — fusão, cisão ou incorporação — e ao regime específico das cooperativas, permitindo levar o crédito para a sucessora.",
-    "pacciTip": "Quando a empresa \"muda de roupa\" (fusão, cisão, incorporação), o crédito pode seguir junto, tesoro!"
+    "pacciTip": "Quando a empresa \"muda de roupa\" (fusão, cisão, incorporação), o crédito pode seguir junto, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-072",
@@ -1441,7 +1535,8 @@
     ],
     "correctAnswer": "todas",
     "explanation": "O cálculo proporcional do tributo retido deve se manter consistente em todas as parcelas de uma mesma venda.",
-    "pacciTip": "Todas as parcelas seguem o mesmo compasso, amico!"
+    "pacciTip": "Todas as parcelas seguem o mesmo compasso, amico!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-073",
@@ -1457,7 +1552,8 @@
     ],
     "correctAnswer": "documentar",
     "explanation": "Documentar o resultado, mesmo positivo, mantém um histórico auditável da rotina de controle executada.",
-    "pacciTip": "Documenta sempre, mesmo quando está tudo certo, tesoro!"
+    "pacciTip": "Documenta sempre, mesmo quando está tudo certo, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-169",
@@ -1473,7 +1569,8 @@
     ],
     "correctAnswer": "Não, o material menciona expressamente que inclui lanchonetes também",
     "explanation": "As operações de fornecimento de alimentação por bares e restaurantes, inclusive lanchonetes, ficam sujeitas ao regime específico — não se restringe a um formato específico de estabelecimento.",
-    "pacciTip": "Lanchonete entra no mesmo balaio de bares e restaurantes — o regime não é só pra \"restaurante chique\"!"
+    "pacciTip": "Lanchonete entra no mesmo balaio de bares e restaurantes — o regime não é só pra \"restaurante chique\"!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-074",
@@ -1489,7 +1586,8 @@
     ],
     "correctAnswer": "distintos",
     "explanation": "Cada produto segue sua própria classificação e alíquota, então é esperado que os valores retidos sejam distintos entre itens de naturezas diferentes.",
-    "pacciTip": "Produtos diferentes, retenções diferentes. Nada de estranhar, amico!"
+    "pacciTip": "Produtos diferentes, retenções diferentes. Nada de estranhar, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-075",
@@ -1499,7 +1597,8 @@
     "question": "Digite o nome do processo que compara os valores retidos pelo split payment com os valores esperados por venda:",
     "correctAnswer": "conciliação",
     "explanation": "A conciliação é o processo de comparação periódica entre valores retidos e valores esperados, essencial para detectar erros.",
-    "pacciTip": "Conciliação é a palavra do mês, sempre, tesoro!"
+    "pacciTip": "Conciliação é a palavra do mês, sempre, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-076",
@@ -1509,7 +1608,8 @@
     "question": "Digite o termo em inglês (duas palavras) do mecanismo que segrega automaticamente o tributo no momento do pagamento:",
     "correctAnswer": "split payment",
     "explanation": "O split payment é o mecanismo que separa automaticamente o valor do tributo no momento em que o pagamento é processado.",
-    "pacciTip": "Split payment, o protagonista da conciliação, amico!"
+    "pacciTip": "Split payment, o protagonista da conciliação, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-077",
@@ -1519,7 +1619,8 @@
     "question": "Digite, em uma palavra, o que geralmente causa divergências recorrentes de split payment concentradas em um único parceiro:",
     "correctAnswer": "parametrização",
     "explanation": "Erros de parametrização no cadastro tributário de um parceiro específico costumam ser a causa de divergências recorrentes e concentradas.",
-    "pacciTip": "Parametrização de novo na mira, tesoro!"
+    "pacciTip": "Parametrização de novo na mira, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-078",
@@ -1529,7 +1630,8 @@
     "question": "Digite o nome do campo, também citado nas divergências de nota fiscal, que deve ser conferido quando o split payment retém um valor diferente do esperado:",
     "correctAnswer": "cClassTrib",
     "explanation": "Assim como nas notas fiscais, o cClassTrib usado na operação é o principal ponto de checagem quando o valor retido diverge do esperado.",
-    "pacciTip": "cClassTrib aparece até no split payment, amico! Ele está em todo lugar."
+    "pacciTip": "cClassTrib aparece até no split payment, amico! Ele está em todo lugar.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-170",
@@ -1545,7 +1647,8 @@
     ],
     "correctAnswer": "Sim, a regra de não cumulação (salvo previsão expressa em lei) é comum aos regimes diferenciados e específicos",
     "explanation": "A regra de que os regimes diferenciados não podem ser cumulados com outros regimes diferenciados, específicos ou favorecidos (salvo previsão expressa) é uma regra geral que orienta a interpretação de vários regimes na Reforma.",
-    "pacciTip": "Regra de ouro: benefício não empilha com benefício, a menos que a lei diga expressamente que pode!"
+    "pacciTip": "Regra de ouro: benefício não empilha com benefício, a menos que a lei diga expressamente que pode!",
+    "topic": "credito_presumido"
   },
   {
     "id": "REF-JR-079",
@@ -1555,7 +1658,8 @@
     "question": "Digite, em uma palavra, o que o cálculo do tributo retido deve ser em relação aos diferentes itens de um pacote com naturezas tributárias distintas:",
     "correctAnswer": "segregado",
     "explanation": "Cada item de naturezas tributárias diferentes deve ter seu tributo calculado de forma segregada, e não em bloco único.",
-    "pacciTip": "Pacote misto pede cálculo separado, tesoro!"
+    "pacciTip": "Pacote misto pede cálculo separado, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-080",
@@ -1565,7 +1669,8 @@
     "question": "Digite, em uma palavra, o que deve ser feito com o resultado da conciliação mensal do split payment, mesmo quando não há divergências:",
     "correctAnswer": "documentado",
     "explanation": "Documentar o resultado da conciliação, mesmo positivo, evidencia que a rotina de controle foi executada e cria histórico auditável.",
-    "pacciTip": "Documentado, sempre, amico! Boa prática não tira folga."
+    "pacciTip": "Documentado, sempre, amico! Boa prática não tira folga.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-JR-081",
@@ -1581,7 +1686,8 @@
     ],
     "correctAnswer": "O regime de apuração escolhido pelo fornecedor optante do Simples Nacional (simplificado ou regular)",
     "explanation": "O percentual de crédito transferido ao comprador depende diretamente do regime de apuração adotado pelo fornecedor do Simples Nacional.",
-    "pacciTip": "O regime do fornecedor é quem manda no crédito, tesoro!"
+    "pacciTip": "O regime do fornecedor é quem manda no crédito, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-148",
@@ -1597,7 +1703,8 @@
     ],
     "correctAnswer": "NFCom (Nota Fiscal Fatura de Serviços de Comunicação Eletrônica)",
     "explanation": "Entre os documentos fiscais eletrônicos instituídos está a NFCom, modelo 62 — Nota Fiscal Fatura de Serviços de Comunicação Eletrônica, usada por empresas de telecomunicação.",
-    "pacciTip": "Cada setor ganhou seu próprio documento fiscal eletrônico: NF3e pra energia, NFCom pra telecom, e por aí vai!"
+    "pacciTip": "Cada setor ganhou seu próprio documento fiscal eletrônico: NF3e pra energia, NFCom pra telecom, e por aí vai!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-082",
@@ -1613,7 +1720,8 @@
     ],
     "correctAnswer": "O fornecedor no regime regular tende a gerar mais crédito ao comprador do que o no regime simplificado",
     "explanation": "A opção pelo regime regular por parte do fornecedor do Simples Nacional costuma ampliar o crédito disponível ao comprador em relação ao regime simplificado.",
-    "pacciTip": "Regime regular, crédito maior pro comprador, amico! Vale a pena comparar."
+    "pacciTip": "Regime regular, crédito maior pro comprador, amico! Vale a pena comparar.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-171",
@@ -1629,7 +1737,8 @@
     ],
     "correctAnswer": "Não necessariamente — o material prevê critérios de habitualidade/volume para o enquadramento",
     "explanation": "As pessoas físicas que realizam operações com imóveis podem ser consideradas contribuintes do regime regular, mas há critérios específicos de habitualidade e volume que definem o enquadramento — não é qualquer operação isolada que gera esse efeito.",
-    "pacciTip": "Uma venda isolada não necessariamente vira contribuinte — tem critério de volume/habitualidade envolvido!"
+    "pacciTip": "Uma venda isolada não necessariamente vira contribuinte — tem critério de volume/habitualidade envolvido!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-083",
@@ -1645,7 +1754,8 @@
     ],
     "correctAnswer": "Que o fornecedor avalie a opção pelo regime regular de apuração, se isso for vantajoso para ambas as partes",
     "explanation": "A opção pelo regime regular é uma escolha do próprio fornecedor do Simples Nacional, que pode ser negociada quando vantajosa para os dois lados.",
-    "pacciTip": "Conversa aberta com o fornecedor pode render mais crédito, tesoro!"
+    "pacciTip": "Conversa aberta com o fornecedor pode render mais crédito, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-084",
@@ -1661,7 +1771,8 @@
     ],
     "correctAnswer": "Sim, pois o regime simplificado do Simples Nacional pode gerar crédito em proporção diferente do regime regular",
     "explanation": "É esperado que o regime simplificado do Simples Nacional gere crédito em proporção diferente do regime regular; não é, por si só, um erro.",
-    "pacciTip": "Diferença de crédito aqui é regra, não bug, amico!"
+    "pacciTip": "Diferença de crédito aqui é regra, não bug, amico!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-085",
@@ -1677,7 +1788,8 @@
     ],
     "correctAnswer": "O regime de apuração de IBS/CBS efetivamente adotado por cada fornecedor",
     "explanation": "O regime de apuração de cada fornecedor é a informação central para estimar o crédito que a compra vai gerar antes de decidir.",
-    "pacciTip": "Antes de decidir, confere o regime de cada um, tesoro! É isso que muda o crédito."
+    "pacciTip": "Antes de decidir, confere o regime de cada um, tesoro! É isso que muda o crédito.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-086",
@@ -1693,7 +1805,8 @@
     ],
     "correctAnswer": "Verificar individualmente o regime de apuração de cada fornecedor, pois pode variar entre eles mesmo estando todos no Simples Nacional",
     "explanation": "Mesmo entre fornecedores do Simples Nacional, o regime de apuração pode variar de um para outro, exigindo checagem individual de cada um.",
-    "pacciTip": "Cada fornecedor pequeno pode ter uma regrinha diferente, amico! Confere um por um."
+    "pacciTip": "Cada fornecedor pequeno pode ter uma regrinha diferente, amico! Confere um por um.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-172",
@@ -1709,7 +1822,8 @@
     ],
     "correctAnswer": "Exigir a emissão de documentos fiscais nas compras",
     "explanation": "Os Programas de Incentivo à Cidadania Fiscal, previstos no art. 61 da Lcp 214/2025, estimulam os consumidores a exigirem a emissão de documentos fiscais em suas compras, com informações de pagamento podendo identificar o adquirente.",
-    "pacciTip": "O objetivo é simples: fazer o consumidor pedir a nota — e assim melhorar o controle fiscal geral!"
+    "pacciTip": "O objetivo é simples: fazer o consumidor pedir a nota — e assim melhorar o controle fiscal geral!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-087",
@@ -1719,7 +1833,8 @@
     "question": "Um fornecedor optante do Simples Nacional está automaticamente proibido de gerar qualquer crédito de IBS/CBS ao comprador?",
     "correctAnswer": false,
     "explanation": "Não está proibido. Dependendo do regime escolhido pelo fornecedor, ele pode gerar crédito ao comprador, ainda que em proporção diferente do regime regular.",
-    "pacciTip": "Proibido é palavra forte demais, tesoro! Simples Nacional pode sim gerar crédito."
+    "pacciTip": "Proibido é palavra forte demais, tesoro! Simples Nacional pode sim gerar crédito.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-088",
@@ -1729,7 +1844,8 @@
     "question": "Todos os fornecedores optantes do Simples Nacional geram exatamente o mesmo percentual de crédito ao comprador, independentemente do regime escolhido?",
     "correctAnswer": false,
     "explanation": "Não geram o mesmo percentual. O percentual de crédito pode variar conforme o regime de apuração (simplificado ou regular) escolhido por cada fornecedor.",
-    "pacciTip": "Cada fornecedor pode ter seu próprio percentual, amico! Não generaliza."
+    "pacciTip": "Cada fornecedor pode ter seu próprio percentual, amico! Não generaliza.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-089",
@@ -1739,7 +1855,8 @@
     "question": "Uma empresa do Simples Nacional pode optar pelo regime regular de apuração do IBS/CBS quando isso for vantajoso para gerar mais crédito aos seus clientes?",
     "correctAnswer": true,
     "explanation": "Sim. O Simples Nacional permite a opção pelo regime regular de apuração quando essa escolha for vantajosa, inclusive para os clientes que recebem o crédito.",
-    "pacciTip": "A porta pro regime regular está aberta, tesoro! Se fizer sentido pro fornecedor."
+    "pacciTip": "A porta pro regime regular está aberta, tesoro! Se fizer sentido pro fornecedor.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-090",
@@ -1749,7 +1866,8 @@
     "question": "Mesmo optando pelo regime simplificado, um prestador do Simples Nacional deve informar na nota fiscal os dados necessários para o cálculo do crédito do tomador?",
     "correctAnswer": true,
     "explanation": "Sim. A nota fiscal deve trazer as informações necessárias para que o tomador do serviço calcule corretamente o crédito de IBS/CBS a que tem direito.",
-    "pacciTip": "Nota tem que contar a história toda, amico! Mesmo no regime simplificado."
+    "pacciTip": "Nota tem que contar a história toda, amico! Mesmo no regime simplificado.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-091",
@@ -1759,7 +1877,8 @@
     "question": "Ao comparar fornecedores para maximizar crédito de IBS/CBS, o regime de apuração de cada um é uma informação irrelevante para a decisão?",
     "correctAnswer": false,
     "explanation": "Não é irrelevante. O regime de apuração de cada fornecedor impacta diretamente o crédito aproveitável, sendo informação central para a decisão.",
-    "pacciTip": "Irrelevante nada, tesoro! É justamente o dado que muda tudo."
+    "pacciTip": "Irrelevante nada, tesoro! É justamente o dado que muda tudo.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-173",
@@ -1775,7 +1894,8 @@
     ],
     "correctAnswer": "O documento fiscal com identificação do contrato de câmbio e da fatura de serviços",
     "explanation": "O ato conjunto da RFB e do CGIBS pode exigir a emissão de documento fiscal para acobertar a importação de serviço ou bem imaterial, contendo a identificação do contrato de câmbio e da fatura de serviços (ou documento equivalente).",
-    "pacciTip": "Câmbio + fatura de serviço = a dupla que comprova a importação de serviço perante o Fisco!"
+    "pacciTip": "Câmbio + fatura de serviço = a dupla que comprova a importação de serviço perante o Fisco!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-092",
@@ -1785,7 +1905,8 @@
     "question": "É possível que dois fornecedores diferentes, ambos do Simples Nacional, gerem percentuais de crédito diferentes para o mesmo tipo de compra?",
     "correctAnswer": true,
     "explanation": "Sim. Cada fornecedor pode ter optado por um regime de apuração diferente (simplificado ou regular), o que altera o percentual de crédito gerado.",
-    "pacciTip": "Mesmo grupo, resultados diferentes, amico! Depende da escolha de cada um."
+    "pacciTip": "Mesmo grupo, resultados diferentes, amico! Depende da escolha de cada um.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-149",
@@ -1801,7 +1922,8 @@
     ],
     "correctAnswer": "Sim, a obrigação de emissão se aplica inclusive à transferência de bens entre estabelecimentos do mesmo contribuinte",
     "explanation": "A obrigação de emissão de documentos fiscais aplica-se inclusive à transferência de bens entre estabelecimentos pertencentes ao mesmo contribuinte, além de operações imunes, isentas, com alíquota zero ou suspensão.",
-    "pacciTip": "Mesmo \"dentro de casa\", entre matriz e filial, o documento fiscal continua sendo obrigatório, capito?"
+    "pacciTip": "Mesmo \"dentro de casa\", entre matriz e filial, o documento fiscal continua sendo obrigatório, capito?",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-093",
@@ -1822,7 +1944,8 @@
       "Lançar o crédito apurado na apuração da empresa compradora"
     ],
     "explanation": "O fluxo começa pelo recebimento da nota, identifica o regime do fornecedor, calcula o percentual de crédito e finaliza com o lançamento na apuração.",
-    "pacciTip": "Recebe, identifica o regime, calcula, lança. Assim o crédito não se perde, tesoro!"
+    "pacciTip": "Recebe, identifica o regime, calcula, lança. Assim o crédito não se perde, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-094",
@@ -1843,7 +1966,8 @@
       "Escolher o fornecedor considerando preço e crédito gerado"
     ],
     "explanation": "Primeiro levanta-se os candidatos, depois verifica-se o regime de cada um, estima-se o crédito e só então se decide considerando preço e crédito juntos.",
-    "pacciTip": "Levanta, verifica, estima, escolhe. Decisão de fornecedor não é só sobre preço, amico!"
+    "pacciTip": "Levanta, verifica, estima, escolhe. Decisão de fornecedor não é só sobre preço, amico!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-095",
@@ -1864,7 +1988,8 @@
       "Consolidar o crédito total de IBS/CBS apurável do evento"
     ],
     "explanation": "Reúne-se todas as notas, separam-se as do Simples Nacional, verifica-se o regime de cada fornecedor e consolida-se o crédito total ao final.",
-    "pacciTip": "Evento grande, apuração organizada, tesoro! Passo a passo sem pular nada."
+    "pacciTip": "Evento grande, apuração organizada, tesoro! Passo a passo sem pular nada.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-174",
@@ -1880,7 +2005,8 @@
     ],
     "correctAnswer": "Não, ficam excluídos da base de cálculo do restaurante",
     "explanation": "Os valores não repassados aos bares e restaurantes pelo serviço de entrega e intermediação de pedidos por plataforma digital ficam excluídos da base de cálculo do restaurante.",
-    "pacciTip": "A parte que fica com o app de entrega não entra na base de cálculo de quem realmente cozinhou!"
+    "pacciTip": "A parte que fica com o app de entrega não entra na base de cálculo de quem realmente cozinhou!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-096",
@@ -1901,7 +2027,8 @@
       "Ambas as partes formalizam a decisão adotada"
     ],
     "explanation": "A negociação parte da identificação do regime atual, passa pela apresentação do impacto no crédito, pela avaliação do fornecedor e pela formalização conjunta.",
-    "pacciTip": "Negociação de regime é conversa de duas vias, amico! Os dois lados precisam concordar."
+    "pacciTip": "Negociação de regime é conversa de duas vias, amico! Os dois lados precisam concordar.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-097",
@@ -1922,7 +2049,8 @@
       "Validar a primeira nota fiscal recebida contra a regra configurada"
     ],
     "explanation": "Cadastra-se o fornecedor, confirma-se o regime informado, configura-se a regra de crédito no sistema e valida-se a primeira nota recebida contra essa regra.",
-    "pacciTip": "Cadastro novo pede conferência dobrada logo na primeira nota, tesoro!"
+    "pacciTip": "Cadastro novo pede conferência dobrada logo na primeira nota, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-098",
@@ -1943,7 +2071,8 @@
       "Comunicar a atualização à equipe de compras"
     ],
     "explanation": "A revisão periódica levanta a lista de fornecedores, verifica mudanças de regime, atualiza as regras de crédito e comunica a equipe de compras.",
-    "pacciTip": "Revisão periódica evita crédito calculado com regra velha, amico!"
+    "pacciTip": "Revisão periódica evita crédito calculado com regra velha, amico!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-099",
@@ -1959,7 +2088,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "O Simples Nacional participa do IBS/CBS por meio de um regime específico e simplificado, com a possibilidade de opção pelo regime regular.",
-    "pacciTip": "Regime específico é o padrão do Simples, tesoro! Mas pode mudar se o fornecedor quiser."
+    "pacciTip": "Regime específico é o padrão do Simples, tesoro! Mas pode mudar se o fornecedor quiser.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-175",
@@ -1975,7 +2105,8 @@
     ],
     "correctAnswer": "O excedente não se beneficia da exclusão da base de cálculo",
     "explanation": "A gorjeta fica excluída da base de cálculo desde que repassada integralmente ao empregado E que seu valor não exceda 15% do valor total do fornecimento — o que ultrapassar esse limite não tem esse mesmo benefício.",
-    "pacciTip": "Passou de 15%? Só a faixa dentro do limite tem o benefício de exclusão da base de cálculo!"
+    "pacciTip": "Passou de 15%? Só a faixa dentro do limite tem o benefício de exclusão da base de cálculo!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-100",
@@ -1991,7 +2122,8 @@
     ],
     "correctAnswer": "regular",
     "explanation": "A opção pelo regime regular de apuração é o caminho para que o fornecedor do Simples Nacional gere mais crédito ao comprador.",
-    "pacciTip": "Regime regular é a chave pra destravar mais crédito, amico!"
+    "pacciTip": "Regime regular é a chave pra destravar mais crédito, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-101",
@@ -2007,7 +2139,8 @@
     ],
     "correctAnswer": "regime de apuração",
     "explanation": "O regime de apuração escolhido pelo fornecedor (simplificado ou regular) é o fator que determina o percentual de crédito transferido.",
-    "pacciTip": "Regime de apuração é o segredo por trás do percentual, tesoro!"
+    "pacciTip": "Regime de apuração é o segredo por trás do percentual, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-102",
@@ -2023,7 +2156,8 @@
     ],
     "correctAnswer": "confirmar",
     "explanation": "Confirmar o regime informado na nota evita lançar um percentual de crédito incorreto na apuração da empresa compradora.",
-    "pacciTip": "Confirma antes de lançar, amico! Não custa nada e evita erro."
+    "pacciTip": "Confirma antes de lançar, amico! Não custa nada e evita erro.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-150",
@@ -2039,7 +2173,8 @@
     ],
     "correctAnswer": "Não, aquisição e fornecimento de bens não relacionados à atividade econômica seguem as mesmas regras dos não contribuintes",
     "explanation": "A aquisição e o fornecimento, por pessoa física caracterizada como contribuinte, de bens e serviços não relacionados ao desenvolvimento de sua atividade econômica sujeitam-se às mesmas regras dos não contribuintes — ou seja, não há incidência.",
-    "pacciTip": "O médico é contribuinte na consulta, não na venda do carro pessoal. Contexto importa, tesoro!"
+    "pacciTip": "O médico é contribuinte na consulta, não na venda do carro pessoal. Contexto importa, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-103",
@@ -2055,7 +2190,8 @@
     ],
     "correctAnswer": "diferentes",
     "explanation": "O regime de apuração é uma escolha individual de cada fornecedor, por isso dois fornecedores do Simples Nacional podem gerar percentuais diferentes.",
-    "pacciTip": "Cada fornecedor escreve sua própria regra, tesoro!"
+    "pacciTip": "Cada fornecedor escreve sua própria regra, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-176",
@@ -2071,7 +2207,8 @@
     ],
     "correctAnswer": "Redução de 60% da alíquota do IBS",
     "explanation": "Bens e serviços relacionados à soberania e segurança nacional, segurança da informação e segurança cibernética estão no grupo de redução de 60% da alíquota do IBS, junto com saúde, educação e outros itens do art. 128 da LC 214/2025.",
-    "pacciTip": "Segurança cibernética entrou na lista de setores estratégicos com 60% de redução, tesoro!"
+    "pacciTip": "Segurança cibernética entrou na lista de setores estratégicos com 60% de redução, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-104",
@@ -2087,7 +2224,8 @@
     ],
     "correctAnswer": "tributárias",
     "explanation": "A nota fiscal emitida pelo optante do Simples Nacional deve conter as informações tributárias necessárias para o cálculo do crédito do comprador.",
-    "pacciTip": "Nota fiscal sempre com as informações certinhas, amico!"
+    "pacciTip": "Nota fiscal sempre com as informações certinhas, amico!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-JR-105",
@@ -2097,7 +2235,8 @@
     "question": "Digite o nome do regime padrão (simplificado) seguido por uma empresa optante do Simples Nacional, salvo opção em contrário:",
     "correctAnswer": "simplificado",
     "explanation": "O regime simplificado é o padrão do Simples Nacional, salvo se a empresa optar formalmente pelo regime regular.",
-    "pacciTip": "Simplificado é o ponto de partida, tesoro!"
+    "pacciTip": "Simplificado é o ponto de partida, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-106",
@@ -2107,7 +2246,8 @@
     "question": "Digite o nome do regime alternativo que um fornecedor do Simples Nacional pode escolher para gerar mais crédito ao comprador:",
     "correctAnswer": "regular",
     "explanation": "O regime regular é a opção alternativa que um fornecedor do Simples Nacional pode adotar para ampliar o crédito gerado ao comprador.",
-    "pacciTip": "Regular é o caminho pro crédito maior, amico!"
+    "pacciTip": "Regular é o caminho pro crédito maior, amico!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-107",
@@ -2117,7 +2257,8 @@
     "question": "Digite, em duas ou três palavras, o que determina o percentual de crédito gerado por um fornecedor do Simples Nacional:",
     "correctAnswer": "regime de apuração",
     "explanation": "O regime de apuração escolhido pelo fornecedor é o fator determinante do percentual de crédito gerado ao comprador.",
-    "pacciTip": "Regime de apuração, a resposta certa de novo, tesoro!"
+    "pacciTip": "Regime de apuração, a resposta certa de novo, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-108",
@@ -2127,7 +2268,8 @@
     "question": "Digite o nome do regime tributário destinado a micro e pequenas empresas mencionado nas análises de fornecedores:",
     "correctAnswer": "Simples Nacional",
     "explanation": "O Simples Nacional é o regime tributário voltado a micro e pequenas empresas, com tratamento próprio dentro do novo modelo.",
-    "pacciTip": "Simples Nacional, o nome que não pode faltar, amico!"
+    "pacciTip": "Simples Nacional, o nome que não pode faltar, amico!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-177",
@@ -2143,7 +2285,8 @@
     ],
     "correctAnswer": "Sim, desde que destinado à utilização na categoria de aluguel (táxi)",
     "explanation": "Automóveis de passageiros adquiridos por motoristas profissionais que destinem o veículo à utilização na categoria de aluguel (táxi) têm alíquota zero de IBS, ao lado do benefício para pessoas com deficiência.",
-    "pacciTip": "Táxi e mobilidade acessível estão no mesmo grupo de alíquota zero na compra do veículo, tesoro!"
+    "pacciTip": "Táxi e mobilidade acessível estão no mesmo grupo de alíquota zero na compra do veículo, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-109",
@@ -2153,7 +2296,8 @@
     "question": "Digite, em uma palavra, o que o analista deve fazer com o regime informado na nota antes de lançar o crédito:",
     "correctAnswer": "confirmar",
     "explanation": "Confirmar o regime informado evita lançar um crédito calculado com base numa premissa errada.",
-    "pacciTip": "Confirma sempre antes de lançar, tesoro!"
+    "pacciTip": "Confirma sempre antes de lançar, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-110",
@@ -2163,7 +2307,8 @@
     "question": "Complete: é ___ que fornecedores do Simples Nacional nunca gerem crédito de IBS/CBS ao comprador.",
     "correctAnswer": "falso",
     "explanation": "É falso. Fornecedores do Simples Nacional podem gerar crédito ao comprador, em proporção que varia conforme o regime de apuração escolhido.",
-    "pacciTip": "Mito derrubado, amico! Simples Nacional pode sim gerar crédito."
+    "pacciTip": "Mito derrubado, amico! Simples Nacional pode sim gerar crédito.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-111",
@@ -2179,7 +2324,8 @@
     ],
     "correctAnswer": "O crédito pode seguir regras próprias de apropriação, diferentes das aplicáveis ao regime geral de mercadorias",
     "explanation": "O setor de combustíveis possui regime específico, com regras de apropriação de crédito diferentes das aplicáveis às mercadorias do regime geral.",
-    "pacciTip": "Combustível tem crédito com regrinha própria, tesoro!"
+    "pacciTip": "Combustível tem crédito com regrinha própria, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-112",
@@ -2195,7 +2341,8 @@
     ],
     "correctAnswer": "Porque o setor possui regime específico, com regras de apuração diferentes do regime geral",
     "explanation": "Serviços financeiros têm regime específico próprio, cujas regras de apuração de crédito diferem das aplicáveis ao regime geral de operações.",
-    "pacciTip": "Banco também tem sua regrinha especial, amico! Não trata como operação comum."
+    "pacciTip": "Banco também tem sua regrinha especial, amico! Não trata como operação comum.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-151",
@@ -2211,7 +2358,8 @@
     ],
     "correctAnswer": "Identificar o local do fornecimento a partir do tipo de operação realizada",
     "explanation": "O cIndOp associa cada tipo de operação (bem móvel, imóvel, serviço, transporte, telefonia etc.) ao respectivo local do fornecimento a ser identificado no documento fiscal eletrônico, conforme o art. 11 da Lcp 214/2025.",
-    "pacciTip": "cIndOp é a \"bússola\" que aponta onde o imposto nasce pra cada tipo de operação, capito?"
+    "pacciTip": "cIndOp é a \"bússola\" que aponta onde o imposto nasce pra cada tipo de operação, capito?",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-178",
@@ -2227,7 +2375,8 @@
     ],
     "correctAnswer": "O local do evento a que se refere o serviço",
     "explanation": "No serviço de planejamento, organização e administração de feiras, exposições, congressos, espetáculos e congêneres, o local do fornecimento a ser identificado no documento fiscal é o local do evento.",
-    "pacciTip": "Evento define o próprio local do imposto — onde a feira acontece, é lá que o IBS \"mora\"!"
+    "pacciTip": "Evento define o próprio local do imposto — onde a feira acontece, é lá que o IBS \"mora\"!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-JR-113",
@@ -2243,7 +2392,8 @@
     ],
     "correctAnswer": "Que planos de saúde seguem regime específico, com regras de apuração próprias distintas do regime geral",
     "explanation": "Planos de saúde estão entre os setores com regime específico previsto na reforma, com regras de apuração próprias e distintas do regime geral.",
-    "pacciTip": "Plano de saúde não segue a receita geral, tesoro! Tem a sua própria."
+    "pacciTip": "Plano de saúde não segue a receita geral, tesoro! Tem a sua própria.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-114",
@@ -2259,7 +2409,8 @@
     ],
     "correctAnswer": "Segregando os itens por natureza tributária, aplicando a cada um a regra do regime correspondente",
     "explanation": "Cada item de uma venda mista deve ser tratado conforme seu próprio regime tributário; misturar tudo numa única regra gera cálculo incorreto.",
-    "pacciTip": "Combustível e salgadinho, cada um com sua regra, amico!"
+    "pacciTip": "Combustível e salgadinho, cada um com sua regra, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-115",
@@ -2275,7 +2426,8 @@
     ],
     "correctAnswer": "Regime específico, com regras próprias de apuração",
     "explanation": "Assim como planos de saúde e combustíveis, os seguros integram o setor de serviços financeiros, sujeito a regime específico de apuração.",
-    "pacciTip": "Seguro também entra na turma do regime específico, tesoro!"
+    "pacciTip": "Seguro também entra na turma do regime específico, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-116",
@@ -2291,7 +2443,8 @@
     ],
     "correctAnswer": "A lógica do regime específico do setor financeiro, com regras próprias",
     "explanation": "Tarifas de serviços financeiros seguem a lógica do regime específico previsto para o setor, com regras de apuração próprias e distintas do regime geral.",
-    "pacciTip": "Corretagem segue a regra da casa financeira, amico! Não é venda de loja."
+    "pacciTip": "Corretagem segue a regra da casa financeira, amico! Não é venda de loja.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-179",
@@ -2307,7 +2460,8 @@
     ],
     "correctAnswer": "Proporcional ao território de cada ente tributante ao longo da via explorada",
     "explanation": "No serviço de exploração de via, o local da prestação corresponde à extensão da via explorada, proporcionalmente ao território dos entes tributantes envolvidos.",
-    "pacciTip": "Rodovia que passa por vários estados reparte o imposto proporcionalmente à extensão em cada um!"
+    "pacciTip": "Rodovia que passa por vários estados reparte o imposto proporcionalmente à extensão em cada um!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-117",
@@ -2317,7 +2471,8 @@
     "question": "O crédito de IBS/CBS sobre a compra de combustível segue exatamente as mesmas regras do crédito sobre a compra de uma mercadoria comum do regime geral?",
     "correctAnswer": false,
     "explanation": "Não segue. Combustíveis possuem regime específico, com regras próprias de apuração de crédito, diferentes das aplicáveis ao regime geral.",
-    "pacciTip": "Diesel não segue a receita geral, tesoro! Regrinha própria."
+    "pacciTip": "Diesel não segue a receita geral, tesoro! Regrinha própria.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-118",
@@ -2327,7 +2482,8 @@
     "question": "Planos de saúde estão sujeitos ao regime geral de apuração de IBS/CBS, sem qualquer regra própria?",
     "correctAnswer": false,
     "explanation": "Não estão. Planos de saúde possuem regime específico previsto na reforma, com regras de apuração próprias, diferentes do regime geral.",
-    "pacciTip": "Plano de saúde tem casa própria no regime específico, amico!"
+    "pacciTip": "Plano de saúde tem casa própria no regime específico, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-119",
@@ -2337,7 +2493,8 @@
     "question": "O fato de uma empresa atuar no setor de serviços financeiros já é, por si só, um indício de que ela pode estar sujeita a um regime específico de apuração?",
     "correctAnswer": true,
     "explanation": "Sim. Serviços financeiros estão entre os setores com regime específico previsto na reforma, com regras de apuração próprias.",
-    "pacciTip": "Setor financeiro já liga o sinal de alerta pro regime específico, tesoro!"
+    "pacciTip": "Setor financeiro já liga o sinal de alerta pro regime específico, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-120",
@@ -2347,7 +2504,8 @@
     "question": "Assim como a gasolina e o diesel, o gás de cozinha (GLP), por integrar o setor de combustíveis, pode estar sujeito a regras próprias de apuração?",
     "correctAnswer": true,
     "explanation": "Sim. O GLP integra o setor de combustíveis, sujeito a regime específico, com regras de apuração próprias, diferentes do regime geral.",
-    "pacciTip": "Gás de cozinha também mora no bairro dos combustíveis, amico!"
+    "pacciTip": "Gás de cozinha também mora no bairro dos combustíveis, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-121",
@@ -2357,7 +2515,8 @@
     "question": "Uma venda mista, com itens de regime específico e itens de regime geral na mesma nota, pode ser apurada em bloco, sem segregação por natureza do item?",
     "correctAnswer": false,
     "explanation": "Não pode. Cada item deve ser tratado conforme seu próprio regime tributário; apurar tudo em bloco gera cálculo incorreto do crédito.",
-    "pacciTip": "Bloco único é receita para erro, tesoro! Segrega sempre."
+    "pacciTip": "Bloco único é receita para erro, tesoro! Segrega sempre.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-180",
@@ -2373,7 +2532,8 @@
     ],
     "correctAnswer": "O local da entrega ou disponibilização",
     "explanation": "Nas operações de abastecimento de água, gás canalizado e energia elétrica destinadas a consumo, o local do fornecimento é o local da entrega ou disponibilização do produto.",
-    "pacciTip": "Consumo de verdade tem local simples: onde o produto é entregue ou disponibilizado ao cliente!"
+    "pacciTip": "Consumo de verdade tem local simples: onde o produto é entregue ou disponibilizado ao cliente!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-122",
@@ -2383,7 +2543,8 @@
     "question": "Tarifas de operações bancárias, como câmbio, exigem o mesmo tipo de atenção dedicada a outros itens sob regime específico, como combustíveis e planos de saúde?",
     "correctAnswer": true,
     "explanation": "Sim. Todos os regimes específicos compartilham a necessidade de regras próprias de apuração, exigindo atenção redobrada do analista.",
-    "pacciTip": "Câmbio, combustível, plano de saúde: mesma família, mesmo cuidado, amico!"
+    "pacciTip": "Câmbio, combustível, plano de saúde: mesma família, mesmo cuidado, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-152",
@@ -2399,7 +2560,8 @@
     ],
     "correctAnswer": "CST 800 (Transferência de Crédito)",
     "explanation": "O CST 800 é aplicável tanto às transformações societárias (fusão, cisão, incorporação) quanto ao regime específico das cooperativas, incluindo a transferência de crédito do associado.",
-    "pacciTip": "Cooperativa também tem regra própria pra transferir crédito entre os associados — mesmo CST das fusões!"
+    "pacciTip": "Cooperativa também tem regra própria pra transferir crédito entre os associados — mesmo CST das fusões!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-123",
@@ -2420,7 +2582,8 @@
       "Registrar o crédito apurado na apuração da transportadora"
     ],
     "explanation": "Identifica-se o regime específico do combustível, consulta-se a regra própria do setor, calcula-se o crédito conforme essas regras e registra-se o resultado.",
-    "pacciTip": "Combustível pede consulta à regra própria antes de calcular, tesoro!"
+    "pacciTip": "Combustível pede consulta à regra própria antes de calcular, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-124",
@@ -2441,7 +2604,8 @@
       "Repassar o valor de crédito apurado para a contabilidade"
     ],
     "explanation": "Recebe-se a fatura, confirma-se o enquadramento no regime específico, aplica-se a regra própria de crédito e repassa-se o valor à contabilidade.",
-    "pacciTip": "Fatura de plano de saúde também tem seu caminho certo, amico!"
+    "pacciTip": "Fatura de plano de saúde também tem seu caminho certo, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-125",
@@ -2462,7 +2626,8 @@
       "Somar os resultados para fechar a apuração do dia"
     ],
     "explanation": "Separam-se os itens por natureza, aplica-se a regra de cada regime, consolida-se cada grupo separadamente e soma-se tudo ao final para fechar o dia.",
-    "pacciTip": "Venda mista pede separação antes de qualquer soma, tesoro!"
+    "pacciTip": "Venda mista pede separação antes de qualquer soma, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-126",
@@ -2483,7 +2648,8 @@
       "Orientar o cliente sobre o crédito de IBS/CBS apurável"
     ],
     "explanation": "Recebe-se o extrato, identifica-se o regime específico do setor financeiro, aplica-se a regra própria às tarifas e orienta-se o cliente ao final.",
-    "pacciTip": "Tarifa bancária também merece seu passo a passo certinho, amico!"
+    "pacciTip": "Tarifa bancária também merece seu passo a passo certinho, amico!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-127",
@@ -2504,7 +2670,8 @@
       "Reportar o resultado da apuração à área fiscal"
     ],
     "explanation": "Levanta-se os prêmios do período, confirma-se o enquadramento no regime específico, aplica-se a metodologia própria e reporta-se o resultado à área fiscal.",
-    "pacciTip": "Prêmio de seguro segue o mesmo cuidado dos demais regimes específicos, tesoro!"
+    "pacciTip": "Prêmio de seguro segue o mesmo cuidado dos demais regimes específicos, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-128",
@@ -2525,7 +2692,8 @@
       "Consolidar o crédito total da empresa no período"
     ],
     "explanation": "Separam-se as operações por natureza, aplica-se o regime correspondente a cada grupo, calcula-se o crédito de cada um e consolida-se o total ao final.",
-    "pacciTip": "Insumo e serviço financeiro não se misturam na apuração, amico!"
+    "pacciTip": "Insumo e serviço financeiro não se misturam na apuração, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-129",
@@ -2541,7 +2709,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "Combustíveis integram um dos setores com regime específico previsto na reforma, com regras próprias de apuração de crédito.",
-    "pacciTip": "Regime específico é a marca registrada do combustível, tesoro!"
+    "pacciTip": "Regime específico é a marca registrada do combustível, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-130",
@@ -2557,7 +2726,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "Planos de saúde também integram os setores com regime específico previsto na reforma, com regras próprias de apuração.",
-    "pacciTip": "Plano de saúde e combustível são da mesma turma especial, amico!"
+    "pacciTip": "Plano de saúde e combustível são da mesma turma especial, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-131",
@@ -2573,7 +2743,8 @@
     ],
     "correctAnswer": "diferenciada",
     "explanation": "O crédito de serviços financeiros segue regras próprias do regime específico, diferentes das aplicáveis ao regime geral de operações.",
-    "pacciTip": "Diferenciada é a palavra certa, tesoro! Banco não segue o regime geral."
+    "pacciTip": "Diferenciada é a palavra certa, tesoro! Banco não segue o regime geral.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-132",
@@ -2589,7 +2760,8 @@
     ],
     "correctAnswer": "correspondente",
     "explanation": "Cada item de uma venda mista deve seguir o regime tributário correspondente à sua própria natureza, evitando cálculo incorreto do crédito.",
-    "pacciTip": "Cada item com seu regime certinho, amico! Nada de generalizar."
+    "pacciTip": "Cada item com seu regime certinho, amico! Nada de generalizar.",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-133",
@@ -2605,7 +2777,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "Seguros integram o setor de serviços financeiros, sujeito a regime específico de apuração de IBS/CBS.",
-    "pacciTip": "Seguro também tem sua regrinha própria, tesoro!"
+    "pacciTip": "Seguro também tem sua regrinha própria, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-134",
@@ -2621,7 +2794,8 @@
     ],
     "correctAnswer": "específicas",
     "explanation": "O GLP integra o setor de combustíveis e segue as mesmas regras específicas de apuração previstas para esse setor.",
-    "pacciTip": "GLP segue a família dos combustíveis, amico! Mesma regra especial."
+    "pacciTip": "GLP segue a família dos combustíveis, amico! Mesma regra especial.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-135",
@@ -2631,7 +2805,8 @@
     "question": "Digite a palavra que classifica o tipo de regime tributário aplicado à compra de combustíveis, diferente do regime geral:",
     "correctAnswer": "específico",
     "explanation": "A compra de combustíveis segue um regime específico de apuração, com regras próprias distintas do regime geral.",
-    "pacciTip": "Específico, a palavra-chave dos combustíveis, tesoro!"
+    "pacciTip": "Específico, a palavra-chave dos combustíveis, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-136",
@@ -2641,7 +2816,8 @@
     "question": "Digite o nome de um dos outros setores, além de combustíveis e planos de saúde, que também possuem regime específico de apuração (serviços ___):",
     "correctAnswer": "financeiros",
     "explanation": "Serviços financeiros também integram o grupo de setores com regime específico previsto na reforma tributária.",
-    "pacciTip": "Financeiro entra na roda dos regimes especiais, amico!"
+    "pacciTip": "Financeiro entra na roda dos regimes especiais, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-137",
@@ -2651,7 +2827,8 @@
     "question": "Digite, em uma palavra, o que deve ser feito com os itens de regimes tributários diferentes numa mesma venda antes de calcular o crédito:",
     "correctAnswer": "segregados",
     "explanation": "Os itens devem ser segregados por natureza tributária antes do cálculo, já que cada um segue a regra do seu próprio regime.",
-    "pacciTip": "Segrega primeiro, calcula depois, tesoro!"
+    "pacciTip": "Segrega primeiro, calcula depois, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-JR-138",
@@ -2661,7 +2838,8 @@
     "question": "Digite 'regime geral' ou 'regime específico': qual se aplica à apuração do crédito de IBS/CBS sobre prêmios de seguro?",
     "correctAnswer": "regime específico",
     "explanation": "Prêmios de seguro seguem o regime específico previsto para o setor de serviços financeiros, com regras próprias de apuração.",
-    "pacciTip": "Regime específico é a resposta certa pro seguro, amico!"
+    "pacciTip": "Regime específico é a resposta certa pro seguro, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-JR-139",
@@ -2671,7 +2849,8 @@
     "question": "Digite, em duas palavras, onde são definidas as regras próprias de cada regime específico (ex.: combustíveis, serviços financeiros):",
     "correctAnswer": "lei complementar",
     "explanation": "As regras próprias de cada regime específico são definidas em lei complementar, conforme previsto pela reforma tributária.",
-    "pacciTip": "Lei complementar é onde a regrinha específica nasce, tesoro!"
+    "pacciTip": "Lei complementar é onde a regrinha específica nasce, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-JR-140",
@@ -2681,6 +2860,7 @@
     "question": "Digite, em uma palavra, o tipo de crédito (diferente do crédito do regime geral) aplicável às operações sob regime específico:",
     "correctAnswer": "diferenciado",
     "explanation": "Operações sob regime específico têm crédito diferenciado, apurado conforme regras próprias, distintas das aplicáveis ao regime geral.",
-    "pacciTip": "Diferenciado é a marca do regime específico, amico!"
+    "pacciTip": "Diferenciado é a marca do regime específico, amico!",
+    "topic": "regimes_especiais"
   }
 ]

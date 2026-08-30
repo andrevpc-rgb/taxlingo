@@ -351,6 +351,19 @@ export async function recordLessonProgress({ userId, lessonId, score = null, pas
   return { id: data.id, lessonId: data.lesson_id, completedAt: data.completed_at, score: data.score, passed: data.passed };
 }
 
+// Uma linha por PERGUNTA respondida (granularidade fina o bastante pro
+// gráfico de Desempenho por Tema do Painel do Gestor — ver GameContext.jsx).
+export async function recordQuestionAttempt({ userId, questionId, lessonId, topic, isCorrect }) {
+  const { error } = await supabase.from('question_attempts').insert({
+    user_id: userId,
+    question_id: questionId,
+    lesson_id: lessonId,
+    topic,
+    is_correct: isCorrect,
+  });
+  if (error) throw error;
+}
+
 // ---------------------------------------------------------------------------
 // Rankings
 // ---------------------------------------------------------------------------
@@ -449,6 +462,49 @@ export async function fetchCompanies() {
   const { data, error } = await supabase.from('companies').select('id, name, company_code, cnpj');
   if (error) throw error;
   return data.map((c) => ({ id: c.id, name: c.name, code: c.company_code, cnpj: c.cnpj }));
+}
+
+// ---------------------------------------------------------------------------
+// Painel do Gestor — dados reais da equipe (ver AdminDashboard.jsx)
+// ---------------------------------------------------------------------------
+
+// A policy users_select_self_or_company já libera admin/master pra ler a
+// própria empresa inteira — não precisa de Edge Function/RPC aqui, é um
+// SELECT direto protegido por RLS.
+export async function fetchCompanyTeam(companyId) {
+  const { data, error } = await supabase.from('users').select('*').eq('company_id', companyId);
+  if (error) throw error;
+  return data.map(mapUserRow);
+}
+
+// Progresso (score por lição, regular ou exame) de uma lista de usuários —
+// alimenta "Lições Concluídas" e "Taxa Média de Acertos". Mesma RLS de
+// fetchUserProgress, só que a policy user_progress_select_self_or_company
+// libera o admin/master ler o progresso de QUALQUER um desses ids, contanto
+// que sejam da própria empresa.
+export async function fetchCompanyProgress(userIds) {
+  if (!userIds?.length) return [];
+  const { data, error } = await supabase
+    .from('user_progress')
+    .select('user_id, lesson_id, score, passed, completed_at')
+    .in('user_id', userIds);
+  if (error) throw error;
+  return data.map((row) => ({
+    userId: row.user_id,
+    lessonId: row.lesson_id,
+    score: row.score,
+    passed: row.passed,
+    completedAt: row.completed_at,
+  }));
+}
+
+// Tentativas por pergunta (com tópico) de uma lista de usuários — alimenta o
+// gráfico de Desempenho por Tema. Mesma RLS de question_attempts.
+export async function fetchCompanyTopicAttempts(userIds) {
+  if (!userIds?.length) return [];
+  const { data, error } = await supabase.from('question_attempts').select('topic, is_correct').in('user_id', userIds);
+  if (error) throw error;
+  return data.map((row) => ({ topic: row.topic, isCorrect: row.is_correct }));
 }
 
 // ---------------------------------------------------------------------------

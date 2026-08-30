@@ -316,21 +316,23 @@ export function computeLeaderboard(usersList, sortKey = 'xp') {
 }
 
 // ---------------------------------------------------------------------------
-// "Gargalos" de aprendizado — conceitos onde a equipe mais erra, exibidos no
-// Painel do Gestor. ILUSTRATIVO/MOCKADO: as perguntas do banco não têm um
-// campo de "tópico/conceito" próprio (só `level`), então não dá pra calcular
-// isso de verdade a partir do gameplay ainda. Para tornar isso real, seria
-// preciso adicionar uma tag de tópico a cada questão em src/data/questions/
-// e agregar erros por tag conforme os usuários respondem.
+// Rótulos legíveis dos tópicos usados no gráfico de Desempenho por Tema do
+// Painel do Gestor. O `topic` em si vem gravado em cada questão (ver o campo
+// `topic` em src/data/questions/*.json, classificado por palavra-chave do
+// próprio enunciado/explicação — não é um valor arbitrário) e é o mesmo
+// valor salvo em cada linha de public.question_attempts ao responder.
 // ---------------------------------------------------------------------------
-export const mockTopicGaps = [
-  { topic: 'Aproveitamento de Crédito IBS', missRate: 0.62, levelId: 'analista_pleno' },
-  { topic: 'Split Payment', missRate: 0.58, levelId: 'analista_junior' },
-  { topic: 'Regimes Específicos (Combustíveis/Saúde)', missRate: 0.54, levelId: 'analista_junior' },
-  { topic: 'Cronograma de Transição 2026-2033', missRate: 0.47, levelId: 'analista_senior' },
-  { topic: 'cClassTrib e Classificação Tributária', missRate: 0.44, levelId: 'auxiliar' },
-  { topic: 'Créditos Remanescentes de PIS/Cofins', missRate: 0.41, levelId: 'especialista' },
-];
+export const TOPIC_LABELS = {
+  split_payment: 'Split Payment',
+  imposto_seletivo: 'Imposto Seletivo',
+  credito_presumido: 'Crédito Presumido',
+  classificacao_fiscal: 'Classificação Fiscal (cClassTrib)',
+  obrigacoes_acessorias: 'Obrigações Acessórias',
+  regimes_especiais: 'Regimes Especiais',
+  transicao: 'Transição EC 132/2023',
+  ibs_cbs: 'IBS/CBS',
+  outros: 'Outros temas',
+};
 
 // ---------------------------------------------------------------------------
 // Trilha de carreira da Reforma Tributária: 7 níveis de senioridade.

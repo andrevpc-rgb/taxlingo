@@ -13,7 +13,8 @@
     ],
     "correctAnswer": "Imposto sobre Bens e Serviços",
     "explanation": "IBS é a sigla de Imposto sobre Bens e Serviços, o novo tributo estadual/municipal que substitui o ICMS e o ISS.",
-    "pacciTip": "Mamma mia, decore essa: IBS é dos Estados e Municípios! Já a CBS é da União. Dois irmãos, um só modelo!"
+    "pacciTip": "Mamma mia, decore essa: IBS é dos Estados e Municípios! Já a CBS é da União. Dois irmãos, um só modelo!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-002",
@@ -29,7 +30,8 @@
     ],
     "correctAnswer": "PIS e Cofins",
     "explanation": "A CBS (Contribuição sobre Bens e Serviços) unifica o PIS e a Cofins em um único tributo federal.",
-    "pacciTip": "Pensa assim, bambino: PIS + Cofins viram CBS. Dois viram um, é a magia da simplificação!"
+    "pacciTip": "Pensa assim, bambino: PIS + Cofins viram CBS. Dois viram um, é a magia da simplificação!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-003",
@@ -45,7 +47,8 @@
     ],
     "correctAnswer": "Imposto do pecado",
     "explanation": "O Imposto Seletivo é conhecido como 'imposto do pecado' por incidir sobre produtos prejudiciais à saúde ou ao meio ambiente, como cigarros e bebidas alcoólicas.",
-    "pacciTip": "Ahh, esse eu conheço bene! Cigarro, bebida, poluição... o Fisco cobra mais caro pra desestimular. Capito?"
+    "pacciTip": "Ahh, esse eu conheço bene! Cigarro, bebida, poluição... o Fisco cobra mais caro pra desestimular. Capito?",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-004",
@@ -61,7 +64,8 @@
     ],
     "correctAnswer": "A convivência entre o IBS (estadual/municipal) e a CBS (federal)",
     "explanation": "IVA Dual é o modelo em que dois tributos sobre valor agregado convivem: o IBS, de competência estadual/municipal, e a CBS, de competência federal.",
-    "pacciTip": "Dual não é 'cobrar duas vezes', tesoro! É dois tributos irmãos, cada um do seu dono, andando juntos."
+    "pacciTip": "Dual não é 'cobrar duas vezes', tesoro! É dois tributos irmãos, cada um do seu dono, andando juntos.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-005",
@@ -71,7 +75,8 @@
     "question": "A afirmação do colega está certa: o IBS substitui apenas o ICMS, mantendo o ISS como está?",
     "correctAnswer": false,
     "explanation": "Errado! O IBS substitui tanto o ICMS (estadual) quanto o ISS (municipal), unificando os dois em um único tributo.",
-    "pacciTip": "Ei, corrige o amico! IBS engole ICMS E ISS junto. Nenhum dos dois fica de fora, capisce?"
+    "pacciTip": "Ei, corrige o amico! IBS engole ICMS E ISS junto. Nenhum dos dois fica de fora, capisce?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-153",
@@ -87,7 +92,8 @@
     ],
     "correctAnswer": "Alíquota zero (0%)",
     "explanation": "A Cesta Básica Nacional de Alimentos tem alíquota zero de IBS e CBS, buscando garantir alimentação saudável e nutricionalmente adequada, respeitando a diversidade regional do país.",
-    "pacciTip": "Cesta básica é zero, tesoro — nem um pontinho percentual de imposto em cima dela!"
+    "pacciTip": "Cesta básica é zero, tesoro — nem um pontinho percentual de imposto em cima dela!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-006",
@@ -97,7 +103,8 @@
     "question": "A Reforma Tributária tem um período de transição gradual que vai até 2033?",
     "correctAnswer": true,
     "explanation": "Correto! A transição começa em 2026, com fase de testes, e se estende até 2033, quando o novo modelo estará totalmente implementado.",
-    "pacciTip": "Bravo! Roma não foi construída em um dia, e a Reforma também não. Vai com calma, passo a passo, até 2033."
+    "pacciTip": "Bravo! Roma não foi construída em um dia, e a Reforma também não. Vai com calma, passo a passo, até 2033.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-007",
@@ -107,7 +114,8 @@
     "question": "Essa anotação está correta: a CBS é um tributo de competência estadual?",
     "correctAnswer": false,
     "explanation": "Errado! A CBS é de competência federal (da União). Quem é estadual/municipal é o IBS.",
-    "pacciTip": "Nooo, corrige a planilha, presto! CBS = federal. IBS = estadual e municipal. Não troca essa, é clássica de prova!"
+    "pacciTip": "Nooo, corrige a planilha, presto! CBS = federal. IBS = estadual e municipal. Não troca essa, é clássica de prova!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-008",
@@ -117,7 +125,8 @@
     "question": "O Imposto Seletivo incide sobre produtos considerados prejudiciais à saúde ou ao meio ambiente?",
     "correctAnswer": true,
     "explanation": "Correto! Esse é justamente o critério do Imposto Seletivo: desestimular o consumo de itens nocivos à saúde ou ao meio ambiente.",
-    "pacciTip": "Sì, sì! Pode responder o cliente com confiança, esse é o coração do Imposto Seletivo."
+    "pacciTip": "Sì, sì! Pode responder o cliente com confiança, esse é o coração do Imposto Seletivo.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-009",
@@ -138,7 +147,8 @@
       "Vigência plena do novo modelo (IBS/CBS)"
     ],
     "explanation": "A Reforma começou com a EC 132/2023, seguiu para uma fase de testes, depois a extinção gradual dos tributos antigos, até a vigência plena do novo modelo.",
-    "pacciTip": "Segue a linha do tempo como uma receita de nonna: primeiro a lei, depois o teste, depois a troca, e no final... pronto!"
+    "pacciTip": "Segue a linha do tempo como uma receita de nonna: primeiro a lei, depois o teste, depois a troca, e no final... pronto!",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-154",
@@ -154,7 +164,8 @@
     ],
     "correctAnswer": "Cashback",
     "explanation": "O cashback é uma medida que beneficia especificamente as pessoas de baixa renda, ao contrário de isenções ou alíquota zero, que beneficiam ricos e pobres indiscriminadamente.",
-    "pacciTip": "Cashback é \"dinheiro de volta\" — e mirado só em quem mais precisa, capito?"
+    "pacciTip": "Cashback é \"dinheiro de volta\" — e mirado só em quem mais precisa, capito?",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-010",
@@ -175,7 +186,8 @@
       "Registrar o aprendizado para consultas futuras"
     ],
     "explanation": "O procedimento evita erros: primeiro anota, depois busca no glossário, confirma com quem tem mais experiência e só então registra o aprendizado.",
-    "pacciTip": "Nunca tenha vergonha de perguntar, piccolo! Até Pacci já confundiu sigla no começo. O importante é confirmar antes de errar."
+    "pacciTip": "Nunca tenha vergonha de perguntar, piccolo! Até Pacci já confundiu sigla no começo. O importante é confirmar antes de errar.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-141",
@@ -191,7 +203,8 @@
     ],
     "correctAnswer": "Não, brinde fornecido gratuitamente ao consumidor final não é tributado",
     "explanation": "Brinde é o bem ou serviço fornecido gratuitamente a consumidor final que não constitui objeto das atividades do fornecedor — por isso não há incidência de IBS e CBS.",
-    "pacciTip": "Brinde de verdade, tesoro, é aquele que a empresa dá de graça e que ela normalmente não vende. Esse escapa do IBS e da CBS!"
+    "pacciTip": "Brinde de verdade, tesoro, é aquele que a empresa dá de graça e que ela normalmente não vende. Esse escapa do IBS e da CBS!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-011",
@@ -212,7 +225,8 @@
       "ISS (municipal)"
     ],
     "explanation": "PIS e Cofins são federais, o ICMS é estadual e o ISS é municipal — do nível mais amplo para o mais local.",
-    "pacciTip": "Pensa numa escada, tesoro: federal no topo, depois estadual, depois municipal. Desce degrau por degrau!"
+    "pacciTip": "Pensa numa escada, tesoro: federal no topo, depois estadual, depois municipal. Desce degrau por degrau!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-012",
@@ -231,7 +245,8 @@
       "Imposto Seletivo (produtos específicos, prejudiciais à saúde/meio ambiente)"
     ],
     "explanation": "IBS e CBS incidem de forma ampla sobre o consumo em geral, enquanto o Imposto Seletivo é seletivo por natureza, focado em itens específicos.",
-    "pacciTip": "IBS e CBS são a base de tudo, general! O Imposto Seletivo é o 'extra' que mira só em alguns produtos."
+    "pacciTip": "IBS e CBS são a base de tudo, general! O Imposto Seletivo é o 'extra' que mira só em alguns produtos.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-013",
@@ -247,7 +262,8 @@
     ],
     "correctAnswer": "simplificar",
     "explanation": "O objetivo central da Reforma é simplificar o sistema tributário sobre o consumo, reduzindo o número de tributos e as regras divergentes entre estados e municípios.",
-    "pacciTip": "Simplificare é a palavra mágica, caro estagiário! Menos tributo, menos dor de cabeça."
+    "pacciTip": "Simplificare é a palavra mágica, caro estagiário! Menos tributo, menos dor de cabeça.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-155",
@@ -263,7 +279,8 @@
     ],
     "correctAnswer": "Devolução",
     "explanation": "Devolução é o desfazimento da operação após o fornecimento — a mercadoria já foi entregue, mas o adquirente a devolve total ou parcialmente. Já o cancelamento ocorre antes da entrega.",
-    "pacciTip": "Chegou e voltou: devolução. Nem chegou a sair: cancelamento. Simples de guardar!"
+    "pacciTip": "Chegou e voltou: devolução. Nem chegou a sair: cancelamento. Simples de guardar!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-014",
@@ -279,7 +296,8 @@
     ],
     "correctAnswer": "Dual",
     "explanation": "'IVA Dual' descreve exatamente essa convivência entre o tributo estadual/municipal (IBS) e o federal (CBS).",
-    "pacciTip": "Dual, dual, dual! Repete comigo até não esquecer mais, va bene?"
+    "pacciTip": "Dual, dual, dual! Repete comigo até não esquecer mais, va bene?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-015",
@@ -295,7 +313,8 @@
     ],
     "correctAnswer": "pecado",
     "explanation": "O apelido 'imposto do pecado' vem da lógica de taxar mais pesado produtos como cigarro, bebida alcoólica e itens poluentes.",
-    "pacciTip": "Pecado, pecado! Igual doce demais antes do jantar, capisce a ideia?"
+    "pacciTip": "Pecado, pecado! Igual doce demais antes do jantar, capisce a ideia?",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-016",
@@ -311,7 +330,8 @@
     ],
     "correctAnswer": "simbólica",
     "explanation": "Em 2026, a cobrança é simbólica (alíquota bem reduzida), servindo apenas para testar os sistemas antes da implementação completa.",
-    "pacciTip": "É só um ensaio geral, piccolo! Ninguém paga a conta cheia ainda em 2026."
+    "pacciTip": "É só um ensaio geral, piccolo! Ninguém paga a conta cheia ainda em 2026.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-017",
@@ -321,7 +341,8 @@
     "question": "Digite a sigla do tributo que substituirá o ICMS e o ISS:",
     "correctAnswer": "IBS",
     "explanation": "IBS = Imposto sobre Bens e Serviços, o tributo estadual/municipal que unifica ICMS e ISS.",
-    "pacciTip": "Três letrinhas só: I-B-S. Fácil de escrever, fácil de lembrar!"
+    "pacciTip": "Três letrinhas só: I-B-S. Fácil de escrever, fácil de lembrar!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-018",
@@ -331,7 +352,8 @@
     "question": "Digite a sigla do tributo federal que substituirá o PIS e a Cofins:",
     "correctAnswer": "CBS",
     "explanation": "CBS = Contribuição sobre Bens e Serviços, o novo tributo federal.",
-    "pacciTip": "C de CBS, C de federal com a União. Não confunde com o IBS, tesoro!"
+    "pacciTip": "C de CBS, C de federal com a União. Não confunde com o IBS, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-156",
@@ -347,7 +369,8 @@
     ],
     "correctAnswer": "Cancelamento",
     "explanation": "Cancelamento é o desfazimento da operação antes do fornecimento — a NF-e foi emitida, mas a mercadoria não chegou a ser entregue.",
-    "pacciTip": "Cancelamento é \"desistiu antes de sair da loja\". Devolução é \"voltou depois de chegar em casa\"!"
+    "pacciTip": "Cancelamento é \"desistiu antes de sair da loja\". Devolução é \"voltou depois de chegar em casa\"!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-019",
@@ -357,7 +380,8 @@
     "question": "Digite a sigla usada para o tributo que incide sobre produtos prejudiciais à saúde ou ao meio ambiente:",
     "correctAnswer": "IS",
     "explanation": "IS é a sigla do Imposto Seletivo.",
-    "pacciTip": "IS de Imposto Seletivo. Pequeno na sigla, mas pesado no bolso de quem consome demais!"
+    "pacciTip": "IS de Imposto Seletivo. Pequeno na sigla, mas pesado no bolso de quem consome demais!",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-020",
@@ -367,7 +391,8 @@
     "question": "Como se chama, em uma palavra, o modelo de IVA formado pela combinação de IBS e CBS?",
     "correctAnswer": "Dual",
     "explanation": "O modelo é chamado de IVA Dual, pois combina um tributo estadual/municipal (IBS) com um federal (CBS).",
-    "pacciTip": "Dual! Essa palavra você já vai levar pro resto da carreira, fidato de Pacci!"
+    "pacciTip": "Dual! Essa palavra você já vai levar pro resto da carreira, fidato de Pacci!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-142",
@@ -383,7 +408,8 @@
     ],
     "correctAnswer": "Bem de diminuto ou nenhum valor comercial, fornecido para dar conhecimento do produto",
     "explanation": "Amostra grátis é o bem ou serviço de diminuto ou nenhum valor comercial que constitui objeto da atividade do fornecedor, dado pra apresentar a natureza e qualidade do produto — por isso não incide o IBS e a CBS.",
-    "pacciTip": "Amostra grátis é aquela \"provadinha\" pra você conhecer o produto, capito? Pequena, sem graça comercial — e isenta!"
+    "pacciTip": "Amostra grátis é aquela \"provadinha\" pra você conhecer o produto, capito? Pequena, sem graça comercial — e isenta!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-021",
@@ -399,7 +425,8 @@
     ],
     "correctAnswer": "Passam a ser cobrados no local de consumo (destino), e não mais na origem/produção",
     "explanation": "A reforma adota o chamado 'princípio do destino': o tributo vai para o local onde o bem ou serviço é efetivamente consumido, não onde é produzido.",
-    "pacciTip": "Destino, não origem, tesoro! O imposto viaja junto com o produto até quem compra, capisce?"
+    "pacciTip": "Destino, não origem, tesoro! O imposto viaja junto com o produto até quem compra, capisce?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-022",
@@ -415,7 +442,8 @@
     ],
     "correctAnswer": "Guerra fiscal",
     "explanation": "A guerra fiscal é a disputa entre estados por meio de incentivos de ICMS para atrair empresas. A reforma busca reduzir esse tipo de disputa ao unificar regras no IBS.",
-    "pacciTip": "Guerra sem vencedor, piccolo! Todo mundo perde arrecadação nessa disputa. Por isso a reforma quer acabar com ela."
+    "pacciTip": "Guerra sem vencedor, piccolo! Todo mundo perde arrecadação nessa disputa. Por isso a reforma quer acabar com ela.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-157",
@@ -431,7 +459,8 @@
     ],
     "correctAnswer": "Correção do débito",
     "explanation": "Correção do débito é o ajuste do valor do IBS/CBS destacado em documento fiscal quando há erro no valor informado — diferente de devolução e cancelamento, que tratam do desfazimento da operação em si.",
-    "pacciTip": "Errou o valor? Não desfaz a venda, só corrige o débito. É outra categoria, tesoro!"
+    "pacciTip": "Errou o valor? Não desfaz a venda, só corrige o débito. É outra categoria, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-023",
@@ -447,7 +476,8 @@
     ],
     "correctAnswer": "Órgão que administra o IBS de forma compartilhada entre estados e municípios",
     "explanation": "O Comitê Gestor do IBS é a estrutura criada para administrar de forma compartilhada o novo imposto estadual/municipal, já que ele reúne a arrecadação de dois entes federativos.",
-    "pacciTip": "Um comitê, dois donos, um só imposto! Estados e municípios sentam na mesma mesa pra gerir o IBS."
+    "pacciTip": "Um comitê, dois donos, um só imposto! Estados e municípios sentam na mesma mesa pra gerir o IBS.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-024",
@@ -463,7 +493,8 @@
     ],
     "correctAnswer": "Quatro (PIS, Cofins, ICMS e ISS)",
     "explanation": "PIS e Cofins (federais) são substituídos pela CBS, enquanto ICMS (estadual) e ISS (municipal) são substituídos pelo IBS — quatro tributos ao todo.",
-    "pacciTip": "Quattro tributos viram dois, bambino! Conta nos dedos: PIS, Cofins, ICMS, ISS."
+    "pacciTip": "Quattro tributos viram dois, bambino! Conta nos dedos: PIS, Cofins, ICMS, ISS.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-025",
@@ -479,7 +510,8 @@
     ],
     "correctAnswer": "Com alíquotas reduzidas ou zero, em regimes diferenciados",
     "explanation": "Itens considerados essenciais, como medicamentos e cesta básica, contam com regimes específicos de alíquota reduzida ou zero dentro do novo modelo.",
-    "pacciTip": "Essencial pesa menos no bolso, va bene? A reforma protege quem mais precisa."
+    "pacciTip": "Essencial pesa menos no bolso, va bene? A reforma protege quem mais precisa.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-026",
@@ -495,7 +527,8 @@
     ],
     "correctAnswer": "Simplificar o sistema, reduzindo a quantidade de tributos sobre o consumo",
     "explanation": "A reforma busca simplificar o sistema tributário sobre o consumo, reduzindo a quantidade de tributos e unificando regras hoje divergentes entre estados e municípios.",
-    "pacciTip": "Menos tributo, menos confusão na colheita e na nota fiscal! Semplificare é a palavra da vez."
+    "pacciTip": "Menos tributo, menos confusão na colheita e na nota fiscal! Semplificare é a palavra da vez.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-158",
@@ -511,7 +544,8 @@
     ],
     "correctAnswer": "Não, são imunes, e essa imunidade ainda garante a manutenção dos créditos",
     "explanation": "As operações com livros, jornais, periódicos e o papel destinado à sua impressão são imunes ao IBS e à CBS — e essa imunidade garante a manutenção dos créditos das aquisições relacionadas.",
-    "pacciTip": "Cultura e informação são imunes, tesoro — e ainda por cima mantêm o crédito, um \"combo\" e tanto!"
+    "pacciTip": "Cultura e informação são imunes, tesoro — e ainda por cima mantêm o crédito, um \"combo\" e tanto!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-027",
@@ -527,7 +561,8 @@
     ],
     "correctAnswer": "Sobre o consumo de bens e serviços em geral",
     "explanation": "IBS e CBS têm base ampla de incidência: bens e serviços em geral, incluindo produtos digitais e assinaturas, com poucas exceções previstas em regimes específicos.",
-    "pacciTip": "App, assinatura, produto físico... quase tudo entra na conta do IBS e da CBS, tesoro!"
+    "pacciTip": "App, assinatura, produto físico... quase tudo entra na conta do IBS e da CBS, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-028",
@@ -543,7 +578,8 @@
     ],
     "correctAnswer": "A cadeia de produção, que fica menos onerada por tributos repetidos",
     "explanation": "O efeito cascata ocorre quando o tributo incide repetidamente em cada etapa da cadeia produtiva. A reforma busca reduzir essa cumulatividade, tornando a cadeia mais eficiente.",
-    "pacciTip": "Cascata de imposto é como juro sobre juro, capisce? Ninguém gosta de pagar duas vezes pela mesma coisa."
+    "pacciTip": "Cascata de imposto é como juro sobre juro, capisce? Ninguém gosta de pagar duas vezes pela mesma coisa.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-029",
@@ -559,7 +595,8 @@
     ],
     "correctAnswer": "IBS",
     "explanation": "O IBS substitui tanto o ICMS quanto o ISS, incluindo o ISS que hoje incide sobre serviços prestados, como os de construção civil.",
-    "pacciTip": "ISS vira IBS, semplice così! Serviço municipal migra pro novo imposto compartilhado."
+    "pacciTip": "ISS vira IBS, semplice così! Serviço municipal migra pro novo imposto compartilhado.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-030",
@@ -575,7 +612,8 @@
     ],
     "correctAnswer": "Regime específico com alíquota reduzida",
     "explanation": "Setores considerados essenciais, como educação e saúde, podem contar com regimes específicos que preveem alíquotas reduzidas dentro do novo modelo.",
-    "pacciTip": "Educação é prioridade, ragazzo! Por isso ganha um tratamento mais leve na conta do imposto."
+    "pacciTip": "Educação é prioridade, ragazzo! Por isso ganha um tratamento mais leve na conta do imposto.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-031",
@@ -591,7 +629,8 @@
     ],
     "correctAnswer": "Devolver parte do imposto pago por famílias de baixa renda",
     "explanation": "O cashback é um mecanismo de devolução de parte do valor pago em tributos para famílias de baixa renda, especialmente em itens essenciais.",
-    "pacciTip": "Um dinheirinho de volta pra quem mais precisa, tesoro! É a reforma cuidando de quem tem menos."
+    "pacciTip": "Um dinheirinho de volta pra quem mais precisa, tesoro! É a reforma cuidando de quem tem menos.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-159",
@@ -607,7 +646,8 @@
     ],
     "correctAnswer": "Não, exportações são imunes ao IBS e à CBS",
     "explanation": "Exportações de bens e serviços para o exterior são imunes à CBS e ao IBS — os exportadores não pagam esses impostos na venda e ainda podem usar créditos das compras internas relacionadas.",
-    "pacciTip": "Brasil não exporta imposto, tesoro! Só o produto sai, o IBS e a CBS ficam por aqui."
+    "pacciTip": "Brasil não exporta imposto, tesoro! Só o produto sai, o IBS e a CBS ficam por aqui.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-143",
@@ -623,7 +663,8 @@
     ],
     "correctAnswer": "Simples Nacional e Regime Regular",
     "explanation": "A Reforma prevê dois tipos de regime de apuração: o Simples Nacional (com regras próprias) e o Regime Regular, para quem não optar pelo Simples.",
-    "pacciTip": "Dois caminhos, bambino: Simples Nacional pros pequenos negócios, Regime Regular pros demais."
+    "pacciTip": "Dois caminhos, bambino: Simples Nacional pros pequenos negócios, Regime Regular pros demais.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-032",
@@ -639,7 +680,8 @@
     ],
     "correctAnswer": "A partir de 2033, ao final da transição",
     "explanation": "A transição é gradual: começa em 2026 com uma fase de testes e só se completa em 2033, quando o novo modelo passa a valer integralmente.",
-    "pacciTip": "Paciência, caro! Até 2033 os dois sistemas convivem, aos poucos, até o novo assumir de vez."
+    "pacciTip": "Paciência, caro! Até 2033 os dois sistemas convivem, aos poucos, até o novo assumir de vez.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-033",
@@ -655,7 +697,8 @@
     ],
     "correctAnswer": "Não, ele foca em produtos prejudiciais à saúde ou ao meio ambiente, não em itens essenciais",
     "explanation": "O Imposto Seletivo mira produtos como cigarro e bebida alcoólica, justamente o oposto de itens essenciais como medicamentos, que tendem a ter tratamento favorecido.",
-    "pacciTip": "Remédio não é pecado, piccola! Pode ficar tranquila, o IS não mira o que é essencial."
+    "pacciTip": "Remédio não é pecado, piccola! Pode ficar tranquila, o IS não mira o que é essencial.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-034",
@@ -671,7 +714,8 @@
     ],
     "correctAnswer": "EC 132/2023",
     "explanation": "A Emenda Constitucional 132, promulgada em 2023, é o marco legal que criou a Reforma Tributária sobre o consumo, dando origem ao IBS, à CBS e ao Imposto Seletivo.",
-    "pacciTip": "132 de 2023, grava esse número, tesoro! É o RG da reforma."
+    "pacciTip": "132 de 2023, grava esse número, tesoro! É o RG da reforma.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-035",
@@ -687,7 +731,8 @@
     ],
     "correctAnswer": "Porque bebidas alcoólicas são consideradas prejudiciais à saúde",
     "explanation": "O critério do Imposto Seletivo é o impacto do produto na saúde ou no meio ambiente, e bebidas alcoólicas se enquadram justamente nesse critério.",
-    "pacciTip": "Um brinde com moderação, ragazzo! O Fisco também acha que álcool merece um imposto a mais."
+    "pacciTip": "Um brinde com moderação, ragazzo! O Fisco também acha que álcool merece um imposto a mais.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-160",
@@ -703,7 +748,8 @@
     ],
     "correctAnswer": "Entre 1º e 30 de setembro",
     "explanation": "A opção de regime deve ser formalizada em setembro, e produz efeitos a partir de 1º de janeiro do ano seguinte — assim a empresa já começa o ano sabendo qual regime vai aplicar.",
-    "pacciTip": "Setembro é o mês da escolha, tesoro — decide com calma antes do próximo ano começar!"
+    "pacciTip": "Setembro é o mês da escolha, tesoro — decide com calma antes do próximo ano começar!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-036",
@@ -719,7 +765,8 @@
     ],
     "correctAnswer": "Alíquotas reduzidas por serem considerados essenciais",
     "explanation": "Serviços essenciais, como transporte público, tendem a contar com regimes específicos e alíquotas reduzidas dentro do novo sistema.",
-    "pacciTip": "Ônibus lotado já é difícil, tesoro, imagina com imposto cheio! Por isso o regime é mais leve aqui."
+    "pacciTip": "Ônibus lotado já é difícil, tesoro, imagina com imposto cheio! Por isso o regime é mais leve aqui.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-037",
@@ -735,7 +782,8 @@
     ],
     "correctAnswer": "Uma base ampla de bens e serviços, com poucas exceções",
     "explanation": "O modelo do IVA Dual (IBS + CBS) foi desenhado para ter base ampla de incidência, cobrindo bens e serviços em geral, com exceções pontuais previstas em lei.",
-    "pacciTip": "Base larga, exceção pequena! É assim que funciona o novo modelo, capisce?"
+    "pacciTip": "Base larga, exceção pequena! É assim que funciona o novo modelo, capisce?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-038",
@@ -751,7 +799,8 @@
     ],
     "correctAnswer": "Convivência gradual entre os tributos antigos e os novos, com testes iniciais",
     "explanation": "Durante a transição, os tributos antigos e os novos convivem por um tempo, começando por uma fase de testes com alíquota simbólica em 2026.",
-    "pacciTip": "Nada de mudança brusca, tesoro! É tudo por etapas, com calma, até 2033."
+    "pacciTip": "Nada de mudança brusca, tesoro! É tudo por etapas, com calma, até 2033.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-039",
@@ -767,7 +816,8 @@
     ],
     "correctAnswer": "Impacto negativo à saúde ou ao meio ambiente",
     "explanation": "O critério central do Imposto Seletivo é justamente mirar produtos e atividades com impacto negativo à saúde das pessoas ou ao meio ambiente.",
-    "pacciTip": "Poluiu, pagou mais caro! É a lógica do imposto do pecado, generale."
+    "pacciTip": "Poluiu, pagou mais caro! É a lógica do imposto do pecado, generale.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-161",
@@ -783,7 +833,8 @@
     ],
     "correctAnswer": "Redução de 30% da alíquota de referência",
     "explanation": "Profissões intelectuais de natureza científica, literária ou artística, submetidas à fiscalização por conselho profissional, têm redução de 30% da alíquota de referência (estimada em cerca de 18,55%).",
-    "pacciTip": "Advogado, contador, médico veterinário... profissão regulamentada por conselho ganha 30% de desconto na alíquota!"
+    "pacciTip": "Advogado, contador, médico veterinário... profissão regulamentada por conselho ganha 30% de desconto na alíquota!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-040",
@@ -799,7 +850,8 @@
     ],
     "correctAnswer": "Receita Federal, órgão do governo federal",
     "explanation": "Como a CBS é um tributo federal, sua administração cabe à Receita Federal, enquanto o IBS é administrado de forma compartilhada pelo Comitê Gestor.",
-    "pacciTip": "CBS mora na casa da União, tesoro! Quem cuida dela é a Receita Federal."
+    "pacciTip": "CBS mora na casa da União, tesoro! Quem cuida dela é a Receita Federal.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-041",
@@ -815,7 +867,8 @@
     ],
     "correctAnswer": "Reduzir a complexidade de lidar com regras diferentes de cada estado e município",
     "explanation": "Hoje, cada estado e cada município tem regras próprias de ICMS e ISS. Unificar os dois no IBS reduz essa complexidade, especialmente para pequenas empresas.",
-    "pacciTip": "Uma regra só, em vez de milhares! Isso é presente pra pequeno empresário, capisce?"
+    "pacciTip": "Uma regra só, em vez de milhares! Isso é presente pra pequeno empresário, capisce?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-144",
@@ -831,7 +884,8 @@
     ],
     "correctAnswer": "Sim, o optante pelo Simples Nacional pode exercer essa opção",
     "explanation": "A legislação permite que os optantes pelo Simples Nacional exerçam a opção de apurar e recolher o IBS e a CBS pelo regime regular, quando isso for vantajoso.",
-    "pacciTip": "Ninguém fica preso, tesoro! Quem é do Simples pode escolher jogar no Regime Regular se fizer mais sentido pro negócio."
+    "pacciTip": "Ninguém fica preso, tesoro! Quem é do Simples pode escolher jogar no Regime Regular se fizer mais sentido pro negócio.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-042",
@@ -847,7 +901,8 @@
     ],
     "correctAnswer": "Do IBS e da CBS, como a maioria dos bens e serviços",
     "explanation": "Produtos comuns, sem relação com saúde ou meio ambiente, seguem a tributação padrão de IBS e CBS, sem entrar no Imposto Seletivo.",
-    "pacciTip": "Ração de cachorro não é pecado, ragazzo! Aqui a regra é a padrão: IBS e CBS."
+    "pacciTip": "Ração de cachorro não é pecado, ragazzo! Aqui a regra é a padrão: IBS e CBS.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-043",
@@ -863,7 +918,8 @@
     ],
     "correctAnswer": "Também as operações de importação, seguindo a lógica do destino",
     "explanation": "Como o princípio é tributar no destino (onde o bem é consumido), a lógica também se aplica a produtos importados que serão consumidos no Brasil.",
-    "pacciTip": "Vem de fora, mas consome aqui? Então paga aqui, tesoro! É a lógica do destino valendo pra importação também."
+    "pacciTip": "Vem de fora, mas consome aqui? Então paga aqui, tesoro! É a lógica do destino valendo pra importação também.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-162",
@@ -879,7 +935,8 @@
     ],
     "correctAnswer": "Sim, gera crédito equivalente ao IBS e à CBS devidos no regime, conforme informado no documento fiscal",
     "explanation": "A aquisição de optante pelo Simples Nacional gera crédito equivalente ao IBS e à CBS devidos no regime, conforme informado no documento fiscal — preservando a não cumulatividade na cadeia.",
-    "pacciTip": "Comprar de quem é do Simples não \"quebra\" a cadeia de crédito, tesoro — o crédito passa adiante!"
+    "pacciTip": "Comprar de quem é do Simples não \"quebra\" a cadeia de crédito, tesoro — o crédito passa adiante!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-044",
@@ -895,7 +952,8 @@
     ],
     "correctAnswer": "IPVA",
     "explanation": "A Reforma Tributária do consumo trata da extinção de PIS, Cofins, ICMS e ISS, substituídos por CBS e IBS. O IPVA, imposto sobre veículos, não faz parte dessa reforma.",
-    "pacciTip": "Nem tudo muda de uma vez, tesoro! O IPVA continua onde sempre esteve."
+    "pacciTip": "Nem tudo muda de uma vez, tesoro! O IPVA continua onde sempre esteve.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-045",
@@ -905,7 +963,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! Itens da cesta básica tendem a ter alíquota reduzida ou zero dentro de regimes específicos, justamente por serem essenciais à alimentação da população.",
-    "pacciTip": "Nooo, cesta básica não paga a conta cheia, tesoro! Ela tem um tratamento mais suave."
+    "pacciTip": "Nooo, cesta básica não paga a conta cheia, tesoro! Ela tem um tratamento mais suave.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-046",
@@ -915,7 +974,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O Imposto Seletivo mira produtos prejudiciais à saúde, como bebidas alcoólicas, não bebidas em geral. Um suco comum, por exemplo, não segue a mesma lógica.",
-    "pacciTip": "Cada bebida no seu quadrado, ragazzo! O IS mira o que faz mal, não tudo igual."
+    "pacciTip": "Cada bebida no seu quadrado, ragazzo! O IS mira o que faz mal, não tudo igual.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-047",
@@ -925,7 +985,8 @@
     "question": "Essa anotação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A CBS é de competência federal, administrada pela Receita Federal. Quem envolve estados e municípios é o IBS, via Comitê Gestor.",
-    "pacciTip": "Corrige a caderneta, presto! CBS mora com a União, não com os estados."
+    "pacciTip": "Corrige a caderneta, presto! CBS mora com a União, não com os estados.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-048",
@@ -935,7 +996,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! O IBS absorve tanto o ICMS quanto o ISS, incluindo o ISS que hoje incide sobre serviços como os de construção civil.",
-    "pacciTip": "Bravo! ISS de serviço vira IBS, sem mistério."
+    "pacciTip": "Bravo! ISS de serviço vira IBS, sem mistério.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-163",
@@ -951,7 +1013,8 @@
     ],
     "correctAnswer": "Dos documentos fiscais eletrônicos (DF-e), como a NF-e e o CT-e",
     "explanation": "A NF-e e o CT-e deixam de ser apenas documentos da operação: passam a alimentar automaticamente a apuração assistida do IBS e da CBS.",
-    "pacciTip": "O documento fiscal eletrônico virou o \"coração\" da apuração — tudo nasce dele, capito?"
+    "pacciTip": "O documento fiscal eletrônico virou o \"coração\" da apuração — tudo nasce dele, capito?",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-049",
@@ -961,7 +1024,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! Em 2023 houve apenas a promulgação da EC 132/2023. A vigência plena do novo modelo só acontece em 2033, ao final da transição gradual.",
-    "pacciTip": "Calma, ragazzo! Promulgar não é o mesmo que já valer 100%. Isso só chega em 2033."
+    "pacciTip": "Calma, ragazzo! Promulgar não é o mesmo que já valer 100%. Isso só chega em 2033.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-050",
@@ -971,7 +1035,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! O cashback foi criado justamente para devolver parte do imposto pago por famílias de baixa renda, aliviando o peso da tributação no consumo.",
-    "pacciTip": "Sì, sì! Esse dinheirinho de volta é pensado pra quem mais precisa."
+    "pacciTip": "Sì, sì! Esse dinheirinho de volta é pensado pra quem mais precisa.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-051",
@@ -981,7 +1046,8 @@
     "question": "Essa explicação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! IVA Dual descreve a convivência entre dois tributos diferentes — IBS (estadual/municipal) e CBS (federal) —, e não uma cobrança duplicada do mesmo valor.",
-    "pacciTip": "Não é pagar duas vezes, piccolo! É dois tributos irmãos, cada um com seu dono."
+    "pacciTip": "Não é pagar duas vezes, piccolo! É dois tributos irmãos, cada um com seu dono.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-145",
@@ -997,7 +1063,8 @@
     ],
     "correctAnswer": "A obtenção de lucro com a operação",
     "explanation": "O Fato Gerador independe da obtenção de lucro com a operação, da espécie ou forma jurídica do negócio, do título pelo qual o bem está na posse do fornecedor, e do cumprimento de exigências legais.",
-    "pacciTip": "Lucrou ou não lucrou, o Fisco não tá nem aí pra isso na hora de saber se incide o imposto, capito?"
+    "pacciTip": "Lucrou ou não lucrou, o Fisco não tá nem aí pra isso na hora de saber se incide o imposto, capito?",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-052",
@@ -1007,7 +1074,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! É o contrário: o Imposto Seletivo mira produtos prejudiciais à saúde ou ao meio ambiente, como cigarro e bebida alcoólica, não os essenciais.",
-    "pacciTip": "Inverteu tudo, tesoro! Remédio é o oposto do que o IS persegue."
+    "pacciTip": "Inverteu tudo, tesoro! Remédio é o oposto do que o IS persegue.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-164",
@@ -1023,7 +1091,8 @@
     ],
     "correctAnswer": "Programas de Incentivo à Cidadania Fiscal",
     "explanation": "O Comitê Gestor do IBS e a RFB podem instituir Programas de Incentivo à Cidadania Fiscal, estimulando os consumidores a exigirem a emissão de documentos fiscais — inclusive com sorteios.",
-    "pacciTip": "Pedir a nota vira \"bilhete de sorteio\", tesoro — é a Reforma incentivando todo mundo a cobrar o documento!"
+    "pacciTip": "Pedir a nota vira \"bilhete de sorteio\", tesoro — é a Reforma incentivando todo mundo a cobrar o documento!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-053",
@@ -1033,7 +1102,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! A EC 132/2023 é exatamente o marco constitucional que deu origem ao IBS, à CBS e ao Imposto Seletivo.",
-    "pacciTip": "Ottimo! 132/2023, o número que resume toda a reforma."
+    "pacciTip": "Ottimo! 132/2023, o número que resume toda a reforma.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-054",
@@ -1043,7 +1113,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O Comitê Gestor do IBS é justamente compartilhado entre estados e municípios, que administram juntos esse novo tributo.",
-    "pacciTip": "Comitê é de dois, não de um só, capisce? Estados e municípios dividem essa gestão."
+    "pacciTip": "Comitê é de dois, não de um só, capisce? Estados e municípios dividem essa gestão.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-055",
@@ -1053,7 +1124,8 @@
     "question": "A resposta do colega está correta?",
     "correctAnswer": false,
     "explanation": "Errado! Setores essenciais, como o transporte público, tendem a ter regimes específicos com alíquota reduzida, diferente de produtos de luxo.",
-    "pacciTip": "Ônibus não é joia, ragazzo! O tratamento tributário também é bem diferente."
+    "pacciTip": "Ônibus não é joia, ragazzo! O tratamento tributário também é bem diferente.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-056",
@@ -1063,7 +1135,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A extinção dos tributos antigos é gradual, ao longo da transição que vai de 2026 até 2033, e não acontece de uma só vez.",
-    "pacciTip": "Passo a passo, tesoro, não é um estalar de dedos! A transição é longa de propósito."
+    "pacciTip": "Passo a passo, tesoro, não é um estalar de dedos! A transição é longa de propósito.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-165",
@@ -1079,7 +1152,8 @@
     ],
     "correctAnswer": "Não, desde que idêntico em quantidade e valor ao bem defeituoso substituído",
     "explanation": "O IBS e a CBS não incidem na importação de bens materiais idênticos, em igual quantidade e valor, destinados a repor outros anteriormente importados que eram defeituosos ou imprestáveis.",
-    "pacciTip": "Reposição de peça com defeito não é uma \"nova compra\" pro Fisco — por isso não paga de novo!"
+    "pacciTip": "Reposição de peça com defeito não é uma \"nova compra\" pro Fisco — por isso não paga de novo!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-057",
@@ -1089,7 +1163,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! Em 2026, a cobrança é simbólica, com alíquota bem reduzida, servindo apenas para testar os sistemas antes da implementação completa.",
-    "pacciTip": "É só um ensaio geral em 2026, piccolo! A conta cheia vem bem mais na frente."
+    "pacciTip": "É só um ensaio geral em 2026, piccolo! A conta cheia vem bem mais na frente.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-058",
@@ -1099,7 +1174,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! O Imposto Seletivo pode incidir sobre produtos e atividades com impacto negativo relevante ao meio ambiente.",
-    "pacciTip": "Bravo! Poluição pesada também entra no radar do Imposto Seletivo."
+    "pacciTip": "Bravo! Poluição pesada também entra no radar do Imposto Seletivo.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-059",
@@ -1109,7 +1185,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! A unificação reduz a necessidade de lidar com regras diferentes de cada estado e município, simplificando o dia a dia fiscal das empresas.",
-    "pacciTip": "Sì! Menos regra pra decorar, mais tempo pra cuidar do negócio."
+    "pacciTip": "Sì! Menos regra pra decorar, mais tempo pra cuidar do negócio.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-060",
@@ -1119,7 +1196,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! Produtos comuns continuam sujeitos normalmente ao IBS e à CBS. A isenção ou redução de alíquota vale para casos específicos, não para produtos em geral.",
-    "pacciTip": "Ração ainda paga imposto, tesoro! Só muda o nome e o formato do tributo."
+    "pacciTip": "Ração ainda paga imposto, tesoro! Só muda o nome e o formato do tributo.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-061",
@@ -1129,7 +1207,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! A Reforma prevê regimes específicos para itens essenciais, com alíquotas reduzidas em relação à regra geral.",
-    "pacciTip": "Esatto! Essencial ganha um tratamento mais gentil do Fisco."
+    "pacciTip": "Esatto! Essencial ganha um tratamento mais gentil do Fisco.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-166",
@@ -1145,7 +1224,8 @@
     ],
     "correctAnswer": "Sim, quando o serviço é fornecido por residente no exterior e consumido no país",
     "explanation": "O IBS e a CBS incidem na importação de bens materiais, bens imateriais e serviços — no caso de serviços e bens imateriais, quando fornecidos por residente no exterior e consumidos no país.",
-    "pacciTip": "Serviço de fora que você usa aqui dentro também entra na conta do IBS e da CBS, tesoro!"
+    "pacciTip": "Serviço de fora que você usa aqui dentro também entra na conta do IBS e da CBS, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-146",
@@ -1161,7 +1241,8 @@
     ],
     "correctAnswer": "A emissão de documento fiscal eletrônico",
     "explanation": "O sujeito passivo do IBS e da CBS, ao realizar operações com bens ou serviços — inclusive exportações e importações — deve emitir documento fiscal eletrônico.",
-    "pacciTip": "Documento fiscal eletrônico é obrigatório até em operação isenta ou com alíquota zero. Registra tudo, tesoro!"
+    "pacciTip": "Documento fiscal eletrônico é obrigatório até em operação isenta ou com alíquota zero. Registra tudo, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-062",
@@ -1171,7 +1252,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! Essa é justamente a lógica do princípio do destino adotado pela Reforma: o imposto vai para onde o bem ou serviço é consumido.",
-    "pacciTip": "Perfetto! Destino é onde o produto termina a viagem, e é lá que o imposto fica."
+    "pacciTip": "Perfetto! Destino é onde o produto termina a viagem, e é lá que o imposto fica.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-063",
@@ -1181,7 +1263,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! Ao unificar regras no IBS, a Reforma busca justamente reduzir a disputa por incentivos fiscais entre os estados, conhecida como guerra fiscal.",
-    "pacciTip": "Sì, sì! Menos guerra, mais harmonia entre os estados."
+    "pacciTip": "Sì, sì! Menos guerra, mais harmonia entre os estados.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-064",
@@ -1191,7 +1274,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A base de incidência de IBS e CBS é ampla, cobrindo bens e serviços em geral, incluindo serviços digitais como assinaturas de aplicativos.",
-    "pacciTip": "App também paga, ragazzo! A base é larga, quase nada escapa."
+    "pacciTip": "App também paga, ragazzo! A base é larga, quase nada escapa.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-065",
@@ -1201,7 +1285,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! Medicamentos essenciais costumam se enquadrar em regimes específicos com alíquota reduzida, por serem considerados fundamentais à saúde da população.",
-    "pacciTip": "Bravo! Remédio essencial merece um respiro na hora de pagar imposto."
+    "pacciTip": "Bravo! Remédio essencial merece um respiro na hora de pagar imposto.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-167",
@@ -1217,7 +1302,8 @@
     ],
     "correctAnswer": "Sim, o regime específico se aplica também a essas bebidas",
     "explanation": "O regime específico de bares e restaurantes aplica-se também ao fornecimento de bebidas não alcoólicas preparadas no próprio estabelecimento.",
-    "pacciTip": "Refrigerante batido no restaurante entra no mesmo regime da comida — mas bebida alcoólica, não!"
+    "pacciTip": "Refrigerante batido no restaurante entra no mesmo regime da comida — mas bebida alcoólica, não!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-066",
@@ -1227,7 +1313,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A CBS substitui especificamente o PIS e a Cofins. IPI, IOF e IRPJ não fazem parte dessa substituição na reforma do consumo.",
-    "pacciTip": "Calma com a lista, tesoro! CBS só troca de lugar com PIS e Cofins, mais ninguém."
+    "pacciTip": "Calma com a lista, tesoro! CBS só troca de lugar com PIS e Cofins, mais ninguém.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-067",
@@ -1237,7 +1324,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! É o contrário: o Comitê Gestor cuida do IBS, tributo estadual/municipal. A CBS, por ser federal, é administrada pela Receita Federal.",
-    "pacciTip": "Trocou os nomes, piccolo! Comitê Gestor é a casa do IBS, não da CBS."
+    "pacciTip": "Trocou os nomes, piccolo! Comitê Gestor é a casa do IBS, não da CBS.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-068",
@@ -1247,7 +1335,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! O Imposto Seletivo é direcionado a produtos específicos, prejudiciais à saúde ou ao meio ambiente. Produtos comuns seguem apenas IBS e CBS.",
-    "pacciTip": "Esatto! Produto do dia a dia, sem pecado nenhum, fica de fora do Imposto Seletivo."
+    "pacciTip": "Esatto! Produto do dia a dia, sem pecado nenhum, fica de fora do Imposto Seletivo.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-069",
@@ -1268,7 +1357,8 @@
       "Sinalizar a possível incidência do Imposto Seletivo"
     ],
     "explanation": "O processo começa identificando o produto, depois avaliando o critério de nocividade, confirmando com quem tem mais experiência e só então sinalizando a incidência.",
-    "pacciTip": "Passo a passo, sem pular etapa, tesoro! Assim ninguém erra na hora de classificar o produto."
+    "pacciTip": "Passo a passo, sem pular etapa, tesoro! Assim ninguém erra na hora de classificar o produto.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-168",
@@ -1284,7 +1374,8 @@
     ],
     "correctAnswer": "Não, fica excluída da base de cálculo, desde que não exceda 15% do valor total",
     "explanation": "A gorjeta incidente no fornecimento de alimentação fica excluída da base de cálculo, desde que repassada integralmente ao empregado e que seu valor não exceda 15% do valor total do fornecimento.",
-    "pacciTip": "Gorjeta que vai pro garçom de verdade não vira base de cálculo — até o limite de 15%, tesoro!"
+    "pacciTip": "Gorjeta que vai pro garçom de verdade não vira base de cálculo — até o limite de 15%, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-070",
@@ -1305,7 +1396,8 @@
       "Destacar os tributos na nota fiscal"
     ],
     "explanation": "Primeiro a venda acontece, depois a nota é emitida, os tributos são calculados e, por fim, destacados formalmente no documento fiscal.",
-    "pacciTip": "Venda, nota, cálculo, destaque! Essa sequência vira rotina rapidinho, vai ver."
+    "pacciTip": "Venda, nota, cálculo, destaque! Essa sequência vira rotina rapidinho, vai ver.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-071",
@@ -1326,7 +1418,8 @@
       "Recursos são repassados aos entes federativos"
     ],
     "explanation": "O IBS é recolhido na venda, centralizado pelo Comitê Gestor, que calcula a parcela de cada ente e depois repassa os valores correspondentes.",
-    "pacciTip": "O dinheiro faz uma viagem organizada, capisce? Recolhe, centraliza, calcula e reparte."
+    "pacciTip": "O dinheiro faz uma viagem organizada, capisce? Recolhe, centraliza, calcula e reparte.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-147",
@@ -1342,7 +1435,8 @@
     ],
     "correctAnswer": "Quem realiza operações de forma habitual ou que caracterize atividade econômica",
     "explanation": "São considerados contribuintes os fornecedores que realizam operações no desenvolvimento de atividade econômica, de modo habitual ou em volume que caracterize essa atividade, ou de forma profissional.",
-    "pacciTip": "Não precisa ser gigante, tesoro — se você vende com habitualidade, já é contribuinte!"
+    "pacciTip": "Não precisa ser gigante, tesoro — se você vende com habitualidade, já é contribuinte!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-072",
@@ -1363,7 +1457,8 @@
       "Leis complementares regulamentam os detalhes da reforma"
     ],
     "explanation": "O caminho legal passa pela discussão no Congresso, aprovação pelos parlamentares, promulgação da emenda e, por fim, regulamentação por leis complementares.",
-    "pacciTip": "Lei também tem receita, tesoro! Discute, aprova, promulga e depois regulamenta os detalhes."
+    "pacciTip": "Lei também tem receita, tesoro! Discute, aprova, promulga e depois regulamenta os detalhes.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-073",
@@ -1386,7 +1481,8 @@
       "Termo é adicionado ao glossário oficial da empresa"
     ],
     "explanation": "A dúvida nasce, é pesquisada, depois confirmada com o mentor, sugerida para o glossário e, por fim, oficialmente incorporada a ele.",
-    "pacciTip": "Nunca joga fora uma dúvida boa, piccolo! Ela pode virar material pra empresa inteira."
+    "pacciTip": "Nunca joga fora uma dúvida boa, piccolo! Ela pode virar material pra empresa inteira.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-169",
@@ -1402,7 +1498,8 @@
     ],
     "correctAnswer": "Sim, um redutor social de R$ 600,00 por mês, por imóvel",
     "explanation": "Na locação, cessão onerosa ou arrendamento de bem imóvel para uso residencial, pode ser deduzido da base de cálculo um redutor social de R$ 600,00 por mês, por imóvel, atualizado pelo IPCA.",
-    "pacciTip": "R$ 600 por mês de \"desconto\" na base de cálculo do aluguel residencial — vale lembrar esse número!"
+    "pacciTip": "R$ 600 por mês de \"desconto\" na base de cálculo do aluguel residencial — vale lembrar esse número!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-074",
@@ -1423,7 +1520,8 @@
       "Valor é devolvido ao consumidor"
     ],
     "explanation": "A compra acontece com cobrança normal dos tributos, o sistema identifica quem tem direito ao benefício e, então, devolve parte do valor pago.",
-    "pacciTip": "Compra, paga, sistema reconhece, devolve! O cashback trabalha nos bastidores pra ajudar quem precisa."
+    "pacciTip": "Compra, paga, sistema reconhece, devolve! O cashback trabalha nos bastidores pra ajudar quem precisa.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-075",
@@ -1442,7 +1540,8 @@
       "Municípios participam da administração do IBS"
     ],
     "explanation": "A União cuida da CBS de forma exclusiva, enquanto o IBS é administrado de forma compartilhada, primeiro no nível estadual e depois no municipal.",
-    "pacciTip": "Do maior pro menor, tesoro: União, depois Estado, depois Município. Cada um com sua fatia do bolo."
+    "pacciTip": "Do maior pro menor, tesoro: União, depois Estado, depois Município. Cada um com sua fatia do bolo.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-076",
@@ -1463,7 +1562,8 @@
       "Tira dúvidas finais com o mentor"
     ],
     "explanation": "A trilha começa pelo vocabulário básico, segue para o cronograma, depois uma prática simulada e termina com o esclarecimento de dúvidas com o mentor.",
-    "pacciTip": "Primeiro o vocabulário, depois a prática, tesoro! Assim o conteúdo gruda de verdade."
+    "pacciTip": "Primeiro o vocabulário, depois a prática, tesoro! Assim o conteúdo gruda de verdade.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-077",
@@ -1484,7 +1584,8 @@
       "Migrar totalmente para o novo modelo até 2033"
     ],
     "explanation": "A adaptação começa pelo mapeamento do que já existe, segue com a parametrização dos novos tributos, passa pelos testes da fase de transição e termina na migração completa.",
-    "pacciTip": "Sistema também precisa de treinamento, capisce? Mapeia, ajusta, testa e só depois migra de vez."
+    "pacciTip": "Sistema também precisa de treinamento, capisce? Mapeia, ajusta, testa e só depois migra de vez.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-078",
@@ -1505,7 +1606,8 @@
       "Nota fiscal é emitida com o tributo destacado"
     ],
     "explanation": "O consumidor escolhe o item, vê o preço já com o tributo embutido, paga no caixa e recebe a nota com o Imposto Seletivo destacado.",
-    "pacciTip": "O pecado já vem com o preço, tesoro! Nada de surpresa na hora de pagar."
+    "pacciTip": "O pecado já vem com o preço, tesoro! Nada de surpresa na hora de pagar.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-170",
@@ -1521,7 +1623,8 @@
     ],
     "correctAnswer": "Sim, até R$ 100.000,00 por imóvel residencial novo",
     "explanation": "Na venda de bem imóvel residencial novo, pode ser deduzido da base de cálculo o redutor social de até R$ 100.000,00 por imóvel (e de até R$ 30.000,00 por lote residencial).",
-    "pacciTip": "Imóvel novo tem redutor de até R$ 100 mil na base de cálculo — um alívio e tanto na conta final!"
+    "pacciTip": "Imóvel novo tem redutor de até R$ 100 mil na base de cálculo — um alívio e tanto na conta final!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-079",
@@ -1542,7 +1645,8 @@
       "ISS é extinto e o IBS assume integralmente"
     ],
     "explanation": "A transição começa com o ISS cobrado normalmente, segue com a convivência entre os dois tributos, passa pela redução gradual do ISS e termina com sua extinção.",
-    "pacciTip": "Nada de troca brusca, ragazzo! O ISS vai saindo de mansinho, enquanto o IBS vai assumindo o posto."
+    "pacciTip": "Nada de troca brusca, ragazzo! O ISS vai saindo de mansinho, enquanto o IBS vai assumindo o posto.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-080",
@@ -1563,7 +1667,8 @@
       "Certificação do colaborador ao final"
     ],
     "explanation": "O treinamento apresenta as siglas, explica o que cada uma substitui, testa o aprendizado com um quiz e certifica o colaborador ao final.",
-    "pacciTip": "Aprende, entende, testa e certifica! Assim ninguém esquece as siglas, va bene?"
+    "pacciTip": "Aprende, entende, testa e certifica! Assim ninguém esquece as siglas, va bene?",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-081",
@@ -1584,7 +1689,8 @@
       "Tributos antigos são extintos até 2033"
     ],
     "explanation": "A trajetória começa com a alíquota cheia atual, passa pela fase de testes simbólica em 2026, segue com reduções progressivas e termina na extinção total até 2033.",
-    "pacciTip": "Um gráfico descendo devagarinho, tesoro! Até chegar a zero em 2033."
+    "pacciTip": "Um gráfico descendo devagarinho, tesoro! Até chegar a zero em 2033.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-148",
@@ -1600,7 +1706,8 @@
     ],
     "correctAnswer": "CIB (Cadastro Imobiliário Brasileiro)",
     "explanation": "Os cadastros usados pela legislação do IBS e da CBS são: CPF (pessoas físicas), CNPJ (pessoas jurídicas) e o CIB — Cadastro Imobiliário Brasileiro (imóveis rurais e urbanos).",
-    "pacciTip": "CPF pra gente, CNPJ pra empresa, CIB pra imóvel. Três cadastros, três donos diferentes!"
+    "pacciTip": "CPF pra gente, CNPJ pra empresa, CIB pra imóvel. Três cadastros, três donos diferentes!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-082",
@@ -1621,7 +1728,8 @@
       "Tributo é recolhido conforme a regra vigente"
     ],
     "explanation": "Primeiro o serviço é prestado, depois a nota é emitida com o IBS, o sistema aplica a alíquota reduzida própria da saúde e, por fim, o tributo é recolhido.",
-    "pacciTip": "Saúde tem regra própria, capisce? O sistema já sabe aplicar a alíquota certa."
+    "pacciTip": "Saúde tem regra própria, capisce? O sistema já sabe aplicar a alíquota certa.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-171",
@@ -1637,7 +1745,8 @@
     ],
     "correctAnswer": "Sim, há medidas específicas previstas em lei para compras feitas pelo poder público",
     "explanation": "A Reforma prevê medidas específicas para as Compras Governamentais, com base no art. 472 da Lcp nº 214/2025, incluindo regras de transição e destinação da arrecadação.",
-    "pacciTip": "Governo comprando também tem regra própria na Reforma — não é tratado como um consumidor qualquer!"
+    "pacciTip": "Governo comprando também tem regra própria na Reforma — não é tratado como um consumidor qualquer!",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-083",
@@ -1658,7 +1767,8 @@
       "Empresas se preparam para a elevação gradual das alíquotas"
     ],
     "explanation": "A fase de testes começa com o cálculo simbólico dos novos tributos, segue com testes práticos, ajustes com base nos resultados e preparação para as próximas etapas.",
-    "pacciTip": "2026 é o ano do ensaio geral, tesoro! Testa, ajusta e se prepara pro que vem depois."
+    "pacciTip": "2026 é o ano do ensaio geral, tesoro! Testa, ajusta e se prepara pro que vem depois.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-084",
@@ -1679,7 +1789,8 @@
       "Rodada de perguntas e respostas"
     ],
     "explanation": "A reunião costuma seguir essa lógica: contextualizar o tema, explicar os impactos, mostrar o cronograma e, por fim, abrir espaço para dúvidas.",
-    "pacciTip": "Contexto, impacto, cronograma, perguntas! Uma boa reunião segue sempre essa receita, tesoro."
+    "pacciTip": "Contexto, impacto, cronograma, perguntas! Uma boa reunião segue sempre essa receita, tesoro.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-085",
@@ -1700,7 +1811,8 @@
       "Confirma a informação com o time fiscal"
     ],
     "explanation": "Primeiro identifica origem e destino, depois verifica onde o consumo ocorre de fato, aplica a lógica do destino e confirma tudo com o time fiscal.",
-    "pacciTip": "Rastreia o caminho da mercadoria, tesoro! O imposto segue até onde ela for consumida."
+    "pacciTip": "Rastreia o caminho da mercadoria, tesoro! O imposto segue até onde ela for consumida.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-086",
@@ -1721,7 +1833,8 @@
       "Soma-se tudo para chegar ao preço final ao consumidor"
     ],
     "explanation": "O cálculo parte do preço sem tributos, soma o valor do IBS, depois o da CBS e chega ao preço final que o consumidor paga.",
-    "pacciTip": "Preço base, mais IBS, mais CBS, igual preço final! Uma continha que todo estagiário fiscal aprende."
+    "pacciTip": "Preço base, mais IBS, mais CBS, igual preço final! Uma continha que todo estagiário fiscal aprende.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-172",
@@ -1737,7 +1850,8 @@
     ],
     "correctAnswer": "Sim, esse é um dos casos previstos no regime específico de hospedagem",
     "explanation": "O regime específico de hospedagem abrange unidades de uso exclusivo dos hóspedes em estabelecimento destinado a isso, e também o imóvel residencial mobiliado usado para hospedagem, ainda que não exclusivo.",
-    "pacciTip": "Hospedagem ganhou regramento próprio, cobrindo tanto o hotel tradicional quanto o imóvel mobiliado!"
+    "pacciTip": "Hospedagem ganhou regramento próprio, cobrindo tanto o hotel tradicional quanto o imóvel mobiliado!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-087",
@@ -1758,7 +1872,8 @@
       "Reportar o resultado ao time fiscal"
     ],
     "explanation": "A auditoria começa levantando os produtos, conferindo a alíquota aplicada, registrando divergências e, por fim, reportando o resultado para quem cuida da parte fiscal.",
-    "pacciTip": "Conferir sempre é bom, tesoro! Assim nenhum produto essencial paga imposto a mais por engano."
+    "pacciTip": "Conferir sempre é bom, tesoro! Assim nenhum produto essencial paga imposto a mais por engano.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-088",
@@ -1779,7 +1894,8 @@
       "Demonstração de como IBS e CBS convivem no IVA Dual"
     ],
     "explanation": "A aula parte do conceito geral de IVA, explica o IBS, depois a CBS e, por fim, mostra como os dois convivem no modelo de IVA Dual.",
-    "pacciTip": "Do geral pro específico, tesoro! Primeiro o conceito, depois cada peça, depois o quebra-cabeça montado."
+    "pacciTip": "Do geral pro específico, tesoro! Primeiro o conceito, depois cada peça, depois o quebra-cabeça montado.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-089",
@@ -1800,7 +1916,8 @@
       "Resposta é enviada ao cliente"
     ],
     "explanation": "O atendimento segue a lógica de acolher a reclamação, verificar a fatura, buscar explicação técnica com o time fiscal e só então responder ao cliente.",
-    "pacciTip": "Escuta, verifica, entende, responde! Um bom atendimento nunca pula etapa, capisce?"
+    "pacciTip": "Escuta, verifica, entende, responde! Um bom atendimento nunca pula etapa, capisce?",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-090",
@@ -1821,7 +1938,8 @@
       "Resposta oficial é enviada ao cliente"
     ],
     "explanation": "A dúvida é registrada, encaminhada ao time fiscal para verificação e só depois retorna como resposta oficial ao cliente.",
-    "pacciTip": "Melhor confirmar com quem entende, tesoro! Assim a resposta sai certa da primeira vez."
+    "pacciTip": "Melhor confirmar com quem entende, tesoro! Assim a resposta sai certa da primeira vez.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-091",
@@ -1842,7 +1960,8 @@
       "Operar de forma integral no novo modelo em 2033"
     ],
     "explanation": "O plano começa acompanhando o cronograma oficial, ajustando sistemas, treinando a equipe e, por fim, operando totalmente dentro do novo modelo em 2033.",
-    "pacciTip": "Quem se prepara com calma não sofre correria depois, tesoro! Passo a passo até 2033."
+    "pacciTip": "Quem se prepara com calma não sofre correria depois, tesoro! Passo a passo até 2033.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-173",
@@ -1858,7 +1977,8 @@
     ],
     "correctAnswer": "A Duimp ou a DIR, conforme o caso",
     "explanation": "Na importação de bens materiais é exigida a emissão de Duimp (Declaração Única de Importação) ou DIR (Declaração de Importação de Remessa), conforme o caso, além da NF-e — que pode até ser dispensada ou emitida automaticamente por ato conjunto da RFB e do CGIBS.",
-    "pacciTip": "Duimp e DIR são os \"passaportes fiscais\" da importação — decore essas duas siglas, tesoro!"
+    "pacciTip": "Duimp e DIR são os \"passaportes fiscais\" da importação — decore essas duas siglas, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-092",
@@ -1879,7 +1999,8 @@
       "Apresentar o relatório à diretoria"
     ],
     "explanation": "O relatório nasce da coleta de dados, segue com a análise dos impactos, a redação das conclusões e termina na apresentação à diretoria.",
-    "pacciTip": "Dado bruto vira relatório fino, tesoro! Coleta, analisa, escreve e apresenta."
+    "pacciTip": "Dado bruto vira relatório fino, tesoro! Coleta, analisa, escreve e apresenta.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-149",
@@ -1895,7 +2016,8 @@
     ],
     "correctAnswer": "Split Payment",
     "explanation": "O Split Payment é o mecanismo que, no momento da liquidação financeira da compra, já separa o valor do produto do valor dos tributos, recolhendo o IBS e a CBS diretamente aos cofres públicos.",
-    "pacciTip": "Imagina dividir a conta na hora de pagar: uma parte pro vendedor, outra direto pro Fisco. É o Split Payment, tesoro!"
+    "pacciTip": "Imagina dividir a conta na hora de pagar: uma parte pro vendedor, outra direto pro Fisco. É o Split Payment, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-EST-093",
@@ -1911,7 +2033,8 @@
     ],
     "correctAnswer": "estadual",
     "explanation": "O IBS é de competência estadual e municipal, unificando o que hoje é cobrado separadamente por ICMS (estados) e ISS (municípios).",
-    "pacciTip": "Estadual e municipal, de mãos dadas nesse imposto só, tesoro!"
+    "pacciTip": "Estadual e municipal, de mãos dadas nesse imposto só, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-094",
@@ -1927,7 +2050,8 @@
     ],
     "correctAnswer": "federal",
     "explanation": "A CBS é um tributo de competência federal, administrado pela União por meio da Receita Federal.",
-    "pacciTip": "CBS é filha da União, ragazzo! Federal, sem dúvida."
+    "pacciTip": "CBS é filha da União, ragazzo! Federal, sem dúvida.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-095",
@@ -1943,7 +2067,8 @@
     ],
     "correctAnswer": "consumo",
     "explanation": "O novo modelo adota o princípio do destino: o tributo é cobrado no local onde o bem ou serviço é efetivamente consumido, não onde é produzido.",
-    "pacciTip": "Onde se consome, ali fica o imposto, tesoro! Essa é a nova regra do jogo."
+    "pacciTip": "Onde se consome, ali fica o imposto, tesoro! Essa é a nova regra do jogo.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-174",
@@ -1959,7 +2084,8 @@
     ],
     "correctAnswer": "Sim, esse é um dos serviços sujeitos a esse regime específico",
     "explanation": "Ficam sujeitas ao regime específico de bens imóveis, entre outras: alienação, cessão de direitos reais, locação/cessão/arrendamento, serviços de administração e intermediação de bem imóvel, e serviços de construção civil.",
-    "pacciTip": "Não é só vender ou alugar — até administrar/intermediar imóvel entra no regime específico, tesoro!"
+    "pacciTip": "Não é só vender ou alugar — até administrar/intermediar imóvel entra no regime específico, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-096",
@@ -1975,7 +2101,8 @@
     ],
     "correctAnswer": "complexidade",
     "explanation": "Um dos principais objetivos da Reforma é reduzir a complexidade do sistema tributário, com regras mais simples e unificadas.",
-    "pacciTip": "Menos complicação, mais clareza! Essa é a promessa central da reforma, capisce?"
+    "pacciTip": "Menos complicação, mais clareza! Essa é a promessa central da reforma, capisce?",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-097",
@@ -1991,7 +2118,8 @@
     ],
     "correctAnswer": "CBS",
     "explanation": "A base de incidência de IBS e CBS é ampla, cobrindo bens e serviços em geral, incluindo assinaturas de aplicativos e outros serviços digitais.",
-    "pacciTip": "App também entra na conta, tesoro! IBS e CBS, os dois juntos."
+    "pacciTip": "App também entra na conta, tesoro! IBS e CBS, os dois juntos.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-098",
@@ -2007,7 +2135,8 @@
     ],
     "correctAnswer": "IBS",
     "explanation": "O IBS absorve tanto o ICMS quanto o ISS, incluindo o que hoje incide sobre serviços prestados, como os de construção civil.",
-    "pacciTip": "ISS vira IBS, semplice così, ragazzo!"
+    "pacciTip": "ISS vira IBS, semplice così, ragazzo!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-099",
@@ -2023,7 +2152,8 @@
     ],
     "correctAnswer": "reduzida",
     "explanation": "Itens essenciais, como medicamentos, tendem a contar com regimes específicos de alíquota reduzida dentro do novo modelo tributário.",
-    "pacciTip": "Remédio com desconto no imposto, tesoro! Faz sentido, já que é essencial."
+    "pacciTip": "Remédio com desconto no imposto, tesoro! Faz sentido, já que é essencial.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-175",
@@ -2039,7 +2169,8 @@
     ],
     "correctAnswer": "13,25%",
     "explanation": "A alíquota aplicável nas operações com bens imóveis e serviços de construção civil sujeitas ao regime específico fica reduzida em 50% — de 26,5% para 13,25%, no exemplo dado no material do curso.",
-    "pacciTip": "Metade da alíquota de referência — 26,5% vira 13,25% na venda de imóvel sujeita ao regime específico!"
+    "pacciTip": "Metade da alíquota de referência — 26,5% vira 13,25% na venda de imóvel sujeita ao regime específico!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-100",
@@ -2055,7 +2186,8 @@
     ],
     "correctAnswer": "cashback",
     "explanation": "O cashback é o mecanismo previsto na Reforma para devolver parte do valor pago em tributos por famílias de baixa renda.",
-    "pacciTip": "Cashback, a palavrinha do dinheiro que volta pro bolso de quem mais precisa!"
+    "pacciTip": "Cashback, a palavrinha do dinheiro que volta pro bolso de quem mais precisa!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-101",
@@ -2071,7 +2203,8 @@
     ],
     "correctAnswer": "2026",
     "explanation": "A fase de testes, com alíquota simbólica, começa em 2026, dando início à longa transição que vai até 2033.",
-    "pacciTip": "2026 é o ano do primeiro ensaio, tesoro! Grava esse número."
+    "pacciTip": "2026 é o ano do primeiro ensaio, tesoro! Grava esse número.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-102",
@@ -2087,7 +2220,8 @@
     ],
     "correctAnswer": "meio ambiente",
     "explanation": "O critério do Imposto Seletivo envolve dois eixos: produtos prejudiciais à saúde das pessoas ou ao meio ambiente.",
-    "pacciTip": "Saúde de um lado, meio ambiente do outro, tesoro! Os dois pilares do imposto do pecado."
+    "pacciTip": "Saúde de um lado, meio ambiente do outro, tesoro! Os dois pilares do imposto do pecado.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-150",
@@ -2103,7 +2237,8 @@
     ],
     "correctAnswer": "Para classificar como cada operação é tributada pelo IBS e pela CBS",
     "explanation": "CST (Código de Situação Tributária) e cClassTrib (Código de Classificação Tributária) codificam toda operação — com incidência ou não — pra ela entrar corretamente na apuração assistida.",
-    "pacciTip": "Todo documento fiscal precisa desses dois códigos, capito? Sem eles, o Fisco não sabe como te tributar."
+    "pacciTip": "Todo documento fiscal precisa desses dois códigos, capito? Sem eles, o Fisco não sabe como te tributar.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-EST-103",
@@ -2119,7 +2254,8 @@
     ],
     "correctAnswer": "gradual",
     "explanation": "A extinção de PIS, Cofins, ICMS e ISS acontece de forma gradual, ao longo da transição, e não de uma só vez.",
-    "pacciTip": "Devagar e sempre, ragazzo! É assim que os tributos antigos vão saindo de cena."
+    "pacciTip": "Devagar e sempre, ragazzo! É assim que os tributos antigos vão saindo de cena.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-176",
@@ -2135,7 +2271,8 @@
     ],
     "correctAnswer": "Não, ficam fora desse regime específico",
     "explanation": "Não está sujeito ao regime específico de bares e restaurantes o fornecimento de produtos alimentícios e bebidas não alcoólicas adquiridos de terceiros, que não foram submetidos a preparo no estabelecimento.",
-    "pacciTip": "Só entra no regime especial quem realmente \"cozinha\" no local — revenda pura fica de fora!"
+    "pacciTip": "Só entra no regime especial quem realmente \"cozinha\" no local — revenda pura fica de fora!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-104",
@@ -2151,7 +2288,8 @@
     ],
     "correctAnswer": "alcoólicas",
     "explanation": "Bebidas alcoólicas se enquadram no critério de nocividade à saúde, o que as torna alvo típico do Imposto Seletivo.",
-    "pacciTip": "Álcool no copo, imposto no preço! É a lógica do imposto do pecado, tesoro."
+    "pacciTip": "Álcool no copo, imposto no preço! É a lógica do imposto do pecado, tesoro.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-105",
@@ -2167,7 +2305,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "Serviços essenciais, como o transporte público, tendem a contar com regimes específicos que preveem tratamento tributário diferenciado.",
-    "pacciTip": "Ônibus tem regra especial, tesoro! Faz sentido, é serviço de todo dia pra muita gente."
+    "pacciTip": "Ônibus tem regra especial, tesoro! Faz sentido, é serviço de todo dia pra muita gente.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-106",
@@ -2183,7 +2322,8 @@
     ],
     "correctAnswer": "Receita Federal",
     "explanation": "Como a CBS é um tributo federal, cabe à Receita Federal administrá-la, diferente do IBS, que é gerido pelo Comitê Gestor.",
-    "pacciTip": "CBS mora na casa da Receita Federal, tesoro! Não confunde com o Comitê Gestor."
+    "pacciTip": "CBS mora na casa da Receita Federal, tesoro! Não confunde com o Comitê Gestor.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-107",
@@ -2199,7 +2339,8 @@
     ],
     "correctAnswer": "Comitê Gestor",
     "explanation": "O Comitê Gestor do IBS é o órgão responsável por administrar de forma compartilhada esse tributo entre estados e municípios.",
-    "pacciTip": "Comitê Gestor, o nome que você vai repetir bastante na carreira, tesoro!"
+    "pacciTip": "Comitê Gestor, o nome que você vai repetir bastante na carreira, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-108",
@@ -2215,7 +2356,8 @@
     ],
     "correctAnswer": "Seletivo",
     "explanation": "O Imposto Seletivo mira, entre outros critérios, produtos e atividades com impacto negativo ao meio ambiente.",
-    "pacciTip": "Poluiu, o Imposto Seletivo aparece, ragazzo! É a lógica do pecado ambiental."
+    "pacciTip": "Poluiu, o Imposto Seletivo aparece, ragazzo! É a lógica do pecado ambiental.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-177",
@@ -2231,7 +2373,8 @@
     ],
     "correctAnswer": "Não, bebidas alcoólicas ficam fora desse regime específico",
     "explanation": "Não está sujeito ao regime específico de bares e restaurantes o fornecimento de bebidas alcoólicas, ainda que preparadas no estabelecimento — elas seguem as regras tributárias comuns (ou até o Imposto Seletivo).",
-    "pacciTip": "Álcool fica de fora do desconto do bar — faz sentido, já que bebida alcoólica tem tributação própria!"
+    "pacciTip": "Álcool fica de fora do desconto do bar — faz sentido, já que bebida alcoólica tem tributação própria!",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-109",
@@ -2247,7 +2390,8 @@
     ],
     "correctAnswer": "burocracia",
     "explanation": "A unificação de ICMS e ISS no IBS tende a reduzir a burocracia, já que a empresa passa a lidar com um conjunto de regras mais simples.",
-    "pacciTip": "Menos papel, menos regra, mais tempo pra vender, tesoro!"
+    "pacciTip": "Menos papel, menos regra, mais tempo pra vender, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-110",
@@ -2263,7 +2407,8 @@
     ],
     "correctAnswer": "Seletivo",
     "explanation": "Produtos comuns, sem relação com nocividade à saúde ou ao meio ambiente, seguem apenas a tributação padrão de IBS e CBS, fora do Imposto Seletivo.",
-    "pacciTip": "Ração de cachorro não é pecado, tesoro! Fica de fora do Imposto Seletivo."
+    "pacciTip": "Ração de cachorro não é pecado, tesoro! Fica de fora do Imposto Seletivo.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-111",
@@ -2279,7 +2424,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "Assim como outros itens considerados relevantes, bens culturais podem contar com regimes específicos de tributação previstos na regulamentação da Reforma.",
-    "pacciTip": "Cultura também pode ganhar um tratamento especial, tesoro! Depende da regulamentação."
+    "pacciTip": "Cultura também pode ganhar um tratamento especial, tesoro! Depende da regulamentação.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-112",
@@ -2295,7 +2441,8 @@
     ],
     "correctAnswer": "destino",
     "explanation": "O princípio do destino é a base da nova tributação: o imposto é cobrado no local de consumo, não no local de produção ou de origem.",
-    "pacciTip": "Destino, sempre destino, tesoro! O imposto viaja até onde o produto é consumido."
+    "pacciTip": "Destino, sempre destino, tesoro! O imposto viaja até onde o produto é consumido.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-151",
@@ -2311,7 +2458,8 @@
     ],
     "correctAnswer": "No local de início do transporte",
     "explanation": "O serviço de transporte de passageiros tem como local do fornecimento o local de início do transporte — por isso, inclusive, não é possível agrupar ida e volta em um único documento fiscal.",
-    "pacciTip": "Transporte de gente, o imposto nasce onde a viagem começa. Simples assim!"
+    "pacciTip": "Transporte de gente, o imposto nasce onde a viagem começa. Simples assim!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-178",
@@ -2327,7 +2475,8 @@
     ],
     "correctAnswer": "Não, ficam excluídos da base de cálculo do restaurante",
     "explanation": "Ficam excluídos da base de cálculo do restaurante os valores não repassados a ele pelo serviço de entrega e intermediação de pedidos por plataforma digital.",
-    "pacciTip": "O que a plataforma de delivery fica pra ela mesma não entra na conta de imposto do restaurante!"
+    "pacciTip": "O que a plataforma de delivery fica pra ela mesma não entra na conta de imposto do restaurante!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-113",
@@ -2343,7 +2492,8 @@
     ],
     "correctAnswer": "132/2023",
     "explanation": "A EC 132/2023 é a emenda constitucional que criou a Reforma Tributária sobre o consumo, dando origem ao IBS, à CBS e ao Imposto Seletivo.",
-    "pacciTip": "132 de 2023, o número que você vai levar pra vida, tesoro!"
+    "pacciTip": "132 de 2023, o número que você vai levar pra vida, tesoro!",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-114",
@@ -2359,7 +2509,8 @@
     ],
     "correctAnswer": "estados",
     "explanation": "A guerra fiscal é a disputa entre estados que oferecem benefícios de ICMS para atrair empresas, algo que a Reforma busca reduzir com regras unificadas.",
-    "pacciTip": "Estado contra estado, tesoro! A reforma quer acabar com essa briga."
+    "pacciTip": "Estado contra estado, tesoro! A reforma quer acabar com essa briga.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-115",
@@ -2375,7 +2526,8 @@
     ],
     "correctAnswer": "CBS",
     "explanation": "A CBS nasce da unificação de PIS e Cofins, os dois tributos federais que hoje incidem sobre o faturamento das empresas.",
-    "pacciTip": "PIS e Cofins se abraçam e viram CBS, ragazzo! Dois em um."
+    "pacciTip": "PIS e Cofins se abraçam e viram CBS, ragazzo! Dois em um.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-116",
@@ -2391,7 +2543,8 @@
     ],
     "correctAnswer": "reduzida",
     "explanation": "Itens da cesta básica costumam contar com alíquota reduzida ou zero, por serem considerados essenciais à alimentação da população.",
-    "pacciTip": "Arroz e feijão pesam menos no imposto, tesoro! É assim que deve funcionar."
+    "pacciTip": "Arroz e feijão pesam menos no imposto, tesoro! É assim que deve funcionar.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-179",
@@ -2407,7 +2560,8 @@
     ],
     "correctAnswer": "Não, ficam vedados desse aproveitamento de crédito, por limitação legal específica",
     "explanation": "Os adquirentes de alimentação e bebidas fornecidas por bares e restaurantes no regime específico ficam vedados do aproveitamento do crédito, mesmo que não seja uso ou consumo pessoal, por limitação do próprio dispositivo legal.",
-    "pacciTip": "Nesse regime especial, nem empresa comprando pra reunião de trabalho aproveita o crédito, tesoro!"
+    "pacciTip": "Nesse regime especial, nem empresa comprando pra reunião de trabalho aproveita o crédito, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-117",
@@ -2417,7 +2571,8 @@
     "question": "Digite a sigla do tributo que engloba o ICMS e o ISS em um só:",
     "correctAnswer": "IBS",
     "explanation": "IBS é a sigla de Imposto sobre Bens e Serviços, que substitui o ICMS (estadual) e o ISS (municipal).",
-    "pacciTip": "IBS, três letrinhas que resumem dois impostos antigos, tesoro!"
+    "pacciTip": "IBS, três letrinhas que resumem dois impostos antigos, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-118",
@@ -2427,7 +2582,8 @@
     "question": "Digite a sigla do tributo federal que reúne o PIS e a Cofins:",
     "correctAnswer": "CBS",
     "explanation": "CBS é a sigla de Contribuição sobre Bens e Serviços, o novo tributo federal que substitui PIS e Cofins.",
-    "pacciTip": "CBS, a irmã federal do IBS, tesoro! Não esquece dela."
+    "pacciTip": "CBS, a irmã federal do IBS, tesoro! Não esquece dela.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-119",
@@ -2437,7 +2593,8 @@
     "question": "Digite a sigla do tributo conhecido como imposto do pecado:",
     "correctAnswer": "IS",
     "explanation": "IS é a sigla do Imposto Seletivo, apelidado de 'imposto do pecado' por incidir sobre produtos prejudiciais à saúde ou ao meio ambiente.",
-    "pacciTip": "IS de Imposto Seletivo, o vilão dos produtos nocivos, ragazzo!"
+    "pacciTip": "IS de Imposto Seletivo, o vilão dos produtos nocivos, ragazzo!",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-120",
@@ -2447,7 +2604,8 @@
     "question": "Digite, em uma palavra, o nome do modelo formado pela convivência entre IBS e CBS:",
     "correctAnswer": "Dual",
     "explanation": "O modelo é chamado de IVA Dual, pois combina um tributo estadual/municipal (IBS) com um federal (CBS).",
-    "pacciTip": "Dual, dual, dual! Essa palavra já devia estar tatuada na sua memória, tesoro."
+    "pacciTip": "Dual, dual, dual! Essa palavra já devia estar tatuada na sua memória, tesoro.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-121",
@@ -2457,7 +2615,8 @@
     "question": "Digite o ano de início da fase de testes da Reforma Tributária:",
     "correctAnswer": "2026",
     "explanation": "A fase de testes, com alíquota simbólica, começa em 2026, dando início ao longo período de transição.",
-    "pacciTip": "2026, o ano do primeiro ensaio, tesoro! Grava esse número."
+    "pacciTip": "2026, o ano do primeiro ensaio, tesoro! Grava esse número.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-180",
@@ -2473,7 +2632,8 @@
     ],
     "correctAnswer": "40%",
     "explanation": "As alíquotas do IBS e da CBS relativas às operações com contribuintes no regime específico de bar e restaurante ficam reduzidas em 40%, mantendo-os na sistemática não cumulativa (apuração normal).",
-    "pacciTip": "Bar e restaurante têm 40% de redução — menos que saúde/educação (60%), mas ainda um bom desconto!"
+    "pacciTip": "Bar e restaurante têm 40% de redução — menos que saúde/educação (60%), mas ainda um bom desconto!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-122",
@@ -2483,7 +2643,8 @@
     "question": "Digite o ano em que o novo modelo tributário entra em vigência plena:",
     "correctAnswer": "2033",
     "explanation": "A vigência plena do novo modelo, com a extinção total dos tributos antigos, ocorre em 2033, ao final da transição.",
-    "pacciTip": "2033, o ano em que tudo se completa, ragazzo! O ponto final da transição."
+    "pacciTip": "2033, o ano em que tudo se completa, ragazzo! O ponto final da transição.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-152",
@@ -2499,7 +2660,8 @@
     ],
     "correctAnswer": "Bonificação",
     "explanation": "Bonificação é o fornecimento a maior de bem ou serviço objeto da atividade do contribuinte, em substituição a desconto no valor da operação — diferente do brinde, que é fornecido gratuitamente e não é objeto das atividades do fornecedor.",
-    "pacciTip": "Bonificação é \"leve mais, pague o mesmo\". Brinde é um presente à parte. Não confunda os dois, tesoro!"
+    "pacciTip": "Bonificação é \"leve mais, pague o mesmo\". Brinde é um presente à parte. Não confunda os dois, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-123",
@@ -2509,7 +2671,8 @@
     "question": "Digite o nome do mecanismo que devolve parte do imposto pago por famílias de baixa renda:",
     "correctAnswer": "cashback",
     "explanation": "O cashback é o mecanismo criado pela Reforma para devolver parte do valor pago em tributos por famílias de baixa renda.",
-    "pacciTip": "Cashback, a palavra do dinheiro que volta, tesoro!"
+    "pacciTip": "Cashback, a palavra do dinheiro que volta, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-EST-124",
@@ -2519,7 +2682,8 @@
     "question": "Digite a palavra correta: o IBS e a CBS são cobrados no local de origem ou de destino do consumo?",
     "correctAnswer": "destino",
     "explanation": "O novo modelo adota o princípio do destino: o imposto é cobrado onde o bem ou serviço é efetivamente consumido.",
-    "pacciTip": "Destino, sempre destino, tesoro! O produto pode nascer num lugar, mas o imposto fica onde ele é consumido."
+    "pacciTip": "Destino, sempre destino, tesoro! O produto pode nascer num lugar, mas o imposto fica onde ele é consumido.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-125",
@@ -2529,7 +2693,8 @@
     "question": "Digite, em uma palavra, o verbo que resume o principal objetivo da Reforma Tributária:",
     "correctAnswer": "simplificar",
     "explanation": "O objetivo central da Reforma é simplificar o sistema tributário sobre o consumo, reduzindo tributos e unificando regras.",
-    "pacciTip": "Simplificare, a missão principal da reforma, tesoro!"
+    "pacciTip": "Simplificare, a missão principal da reforma, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-126",
@@ -2539,7 +2704,8 @@
     "question": "Digite a palavra que descreve como ocorre a extinção dos tributos antigos ao longo da transição:",
     "correctAnswer": "gradual",
     "explanation": "A extinção de PIS, Cofins, ICMS e ISS acontece de forma gradual, ao longo da transição que vai até 2033.",
-    "pacciTip": "Gradual, devagar e sempre, ragazzo! Nada de mudança de uma hora pra outra."
+    "pacciTip": "Gradual, devagar e sempre, ragazzo! Nada de mudança de uma hora pra outra.",
+    "topic": "transicao"
   },
   {
     "id": "REF-EST-127",
@@ -2549,7 +2715,8 @@
     "question": "Digite a outra competência do IBS, além da municipal:",
     "correctAnswer": "estadual",
     "explanation": "O IBS é de competência estadual e municipal, unificando o que hoje é dividido entre ICMS (estados) e ISS (municípios).",
-    "pacciTip": "Estadual e municipal, sempre juntinhos nesse imposto, tesoro!"
+    "pacciTip": "Estadual e municipal, sempre juntinhos nesse imposto, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-128",
@@ -2559,7 +2726,8 @@
     "question": "Digite a competência da CBS:",
     "correctAnswer": "federal",
     "explanation": "A CBS é de competência federal, administrada pela União por meio da Receita Federal.",
-    "pacciTip": "CBS é da União, ragazzo! Federal, sem sombra de dúvida."
+    "pacciTip": "CBS é da União, ragazzo! Federal, sem sombra de dúvida.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-129",
@@ -2569,7 +2737,8 @@
     "question": "Digite a primeira palavra da dupla protegida pelo critério do Imposto Seletivo: saúde e ___?",
     "correctAnswer": "saúde",
     "explanation": "O Imposto Seletivo tem dois critérios centrais: proteger a saúde das pessoas e o meio ambiente, mirando produtos nocivos a ambos.",
-    "pacciTip": "Saúde primeiro, meio ambiente logo depois, tesoro! Os dois pilares do imposto do pecado."
+    "pacciTip": "Saúde primeiro, meio ambiente logo depois, tesoro! Os dois pilares do imposto do pecado.",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-130",
@@ -2579,7 +2748,8 @@
     "question": "Digite o nome do órgão que administra o IBS de forma compartilhada entre estados e municípios:",
     "correctAnswer": "Comitê Gestor",
     "explanation": "O Comitê Gestor do IBS é o órgão responsável por administrar esse tributo de forma compartilhada entre estados e municípios.",
-    "pacciTip": "Comitê Gestor, o nome que você vai repetir bastante na carreira, tesoro!"
+    "pacciTip": "Comitê Gestor, o nome que você vai repetir bastante na carreira, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-131",
@@ -2589,7 +2759,8 @@
     "question": "Digite o nome do órgão federal que administra a CBS:",
     "correctAnswer": "Receita Federal",
     "explanation": "A CBS, por ser um tributo federal, é administrada pela Receita Federal, órgão do governo federal.",
-    "pacciTip": "Receita Federal cuida da CBS, tesoro! Não confunde com o Comitê Gestor do IBS."
+    "pacciTip": "Receita Federal cuida da CBS, tesoro! Não confunde com o Comitê Gestor do IBS.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-EST-132",
@@ -2599,7 +2770,8 @@
     "question": "Digite o número da emenda constitucional que criou a Reforma Tributária (formato NNN/AAAA):",
     "correctAnswer": "132/2023",
     "explanation": "A EC 132/2023 é o marco legal que criou a Reforma Tributária sobre o consumo, dando origem ao IBS, à CBS e ao Imposto Seletivo.",
-    "pacciTip": "132/2023, o número que resume toda a reforma, tesoro!"
+    "pacciTip": "132/2023, o número que resume toda a reforma, tesoro!",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-133",
@@ -2609,7 +2781,8 @@
     "question": "Digite a palavra final do apelido popular do Imposto Seletivo: 'imposto do ___':",
     "correctAnswer": "pecado",
     "explanation": "O Imposto Seletivo é popularmente chamado de 'imposto do pecado', por incidir sobre produtos como cigarro e bebida alcoólica.",
-    "pacciTip": "Pecado, a palavra que gruda na memória, ragazzo!"
+    "pacciTip": "Pecado, a palavra que gruda na memória, ragazzo!",
+    "topic": "imposto_seletivo"
   },
   {
     "id": "REF-EST-134",
@@ -2619,7 +2792,8 @@
     "question": "Digite, em uma palavra, como são chamados os produtos com tratamento tributário favorecido, como os remédios:",
     "correctAnswer": "essenciais",
     "explanation": "Produtos considerados essenciais, como medicamentos e itens da cesta básica, costumam contar com regimes específicos de alíquota reduzida.",
-    "pacciTip": "Essenciais ganham um tratamento mais gentil do Fisco, tesoro!"
+    "pacciTip": "Essenciais ganham um tratamento mais gentil do Fisco, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-135",
@@ -2629,7 +2803,8 @@
     "question": "Digite o nome do conjunto de produtos essenciais à alimentação que deve ter alíquota reduzida ou zero:",
     "correctAnswer": "cesta básica",
     "explanation": "A cesta básica reúne os produtos essenciais à alimentação da população e tende a contar com alíquota reduzida ou zero no novo modelo.",
-    "pacciTip": "Arroz, feijão e companhia pesam menos no bolso, tesoro!"
+    "pacciTip": "Arroz, feijão e companhia pesam menos no bolso, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-136",
@@ -2639,7 +2814,8 @@
     "question": "Digite a expressão que descreve a disputa entre estados por incentivos fiscais:",
     "correctAnswer": "guerra fiscal",
     "explanation": "Guerra fiscal é o termo usado para descrever a disputa entre estados por meio de incentivos de ICMS para atrair empresas, algo que a Reforma busca reduzir.",
-    "pacciTip": "Guerra fiscal, ragazzo! Uma briga que a reforma quer apaziguar."
+    "pacciTip": "Guerra fiscal, ragazzo! Uma briga que a reforma quer apaziguar.",
+    "topic": "outros"
   },
   {
     "id": "REF-EST-137",
@@ -2649,7 +2825,8 @@
     "question": "Digite a sigla internacional do tipo de imposto sobre valor agregado seguido por IBS e CBS:",
     "correctAnswer": "IVA",
     "explanation": "IBS e CBS seguem o modelo de IVA (Imposto sobre Valor Agregado), amplamente usado em outros países, daí o termo 'IVA Dual'.",
-    "pacciTip": "IVA, a sigla internacional por trás do modelo brasileiro, tesoro!"
+    "pacciTip": "IVA, a sigla internacional por trás do modelo brasileiro, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-138",
@@ -2659,7 +2836,8 @@
     "question": "Digite, em uma palavra, sobre o que incidem o IBS e a CBS, de forma geral: bens e serviços de ___?",
     "correctAnswer": "consumo",
     "explanation": "IBS e CBS incidem sobre o consumo de bens e serviços em geral, com base ampla e poucas exceções.",
-    "pacciTip": "Consumo é a palavra-chave, tesoro! É sobre isso que IBS e CBS trabalham."
+    "pacciTip": "Consumo é a palavra-chave, tesoro! É sobre isso que IBS e CBS trabalham.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-139",
@@ -2669,7 +2847,8 @@
     "question": "Digite a sigla do tributo estadual que será substituído pelo IBS:",
     "correctAnswer": "ICMS",
     "explanation": "O ICMS é o tributo estadual que, junto com o ISS, será substituído pelo IBS.",
-    "pacciTip": "ICMS vira IBS, ragazzo! Um dos dois pilares do novo imposto."
+    "pacciTip": "ICMS vira IBS, ragazzo! Um dos dois pilares do novo imposto.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-EST-140",
@@ -2679,6 +2858,7 @@
     "question": "Digite a sigla do tributo municipal que será substituído pelo IBS:",
     "correctAnswer": "ISS",
     "explanation": "O ISS é o tributo municipal que, junto com o ICMS, será substituído pelo IBS.",
-    "pacciTip": "ISS vira IBS, tesoro! O outro pilar do novo imposto."
+    "pacciTip": "ISS vira IBS, tesoro! O outro pilar do novo imposto.",
+    "topic": "ibs_cbs"
   }
 ]

@@ -13,7 +13,8 @@
     ],
     "correctAnswer": "Em operações específicas definidas em lei, como determinadas prestações de serviço",
     "explanation": "A retenção na fonte do IBS/CBS não é genérica: aplica-se apenas às hipóteses previstas em lei, geralmente ligadas a certos tipos de serviço ou operação.",
-    "pacciTip": "Retenção não é regra geral, tesoro! Só entra em cena quando a lei manda especificamente."
+    "pacciTip": "Retenção não é regra geral, tesoro! Só entra em cena quando a lei manda especificamente.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-002",
@@ -29,7 +30,8 @@
     ],
     "correctAnswer": "Comitê Gestor do IBS",
     "explanation": "O Comitê Gestor do IBS é o órgão criado especificamente para administrar, arrecadar e distribuir o IBS entre Estados e Municípios.",
-    "pacciTip": "Comitê Gestor cuida do IBS. A CBS fica com a Receita Federal. Não troca essas duas, hein!"
+    "pacciTip": "Comitê Gestor cuida do IBS. A CBS fica com a Receita Federal. Não troca essas duas, hein!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-003",
@@ -45,7 +47,8 @@
     ],
     "correctAnswer": "Não há cobrança de IBS/CBS sobre esses itens, mas o vendedor mantém direito a crédito",
     "explanation": "A alíquota zero difere da isenção: não há cobrança na saída, mas o vendedor continua com direito ao crédito das etapas anteriores da cadeia.",
-    "pacciTip": "Zero na cobrança, mas o crédito continua vivo! É diferente de isenção, presta atenção nesse detalhe."
+    "pacciTip": "Zero na cobrança, mas o crédito continua vivo! É diferente de isenção, presta atenção nesse detalhe.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-004",
@@ -61,7 +64,8 @@
     ],
     "correctAnswer": "Para o local de destino da mercadoria/serviço",
     "explanation": "O novo modelo adota o princípio do destino: a arrecadação do IBS vai, principalmente, para onde o bem ou serviço é efetivamente consumido.",
-    "pacciTip": "Segue o consumidor, não o fabricante! Destino é quem manda no novo modelo."
+    "pacciTip": "Segue o consumidor, não o fabricante! Destino é quem manda no novo modelo.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-005",
@@ -71,7 +75,8 @@
     "question": "A retenção do IBS/CBS na fonte, quando aplicável, segue regras específicas definidas para cada tipo de operação, e não uma regra genérica única?",
     "correctAnswer": true,
     "explanation": "Correto! Cada hipótese de retenção tem regras próprias, definidas em lei conforme o tipo de operação ou serviço envolvido.",
-    "pacciTip": "Sì! Cada operação tem sua regrinha própria. Não existe fórmula única pra todas."
+    "pacciTip": "Sì! Cada operação tem sua regrinha própria. Não existe fórmula única pra todas.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-153",
@@ -87,7 +92,8 @@
     ],
     "correctAnswer": "Sim, garante a manutenção dos créditos das aquisições relacionadas",
     "explanation": "A imunidade de livros, jornais, periódicos e o papel destinado à sua impressão garante a manutenção dos créditos — diferente de uma isenção comum, que normalmente não preserva o crédito.",
-    "pacciTip": "Imunidade cultural vem \"premium\": nem paga imposto, nem perde o crédito das compras. Combo raro!"
+    "pacciTip": "Imunidade cultural vem \"premium\": nem paga imposto, nem perde o crédito das compras. Combo raro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-006",
@@ -97,7 +103,8 @@
     "question": "Essa afirmação do colega está correta?",
     "correctAnswer": false,
     "explanation": "Errado, está invertido! O Comitê Gestor administra o IBS (estadual/municipal), enquanto a Receita Federal administra a CBS (federal).",
-    "pacciTip": "Inverteu tudo, amico! Comitê Gestor = IBS. Receita Federal = CBS. Corrige essa antes de salvar o cadastro!"
+    "pacciTip": "Inverteu tudo, amico! Comitê Gestor = IBS. Receita Federal = CBS. Corrige essa antes de salvar o cadastro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-007",
@@ -107,7 +114,8 @@
     "question": "Um produto com alíquota zero faz o vendedor perder o direito de aproveitar os créditos das etapas anteriores?",
     "correctAnswer": false,
     "explanation": "Errado! Na alíquota zero, o vendedor não cobra o tributo na saída, mas mantém o direito de se creditar dos tributos pagos nas etapas anteriores.",
-    "pacciTip": "Alíquota zero não é punição, tesoro! O crédito continua garantido, só a cobrança que some."
+    "pacciTip": "Alíquota zero não é punição, tesoro! O crédito continua garantido, só a cobrança que some.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-008",
@@ -117,7 +125,8 @@
     "question": "No período de transição, parte da arrecadação do IBS ainda pode ficar com o Estado de origem, diminuindo gradualmente até desaparecer?",
     "correctAnswer": true,
     "explanation": "Correto! Durante a transição, uma parcela residual da arrecadação ainda é destinada à origem, mas essa parcela é reduzida ano a ano até sumir.",
-    "pacciTip": "É um adeus lento, piccolo! A origem ainda ganha um pouquinho, mas cada ano fica menor."
+    "pacciTip": "É um adeus lento, piccolo! A origem ainda ganha um pouquinho, mas cada ano fica menor.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-009",
@@ -138,7 +147,8 @@
       "Recolher o valor retido ao ente competente"
     ],
     "explanation": "Primeiro identifica-se se há previsão legal, depois parametriza-se o cadastro, calcula-se o valor e, por fim, recolhe-se o tributo retido.",
-    "pacciTip": "Sem identificar a lei primeiro, nada de reter, amico! A ordem certa evita retenção indevida."
+    "pacciTip": "Sem identificar a lei primeiro, nada de reter, amico! A ordem certa evita retenção indevida.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-154",
@@ -154,7 +164,8 @@
     ],
     "correctAnswer": "Mediante registro no documento fiscal relativo à exportação",
     "explanation": "A exportação de bens materiais é comprovada mediante registro no documento fiscal relativo à exportação, nos casos em que a declaração de exportação é processada no Siscomex.",
-    "pacciTip": "O Siscomex \"conversa\" com o documento fiscal — o registro ali já vale como comprovação, tesoro!"
+    "pacciTip": "O Siscomex \"conversa\" com o documento fiscal — o registro ali já vale como comprovação, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-010",
@@ -175,7 +186,8 @@
       "Consolidar a apuração do período"
     ],
     "explanation": "A nota é emitida primeiro, depois se aplica a partilha entre os Estados, registra-se o crédito na filial destinatária e, por fim, consolida-se a apuração.",
-    "pacciTip": "Emite, reparte, credita, fecha a conta! Assim nenhuma filial fica no prejuízo."
+    "pacciTip": "Emite, reparte, credita, fecha a conta! Assim nenhuma filial fica no prejuízo.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-141",
@@ -191,7 +203,8 @@
     ],
     "correctAnswer": "No crédito físico só dá crédito o que está ligado ao produto final; no financeiro, toda aquisição com IBS/CBS extinto dá direito a crédito, salvo vedações",
     "explanation": "Na lógica do crédito físico, só as aquisições diretamente ligadas ao produto final dão direito ao creditamento. Já na lógica do crédito financeiro (não cumulatividade plena) adotada pela Reforma, em regra toda aquisição com IBS/CBS efetivamente extinto dá direito a crédito, salvo uso pessoal e vedações legais.",
-    "pacciTip": "A Reforma escolheu o crédito financeiro, o mais amplo dos dois — quase tudo vira crédito, com poucas exceções!"
+    "pacciTip": "A Reforma escolheu o crédito financeiro, o mais amplo dos dois — quase tudo vira crédito, com poucas exceções!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-011",
@@ -212,7 +225,8 @@
       "Testar a emissão de uma nota simulada"
     ],
     "explanation": "Primeiro cadastram-se os dados e o regime, depois se avalia a retenção, vincula-se a tabela de alíquotas e, por fim, testa-se com uma nota simulada.",
-    "pacciTip": "Nunca solta um cadastro novo sem testar antes, tesoro! Nota simulada salva muita dor de cabeça."
+    "pacciTip": "Nunca solta um cadastro novo sem testar antes, tesoro! Nota simulada salva muita dor de cabeça.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-012",
@@ -233,7 +247,8 @@
       "Valor líquido (sem o tributo) é repassado ao vendedor"
     ],
     "explanation": "O cliente paga, o sistema identifica o tributo embutido, o split payment já manda essa parte direto ao Fisco, e só o valor líquido chega ao vendedor.",
-    "pacciTip": "O dinheiro do imposto nem passa pela sua conta, capisce? Ele já sai direto pro Fisco no split payment!"
+    "pacciTip": "O dinheiro do imposto nem passa pela sua conta, capisce? Ele já sai direto pro Fisco no split payment!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-013",
@@ -249,7 +264,8 @@
     ],
     "correctAnswer": "reter",
     "explanation": "Nas hipóteses previstas em lei, o tomador do serviço deve reter o IBS/CBS na fonte, repassando apenas o valor líquido ao fornecedor.",
-    "pacciTip": "Reter é separar antes de pagar, tesoro! O fornecedor recebe só o que sobra depois do tributo."
+    "pacciTip": "Reter é separar antes de pagar, tesoro! O fornecedor recebe só o que sobra depois do tributo.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-155",
@@ -265,7 +281,8 @@
     ],
     "correctAnswer": "Que possuam habilitações profissionais diretamente relacionadas aos objetivos da sociedade",
     "explanation": "Para a redução das profissões intelectuais, os sócios devem possuir habilitações profissionais diretamente relacionadas com os objetivos da sociedade, além da prestação de serviço estar vinculada à habilitação profissional.",
-    "pacciTip": "Sociedade de profissão regulamentada precisa que TODOS os sócios tenham a habilitação certa, tesoro!"
+    "pacciTip": "Sociedade de profissão regulamentada precisa que TODOS os sócios tenham a habilitação certa, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-014",
@@ -281,7 +298,8 @@
     ],
     "correctAnswer": "Comitê Gestor",
     "explanation": "O Comitê Gestor do IBS centraliza a administração, arrecadação e distribuição do imposto entre os entes estaduais e municipais.",
-    "pacciTip": "Comitê Gestor: grava esse nome, ele vai aparecer bastante na sua rotina!"
+    "pacciTip": "Comitê Gestor: grava esse nome, ele vai aparecer bastante na sua rotina!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-015",
@@ -297,7 +315,8 @@
     ],
     "correctAnswer": "zero",
     "explanation": "A alíquota zero garante que esses itens não tenham cobrança na venda, sem prejudicar o direito ao crédito das etapas anteriores.",
-    "pacciTip": "Zero na saída, crédito garantido na entrada. Essa é a receita da cesta básica!"
+    "pacciTip": "Zero na saída, crédito garantido na entrada. Essa é a receita da cesta básica!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-016",
@@ -313,7 +332,8 @@
     ],
     "correctAnswer": "destino",
     "explanation": "O princípio do destino direciona a arrecadação para onde o bem ou serviço é efetivamente consumido, e não onde foi produzido.",
-    "pacciTip": "Destino manda, origem obedece! É a nova regra do jogo pras operações interestaduais."
+    "pacciTip": "Destino manda, origem obedece! É a nova regra do jogo pras operações interestaduais.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-017",
@@ -323,7 +343,8 @@
     "question": "Digite o nome (duas palavras) do órgão criado para administrar o IBS entre Estados e Municípios:",
     "correctAnswer": "Comitê Gestor",
     "explanation": "Comitê Gestor é o órgão responsável pela administração compartilhada do IBS entre Estados e Municípios.",
-    "pacciTip": "Comitê Gestor, duas palavras só. Fácil de lembrar quando você já sabe o que ele faz!"
+    "pacciTip": "Comitê Gestor, duas palavras só. Fácil de lembrar quando você já sabe o que ele faz!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-018",
@@ -333,7 +354,8 @@
     "question": "Qual é a alíquota de IBS/CBS aplicável aos itens da cesta básica nacional?",
     "correctAnswer": "zero",
     "explanation": "A cesta básica nacional terá alíquota zero de IBS/CBS, mantendo o direito a crédito nas etapas anteriores.",
-    "pacciTip": "Zero na cobrança, mas o crédito segue firme! Não confunde com isenção, tesoro."
+    "pacciTip": "Zero na cobrança, mas o crédito segue firme! Não confunde com isenção, tesoro.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-156",
@@ -349,7 +371,8 @@
     ],
     "correctAnswer": "515 — Diferimento com redução de alíquota",
     "explanation": "O cClassTrib 515 trata do diferimento com redução de alíquota, aplicável a operações sujeitas a diferimento com insumos agropecuários e aquícolas (Anexo IX).",
-    "pacciTip": "515 é \"irmão\" do 510, mas com desconto na etapa futura. Detalhe que faz diferença na prova!"
+    "pacciTip": "515 é \"irmão\" do 510, mas com desconto na etapa futura. Detalhe que faz diferença na prova!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-019",
@@ -359,7 +382,8 @@
     "question": "Digite o termo (em inglês, duas palavras) que descreve o mecanismo de pagamento que separa o tributo automaticamente no momento da compra:",
     "correctAnswer": "split payment",
     "explanation": "Split payment é o mecanismo que segrega automaticamente o valor do IBS/CBS já no momento do pagamento.",
-    "pacciTip": "Split payment: o tributo já sai separado antes mesmo de chegar na sua conta!"
+    "pacciTip": "Split payment: o tributo já sai separado antes mesmo de chegar na sua conta!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-020",
@@ -369,7 +393,8 @@
     "question": "Digite o termo que define para onde vai principalmente a arrecadação do IBS: origem ou ___?",
     "correctAnswer": "destino",
     "explanation": "A arrecadação do IBS é direcionada principalmente ao local de destino, ou seja, de consumo do bem ou serviço.",
-    "pacciTip": "Destino, sempre destino! Onde o produto é consumido, é lá que o imposto fica."
+    "pacciTip": "Destino, sempre destino! Onde o produto é consumido, é lá que o imposto fica.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-142",
@@ -385,7 +410,8 @@
     ],
     "correctAnswer": "Não, joias, pedras preciosas e obras de arte são consideradas uso ou consumo pessoal, vedando o crédito",
     "explanation": "São consideradas uso ou consumo pessoal, sem direito a crédito: joias, pedras e metais preciosos; obras de arte e antiguidades; bebidas alcoólicas; derivados do tabaco; armas e munições; e bens/serviços recreativos, esportivos e estéticos.",
-    "pacciTip": "Luxo e bens de \"uso pessoal\" costumam vedar o crédito, tesoro — decore essa lista pro exame!"
+    "pacciTip": "Luxo e bens de \"uso pessoal\" costumam vedar o crédito, tesoro — decore essa lista pro exame!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-021",
@@ -401,7 +427,8 @@
     ],
     "correctAnswer": "Verificar se esse tipo específico de serviço está previsto em lei como hipótese de retenção",
     "explanation": "A retenção de IBS/CBS não é automática para todo serviço: só se aplica às hipóteses específicas previstas em lei, por isso é preciso checar se o serviço contratado está entre elas.",
-    "pacciTip": "Antes de reter, confere na lei, amico! Nem todo serviço entra nessa lista."
+    "pacciTip": "Antes de reter, confere na lei, amico! Nem todo serviço entra nessa lista.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-022",
@@ -417,7 +444,8 @@
     ],
     "correctAnswer": "Comitê Gestor do IBS",
     "explanation": "O IBS, tributo de competência compartilhada entre Estados e Municípios, é administrado pelo Comitê Gestor do IBS, e não pela Receita Federal.",
-    "pacciTip": "IBS é com o Comitê Gestor, sempre! Guarda esse nome na cabeça."
+    "pacciTip": "IBS é com o Comitê Gestor, sempre! Guarda esse nome na cabeça.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-157",
@@ -433,7 +461,8 @@
     ],
     "correctAnswer": "Restabelecimento de crédito",
     "explanation": "Na apuração do fornecedor, após os efeitos no adquirente, podem ocorrer: transferência em dinheiro (se houve Split Payment/RAD), estorno da parcela não extinta do débito, restabelecimento de crédito (se extinto por compensação), ou apropriação de crédito (se extinto por guia).",
-    "pacciTip": "Cada forma de extinção do débito tem seu próprio \"efeito espelho\" na devolução, tesoro!"
+    "pacciTip": "Cada forma de extinção do débito tem seu próprio \"efeito espelho\" na devolução, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-023",
@@ -449,7 +478,8 @@
     ],
     "correctAnswer": "Alíquota zero na venda, com manutenção do direito a crédito nas compras",
     "explanation": "Itens da cesta básica nacional recebem alíquota zero de IBS/CBS na venda, mas isso não impede o vendedor de aproveitar os créditos das etapas anteriores.",
-    "pacciTip": "Zero na saída não é zero de vantagem, tesoro! O crédito continua garantido."
+    "pacciTip": "Zero na saída não é zero de vantagem, tesoro! O crédito continua garantido.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-024",
@@ -465,7 +495,8 @@
     ],
     "correctAnswer": "Bahia, Estado de destino da mercadoria",
     "explanation": "O princípio do destino faz com que a maior parte da arrecadação do IBS vá para o Estado onde a mercadoria é consumida, no caso, a Bahia.",
-    "pacciTip": "O produto viaja, mas o imposto segue o consumidor, capisce?"
+    "pacciTip": "O produto viaja, mas o imposto segue o consumidor, capisce?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-025",
@@ -481,7 +512,8 @@
     ],
     "correctAnswer": "O sistema de pagamento segrega o IBS/CBS automaticamente, repassando ao vendedor apenas o valor líquido",
     "explanation": "No split payment, o próprio arranjo de pagamento identifica e segrega o tributo devido no momento da transação, repassando ao vendedor apenas o valor líquido.",
-    "pacciTip": "O imposto nem passa pela conta do vendedor, bellissimo! Já sai separado no pagamento."
+    "pacciTip": "O imposto nem passa pela conta do vendedor, bellissimo! Já sai separado no pagamento.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-026",
@@ -497,7 +529,8 @@
     ],
     "correctAnswer": "Registrar os dados cadastrais e o regime tributário do fornecedor",
     "explanation": "Antes de qualquer operação, é preciso registrar corretamente os dados cadastrais e o regime tributário do fornecedor, base para todas as demais parametrizações.",
-    "pacciTip": "Cadastro bem-feito no início evita dor de cabeça depois, tesoro!"
+    "pacciTip": "Cadastro bem-feito no início evita dor de cabeça depois, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-158",
@@ -513,7 +546,8 @@
     ],
     "correctAnswer": "Não, o crédito depende também da extinção do débito correspondente",
     "explanation": "O crédito de IBS e CBS depende de documento fiscal eletrônico hábil E da extinção do débito correspondente — o mero destaque no documento fiscal eletrônico não é suficiente.",
-    "pacciTip": "Não basta \"aparecer\" no documento — o débito de verdade precisa ter sido extinto pra virar crédito!"
+    "pacciTip": "Não basta \"aparecer\" no documento — o débito de verdade precisa ter sido extinto pra virar crédito!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-027",
@@ -529,7 +563,8 @@
     ],
     "correctAnswer": "O hospital, na condição de tomador do serviço",
     "explanation": "Quando há hipótese legal de retenção, é o tomador do serviço, nesse caso o hospital, quem calcula e retém o tributo no momento do pagamento ao prestador.",
-    "pacciTip": "Quem toma o serviço, retém o tributo. Regra simples, mas importante!"
+    "pacciTip": "Quem toma o serviço, retém o tributo. Regra simples, mas importante!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-028",
@@ -545,7 +580,8 @@
     ],
     "correctAnswer": "O Comitê Gestor cuida do IBS e a Receita Federal cuida da CBS",
     "explanation": "A divisão é clara: o Comitê Gestor administra o IBS (estadual/municipal) e a Receita Federal administra a CBS (federal).",
-    "pacciTip": "Dois tributos, dois administradores diferentes. Não mistura, amico!"
+    "pacciTip": "Dois tributos, dois administradores diferentes. Não mistura, amico!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-029",
@@ -561,7 +597,8 @@
     ],
     "correctAnswer": "Alíquota zero de IBS/CBS, sem perda do crédito das compras",
     "explanation": "Arroz e feijão, como itens da cesta básica nacional, recebem alíquota zero, mantendo o direito ao crédito das etapas anteriores da cadeia.",
-    "pacciTip": "Arroz com feijão e alíquota zero: combinação perfeita no cadastro!"
+    "pacciTip": "Arroz com feijão e alíquota zero: combinação perfeita no cadastro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-030",
@@ -577,7 +614,8 @@
     ],
     "correctAnswer": "A maior parte da arrecadação será destinada ao Rio de Janeiro, Estado de destino",
     "explanation": "Pelo princípio do destino, a maior parte da arrecadação do IBS vai para o Estado onde a mercadoria é consumida, no caso, o Rio de Janeiro.",
-    "pacciTip": "O batom viaja de Minas pro Rio, e o imposto vai junto até o destino final!"
+    "pacciTip": "O batom viaja de Minas pro Rio, e o imposto vai junto até o destino final!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-031",
@@ -593,7 +631,8 @@
     ],
     "correctAnswer": "É segregado automaticamente no momento do pagamento e direcionado ao Fisco",
     "explanation": "O split payment segrega o tributo automaticamente já no momento em que o cliente paga, direcionando essa parcela ao Fisco sem passar pelo caixa do restaurante.",
-    "pacciTip": "O molho de tomate é seu, mas o imposto já saiu direto pro Fisco, capisce?"
+    "pacciTip": "O molho de tomate é seu, mas o imposto já saiu direto pro Fisco, capisce?",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-159",
@@ -609,7 +648,8 @@
     ],
     "correctAnswer": "Documento fiscal hábil, mesmo com as regras próprias do regime",
     "explanation": "Nas aquisições de combustíveis submetidas ao regime específico, aplicam-se regras próprias, mas sempre exigindo documento fiscal hábil para a apropriação do crédito.",
-    "pacciTip": "Regime específico tem regra própria, mas o documento fiscal hábil continua sendo obrigatório, capito?"
+    "pacciTip": "Regime específico tem regra própria, mas o documento fiscal hábil continua sendo obrigatório, capito?",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-ASS-143",
@@ -625,7 +665,8 @@
     ],
     "correctAnswer": "Sim, uniformes, EPIs, vale-refeição e vale-alimentação não são considerados uso ou consumo pessoal quando vinculados à atividade",
     "explanation": "Não são considerados uso ou consumo pessoal, quando vinculados à atividade econômica: uniformes, fardamentos, EPIs, alimentação/bebida não alcoólica no estabelecimento, vale-transporte, vale-refeição, vale-alimentação e benefícios educacionais, entre outros.",
-    "pacciTip": "Benefício que serve o trabalho, o crédito continua de pé. É luxo pessoal que quebra essa regra!"
+    "pacciTip": "Benefício que serve o trabalho, o crédito continua de pé. É luxo pessoal que quebra essa regra!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-032",
@@ -641,7 +682,8 @@
     ],
     "correctAnswer": "Vincular a tabela de alíquotas aplicável a esse cliente",
     "explanation": "Depois do cadastro básico e do regime tributário, o próximo passo é vincular a tabela de alíquotas correta para que as vendas futuras sejam tributadas corretamente.",
-    "pacciTip": "Um passo de cada vez, tesoro! Cadastro, depois alíquota, depois venda."
+    "pacciTip": "Um passo de cada vez, tesoro! Cadastro, depois alíquota, depois venda.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-033",
@@ -657,7 +699,8 @@
     ],
     "correctAnswer": "Checar se esse tipo de serviço está entre as hipóteses legais de retenção",
     "explanation": "A retenção depende de previsão legal específica para o tipo de serviço contratado, não sendo automática só por o contrato ser recorrente.",
-    "pacciTip": "Recorrente não é sinônimo de retenção automática, amico! Confere sempre a lei."
+    "pacciTip": "Recorrente não é sinônimo de retenção automática, amico! Confere sempre a lei.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-034",
@@ -673,7 +716,8 @@
     ],
     "correctAnswer": "Receita Federal do Brasil",
     "explanation": "A CBS é um tributo federal, administrado e recolhido junto à Receita Federal do Brasil.",
-    "pacciTip": "CBS é federal, vai pra Receita Federal! O IBS é que fica com o Comitê Gestor."
+    "pacciTip": "CBS é federal, vai pra Receita Federal! O IBS é que fica com o Comitê Gestor.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-035",
@@ -689,7 +733,8 @@
     ],
     "correctAnswer": "Alíquota zero na venda, preservando o crédito das compras de insumos",
     "explanation": "O leite integral, como item da cesta básica nacional, tem alíquota zero na venda, mas a indústria mantém o direito de crédito sobre os insumos adquiridos.",
-    "pacciTip": "Leite com alíquota zero, mas crédito de insumo intacto! Não esquece de cadastrar certinho."
+    "pacciTip": "Leite com alíquota zero, mas crédito de insumo intacto! Não esquece de cadastrar certinho.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-160",
@@ -705,7 +750,8 @@
     ],
     "correctAnswer": "Até 0,05%",
     "explanation": "Os Programas de Incentivo à Cidadania Fiscal podem ser financiados pelo montante equivalente a até 0,05% da arrecadação do IBS e da CBS.",
-    "pacciTip": "Parece pouco, mas 0,05% de toda a arrecadação nacional já dá pra bancar um bom programa de sorteios!"
+    "pacciTip": "Parece pouco, mas 0,05% de toda a arrecadação nacional já dá pra bancar um bom programa de sorteios!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-036",
@@ -721,7 +767,8 @@
     ],
     "correctAnswer": "A maior parte é destinada ao Paraná, onde os veículos serão consumidos",
     "explanation": "Pelo princípio do destino, a maior parte da arrecadação do IBS vai para o Estado de consumo, nesse caso, o Paraná.",
-    "pacciTip": "O carro sai de São Paulo, mas o imposto acompanha até o Paraná!"
+    "pacciTip": "O carro sai de São Paulo, mas o imposto acompanha até o Paraná!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-037",
@@ -737,7 +784,8 @@
     ],
     "correctAnswer": "O valor líquido, já sem a parcela de IBS/CBS que foi segregada",
     "explanation": "No split payment, o tributo é segregado automaticamente no momento do pagamento, e a escola recebe apenas o valor líquido da mensalidade.",
-    "pacciTip": "A mensalidade chega mais enxuta na conta, mas o motivo é o tributo que já saiu antes!"
+    "pacciTip": "A mensalidade chega mais enxuta na conta, mas o motivo é o tributo que já saiu antes!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-038",
@@ -753,7 +801,8 @@
     ],
     "correctAnswer": "Garantir que as compras futuras sejam tributadas de forma correta desde a primeira nota",
     "explanation": "Vincular a tabela de alíquotas correta ao cadastro garante que as operações futuras com esse fornecedor sejam tributadas corretamente desde o início.",
-    "pacciTip": "Tabela de alíquotas certa no cadastro evita nota fiscal errada depois, tesoro!"
+    "pacciTip": "Tabela de alíquotas certa no cadastro evita nota fiscal errada depois, tesoro!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-039",
@@ -769,7 +818,8 @@
     ],
     "correctAnswer": "Se esse tipo específico de serviço está previsto como hipótese de retenção na fonte",
     "explanation": "A verificação essencial é se o serviço se enquadra em alguma das hipóteses legais específicas de retenção de IBS/CBS na fonte.",
-    "pacciTip": "Antes de pagar, confere se essa prestação entra na lista de retenção, amico!"
+    "pacciTip": "Antes de pagar, confere se essa prestação entra na lista de retenção, amico!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-161",
@@ -785,7 +835,8 @@
     ],
     "correctAnswer": "Sim, mas é garantida a opção do adquirente por outra forma de identificação",
     "explanation": "O regulamento pode prever que as informações de pagamento sejam usadas para identificar o adquirente não contribuinte nos documentos fiscais eletrônicos, garantida a opção do adquirente por outra forma de identificação.",
-    "pacciTip": "O sistema tenta facilitar identificando pelo pagamento, mas o adquirente sempre tem alternativa, tesoro!"
+    "pacciTip": "O sistema tenta facilitar identificando pelo pagamento, mas o adquirente sempre tem alternativa, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-040",
@@ -801,7 +852,8 @@
     ],
     "correctAnswer": "IBS declarado ao Comitê Gestor; CBS declarada à Receita Federal",
     "explanation": "O IBS é de competência compartilhada entre Estados e Municípios e é administrado pelo Comitê Gestor; a CBS é federal e administrada pela Receita Federal.",
-    "pacciTip": "Cada tributo com seu administrador certo, mai sbagliato!"
+    "pacciTip": "Cada tributo com seu administrador certo, mai sbagliato!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-041",
@@ -817,7 +869,8 @@
     ],
     "correctAnswer": "Alíquota zero, com manutenção do crédito das compras anteriores",
     "explanation": "Itens da cesta básica nacional recebem alíquota zero na venda, sem prejuízo do direito ao crédito das etapas anteriores da cadeia.",
-    "pacciTip": "Não confunde caderno com arroz no cadastro, tesoro! Cada um tem sua alíquota."
+    "pacciTip": "Não confunde caderno com arroz no cadastro, tesoro! Cada um tem sua alíquota.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-144",
@@ -833,7 +886,8 @@
     ],
     "correctAnswer": "Estornar o crédito, já que o bem pereceu ou se deteriorou",
     "explanation": "O adquirente deve estornar o crédito apropriado caso o bem adquirido venha a perecer, deteriorar-se, ou ser objeto de roubo, furto ou extravio — emitindo NF-e de saída com o código de Nota de Débito \"Perda em estoque\".",
-    "pacciTip": "Se o bem sumiu ou estragou, o crédito que ele gerou também precisa ser devolvido ao sistema, tesoro!"
+    "pacciTip": "Se o bem sumiu ou estragou, o crédito que ele gerou também precisa ser devolvido ao sistema, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-042",
@@ -849,7 +903,8 @@
     ],
     "correctAnswer": "O Ceará, Estado onde o insumo será efetivamente utilizado",
     "explanation": "O princípio do destino direciona a maior parte da arrecadação do IBS para o Estado de consumo, nesse caso o Ceará.",
-    "pacciTip": "O insumo cruza fronteira, e o imposto segue o mesmo caminho até o destino!"
+    "pacciTip": "O insumo cruza fronteira, e o imposto segue o mesmo caminho até o destino!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-043",
@@ -865,7 +920,8 @@
     ],
     "correctAnswer": "A clínica recebe apenas o valor líquido, já descontado o IBS/CBS segregado no pagamento",
     "explanation": "O split payment segrega automaticamente o tributo no momento do pagamento, então a clínica recebe diretamente o valor líquido.",
-    "pacciTip": "O sorriso fica por conta do dentista, o tributo já foi separado no pagamento!"
+    "pacciTip": "O sorriso fica por conta do dentista, o tributo já foi separado no pagamento!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-162",
@@ -881,7 +937,8 @@
     ],
     "correctAnswer": "Sim, o consórcio é obrigado ao cadastro caso exerça essa opção",
     "explanation": "Caso exerçam a opção pelo regime regular da CBS e do IBS, o consórcio e a sociedade em conta de participação (SCP) são obrigados ao cadastro no CNPJ.",
-    "pacciTip": "Optar pelo regime regular traz junto a obrigação do CNPJ, mesmo pra estruturas como o consórcio!"
+    "pacciTip": "Optar pelo regime regular traz junto a obrigação do CNPJ, mesmo pra estruturas como o consórcio!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-044",
@@ -897,7 +954,8 @@
     ],
     "correctAnswer": "Para identificar eventuais erros de parametrização antes da primeira operação real",
     "explanation": "O teste com nota fiscal simulada permite identificar e corrigir erros de parametrização antes de gerar uma operação real, evitando retrabalho e inconsistências fiscais.",
-    "pacciTip": "Testa antes de valer, tesoro! Nota simulada é seu ensaio geral."
+    "pacciTip": "Testa antes de valer, tesoro! Nota simulada é seu ensaio geral.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-045",
@@ -907,7 +965,8 @@
     "question": "Essa afirmação do analista está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A retenção depende de previsão legal específica para o tipo de serviço, não do fato de o contrato ser recorrente.",
-    "pacciTip": "Recorrência não é sinônimo de retenção, amico! Confere sempre a hipótese legal."
+    "pacciTip": "Recorrência não é sinônimo de retenção, amico! Confere sempre a hipótese legal.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-046",
@@ -917,7 +976,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O Comitê Gestor administra apenas o IBS. A CBS é administrada pela Receita Federal do Brasil.",
-    "pacciTip": "Cada tributo com seu dono, piccolo! Não junta os dois."
+    "pacciTip": "Cada tributo com seu dono, piccolo! Não junta os dois.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-047",
@@ -927,7 +987,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A alíquota zero não cobra o tributo na saída, mas preserva o direito de crédito das etapas anteriores da cadeia.",
-    "pacciTip": "Zero na cobrança não é zero no crédito, tesoro! Continua garantido."
+    "pacciTip": "Zero na cobrança não é zero no crédito, tesoro! Continua garantido.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-048",
@@ -937,7 +998,8 @@
     "question": "No período de transição, o Estado de origem (Mato Grosso) deixa de receber imediatamente qualquer parcela de arrecadação do IBS, passando o valor total ao Estado de destino desde o primeiro ano?",
     "correctAnswer": false,
     "explanation": "Errado! Durante a transição, o Estado de origem ainda recebe uma parcela residual, que diminui gradualmente ano a ano até desaparecer.",
-    "pacciTip": "É uma despedida gradual, não um corte seco, capisce?"
+    "pacciTip": "É uma despedida gradual, não um corte seco, capisce?",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-163",
@@ -953,7 +1015,8 @@
     ],
     "correctAnswer": "R$ 30.000,00 por lote residencial",
     "explanation": "Na venda de bem imóvel residencial novo, pode ser deduzido redutor social de R$ 100.000,00 por imóvel; já para lote residencial, o redutor é de R$ 30.000,00, até o limite da base de cálculo.",
-    "pacciTip": "Imóvel construído tem redutor maior (R$100 mil) que lote vazio (R$30 mil) — faz sentido, tesoro!"
+    "pacciTip": "Imóvel construído tem redutor maior (R$100 mil) que lote vazio (R$30 mil) — faz sentido, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-049",
@@ -963,7 +1026,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O split payment se aplica a vendas ao consumidor final de forma geral, incluindo vendas online por checkout digital.",
-    "pacciTip": "Físico ou online, o split payment não escolhe lado, amico!"
+    "pacciTip": "Físico ou online, o split payment não escolhe lado, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-050",
@@ -973,7 +1037,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O regime tributário do fornecedor é uma informação essencial da parametrização, pois influencia diretamente o cálculo dos tributos nas operações.",
-    "pacciTip": "Nome e CNPJ não bastam, tesoro! O regime tributário é peça-chave do cadastro."
+    "pacciTip": "Nome e CNPJ não bastam, tesoro! O regime tributário é peça-chave do cadastro.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-051",
@@ -983,7 +1048,8 @@
     "question": "Essa afirmação do manual está correta?",
     "correctAnswer": true,
     "explanation": "Correto! A retenção na fonte não é regra geral, aplicando-se apenas às hipóteses específicas definidas em lei.",
-    "pacciTip": "Sì, é isso mesmo! Só entra na lista quem a lei escolher."
+    "pacciTip": "Sì, é isso mesmo! Só entra na lista quem a lei escolher.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-145",
@@ -999,7 +1065,8 @@
     ],
     "correctAnswer": "Cinco anos, contados do primeiro dia do período de apuração subsequente à apropriação",
     "explanation": "O direito de utilização dos créditos extingue-se em cinco anos, contados do primeiro dia do período de apuração subsequente àquele em que ocorreu a apropriação.",
-    "pacciTip": "Cinco anos parece muito, mas passa rápido — não deixa o crédito acumulado passar da validade, capito?"
+    "pacciTip": "Cinco anos parece muito, mas passa rápido — não deixa o crédito acumulado passar da validade, capito?",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-052",
@@ -1009,7 +1076,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! A CBS, por ser tributo federal, é administrada integralmente pela Receita Federal do Brasil.",
-    "pacciTip": "CBS é território da Receita Federal, sempre foi assim!"
+    "pacciTip": "CBS é território da Receita Federal, sempre foi assim!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-164",
@@ -1025,7 +1093,8 @@
     ],
     "correctAnswer": "IPCA",
     "explanation": "O valor do redutor social de R$ 600,00 na locação residencial será atualizado, a partir da data de publicação da Lei Complementar, pelo IPCA.",
-    "pacciTip": "IPCA é o índice de correção — o redutor não fica \"congelado\" no tempo, tesoro!"
+    "pacciTip": "IPCA é o índice de correção — o redutor não fica \"congelado\" no tempo, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-ASS-053",
@@ -1035,7 +1104,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! A alíquota zero não cobra o tributo na saída, mas preserva o direito de crédito sobre as compras anteriores, como a farinha usada na produção.",
-    "pacciTip": "Perfetto! O crédito da farinha continua garantido mesmo com venda a alíquota zero."
+    "pacciTip": "Perfetto! O crédito da farinha continua garantido mesmo com venda a alíquota zero.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-054",
@@ -1045,7 +1115,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! Pelo princípio do destino, a maior parte da arrecadação do IBS é direcionada ao Estado onde o bem é efetivamente consumido, nesse caso o Amazonas.",
-    "pacciTip": "O livro viaja pro Amazonas, e o imposto vai com ele até o destino!"
+    "pacciTip": "O livro viaja pro Amazonas, e o imposto vai com ele até o destino!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-055",
@@ -1055,7 +1126,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O split payment se aplica a operações de venda ao consumidor final de forma geral, incluindo a prestação de serviços, como pacotes de viagem.",
-    "pacciTip": "Produto ou serviço, o split payment atua nos dois, amico!"
+    "pacciTip": "Produto ou serviço, o split payment atua nos dois, amico!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-056",
@@ -1065,7 +1137,8 @@
     "question": "Essa prática de testar a nota simulada antes de liberar o cadastro é considerada uma boa prática de parametrização?",
     "correctAnswer": true,
     "explanation": "Correto! Testar com uma nota simulada antes da primeira operação real ajuda a identificar erros de parametrização e evita inconsistências fiscais.",
-    "pacciTip": "Ensaio geral antes da estreia, tesoro! Sempre vale a pena."
+    "pacciTip": "Ensaio geral antes da estreia, tesoro! Sempre vale a pena.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-165",
@@ -1081,7 +1154,8 @@
     ],
     "correctAnswer": "O momento da apuração do fato gerador do IBS e da CBS",
     "explanation": "O despacho para consumo — despacho aduaneiro a que são submetidos os bens destinados ao mercado interno — define o momento da apuração do fato gerador do IBS e da CBS na importação de bens materiais.",
-    "pacciTip": "O \"carimbo de liberação\" da aduana marca exatamente quando nasce o fato gerador na importação!"
+    "pacciTip": "O \"carimbo de liberação\" da aduana marca exatamente quando nasce o fato gerador na importação!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-057",
@@ -1091,7 +1165,8 @@
     "question": "A resposta do colega está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A retenção não é regra geral para toda compra de mercadoria; aplica-se apenas às hipóteses específicas previstas em lei, geralmente ligadas a determinados serviços.",
-    "pacciTip": "Compra de mercadoria não é sinônimo de retenção automática, piccolo!"
+    "pacciTip": "Compra de mercadoria não é sinônimo de retenção automática, piccolo!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-058",
@@ -1101,7 +1176,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! O Comitê Gestor centraliza a administração, arrecadação e distribuição do IBS entre Estados e Municípios.",
-    "pacciTip": "Um só centro cuidando da partilha entre todos os entes, bellissimo!"
+    "pacciTip": "Um só centro cuidando da partilha entre todos os entes, bellissimo!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-059",
@@ -1111,7 +1187,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! A alíquota zero se aplica apenas aos itens definidos pela legislação como parte da cesta básica nacional, não é uma escolha do comerciante.",
-    "pacciTip": "Não é o dono da loja que decide isso, tesoro! É a lei que define a lista."
+    "pacciTip": "Não é o dono da loja que decide isso, tesoro! É a lei que define a lista.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-060",
@@ -1121,7 +1198,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O novo modelo desloca a maior parte da arrecadação para o Estado de destino, ao contrário do sistema antigo baseado na origem.",
-    "pacciTip": "O jogo mudou, amico! Agora quem manda é o destino, não mais a origem."
+    "pacciTip": "O jogo mudou, amico! Agora quem manda é o destino, não mais a origem.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-061",
@@ -1131,7 +1209,8 @@
     "question": "Essa diferença entre o valor pago pelo cliente e o valor recebido pela farmácia pode ser explicada pelo split payment?",
     "correctAnswer": true,
     "explanation": "Correto! O split payment segrega o IBS/CBS automaticamente no momento do pagamento, fazendo com que o vendedor receba apenas o valor líquido.",
-    "pacciTip": "A diferença na conta tem nome e sobrenome: split payment, tesoro!"
+    "pacciTip": "A diferença na conta tem nome e sobrenome: split payment, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-166",
@@ -1147,7 +1226,8 @@
     ],
     "correctAnswer": "Sim, ela pode responder como responsável tributário nessas hipóteses",
     "explanation": "A plataforma digital pode figurar como responsável tributário pelo pagamento do IBS e da CBS relativos às operações e importações realizadas por seu intermédio — um mecanismo de controle do comércio eletrônico internacional.",
-    "pacciTip": "Marketplace intermediando venda internacional carrega junto a responsabilidade tributária, capito?"
+    "pacciTip": "Marketplace intermediando venda internacional carrega junto a responsabilidade tributária, capito?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-146",
@@ -1163,7 +1243,8 @@
     ],
     "correctAnswer": "Não, não é possível compensar créditos de CBS com IBS e vice-versa",
     "explanation": "Uma das condicionantes da apropriação de créditos é que não será possível compensar créditos de CBS com IBS e vice-versa — IBS e CBS são compensados separadamente.",
-    "pacciTip": "IBS e CBS são \"irmãos\", mas cada um cuida da própria conta — não se misturam na hora de compensar!"
+    "pacciTip": "IBS e CBS são \"irmãos\", mas cada um cuida da própria conta — não se misturam na hora de compensar!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-062",
@@ -1173,7 +1254,8 @@
     "question": "Essa afirmação está correta?",
     "correctAnswer": false,
     "explanation": "Errado! Avaliar a hipótese de retenção é parte do fluxo correto de parametrização do cadastro, feito antes das operações, para evitar erros na fatura.",
-    "pacciTip": "Deixar pra depois é receita de erro, piccolo! Resolve isso já no cadastro."
+    "pacciTip": "Deixar pra depois é receita de erro, piccolo! Resolve isso já no cadastro.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-063",
@@ -1183,7 +1265,8 @@
     "question": "Essa parametrização, feita porque o serviço se enquadra em hipótese legal específica, está alinhada com a lógica da retenção de IBS/CBS?",
     "correctAnswer": true,
     "explanation": "Correto! A retenção deve ser aplicada exatamente nos casos previstos em lei, como o identificado nesse serviço contratado pela operadora.",
-    "pacciTip": "Identificou a hipótese, parametrizou certo! Assim que funciona, amico."
+    "pacciTip": "Identificou a hipótese, parametrizou certo! Assim que funciona, amico.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-064",
@@ -1193,7 +1276,8 @@
     "question": "Essa explicação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! A CBS é de competência federal e administrada pela Receita Federal, diferente do IBS, que é compartilhado entre Estados e Municípios via Comitê Gestor.",
-    "pacciTip": "CBS é assunto da União, o IBS é que se divide entre Estados e Municípios!"
+    "pacciTip": "CBS é assunto da União, o IBS é que se divide entre Estados e Municípios!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-065",
@@ -1203,7 +1287,8 @@
     "question": "Essa crença do atendente está correta?",
     "correctAnswer": false,
     "explanation": "Errado! O tratamento tributário é definido pelo item em si, conforme sua classificação na lista da cesta básica, e não pelo fato de estar na mesma nota que outros produtos.",
-    "pacciTip": "Cada item tem sua própria etiqueta tributária, mesmo dividindo a nota com outros produtos!"
+    "pacciTip": "Cada item tem sua própria etiqueta tributária, mesmo dividindo a nota com outros produtos!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-167",
@@ -1219,7 +1304,8 @@
     ],
     "correctAnswer": "Recolhida conforme as regras específicas previstas em lei para essa diferença",
     "explanation": "Eventual diferença do IBS ou da CBS devida na operação ou importação deverá seguir as regras específicas previstas na legislação para tratamento e recolhimento dessa diferença.",
-    "pacciTip": "Diferença apurada depois não é \"esquecida\" — a lei já prevê como tratar esse ajuste, tesoro!"
+    "pacciTip": "Diferença apurada depois não é \"esquecida\" — a lei já prevê como tratar esse ajuste, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-066",
@@ -1229,7 +1315,8 @@
     "question": "Essa afirmação sobre a transição está correta?",
     "correctAnswer": true,
     "explanation": "Correto! No período de transição, a parcela residual destinada ao Estado de origem diminui progressivamente ano a ano até ser eliminada.",
-    "pacciTip": "Ano após ano, a fatia da origem encolhe até sumir de vez!"
+    "pacciTip": "Ano após ano, a fatia da origem encolhe até sumir de vez!",
+    "topic": "transicao"
   },
   {
     "id": "REF-ASS-067",
@@ -1239,7 +1326,8 @@
     "question": "Essa explicação está correta?",
     "correctAnswer": true,
     "explanation": "Correto! O split payment não muda o preço cobrado do consumidor final; ele apenas segrega automaticamente a parte do tributo já embutida no preço.",
-    "pacciTip": "O preço na etiqueta não muda, só o caminho do imposto lá dentro!"
+    "pacciTip": "O preço na etiqueta não muda, só o caminho do imposto lá dentro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-068",
@@ -1249,7 +1337,8 @@
     "question": "Essa prática sugerida pelo analista é considerada segura?",
     "correctAnswer": false,
     "explanation": "Errado! A tabela de alíquotas deve estar sempre alinhada aos dados cadastrais e ao regime tributário do cliente; alterá-la isoladamente pode gerar inconsistências fiscais.",
-    "pacciTip": "Não mexe numa peça sem olhar o conjunto todo, tesoro! Revisa o cadastro primeiro."
+    "pacciTip": "Não mexe numa peça sem olhar o conjunto todo, tesoro! Revisa o cadastro primeiro.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-069",
@@ -1270,7 +1359,8 @@
       "Recolher o valor retido ao ente competente"
     ],
     "explanation": "Primeiro confirma-se a hipótese legal, depois retém-se o valor no pagamento, paga-se o líquido ao fornecedor e, por fim, recolhe-se o tributo retido ao Fisco.",
-    "pacciTip": "Confirma, retém, paga o líquido, recolhe! Essa é a sequência que não falha."
+    "pacciTip": "Confirma, retém, paga o líquido, recolhe! Essa é a sequência que não falha.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-168",
@@ -1286,7 +1376,8 @@
     ],
     "correctAnswer": "Não, salvo se houver previsão expressa em lei, seguindo a regra geral dos regimes diferenciados",
     "explanation": "Assim como os demais regimes diferenciados, o regime de bares e restaurantes não pode ser cumulado livremente com outros regimes diferenciados, específicos ou favorecidos, salvo previsão expressa em lei.",
-    "pacciTip": "A regra de \"não cumular sem previsão legal\" vale pra praticamente todo regime diferenciado, tesoro!"
+    "pacciTip": "A regra de \"não cumular sem previsão legal\" vale pra praticamente todo regime diferenciado, tesoro!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-ASS-070",
@@ -1307,7 +1398,8 @@
       "Recolher o valor apurado, que será administrado pelo Comitê Gestor"
     ],
     "explanation": "Consolidam-se as notas do período, calcula-se o IBS já descontando créditos, transmite-se a apuração ao Comitê Gestor e, por fim, recolhe-se o valor devido.",
-    "pacciTip": "Consolida, calcula, transmite, recolhe! O Comitê Gestor espera essa sequência certinha."
+    "pacciTip": "Consolida, calcula, transmite, recolhe! O Comitê Gestor espera essa sequência certinha.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-071",
@@ -1328,7 +1420,8 @@
       "Testar a emissão de uma nota de venda simulada com o item"
     ],
     "explanation": "Confirma-se primeiro o enquadramento na lista oficial, configura-se a alíquota zero, garante-se o crédito das compras e testa-se com uma nota simulada antes de liberar.",
-    "pacciTip": "Confirma a lista, zera a alíquota, guarda o crédito, testa a nota! Passo a passo, tesoro."
+    "pacciTip": "Confirma a lista, zera a alíquota, guarda o crédito, testa a nota! Passo a passo, tesoro.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-147",
@@ -1344,7 +1437,8 @@
     ],
     "correctAnswer": "Até 180 dias",
     "explanation": "O prazo para apreciação do pedido de ressarcimento é de até 30 dias (conformidade), até 60 dias (hipóteses qualificadas) ou até 180 dias nos demais casos, contados da data da solicitação.",
-    "pacciTip": "Quanto mais \"arrumada\" a empresa estiver com o Fisco, mais rápido sai o ressarcimento, tesoro!"
+    "pacciTip": "Quanto mais \"arrumada\" a empresa estiver com o Fisco, mais rápido sai o ressarcimento, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-072",
@@ -1365,7 +1459,8 @@
       "Registrar a operação na apuração mensal da fábrica"
     ],
     "explanation": "Emite-se a nota, apura-se o IBS conforme as regras de destino, repassa-se a maior parte ao Estado de consumo e registra-se tudo na apuração mensal.",
-    "pacciTip": "Emite, apura, repassa pro destino, registra! Assim fecha certinho o mês."
+    "pacciTip": "Emite, apura, repassa pro destino, registra! Assim fecha certinho o mês.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-073",
@@ -1386,7 +1481,8 @@
       "Repassar o valor líquido à loja de eletrodomésticos"
     ],
     "explanation": "O cliente paga, o gateway calcula o tributo embutido, direciona essa parcela ao Fisco automaticamente e só então repassa o valor líquido à loja.",
-    "pacciTip": "Paga, calcula, separa, repassa! O split payment não pula nenhuma etapa."
+    "pacciTip": "Paga, calcula, separa, repassa! O split payment não pula nenhuma etapa.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-169",
@@ -1402,7 +1498,8 @@
     ],
     "correctAnswer": "Rendimentos financeiros",
     "explanation": "Rendimentos financeiros têm tratamento próprio, com exceção do disposto no regime específico de serviços financeiros — que estabelece as regras de tributação aplicáveis a esse tipo de receita.",
-    "pacciTip": "Rendimento financeiro tem \"casa própria\" na Reforma — o regime específico de serviços financeiros!"
+    "pacciTip": "Rendimento financeiro tem \"casa própria\" na Reforma — o regime específico de serviços financeiros!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-ASS-074",
@@ -1423,7 +1520,8 @@
       "Liberar o cadastro para a primeira compra oficial"
     ],
     "explanation": "Primeiro registram-se os dados básicos, confirma-se o regime tributário, avalia-se a retenção aplicável e só então libera-se o cadastro para compras.",
-    "pacciTip": "Dados, regime, retenção, liberação! Segue essa ordem e nada passa batido."
+    "pacciTip": "Dados, regime, retenção, liberação! Segue essa ordem e nada passa batido.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-075",
@@ -1444,7 +1542,8 @@
       "Registrar o valor retido na apuração fiscal da empresa de eventos"
     ],
     "explanation": "Verifica-se a previsão legal, aplica-se o percentual sobre a fatura, repassa-se o valor líquido ao fornecedor e registra-se o valor retido na apuração.",
-    "pacciTip": "Verifica, aplica, repassa, registra! Assim a retenção fica redondinha."
+    "pacciTip": "Verifica, aplica, repassa, registra! Assim a retenção fica redondinha.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-076",
@@ -1465,7 +1564,8 @@
       "Recolher o valor apurado à Receita Federal do Brasil"
     ],
     "explanation": "Emitem-se as notas do período, consolida-se o total de CBS devida, descontam-se os créditos aplicáveis e recolhe-se o valor final à Receita Federal.",
-    "pacciTip": "Emite, consolida, desconta, recolhe! A CBS sempre termina na Receita Federal."
+    "pacciTip": "Emite, consolida, desconta, recolhe! A CBS sempre termina na Receita Federal.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-077",
@@ -1486,7 +1586,8 @@
       "Enviar a tabela atualizada para os clientes supermercadistas"
     ],
     "explanation": "Valida-se o enquadramento na lista, zera-se a alíquota de venda, confirma-se a manutenção do crédito dos insumos e só depois se envia a tabela aos clientes.",
-    "pacciTip": "Valida, zera, confirma o crédito, só então envia! Ordem certa evita retrabalho."
+    "pacciTip": "Valida, zera, confirma o crédito, só então envia! Ordem certa evita retrabalho.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-078",
@@ -1507,7 +1608,8 @@
       "Consolidar a operação na apuração mensal do IBS"
     ],
     "explanation": "Emite-se a nota com origem e destino, calcula-se o IBS conforme as regras, direciona-se a maior parte ao Estado de consumo e consolida-se na apuração mensal.",
-    "pacciTip": "Emite, calcula, direciona pro destino, consolida! O café segue esse trajeto certinho."
+    "pacciTip": "Emite, calcula, direciona pro destino, consolida! O café segue esse trajeto certinho.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-170",
@@ -1523,7 +1625,8 @@
     ],
     "correctAnswer": "Quando atinge critérios de habitualidade/volume estabelecidos para o ano-calendário anterior",
     "explanation": "A pessoa física será contribuinte do IBS e da CBS na locação de bem imóvel quando, no ano-calendário anterior, atingir os critérios de habitualidade e volume estabelecidos na legislação.",
-    "pacciTip": "Não é o primeiro aluguel que já torna a pessoa contribuinte — existe um critério de volume no ano anterior!"
+    "pacciTip": "Não é o primeiro aluguel que já torna a pessoa contribuinte — existe um critério de volume no ano anterior!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-079",
@@ -1544,7 +1647,8 @@
       "Valor líquido é depositado na conta do pet shop"
     ],
     "explanation": "A cobrança é processada, o sistema segrega o tributo embutido, envia essa parcela ao Fisco automaticamente e só então repassa o valor líquido à academia.",
-    "pacciTip": "Cobra, segrega, envia, repassa! O split payment não perde o ritmo do assinante."
+    "pacciTip": "Cobra, segrega, envia, repassa! O split payment não perde o ritmo do assinante.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-080",
@@ -1565,7 +1669,8 @@
       "Emitir a primeira nota fiscal de venda para a construtora"
     ],
     "explanation": "Registram-se os dados e o regime, avalia-se a retenção aplicável, vincula-se a tabela de alíquotas e só então se emite a primeira nota fiscal.",
-    "pacciTip": "Cadastra, avalia, vincula, emite! Passo a passo sem pular etapa."
+    "pacciTip": "Cadastra, avalia, vincula, emite! Passo a passo sem pular etapa.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-081",
@@ -1586,7 +1691,8 @@
       "Recolher o tributo retido ao ente competente dentro do prazo"
     ],
     "explanation": "Identifica-se a hipótese de retenção, calcula-se o valor sobre a fatura, desconta-se no pagamento e recolhe-se o tributo retido ao ente competente.",
-    "pacciTip": "Identifica, calcula, desconta, recolhe! Sem pressa, mas sem pular passo."
+    "pacciTip": "Identifica, calcula, desconta, recolhe! Sem pressa, mas sem pular passo.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-148",
@@ -1602,7 +1708,8 @@
     ],
     "correctAnswer": "Não, o Split Payment extingue débitos apenas da respectiva operação",
     "explanation": "Tanto o Split Payment quanto o Recolhimento pelo Adquirente (RAD) são formas de liquidação que extinguem os débitos apenas da respectiva operação — o débito liquidado numa nota não compensa o débito de outra, ainda que mais antiga.",
-    "pacciTip": "Cada nota paga a própria conta, capito? O Split Payment não \"empresta\" pagamento de uma pra outra."
+    "pacciTip": "Cada nota paga a própria conta, capito? O Split Payment não \"empresta\" pagamento de uma pra outra.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-082",
@@ -1623,7 +1730,8 @@
       "Confirmar que a CBS foi transmitida à Receita Federal"
     ],
     "explanation": "A checagem segue por tributo: primeiro separa-se e confirma-se o IBS junto ao Comitê Gestor, depois separa-se e confirma-se a CBS junto à Receita Federal.",
-    "pacciTip": "Um tributo de cada vez, amico! IBS com o Comitê, CBS com a Receita."
+    "pacciTip": "Um tributo de cada vez, amico! IBS com o Comitê, CBS com a Receita.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-171",
@@ -1639,7 +1747,8 @@
     ],
     "correctAnswer": "A locação, cessão onerosa e arrendamento (70%)",
     "explanation": "A locação, cessão onerosa e arrendamento de bens imóveis têm redução de 70% na alíquota, maior que a redução de 50% aplicada à alienação de imóveis e aos serviços de construção civil.",
-    "pacciTip": "Alugar tem desconto maior que vender, no regime específico de imóveis — 70% contra 50%!"
+    "pacciTip": "Alugar tem desconto maior que vender, no regime específico de imóveis — 70% contra 50%!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-ASS-083",
@@ -1660,7 +1769,8 @@
       "Disponibilizar os itens para venda nas lojas físicas"
     ],
     "explanation": "Confirma-se o enquadramento na lista, ativa-se a alíquota zero na venda, preserva-se o crédito das compras e só então os itens vão para a loja.",
-    "pacciTip": "Confirma, ativa, preserva o crédito, libera pra loja! Assim a fruta chega certinha no cadastro."
+    "pacciTip": "Confirma, ativa, preserva o crédito, libera pra loja! Assim a fruta chega certinha no cadastro.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-084",
@@ -1681,7 +1791,8 @@
       "Consolidar a operação na apuração periódica do IBS"
     ],
     "explanation": "Emite-se a nota com origem e destino, calcula-se o IBS pelas regras de destino, direciona-se a maior parte ao Rio Grande do Sul e consolida-se na apuração.",
-    "pacciTip": "Origem manda o produto, destino recebe o imposto! Sempre nessa ordem."
+    "pacciTip": "Origem manda o produto, destino recebe o imposto! Sempre nessa ordem.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-085",
@@ -1702,7 +1813,8 @@
       "Valor líquido é repassado à conta da academia"
     ],
     "explanation": "O aplicativo processa a cobrança, o sistema segrega o tributo embutido, envia essa parcela ao Fisco e só então repassa o valor líquido à academia.",
-    "pacciTip": "Cobra, segrega, envia, repassa! O split payment não perde o ritmo da academia."
+    "pacciTip": "Cobra, segrega, envia, repassa! O split payment não perde o ritmo da academia.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-086",
@@ -1723,7 +1835,8 @@
       "Emitir a primeira fatura de prestação de serviço"
     ],
     "explanation": "Registram-se os dados e o regime, define-se a retenção aplicável, vincula-se a tabela de alíquotas e só então se emite a primeira fatura.",
-    "pacciTip": "Cadastro, retenção, alíquota, fatura! Segue essa receita e não erra."
+    "pacciTip": "Cadastro, retenção, alíquota, fatura! Segue essa receita e não erra.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-172",
@@ -1739,7 +1852,8 @@
     ],
     "correctAnswer": "Sim, a vedação se aplica mesmo assim, por limitação legal específica desse regime",
     "explanation": "Os adquirentes de alimentação e bebidas fornecidas por bares e restaurantes no regime específico ficam vedados do aproveitamento do crédito, mesmo quando a aquisição não é de uso ou consumo pessoal — é uma limitação própria desse regime.",
-    "pacciTip": "Regime específico de bar/restaurante tem regra própria de vedação — nem reunião de trabalho escapa!"
+    "pacciTip": "Regime específico de bar/restaurante tem regra própria de vedação — nem reunião de trabalho escapa!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-ASS-087",
@@ -1760,7 +1874,8 @@
       "Recolher o valor retido dentro do prazo estabelecido"
     ],
     "explanation": "Confirma-se a hipótese, calcula-se o percentual sobre o frete, repassa-se o líquido à transportadora e recolhe-se o valor retido dentro do prazo.",
-    "pacciTip": "Confirma, calcula, repassa, recolhe! O frete não sai do lugar sem essa ordem."
+    "pacciTip": "Confirma, calcula, repassa, recolhe! O frete não sai do lugar sem essa ordem.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-088",
@@ -1781,7 +1896,8 @@
       "Recolher o valor apurado à Receita Federal do Brasil"
     ],
     "explanation": "Consolidam-se os atendimentos das unidades, apura-se a CBS do período, transmite-se a declaração à Receita Federal e recolhe-se o valor apurado.",
-    "pacciTip": "Três unidades, uma só declaração, e tudo vai pra Receita Federal!"
+    "pacciTip": "Três unidades, uma só declaração, e tudo vai pra Receita Federal!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-089",
@@ -1802,7 +1918,8 @@
       "Emitir a nota fiscal de venda com alíquota zero aplicada"
     ],
     "explanation": "Confirma-se o enquadramento do feijão, configura-se a alíquota zero no cadastro, registra-se o crédito dos insumos e emite-se a nota de venda.",
-    "pacciTip": "O feijão segue esse caminho até chegar na nota com alíquota zero certinha!"
+    "pacciTip": "O feijão segue esse caminho até chegar na nota com alíquota zero certinha!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-090",
@@ -1823,7 +1940,8 @@
       "Consolidar a venda na apuração mensal do IBS"
     ],
     "explanation": "Emite-se a nota, calcula-se o IBS pelas regras de destino, direciona-se a maior parte da arrecadação a Pernambuco e consolida-se a operação na apuração.",
-    "pacciTip": "A tinta muda de Estado, e o imposto pinta o quadro certo no destino!"
+    "pacciTip": "A tinta muda de Estado, e o imposto pinta o quadro certo no destino!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-091",
@@ -1844,7 +1962,8 @@
       "Valor líquido é depositado na conta da livraria"
     ],
     "explanation": "O cliente paga, o sistema identifica o tributo embutido, direciona essa parte ao Fisco automaticamente e deposita o valor líquido na conta da livraria.",
-    "pacciTip": "Paga, identifica, direciona, deposita! O livro chega, o imposto já foi entregue antes."
+    "pacciTip": "Paga, identifica, direciona, deposita! O livro chega, o imposto já foi entregue antes.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-173",
@@ -1860,7 +1979,8 @@
     ],
     "correctAnswer": "O sócio ostensivo da SCP",
     "explanation": "O sócio ostensivo da sociedade em conta de participação (SCP) é obrigado ao cadastro no CNPJ, na hipótese de a sociedade não exercer a opção pelo regime regular.",
-    "pacciTip": "Na SCP, quem \"aparece\" (o sócio ostensivo) carrega a obrigação do CNPJ quando não há opção pelo regular!"
+    "pacciTip": "Na SCP, quem \"aparece\" (o sócio ostensivo) carrega a obrigação do CNPJ quando não há opção pelo regular!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-092",
@@ -1881,7 +2001,8 @@
       "Testar a emissão de uma nota de entrada simulada"
     ],
     "explanation": "Registram-se os dados e o regime, avalia-se a retenção aplicável, vincula-se a tabela de alíquotas e testa-se com uma nota de entrada simulada.",
-    "pacciTip": "Cadastra, avalia, vincula, testa! Assim a compra de insumo começa sem sustos."
+    "pacciTip": "Cadastra, avalia, vincula, testa! Assim a compra de insumo começa sem sustos.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-149",
@@ -1897,7 +2018,8 @@
     ],
     "correctAnswer": "Pelo recebedor",
     "explanation": "Transações iniciadas pelo recebedor incluem boleto ou fatura de cobrança, link de pagamento, PIX Cobrança ou QR Code dinâmico e cobrança recorrente — é o recebedor (ou terceiro) que emite a instrução que origina a transação.",
-    "pacciTip": "Quem manda o boleto, \"inicia o jogo\" do pagamento — por isso é o recebedor quem origina a transação!"
+    "pacciTip": "Quem manda o boleto, \"inicia o jogo\" do pagamento — por isso é o recebedor quem origina a transação!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-093",
@@ -1913,7 +2035,8 @@
     ],
     "correctAnswer": "especificamente",
     "explanation": "A retenção não é regra geral: aplica-se apenas às operações especificamente previstas em lei.",
-    "pacciTip": "Especificamente é a palavra-chave, tesoro! Sem ela, a retenção vira bagunça."
+    "pacciTip": "Especificamente é a palavra-chave, tesoro! Sem ela, a retenção vira bagunça.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-094",
@@ -1929,7 +2052,8 @@
     ],
     "correctAnswer": "pagamento",
     "explanation": "A retenção é calculada e aplicada no momento do pagamento ao fornecedor, sendo repassado a ele apenas o valor líquido.",
-    "pacciTip": "É na hora de pagar que a retenção entra em ação, amico!"
+    "pacciTip": "É na hora de pagar que a retenção entra em ação, amico!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-095",
@@ -1945,7 +2069,8 @@
     ],
     "correctAnswer": "tomador",
     "explanation": "É o tomador do serviço, ou seja, quem contrata e paga, o responsável por calcular e reter o tributo devido.",
-    "pacciTip": "Quem contrata, retém! O prestador só recebe o valor líquido depois."
+    "pacciTip": "Quem contrata, retém! O prestador só recebe o valor líquido depois.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-174",
@@ -1961,7 +2086,8 @@
     ],
     "correctAnswer": "Manter sob sua guarda o documento que comprove a transação ou pagamento, pelo prazo decadencial",
     "explanation": "O contribuinte, mesmo nas hipóteses de dispensa de emissão do documento fiscal, deve manter sob sua guarda o documento que comprove a transação ou pagamento, pelo prazo decadencial.",
-    "pacciTip": "Dispensa de emitir não é dispensa de guardar prova — o comprovante precisa ficar arquivado, tesoro!"
+    "pacciTip": "Dispensa de emitir não é dispensa de guardar prova — o comprovante precisa ficar arquivado, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-096",
@@ -1977,7 +2103,8 @@
     ],
     "correctAnswer": "recolher",
     "explanation": "O valor retido deve ser recolhido ao ente competente (Comitê Gestor ou Receita Federal, conforme o tributo) dentro do prazo estabelecido.",
-    "pacciTip": "Reteve, agora recolhe! Não pode ficar parado na conta da empresa."
+    "pacciTip": "Reteve, agora recolhe! Não pode ficar parado na conta da empresa.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-097",
@@ -1993,7 +2120,8 @@
     ],
     "correctAnswer": "Receita Federal do Brasil",
     "explanation": "A divisão de competência é clara: IBS com o Comitê Gestor, CBS com a Receita Federal do Brasil.",
-    "pacciTip": "Receita Federal cuida da CBS, sempre foi assim, tesoro!"
+    "pacciTip": "Receita Federal cuida da CBS, sempre foi assim, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-098",
@@ -2009,7 +2137,8 @@
     ],
     "correctAnswer": "Comitê Gestor",
     "explanation": "O Comitê Gestor do IBS é o órgão que centraliza a arrecadação e a distribuição do imposto entre os entes envolvidos.",
-    "pacciTip": "Comitê Gestor centraliza tudo do IBS, um só lugar pra cuidar da partilha!"
+    "pacciTip": "Comitê Gestor centraliza tudo do IBS, um só lugar pra cuidar da partilha!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-099",
@@ -2025,7 +2154,8 @@
     ],
     "correctAnswer": "federal",
     "explanation": "A CBS é um tributo federal, diferente do IBS, que é compartilhado entre Estados e Municípios.",
-    "pacciTip": "Federal é CBS, compartilhado é IBS. Não troca essa etiqueta, amico!"
+    "pacciTip": "Federal é CBS, compartilhado é IBS. Não troca essa etiqueta, amico!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-175",
@@ -2041,7 +2171,8 @@
     ],
     "correctAnswer": "O valor que pode ser deduzido da base de cálculo do IBS/CBS na alienação do imóvel",
     "explanation": "O redutor de ajuste é o valor que pode ser deduzido da base de cálculo do IBS e da CBS na alienação de imóvel — como os R$ 100.000,00 por imóvel novo ou R$ 30.000,00 por lote residencial.",
-    "pacciTip": "Redutor de ajuste é o \"abatimento\" que reduz a base antes de calcular o imposto na venda do imóvel!"
+    "pacciTip": "Redutor de ajuste é o \"abatimento\" que reduz a base antes de calcular o imposto na venda do imóvel!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-100",
@@ -2057,7 +2188,8 @@
     ],
     "correctAnswer": "compartilhada",
     "explanation": "O IBS tem competência compartilhada entre Estados e Municípios, e por isso é administrado por um órgão colegiado, o Comitê Gestor.",
-    "pacciTip": "Compartilhado entre Estados e Municípios, por isso o Comitê Gestor existe!"
+    "pacciTip": "Compartilhado entre Estados e Municípios, por isso o Comitê Gestor existe!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-101",
@@ -2073,7 +2205,8 @@
     ],
     "correctAnswer": "zero",
     "explanation": "A alíquota zero elimina a cobrança na venda desses itens, sem prejudicar o crédito das etapas anteriores.",
-    "pacciTip": "Zero na venda, crédito garantido na compra! Combinação perfeita da cesta básica."
+    "pacciTip": "Zero na venda, crédito garantido na compra! Combinação perfeita da cesta básica.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-102",
@@ -2089,7 +2222,8 @@
     ],
     "correctAnswer": "crédito",
     "explanation": "A alíquota zero não retira o direito ao crédito das etapas anteriores da cadeia, apenas elimina a cobrança na saída.",
-    "pacciTip": "Crédito é a palavra que não pode sumir do seu vocabulário, tesoro!"
+    "pacciTip": "Crédito é a palavra que não pode sumir do seu vocabulário, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-150",
@@ -2105,7 +2239,8 @@
     ],
     "correctAnswer": "O Senado Federal",
     "explanation": "Haverá uma alíquota de referência do IBS fixada pelo Senado Federal; a alíquota da CBS, por sua vez, será divulgada por Lei Ordinária Federal.",
-    "pacciTip": "O Senado dá o \"ponto de partida\", e cada Estado/Município decide se segue ou ajusta a própria alíquota."
+    "pacciTip": "O Senado dá o \"ponto de partida\", e cada Estado/Município decide se segue ou ajusta a própria alíquota.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-103",
@@ -2121,7 +2256,8 @@
     ],
     "correctAnswer": "legislação",
     "explanation": "Os itens que recebem alíquota zero são definidos pela legislação, não podendo ser escolhidos livremente por cada comerciante.",
-    "pacciTip": "Quem decide a lista é a lei, não o dono da loja, capisce?"
+    "pacciTip": "Quem decide a lista é a lei, não o dono da loja, capisce?",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-176",
@@ -2137,7 +2273,8 @@
     ],
     "correctAnswer": "Porque depende dos ajustes nas alíquotas de referência do IBS e da CBS, pra reequilibrar a arrecadação",
     "explanation": "A alteração de operações beneficiadas por regime diferenciado (acréscimo, exclusão, substituição) só entra em vigor após os ajustes nas alíquotas de referência do IBS e da CBS, para reequilibrar a arrecadação.",
-    "pacciTip": "Mudar quem ganha benefício mexe na arrecadação — por isso a alíquota de referência precisa se ajustar antes!"
+    "pacciTip": "Mudar quem ganha benefício mexe na arrecadação — por isso a alíquota de referência precisa se ajustar antes!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-104",
@@ -2153,7 +2290,8 @@
     ],
     "correctAnswer": "crédito",
     "explanation": "A principal diferença prática é que a alíquota zero preserva o crédito das etapas anteriores, o que nem sempre ocorre em modelos de isenção tradicional.",
-    "pacciTip": "Alíquota zero é generosa com o crédito, não esquece essa diferença!"
+    "pacciTip": "Alíquota zero é generosa com o crédito, não esquece essa diferença!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-105",
@@ -2169,7 +2307,8 @@
     ],
     "correctAnswer": "destino",
     "explanation": "O princípio do destino direciona a maior parte da arrecadação do IBS para onde o bem é efetivamente consumido.",
-    "pacciTip": "Destino é quem fica com a maior fatia, sempre lembra disso!"
+    "pacciTip": "Destino é quem fica com a maior fatia, sempre lembra disso!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-106",
@@ -2185,7 +2324,8 @@
     ],
     "correctAnswer": "origem",
     "explanation": "O sistema antigo concentrava a arrecadação no Estado de origem da mercadoria; o novo modelo inverte essa lógica, priorizando o destino.",
-    "pacciTip": "Origem era o rei antes, agora o destino assumiu o trono!"
+    "pacciTip": "Origem era o rei antes, agora o destino assumiu o trono!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-107",
@@ -2201,7 +2341,8 @@
     ],
     "correctAnswer": "gradual",
     "explanation": "A transição prevê uma redução gradual e progressiva da parcela destinada à origem, até ela desaparecer por completo.",
-    "pacciTip": "Devagar e sempre, a fatia da origem vai encolhendo a cada ano!"
+    "pacciTip": "Devagar e sempre, a fatia da origem vai encolhendo a cada ano!",
+    "topic": "transicao"
   },
   {
     "id": "REF-ASS-108",
@@ -2217,7 +2358,8 @@
     ],
     "correctAnswer": "consumido",
     "explanation": "O princípio do destino direciona a arrecadação para onde o bem ou serviço é efetivamente consumido, e não onde é produzido.",
-    "pacciTip": "Segue o consumo, não a fábrica! É a lógica do destino."
+    "pacciTip": "Segue o consumo, não a fábrica! É a lógica do destino.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-177",
@@ -2233,7 +2375,8 @@
     ],
     "correctAnswer": "Fiscalização por conselho profissional",
     "explanation": "As profissões intelectuais de natureza científica, literária ou artística, submetidas à fiscalização por conselho profissional (como CRC, OAB, CREA), têm redução de 30% da alíquota de referência.",
-    "pacciTip": "Conselho profissional é o \"selo\" que garante o benefício de 30% às profissões intelectuais, tesoro!"
+    "pacciTip": "Conselho profissional é o \"selo\" que garante o benefício de 30% às profissões intelectuais, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-109",
@@ -2249,7 +2392,8 @@
     ],
     "correctAnswer": "split payment",
     "explanation": "O split payment é o mecanismo responsável por segregar automaticamente o tributo já no momento do pagamento.",
-    "pacciTip": "Split payment: o nome já entrega, ele separa o tributo na hora!"
+    "pacciTip": "Split payment: o nome já entrega, ele separa o tributo na hora!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-110",
@@ -2265,7 +2409,8 @@
     ],
     "correctAnswer": "líquido",
     "explanation": "O split payment repassa ao prestador apenas o valor líquido, pois a parcela do tributo já foi segregada no pagamento.",
-    "pacciTip": "Líquido é o que sobra depois que o tributo já saiu voando pro Fisco!"
+    "pacciTip": "Líquido é o que sobra depois que o tributo já saiu voando pro Fisco!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-111",
@@ -2281,7 +2426,8 @@
     ],
     "correctAnswer": "Fisco",
     "explanation": "O valor segregado pelo split payment vai diretamente ao Fisco, sem transitar pela conta do vendedor.",
-    "pacciTip": "Direto pro Fisco, sem escalas na conta do vendedor!"
+    "pacciTip": "Direto pro Fisco, sem escalas na conta do vendedor!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-112",
@@ -2297,7 +2443,8 @@
     ],
     "correctAnswer": "digitais",
     "explanation": "O split payment não se limita a um canal específico: aplica-se a vendas ao consumidor final tanto em lojas físicas quanto em canais digitais.",
-    "pacciTip": "Loja física ou aplicativo, o split payment está presente nos dois!"
+    "pacciTip": "Loja física ou aplicativo, o split payment está presente nos dois!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-151",
@@ -2313,7 +2460,8 @@
     ],
     "correctAnswer": "É a soma das alíquotas do Estado e do Município (ou do Distrito Federal) de destino da operação",
     "explanation": "Para o IBS, a alíquota incidente sobre cada operação corresponde à soma das alíquotas do Estado e do Município (ou do Distrito Federal) de destino da operação, conforme as regras de local da operação.",
-    "pacciTip": "IBS é dose dupla: uma parte do Estado, outra do Município — e as duas de destino, não de origem!"
+    "pacciTip": "IBS é dose dupla: uma parte do Estado, outra do Município — e as duas de destino, não de origem!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-178",
@@ -2329,7 +2477,8 @@
     ],
     "correctAnswer": "Não, esse tipo de revenda fica fora do regime específico de bares e restaurantes",
     "explanation": "O fornecimento de produtos alimentícios e bebidas não alcoólicas adquiridos prontos de terceiros, sem preparo no estabelecimento, não está sujeito ao regime específico de bares e restaurantes.",
-    "pacciTip": "Preparar no local é o que diferencia o regime do bar/restaurante da simples revenda de mercearia!"
+    "pacciTip": "Preparar no local é o que diferencia o regime do bar/restaurante da simples revenda de mercearia!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-ASS-113",
@@ -2345,7 +2494,8 @@
     ],
     "correctAnswer": "registrar",
     "explanation": "O primeiro passo da parametrização é sempre registrar corretamente os dados cadastrais e o regime tributário do cliente.",
-    "pacciTip": "Registrar primeiro, vender depois! Nunca inverte essa ordem."
+    "pacciTip": "Registrar primeiro, vender depois! Nunca inverte essa ordem.",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-114",
@@ -2361,7 +2511,8 @@
     ],
     "correctAnswer": "simulada",
     "explanation": "Testar com uma nota fiscal simulada antes de liberar o cadastro ajuda a identificar erros de parametrização antes da primeira operação real.",
-    "pacciTip": "Simulada primeiro, real depois! Assim você evita surpresa feia."
+    "pacciTip": "Simulada primeiro, real depois! Assim você evita surpresa feia.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-115",
@@ -2377,7 +2528,8 @@
     ],
     "correctAnswer": "vincular",
     "explanation": "Vincular a tabela de alíquotas correta ao cadastro do cliente garante que as vendas futuras sejam tributadas corretamente.",
-    "pacciTip": "Vincula a tabela certa, e as vendas seguem tranquilas depois!"
+    "pacciTip": "Vincula a tabela certa, e as vendas seguem tranquilas depois!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-116",
@@ -2393,7 +2545,8 @@
     ],
     "correctAnswer": "retenção",
     "explanation": "Antes do pagamento, deve-se avaliar se o serviço contratado se enquadra em alguma hipótese legal de retenção do tributo na fonte.",
-    "pacciTip": "Avalia a retenção antes de soltar o pagamento, tesoro!"
+    "pacciTip": "Avalia a retenção antes de soltar o pagamento, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-179",
@@ -2409,7 +2562,8 @@
     ],
     "correctAnswer": "Custos como frete e seguro internacional, entre outros componentes previstos em lei",
     "explanation": "A base de cálculo do IBS e da CBS na importação de bens materiais é o valor aduaneiro, que engloba o Imposto de Importação e outros custos como frete e seguro internacional, conforme a legislação aduaneira.",
-    "pacciTip": "Valor aduaneiro é \"tudo incluído\" — produto, frete, seguro e o próprio Imposto de Importação!"
+    "pacciTip": "Valor aduaneiro é \"tudo incluído\" — produto, frete, seguro e o próprio Imposto de Importação!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-117",
@@ -2419,7 +2573,8 @@
     "question": "Digite a palavra que resume a fonte que determina as hipóteses de retenção do IBS/CBS: previsão em ___?",
     "correctAnswer": "lei",
     "explanation": "A retenção na fonte só se aplica às hipóteses expressamente previstas em lei, não sendo uma regra geral.",
-    "pacciTip": "Lei, sempre a lei! Sem previsão legal, não existe retenção."
+    "pacciTip": "Lei, sempre a lei! Sem previsão legal, não existe retenção.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-118",
@@ -2429,7 +2584,8 @@
     "question": "Digite o termo (uma palavra) que designa quem contrata e paga o serviço, e por isso é responsável por reter o tributo:",
     "correctAnswer": "tomador",
     "explanation": "O tomador do serviço é quem contrata e paga, sendo o responsável por calcular e reter o tributo nas hipóteses previstas em lei.",
-    "pacciTip": "Tomador é quem retém, prestador é quem recebe o líquido!"
+    "pacciTip": "Tomador é quem retém, prestador é quem recebe o líquido!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-119",
@@ -2439,7 +2595,8 @@
     "question": "Digite o verbo que indica a ação de enviar o valor retido ao ente competente:",
     "correctAnswer": "recolher",
     "explanation": "Após a retenção, o valor deve ser recolhido ao ente competente, IBS ao Comitê Gestor ou CBS à Receita Federal, dentro do prazo legal.",
-    "pacciTip": "Recolher é a palavra final da retenção, não esquece dela!"
+    "pacciTip": "Recolher é a palavra final da retenção, não esquece dela!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-120",
@@ -2449,7 +2606,8 @@
     "question": "Digite a palavra que caracteriza a retenção do IBS/CBS: ela é a regra geral ou a ___?",
     "correctAnswer": "exceção",
     "explanation": "A retenção é a exceção, aplicável apenas às hipóteses específicas previstas em lei, e não a regra geral das operações.",
-    "pacciTip": "Exceção, não regra! Guarda bem essa diferença, tesoro."
+    "pacciTip": "Exceção, não regra! Guarda bem essa diferença, tesoro.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-121",
@@ -2459,7 +2617,8 @@
     "question": "Digite o nome (duas palavras) do órgão responsável pela administração compartilhada do IBS:",
     "correctAnswer": "Comitê Gestor",
     "explanation": "O Comitê Gestor do IBS administra esse tributo de forma compartilhada entre Estados e Municípios.",
-    "pacciTip": "Comitê Gestor, duas palavras que valem ouro na sua rotina fiscal!"
+    "pacciTip": "Comitê Gestor, duas palavras que valem ouro na sua rotina fiscal!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-180",
@@ -2475,7 +2634,8 @@
     ],
     "correctAnswer": "Sim, os sorteios fazem parte desses programas de incentivo",
     "explanation": "Os Programas de Incentivo à Cidadania Fiscal podem incluir sorteios como forma de estimular os consumidores a exigirem a emissão de documentos fiscais.",
-    "pacciTip": "Pedir a nota pode virar bilhete de sorteio — um jeito lúdico de estimular a cidadania fiscal!"
+    "pacciTip": "Pedir a nota pode virar bilhete de sorteio — um jeito lúdico de estimular a cidadania fiscal!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-122",
@@ -2485,7 +2645,8 @@
     "question": "Digite o nome do órgão federal responsável por administrar a CBS:",
     "correctAnswer": "Receita Federal",
     "explanation": "A CBS, tributo de competência federal, é administrada pela Receita Federal do Brasil.",
-    "pacciTip": "Receita Federal cuida da CBS, sempre no mesmo endereço!"
+    "pacciTip": "Receita Federal cuida da CBS, sempre no mesmo endereço!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-152",
@@ -2501,7 +2662,8 @@
     ],
     "correctAnswer": "CIB",
     "explanation": "O CIB (Cadastro Imobiliário Brasileiro) é o cadastro usado pela legislação do IBS e da CBS para identificar de forma única os imóveis rurais e urbanos do país.",
-    "pacciTip": "Assim como CPF e CNPJ identificam pessoas e empresas, o CIB identifica os imóveis, tesoro!"
+    "pacciTip": "Assim como CPF e CNPJ identificam pessoas e empresas, o CIB identifica os imóveis, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-123",
@@ -2511,7 +2673,8 @@
     "question": "Digite a palavra que caracteriza a competência do IBS entre Estados e Municípios:",
     "correctAnswer": "compartilhada",
     "explanation": "O IBS tem competência compartilhada entre Estados e Municípios, administrada de forma conjunta pelo Comitê Gestor.",
-    "pacciTip": "Compartilhada é a palavra-chave do IBS, ninguém cuida sozinho!"
+    "pacciTip": "Compartilhada é a palavra-chave do IBS, ninguém cuida sozinho!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-ASS-124",
@@ -2521,7 +2684,8 @@
     "question": "Digite a palavra que caracteriza a competência da CBS:",
     "correctAnswer": "federal",
     "explanation": "A CBS é um tributo de competência federal, administrado exclusivamente pela Receita Federal do Brasil.",
-    "pacciTip": "Federal é a etiqueta da CBS, direto pra Receita!"
+    "pacciTip": "Federal é a etiqueta da CBS, direto pra Receita!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-125",
@@ -2531,7 +2695,8 @@
     "question": "Digite a alíquota de IBS/CBS aplicável à cesta básica nacional:",
     "correctAnswer": "zero",
     "explanation": "Os itens da cesta básica nacional recebem alíquota zero de IBS/CBS, mantendo o direito a crédito das etapas anteriores.",
-    "pacciTip": "Zero é a alíquota, mas o crédito continua vivo!"
+    "pacciTip": "Zero é a alíquota, mas o crédito continua vivo!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-126",
@@ -2541,7 +2706,8 @@
     "question": "Digite o que a empresa mantém sobre as compras anteriores, mesmo vendendo produtos com alíquota zero:",
     "correctAnswer": "crédito",
     "explanation": "Mesmo com alíquota zero na venda, a empresa mantém o direito ao crédito dos tributos pagos nas compras anteriores.",
-    "pacciTip": "Crédito não vai embora com a alíquota zero, tesoro!"
+    "pacciTip": "Crédito não vai embora com a alíquota zero, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-127",
@@ -2551,7 +2717,8 @@
     "question": "Digite quem define a lista de produtos com alíquota zero da cesta básica:",
     "correctAnswer": "legislação",
     "explanation": "A lista de produtos com alíquota zero é definida pela legislação, não podendo ser escolhida livremente pela empresa.",
-    "pacciTip": "É a lei quem escolhe a lista, não a empresa, capisce?"
+    "pacciTip": "É a lei quem escolhe a lista, não a empresa, capisce?",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-128",
@@ -2561,7 +2728,8 @@
     "question": "Digite o termo (duas palavras) que designa o conjunto de produtos essenciais com alíquota zero:",
     "correctAnswer": "cesta básica",
     "explanation": "A cesta básica nacional é o conjunto de produtos essenciais que recebe o tratamento de alíquota zero de IBS/CBS.",
-    "pacciTip": "Cesta básica, duas palavras que todo consumidor agradece!"
+    "pacciTip": "Cesta básica, duas palavras que todo consumidor agradece!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-129",
@@ -2571,7 +2739,8 @@
     "question": "Digite o termo que define o local para onde vai a maior parte da arrecadação do IBS:",
     "correctAnswer": "destino",
     "explanation": "A maior parte da arrecadação do IBS é destinada ao local de destino, ou seja, onde o bem ou serviço é consumido.",
-    "pacciTip": "Destino é a palavra final da conta, sempre!"
+    "pacciTip": "Destino é a palavra final da conta, sempre!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-130",
@@ -2581,7 +2750,8 @@
     "question": "Digite o nome (duas palavras) do princípio que orienta a arrecadação do IBS nas operações interestaduais:",
     "correctAnswer": "princípio do destino",
     "explanation": "O princípio do destino orienta que a arrecadação do IBS seja direcionada principalmente ao Estado de consumo do bem ou serviço.",
-    "pacciTip": "Princípio do destino: a bússola das vendas interestaduais!"
+    "pacciTip": "Princípio do destino: a bússola das vendas interestaduais!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-ASS-131",
@@ -2591,7 +2761,8 @@
     "question": "Digite o termo que definia, no sistema antigo, o local que concentrava a maior parte da arrecadação:",
     "correctAnswer": "origem",
     "explanation": "No sistema antigo, a arrecadação se concentrava no Estado de origem da mercadoria; o novo modelo inverte essa lógica para o destino.",
-    "pacciTip": "Origem era o modelo antigo, agora o destino assumiu o comando!"
+    "pacciTip": "Origem era o modelo antigo, agora o destino assumiu o comando!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-132",
@@ -2601,7 +2772,8 @@
     "question": "Digite o adjetivo que descreve como a parcela destinada à origem diminui ao longo da transição:",
     "correctAnswer": "gradual",
     "explanation": "A parcela de arrecadação ainda destinada à origem diminui de forma gradual, ano a ano, até ser eliminada por completo.",
-    "pacciTip": "Gradual, devagarinho, até a origem ficar com zero!"
+    "pacciTip": "Gradual, devagarinho, até a origem ficar com zero!",
+    "topic": "transicao"
   },
   {
     "id": "REF-ASS-133",
@@ -2611,7 +2783,8 @@
     "question": "Digite o termo em inglês (duas palavras) que descreve esse mecanismo de segregação automática do tributo:",
     "correctAnswer": "split payment",
     "explanation": "O split payment é o mecanismo que segrega automaticamente o valor do tributo já no momento do pagamento pelo consumidor final.",
-    "pacciTip": "Split payment: separa antes mesmo de você perceber!"
+    "pacciTip": "Split payment: separa antes mesmo de você perceber!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-134",
@@ -2621,7 +2794,8 @@
     "question": "Digite o termo que designa o valor que o restaurante efetivamente recebe após o split payment:",
     "correctAnswer": "líquido",
     "explanation": "Após a segregação automática do tributo pelo split payment, o vendedor recebe apenas o valor líquido da venda.",
-    "pacciTip": "Líquido é o que sobra depois que o tributo já foi separado!"
+    "pacciTip": "Líquido é o que sobra depois que o tributo já foi separado!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-135",
@@ -2631,7 +2805,8 @@
     "question": "Digite para onde vai o valor do tributo segregado automaticamente no split payment:",
     "correctAnswer": "Fisco",
     "explanation": "O valor do tributo segregado automaticamente pelo split payment é direcionado diretamente ao Fisco, sem passar pela conta do vendedor.",
-    "pacciTip": "Direto pro Fisco, sem escalas! Essa é a rota do split payment."
+    "pacciTip": "Direto pro Fisco, sem escalas! Essa é a rota do split payment.",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-136",
@@ -2641,7 +2816,8 @@
     "question": "Digite o momento em que o split payment segrega o tributo: no momento do ___?",
     "correctAnswer": "pagamento",
     "explanation": "O split payment atua exatamente no momento do pagamento, segregando automaticamente a parcela do tributo devido.",
-    "pacciTip": "É no pagamento que a mágica acontece, tesoro!"
+    "pacciTip": "É no pagamento que a mágica acontece, tesoro!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-ASS-137",
@@ -2651,7 +2827,8 @@
     "question": "Digite o que deve ser registrado primeiro, junto aos dados cadastrais, ao parametrizar um novo cliente:",
     "correctAnswer": "regime tributário",
     "explanation": "Junto aos dados cadastrais básicos, o regime tributário do cliente é uma informação essencial registrada logo no início da parametrização.",
-    "pacciTip": "Regime tributário é a base de tudo no cadastro, não esquece!"
+    "pacciTip": "Regime tributário é a base de tudo no cadastro, não esquece!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-138",
@@ -2661,7 +2838,8 @@
     "question": "Digite o tipo de nota fiscal que deve ser testada antes de liberar um cadastro novo para operações reais:",
     "correctAnswer": "simulada",
     "explanation": "Testar a emissão de uma nota fiscal simulada antes da primeira operação real ajuda a identificar erros de parametrização.",
-    "pacciTip": "Nota simulada é o ensaio antes da estreia de verdade!"
+    "pacciTip": "Nota simulada é o ensaio antes da estreia de verdade!",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-ASS-139",
@@ -2671,7 +2849,8 @@
     "question": "Digite o que deve ser vinculado ao cadastro do fornecedor, de acordo com seu regime tributário:",
     "correctAnswer": "tabela de alíquotas",
     "explanation": "A tabela de alíquotas deve ser vinculada ao cadastro conforme o regime tributário do fornecedor, garantindo a tributação correta das operações futuras.",
-    "pacciTip": "Tabela de alíquotas certa, operação futura tranquila!"
+    "pacciTip": "Tabela de alíquotas certa, operação futura tranquila!",
+    "topic": "outros"
   },
   {
     "id": "REF-ASS-140",
@@ -2681,6 +2860,7 @@
     "question": "Digite o que deve ser avaliado no cadastro para saber se a operação futura exige retenção do tributo:",
     "correctAnswer": "hipótese",
     "explanation": "É preciso avaliar se a operação se enquadra em alguma hipótese legal de retenção, etapa essencial do fluxo de parametrização do cadastro.",
-    "pacciTip": "Avalia a hipótese antes, e o pagamento sai sem sustos depois!"
+    "pacciTip": "Avalia a hipótese antes, e o pagamento sai sem sustos depois!",
+    "topic": "outros"
   }
 ]

@@ -126,12 +126,37 @@ create table if not exists public.user_progress (
   user_id uuid not null references public.users (id) on delete cascade,
   lesson_id text not null references public.lessons (id) on delete cascade,
   completed_at timestamptz,
-  score numeric(4, 3), -- % de acerto (0.000 a 1.000) — relevante para exames
+  score numeric(4, 3), -- % de acerto (0.000 a 1.000) — agora gravado pra toda lição, regular ou exame (ver GameContext.jsx)
   passed boolean, -- null para lições regulares (não têm conceito de reprovação)
   created_at timestamptz not null default now()
 );
 
 comment on table public.user_progress is 'Uma linha por tentativa de lição. Lições regulares: 1 linha ao concluir. Exames: 1 linha por tentativa (histórico completo de aprovações/reprovações).';
+
+-- -----------------------------------------------------------------------------
+-- 4b. question_attempts (1 linha por PERGUNTA respondida, não por lição) —
+-- base do Painel do Gestor pra "Taxa Média de Acertos" e pro gráfico de
+-- Desempenho por Tema. `topic` vem já resolvido do cliente (ver campo
+-- `topic` em src/data/questions/*.json, classificado por palavra-chave do
+-- próprio enunciado) — não tem FK pra `questions`/`lessons` de propósito:
+-- cobre também sessões de Revisão Diária, que reusam perguntas de lições já
+-- concluídas sob um lesson_id sintético ('daily-review') que não existe na
+-- tabela `lessons`.
+-- -----------------------------------------------------------------------------
+create table if not exists public.question_attempts (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.users (id) on delete cascade,
+  question_id text not null,
+  lesson_id text not null,
+  topic text not null,
+  is_correct boolean not null,
+  answered_at timestamptz not null default now()
+);
+
+comment on table public.question_attempts is 'Uma linha por pergunta respondida (não por lição) — granularidade fina o bastante pra calcular % de acerto por tópico no Painel do Gestor.';
+
+create index if not exists question_attempts_user_id_idx on public.question_attempts (user_id);
+create index if not exists question_attempts_topic_idx on public.question_attempts (topic);
 
 create index if not exists user_progress_user_id_idx on public.user_progress (user_id);
 create index if not exists user_progress_lesson_id_idx on public.user_progress (lesson_id);
@@ -502,6 +527,7 @@ alter table public.modules enable row level security;
 alter table public.lessons enable row level security;
 alter table public.questions enable row level security;
 alter table public.user_progress enable row level security;
+alter table public.question_attempts enable row level security;
 alter table public.temp_access_tokens enable row level security;
 alter table public.subscriptions enable row level security;
 -- pending_signups não tem policy nenhuma de propósito: só as Edge Functions
@@ -564,6 +590,22 @@ create policy user_progress_select_self_or_company on public.user_progress for s
 
 drop policy if exists user_progress_insert_self on public.user_progress;
 create policy user_progress_insert_self on public.user_progress for insert
+  with check (user_id = auth.uid());
+
+-- question_attempts: mesma regra do user_progress (self/própria empresa/master).
+drop policy if exists question_attempts_select_self_or_company on public.question_attempts;
+create policy question_attempts_select_self_or_company on public.question_attempts for select
+  using (
+    user_id = auth.uid()
+    or public.is_master()
+    or (
+      public.is_manager()
+      and user_id in (select id from public.users where company_id = public.current_user_company_id())
+    )
+  );
+
+drop policy if exists question_attempts_insert_self on public.question_attempts;
+create policy question_attempts_insert_self on public.question_attempts for insert
   with check (user_id = auth.uid());
 
 -- temp_access_tokens: SEM policy pra anon/authenticated -> RLS bloqueia tudo

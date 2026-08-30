@@ -487,6 +487,7 @@ function buildSharedGameState() {
     pendingAccelerationTest: false,
     accelerationResult: null, // { passed, skippedCount } | null
     examResult: null, // { passed, scorePct, requiredPct } | null
+    lastLessonScorePct: null, // % de acerto (0-1) da última lição concluída, regular ou exame — ver GameContext.jsx CHECK_ANSWER/NEXT_QUESTION
     isDailyReview: false,
     justPromotedLevelId: null, // id do próximo nível de carreira, só quando o exame acabou de destravá-lo (som de promoção)
     lessonGemsEarned: 0, // gemas ganhas ao concluir a lição/exame que acabou de terminar (0 até terminar uma)
@@ -561,6 +562,7 @@ function startLessonState(state, moduleId, lessonId) {
     pacciMood: lesson?.type === LESSON_TYPES.EXAM ? 'hint' : 'neutral',
     accelerationResult: null,
     examResult: null,
+    lastLessonScorePct: null,
     isDailyReview: false,
     justPromotedLevelId: null,
     lessonGemsEarned: 0,
@@ -802,6 +804,7 @@ function gameReducerCore(state, action) {
         pendingAccelerationTest: false,
         accelerationResult: null,
         examResult: null,
+        lastLessonScorePct: null,
         justPromotedLevelId: null,
         lessonGemsEarned: 0,
         streakBonusGems: 0,
@@ -1020,6 +1023,7 @@ function gameReducerCore(state, action) {
           lessonGemsEarned: passed ? LEVEL_UP_CHEST_GEMS : 0,
           streakBonusGems: examStreakBonus,
           examResult: { passed, scorePct, requiredPct: EXAM_PASS_THRESHOLD },
+          lastLessonScorePct: scorePct,
           perfectLessonStreak: 0,
           accelerationAvailable: false,
           // Sinaliza pro QuizEngine tocar o som de promoção (em vez do
@@ -1083,6 +1087,7 @@ function gameReducerCore(state, action) {
           accelerationAvailable: false,
           pendingAccelerationTest: false,
           accelerationResult,
+          lastLessonScorePct: scorePct,
           justPromotedLevelId: null,
         };
       }
@@ -1128,6 +1133,7 @@ function gameReducerCore(state, action) {
         accelerationAvailable,
         pendingAccelerationTest: false,
         accelerationResult: null,
+        lastLessonScorePct: scorePct,
         justPromotedLevelId: null,
       };
     }
@@ -1204,6 +1210,7 @@ function gameReducerCore(state, action) {
         pendingAccelerationTest: false,
         accelerationResult: null,
         examResult: null,
+        lastLessonScorePct: null,
         isDailyReview: false,
         justPromotedLevelId: null,
         lessonGemsEarned: 0,
@@ -1402,7 +1409,7 @@ export function GameProvider({ children }) {
           await api.recordLessonProgress({
             userId: state.user.id,
             lessonId: state.lessonId,
-            score: state.examResult?.scorePct ?? null,
+            score: state.lastLessonScorePct,
             passed: state.examResult?.passed ?? null,
           });
         }
@@ -1412,7 +1419,51 @@ export function GameProvider({ children }) {
         // próxima lição concluída com sucesso.
       }
     })();
-  }, [state.lessonComplete, state.user, state.lessonId, state.sessionXp, state.isDailyReview, state.examResult]);
+  }, [
+    state.lessonComplete,
+    state.user,
+    state.lessonId,
+    state.sessionXp,
+    state.isDailyReview,
+    state.examResult,
+    state.lastLessonScorePct,
+  ]);
+
+  // Modo Supabase: registra cada PERGUNTA respondida (não só o resultado da
+  // lição inteira) em question_attempts — é a granularidade que o Painel do
+  // Gestor precisa pro gráfico de Desempenho por Tema. Dispara uma única vez
+  // por resposta (o próprio CHECK_ANSWER do reducer já garante que isAnswered
+  // só vira true numa resposta nova de verdade — nunca reprocessa a mesma).
+  // Deps intencionalmente restritas a `state.isAnswered`: state.queue/
+  // isCorrect sempre mudam JUNTO com isAnswered nessa transição, então lê-los
+  // do closure é seguro e evita reagir a mudanças que não são "nova resposta".
+  const loggedThisAnswerRef = useRef(false);
+  useEffect(() => {
+    if (!state.isAnswered) {
+      loggedThisAnswerRef.current = false;
+      return;
+    }
+    if (loggedThisAnswerRef.current) return;
+    loggedThisAnswerRef.current = true;
+
+    if (!isSupabaseConfigured || !state.user || !state.lessonId) return;
+    const question = state.queue[0];
+    if (!question) return;
+
+    api
+      .recordQuestionAttempt({
+        userId: state.user.id,
+        questionId: question.id,
+        lessonId: state.lessonId,
+        topic: question.topic ?? 'outros',
+        isCorrect: Boolean(state.isCorrect),
+      })
+      .catch(() => {
+        // Best-effort: só alimenta o gráfico de Desempenho por Tema do
+        // Painel do Gestor — uma falha aqui não deve incomodar quem está jogando.
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state.isAnswered]);
 
   const login = useCallback(async (email, password) => {
     if (!isSupabaseConfigured) {

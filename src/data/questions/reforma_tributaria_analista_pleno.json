@@ -13,7 +13,8 @@
     ],
     "correctAnswer": "Passa a gerar direito a crédito de IBS/CBS, ampliando a base de créditos em relação ao modelo atual",
     "explanation": "A não cumulatividade plena elimina a maior parte das restrições atuais: bens de uso e consumo, antes fora do crédito de ICMS, passam a gerar crédito de IBS/CBS.",
-    "pacciTip": "Mamma mia, isso muda o jogo! Até o cafezinho do escritório agora ajuda a gerar crédito, capisce?"
+    "pacciTip": "Mamma mia, isso muda o jogo! Até o cafezinho do escritório agora ajuda a gerar crédito, capisce?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-002",
@@ -29,7 +30,8 @@
     ],
     "correctAnswer": "O valor do tributo é somado ao preço da mercadoria/serviço, e não embutido na própria base de cálculo do tributo",
     "explanation": "No cálculo 'por fora', o tributo é somado ao preço líquido, evitando o efeito de 'imposto sobre imposto' que existe no cálculo 'por dentro' do ICMS atual.",
-    "pacciTip": "Por fora é mais transparente, tesoro! O preço não esconde imposto dentro dele mesmo."
+    "pacciTip": "Por fora é mais transparente, tesoro! O preço não esconde imposto dentro dele mesmo.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-003",
@@ -45,7 +47,8 @@
     ],
     "correctAnswer": "Podem ser objeto de ressarcimento/restituição pelo Fisco, em prazo reduzido em relação ao modelo atual",
     "explanation": "Um dos avanços do novo modelo é a previsão de ressarcimento mais ágil de créditos acumulados, especialmente relevante para exportadores.",
-    "pacciTip": "Crédito acumulado não é dinheiro perdido, amico! Agora o ressarcimento é mais rápido."
+    "pacciTip": "Crédito acumulado não é dinheiro perdido, amico! Agora o ressarcimento é mais rápido.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-004",
@@ -61,7 +64,8 @@
     ],
     "correctAnswer": "Ser mais restrito ou calculado de forma diferenciada, impactando o custo final da operação para quem compra desses setores",
     "explanation": "Regimes específicos costumam ter regras próprias de crédito, muitas vezes mais restritivas, o que afeta diretamente o custo de quem contrata esses serviços.",
-    "pacciTip": "Serviço financeiro tem regra especial de crédito, tesoro! Isso pesa direto no custo de quem compra."
+    "pacciTip": "Serviço financeiro tem regra especial de crédito, tesoro! Isso pesa direto no custo de quem compra.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-005",
@@ -71,7 +75,8 @@
     "question": "A não cumulatividade plena do IBS/CBS garante crédito para praticamente toda aquisição relacionada à atividade da empresa?",
     "correctAnswer": true,
     "explanation": "Correto! Esse é o princípio central da não cumulatividade plena: ampliar o crédito a quase todas as aquisições vinculadas à atividade empresarial, reduzindo o efeito cascata.",
-    "pacciTip": "Sì! Quase tudo que você compra pra trabalhar agora ajuda a gerar crédito."
+    "pacciTip": "Sì! Quase tudo que você compra pra trabalhar agora ajuda a gerar crédito.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-153",
@@ -87,7 +92,8 @@
     ],
     "correctAnswer": "75%",
     "explanation": "Aplica-se a multa de 75% nos casos de lançamento de ofício, sobre o valor do tributo não declarado ou declarado a menor e não pago/recolhido, ou sobre o valor do crédito indevido utilizado.",
-    "pacciTip": "Lançamento de ofício \"pesa a mão\": multa de 75% sobre o valor não declarado, tesoro!"
+    "pacciTip": "Lançamento de ofício \"pesa a mão\": multa de 75% sobre o valor não declarado, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-006",
@@ -97,7 +103,8 @@
     "question": "O modelo de tributação por fora não tem qualquer impacto na formação do preço de venda, servindo apenas para exibição na nota fiscal?",
     "correctAnswer": false,
     "explanation": "Errado! O cálculo por fora elimina o efeito cascata de 'imposto sobre imposto', alterando de fato a base de cálculo e, portanto, a lógica de formação de preço.",
-    "pacciTip": "Não é só estética na nota, amico! O cálculo por fora muda a conta de verdade."
+    "pacciTip": "Não é só estética na nota, amico! O cálculo por fora muda a conta de verdade.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-PL-007",
@@ -107,7 +114,8 @@
     "question": "No novo modelo, bens do ativo imobilizado tendem a ter o crédito apropriado de forma mais simplificada e ampla do que no regime atual do ICMS?",
     "correctAnswer": true,
     "explanation": "Correto! A tendência do novo modelo é simplificar e agilizar a apropriação de créditos sobre bens do ativo imobilizado, em vez de exigir parcelamento longo como hoje.",
-    "pacciTip": "Menos parcelas, mais crédito rápido, tesoro! O ativo imobilizado agradece."
+    "pacciTip": "Menos parcelas, mais crédito rápido, tesoro! O ativo imobilizado agradece.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-008",
@@ -117,7 +125,8 @@
     "question": "Todos os regimes específicos geram exatamente o mesmo crédito que o regime geral, sem qualquer diferença?",
     "correctAnswer": false,
     "explanation": "Errado! Cada regime específico tem regras próprias de apuração e crédito, que podem ser mais restritivas ou diferentes do regime geral.",
-    "pacciTip": "Regime específico é específico até no crédito, capisce? Não generaliza!"
+    "pacciTip": "Regime específico é específico até no crédito, capisce? Não generaliza!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-009",
@@ -138,7 +147,8 @@
       "Formar o preço de venda com a margem desejada, somando o tributo por fora"
     ],
     "explanation": "O cálculo parte do levantamento de custos, identifica os créditos possíveis, apura o custo líquido e só então forma o preço com a margem e o tributo por fora.",
-    "pacciTip": "Custo, crédito, custo líquido, preço. Nessa ordem a margem não escapa, tesoro!"
+    "pacciTip": "Custo, crédito, custo líquido, preço. Nessa ordem a margem não escapa, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-010",
@@ -159,7 +169,8 @@
       "Solicitar o ressarcimento/restituição do saldo ao Fisco"
     ],
     "explanation": "Primeiro apura-se o total de crédito, compensa-se com os débitos, identifica-se o saldo remanescente e, só então, solicita-se o ressarcimento.",
-    "pacciTip": "Apura, compensa, sobra, pede de volta. Assim o dinheiro do exportador não fica esquecido!"
+    "pacciTip": "Apura, compensa, sobra, pede de volta. Assim o dinheiro do exportador não fica esquecido!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-154",
@@ -175,7 +186,8 @@
     ],
     "correctAnswer": "UPF/IBS (Unidade Padrão Fiscal dos Tributos sobre Bens e Serviços)",
     "explanation": "Todas as penalidades relativas ao IBS estão valoradas em UPF/IBS (Unidade Padrão Fiscal dos Tributos sobre Bens e Serviços), atualizada anualmente pelo IPCA, iniciando em R$ 200,00.",
-    "pacciTip": "UPF é a \"régua\" das multas do IBS — nasce valendo R$200 e sobe todo ano com o IPCA!"
+    "pacciTip": "UPF é a \"régua\" das multas do IBS — nasce valendo R$200 e sobe todo ano com o IPCA!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-141",
@@ -191,7 +203,8 @@
     ],
     "correctAnswer": "O domicílio principal do adquirente residente ou domiciliado no País",
     "explanation": "Na cessão de espaço para prestação de serviços publicitários em operações onerosas, o local do fornecimento é o domicílio principal do adquirente residente ou domiciliado no País (art. 11, X, \"a\").",
-    "pacciTip": "Publicidade segue o domicílio de quem contrata, não de onde o anúncio aparece, tesoro!"
+    "pacciTip": "Publicidade segue o domicílio de quem contrata, não de onde o anúncio aparece, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-011",
@@ -212,7 +225,8 @@
       "Considerar o efeito do crédito na formação de custo do produto final"
     ],
     "explanation": "Primeiro registra-se a compra, depois se confirma o direito ao crédito, lança-se na apuração e, por fim, considera-se o efeito no custo do produto final.",
-    "pacciTip": "Nem todo bem de uso é igual, tesoro! Sempre confirma o direito ao crédito antes de lançar."
+    "pacciTip": "Nem todo bem de uso é igual, tesoro! Sempre confirma o direito ao crédito antes de lançar.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-012",
@@ -233,7 +247,8 @@
       "Ajustar a formação de preço/margem considerando o crédito reduzido"
     ],
     "explanation": "A revisão começa identificando o regime, segue com o cálculo do crédito real, a reavaliação do custo e o ajuste final da precificação.",
-    "pacciTip": "Crédito restrito exige conta fina, amico! Identifica, calcula, reavalia, ajusta."
+    "pacciTip": "Crédito restrito exige conta fina, amico! Identifica, calcula, reavalia, ajusta.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-013",
@@ -249,7 +264,8 @@
     ],
     "correctAnswer": "plena",
     "explanation": "A não cumulatividade plena é o princípio que amplia o crédito, reduzindo o efeito cascata típico do sistema atual.",
-    "pacciTip": "Plena é a palavra que resume tudo, tesoro! Crédito para quase tudo que você compra."
+    "pacciTip": "Plena é a palavra que resume tudo, tesoro! Crédito para quase tudo que você compra.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-014",
@@ -265,7 +281,8 @@
     ],
     "correctAnswer": "fora",
     "explanation": "O cálculo 'por fora' soma o tributo ao preço líquido, sem embuti-lo na própria base de cálculo, como ocorre hoje no ICMS.",
-    "pacciTip": "Fora é a palavra certa, amico! O imposto some sem se esconder dentro do preço."
+    "pacciTip": "Fora é a palavra certa, amico! O imposto some sem se esconder dentro do preço.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-155",
@@ -281,7 +298,8 @@
     ],
     "correctAnswer": "50%",
     "explanation": "A multa de lançamento de ofício pode ser reduzida em 50% se o pagamento integral do crédito tributário for feito no prazo previsto para apresentação de impugnação administrativa — a maior redução disponível.",
-    "pacciTip": "Pagar rápido e à vista rende o maior desconto na multa: 50%, logo no prazo de impugnação!"
+    "pacciTip": "Pagar rápido e à vista rende o maior desconto na multa: 50%, logo no prazo de impugnação!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-015",
@@ -297,7 +315,8 @@
     ],
     "correctAnswer": "ressarcimento",
     "explanation": "O ressarcimento é o mecanismo previsto para devolver à empresa créditos acumulados que não puderam ser compensados internamente.",
-    "pacciTip": "Ressarcimento é o caminho de volta do dinheiro, tesoro! Não deixa o crédito parado."
+    "pacciTip": "Ressarcimento é o caminho de volta do dinheiro, tesoro! Não deixa o crédito parado.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-016",
@@ -313,7 +332,8 @@
     ],
     "correctAnswer": "diferenciado",
     "explanation": "Regimes específicos costumam ter regras próprias de crédito, diferentes do regime geral, o que impacta o custo de quem compra desses setores.",
-    "pacciTip": "Diferenciado é a palavra-chave, tesoro! Cada regime específico tem sua própria conta de crédito."
+    "pacciTip": "Diferenciado é a palavra-chave, tesoro! Cada regime específico tem sua própria conta de crédito.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-017",
@@ -323,7 +343,8 @@
     "question": "Como se chama, em uma palavra, o tipo de não cumulatividade adotado pelo IBS/CBS, que amplia o direito a crédito para quase todas as aquisições?",
     "correctAnswer": "plena",
     "explanation": "A não cumulatividade plena é o conceito que garante crédito amplo, reduzindo o efeito cascata do sistema atual.",
-    "pacciTip": "Plena, sempre plena! Essa palavra resume o espírito do novo crédito."
+    "pacciTip": "Plena, sempre plena! Essa palavra resume o espírito do novo crédito.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-018",
@@ -333,7 +354,8 @@
     "question": "Digite a palavra que descreve como o IBS/CBS é calculado em relação ao preço: por dentro ou por ___?",
     "correctAnswer": "fora",
     "explanation": "O tributo é calculado 'por fora' do preço, evitando o efeito cascata do cálculo 'por dentro' usado hoje no ICMS.",
-    "pacciTip": "Fora, sempre fora! O imposto não se esconde mais dentro do preço."
+    "pacciTip": "Fora, sempre fora! O imposto não se esconde mais dentro do preço.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-019",
@@ -343,7 +365,8 @@
     "question": "Digite o termo usado para o procedimento pelo qual a empresa recupera do Fisco créditos de IBS/CBS que não conseguiu compensar:",
     "correctAnswer": "ressarcimento",
     "explanation": "O ressarcimento é o mecanismo de devolução de créditos acumulados e não compensados à empresa.",
-    "pacciTip": "Ressarcimento é a palavra do dia, tesoro! Decora ela bem."
+    "pacciTip": "Ressarcimento é a palavra do dia, tesoro! Decora ela bem.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-156",
@@ -359,7 +382,8 @@
     ],
     "correctAnswer": "66% do valor do tributo de referência",
     "explanation": "Cancelar documento fiscal após a ocorrência do fato gerador gera multa de 66% do valor do tributo de referência; já o cancelamento após o prazo normal (mas antes do fato gerador) gera multa de 33%.",
-    "pacciTip": "Cancelar depois que o imposto já \"nasceu\" custa o dobro (66%) de cancelar fora do prazo comum (33%)!"
+    "pacciTip": "Cancelar depois que o imposto já \"nasceu\" custa o dobro (66%) de cancelar fora do prazo comum (33%)!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-020",
@@ -369,7 +393,8 @@
     "question": "Digite a palavra que descreve o tipo de crédito aplicável em regimes específicos, normalmente diferente do regime geral:",
     "correctAnswer": "diferenciado",
     "explanation": "Regimes específicos possuem crédito diferenciado, com regras próprias distintas do regime geral.",
-    "pacciTip": "Diferenciado, tesoro! Regime específico nunca segue a receita padrão."
+    "pacciTip": "Diferenciado, tesoro! Regime específico nunca segue a receita padrão.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-142",
@@ -385,7 +410,8 @@
     ],
     "correctAnswer": "O domicílio principal do adquirente residente ou domiciliado no País",
     "explanation": "Para os demais serviços em operações onerosas não especificados em outros indicadores, e naqueles prestados à distância, o local do fornecimento é o domicílio principal do adquirente residente ou domiciliado no País.",
-    "pacciTip": "Quando não há regra específica, cai na regra geral: domicílio de quem compra, tesoro!"
+    "pacciTip": "Quando não há regra específica, cai na regra geral: domicílio de quem compra, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-021",
@@ -401,7 +427,8 @@
     ],
     "correctAnswer": "O crédito tende a ser apropriado de forma mais ágil e simplificada, sem a necessidade do parcelamento longo do modelo atual",
     "explanation": "A tendência do novo modelo é agilizar a apropriação de crédito sobre ativo imobilizado, superando a exigência de parcelamento em 48 meses do ICMS.",
-    "pacciTip": "Robô de solda também dá crédito rapidinho, tesoro! Sem fila de 48 parcelas."
+    "pacciTip": "Robô de solda também dá crédito rapidinho, tesoro! Sem fila de 48 parcelas.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-022",
@@ -417,7 +444,8 @@
     ],
     "correctAnswer": "Gera direito a crédito, pois é uma aquisição vinculada à atividade da empresa",
     "explanation": "A não cumulatividade plena amplia o crédito também para serviços contratados que estejam vinculados à atividade da empresa, como a limpeza das instalações.",
-    "pacciTip": "Escritório limpo e crédito em dia, capisce? Serviço vinculado à atividade também conta."
+    "pacciTip": "Escritório limpo e crédito em dia, capisce? Serviço vinculado à atividade também conta.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-157",
@@ -433,7 +461,8 @@
     ],
     "correctAnswer": "20 UPF por período de apuração",
     "explanation": "O contribuinte que deixa de entregar, registrar ou disponibilizar arquivos eletrônicos obrigatórios incorre em multa de 20 UPF por período de apuração, independentemente de intimação fiscal — que sobe para 30 UPF se houver intimação fiscal.",
-    "pacciTip": "Não entregou o arquivo? 20 UPF de cara — e sobe pra 30 UPF se o Fisco já tiver cobrado antes!"
+    "pacciTip": "Não entregou o arquivo? 20 UPF de cara — e sobe pra 30 UPF se o Fisco já tiver cobrado antes!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-023",
@@ -449,7 +478,8 @@
     ],
     "correctAnswer": "Não gera crédito de IBS/CBS, pois não há vínculo com a atividade econômica da empresa",
     "explanation": "Mesmo com a ampliação trazida pela não cumulatividade plena, o crédito depende do vínculo da aquisição com a atividade econômica da empresa — bens de uso estritamente pessoal ficam de fora.",
-    "pacciTip": "Nem tudo que passa pelo caixa da empresa é crédito, tesoro! Precisa ter a cara do negócio."
+    "pacciTip": "Nem tudo que passa pelo caixa da empresa é crédito, tesoro! Precisa ter a cara do negócio.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-024",
@@ -465,7 +495,8 @@
     ],
     "correctAnswer": "Gera direito a crédito de IBS/CBS, por estar vinculada à atividade da empresa",
     "explanation": "Despesas com ações de marketing e brindes vinculadas à atividade comercial da empresa se enquadram na ampla base de crédito da não cumulatividade plena.",
-    "pacciTip": "Caneca de brinde também carrega crédito, amico! O que importa é o vínculo com o negócio."
+    "pacciTip": "Caneca de brinde também carrega crédito, amico! O que importa é o vínculo com o negócio.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-025",
@@ -481,7 +512,8 @@
     ],
     "correctAnswer": "Geram crédito de IBS/CBS, por serem aquisições vinculadas à atividade de venda da empresa",
     "explanation": "Materiais de embalagem usados na operação de venda são aquisições vinculadas à atividade da empresa e, portanto, geram crédito na não cumulatividade plena.",
-    "pacciTip": "Caixa, plástico bolha, fita — tudo isso ajuda no crédito, tesoro! Embalagem também conta."
+    "pacciTip": "Caixa, plástico bolha, fita — tudo isso ajuda no crédito, tesoro! Embalagem também conta.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-026",
@@ -497,7 +529,8 @@
     ],
     "correctAnswer": "Gera crédito de IBS/CBS, por se tratar de despesa vinculada ao estabelecimento onde a empresa opera",
     "explanation": "Serviços de reforma vinculados ao estabelecimento onde a empresa exerce sua atividade se enquadram na ampla base de crédito da não cumulatividade plena, mesmo em imóveis alugados.",
-    "pacciTip": "Loja bonita e crédito também, tesoro! Reforma do ponto comercial conta, seja próprio ou alugado."
+    "pacciTip": "Loja bonita e crédito também, tesoro! Reforma do ponto comercial conta, seja próprio ou alugado.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-027",
@@ -513,7 +546,8 @@
     ],
     "correctAnswer": "O tributo é somado ao preço líquido já formado, sem inflar a própria base de cálculo do imposto",
     "explanation": "No cálculo por fora, o tributo é somado ao preço líquido, e não embutido dentro da própria base, o que evita o efeito cascata do 'imposto sobre imposto'.",
-    "pacciTip": "Por fora é soma limpa, tesoro! Nada de imposto se escondendo dentro do próprio cálculo."
+    "pacciTip": "Por fora é soma limpa, tesoro! Nada de imposto se escondendo dentro do próprio cálculo.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-158",
@@ -529,7 +563,8 @@
     ],
     "correctAnswer": "1 UPF por número",
     "explanation": "Deixar de comunicar, ou comunicar fora do prazo, a inutilização de número de documento fiscal eletrônico incorre em multa de 1 UPF por número.",
-    "pacciTip": "Multa pequena, mas existe — 1 UPF por número de documento não comunicado a tempo!"
+    "pacciTip": "Multa pequena, mas existe — 1 UPF por número de documento não comunicado a tempo!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-028",
@@ -545,7 +580,8 @@
     ],
     "correctAnswer": "Após definir o preço líquido com a margem desejada, somando o tributo por cima desse valor",
     "explanation": "O tributo por fora é somado ao preço líquido já formado (custo + margem), e não misturado ao cálculo do custo ou da margem em si.",
-    "pacciTip": "Primeiro forma o preço líquido, depois soma o tributo por cima, tesoro! Essa é a ordem certa."
+    "pacciTip": "Primeiro forma o preço líquido, depois soma o tributo por cima, tesoro! Essa é a ordem certa.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-029",
@@ -561,7 +597,8 @@
     ],
     "correctAnswer": "A cobrança de imposto sobre valores que já contêm imposto embutido de etapas anteriores da cadeia",
     "explanation": "O efeito cascata ocorre quando o imposto incide sobre uma base que já contém imposto de etapas anteriores. A não cumulatividade plena e o cálculo por fora ajudam a eliminar essa distorção.",
-    "pacciTip": "Imposto sobre imposto é a bagunça, tesoro! O novo modelo ajuda a limpar essa conta."
+    "pacciTip": "Imposto sobre imposto é a bagunça, tesoro! O novo modelo ajuda a limpar essa conta.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-030",
@@ -577,7 +614,8 @@
     ],
     "correctAnswer": "Tanto a operações com mercadorias quanto a operações com serviços, como uma assinatura de software",
     "explanation": "A lógica do cálculo por fora se aplica de forma ampla a bens e serviços, incluindo assinaturas de software e outros serviços digitais.",
-    "pacciTip": "Serviço digital também soma o tributo por fora, tesoro! A regra não é só para caixinha física."
+    "pacciTip": "Serviço digital também soma o tributo por fora, tesoro! A regra não é só para caixinha física.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-031",
@@ -593,7 +631,8 @@
     ],
     "correctAnswer": "Calcular o markup sobre o custo líquido (já considerando créditos) antes de somar o tributo por fora",
     "explanation": "Para preservar a margem real, o markup deve ser calculado sobre o custo líquido de créditos, e só então o tributo por fora é somado ao preço final.",
-    "pacciTip": "Margem se calcula no custo líquido, tesoro! O tributo por fora entra só no final, sem bagunçar a conta."
+    "pacciTip": "Margem se calcula no custo líquido, tesoro! O tributo por fora entra só no final, sem bagunçar a conta.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-143",
@@ -609,7 +648,8 @@
     ],
     "correctAnswer": "O local do estabelecimento principal do adquirente (matriz)",
     "explanation": "Nas operações com energia elétrica que não envolvam efetivo consumo (como transmissão, geração, distribuição ou comercialização), o local do fornecimento é o do estabelecimento principal do adquirente, conforme o § 4º do art. 11.",
-    "pacciTip": "Consumo de verdade tem um local, mas operações \"de bastidor\" na cadeia de energia seguem o adquirente principal!"
+    "pacciTip": "Consumo de verdade tem um local, mas operações \"de bastidor\" na cadeia de energia seguem o adquirente principal!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-159",
@@ -625,7 +665,8 @@
     ],
     "correctAnswer": "1 UPF/IBS por documento",
     "explanation": "O destinatário que deixa de confirmar a operação, informar desconhecimento ou informar devolução de bens relativos a documento fiscal eletrônico emitido por terceiro incorre em 1 UPF/IBS por documento — é a multa do evento de Manifestação do Destinatário.",
-    "pacciTip": "A Manifestação do Destinatário não é \"opcional\" — ignorar o evento também gera multa, tesoro!"
+    "pacciTip": "A Manifestação do Destinatário não é \"opcional\" — ignorar o evento também gera multa, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-032",
@@ -641,7 +682,8 @@
     ],
     "correctAnswer": "Porque o tributo é calculado por fora e somado de forma visível ao preço, aumentando a transparência",
     "explanation": "O cálculo por fora torna o valor do tributo mais visível e destacado, diferente do cálculo por dentro do ICMS, que embute o imposto na própria base de cálculo.",
-    "pacciTip": "Tributo por fora é tributo às claras, tesoro! Mais fácil de enxergar quanto se paga."
+    "pacciTip": "Tributo por fora é tributo às claras, tesoro! Mais fácil de enxergar quanto se paga.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-033",
@@ -657,7 +699,8 @@
     ],
     "correctAnswer": "Solicitar o ressarcimento dos créditos acumulados que não foram compensados, em prazo mais ágil que o atual",
     "explanation": "Exportadoras costumam acumular créditos por venderem sem débito de saída relevante; o novo modelo prevê ressarcimento mais ágil desse saldo.",
-    "pacciTip": "Grão exportado não paga o tributo lá fora, mas o crédito aqui dentro pode voltar pro bolso, tesoro!"
+    "pacciTip": "Grão exportado não paga o tributo lá fora, mas o crédito aqui dentro pode voltar pro bolso, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-034",
@@ -673,7 +716,8 @@
     ],
     "correctAnswer": "Sim, pois exportações não geram débito de saída relevante, fazendo o crédito das compras superar os débitos internos",
     "explanation": "Empresas fortemente exportadoras naturalmente acumulam créditos, já que as exportações não geram débito relevante para compensar os créditos das aquisições internas.",
-    "pacciTip": "Quem exporta muito, acumula crédito, tesoro! É esperado, não é erro de conta."
+    "pacciTip": "Quem exporta muito, acumula crédito, tesoro! É esperado, não é erro de conta.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-035",
@@ -689,7 +733,8 @@
     ],
     "correctAnswer": "Suas vendas ao exterior não geram débito relevante de IBS/CBS para compensar os créditos das aquisições",
     "explanation": "Como as exportações não geram débito relevante, empresas fortemente exportadoras como mineradoras tendem a acumular créditos, exigindo um processo estruturado de ressarcimento.",
-    "pacciTip": "Minério que vai pro exterior deixa crédito aqui dentro, tesoro! Vale organizar o pedido direitinho."
+    "pacciTip": "Minério que vai pro exterior deixa crédito aqui dentro, tesoro! Vale organizar o pedido direitinho.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-036",
@@ -705,7 +750,8 @@
     ],
     "correctAnswer": "Sim, qualquer empresa pode ter saldo credor temporário quando os créditos do período superam os débitos, como em meses de alto investimento",
     "explanation": "O acúmulo de crédito não é exclusivo de exportadoras: qualquer empresa pode ter saldo credor temporário quando os créditos superam os débitos do período, como em meses de forte investimento.",
-    "pacciTip": "Comprou máquina pra caramba num mês só? Pode sobrar crédito, tesoro, mesmo vendendo aqui dentro!"
+    "pacciTip": "Comprou máquina pra caramba num mês só? Pode sobrar crédito, tesoro, mesmo vendendo aqui dentro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-160",
@@ -721,7 +767,8 @@
     ],
     "correctAnswer": "Não, independe da intenção do agente ou da efetividade dos efeitos do ato",
     "explanation": "A responsabilidade por infrações da legislação do IBS independe da intenção do agente ou do responsável, e da efetividade, natureza e extensão dos efeitos do ato — é uma responsabilidade objetiva.",
-    "pacciTip": "Não precisa \"querer\" errar pra ser multado — a responsabilidade aqui é objetiva, tesoro!"
+    "pacciTip": "Não precisa \"querer\" errar pra ser multado — a responsabilidade aqui é objetiva, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-037",
@@ -737,7 +784,8 @@
     ],
     "correctAnswer": "Pode ser mantido para compensação em períodos futuros ou, se aplicável, ser objeto de ressarcimento",
     "explanation": "O saldo credor de um período pode ser aproveitado em períodos seguintes ou, em casos como acúmulo relevante e persistente, ser objeto de ressarcimento junto ao Fisco.",
-    "pacciTip": "Sazonalidade não é problema, tesoro! O crédito espera ou volta pelo ressarcimento."
+    "pacciTip": "Sazonalidade não é problema, tesoro! O crédito espera ou volta pelo ressarcimento.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-038",
@@ -753,7 +801,8 @@
     ],
     "correctAnswer": "Suas operações de exportação praticamente não geram débito para compensar os créditos das aquisições, tornando o ressarcimento a principal via de recuperação",
     "explanation": "Empresas cuja atividade é majoritariamente de exportação acumulam créditos por não terem débitos relevantes de saída, tornando o ressarcimento essencial para a recuperação desses valores.",
-    "pacciTip": "Trading que só exporta vive de ressarcimento, tesoro! É a válvula de escape do crédito acumulado."
+    "pacciTip": "Trading que só exporta vive de ressarcimento, tesoro! É a válvula de escape do crédito acumulado.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-039",
@@ -769,7 +818,8 @@
     ],
     "correctAnswer": "Calculado de forma diferenciada, conforme as regras próprias desse regime específico, impactando o custo final do benefício",
     "explanation": "Planos de saúde estão sujeitos a regime específico, com regras próprias de crédito que diferem do regime geral e afetam o custo de quem contrata o benefício.",
-    "pacciTip": "Plano de saúde tem conta própria, tesoro! Sempre confere a regra do regime específico."
+    "pacciTip": "Plano de saúde tem conta própria, tesoro! Sempre confere a regra do regime específico.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-040",
@@ -785,7 +835,8 @@
     ],
     "correctAnswer": "O setor de combustíveis está sujeito a regime específico, com apuração e crédito calculados de forma própria, diferente do regime geral",
     "explanation": "Combustíveis estão sujeitos a regime específico de tributação, com regras próprias de apuração e crédito que impactam o custo de quem os adquire, como transportadoras.",
-    "pacciTip": "Combustível tem regime todo especial, tesoro! Não é a mesma conta do regime geral."
+    "pacciTip": "Combustível tem regime todo especial, tesoro! Não é a mesma conta do regime geral.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-041",
@@ -801,7 +852,8 @@
     ],
     "correctAnswer": "Apurado conforme regras próprias desse regime, que podem diferir do regime geral de crédito",
     "explanation": "O setor de seguros está sujeito a regime específico, com regras próprias de apuração e crédito, que podem ser diferentes das aplicáveis ao regime geral.",
-    "pacciTip": "Seguro também tem regra própria de crédito, amico! Vale checar antes de fechar a apólice."
+    "pacciTip": "Seguro também tem regra própria de crédito, amico! Vale checar antes de fechar a apólice.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-161",
@@ -817,7 +869,8 @@
     ],
     "correctAnswer": "Todos os que tenham concorrido para a prática da infração ou dela se beneficiado, conjunta ou isoladamente",
     "explanation": "Respondem pela infração, conjunta ou isoladamente, todos os que tenham concorrido de qualquer forma para a sua prática, ou que dela se tenham beneficiado.",
-    "pacciTip": "Quem colabora OU quem se beneficia da infração pode responder — não precisa ser só quem \"apertou o botão\"!"
+    "pacciTip": "Quem colabora OU quem se beneficia da infração pode responder — não precisa ser só quem \"apertou o botão\"!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-144",
@@ -833,7 +886,8 @@
     ],
     "correctAnswer": "O local do estabelecimento principal do fornecedor",
     "explanation": "Na contratação de capacidade de ENTRADA de gás natural no duto, o local do fornecimento é o do estabelecimento principal do fornecedor; já na contratação de capacidade de SAÍDA, é o do estabelecimento principal do adquirente.",
-    "pacciTip": "Entrada olha pro fornecedor, saída olha pro adquirente — dois lados do mesmo duto, tesoro!"
+    "pacciTip": "Entrada olha pro fornecedor, saída olha pro adquirente — dois lados do mesmo duto, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-042",
@@ -849,7 +903,8 @@
     ],
     "correctAnswer": "Próprias desse regime, distintas das aplicáveis a mercadorias e serviços do regime geral",
     "explanation": "Operações com bens imóveis possuem regime específico de tributação, com regras próprias de apuração e crédito, diferentes do regime geral aplicável a mercadorias e serviços.",
-    "pacciTip": "Imóvel também tem regime todo seu, tesoro! Não confunde com a prateleira do mercado."
+    "pacciTip": "Imóvel também tem regime todo seu, tesoro! Não confunde com a prateleira do mercado.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-043",
@@ -865,7 +920,8 @@
     ],
     "correctAnswer": "Têm o crédito apurado conforme regras próprias desse regime, que costumam ser mais restritivas que o regime geral",
     "explanation": "Operações financeiras seguem regime específico, com regras próprias e geralmente mais restritivas de crédito, o que afeta o custo de quem toma o serviço financeiro.",
-    "pacciTip": "Juros de empréstimo também têm regra especial de crédito, tesoro! Regime financeiro nunca é igual ao geral."
+    "pacciTip": "Juros de empréstimo também têm regra especial de crédito, tesoro! Regime financeiro nunca é igual ao geral.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-044",
@@ -881,7 +937,8 @@
     ],
     "correctAnswer": "Atenção redobrada às regras de crédito próprias desse regime, que podem ser diferentes das do regime geral",
     "explanation": "Setores sujeitos a regimes específicos possuem regras próprias de crédito, que exigem atenção redobrada de quem contrata seus serviços para avaliar corretamente o impacto no custo.",
-    "pacciTip": "Regime específico pede atenção redobrada, tesoro! Cada setor tem sua própria regrinha de crédito."
+    "pacciTip": "Regime específico pede atenção redobrada, tesoro! Cada setor tem sua própria regrinha de crédito.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-045",
@@ -891,7 +948,8 @@
     "question": "Sob a não cumulatividade plena, a compra de materiais de escritório por um escritório de contabilidade gera direito a crédito de IBS/CBS, ampliando o que era permitido no ICMS?",
     "correctAnswer": true,
     "explanation": "Correto! Bens de uso e consumo, antes vedados de crédito no ICMS, passam a gerar crédito de IBS/CBS na não cumulatividade plena.",
-    "pacciTip": "Sì, tesoro! Cartucho de impressora agora também ajuda no crédito."
+    "pacciTip": "Sì, tesoro! Cartucho de impressora agora também ajuda no crédito.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-162",
@@ -907,7 +965,8 @@
     ],
     "correctAnswer": "Aos entes federativos que promoveram a fiscalização, observada a proporcionalidade legal",
     "explanation": "O valor integrante do crédito tributário correspondente às penalidades pertence aos entes federativos que promoverem a fiscalização, observada a proporcionalidade prevista na legislação do IBS.",
-    "pacciTip": "Quem fiscaliza \"fica\" com a penalidade — dentro da proporcionalidade que a lei já define, tesoro!"
+    "pacciTip": "Quem fiscaliza \"fica\" com a penalidade — dentro da proporcionalidade que a lei já define, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-046",
@@ -917,7 +976,8 @@
     "question": "Apenas os insumos que se incorporam fisicamente ao produto final geram crédito de IBS/CBS no novo modelo?",
     "correctAnswer": false,
     "explanation": "Errado! A não cumulatividade plena vai além dos insumos incorporados ao produto: praticamente toda aquisição vinculada à atividade da empresa gera crédito, incluindo bens de uso, consumo e serviços contratados.",
-    "pacciTip": "Não é só o que entra no produto, tesoro! O crédito é bem mais largo que isso."
+    "pacciTip": "Não é só o que entra no produto, tesoro! O crédito é bem mais largo que isso.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-047",
@@ -927,7 +987,8 @@
     "question": "O serviço de manutenção de equipamentos contratado pela indústria gera crédito de IBS/CBS, por estar vinculado à atividade produtiva da empresa?",
     "correctAnswer": true,
     "explanation": "Correto! Serviços vinculados à atividade da empresa, como manutenção de equipamentos, se enquadram na ampla base de crédito da não cumulatividade plena.",
-    "pacciTip": "Máquina bem cuidada e crédito também, amico! Manutenção conta."
+    "pacciTip": "Máquina bem cuidada e crédito também, amico! Manutenção conta.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-048",
@@ -937,7 +998,8 @@
     "question": "Essa compra de presente de aniversário, por ser um gesto pessoal sem vínculo com a atividade operacional, gera crédito normal de IBS/CBS?",
     "correctAnswer": false,
     "explanation": "Errado! Apesar da ampliação trazida pela não cumulatividade plena, o crédito depende do vínculo da aquisição com a atividade econômica da empresa — despesas de cunho estritamente pessoal ficam fora dessa lógica.",
-    "pacciTip": "Presente de aniversário é carinho, não é crédito, tesoro! Falta o vínculo com o negócio."
+    "pacciTip": "Presente de aniversário é carinho, não é crédito, tesoro! Falta o vínculo com o negócio.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-049",
@@ -947,7 +1009,8 @@
     "question": "Os gastos com a reforma dos quartos do hotel, por estarem vinculados à atividade de hospedagem, geram crédito de IBS/CBS na não cumulatividade plena?",
     "correctAnswer": true,
     "explanation": "Correto! Despesas vinculadas à estrutura usada na atividade da empresa, como a reforma de quartos de um hotel, se enquadram na ampla base de crédito do novo modelo.",
-    "pacciTip": "Quarto reformado e crédito no bolso, tesoro! Hospedagem também entra na conta."
+    "pacciTip": "Quarto reformado e crédito no bolso, tesoro! Hospedagem também entra na conta.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-050",
@@ -957,7 +1020,8 @@
     "question": "Bens do ativo imobilizado adquiridos no exterior nunca geram direito a crédito de IBS/CBS, diferentemente dos bens nacionais?",
     "correctAnswer": false,
     "explanation": "Errado! O direito a crédito decorre do vínculo do bem com a atividade da empresa e da tributação incidente na operação, não da origem nacional ou importada do bem.",
-    "pacciTip": "Origem do bem não é o que decide o crédito, tesoro! O que importa é o vínculo com o negócio."
+    "pacciTip": "Origem do bem não é o que decide o crédito, tesoro! O que importa é o vínculo com o negócio.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-163",
@@ -973,7 +1037,8 @@
     ],
     "correctAnswer": "Não, o fato de existir apuração assistida não afasta a prerrogativa de lançamento de ofício",
     "explanation": "O fato de existir a apuração assistida não afasta a prerrogativa de lançamento de ofício do Fisco — a automação ajuda na apuração, mas não substitui o poder de fiscalizar e autuar.",
-    "pacciTip": "Sistema automatizado não \"aposenta\" o fiscal — o lançamento de ofício continua sendo possível!"
+    "pacciTip": "Sistema automatizado não \"aposenta\" o fiscal — o lançamento de ofício continua sendo possível!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-051",
@@ -983,7 +1048,8 @@
     "question": "O cálculo por fora do IBS/CBS é apenas uma mudança de nomenclatura, sem qualquer efeito real na composição do preço final?",
     "correctAnswer": false,
     "explanation": "Errado! O cálculo por fora muda de fato a lógica da base tributável, evitando o efeito cascata do 'imposto sobre imposto' presente no cálculo por dentro do ICMS.",
-    "pacciTip": "Não é só nome novo, tesoro! O cálculo por fora muda a conta de verdade."
+    "pacciTip": "Não é só nome novo, tesoro! O cálculo por fora muda a conta de verdade.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-145",
@@ -999,7 +1065,8 @@
     ],
     "correctAnswer": "Prova de que o fornecedor assumiu o encargo financeiro, ou está expressamente autorizado por terceiro",
     "explanation": "A restituição do pagamento indevido depende de a operação não ter gerado crédito ao adquirente, e de prova de que o fornecedor assumiu o encargo financeiro do tributo ou está expressamente autorizado por quem o assumiu.",
-    "pacciTip": "A lei evita que alguém receba de volta um valor que outra pessoa já usou como crédito, capito?"
+    "pacciTip": "A lei evita que alguém receba de volta um valor que outra pessoa já usou como crédito, capito?",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-052",
@@ -1009,7 +1076,8 @@
     "question": "Essa ordem de cálculo — margem sobre o custo líquido primeiro, tributo por fora depois — está alinhada à lógica do novo modelo de tributação?",
     "correctAnswer": true,
     "explanation": "Correto! No modelo por fora, o tributo é somado ao preço já formado com a margem desejada, e não misturado ao cálculo da margem em si.",
-    "pacciTip": "Sì! Margem primeiro, tributo por cima depois. Essa é a receita certa."
+    "pacciTip": "Sì! Margem primeiro, tributo por cima depois. Essa é a receita certa.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-053",
@@ -1019,7 +1087,8 @@
     "question": "O cálculo do IBS/CBS por fora do preço se aplica apenas a mercadorias físicas, nunca a honorários de serviços prestados?",
     "correctAnswer": false,
     "explanation": "Errado! O cálculo por fora se aplica de forma ampla tanto a mercadorias quanto a serviços, incluindo honorários profissionais.",
-    "pacciTip": "Serviço também soma o tributo por fora, amico! A regra não escolhe só mercadoria."
+    "pacciTip": "Serviço também soma o tributo por fora, amico! A regra não escolhe só mercadoria.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-054",
@@ -1029,7 +1098,8 @@
     "question": "Essa situação descrita — tributo de uma etapa sendo tributado novamente na etapa seguinte — corresponde ao chamado efeito cascata, que a não cumulatividade plena ajuda a reduzir?",
     "correctAnswer": true,
     "explanation": "Correto! O efeito cascata ocorre quando o imposto de uma etapa é incluído na base de cálculo da etapa seguinte, sendo tributado novamente. A não cumulatividade plena e o cálculo por fora ajudam a eliminar essa distorção.",
-    "pacciTip": "Sì! Imposto sobre imposto é exatamente o efeito cascata que o novo modelo ataca."
+    "pacciTip": "Sì! Imposto sobre imposto é exatamente o efeito cascata que o novo modelo ataca.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-164",
@@ -1045,7 +1115,8 @@
     ],
     "correctAnswer": "O local onde se encontra o bem móvel material",
     "explanation": "Na licitação promovida pelo poder público de bem apreendido ou abandonado, ou em leilão judicial, o local do fornecimento é o local onde se encontra o bem móvel material (cIndOp 010104).",
-    "pacciTip": "Bem apreendido em licitação segue a regra simples: onde o bem está fisicamente, é lá que \"mora\" o imposto!"
+    "pacciTip": "Bem apreendido em licitação segue a regra simples: onde o bem está fisicamente, é lá que \"mora\" o imposto!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-055",
@@ -1055,7 +1126,8 @@
     "question": "O cálculo por fora do IBS/CBS tende a tornar o valor do tributo mais visível e destacado para o consumidor, em comparação ao cálculo por dentro do ICMS?",
     "correctAnswer": true,
     "explanation": "Correto! Como o tributo é somado de forma explícita ao preço líquido, o cálculo por fora tende a dar mais transparência ao valor pago de tributo.",
-    "pacciTip": "Sì, tesoro! Tributo por fora é tributo mais fácil de enxergar na conta."
+    "pacciTip": "Sì, tesoro! Tributo por fora é tributo mais fácil de enxergar na conta.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-056",
@@ -1065,7 +1137,8 @@
     "question": "Esse procedimento — aplicar a margem sobre o valor que já inclui o tributo por fora — é a forma correta de preservar a margem líquida real da empresa?",
     "correctAnswer": false,
     "explanation": "Errado! Para preservar a margem real, o markup deve ser calculado sobre o custo líquido (já considerando os créditos), e só então o tributo por fora deve ser somado ao preço final.",
-    "pacciTip": "Ordem errada distorce a margem, tesoro! Primeiro o custo líquido, o tributo entra por último."
+    "pacciTip": "Ordem errada distorce a margem, tesoro! Primeiro o custo líquido, o tributo entra por último.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-057",
@@ -1075,7 +1148,8 @@
     "question": "Esse padrão de créditos superando débitos é esperado em empresas fortemente exportadoras, já que exportações não geram débito relevante de saída?",
     "correctAnswer": true,
     "explanation": "Correto! Empresas fortemente exportadoras tendem a acumular créditos, pois suas vendas ao exterior não geram débito de saída relevante para compensar os créditos das aquisições internas.",
-    "pacciTip": "Sì! Quem exporta muito, acumula crédito. É a regra do jogo, tesoro."
+    "pacciTip": "Sì! Quem exporta muito, acumula crédito. É a regra do jogo, tesoro.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-058",
@@ -1085,7 +1159,8 @@
     "question": "Créditos de IBS/CBS não utilizados no mês são automaticamente perdidos, sem possibilidade de aproveitamento em períodos seguintes ou de ressarcimento?",
     "correctAnswer": false,
     "explanation": "Errado! O saldo credor pode ser aproveitado em períodos seguintes ou, quando aplicável, ser objeto de pedido de ressarcimento junto ao Fisco.",
-    "pacciTip": "Crédito não some assim do nada, tesoro! Ele espera ou volta pelo ressarcimento."
+    "pacciTip": "Crédito não some assim do nada, tesoro! Ele espera ou volta pelo ressarcimento.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-059",
@@ -1095,7 +1170,8 @@
     "question": "O mecanismo de ressarcimento de créditos acumulados é reservado apenas a grandes multinacionais, não se aplicando a empresas menores como uma cooperativa agrícola?",
     "correctAnswer": false,
     "explanation": "Errado! O direito ao ressarcimento de créditos acumulados não compensados se aplica a qualquer empresa que se enquadre nas condições previstas, independentemente do porte.",
-    "pacciTip": "Tamanho da empresa não é o que decide o ressarcimento, tesoro! A regra vale pra todo mundo que se enquadra."
+    "pacciTip": "Tamanho da empresa não é o que decide o ressarcimento, tesoro! A regra vale pra todo mundo que se enquadra.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-165",
@@ -1111,7 +1187,8 @@
     ],
     "correctAnswer": "O local do domicílio principal do adquirente (estabelecimento matriz)",
     "explanation": "Na locação de bem móvel material em aquisições realizadas de forma centralizada por contribuinte com mais de um estabelecimento (não sujeitas a vedação de crédito), o local é o do domicílio principal do adquirente — a matriz.",
-    "pacciTip": "Compra centralizada na matriz simplifica: o local do imposto segue a matriz, não cada filial!"
+    "pacciTip": "Compra centralizada na matriz simplifica: o local do imposto segue a matriz, não cada filial!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-060",
@@ -1121,7 +1198,8 @@
     "question": "O novo modelo tende a prever prazos mais ágeis para o ressarcimento de créditos acumulados, em comparação ao ICMS atual?",
     "correctAnswer": true,
     "explanation": "Correto! Um dos avanços do novo modelo é justamente a previsão de ressarcimento mais rápido de créditos acumulados, algo criticado como lento no sistema atual.",
-    "pacciTip": "Sì, tesoro! Ressarcimento mais rápido é um dos ganhos do novo modelo."
+    "pacciTip": "Sì, tesoro! Ressarcimento mais rápido é um dos ganhos do novo modelo.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-061",
@@ -1131,7 +1209,8 @@
     "question": "Esse saldo credor pontual, gerado por um mês de alto investimento, só pode ocorrer em empresas exportadoras, nunca em empresas voltadas ao mercado interno?",
     "correctAnswer": false,
     "explanation": "Errado! Qualquer empresa pode ter saldo credor temporário quando os créditos do período superam os débitos, como em meses de investimento elevado, independente de vender para o mercado interno ou externo.",
-    "pacciTip": "Saldo credor não é exclusividade de exportador, tesoro! Investimento forte também pode gerar sobra."
+    "pacciTip": "Saldo credor não é exclusividade de exportador, tesoro! Investimento forte também pode gerar sobra.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-146",
@@ -1147,7 +1226,8 @@
     ],
     "correctAnswer": "Não, o saldo credor só pode ser transferido para a pessoa jurídica sucessora, nas hipóteses legais de sucessão",
     "explanation": "O saldo credor de IBS e CBS não pode ser transferido a terceiros, salvo para a pessoa jurídica sucessora, nas hipóteses legais de sucessão (como fusão, cisão ou incorporação).",
-    "pacciTip": "Crédito não é mercadoria pra vender por aí — só \"viaja\" dentro de uma sucessão legal, tesoro!"
+    "pacciTip": "Crédito não é mercadoria pra vender por aí — só \"viaja\" dentro de uma sucessão legal, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-062",
@@ -1157,7 +1237,8 @@
     "question": "O ressarcimento de créditos acumulados ocorre automaticamente, sem que a empresa precise formalizar qualquer pedido junto ao Fisco?",
     "correctAnswer": false,
     "explanation": "Errado! O ressarcimento depende de solicitação formal da empresa ao Fisco, ainda que o novo modelo preveja prazos mais ágeis de análise e devolução.",
-    "pacciTip": "Ressarcimento não cai do céu, tesoro! Precisa pedir direitinho pro Fisco."
+    "pacciTip": "Ressarcimento não cai do céu, tesoro! Precisa pedir direitinho pro Fisco.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-166",
@@ -1173,7 +1254,8 @@
     ],
     "correctAnswer": "O domicílio principal do destinatário",
     "explanation": "Na aquisição de veículo automotor terrestre, aquático ou aéreo, o local do fornecimento a ser identificado no documento fiscal é o domicílio principal do destinatário.",
-    "pacciTip": "Carro, barco ou avião — o local do imposto segue o domicílio de quem recebe o bem, tesoro!"
+    "pacciTip": "Carro, barco ou avião — o local do imposto segue o domicílio de quem recebe o bem, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-063",
@@ -1183,7 +1265,8 @@
     "question": "O crédito de IBS/CBS sobre a contratação de um plano odontológico corporativo segue exatamente as mesmas regras de uma compra comum do regime geral, sem qualquer diferença?",
     "correctAnswer": false,
     "explanation": "Errado! Planos de saúde e odontológicos estão sujeitos a regime específico do setor de saúde suplementar, com regras próprias de apuração e crédito, diferentes do regime geral.",
-    "pacciTip": "Plano odontológico também tem regra especial, tesoro! Não confunde com compra comum."
+    "pacciTip": "Plano odontológico também tem regra especial, tesoro! Não confunde com compra comum.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-064",
@@ -1193,7 +1276,8 @@
     "question": "O setor de combustíveis está sujeito a um regime específico de apuração e crédito, distinto do regime geral aplicado à maioria das mercadorias?",
     "correctAnswer": true,
     "explanation": "Correto! Combustíveis estão entre os setores com regime específico de tributação, com regras próprias de apuração e crédito.",
-    "pacciTip": "Sì! Combustível sempre teve regrinha diferente, tesoro."
+    "pacciTip": "Sì! Combustível sempre teve regrinha diferente, tesoro.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-065",
@@ -1203,7 +1287,8 @@
     "question": "O crédito de IBS/CBS sobre uma apólice de seguro empresarial é idêntico ao de uma compra de mercadoria comum do regime geral?",
     "correctAnswer": false,
     "explanation": "Errado! O setor de seguros está sujeito a regime específico, com regras próprias de apuração e crédito, que podem diferir do regime geral aplicável a mercadorias.",
-    "pacciTip": "Seguro tem regra própria, tesoro! Não é igual à prateleira do mercado."
+    "pacciTip": "Seguro tem regra própria, tesoro! Não é igual à prateleira do mercado.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-066",
@@ -1213,7 +1298,8 @@
     "question": "Operações com bens imóveis estão sujeitas a regime específico de tributação, com regras próprias de apuração diferentes do regime geral?",
     "correctAnswer": true,
     "explanation": "Correto! Bens imóveis estão entre os setores com regime específico previsto no novo modelo, com regras próprias de apuração e crédito.",
-    "pacciTip": "Sì! Imóvel também tem seu regime especial, tesoro."
+    "pacciTip": "Sì! Imóvel também tem seu regime especial, tesoro.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-067",
@@ -1223,7 +1309,8 @@
     "question": "Os encargos de uma operação financeira, como juros de financiamento bancário, geram o mesmo volume de crédito de IBS/CBS que a compra de uma matéria-prima industrial do regime geral?",
     "correctAnswer": false,
     "explanation": "Errado! O setor financeiro está sujeito a regime específico, com regras próprias de crédito que costumam ser mais restritivas do que as do regime geral.",
-    "pacciTip": "Juro de banco não segue a régua do regime geral, tesoro! Regime financeiro é mais restrito."
+    "pacciTip": "Juro de banco não segue a régua do regime geral, tesoro! Regime financeiro é mais restrito.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-167",
@@ -1239,7 +1326,8 @@
     ],
     "correctAnswer": "O local onde se encontra o bem móvel material (local da retirada)",
     "explanation": "Na constatação de irregularidade pela falta de documentação fiscal ou pelo acobertamento por documentação inidônea, o local do fornecimento é o local onde se encontra o bem móvel material — o local da retirada.",
-    "pacciTip": "Mercadoria irregular \"aponta\" pro local onde ela realmente está — a retirada define o imposto!"
+    "pacciTip": "Mercadoria irregular \"aponta\" pro local onde ela realmente está — a retirada define o imposto!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-068",
@@ -1249,7 +1337,8 @@
     "question": "Contratos com empresas de apostas esportivas estão sujeitos a um regime tributário diferenciado, com regras próprias que podem impactar o crédito do contratante?",
     "correctAnswer": true,
     "explanation": "Correto! O setor de apostas esportivas está entre os que possuem regime específico, com regras próprias que podem impactar o crédito de quem contrata seus serviços.",
-    "pacciTip": "Sì, tesoro! Aposta esportiva também joga com regras de crédito próprias."
+    "pacciTip": "Sì, tesoro! Aposta esportiva também joga com regras de crédito próprias.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-069",
@@ -1270,7 +1359,8 @@
       "Apropriar o crédito de forma ágil, sem o parcelamento longo do modelo atual"
     ],
     "explanation": "Primeiro registra-se a aquisição, confirma-se o vínculo com a atividade, lança-se o crédito na apuração e, por fim, aproveita-se o crédito de forma ágil.",
-    "pacciTip": "Registra, confirma, lança, aproveita, tesoro! Assim o crédito do ativo não trava."
+    "pacciTip": "Registra, confirma, lança, aproveita, tesoro! Assim o crédito do ativo não trava.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-070",
@@ -1291,7 +1381,8 @@
       "Considerar o crédito na apuração do período"
     ],
     "explanation": "Primeiro contrata-se o serviço, registra-se a nota fiscal, verifica-se o vínculo com a atividade e, então, considera-se o crédito na apuração.",
-    "pacciTip": "Contrata, registra, verifica, aproveita, tesoro! Serviço de limpeza também segue esse caminho."
+    "pacciTip": "Contrata, registra, verifica, aproveita, tesoro! Serviço de limpeza também segue esse caminho.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-PL-071",
@@ -1312,7 +1403,8 @@
       "Concluir pela ausência de direito a crédito de IBS/CBS"
     ],
     "explanation": "Registra-se a compra, identifica-se o uso pessoal, verifica-se a ausência de vínculo com a atividade e conclui-se pela impossibilidade de crédito.",
-    "pacciTip": "Sem vínculo com o negócio, sem crédito, tesoro! Essa é a ordem da lógica."
+    "pacciTip": "Sem vínculo com o negócio, sem crédito, tesoro! Essa é a ordem da lógica.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-147",
@@ -1328,7 +1420,8 @@
     ],
     "correctAnswer": "Pelo pagador",
     "explanation": "Transações iniciadas pelo pagador incluem a transferência bancária manual e o PIX em que o próprio pagador define, sem intervenção prévia do recebedor, o valor e o destinatário.",
-    "pacciTip": "Quem decide sozinho valor e destino do pagamento é o pagador que está no controle da transação!"
+    "pacciTip": "Quem decide sozinho valor e destino do pagamento é o pagador que está no controle da transação!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-PL-168",
@@ -1344,7 +1437,8 @@
     ],
     "correctAnswer": "40%",
     "explanation": "Se o contribuinte optar por parcelar (em vez de pagar integralmente à vista) o crédito tributário no prazo de impugnação administrativa, a redução da multa é de 40% — menor que os 50% do pagamento integral à vista.",
-    "pacciTip": "Parcelar rende desconto (40%), mas menor que pagar tudo de uma vez (50%) — a pressa vale a pena!"
+    "pacciTip": "Parcelar rende desconto (40%), mas menor que pagar tudo de uma vez (50%) — a pressa vale a pena!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-072",
@@ -1365,7 +1459,8 @@
       "Considerar o valor do crédito no custo líquido dos produtos vendidos"
     ],
     "explanation": "Primeiro compra-se o material, confirma-se o vínculo com a atividade, lança-se o crédito e, por fim, considera-se seu efeito no custo líquido.",
-    "pacciTip": "Compra, confirma, lança, considera, tesoro! Embalagem também tem seu fluxo de crédito."
+    "pacciTip": "Compra, confirma, lança, considera, tesoro! Embalagem também tem seu fluxo de crédito.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-073",
@@ -1386,7 +1481,8 @@
       "Lançar o crédito de IBS/CBS referente ao serviço na apuração"
     ],
     "explanation": "Contrata-se o serviço, recebe-se a nota fiscal, confirma-se o vínculo com o estabelecimento e lança-se o crédito na apuração.",
-    "pacciTip": "Contrata, recebe nota, confirma vínculo, lança crédito, tesoro! Reforma de loja segue essa trilha."
+    "pacciTip": "Contrata, recebe nota, confirma vínculo, lança crédito, tesoro! Reforma de loja segue essa trilha.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-PL-074",
@@ -1407,7 +1503,8 @@
       "Aplicar o crédito no custo líquido dos produtos fabricados"
     ],
     "explanation": "Registra-se a nota, classifica-se cada item, soma-se o crédito na apuração e aplica-se seu efeito no custo líquido dos produtos.",
-    "pacciTip": "Registra, classifica, soma, aplica, tesoro! Insumo e bem de uso andam juntos na não cumulatividade plena."
+    "pacciTip": "Registra, classifica, soma, aplica, tesoro! Insumo e bem de uso andam juntos na não cumulatividade plena.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-075",
@@ -1428,7 +1525,8 @@
       "Chegar ao preço final de venda ao consumidor"
     ],
     "explanation": "Primeiro se levanta o custo líquido, depois se define a margem, soma-se o tributo por fora e chega-se ao preço final.",
-    "pacciTip": "Custo líquido, margem, tributo por fora, preço final, tesoro! Essa é a receita da precificação."
+    "pacciTip": "Custo líquido, margem, tributo por fora, preço final, tesoro! Essa é a receita da precificação.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-076",
@@ -1449,7 +1547,8 @@
       "Concluir que o cálculo por fora evita esse acúmulo de tributo sobre tributo"
     ],
     "explanation": "A demonstração parte do problema do cálculo por dentro, mostra o efeito cascata, apresenta a alternativa por fora e conclui com a vantagem do novo modelo.",
-    "pacciTip": "Primeiro o problema, depois a solução, tesoro! Assim a diretoria entende o cálculo por fora."
+    "pacciTip": "Primeiro o problema, depois a solução, tesoro! Assim a diretoria entende o cálculo por fora.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-169",
@@ -1465,7 +1564,8 @@
     ],
     "correctAnswer": "30%",
     "explanation": "Se o pagamento integral do crédito tributário ocorrer após o prazo de impugnação, mas antes da inscrição em dívida ativa, a redução da multa cai para 30% (ou 20% no caso de parcelamento nessa mesma janela).",
-    "pacciTip": "Perdeu o prazo de impugnação, mas ainda não foi inscrito em dívida ativa? Ainda dá pra ganhar 30% de desconto!"
+    "pacciTip": "Perdeu o prazo de impugnação, mas ainda não foi inscrito em dívida ativa? Ainda dá pra ganhar 30% de desconto!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-077",
@@ -1486,7 +1586,8 @@
       "Somar o tributo por fora ao preço com margem definida"
     ],
     "explanation": "Parte-se do custo bruto, desconta-se o crédito para chegar ao custo líquido, aplica-se a margem e, por fim, soma-se o tributo por fora.",
-    "pacciTip": "Bruto, líquido, margem, tributo por fora, tesoro! Remédio também segue essa receita."
+    "pacciTip": "Bruto, líquido, margem, tributo por fora, tesoro! Remédio também segue essa receita.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-078",
@@ -1507,7 +1608,8 @@
       "Definir o valor final da assinatura, já com o tributo somado por fora"
     ],
     "explanation": "Levanta-se o custo do serviço, define-se a margem, soma-se o tributo por fora e chega-se ao valor final da assinatura.",
-    "pacciTip": "Serviço digital segue o mesmo caminho, tesoro! Custo, margem, tributo por fora, preço final."
+    "pacciTip": "Serviço digital segue o mesmo caminho, tesoro! Custo, margem, tributo por fora, preço final.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-079",
@@ -1528,7 +1630,8 @@
       "Confirmar que a margem real não foi distorcida pelo tributo"
     ],
     "explanation": "Apura-se o custo líquido, calcula-se o markup sobre ele, soma-se o tributo por fora depois e confirma-se que a margem não foi distorcida.",
-    "pacciTip": "Custo líquido primeiro, tributo por fora por último, tesoro! Assim a margem fica limpinha."
+    "pacciTip": "Custo líquido primeiro, tributo por fora por último, tesoro! Assim a margem fica limpinha.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-080",
@@ -1549,7 +1652,8 @@
       "Concluir que o cliente consegue ver com clareza o valor do tributo pago"
     ],
     "explanation": "O roteiro parte do modelo atual, apresenta o novo conceito, mostra como o tributo é somado e conclui com o ganho de transparência para o cliente.",
-    "pacciTip": "Do jeito antigo pro jeito novo, tesoro! Assim o vendedor explica com clareza pro cliente."
+    "pacciTip": "Do jeito antigo pro jeito novo, tesoro! Assim o vendedor explica com clareza pro cliente.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-081",
@@ -1570,7 +1674,8 @@
       "Formalizar o pedido de ressarcimento junto ao Fisco"
     ],
     "explanation": "Apura-se créditos e débitos, compensa-se o que for possível, confirma-se o saldo remanescente e formaliza-se o pedido de ressarcimento.",
-    "pacciTip": "Apura, compensa, confirma, pede, tesoro! O ciclo do exportador não pode travar."
+    "pacciTip": "Apura, compensa, confirma, pede, tesoro! O ciclo do exportador não pode travar.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-170",
@@ -1586,7 +1691,8 @@
     ],
     "correctAnswer": "A multa será majorada, independentemente de outras penalidades cabíveis",
     "explanation": "Nos casos de sonegação, fraude, simulação ou conluio, a multa será majorada, independentemente de outras penalidades administrativas ou criminais cabíveis.",
-    "pacciTip": "Fraude e simulação pesam mais a mão do Fisco — a multa sobe além do padrão de 75%, tesoro!"
+    "pacciTip": "Fraude e simulação pesam mais a mão do Fisco — a multa sobe além do padrão de 75%, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-148",
@@ -1602,7 +1708,8 @@
     ],
     "correctAnswer": "Dispor um ajuste aumentativo ou diminutivo em pontos percentuais, ou aplicar diretamente um percentual específico",
     "explanation": "Caso não utilize a alíquota de referência, o ente federativo pode dispor em sua legislação um ajuste aumentativo ou diminutivo em pontos percentuais sobre a referência, ou aplicar diretamente um percentual específico.",
-    "pacciTip": "A alíquota de referência é o ponto de partida, mas cada ente tem certa liberdade pra ajustar, tesoro!"
+    "pacciTip": "A alíquota de referência é o ponto de partida, mas cada ente tem certa liberdade pra ajustar, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-082",
@@ -1623,7 +1730,8 @@
       "Acompanhar o retorno do Fisco sobre o pedido de ressarcimento"
     ],
     "explanation": "Levanta-se o saldo, prepara-se o pedido, envia-se a documentação exigida e acompanha-se o retorno do Fisco.",
-    "pacciTip": "Levanta, prepara, envia, acompanha, tesoro! Rotina de ressarcimento não pode ficar solta."
+    "pacciTip": "Levanta, prepara, envia, acompanha, tesoro! Rotina de ressarcimento não pode ficar solta.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-083",
@@ -1644,7 +1752,8 @@
       "Verificar se o saldo remanescente pode ser objeto de ressarcimento"
     ],
     "explanation": "Apura-se o crédito elevado, tenta-se compensar com os débitos, identifica-se o excedente e verifica-se a possibilidade de ressarcimento do saldo.",
-    "pacciTip": "Compra grande gera crédito grande, tesoro! O fluxo confirma se sobra pra ressarcir."
+    "pacciTip": "Compra grande gera crédito grande, tesoro! O fluxo confirma se sobra pra ressarcir.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-084",
@@ -1665,7 +1774,8 @@
       "Solicitar o ressarcimento do saldo consolidado ao Fisco"
     ],
     "explanation": "Registram-se os créditos, confirma-se a ausência de débito relevante nas exportações, consolida-se o saldo e solicita-se o ressarcimento.",
-    "pacciTip": "Registra, confirma, consolida, pede, tesoro! Trading exportadora vive desse fluxo."
+    "pacciTip": "Registra, confirma, consolida, pede, tesoro! Trading exportadora vive desse fluxo.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-085",
@@ -1686,7 +1796,8 @@
       "Manter o saldo remanescente para compensação em meses futuros ou ressarcimento"
     ],
     "explanation": "Identificam-se os meses críticos, apura-se o crédito gerado, compara-se com os débitos e trata-se o saldo remanescente conforme o caso.",
-    "pacciTip": "Sazonalidade pede rotina firme, tesoro! Identifica, apura, compara, resolve."
+    "pacciTip": "Sazonalidade pede rotina firme, tesoro! Identifica, apura, compara, resolve.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-171",
@@ -1702,7 +1813,8 @@
     ],
     "correctAnswer": "Sim, exportações de bens E serviços são imunes ao IBS e à CBS",
     "explanation": "Exportações de bens E serviços para o exterior são imunes à CBS e ao IBS — os exportadores, sejam de bens ou de serviços, não pagam esses impostos e ainda podem usar créditos das compras internas.",
-    "pacciTip": "A imunidade de exportação não escolhe: vale tanto pra bens quanto pra serviços exportados, tesoro!"
+    "pacciTip": "A imunidade de exportação não escolhe: vale tanto pra bens quanto pra serviços exportados, tesoro!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-086",
@@ -1723,7 +1835,8 @@
       "Acompanhar a análise do pedido até a devolução do valor"
     ],
     "explanation": "Confirma-se o saldo, reúne-se a documentação, protocola-se o pedido e acompanha-se a análise até a devolução do valor.",
-    "pacciTip": "Confirma, reúne, protocola, acompanha, tesoro! Assim o ressarcimento não trava no meio do caminho."
+    "pacciTip": "Confirma, reúne, protocola, acompanha, tesoro! Assim o ressarcimento não trava no meio do caminho.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-087",
@@ -1744,7 +1857,8 @@
       "Ajustar a previsão de custo do benefício considerando o crédito diferenciado"
     ],
     "explanation": "Recebe-se a proposta, identifica-se o regime específico aplicável, calcula-se o crédito real e ajusta-se a previsão de custo do benefício.",
-    "pacciTip": "Recebe, identifica, calcula, ajusta, tesoro! Plano de saúde sempre pede essa checagem."
+    "pacciTip": "Recebe, identifica, calcula, ajusta, tesoro! Plano de saúde sempre pede essa checagem.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-088",
@@ -1765,7 +1879,8 @@
       "Reavaliar o custo efetivo do abastecimento para a frota"
     ],
     "explanation": "Negocia-se o contrato, identifica-se o regime específico do fornecedor, calcula-se o crédito aplicável e reavalia-se o custo efetivo da operação.",
-    "pacciTip": "Negocia, identifica, calcula, reavalia, tesoro! Combustível sempre pede essa conta fina."
+    "pacciTip": "Negocia, identifica, calcula, reavalia, tesoro! Combustível sempre pede essa conta fina.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-089",
@@ -1786,7 +1901,8 @@
       "Ajustar o orçamento anual considerando o crédito efetivo esperado"
     ],
     "explanation": "Solicita-se a cotação, verifica-se o regime específico do setor, calcula-se o crédito conforme as regras próprias e ajusta-se o orçamento com base nesse crédito.",
-    "pacciTip": "Cotação, regime, cálculo, orçamento, tesoro! Seguro empresarial pede esses quatro passos."
+    "pacciTip": "Cotação, regime, cálculo, orçamento, tesoro! Seguro empresarial pede esses quatro passos.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-090",
@@ -1807,7 +1923,8 @@
       "Ajustar o planejamento de custo da nova sede com base no crédito apurado"
     ],
     "explanation": "Negocia-se a compra, identifica-se o regime específico aplicável, apura-se o crédito conforme suas regras e ajusta-se o planejamento de custo da obra.",
-    "pacciTip": "Negocia, identifica, apura, ajusta, tesoro! Imóvel também segue seu próprio fluxo."
+    "pacciTip": "Negocia, identifica, apura, ajusta, tesoro! Imóvel também segue seu próprio fluxo.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-172",
@@ -1823,7 +1940,8 @@
     ],
     "correctAnswer": "30 UPF por período de apuração e a cada intimação fiscal",
     "explanation": "A entrega em desacordo com prazo fixado em intimação fiscal gera multa de 30 UPF por período de apuração e a cada intimação fiscal — mais grave que a multa de 20 UPF sem intimação.",
-    "pacciTip": "Precisar ser intimado pra cumprir a obrigação custa mais caro: 30 UPF em vez de 20 UPF!"
+    "pacciTip": "Precisar ser intimado pra cumprir a obrigação custa mais caro: 30 UPF em vez de 20 UPF!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-091",
@@ -1844,7 +1962,8 @@
       "Reavaliar o custo efetivo do capital captado"
     ],
     "explanation": "Registram-se os encargos, verificam-se as regras do regime financeiro, calcula-se o crédito restrito aplicável e reavalia-se o custo efetivo do capital.",
-    "pacciTip": "Registra, verifica, calcula, reavalia, tesoro! Empréstimo bancário também tem sua trilha."
+    "pacciTip": "Registra, verifica, calcula, reavalia, tesoro! Empréstimo bancário também tem sua trilha.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-092",
@@ -1865,7 +1984,8 @@
       "Ajustar a proposta comercial considerando o crédito diferenciado esperado"
     ],
     "explanation": "Assina-se o contrato, identifica-se o regime específico aplicável, calcula-se o crédito conforme suas regras e ajusta-se a proposta comercial.",
-    "pacciTip": "Assina, identifica, calcula, ajusta, tesoro! Regime específico pede sempre esse cuidado."
+    "pacciTip": "Assina, identifica, calcula, ajusta, tesoro! Regime específico pede sempre esse cuidado.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-149",
@@ -1881,7 +2001,8 @@
     ],
     "correctAnswer": "É opcional, e o valor segregado não guarda relação direta com o valor dos débitos de IBS e CBS da operação",
     "explanation": "O procedimento simplificado do Split Payment é opcional, e o valor a ser segregado não guarda relação com o valor dos débitos de IBS e CBS da operação — o eventual excedente recolhido é ajustado depois da apuração.",
-    "pacciTip": "O Simplificado segrega um valor \"estimado\", não o valor exato do débito — o ajuste fino vem depois!"
+    "pacciTip": "O Simplificado segrega um valor \"estimado\", não o valor exato do débito — o ajuste fino vem depois!",
+    "topic": "split_payment"
   },
   {
     "id": "REF-PL-093",
@@ -1897,7 +2018,8 @@
     ],
     "correctAnswer": "imobilizado",
     "explanation": "O ativo imobilizado é a categoria de bens (máquinas, equipamentos) cujo crédito passa a ser apropriado de forma mais ágil no novo modelo.",
-    "pacciTip": "Imobilizado é a palavra certa, tesoro! Máquina também entra na conta do crédito."
+    "pacciTip": "Imobilizado é a palavra certa, tesoro! Máquina também entra na conta do crédito.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-094",
@@ -1913,7 +2035,8 @@
     ],
     "correctAnswer": "vinculada",
     "explanation": "O critério central é o vínculo da aquisição com a atividade econômica da empresa, e não o tipo específico de bem ou serviço.",
-    "pacciTip": "Vinculada é a palavra-chave, tesoro! O que importa é a ligação com o negócio."
+    "pacciTip": "Vinculada é a palavra-chave, tesoro! O que importa é a ligação com o negócio.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-173",
@@ -1929,7 +2052,8 @@
     ],
     "correctAnswer": "33% do valor do tributo de referência",
     "explanation": "Cancelar documento fiscal após o prazo normal previsto na legislação (mas antes da ocorrência do fato gerador) gera multa de 33% do valor do tributo de referência — metade da multa aplicável após o fato gerador (66%).",
-    "pacciTip": "Cancelar fora do prazo já custa 33% — mas se o fato gerador já ocorreu, dobra pra 66%!"
+    "pacciTip": "Cancelar fora do prazo já custa 33% — mas se o fato gerador já ocorreu, dobra pra 66%!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-095",
@@ -1945,7 +2069,8 @@
     ],
     "correctAnswer": "pessoal",
     "explanation": "A exceção à ampla base de crédito ocorre justamente quando o bem tem uso estritamente pessoal, sem vínculo com a atividade econômica.",
-    "pacciTip": "Pessoal é a exceção, tesoro! Sem vínculo com o negócio, sem crédito."
+    "pacciTip": "Pessoal é a exceção, tesoro! Sem vínculo com o negócio, sem crédito.",
+    "topic": "classificacao_fiscal"
   },
   {
     "id": "REF-PL-096",
@@ -1961,7 +2086,8 @@
     ],
     "correctAnswer": "marketing",
     "explanation": "Ações de marketing vinculadas à atividade comercial da empresa se enquadram na ampla base de crédito da não cumulatividade plena.",
-    "pacciTip": "Marketing conta como crédito, tesoro! Desde que ligado ao negócio, é claro."
+    "pacciTip": "Marketing conta como crédito, tesoro! Desde que ligado ao negócio, é claro.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-097",
@@ -1977,7 +2103,8 @@
     ],
     "correctAnswer": "embalagem",
     "explanation": "Materiais de embalagem usados na operação de venda são aquisições vinculadas à atividade da empresa, gerando crédito na não cumulatividade plena.",
-    "pacciTip": "Embalagem também carrega crédito, tesoro! Não esquece dela na conta."
+    "pacciTip": "Embalagem também carrega crédito, tesoro! Não esquece dela na conta.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-098",
@@ -1993,7 +2120,8 @@
     ],
     "correctAnswer": "reforma",
     "explanation": "Despesas com reforma das instalações usadas na atividade de hospedagem se enquadram na ampla base de crédito do novo modelo.",
-    "pacciTip": "Reforma também é crédito, tesoro! Quarto bonito e conta em dia."
+    "pacciTip": "Reforma também é crédito, tesoro! Quarto bonito e conta em dia.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-099",
@@ -2009,7 +2137,8 @@
     ],
     "correctAnswer": "base",
     "explanation": "No cálculo por fora, o tributo não integra a própria base de cálculo, diferente do que ocorre no cálculo por dentro do ICMS.",
-    "pacciTip": "Base é a palavra certa, tesoro! O tributo não se mistura na base do cálculo."
+    "pacciTip": "Base é a palavra certa, tesoro! O tributo não se mistura na base do cálculo.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-174",
@@ -2025,7 +2154,8 @@
     ],
     "correctAnswer": "Sim, a multa de 1 UPF/IBS por documento se aplica pela omissão em si, independente do conteúdo do documento",
     "explanation": "A multa de 1 UPF/IBS por documento se aplica pela simples omissão do destinatário em confirmar, informar desconhecimento ou informar devolução — independentemente de o documento em si estar correto ou não.",
-    "pacciTip": "A obrigação é de \"responder\", não de \"achar erro\" — a omissão em si já gera a multa, tesoro!"
+    "pacciTip": "A obrigação é de \"responder\", não de \"achar erro\" — a omissão em si já gera a multa, tesoro!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-100",
@@ -2041,7 +2171,8 @@
     ],
     "correctAnswer": "cascata",
     "explanation": "O efeito cascata é a cobrança de tributo sobre uma base que já contém tributo de etapas anteriores, reduzido pelo cálculo por fora.",
-    "pacciTip": "Cascata é a palavra, tesoro! O novo modelo ajuda a segurar essa água."
+    "pacciTip": "Cascata é a palavra, tesoro! O novo modelo ajuda a segurar essa água.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-101",
@@ -2057,7 +2188,8 @@
     ],
     "correctAnswer": "serviços",
     "explanation": "A lógica do cálculo por fora se aplica de forma ampla a bens e serviços, incluindo assinaturas de software.",
-    "pacciTip": "Serviços também, tesoro! A regra do por fora não escolhe só mercadoria física."
+    "pacciTip": "Serviços também, tesoro! A regra do por fora não escolhe só mercadoria física.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-102",
@@ -2073,7 +2205,8 @@
     ],
     "correctAnswer": "líquido",
     "explanation": "Para preservar a margem real, o markup é calculado sobre o custo líquido de créditos, e o tributo por fora é somado somente depois.",
-    "pacciTip": "Líquido é a palavra certa, tesoro! Assim a margem não se distorce."
+    "pacciTip": "Líquido é a palavra certa, tesoro! Assim a margem não se distorce.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-150",
@@ -2089,7 +2222,8 @@
     ],
     "correctAnswer": "CST 620 (Tributação Monofásica)",
     "explanation": "O CST 620 representa o Regime Específico dos Combustíveis, no qual o IBS e a CBS são recolhidos em uma única etapa da cadeia (tributação monofásica).",
-    "pacciTip": "Combustível é tributado uma vez só, lá atrás na cadeia — por isso o nome \"monofásica\"!"
+    "pacciTip": "Combustível é tributado uma vez só, lá atrás na cadeia — por isso o nome \"monofásica\"!",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-175",
@@ -2105,7 +2239,8 @@
     ],
     "correctAnswer": "O domicílio principal do adquirente residente ou domiciliado no país",
     "explanation": "Para demais operações com bens não especificadas em outros indicadores, em operações onerosas, o local do fornecimento é o domicílio principal do adquirente residente ou domiciliado no País (cIndOp 100501).",
-    "pacciTip": "Quando não há regra específica pro bem, cai na regra geral: domicílio de quem compra, tesoro!"
+    "pacciTip": "Quando não há regra específica pro bem, cai na regra geral: domicílio de quem compra, tesoro!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-103",
@@ -2121,7 +2256,8 @@
     ],
     "correctAnswer": "visível",
     "explanation": "Como o tributo é somado de forma explícita ao preço líquido, o cálculo por fora torna o valor pago de tributo mais visível ao consumidor.",
-    "pacciTip": "Visível é a palavra, tesoro! O cliente enxerga melhor quanto pagou de imposto."
+    "pacciTip": "Visível é a palavra, tesoro! O cliente enxerga melhor quanto pagou de imposto.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-104",
@@ -2137,7 +2273,8 @@
     ],
     "correctAnswer": "depois",
     "explanation": "O tributo por fora é somado depois de definida a margem sobre o custo líquido, preservando a margem real da empresa.",
-    "pacciTip": "Depois, sempre depois, tesoro! Tributo por fora entra só no fim da conta."
+    "pacciTip": "Depois, sempre depois, tesoro! Tributo por fora entra só no fim da conta.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-105",
@@ -2153,7 +2290,8 @@
     ],
     "correctAnswer": "exportadoras",
     "explanation": "Empresas exportadoras acumulam créditos porque suas vendas ao exterior não geram débito relevante para compensar os créditos das aquisições.",
-    "pacciTip": "Exportadoras, sempre elas, tesoro! O crédito sobra quando a venda vai pra fora."
+    "pacciTip": "Exportadoras, sempre elas, tesoro! O crédito sobra quando a venda vai pra fora.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-106",
@@ -2169,7 +2307,8 @@
     ],
     "correctAnswer": "ressarcimento",
     "explanation": "O ressarcimento é o mecanismo previsto para devolver à empresa créditos acumulados que não puderam ser compensados internamente.",
-    "pacciTip": "Ressarcimento, sempre ele, tesoro! É o caminho de volta do crédito parado."
+    "pacciTip": "Ressarcimento, sempre ele, tesoro! É o caminho de volta do crédito parado.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-107",
@@ -2185,7 +2324,8 @@
     ],
     "correctAnswer": "credor",
     "explanation": "O saldo credor ocorre quando os créditos apurados no período superam os débitos, podendo acontecer em qualquer empresa, não só exportadoras.",
-    "pacciTip": "Credor é a palavra, tesoro! Sobra de crédito também acontece em mês de compra grande."
+    "pacciTip": "Credor é a palavra, tesoro! Sobra de crédito também acontece em mês de compra grande.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-176",
@@ -2201,7 +2341,8 @@
     ],
     "correctAnswer": "Não, a não tributação exige que a bonificação NÃO dependa de evento posterior",
     "explanation": "A não tributação das bonificações exige que elas constem do documento fiscal e NÃO dependam de evento posterior — se passar a depender de uma condição futura, essa característica de \"desconto embutido\" se perde.",
-    "pacciTip": "Bonificação \"condicionada\" a evento futuro perde o tratamento especial — tem que ser incondicional!"
+    "pacciTip": "Bonificação \"condicionada\" a evento futuro perde o tratamento especial — tem que ser incondicional!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-108",
@@ -2217,7 +2358,8 @@
     ],
     "correctAnswer": "exportação",
     "explanation": "Empresas voltadas à exportação acumulam créditos por não terem débitos relevantes de saída, tornando o ressarcimento essencial para a recuperação.",
-    "pacciTip": "Exportação puxa o ressarcimento, tesoro! É a saída natural do crédito acumulado."
+    "pacciTip": "Exportação puxa o ressarcimento, tesoro! É a saída natural do crédito acumulado.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-109",
@@ -2233,7 +2375,8 @@
     ],
     "correctAnswer": "mantido",
     "explanation": "O saldo credor de um período pode ser mantido para compensação em períodos seguintes ou, quando aplicável, ser objeto de ressarcimento.",
-    "pacciTip": "Mantido é a palavra certa, tesoro! O crédito sazonal não se perde no meio do caminho."
+    "pacciTip": "Mantido é a palavra certa, tesoro! O crédito sazonal não se perde no meio do caminho.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-110",
@@ -2249,7 +2392,8 @@
     ],
     "correctAnswer": "solicitação",
     "explanation": "O ressarcimento não ocorre automaticamente: depende de solicitação formal da empresa, ainda que os prazos de análise sejam mais ágeis.",
-    "pacciTip": "Solicitação é a palavra, tesoro! O ressarcimento não pede sozinho, é a empresa que pede."
+    "pacciTip": "Solicitação é a palavra, tesoro! O ressarcimento não pede sozinho, é a empresa que pede.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-111",
@@ -2265,7 +2409,8 @@
     ],
     "correctAnswer": "específico",
     "explanation": "Planos de saúde estão sujeitos a regime específico, com regras próprias de apuração e crédito, diferentes do regime geral.",
-    "pacciTip": "Específico é a palavra-chave, tesoro! Plano de saúde tem sua própria regra de crédito."
+    "pacciTip": "Específico é a palavra-chave, tesoro! Plano de saúde tem sua própria regra de crédito.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-112",
@@ -2281,7 +2426,8 @@
     ],
     "correctAnswer": "combustíveis",
     "explanation": "Combustíveis estão entre os setores com regime específico de tributação, com regras próprias de apuração e crédito.",
-    "pacciTip": "Combustíveis, sempre eles, tesoro! Regime especial de ponta a ponta."
+    "pacciTip": "Combustíveis, sempre eles, tesoro! Regime especial de ponta a ponta.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-177",
@@ -2297,7 +2443,8 @@
     ],
     "correctAnswer": "O domicílio principal do destinatário",
     "explanation": "Na aquisição de veículo automotor terrestre, aquático ou aéreo, o local do fornecimento a ser identificado no documento fiscal é o domicílio principal do destinatário, independente da forma de pagamento usada na operação.",
-    "pacciTip": "Não importa se pagou em dinheiro ou trocou por outro carro — o local segue sempre o destinatário!"
+    "pacciTip": "Não importa se pagou em dinheiro ou trocou por outro carro — o local segue sempre o destinatário!",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-151",
@@ -2313,7 +2460,8 @@
     ],
     "correctAnswer": "CST 830 (Exclusão da Base de Cálculo)",
     "explanation": "O CST 830 trata da exclusão da base de cálculo, aplicável especificamente à distribuidora de energia que exclui da base o valor fornecido pela unidade consumidora.",
-    "pacciTip": "Energia elétrica tem regra própria de ajuste na base de cálculo — CST 830, direto ao ponto!"
+    "pacciTip": "Energia elétrica tem regra própria de ajuste na base de cálculo — CST 830, direto ao ponto!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-113",
@@ -2329,7 +2477,8 @@
     ],
     "correctAnswer": "seguros",
     "explanation": "O setor de seguros está sujeito a regime específico de tributação, com regras próprias de crédito diferentes do regime geral.",
-    "pacciTip": "Seguros também têm regra própria, tesoro! Sempre vale conferir antes de fechar a apólice."
+    "pacciTip": "Seguros também têm regra própria, tesoro! Sempre vale conferir antes de fechar a apólice.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-114",
@@ -2345,7 +2494,8 @@
     ],
     "correctAnswer": "imóveis",
     "explanation": "Bens imóveis estão entre os setores com regime específico previsto no novo modelo, com regras próprias de apuração e crédito.",
-    "pacciTip": "Imóveis também têm regime todo seu, tesoro! Não confunde com mercadoria comum."
+    "pacciTip": "Imóveis também têm regime todo seu, tesoro! Não confunde com mercadoria comum.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-115",
@@ -2361,7 +2511,8 @@
     ],
     "correctAnswer": "restritivas",
     "explanation": "O setor financeiro segue regime específico, com regras de crédito geralmente mais restritivas do que as aplicáveis ao regime geral.",
-    "pacciTip": "Restritivas é a palavra, tesoro! Regime financeiro sempre aperta mais a mão no crédito."
+    "pacciTip": "Restritivas é a palavra, tesoro! Regime financeiro sempre aperta mais a mão no crédito.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-116",
@@ -2377,7 +2528,8 @@
     ],
     "correctAnswer": "específicos",
     "explanation": "Setores sujeitos a regimes específicos possuem regras próprias de crédito, exigindo atenção redobrada de quem contrata seus serviços.",
-    "pacciTip": "Específicos, sempre eles, tesoro! Cada setor com sua regrinha de crédito."
+    "pacciTip": "Específicos, sempre eles, tesoro! Cada setor com sua regrinha de crédito.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-178",
@@ -2393,7 +2545,8 @@
     ],
     "correctAnswer": "Não, a obrigação de emissão de documentos fiscais eletrônicos aplica-se inclusive às exportações",
     "explanation": "O sujeito passivo do IBS e da CBS, ao realizar operações com bens ou serviços, inclusive exportações, deve emitir documento fiscal eletrônico — a imunidade não dispensa a obrigação acessória de emitir o documento.",
-    "pacciTip": "Imunidade tributária não é dispensa de obrigação acessória — o documento fiscal continua sendo exigido!"
+    "pacciTip": "Imunidade tributária não é dispensa de obrigação acessória — o documento fiscal continua sendo exigido!",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-117",
@@ -2403,7 +2556,8 @@
     "question": "Digite, em uma palavra, a categoria de bens (como máquinas e equipamentos de produção) cujo crédito de IBS/CBS passa a ser apropriado de forma mais ágil no novo modelo:",
     "correctAnswer": "imobilizado",
     "explanation": "O ativo imobilizado é a categoria de bens cujo crédito é apropriado de forma mais ágil, superando o parcelamento longo do ICMS atual.",
-    "pacciTip": "Imobilizado, tesoro! Decora essa palavra, ela abre a porta do crédito rápido."
+    "pacciTip": "Imobilizado, tesoro! Decora essa palavra, ela abre a porta do crédito rápido.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-118",
@@ -2413,7 +2567,8 @@
     "question": "Digite, em uma palavra, o critério que determina se uma aquisição gera direito a crédito de IBS/CBS: o bem precisa ter ___ com a atividade da empresa.",
     "correctAnswer": "vínculo",
     "explanation": "O critério central para o direito ao crédito é o vínculo da aquisição com a atividade econômica da empresa.",
-    "pacciTip": "Vínculo é a palavra do dia, tesoro! Sem ligação com o negócio, não tem crédito."
+    "pacciTip": "Vínculo é a palavra do dia, tesoro! Sem ligação com o negócio, não tem crédito.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-119",
@@ -2423,7 +2578,8 @@
     "question": "Digite, em uma palavra, o tipo de não cumulatividade que ampliou o crédito para despesas como a reforma de quartos de um hotel:",
     "correctAnswer": "plena",
     "explanation": "A não cumulatividade plena é o princípio que ampliou o crédito para praticamente todas as aquisições vinculadas à atividade da empresa.",
-    "pacciTip": "Plena, sempre plena, tesoro! Essa palavra abre a porta de quase todo crédito."
+    "pacciTip": "Plena, sempre plena, tesoro! Essa palavra abre a porta de quase todo crédito.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-120",
@@ -2433,7 +2589,8 @@
     "question": "Digite, em uma palavra, a categoria de aquisições, antes vedada de crédito no ICMS, à qual pertencem os materiais de uso e ___ que agora geram crédito de IBS/CBS:",
     "correctAnswer": "consumo",
     "explanation": "Bens de uso e consumo, antes vedados de crédito no ICMS, passam a gerar crédito de IBS/CBS na não cumulatividade plena.",
-    "pacciTip": "Consumo é a palavra que falta, tesoro! Uso e consumo agora abrem crédito."
+    "pacciTip": "Consumo é a palavra que falta, tesoro! Uso e consumo agora abrem crédito.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-121",
@@ -2443,7 +2600,8 @@
     "question": "Digite, em uma palavra, o que a aquisição precisa ter com a atividade da empresa para gerar direito a crédito de IBS/CBS:",
     "correctAnswer": "vínculo",
     "explanation": "O vínculo com a atividade da empresa é o critério que determina o direito ao crédito de IBS/CBS na não cumulatividade plena.",
-    "pacciTip": "Vínculo de novo, tesoro! Essa palavra é a chave-mestra do crédito."
+    "pacciTip": "Vínculo de novo, tesoro! Essa palavra é a chave-mestra do crédito.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-179",
@@ -2459,7 +2617,8 @@
     ],
     "correctAnswer": "De forma paralela, cada tributo com sua própria legislação de infrações e penalidades",
     "explanation": "Como o IBS (subnacional) e a CBS (federal) são tributos distintos com legislações próprias, as infrações e penalidades tendem a ser tratadas de forma paralela — o material do curso, por exemplo, foca nas infrações relativas ao IBS especificamente.",
-    "pacciTip": "IBS e CBS são \"irmãos\" na cobrança, mas cada um com seu próprio capítulo de infrações e penalidades!"
+    "pacciTip": "IBS e CBS são \"irmãos\" na cobrança, mas cada um com seu próprio capítulo de infrações e penalidades!",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-122",
@@ -2469,7 +2628,8 @@
     "question": "Digite, em uma palavra, o tipo de ação empresarial (divulgação da marca, distribuição de brindes) vinculada à atividade comercial que gera crédito de IBS/CBS:",
     "correctAnswer": "marketing",
     "explanation": "Despesas com ações de marketing vinculadas à atividade comercial da empresa se enquadram na ampla base de crédito da não cumulatividade plena.",
-    "pacciTip": "Marketing, tesoro! Divulgar a marca também ajuda a construir crédito."
+    "pacciTip": "Marketing, tesoro! Divulgar a marca também ajuda a construir crédito.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-152",
@@ -2485,7 +2645,8 @@
     ],
     "correctAnswer": "É substituído pela CBS, no âmbito federal",
     "explanation": "No desenho do IVA Dual brasileiro, a CBS (federal) substitui o PIS, a Cofins e o IOF-Seguros; já o IBS (subnacional) substitui o ICMS e o ISS.",
-    "pacciTip": "PIS, Cofins e IOF-Seguros somem, e no lugar entra só a CBS. Três viram um, de novo!"
+    "pacciTip": "PIS, Cofins e IOF-Seguros somem, e no lugar entra só a CBS. Três viram um, de novo!",
+    "topic": "transicao"
   },
   {
     "id": "REF-PL-123",
@@ -2495,7 +2656,8 @@
     "question": "Digite a palavra que descreve como o IBS/CBS é calculado em relação ao preço de venda: por dentro ou por ___?",
     "correctAnswer": "fora",
     "explanation": "O IBS/CBS é calculado por fora do preço, somado ao valor líquido, diferente do cálculo por dentro do ICMS atual.",
-    "pacciTip": "Fora, sempre fora, tesoro! Essa é a marca registrada do novo cálculo."
+    "pacciTip": "Fora, sempre fora, tesoro! Essa é a marca registrada do novo cálculo.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-124",
@@ -2505,7 +2667,8 @@
     "question": "Digite, em uma palavra, o nome do efeito que ocorre quando o tributo incide sobre uma base que já contém tributo de etapas anteriores, reduzido pelo cálculo por fora:",
     "correctAnswer": "cascata",
     "explanation": "O efeito cascata é a cobrança de tributo sobre uma base que já contém tributo de etapas anteriores, minimizado pelo cálculo por fora.",
-    "pacciTip": "Cascata, tesoro! O novo modelo segura essa água que sobe demais."
+    "pacciTip": "Cascata, tesoro! O novo modelo segura essa água que sobe demais.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-125",
@@ -2515,7 +2678,8 @@
     "question": "Digite, em uma palavra, o tipo de custo (já descontado dos créditos recuperáveis) sobre o qual a margem deve ser calculada antes de somar o tributo por fora:",
     "correctAnswer": "líquido",
     "explanation": "O custo líquido, já descontado dos créditos recuperáveis, é a base sobre a qual a margem deve ser calculada.",
-    "pacciTip": "Líquido é a palavra, tesoro! Margem se calcula sempre no custo já limpo de crédito."
+    "pacciTip": "Líquido é a palavra, tesoro! Margem se calcula sempre no custo já limpo de crédito.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-126",
@@ -2525,7 +2689,8 @@
     "question": "Digite, em uma palavra, quando o tributo por fora deve ser somado ao preço: antes ou ___ da definição da margem?",
     "correctAnswer": "depois",
     "explanation": "O tributo por fora deve ser somado depois da definição da margem sobre o custo líquido, para preservar a margem real.",
-    "pacciTip": "Depois, sempre depois, tesoro! O tributo por fora fecha a conta, não abre."
+    "pacciTip": "Depois, sempre depois, tesoro! O tributo por fora fecha a conta, não abre.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-127",
@@ -2535,7 +2700,8 @@
     "question": "Digite, em uma palavra, o principal ganho para o consumidor trazido pelo cálculo do tributo por fora, em comparação ao cálculo por dentro:",
     "correctAnswer": "transparência",
     "explanation": "O cálculo por fora dá mais transparência ao valor do tributo pago, pois ele é somado de forma explícita ao preço líquido.",
-    "pacciTip": "Transparência, tesoro! O cliente agora vê direitinho quanto pagou de imposto."
+    "pacciTip": "Transparência, tesoro! O cliente agora vê direitinho quanto pagou de imposto.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-128",
@@ -2545,7 +2711,8 @@
     "question": "Digite, em uma palavra, o tipo de distorção que o cálculo por fora ajuda a evitar na formação do preço, ao não embutir o tributo na própria base:",
     "correctAnswer": "cascata",
     "explanation": "O cálculo por fora ajuda a evitar o efeito cascata, distorção causada pela cobrança de tributo sobre uma base que já contém tributo.",
-    "pacciTip": "Cascata de novo, tesoro! Ela aparece toda vez que o cálculo é por dentro."
+    "pacciTip": "Cascata de novo, tesoro! Ela aparece toda vez que o cálculo é por dentro.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-129",
@@ -2555,7 +2722,8 @@
     "question": "Digite, em uma palavra, o perfil de vendas (voltado majoritariamente ao exterior) que costuma gerar acúmulo recorrente de créditos de IBS/CBS:",
     "correctAnswer": "exportador",
     "explanation": "Empresas com perfil exportador acumulam créditos, pois suas vendas ao exterior não geram débito relevante para compensar as aquisições internas.",
-    "pacciTip": "Exportador, tesoro! Quem vende pra fora, acumula crédito aqui dentro."
+    "pacciTip": "Exportador, tesoro! Quem vende pra fora, acumula crédito aqui dentro.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-130",
@@ -2565,7 +2733,8 @@
     "question": "Digite o termo usado para o procedimento pelo qual a mineradora recupera do Fisco os créditos de IBS/CBS acumulados e não compensados:",
     "correctAnswer": "ressarcimento",
     "explanation": "O ressarcimento é o mecanismo pelo qual a empresa recupera do Fisco os créditos acumulados que não conseguiu compensar internamente.",
-    "pacciTip": "Ressarcimento, tesoro! Decora bem essa palavra, ela devolve o crédito parado."
+    "pacciTip": "Ressarcimento, tesoro! Decora bem essa palavra, ela devolve o crédito parado.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-131",
@@ -2575,7 +2744,8 @@
     "question": "Digite, em uma palavra, o tipo de saldo apurado quando os créditos de IBS/CBS do período superam os débitos das vendas:",
     "correctAnswer": "credor",
     "explanation": "O saldo credor ocorre quando os créditos apurados no período superam os débitos das operações, podendo acontecer em qualquer empresa.",
-    "pacciTip": "Credor, tesoro! Sobra de crédito também acontece fora da exportação."
+    "pacciTip": "Credor, tesoro! Sobra de crédito também acontece fora da exportação.",
+    "topic": "ibs_cbs"
   },
   {
     "id": "REF-PL-132",
@@ -2585,7 +2755,8 @@
     "question": "Digite, em uma palavra, o principal motivo pelo qual o ressarcimento é essencial para uma trading exportadora: suas vendas ao exterior quase não geram ___ para compensar o crédito.",
     "correctAnswer": "débito",
     "explanation": "As vendas ao exterior praticamente não geram débito de saída, fazendo com que os créditos das aquisições se acumulem sem compensação interna.",
-    "pacciTip": "Débito é a palavra que falta, tesoro! Exportação quase não gera débito pra compensar."
+    "pacciTip": "Débito é a palavra que falta, tesoro! Exportação quase não gera débito pra compensar.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-133",
@@ -2595,7 +2766,8 @@
     "question": "Digite, em uma palavra, o que a empresa pode fazer com o saldo credor de um mês de sazonalidade, mantendo-o para uso em períodos futuros: ___ o crédito para compensação posterior.",
     "correctAnswer": "manter",
     "explanation": "O saldo credor de um período pode ser mantido para compensação em períodos futuros ou ser objeto de ressarcimento, conforme o caso.",
-    "pacciTip": "Manter, tesoro! O crédito sazonal não se perde, ele espera a vez."
+    "pacciTip": "Manter, tesoro! O crédito sazonal não se perde, ele espera a vez.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-134",
@@ -2605,7 +2777,8 @@
     "question": "Digite, em uma palavra, a ação que a empresa precisa realizar junto ao Fisco para obter o ressarcimento de créditos acumulados: formalizar uma ___.",
     "correctAnswer": "solicitação",
     "explanation": "O ressarcimento depende de solicitação formal da empresa junto ao Fisco, mesmo com prazos de análise mais ágeis no novo modelo.",
-    "pacciTip": "Solicitação, tesoro! O ressarcimento não vem sozinho, precisa ser pedido."
+    "pacciTip": "Solicitação, tesoro! O ressarcimento não vem sozinho, precisa ser pedido.",
+    "topic": "outros"
   },
   {
     "id": "REF-PL-135",
@@ -2615,7 +2788,8 @@
     "question": "Digite, em uma palavra, o tipo de regime tributário aplicável a setores como planos de saúde, com regras próprias de crédito diferentes do regime geral:",
     "correctAnswer": "específico",
     "explanation": "Planos de saúde estão sujeitos a regime específico, com regras próprias de apuração e crédito, diferentes do regime geral.",
-    "pacciTip": "Específico, tesoro! Cada setor desses tem sua regrinha própria."
+    "pacciTip": "Específico, tesoro! Cada setor desses tem sua regrinha própria.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-136",
@@ -2625,7 +2799,8 @@
     "question": "Digite, em uma palavra, o setor cuja aquisição por uma transportadora segue regime específico de apuração e crédito diferenciado:",
     "correctAnswer": "combustíveis",
     "explanation": "O setor de combustíveis está sujeito a regime específico de tributação, com regras próprias de apuração e crédito.",
-    "pacciTip": "Combustíveis, tesoro! Regime especial de ponta a ponta na cadeia."
+    "pacciTip": "Combustíveis, tesoro! Regime especial de ponta a ponta na cadeia.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-137",
@@ -2635,7 +2810,8 @@
     "question": "Digite, em uma palavra, o setor cuja contratação de apólices está sujeita a regime específico de crédito, diferente do regime geral:",
     "correctAnswer": "seguros",
     "explanation": "O setor de seguros está sujeito a regime específico de tributação, com regras próprias de apuração e crédito.",
-    "pacciTip": "Seguros, tesoro! Vale sempre checar a regrinha antes de fechar a apólice."
+    "pacciTip": "Seguros, tesoro! Vale sempre checar a regrinha antes de fechar a apólice.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-138",
@@ -2645,7 +2821,8 @@
     "question": "Digite, em uma palavra, o tipo de bem (como terrenos e edificações) cujas operações seguem regime específico de tributação e crédito:",
     "correctAnswer": "imóveis",
     "explanation": "Operações com bens imóveis estão sujeitas a regime específico, com regras próprias de apuração e crédito, diferentes do regime geral.",
-    "pacciTip": "Imóveis, tesoro! Terreno e prédio sempre seguem regra própria."
+    "pacciTip": "Imóveis, tesoro! Terreno e prédio sempre seguem regra própria.",
+    "topic": "obrigacoes_acessorias"
   },
   {
     "id": "REF-PL-139",
@@ -2655,7 +2832,8 @@
     "question": "Digite, em uma palavra, como costumam ser as regras de crédito do regime específico financeiro, em comparação ao regime geral: mais ___.",
     "correctAnswer": "restritivas",
     "explanation": "O setor financeiro segue regime específico, com regras de crédito geralmente mais restritivas do que as aplicáveis ao regime geral.",
-    "pacciTip": "Restritivas, tesoro! Regime financeiro sempre aperta mais a mão no crédito."
+    "pacciTip": "Restritivas, tesoro! Regime financeiro sempre aperta mais a mão no crédito.",
+    "topic": "regimes_especiais"
   },
   {
     "id": "REF-PL-140",
@@ -2665,6 +2843,7 @@
     "question": "Digite, em uma palavra, o tipo de regime tributário que exige atenção redobrada da agência ao avaliar o crédito de um contrato com uma empresa de apostas esportivas:",
     "correctAnswer": "específico",
     "explanation": "Setores sujeitos a regime específico, como apostas esportivas, possuem regras próprias de crédito que exigem atenção redobrada de quem contrata seus serviços.",
-    "pacciTip": "Específico, de novo, tesoro! Essa palavra resume o cuidado extra necessário."
+    "pacciTip": "Específico, de novo, tesoro! Essa palavra resume o cuidado extra necessário.",
+    "topic": "regimes_especiais"
   }
 ]
