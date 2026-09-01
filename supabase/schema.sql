@@ -165,6 +165,27 @@ comment on table public.question_attempts is 'Uma linha por pergunta respondida 
 create index if not exists question_attempts_user_id_idx on public.question_attempts (user_id);
 create index if not exists question_attempts_topic_idx on public.question_attempts (topic);
 
+-- -----------------------------------------------------------------------------
+-- 4c. question_reports ("Reportar erro" no Quiz — 1 clique, sem texto) —
+-- question_text vem denormalizado do cliente no momento do clique (mesmo
+-- texto que o usuário estava vendo), pelo mesmo motivo de question_attempts:
+-- não depender de join com a tabela `questions` pra exibir no Painel Master.
+-- -----------------------------------------------------------------------------
+create table if not exists public.question_reports (
+  id uuid primary key default gen_random_uuid(),
+  question_id text not null,
+  question_text text not null,
+  user_id uuid not null references public.users (id) on delete cascade,
+  company_id uuid references public.companies (id) on delete set null,
+  created_at timestamptz not null default now(),
+  status text not null default 'pending' check (status in ('pending', 'resolved'))
+);
+
+comment on table public.question_reports is 'Reportes de "essa questão está errada" (1 clique, sem texto do usuário) — ver aba "Questões Reportadas" no Painel de Contingência (master).';
+
+create index if not exists question_reports_question_id_idx on public.question_reports (question_id);
+create index if not exists question_reports_status_idx on public.question_reports (status);
+
 create index if not exists user_progress_user_id_idx on public.user_progress (user_id);
 create index if not exists user_progress_lesson_id_idx on public.user_progress (lesson_id);
 -- Acelera a checagem "colaborador já completou esta lição regular?"
@@ -541,6 +562,7 @@ alter table public.lessons enable row level security;
 alter table public.questions enable row level security;
 alter table public.user_progress enable row level security;
 alter table public.question_attempts enable row level security;
+alter table public.question_reports enable row level security;
 alter table public.temp_access_tokens enable row level security;
 alter table public.subscriptions enable row level security;
 -- pending_signups não tem policy nenhuma de propósito: só as Edge Functions
@@ -620,6 +642,24 @@ create policy question_attempts_select_self_or_company on public.question_attemp
 drop policy if exists question_attempts_insert_self on public.question_attempts;
 create policy question_attempts_insert_self on public.question_attempts for insert
   with check (user_id = auth.uid());
+
+-- question_reports: qualquer usuário autenticado pode reportar (1 clique,
+-- sem exigir texto), mas só o master lê a lista e marca como corrigida — é
+-- conteúdo/qualidade do banco de questões (cross-company), não dado do
+-- próprio usuário nem da própria empresa, então não segue o padrão
+-- self-or-company do resto do arquivo.
+drop policy if exists question_reports_insert_self on public.question_reports;
+create policy question_reports_insert_self on public.question_reports for insert
+  with check (user_id = auth.uid());
+
+drop policy if exists question_reports_select_master on public.question_reports;
+create policy question_reports_select_master on public.question_reports for select
+  using (public.is_master());
+
+drop policy if exists question_reports_update_master on public.question_reports;
+create policy question_reports_update_master on public.question_reports for update
+  using (public.is_master())
+  with check (public.is_master());
 
 -- temp_access_tokens: SEM policy pra anon/authenticated -> RLS bloqueia tudo
 -- por padrão. Só a Edge Function (com a service_role key) consegue ler/escrever.

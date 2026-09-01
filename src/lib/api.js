@@ -364,6 +364,56 @@ export async function recordQuestionAttempt({ userId, questionId, lessonId, topi
   if (error) throw error;
 }
 
+// "Reportar erro" — 1 clique, sem texto do usuário (ver QuizEngine.jsx).
+export async function reportQuestion({ userId, questionId, questionText, companyId }) {
+  const { error } = await supabase.from('question_reports').insert({
+    user_id: userId,
+    question_id: questionId,
+    question_text: questionText,
+    company_id: companyId ?? null,
+  });
+  if (error) throw error;
+}
+
+// Painel de Contingência (master) — aba "Questões Reportadas". Lê todo mundo
+// que ainda está 'pending' (RLS já restringe a leitura a master) e agrupa
+// por questão no cliente (contagem + data do último report).
+export async function fetchQuestionReports() {
+  const { data, error } = await supabase
+    .from('question_reports')
+    .select('question_id, question_text, created_at')
+    .eq('status', 'pending')
+    .order('created_at', { ascending: false });
+  if (error) throw error;
+
+  const byQuestion = new Map();
+  for (const row of data) {
+    const existing = byQuestion.get(row.question_id);
+    if (existing) {
+      existing.count += 1;
+    } else {
+      byQuestion.set(row.question_id, {
+        questionId: row.question_id,
+        questionText: row.question_text,
+        count: 1,
+        lastReportedAt: row.created_at,
+      });
+    }
+  }
+  return Array.from(byQuestion.values());
+}
+
+// "Marcar como Corrigida" — arquiva TODOS os reports pendentes dessa questão
+// de uma vez (não um por um).
+export async function resolveQuestionReports(questionId) {
+  const { error } = await supabase
+    .from('question_reports')
+    .update({ status: 'resolved' })
+    .eq('question_id', questionId)
+    .eq('status', 'pending');
+  if (error) throw error;
+}
+
 // ---------------------------------------------------------------------------
 // Rankings
 // ---------------------------------------------------------------------------

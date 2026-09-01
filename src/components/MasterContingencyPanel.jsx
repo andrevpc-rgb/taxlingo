@@ -12,6 +12,7 @@ import { ShieldAlert, UserPlus, Building2, RefreshCcw, Check, AlertCircle, Copy,
 import * as api from '../lib/api';
 import { isSupabaseConfigured } from '../lib/supabase.js';
 import ManageUsersPanel from './ManageUsersPanel';
+import ReportedQuestionsPanel from './ReportedQuestionsPanel';
 
 function ResultCard({ result }) {
   const [copied, setCopied] = useState(false);
@@ -396,8 +397,9 @@ export default function MasterContingencyPanel() {
             <SetRoleForm />
             <PendingLeadsList onActivate={setPrefill} />
           </div>
-          <div className="mt-4">
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
             <ManageUsersPanel />
+            <ReportedQuestionsPanel />
           </div>
         </>
       )}

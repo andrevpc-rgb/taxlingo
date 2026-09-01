@@ -10,8 +10,11 @@ import {
   SkipForward,
   Lock,
   Clock,
+  Flag,
 } from 'lucide-react';
 import { useGame, getHeartRegenInfo } from '../context/GameContext.jsx';
+import { isSupabaseConfigured } from '../lib/supabase';
+import * as api from '../lib/api';
 import { playCorrect, playIncorrect, playLessonComplete, playPromotion } from '../utils/sound';
 import {
   QUESTION_TYPES,
@@ -193,6 +196,39 @@ function pct(value) {
   return `${Math.round(value * 100)}%`;
 }
 
+// "Reportar erro" — 1 clique, sem exigir texto do usuário. Desabilita assim
+// que clicado (evita spam de re-clique na mesma questão); volta a ficar
+// habilitado numa questão diferente.
+function ReportQuestionButton({ reported, onReport }) {
+  return (
+    <button
+      type="button"
+      disabled={reported}
+      onClick={onReport}
+      title={reported ? 'Já reportado — obrigado!' : 'Reportar erro nesta questão'}
+      className="flex shrink-0 items-center gap-1 rounded-full border-2 border-slate-200 px-2.5 py-1 text-[11px] font-bold text-slate-400 transition-colors hover:border-rose-300 hover:text-rose-500 disabled:cursor-default disabled:border-slate-100 disabled:text-slate-300 disabled:hover:border-slate-100 disabled:hover:text-slate-300"
+    >
+      <Flag className="h-3.5 w-3.5" />
+      {reported ? 'Reportado' : 'Reportar erro'}
+    </button>
+  );
+}
+
+function ReportToast({ show }) {
+  return (
+    <div
+      className={`pointer-events-none fixed inset-x-0 top-4 z-50 flex justify-center px-4 transition-all duration-300 ${
+        show ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
+      }`}
+    >
+      <div className="flex items-center gap-2 rounded-2xl border-2 border-emerald-200 bg-white px-4 py-3 text-sm font-bold text-emerald-700 shadow-lg">
+        <CheckCircle2 className="h-4 w-4 shrink-0 text-emerald-500" />
+        Obrigado! Esta questão foi reportada à nossa equipe pedagógica.
+      </div>
+    </div>
+  );
+}
+
 // Bônus de Ofensiva (a cada 7 dias seguidos) — mesmo aviso em qualquer tela
 // de conclusão que tiver disparado o marco (ver applyDailyStreak).
 function StreakBonusBadge({ amount }) {
@@ -303,6 +339,7 @@ function ExamIntroModal({ totalQuestions, onStart, onCancel }) {
 // ---------------------------------------------------------------------------
 export default function QuizEngine({ onExit }) {
   const {
+    user,
     currentQuestion,
     currentLessonType,
     lessonId,
@@ -364,6 +401,33 @@ export default function QuizEngine({ onExit }) {
   const [confirmedExamLessonId, setConfirmedExamLessonId] = useState(null);
   const isExam = currentLessonType === LESSON_TYPES.EXAM;
   const examNeedsConfirmation = isExam && !lessonComplete && !gameOver && confirmedExamLessonId !== lessonId;
+
+  // "Reportar erro": guarda os ids já reportados NESTA sessão (uma questão
+  // que reaparece na fila de repescagem não precisa reportar de novo) e
+  // mostra o toast de confirmação por alguns segundos.
+  const [reportedIds, setReportedIds] = useState(() => new Set());
+  const [showReportToast, setShowReportToast] = useState(false);
+
+  const handleReportQuestion = () => {
+    if (!currentQuestion || reportedIds.has(currentQuestion.id)) return;
+    setReportedIds((prev) => new Set(prev).add(currentQuestion.id));
+    setShowReportToast(true);
+    setTimeout(() => setShowReportToast(false), 3000);
+
+    if (isSupabaseConfigured && user) {
+      api
+        .reportQuestion({
+          userId: user.id,
+          questionId: currentQuestion.id,
+          questionText: currentQuestion.question,
+          companyId: user.companyId ?? null,
+        })
+        .catch(() => {
+          // Best-effort — o usuário já viu a confirmação; uma falha de rede
+          // aqui não deve incomodar quem está jogando.
+        });
+    }
+  };
 
   if (gameOver) {
     return (
@@ -573,6 +637,8 @@ export default function QuizEngine({ onExit }) {
 
   return (
     <div className="mx-auto flex max-w-md flex-col gap-6 px-4 pb-32 pt-4 sm:max-w-2xl sm:pt-6">
+      <ReportToast show={showReportToast} />
+
       {isExam && (
         <div className="flex items-center gap-2 rounded-2xl border-2 border-indigo-200 bg-indigo-50 px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-indigo-600">
           <ClipboardCheck className="h-4 w-4" />
@@ -617,9 +683,12 @@ export default function QuizEngine({ onExit }) {
 
       {/* Pergunta */}
       <div>
-        <span className="mb-2 inline-block rounded-full bg-slate-100 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-slate-500">
-          {currentQuestion.level?.replace('_', ' ')}
-        </span>
+        <div className="mb-2 flex items-center justify-between gap-2">
+          <span className="inline-block rounded-full bg-slate-100 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wide text-slate-500">
+            {currentQuestion.level?.replace('_', ' ')}
+          </span>
+          <ReportQuestionButton reported={reportedIds.has(currentQuestion.id)} onReport={handleReportQuestion} />
+        </div>
         <h2 className="text-lg font-extrabold leading-snug text-slate-800">{currentQuestion.question}</h2>
       </div>
 
