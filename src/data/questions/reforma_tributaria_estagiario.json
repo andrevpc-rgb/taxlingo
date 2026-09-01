@@ -244,7 +244,14 @@
       "CBS (bens e serviços em geral, federal)",
       "Imposto Seletivo (produtos específicos, prejudiciais à saúde/meio ambiente)"
     ],
-    "explanation": "IBS e CBS incidem de forma ampla sobre o consumo em geral, enquanto o Imposto Seletivo é seletivo por natureza, focado em itens específicos.",
+    "acceptableOrders": [
+      [
+        "CBS (bens e serviços em geral, federal)",
+        "IBS (bens e serviços em geral, estadual/municipal)",
+        "Imposto Seletivo (produtos específicos, prejudiciais à saúde/meio ambiente)"
+      ]
+    ],
+    "explanation": "IBS e CBS são tributos de ampla abrangência sobre bens e serviços gerais, enquanto o Imposto Seletivo (IS) é específico e incide apenas sobre itens nocivos à saúde ou ao meio ambiente.",
     "pacciTip": "IBS e CBS são a base de tudo, general! O Imposto Seletivo é o 'extra' que mira só em alguns produtos.",
     "topic": "imposto_seletivo"
   },

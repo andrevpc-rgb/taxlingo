@@ -91,11 +91,19 @@ export default function Leaderboard() {
 
   if (!user) return null;
 
+  // Plano Corporativo de verdade (Starter/Pro, com limite de vagas real —
+  // `maxUsers` só vem preenchido nesse caso; contas Individuais/Teste
+  // Grátis são "empresas" de 1 pessoa só, com maxUsers null, e continuam
+  // vendo o Ranking Geral normalmente). Privacidade B2B: colaborador de uma
+  // empresa cliente não deve ver nem aparecer pra outras empresas.
+  const isCorporatePlan = currentCompany?.maxUsers != null;
+  const effectiveTab = isCorporatePlan ? 'company' : tab;
+
   const scoped = {
     company: { weekly: weeklyCompanyLeaderboard, alltime: companyLeaderboard },
     global: { weekly: weeklyGlobalLeaderboard, alltime: globalLeaderboard },
   };
-  const entries = scoped[tab][period];
+  const entries = scoped[effectiveTab][period];
   const xpKey = period === 'weekly' ? 'weeklyXp' : 'xp';
   const sorted = [...entries].sort((a, b) => a.position - b.position);
   const podium = sorted.filter((entry) => entry.position <= 3);
@@ -103,7 +111,7 @@ export default function Leaderboard() {
 
   const getSubtitle = (entry) => {
     const jobTitle = entry.jobTitle ?? '—';
-    if (tab === 'company') return jobTitle;
+    if (effectiveTab === 'company') return jobTitle;
     const companyName = companies.find((c) => c.id === entry.companyId)?.name ?? '—';
     return `${jobTitle} · ${companyName}`;
   };
@@ -116,7 +124,7 @@ export default function Leaderboard() {
       <h1 className="mb-1 text-xl font-extrabold text-slate-800">Ranking</h1>
       <p className="mb-4 text-sm text-slate-400">
         {period === 'weekly' ? 'XP acumulado nos últimos 7 dias. ' : 'Soma histórica de todo o XP já ganho. '}
-        {tab === 'company'
+        {effectiveTab === 'company'
           ? `Veja como você está em relação aos colegas de ${currentCompany?.name ?? 'sua empresa'}.`
           : 'Veja como você está em relação a todas as empresas do TaxLingo.'}
       </p>
@@ -144,30 +152,35 @@ export default function Leaderboard() {
         </button>
       </div>
 
-      <div className="mb-6 flex gap-2 rounded-2xl bg-slate-100 p-1">
-        <button
-          type="button"
-          onClick={() => setTab('company')}
-          className={`flex min-h-[2.75rem] flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[11px] font-extrabold uppercase tracking-wide transition-colors sm:text-xs ${
-            tab === 'company' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-400'
-          }`}
-        >
-          <Building2 className="h-4 w-4 shrink-0" />
-          Minha Empresa
-        </button>
-        <button
-          type="button"
-          onClick={() => setTab('global')}
-          className={`flex min-h-[2.75rem] flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[11px] font-extrabold uppercase tracking-wide transition-colors sm:text-xs ${
-            tab === 'global' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-400'
-          }`}
-        >
-          <Globe2 className="h-4 w-4" />
-          Todas as Empresas
-        </button>
-      </div>
+      {/* Plano Corporativo: sem opção de Ranking Geral entre empresas (privacidade
+          B2B — ver isCorporatePlan acima) — só mostra o toggle pra quem tem
+          escolha de verdade (Individual/Teste Grátis). */}
+      {!isCorporatePlan && (
+        <div className="mb-6 flex gap-2 rounded-2xl bg-slate-100 p-1">
+          <button
+            type="button"
+            onClick={() => setTab('company')}
+            className={`flex min-h-[2.75rem] flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[11px] font-extrabold uppercase tracking-wide transition-colors sm:text-xs ${
+              effectiveTab === 'company' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-400'
+            }`}
+          >
+            <Building2 className="h-4 w-4 shrink-0" />
+            Minha Empresa
+          </button>
+          <button
+            type="button"
+            onClick={() => setTab('global')}
+            className={`flex min-h-[2.75rem] flex-1 items-center justify-center gap-1.5 rounded-xl py-2 text-[11px] font-extrabold uppercase tracking-wide transition-colors sm:text-xs ${
+              effectiveTab === 'global' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-400'
+            }`}
+          >
+            <Globe2 className="h-4 w-4" />
+            Todas as Empresas
+          </button>
+        </div>
+      )}
 
-      {tab === 'company' && youAreHighlighted && (
+      {effectiveTab === 'company' && youAreHighlighted && (
         <div className="mb-6 flex items-center gap-3 rounded-2xl border-2 border-amber-300 bg-amber-50 px-4 py-3">
           <Megaphone className="h-6 w-6 shrink-0 text-amber-500" />
           <p className="text-sm font-bold text-amber-700">

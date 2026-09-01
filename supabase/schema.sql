@@ -470,13 +470,19 @@ language sql
 security definer set search_path = public
 stable
 as $$
-  select id, full_name, avatar_url, job_title, company_id, xp, weekly_xp
-  from public.users
-  where role != 'master'
-  order by xp desc;
+  select u.id, u.full_name, u.avatar_url, u.job_title, u.company_id, u.xp, u.weekly_xp
+  from public.users u
+  left join public.companies c on c.id = u.company_id
+  where u.role != 'master'
+    -- Privacidade B2B: colaborador de Plano Corporativo de verdade (Starter/
+    -- Pro, com limite de vagas real em max_users) não aparece pra outras
+    -- empresas no Ranking Geral. Individual/Teste Grátis são "empresas" de 1
+    -- pessoa só (max_users null) e continuam aparecendo normalmente.
+    and (c.max_users is null)
+  order by u.xp desc;
 $$;
 
-comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa). Exclui role=master: a conta do fundador não compete no ranking.';
+comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa). Exclui role=master (a conta do fundador não compete) e colaboradores de Plano Corporativo de verdade (privacidade B2B — ver max_users).';
 
 -- Ranking da Empresa: a policy users_select_self_or_company só deixa
 -- admin/master ler os colegas inteiros (comum lê só a própria linha) — um

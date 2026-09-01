@@ -72,11 +72,19 @@ export function checkAnswer(question, userAnswer) {
     case QUESTION_TYPES.TRUE_FALSE:
       return Boolean(userAnswer) === Boolean(question.correctAnswer);
 
+    // Normalmente só existe UMA ordem certa (`correctAnswer`) — mas algumas
+    // perguntas têm dois itens intercambiáveis entre si (ex.: IBS e CBS têm a
+    // mesma abrangência, só o 3º item — Imposto Seletivo — é estritamente
+    // depois). `acceptableOrders`, se vier preenchido, lista TODAS as ordens
+    // válidas (correctAnswer entra nessa lista implicitamente, não precisa
+    // repetir); sem esse campo, só `correctAnswer` é aceito, como antes.
     case QUESTION_TYPES.ORDERING: {
-      const correctOrder = question.correctAnswer;
-      if (!Array.isArray(userAnswer) || !Array.isArray(correctOrder)) return false;
-      if (userAnswer.length !== correctOrder.length) return false;
-      return userAnswer.every((item, i) => normalize(item) === normalize(correctOrder[i]));
+      if (!Array.isArray(userAnswer)) return false;
+      const candidateOrders = [question.correctAnswer, ...(question.acceptableOrders ?? [])];
+      return candidateOrders.some((order) => {
+        if (!Array.isArray(order) || userAnswer.length !== order.length) return false;
+        return userAnswer.every((item, i) => normalize(item) === normalize(order[i]));
+      });
     }
 
     // "Digitar Palavra" — resposta exata de texto, tratada como case-insensitive.
@@ -1661,6 +1669,17 @@ export function GameProvider({ children }) {
   // coluna role pro cliente filtrar de novo aqui.
   const nonMasterUsers = useMemo(() => state.users.filter((u) => u.role !== 'master'), [state.users]);
 
+  // Privacidade B2B: colaborador de Plano Corporativo de verdade (maxUsers
+  // preenchido — Individual/Teste Grátis são "empresas" de 1 pessoa só, com
+  // maxUsers null) não aparece pro Ranking Geral entre empresas. No modo
+  // Supabase esse filtro é feito no servidor (get_global_leaderboard, ver
+  // schema.sql); dentro da PRÓPRIA empresa (companyLeaderboard) continua
+  // aparecendo normalmente — a exclusão é só entre empresas diferentes.
+  const nonCorporateUsers = useMemo(
+    () => nonMasterUsers.filter((u) => getCompanyById(u.companyId)?.maxUsers == null),
+    [nonMasterUsers]
+  );
+
   const companyLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseCompanyLeaderboard ?? []);
     if (!state.user) return [];
@@ -1669,8 +1688,8 @@ export function GameProvider({ children }) {
 
   const globalLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseGlobalLeaderboard ?? []);
-    return computeLeaderboard(nonMasterUsers);
-  }, [nonMasterUsers, state.supabaseGlobalLeaderboard]);
+    return computeLeaderboard(nonCorporateUsers);
+  }, [nonCorporateUsers, state.supabaseGlobalLeaderboard]);
 
   // Ranking Semanal — mesmas listas de base, só ordenadas por `weeklyXp` em
   // vez de `xp` total (ver addXp/getWeekStartISO). Não precisa "zerar" nada
@@ -1686,8 +1705,8 @@ export function GameProvider({ children }) {
 
   const weeklyGlobalLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseGlobalLeaderboard ?? [], 'weeklyXp');
-    return computeLeaderboard(nonMasterUsers, 'weeklyXp');
-  }, [nonMasterUsers, state.supabaseGlobalLeaderboard]);
+    return computeLeaderboard(nonCorporateUsers, 'weeklyXp');
+  }, [nonCorporateUsers, state.supabaseGlobalLeaderboard]);
 
   const activeCompanies = isSupabaseConfigured ? state.supabaseCompanies : companies;
 

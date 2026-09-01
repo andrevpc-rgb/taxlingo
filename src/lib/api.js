@@ -459,9 +459,9 @@ export async function createNitrusCheckoutSession({ companyId, companyName, admi
 }
 
 export async function fetchCompanies() {
-  const { data, error } = await supabase.from('companies').select('id, name, company_code, cnpj');
+  const { data, error } = await supabase.from('companies').select('id, name, company_code, cnpj, max_users');
   if (error) throw error;
-  return data.map((c) => ({ id: c.id, name: c.name, code: c.company_code, cnpj: c.cnpj }));
+  return data.map((c) => ({ id: c.id, name: c.name, code: c.company_code, cnpj: c.cnpj, maxUsers: c.max_users }));
 }
 
 // ---------------------------------------------------------------------------
