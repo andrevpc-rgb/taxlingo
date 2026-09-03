@@ -61,6 +61,87 @@ function normalize(value) {
   return String(value ?? '').trim().toLowerCase();
 }
 
+// ---------------------------------------------------------------------------
+// Comparação flexível pra questões "Digitar Resposta" (TEXT_INPUT) — só essas:
+// as demais (múltipla escolha, V/F, ordenação) comparam contra um valor fixo
+// que o próprio app mostrou na tela, não faz sentido tolerar erro de digitação
+// ali. Aqui sim, porque é o usuário digitando de próprio punho.
+// ---------------------------------------------------------------------------
+
+// Tira acentuação (NFD + remove marcas diacríticas) e qualquer caractere que
+// não seja letra/número/espaço, além de baixar caixa — "Simplificação!" vira
+// "simplificacao".
+function normalizeForFuzzy(value) {
+  return String(value ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9\s]/g, '')
+    .trim()
+    .replace(/\s+/g, ' ');
+}
+
+// Distância de Levenshtein clássica (programação dinâmica) — número mínimo
+// de inserções/remoções/substituições pra transformar `a` em `b`.
+function levenshteinDistance(a, b) {
+  const m = a.length;
+  const n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+
+  let prevRow = Array.from({ length: n + 1 }, (_, j) => j);
+  for (let i = 1; i <= m; i++) {
+    const currentRow = [i];
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      currentRow[j] = Math.min(
+        prevRow[j] + 1, // remoção
+        currentRow[j - 1] + 1, // inserção
+        prevRow[j - 1] + cost // substituição
+      );
+    }
+    prevRow = currentRow;
+  }
+  return prevRow[n];
+}
+
+// Variação gramatical/radical: "simplificar" aceita "simplifica",
+// "simplificando", "simplificação" (já sem cedilha/acento a essa altura),
+// "simplificou" — todas compartilham o prefixo "simplific". Exige um prefixo
+// comum de pelo menos 4 caracteres E pelo menos 70% da palavra mais curta,
+// pra não confundir palavras curtas só porque começam igual.
+function sharesRadical(a, b) {
+  const minLen = Math.min(a.length, b.length);
+  if (minLen < 4) return false;
+  let shared = 0;
+  while (shared < minLen && a[shared] === b[shared]) shared++;
+  return shared >= Math.max(4, Math.ceil(minLen * 0.7));
+}
+
+// Siglas curtas (IBS/CBS/IS/ISS/PIS...) são o caso mais sensível deste app:
+// 1 letra de diferença em 3 caracteres já é OUTRA sigla, não um erro de
+// digitação — por isso zero tolerância abaixo de 4 caracteres. De 4 a 6,
+// tolera 1 erro; acima disso, até 2 (palavras mais longas "absorvem" melhor
+// uma letra trocada sem virar outra palavra).
+function toleranceFor(len) {
+  if (len <= 3) return 0;
+  if (len <= 6) return 1;
+  return 2;
+}
+
+// Combina os três critérios pedidos: normalização (acento/caixa), tolerância
+// a erro de digitação (Levenshtein, escalada por tamanho — ver toleranceFor)
+// e variação de radical/forma verbal.
+function fuzzyTextMatch(candidate, userAnswer) {
+  const a = normalizeForFuzzy(candidate);
+  const b = normalizeForFuzzy(userAnswer);
+  if (!a || !b) return false;
+  if (a === b) return true;
+  if (sharesRadical(a, b)) return true;
+  const tolerance = toleranceFor(Math.max(a.length, b.length));
+  return levenshteinDistance(a, b) <= tolerance;
+}
+
 export function checkAnswer(question, userAnswer) {
   if (userAnswer === null || userAnswer === undefined) return false;
 
@@ -87,12 +168,14 @@ export function checkAnswer(question, userAnswer) {
       });
     }
 
-    // "Digitar Palavra" — resposta exata de texto, tratada como case-insensitive.
+    // "Digitar Palavra" — comparação flexível (ver fuzzyTextMatch acima):
+    // tolera acento/caixa, pequeno erro de digitação e variação de
+    // radical/forma verbal, além de qualquer resposta alternativa cadastrada.
     case QUESTION_TYPES.TEXT_INPUT: {
       const accepted = question.acceptableAnswers?.length
         ? question.acceptableAnswers
         : [question.correctAnswer];
-      return accepted.some((candidate) => normalize(candidate) === normalize(userAnswer));
+      return accepted.some((candidate) => fuzzyTextMatch(candidate, userAnswer));
     }
 
     default:
