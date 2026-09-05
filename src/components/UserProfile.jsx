@@ -19,7 +19,10 @@ const AVATAR_TABS = Object.entries(AVATAR_CATEGORIES).map(([key, category]) => (
 
 export default function UserProfile({ onClose }) {
   const { user, currentCompany, modules, updateProfile, logout } = useGame();
-  const certificateUnlocked = hasCompletedTrail(modules);
+  // Master (founder/QA) sempre vê liberado — é a conta de contingência,
+  // não faz sentido ela precisar terminar a trilha inteira pra testar o
+  // certificado (mesma lógica de isAccessExpired/leaderboard em GameContext.jsx).
+  const certificateUnlocked = user?.role === 'master' || hasCompletedTrail(modules);
 
   const [name, setName] = useState(user?.name ?? '');
   const [jobTitle, setJobTitle] = useState(user?.jobTitle ?? '');
