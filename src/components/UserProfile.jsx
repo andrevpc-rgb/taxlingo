@@ -1,8 +1,9 @@
 // src/components/UserProfile.jsx
 import React, { useState } from 'react';
-import { X, Building2, Mail, LogOut, Check } from 'lucide-react';
+import { X, Building2, Mail, LogOut, Check, GraduationCap, Lock } from 'lucide-react';
 import { useGame } from '../context/GameContext.jsx';
 import { AVATAR_CATEGORIES } from '../data/mockData';
+import { hasCompletedTrail, downloadCertificate } from '../utils/certificate';
 
 const ROLE_LABELS = {
   admin: 'Administrador(a)',
@@ -17,7 +18,8 @@ const AVATAR_TABS = Object.entries(AVATAR_CATEGORIES).map(([key, category]) => (
 }));
 
 export default function UserProfile({ onClose }) {
-  const { user, currentCompany, updateProfile, logout } = useGame();
+  const { user, currentCompany, modules, updateProfile, logout } = useGame();
+  const certificateUnlocked = hasCompletedTrail(modules);
 
   const [name, setName] = useState(user?.name ?? '');
   const [jobTitle, setJobTitle] = useState(user?.jobTitle ?? '');
@@ -28,6 +30,7 @@ export default function UserProfile({ onClose }) {
   const [error, setError] = useState(null);
   const [saved, setSaved] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [generatingCertificate, setGeneratingCertificate] = useState(false);
 
   if (!user) return null;
 
@@ -65,6 +68,16 @@ export default function UserProfile({ onClose }) {
   const handleLogout = () => {
     logout();
     onClose?.();
+  };
+
+  const handleDownloadCertificate = async () => {
+    if (!certificateUnlocked || generatingCertificate) return;
+    setGeneratingCertificate(true);
+    try {
+      await downloadCertificate({ user, company: currentCompany });
+    } finally {
+      setGeneratingCertificate(false);
+    }
   };
 
   return (
@@ -156,6 +169,31 @@ export default function UserProfile({ onClose }) {
               <p className="text-xs">{ROLE_LABELS[user.role] ?? user.role}</p>
             </div>
           </div>
+
+          <button
+            type="button"
+            onClick={handleDownloadCertificate}
+            disabled={!certificateUnlocked || generatingCertificate}
+            title={
+              certificateUnlocked
+                ? 'Baixar seu certificado em PDF'
+                : 'Conclua o Exame de Transição de Especialista (o último nível da trilha) para liberar'
+            }
+            className={`flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-extrabold uppercase tracking-wide transition-transform active:translate-y-0.5 ${
+              certificateUnlocked
+                ? 'bg-amber-500 text-white shadow-[0_4px_0_0_#b45309] active:shadow-none disabled:cursor-wait disabled:opacity-70'
+                : 'cursor-not-allowed bg-slate-100 text-slate-400'
+            }`}
+          >
+            {!certificateUnlocked && <Lock className="h-4 w-4 shrink-0" />}
+            {generatingCertificate ? 'Gerando PDF...' : '🎓 Baixar Meu Certificado'}
+          </button>
+          {!certificateUnlocked && (
+            <p className="-mt-3 flex items-center gap-1.5 text-[11px] font-medium text-slate-400">
+              <GraduationCap className="h-3.5 w-3.5 shrink-0" />
+              Libera ao concluir o Exame de Transição de Especialista, o último nível da trilha.
+            </p>
+          )}
 
           <div className="grid gap-2">
             <label htmlFor="profile-new-password" className="text-xs font-bold uppercase tracking-wide text-slate-400">
