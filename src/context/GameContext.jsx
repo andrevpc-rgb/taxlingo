@@ -289,6 +289,18 @@ function getWeekStartISO(date = new Date()) {
   return d.toISOString().slice(0, 10);
 }
 
+// weeklyXp só é fiel à semana corrente se weekStart bater com a segunda-feira
+// desta semana — o "reset" semanal (ver addXp acima) só acontece no PRÓXIMO
+// ganho de XP do usuário, então quem parou de estudar no meio de uma semana
+// anterior fica com o número congelado indefinidamente. Sem isso, essa
+// pessoa continuaria aparecendo no topo do Ranking Semanal pra sempre,
+// mesmo inativa (mesma correção aplicada no servidor, ver
+// get_global_leaderboard/get_company_leaderboard no schema.sql).
+function withCurrentWeekXp(users) {
+  const currentWeekStart = getWeekStartISO();
+  return users.map((u) => (u.weekStart === currentWeekStart ? u : { ...u, weeklyXp: 0 }));
+}
+
 // Devolve só o PATCH (não o usuário inteiro) pra poder ser espalhado junto
 // com outras alterações no mesmo objeto de usuário: `{ ...user, ...addXp(user, 10), ... }`.
 // Usado em todo lugar que soma (ou subtrai, no caso de reversão por Game
@@ -1775,20 +1787,19 @@ export function GameProvider({ children }) {
   }, [nonCorporateUsers, state.supabaseGlobalLeaderboard]);
 
   // Ranking Semanal — mesmas listas de base, só ordenadas por `weeklyXp` em
-  // vez de `xp` total (ver addXp/getWeekStartISO). Não precisa "zerar" nada
-  // de verdade: weeklyXp já vem 0 (ou baixo) pra quem não jogou nesta semana.
+  // vez de `xp` total (ver addXp/getWeekStartISO/withCurrentWeekXp acima).
   const weeklyCompanyLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseCompanyLeaderboard ?? [], 'weeklyXp');
     if (!state.user) return [];
     return computeLeaderboard(
-      nonMasterUsers.filter((u) => u.companyId === state.user.companyId),
+      withCurrentWeekXp(nonMasterUsers.filter((u) => u.companyId === state.user.companyId)),
       'weeklyXp'
     );
   }, [nonMasterUsers, state.user?.companyId, state.supabaseCompanyLeaderboard]);
 
   const weeklyGlobalLeaderboard = useMemo(() => {
     if (isSupabaseConfigured) return computeLeaderboard(state.supabaseGlobalLeaderboard ?? [], 'weeklyXp');
-    return computeLeaderboard(nonCorporateUsers, 'weeklyXp');
+    return computeLeaderboard(withCurrentWeekXp(nonCorporateUsers), 'weeklyXp');
   }, [nonCorporateUsers, state.supabaseGlobalLeaderboard]);
 
   const activeCompanies = isSupabaseConfigured ? state.supabaseCompanies : companies;

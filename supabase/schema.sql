@@ -491,7 +491,15 @@ language sql
 security definer set search_path = public
 stable
 as $$
-  select u.id, u.full_name, u.avatar_url, u.job_title, u.company_id, u.xp, u.weekly_xp
+  select
+    u.id, u.full_name, u.avatar_url, u.job_title, u.company_id, u.xp,
+    -- weekly_xp só é fiel à semana corrente se week_start bater com a
+    -- segunda-feira desta semana (ver addXp em GameContext.jsx: o "reset"
+    -- semanal só acontece no PRÓXIMO ganho de XP do usuário, então quem para
+    -- de estudar no meio de uma semana fica com o número congelado —
+    -- sem esse case, essa pessoa continuaria "no topo" do Ranking Semanal
+    -- pra sempre, mesmo inativa). Fora da semana corrente, conta como 0.
+    case when u.week_start = (date_trunc('week', now()))::date then u.weekly_xp else 0 end as weekly_xp
   from public.users u
   left join public.companies c on c.id = u.company_id
   where u.role != 'master'
@@ -503,7 +511,7 @@ as $$
   order by u.xp desc;
 $$;
 
-comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa). Exclui role=master (a conta do fundador não compete) e colaboradores de Plano Corporativo de verdade (privacidade B2B — ver max_users).';
+comment on function public.get_global_leaderboard() is 'Exposto a qualquer usuário autenticado — só colunas seguras pro Ranking Geral entre empresas (não usa a policy de users, que é restrita à própria empresa). Exclui role=master (a conta do fundador não compete) e colaboradores de Plano Corporativo de verdade (privacidade B2B — ver max_users). weekly_xp é recalculado na leitura pra contar como 0 fora da semana corrente (ver week_start).';
 
 -- Ranking da Empresa: a policy users_select_self_or_company só deixa
 -- admin/master ler os colegas inteiros (comum lê só a própria linha) — um
@@ -523,7 +531,11 @@ language sql
 security definer set search_path = public
 stable
 as $$
-  select id, full_name, avatar_url, job_title, company_id, xp, weekly_xp
+  select
+    id, full_name, avatar_url, job_title, company_id, xp,
+    -- Mesma lógica do get_global_leaderboard: weekly_xp só conta se
+    -- week_start for a segunda-feira desta semana, senão é 0 na leitura.
+    case when week_start = (date_trunc('week', now()))::date then weekly_xp else 0 end as weekly_xp
   from public.users
   where company_id = p_company_id
     and role != 'master'
@@ -533,7 +545,7 @@ $$;
 
 grant execute on function public.get_company_leaderboard(uuid) to authenticated;
 
-comment on function public.get_company_leaderboard(uuid) is 'Ranking da Empresa: qualquer colaborador autenticado pode ver XP dos colegas da PRÓPRIA empresa (guard embutido na query — pedir o company_id de outra empresa sempre volta vazio). Exclui role=master: a conta do fundador não compete no ranking.';
+comment on function public.get_company_leaderboard(uuid) is 'Ranking da Empresa: qualquer colaborador autenticado pode ver XP dos colegas da PRÓPRIA empresa (guard embutido na query — pedir o company_id de outra empresa sempre volta vazio). Exclui role=master: a conta do fundador não compete no ranking. weekly_xp é recalculado na leitura pra contar como 0 fora da semana corrente (ver week_start).';
 
 -- Lead "morno" capturado em public/comece.html (landing de topo de funil
 -- para contadores/donos de escritório vindos do Instagram) — via a Edge
