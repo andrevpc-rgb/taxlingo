@@ -1663,12 +1663,12 @@
       "Preencher a classificação tributária (cClassTrib) do serviço"
     ],
     "correctAnswer": [
-      "Emitir a nota de serviço informando o NBS correto",
       "Preencher a classificação tributária (cClassTrib) do serviço",
       "Informar os valores retidos conforme regra do cliente",
+      "Emitir a nota de serviço informando o NBS correto",
       "Enviar a nota para aprovação do financeiro antes do envio final"
     ],
-    "explanation": "A nota de serviço com retenção segue: classificação do serviço (NBS), tratamento tributário (cClassTrib), valores retidos e, por fim, aprovação interna.",
+    "explanation": "A nota de serviço com retenção segue: primeiro o preenchimento (classificação tributária/cClassTrib e valores retidos), só depois a emissão da nota com o NBS correto e, por fim, a aprovação interna antes do envio final. Não dá pra emitir uma nota com campos tributários obrigatórios ainda em branco.",
     "pacciTip": "Retenção exige um cuidado a mais, tesoro! Confere tudo antes de mandar pro cliente.",
     "topic": "classificacao_fiscal"
   },

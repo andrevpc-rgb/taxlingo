@@ -451,26 +451,31 @@ function unlockNextLesson(modulesState, moduleId, lessonId) {
 
 // Marca até `skipCount` lições seguintes como concluídas (sem passar pelo
 // exame de transição — esse nunca é pulado) e destrava a lição após elas.
+// Devolve também os IDS puladas (skippedLessonIds) — sem isso, só o estado
+// local (state.modules) sabia que elas foram concluídas; o Supabase nunca
+// ficava sabendo, e um novo login reconstruía o progresso a partir de
+// user_progress "esquecendo" exatamente as lições puladas (ver
+// applyProgressToModules abaixo e o efeito de persistência mais adiante).
 function skipAheadLessons(modulesState, moduleId, lessonId, skipCount) {
   const module = findModule(modulesState, moduleId);
   const idx = findLessonIndex(module, lessonId);
-  if (idx === -1) return { modules: modulesState, skippedCount: 0 };
+  if (idx === -1) return { modules: modulesState, skippedCount: 0, skippedLessonIds: [] };
 
   let next = modulesState;
-  let skipped = 0;
+  const skippedLessonIds = [];
   for (let i = 1; i <= skipCount; i++) {
     const target = module.lessons[idx + i];
     if (!target || target.type === LESSON_TYPES.EXAM) break;
     next = updateLessonInModules(next, moduleId, target.id, { completed: true });
-    skipped++;
+    skippedLessonIds.push(target.id);
   }
 
-  const afterTarget = module.lessons[idx + skipped + 1];
+  const afterTarget = module.lessons[idx + skippedLessonIds.length + 1];
   if (afterTarget) {
     next = updateLessonInModules(next, moduleId, afterTarget.id, { locked: false });
   }
 
-  return { modules: next, skippedCount: skipped };
+  return { modules: next, skippedCount: skippedLessonIds.length, skippedLessonIds };
 }
 
 // Reconstrói o lock/completed dos módulos a partir do progresso salvo no
@@ -589,6 +594,7 @@ function buildSharedGameState() {
     accelerationAvailable: false,
     pendingAccelerationTest: false,
     accelerationResult: null, // { passed, skippedCount } | null
+    skippedLessonIds: [], // ids das lições puladas no Teste de Aceleração aprovado — ver skipAheadLessons
     examResult: null, // { passed, scorePct, requiredPct } | null
     lastLessonScorePct: null, // % de acerto (0-1) da última lição concluída, regular ou exame — ver GameContext.jsx CHECK_ANSWER/NEXT_QUESTION
     isDailyReview: false,
@@ -664,6 +670,7 @@ function startLessonState(state, moduleId, lessonId) {
     gameOver: user.lives <= 0,
     pacciMood: lesson?.type === LESSON_TYPES.EXAM ? 'hint' : 'neutral',
     accelerationResult: null,
+    skippedLessonIds: [],
     examResult: null,
     lastLessonScorePct: null,
     isDailyReview: false,
@@ -906,6 +913,7 @@ function gameReducerCore(state, action) {
         isDailyReview: true,
         pendingAccelerationTest: false,
         accelerationResult: null,
+        skippedLessonIds: [],
         examResult: null,
         lastLessonScorePct: null,
         justPromotedLevelId: null,
@@ -992,6 +1000,7 @@ function gameReducerCore(state, action) {
           accelerationAvailable: false,
           pendingAccelerationTest: false,
           accelerationResult: null,
+          skippedLessonIds: [],
         };
       }
 
@@ -1153,11 +1162,13 @@ function gameReducerCore(state, action) {
           completed: true,
         });
         let accelerationResult;
+        let skippedLessonIds = [];
         const passed = scorePct >= EXAM_PASS_THRESHOLD;
         if (passed) {
           const skipped = skipAheadLessons(nextModules, state.moduleId, state.lessonId, ACCELERATION_SKIP_COUNT);
           nextModules = skipped.modules;
           accelerationResult = { passed: true, skippedCount: skipped.skippedCount };
+          skippedLessonIds = skipped.skippedLessonIds;
         } else {
           nextModules = unlockNextLesson(nextModules, state.moduleId, state.lessonId);
           accelerationResult = { passed: false, skippedCount: 0 };
@@ -1190,6 +1201,7 @@ function gameReducerCore(state, action) {
           accelerationAvailable: false,
           pendingAccelerationTest: false,
           accelerationResult,
+          skippedLessonIds,
           lastLessonScorePct: scorePct,
           justPromotedLevelId: null,
         };
@@ -1236,6 +1248,7 @@ function gameReducerCore(state, action) {
         accelerationAvailable,
         pendingAccelerationTest: false,
         accelerationResult: null,
+        skippedLessonIds: [],
         lastLessonScorePct: scorePct,
         justPromotedLevelId: null,
       };
@@ -1312,6 +1325,7 @@ function gameReducerCore(state, action) {
         pacciMood: 'neutral',
         pendingAccelerationTest: false,
         accelerationResult: null,
+        skippedLessonIds: [],
         examResult: null,
         lastLessonScorePct: null,
         isDailyReview: false,
@@ -1516,6 +1530,25 @@ export function GameProvider({ children }) {
             passed: state.examResult?.passed ?? null,
           });
         }
+        // Teste de Aceleração aprovado: as lições puladas (marcadas
+        // completed=true só em state.modules até aqui) também precisam de
+        // uma linha em user_progress — sem isso, um novo login reconstrói
+        // o progresso a partir do banco (applyProgressToModules) e essas
+        // lições voltam a aparecer como não concluídas/travadas, mesmo já
+        // puladas antes. Não têm score de verdade (nunca foram respondidas
+        // pergunta a pergunta), só marca como concluídas.
+        if (state.skippedLessonIds.length > 0) {
+          await Promise.all(
+            state.skippedLessonIds.map((skippedLessonId) =>
+              api.recordLessonProgress({
+                userId: state.user.id,
+                lessonId: skippedLessonId,
+                score: null,
+                passed: null,
+              })
+            )
+          );
+        }
       } catch {
         // Best-effort: se a rede falhar aqui, o progresso local do usuário
         // não é perdido, só não fica sincronizado com o banco até a
@@ -1530,6 +1563,7 @@ export function GameProvider({ children }) {
     state.isDailyReview,
     state.examResult,
     state.lastLessonScorePct,
+    state.skippedLessonIds,
   ]);
 
   // Modo Supabase: registra cada PERGUNTA respondida (não só o resultado da
