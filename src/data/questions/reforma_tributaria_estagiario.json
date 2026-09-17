@@ -1730,11 +1730,11 @@
     ],
     "correctAnswer": [
       "Serviço de saúde é prestado ao paciente",
-      "Nota fiscal é emitida com o IBS destacado",
       "Sistema aplica a alíquota reduzida do regime da saúde",
+      "Nota fiscal é emitida com o IBS destacado",
       "Tributo é recolhido conforme a regra vigente"
     ],
-    "explanation": "Primeiro o serviço é prestado, depois a nota é emitida com o IBS, o sistema aplica a alíquota reduzida própria da saúde e, por fim, o tributo é recolhido.",
+    "explanation": "Primeiro o serviço é prestado, depois o sistema aplica a alíquota reduzida própria da saúde, só então a nota é emitida com o IBS já destacado corretamente e, por fim, o tributo é recolhido. Não dá pra emitir a nota com o valor certo de IBS antes de calcular a alíquota.",
     "pacciTip": "Saúde tem regra própria, capisce? O sistema já sabe aplicar a alíquota certa.",
     "topic": "classificacao_fiscal"
   },
