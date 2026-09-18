@@ -328,7 +328,14 @@ function addXp(user, amount) {
 const HEART_REGEN_MS = HEART_REGEN_MINUTES * 60 * 1000;
 
 function applyHeartRegen(user) {
-  if (!user || user.lives >= user.maxLives || !user.lastHeartLostAt) return user;
+  if (!user) return user;
+  // Master (fundador/QA) sempre com vidas cheias — cobre também quem já
+  // estava com vidas baixas/zeradas de ANTES desta regra existir (dado
+  // antigo persistido), sem precisar de nenhum botão manual de restaurar.
+  if (user.role === 'master' && (user.lives < user.maxLives || user.lastHeartLostAt)) {
+    return { ...user, lives: user.maxLives, lastHeartLostAt: null };
+  }
+  if (user.lives >= user.maxLives || !user.lastHeartLostAt) return user;
 
   const lostAt = new Date(user.lastHeartLostAt).getTime();
   const elapsed = Date.now() - lostAt;
@@ -940,7 +947,9 @@ function gameReducerCore(state, action) {
       const isCorrect = checkAnswer(question, state.draftAnswer);
       const xpGain = isCorrect ? XP_PER_CORRECT_ANSWER : 0;
       // Exames de Transição avaliam por aproveitamento (%), não por vidas.
-      const livesAreAtStake = state.currentLessonType !== LESSON_TYPES.EXAM;
+      // Master (fundador/QA) nunca perde vida — é a conta de contingência,
+      // não pode ficar bloqueada testando o app por falta de coração.
+      const livesAreAtStake = state.currentLessonType !== LESSON_TYPES.EXAM && state.user.role !== 'master';
       const nextLives =
         isCorrect || !livesAreAtStake ? state.user.lives : Math.max(0, state.user.lives - 1);
       const lostAHeart = nextLives < state.user.lives;

@@ -341,6 +341,13 @@ function AppShell() {
   const handleExitQuiz = () => {
     exitLesson();
     setView('home');
+    // Recalcula o destaque/scroll pra próxima lição — sem isso, voltar da
+    // lição (concluída ou abandonada) jogava a Home sempre pro topo, sem
+    // focar onde o usuário realmente está agora. `modules` já reflete o
+    // estado pós-conclusão nesse ponto (a lição terminou/desbloqueou a
+    // próxima ANTES do usuário clicar em "Continuar"/"Sair").
+    const target = findContinueLesson(modules);
+    setHighlightLessonId(target ? target.lessonId : null);
   };
 
   return (

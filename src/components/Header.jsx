@@ -1,6 +1,6 @@
 // src/components/Header.jsx
 import React, { useEffect, useState } from 'react';
-import { Heart, Flame, Gem, Diamond, Snowflake, ShieldCheck, Clock, X, Volume2, VolumeX } from 'lucide-react';
+import { Heart, Flame, Star, Diamond, Snowflake, ShieldCheck, Clock, X, Volume2, VolumeX, Infinity as InfinityIcon } from 'lucide-react';
 import { useGame, getHeartRegenInfo } from '../context/GameContext.jsx';
 import { STREAK_FREEZE_COST, MAX_STREAK_FREEZES, HEART_REFILL_ONE_COST, HEART_REFILL_FULL_COST } from '../data/mockData';
 import { isSoundMuted, setSoundMuted } from '../utils/sound';
@@ -91,6 +91,7 @@ function HeartsPill({ onOpen }) {
   }, []);
 
   const { missing, msUntilNext } = getHeartRegenInfo(user);
+  const isMaster = user.role === 'master';
 
   return (
     <button
@@ -98,13 +99,13 @@ function HeartsPill({ onOpen }) {
       onClick={onOpen}
       className="flex min-h-[2.75rem] shrink-0 items-center gap-1 rounded-2xl border-2 border-rose-200 bg-rose-50 px-1.5 py-1 font-extrabold text-rose-600 transition-colors hover:border-rose-300 sm:gap-1.5 sm:px-3 sm:py-1.5"
       aria-label="Vidas — toque para recarregar"
-      title="Vidas — toque para recarregar"
+      title={isMaster ? 'Vidas infinitas (conta Master)' : 'Vidas — toque para recarregar'}
     >
       <Heart className="h-4 w-4 shrink-0 fill-rose-500 text-rose-500 sm:h-5 sm:w-5" />
       <span className="text-xs tabular-nums sm:text-sm">
-        {user.lives}/{user.maxLives}
+        {isMaster ? <InfinityIcon className="h-3.5 w-3.5" /> : `${user.lives}/${user.maxLives}`}
       </span>
-      {missing > 0 && msUntilNext !== null && (
+      {!isMaster && missing > 0 && msUntilNext !== null && (
         <span className="hidden items-center gap-0.5 text-[10px] font-bold text-rose-400 sm:inline-flex">
           <Clock className="h-3 w-3" />
           {formatCountdown(msUntilNext)}
@@ -124,8 +125,9 @@ function HeartRefillModal({ onClose }) {
   }, []);
 
   const { missing, msUntilNext } = getHeartRegenInfo(user);
-  const canBuyOne = missing > 0 && user.gems >= HEART_REFILL_ONE_COST;
-  const canBuyFull = missing > 0 && user.gems >= HEART_REFILL_FULL_COST;
+  const isMaster = user.role === 'master';
+  const canBuyOne = !isMaster && missing > 0 && user.gems >= HEART_REFILL_ONE_COST;
+  const canBuyFull = !isMaster && missing > 0 && user.gems >= HEART_REFILL_FULL_COST;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/50 px-4">
@@ -141,10 +143,14 @@ function HeartRefillModal({ onClose }) {
 
         <Heart className="mx-auto mb-2 h-10 w-10 fill-rose-500 text-rose-500" />
         <h2 className="text-lg font-extrabold text-slate-800">
-          {user.lives}/{user.maxLives} vidas
+          {isMaster ? 'Vidas infinitas' : `${user.lives}/${user.maxLives} vidas`}
         </h2>
 
-        {missing > 0 && msUntilNext !== null ? (
+        {isMaster ? (
+          <p className="mt-1 text-sm font-bold text-emerald-600">
+            Conta Master nunca perde vida — teste à vontade. 🎉
+          </p>
+        ) : missing > 0 && msUntilNext !== null ? (
           <p className="mt-1 flex items-center justify-center gap-1 text-sm font-bold text-slate-500">
             <Clock className="h-4 w-4" />
             Próxima vida em {formatCountdown(msUntilNext)}
@@ -216,7 +222,7 @@ export default function Header() {
             label="Gemas"
           />
           <StatPill
-            icon={<Gem className="h-4 w-4 shrink-0 fill-sky-500 text-sky-500 sm:h-5 sm:w-5" />}
+            icon={<Star className="h-4 w-4 shrink-0 fill-sky-500 text-sky-500 sm:h-5 sm:w-5" />}
             value={user.xp}
             colorClass="border-sky-200 bg-sky-50 text-sky-600"
             label="Pontos de XP"

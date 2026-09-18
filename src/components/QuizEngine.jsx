@@ -11,6 +11,7 @@ import {
   Lock,
   Clock,
   Flag,
+  X,
 } from 'lucide-react';
 import { useGame, getHeartRegenInfo } from '../context/GameContext.jsx';
 import { isSupabaseConfigured } from '../lib/supabase';
@@ -335,6 +336,37 @@ function ExamIntroModal({ totalQuestions, onStart, onCancel }) {
 }
 
 // ---------------------------------------------------------------------------
+// Confirmação de saída no meio da lição (botão "✕") — evita perder
+// progresso da sessão atual sem querer, num toque sem querer.
+// ---------------------------------------------------------------------------
+function ExitConfirmModal({ onConfirm, onCancel }) {
+  return (
+    <div className="fixed inset-0 z-40 flex items-center justify-center bg-slate-900/50 px-4">
+      <div className="w-full max-w-sm rounded-3xl border-2 border-slate-200 bg-white p-6 text-center shadow-xl">
+        <h2 className="text-lg font-extrabold text-slate-800">Deseja sair da lição?</h2>
+        <p className="mt-2 text-sm font-medium text-slate-500">O progresso desta sessão será perdido.</p>
+        <div className="mt-5 flex gap-3">
+          <button
+            type="button"
+            onClick={onCancel}
+            className="flex-1 rounded-2xl border-2 border-slate-200 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-slate-600"
+          >
+            Continuar Lição
+          </button>
+          <button
+            type="button"
+            onClick={onConfirm}
+            className="flex-1 rounded-2xl bg-rose-500 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_4px_0_0_#be123c] active:translate-y-0.5 active:shadow-none"
+          >
+            Sair para a Home
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
 // Componente principal
 // ---------------------------------------------------------------------------
 export default function QuizEngine({ onExit }) {
@@ -407,6 +439,7 @@ export default function QuizEngine({ onExit }) {
   // mostra o toast de confirmação por alguns segundos.
   const [reportedIds, setReportedIds] = useState(() => new Set());
   const [showReportToast, setShowReportToast] = useState(false);
+  const [showExitConfirm, setShowExitConfirm] = useState(false);
 
   const handleReportQuestion = () => {
     if (!currentQuestion || reportedIds.has(currentQuestion.id)) return;
@@ -653,8 +686,21 @@ export default function QuizEngine({ onExit }) {
         </div>
       )}
 
+      {showExitConfirm && (
+        <ExitConfirmModal onCancel={() => setShowExitConfirm(false)} onConfirm={onExit} />
+      )}
+
       {/* Barra de progresso da lição */}
       <div className="flex items-center gap-3">
+        <button
+          type="button"
+          onClick={() => setShowExitConfirm(true)}
+          aria-label="Sair da lição"
+          title="Sair da lição"
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-400 transition-colors hover:bg-slate-100 hover:text-slate-600"
+        >
+          <X className="h-5 w-5" />
+        </button>
         <div className="h-3 flex-1 overflow-hidden rounded-full bg-slate-100">
           <div
             className="h-full rounded-full bg-emerald-400 transition-all duration-300"
