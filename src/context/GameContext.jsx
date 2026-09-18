@@ -635,6 +635,7 @@ function buildInitialState() {
       authLoading: true,
       authError: null,
       passwordRecoveryMode: false,
+      pendingNotifications: [],
       ...shared,
     };
   }
@@ -650,6 +651,7 @@ function buildInitialState() {
     authLoading: false,
     authError: null,
     passwordRecoveryMode: false,
+    pendingNotifications: [],
     ...shared,
   };
 }
@@ -840,6 +842,7 @@ function gameReducerCore(state, action) {
         authLoading: false,
         authError: null,
         passwordRecoveryMode: false,
+        pendingNotifications: [],
       };
     }
 
@@ -872,6 +875,28 @@ function gameReducerCore(state, action) {
 
     case 'SET_SUPABASE_COMPANIES': {
       return { ...state, supabaseCompanies: action.payload };
+    }
+
+    // "Sua sugestão foi aplicada!" — buscado uma vez ao logar (ver efeito em
+    // GameProvider); fica na fila até o usuário fechar o aviso.
+    case 'SET_PENDING_NOTIFICATIONS': {
+      if (action.payload.length === 0) return state;
+      return { ...state, pendingNotifications: [...state.pendingNotifications, ...action.payload] };
+    }
+
+    // Fecha o aviso do topo da fila e credita a recompensa (se houver) no
+    // saldo local — a gravação em si já aconteceu no banco quando o master
+    // resolveu o report (ver api.resolveQuestionReports); aqui só refletimos
+    // no estado em memória sem precisar buscar o perfil de novo.
+    case 'DISMISS_NOTIFICATION': {
+      const [dismissed, ...rest] = state.pendingNotifications;
+      if (!dismissed || dismissed.id !== action.payload) return state;
+      const rewardGems = dismissed.rewardGems ?? 0;
+      return {
+        ...state,
+        pendingNotifications: rest,
+        user: state.user && rewardGems > 0 ? { ...state.user, gems: state.user.gems + rewardGems } : state.user,
+      };
     }
 
     case 'START_LESSON': {
@@ -1487,6 +1512,27 @@ export function GameProvider({ children }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.user?.id, state.user?.companyId, state.lessonComplete]);
 
+  // Notificações não lidas ("Sua sugestão foi aplicada!", ver
+  // api.resolveQuestionReports) — busca uma vez por login/sessão restaurada
+  // e enfileira pro NotificationModal (App.jsx) mostrar uma por vez.
+  useEffect(() => {
+    if (!isSupabaseConfigured || !state.user) return undefined;
+    let active = true;
+    (async () => {
+      try {
+        const notifications = await api.fetchUnreadNotifications(state.user.id);
+        if (active && notifications.length > 0) {
+          dispatch({ type: 'SET_PENDING_NOTIFICATIONS', payload: notifications });
+        }
+      } catch {
+        // Notificação é informativa — uma falha aqui não deve travar o app.
+      }
+    })();
+    return () => {
+      active = false;
+    };
+  }, [state.user?.id]);
+
   // Exposto pro Leaderboard.jsx chamar ao montar (aba "Ranking" aberta) —
   // pega o XP mais recente dos colegas mesmo se ninguém aqui terminou uma
   // lição nesse meio tempo (o efeito acima só reage a login/lessonComplete
@@ -1782,6 +1828,16 @@ export function GameProvider({ children }) {
   const buyStreakFreeze = useCallback(() => dispatch({ type: 'BUY_STREAK_FREEZE' }), []);
   const exitLesson = useCallback(() => dispatch({ type: 'EXIT_LESSON' }), []);
 
+  // Fecha o aviso de "sugestão aplicada" no topo da fila — marca como lida
+  // no banco em segundo plano (best-effort: se falhar, o pior caso é o
+  // aviso reaparecer no próximo login, não perder a recompensa já creditada).
+  const dismissNotification = useCallback((notificationId) => {
+    dispatch({ type: 'DISMISS_NOTIFICATION', payload: notificationId });
+    if (isSupabaseConfigured) {
+      api.markNotificationRead(notificationId).catch(() => {});
+    }
+  }, []);
+
   // `currentQuestion` sempre vem da FILA (não do array original de
   // perguntas) — é ela que decide o que aparece na tela a cada passo,
   // incluindo repetições de perguntas erradas reencaminhadas pro final.
@@ -1906,6 +1962,7 @@ export function GameProvider({ children }) {
       buyHeartRefill,
       buyStreakFreeze,
       exitLesson,
+      dismissNotification,
     }),
     [
       state,
@@ -1942,6 +1999,7 @@ export function GameProvider({ children }) {
       buyHeartRefill,
       buyStreakFreeze,
       exitLesson,
+      dismissNotification,
     ]
   );
 

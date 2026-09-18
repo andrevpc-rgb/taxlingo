@@ -28,6 +28,7 @@ import AuthModal from './components/AuthModal';
 import AdminDashboard from './components/AdminDashboard';
 import ResetPasswordForm from './components/ResetPasswordForm';
 import WhatsAppSupportButton from './components/WhatsAppSupportButton';
+import NotificationModal from './components/NotificationModal';
 
 const MODULE_ICONS = {
   Landmark,
@@ -353,6 +354,7 @@ function AppShell() {
   return (
     <div className="min-h-screen bg-slate-50">
       <Header />
+      <NotificationModal />
 
       {view === 'home' && (
         <HomeScreen

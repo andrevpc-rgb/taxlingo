@@ -432,14 +432,78 @@ export async function updateQuestionCorrectAnswer(questionId, correctAnswer) {
   if (error) throw error;
 }
 
+const REPORT_RESOLVED_GEMS_REWARD = 10;
+
+// Agradecimento por ter reportado uma questão que foi corrigida — credita a
+// recompensa direto no saldo (RLS de `users` já deixa master atualizar
+// qualquer linha) e registra o aviso que o app mostra no próximo login/Home
+// (ver GameContext.jsx e NotificationModal.jsx). Um por USUÁRIO, não por
+// report: quem reportou a mesma questão mais de uma vez recebe só uma vez.
+async function notifyReportResolved(userId, questionText) {
+  const { data: userRow, error: userError } = await supabase
+    .from('users')
+    .select('gems')
+    .eq('id', userId)
+    .maybeSingle();
+  if (userError) throw userError;
+
+  const { error: gemsError } = await supabase
+    .from('users')
+    .update({ gems: (userRow?.gems ?? 0) + REPORT_RESOLVED_GEMS_REWARD })
+    .eq('id', userId);
+  if (gemsError) throw gemsError;
+
+  const { error: notifError } = await supabase.from('user_notifications').insert({
+    user_id: userId,
+    title: 'Sua sugestão foi aplicada! 🎯',
+    message: `Obrigado por ajudar a melhorar o TaxLingo! A questão "${questionText}" reportada por você foi revisada e corrigida pela nossa equipe.`,
+    reward_gems: REPORT_RESOLVED_GEMS_REWARD,
+  });
+  if (notifError) throw notifError;
+}
+
 // "Marcar como Corrigida" — arquiva TODOS os reports pendentes dessa questão
-// de uma vez (não um por um).
-export async function resolveQuestionReports(questionId) {
+// de uma vez (não um por um) e agradece cada colaborador distinto que
+// reportou (ver notifyReportResolved).
+export async function resolveQuestionReports(questionId, questionText) {
+  const { data: pendingRows, error: fetchError } = await supabase
+    .from('question_reports')
+    .select('user_id')
+    .eq('question_id', questionId)
+    .eq('status', 'pending');
+  if (fetchError) throw fetchError;
+
   const { error } = await supabase
     .from('question_reports')
     .update({ status: 'resolved' })
     .eq('question_id', questionId)
     .eq('status', 'pending');
+  if (error) throw error;
+
+  const reporterIds = Array.from(new Set((pendingRows ?? []).map((row) => row.user_id)));
+  await Promise.all(reporterIds.map((userId) => notifyReportResolved(userId, questionText)));
+}
+
+// Notificações não lidas (ver GameContext.jsx — checadas ao logar/abrir a Home).
+export async function fetchUnreadNotifications(userId) {
+  const { data, error } = await supabase
+    .from('user_notifications')
+    .select('id, title, message, reward_gems, created_at')
+    .eq('user_id', userId)
+    .eq('read', false)
+    .order('created_at', { ascending: true });
+  if (error) throw error;
+  return data.map((row) => ({
+    id: row.id,
+    title: row.title,
+    message: row.message,
+    rewardGems: row.reward_gems,
+    createdAt: row.created_at,
+  }));
+}
+
+export async function markNotificationRead(notificationId) {
+  const { error } = await supabase.from('user_notifications').update({ read: true }).eq('id', notificationId);
   if (error) throw error;
 }
 

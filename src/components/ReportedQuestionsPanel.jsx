@@ -106,11 +106,11 @@ export default function ReportedQuestionsPanel() {
     load();
   }, []);
 
-  const handleResolve = async (questionId) => {
+  const handleResolve = async (questionId, questionText) => {
     setResolvingId(questionId);
     setError(null);
     try {
-      await api.resolveQuestionReports(questionId);
+      await api.resolveQuestionReports(questionId, questionText);
       setReports((prev) => prev?.filter((r) => r.questionId !== questionId) ?? null);
     } catch (err) {
       setError(err.message || 'Não foi possível marcar como corrigida.');
@@ -152,7 +152,7 @@ export default function ReportedQuestionsPanel() {
               key={report.questionId}
               report={report}
               resolving={resolvingId === report.questionId}
-              onResolve={() => handleResolve(report.questionId)}
+              onResolve={() => handleResolve(report.questionId, report.questionText)}
               onReview={() => setReviewing(report)}
             />
           ))}

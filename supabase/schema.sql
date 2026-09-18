@@ -166,7 +166,7 @@ create index if not exists question_attempts_user_id_idx on public.question_atte
 create index if not exists question_attempts_topic_idx on public.question_attempts (topic);
 
 -- -----------------------------------------------------------------------------
--- 4c. question_reports ("Reportar erro" no Quiz — 1 clique, sem texto) —
+-- 4c. question_reports ("Reportar erro" no Quiz, motivo opcional) —
 -- question_text vem denormalizado do cliente no momento do clique (mesmo
 -- texto que o usuário estava vendo), pelo mesmo motivo de question_attempts:
 -- não depender de join com a tabela `questions` pra exibir no Painel Master.
@@ -186,6 +186,27 @@ comment on table public.question_reports is 'Reportes de "essa questão está er
 
 create index if not exists question_reports_question_id_idx on public.question_reports (question_id);
 create index if not exists question_reports_status_idx on public.question_reports (status);
+
+-- -----------------------------------------------------------------------------
+-- 4d. user_notifications ("Sua sugestão foi aplicada!" e futuros avisos
+-- pontuais pro colaborador) — master grava (ex: ao resolver um
+-- question_report, ver api.resolveQuestionReports), o próprio dono só lê e
+-- marca como lida a partir do app (ver GameContext.jsx / NotificationModal).
+-- -----------------------------------------------------------------------------
+create table if not exists public.user_notifications (
+  id uuid primary key default gen_random_uuid(),
+  user_id uuid not null references public.users (id) on delete cascade,
+  title text not null,
+  message text not null,
+  reward_gems integer not null default 0,
+  read boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
+comment on table public.user_notifications is 'Avisos pontuais pro colaborador (ex: report de questão corrigido) — lidos/marcados como lidos pelo próprio app ao logar/abrir a Home.';
+
+create index if not exists user_notifications_user_id_idx on public.user_notifications (user_id);
+create index if not exists user_notifications_unread_idx on public.user_notifications (user_id) where not read;
 
 create index if not exists user_progress_user_id_idx on public.user_progress (user_id);
 create index if not exists user_progress_lesson_id_idx on public.user_progress (lesson_id);
@@ -576,6 +597,7 @@ alter table public.questions enable row level security;
 alter table public.user_progress enable row level security;
 alter table public.question_attempts enable row level security;
 alter table public.question_reports enable row level security;
+alter table public.user_notifications enable row level security;
 alter table public.temp_access_tokens enable row level security;
 alter table public.subscriptions enable row level security;
 -- pending_signups não tem policy nenhuma de propósito: só as Edge Functions
@@ -680,6 +702,22 @@ drop policy if exists question_reports_update_master on public.question_reports;
 create policy question_reports_update_master on public.question_reports for update
   using (public.is_master())
   with check (public.is_master());
+
+-- user_notifications: cada um só lê/marca como lida a própria notificação;
+-- só o master cria (ver api.resolveQuestionReports) — mesmo padrão de
+-- question_reports acima, não é dado de empresa.
+drop policy if exists user_notifications_select_self_or_master on public.user_notifications;
+create policy user_notifications_select_self_or_master on public.user_notifications for select
+  using (user_id = auth.uid() or public.is_master());
+
+drop policy if exists user_notifications_insert_master on public.user_notifications;
+create policy user_notifications_insert_master on public.user_notifications for insert
+  with check (public.is_master());
+
+drop policy if exists user_notifications_update_self_or_master on public.user_notifications;
+create policy user_notifications_update_self_or_master on public.user_notifications for update
+  using (user_id = auth.uid() or public.is_master())
+  with check (user_id = auth.uid() or public.is_master());
 
 -- temp_access_tokens: SEM policy pra anon/authenticated -> RLS bloqueia tudo
 -- por padrão. Só a Edge Function (com a service_role key) consegue ler/escrever.
