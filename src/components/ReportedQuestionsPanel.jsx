@@ -42,7 +42,10 @@ function ReportCard({ report, resolving, onResolve, onReview }) {
         <div className="min-w-0">
           <p className="text-xs font-bold text-amber-700">{report.questionText}</p>
           <p className="mt-0.5 text-[11px] text-amber-600">
-            {report.questionId} · {report.count === 1 ? '1 report' : `${report.count} reports`}
+            {report.questionId}
+            {report.lessonTitle && <> · {report.lessonTitle}</>}
+            {' · '}
+            {report.count === 1 ? '1 report' : `${report.count} reports`}
           </p>
         </div>
         <div className="flex shrink-0 flex-col items-stretch gap-1.5">

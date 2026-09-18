@@ -90,7 +90,9 @@ export default function QuestionReviewModal({ questionId, questionText, onClose 
         </button>
 
         <p className="pr-8 text-xs font-extrabold uppercase tracking-wide text-slate-400">
-          {questionId} {question && `· ${TYPE_LABELS[question.type] ?? question.type}`}
+          {questionId}
+          {question?.lessonTitle && ` · ${question.lessonTitle}`}
+          {question && ` · ${TYPE_LABELS[question.type] ?? question.type}`}
         </p>
 
         {loading && (

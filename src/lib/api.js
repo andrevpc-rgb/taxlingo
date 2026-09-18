@@ -409,16 +409,52 @@ export async function fetchQuestionReports() {
     });
     byQuestion.set(row.question_id, entry);
   }
-  return Array.from(byQuestion.values());
+  const reportGroups = Array.from(byQuestion.values());
+
+  // Localização (nível/lição, ex. "Estagiário · Lição 2/38") de cada questão
+  // reportada — question_reports.question_id não tem FK pra `questions` (de
+  // propósito, ver comentário na criação da tabela em schema.sql: reports
+  // antigos continuam legíveis mesmo se a questão for removida depois), então
+  // é uma segunda consulta em vez de um embed direto. `lessons.title` já vem
+  // pronto no formato "Nível · Lição N/Total" (ver buildLevelLessons em
+  // mockData.js / seed) — não precisa recompor a partir de module+order_index.
+  // Informativo: uma falha aqui não deve impedir a lista de reports de aparecer.
+  try {
+    const questionIds = reportGroups.map((g) => g.questionId);
+    if (questionIds.length > 0) {
+      const { data: questionRows, error: locationError } = await supabase
+        .from('questions')
+        .select('id, lessons(title)')
+        .in('id', questionIds);
+      if (locationError) throw locationError;
+      const lessonTitleByQuestionId = new Map(
+        (questionRows ?? []).map((row) => [row.id, row.lessons?.title ?? null])
+      );
+      for (const group of reportGroups) {
+        group.lessonTitle = lessonTitleByQuestionId.get(group.questionId) ?? null;
+      }
+    }
+  } catch {
+    // Segue sem a localização — não é motivo pra esconder os reports.
+  }
+
+  return reportGroups;
 }
 
 // Modal "Revisar Questão" do Painel de Contingência — busca a questão
-// completa (enunciado, alternativas, gabarito) direto da tabela `questions`
-// pelo id denormalizado guardado em question_reports.
+// completa (enunciado, alternativas, gabarito, lição) direto da tabela
+// `questions` pelo id denormalizado guardado em question_reports.
+// `lessons(title)` é um embed via FK de verdade (questions.lesson_id ->
+// lessons.id), diferente do lookup manual em fetchQuestionReports acima.
 export async function fetchQuestionById(questionId) {
-  const { data, error } = await supabase.from('questions').select('*').eq('id', questionId).maybeSingle();
+  const { data, error } = await supabase
+    .from('questions')
+    .select('*, lessons(title)')
+    .eq('id', questionId)
+    .maybeSingle();
   if (error) throw error;
-  return data ? mapQuestionRow(data) : null;
+  if (!data) return null;
+  return { ...mapQuestionRow(data), lessonTitle: data.lessons?.title ?? null };
 }
 
 // "Editar Gabarito" no modal de revisão — grava o novo correct_answer
