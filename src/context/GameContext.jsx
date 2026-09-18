@@ -798,12 +798,13 @@ function gameReducerCore(state, action) {
 
     case 'UPDATE_PROFILE': {
       if (!state.user) return state;
-      const { name, avatarUrl, newPassword, jobTitle } = action.payload;
+      const { name, avatarUrl, newPassword, jobTitle, lastSeenChangelogVersion } = action.payload;
       const patch = {};
       if (name?.trim()) patch.name = name.trim();
       if (avatarUrl) patch.avatarUrl = avatarUrl;
       if (newPassword) patch.password = newPassword;
       if (jobTitle !== undefined) patch.jobTitle = jobTitle?.trim() || null;
+      if (lastSeenChangelogVersion !== undefined) patch.lastSeenChangelogVersion = lastSeenChangelogVersion;
       return { ...state, user: { ...state.user, ...patch } };
     }
 

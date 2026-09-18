@@ -58,6 +58,7 @@ create table if not exists public.users (
   current_level_since date,
   time_spent_minutes integer not null default 0,
   trial_expires_at timestamptz, -- só preenchido pra contas do "Testar Grátis por 24 Horas"
+  last_seen_changelog_version text, -- versão do popup "O que há de novo" que o usuário já fechou (ver src/data/changelog.js)
   created_at timestamptz not null default now()
 );
 

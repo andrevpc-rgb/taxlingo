@@ -29,6 +29,8 @@ import AdminDashboard from './components/AdminDashboard';
 import ResetPasswordForm from './components/ResetPasswordForm';
 import WhatsAppSupportButton from './components/WhatsAppSupportButton';
 import NotificationModal from './components/NotificationModal';
+import ChangelogModal from './components/ChangelogModal';
+import { CURRENT_CHANGELOG_VERSION } from './data/changelog';
 
 const MODULE_ICONS = {
   Landmark,
@@ -251,8 +253,8 @@ function BottomNav({ view, onNavigate, isManager }) {
               key={item.id}
               type="button"
               onClick={() => onNavigate(item.id)}
-              className={`flex min-h-[3rem] min-w-[3.5rem] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-1.5 text-[10px] uppercase leading-tight tracking-wide sm:px-6 sm:text-[11px] ${
-                isActive ? 'font-black text-emerald-600' : 'font-bold text-slate-600'
+              className={`flex min-h-[3rem] min-w-[3.5rem] flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-2 py-1.5 text-[10px] uppercase leading-tight tracking-wide transition-colors sm:px-6 sm:text-[11px] ${
+                isActive ? 'font-black text-emerald-600' : 'font-bold text-slate-700 hover:text-slate-900'
               }`}
             >
               <Icon className="h-5 w-5 shrink-0" />
@@ -293,7 +295,25 @@ function AppShell() {
     exitLesson,
     modules,
     refreshNotifications,
+    user,
+    updateProfile,
+    pendingNotifications,
   } = useGame();
+
+  // Popup "O que há de novo" — mostra quando a versão salva no perfil do
+  // usuário (Supabase ou localStorage, conforme o modo) está desatualizada
+  // em relação a CURRENT_CHANGELOG_VERSION. "Entendi" grava a versão atual
+  // no perfil pra não incomodar de novo nos próximos logins. Só depois que a
+  // fila de notificações de agradecimento esvaziar — os dois são modais de
+  // tela cheia, mostrar os dois ao mesmo tempo empilharia um por cima do outro.
+  const showChangelog =
+    isAuthenticated &&
+    Boolean(user) &&
+    user.lastSeenChangelogVersion !== CURRENT_CHANGELOG_VERSION &&
+    (pendingNotifications?.length ?? 0) === 0;
+  const handleDismissChangelog = () => {
+    updateProfile({ lastSeenChangelogVersion: CURRENT_CHANGELOG_VERSION });
+  };
 
   // Toda vez que a Home é aberta (não só no login), checa de novo se surgiu
   // alguma notificação nova ("Sua sugestão foi aplicada!") — a sessão do
@@ -374,6 +394,7 @@ function AppShell() {
     <div className="min-h-screen bg-slate-50">
       <Header />
       <NotificationModal />
+      {showChangelog && <ChangelogModal onDismiss={handleDismissChangelog} />}
 
       {view === 'home' && (
         <HomeScreen

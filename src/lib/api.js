@@ -39,6 +39,7 @@ export function mapUserRow(row) {
     currentLevelSince: row.current_level_since,
     timeSpentMinutes: row.time_spent_minutes,
     trialExpiresAt: row.trial_expires_at,
+    lastSeenChangelogVersion: row.last_seen_changelog_version,
     // Vem de um select aninhado (`companies(expires_at)`, ver fetchProfile)
     // quando o usuário tem company_id — vencimento herdado do plano
     // Corporativo da empresa, ver isAccessExpired() em GameContext.jsx.
@@ -67,6 +68,7 @@ function toUserPatch(patch) {
     currentLevelId: 'current_level_id',
     currentLevelSince: 'current_level_since',
     timeSpentMinutes: 'time_spent_minutes',
+    lastSeenChangelogVersion: 'last_seen_changelog_version',
   };
   const dbPatch = {};
   for (const [key, value] of Object.entries(patch)) {
