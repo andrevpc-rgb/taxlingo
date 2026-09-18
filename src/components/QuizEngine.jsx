@@ -197,9 +197,11 @@ function pct(value) {
   return `${Math.round(value * 100)}%`;
 }
 
-// "Reportar erro" — 1 clique, sem exigir texto do usuário. Desabilita assim
-// que clicado (evita spam de re-clique na mesma questão); volta a ficar
-// habilitado numa questão diferente.
+// "Reportar erro" — abre um mini-modal com motivo opcional (ver
+// ReportQuestionModal) em vez de disparar na hora, pra dar ao Painel Master
+// um comentário de contexto sem obrigar ninguém a escrever nada. Desabilita
+// assim que enviado (evita spam de re-clique na mesma questão); volta a
+// ficar habilitado numa questão diferente.
 function ReportQuestionButton({ reported, onReport }) {
   return (
     <button
@@ -212,6 +214,46 @@ function ReportQuestionButton({ reported, onReport }) {
       <Flag className="h-3.5 w-3.5" />
       {reported ? 'Reportado' : 'Reportar erro'}
     </button>
+  );
+}
+
+function ReportQuestionModal({ onSubmit, onCancel }) {
+  const [reason, setReason] = useState('');
+
+  return (
+    <div className="fixed inset-0 z-40 flex items-center justify-center bg-slate-900/50 px-4">
+      <div className="w-full max-w-sm rounded-3xl border-2 border-slate-200 bg-white p-6 text-center shadow-xl">
+        <Flag className="mx-auto mb-2 h-8 w-8 text-rose-500" />
+        <h2 className="text-lg font-extrabold text-slate-800">Reportar erro nesta questão</h2>
+        <p className="mt-1 text-sm font-medium text-slate-500">
+          Conte pra gente o que está errado (opcional) — ajuda a nossa equipe a corrigir mais rápido.
+        </p>
+        <textarea
+          value={reason}
+          onChange={(event) => setReason(event.target.value)}
+          rows={3}
+          maxLength={500}
+          placeholder="Ex: o gabarito está invertido..."
+          className="mt-3 w-full resize-none rounded-2xl border-2 border-slate-200 px-3 py-2 text-sm text-slate-700 outline-none focus:border-rose-300"
+        />
+        <div className="mt-4 flex gap-3">
+          <button
+            type="button"
+            onClick={onCancel}
+            className="flex-1 rounded-2xl border-2 border-slate-200 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-slate-600"
+          >
+            Cancelar
+          </button>
+          <button
+            type="button"
+            onClick={() => onSubmit(reason.trim())}
+            className="flex-1 rounded-2xl bg-rose-500 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_4px_0_0_#be123c] active:translate-y-0.5 active:shadow-none"
+          >
+            Enviar Report
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -439,10 +481,17 @@ export default function QuizEngine({ onExit }) {
   // mostra o toast de confirmação por alguns segundos.
   const [reportedIds, setReportedIds] = useState(() => new Set());
   const [showReportToast, setShowReportToast] = useState(false);
+  const [showReportModal, setShowReportModal] = useState(false);
   const [showExitConfirm, setShowExitConfirm] = useState(false);
 
   const handleReportQuestion = () => {
     if (!currentQuestion || reportedIds.has(currentQuestion.id)) return;
+    setShowReportModal(true);
+  };
+
+  const submitReport = (reason) => {
+    if (!currentQuestion) return;
+    setShowReportModal(false);
     setReportedIds((prev) => new Set(prev).add(currentQuestion.id));
     setShowReportToast(true);
     setTimeout(() => setShowReportToast(false), 3000);
@@ -454,6 +503,7 @@ export default function QuizEngine({ onExit }) {
           questionId: currentQuestion.id,
           questionText: currentQuestion.question,
           companyId: user.companyId ?? null,
+          reason: reason || null,
         })
         .catch(() => {
           // Best-effort — o usuário já viu a confirmação; uma falha de rede
@@ -688,6 +738,10 @@ export default function QuizEngine({ onExit }) {
 
       {showExitConfirm && (
         <ExitConfirmModal onCancel={() => setShowExitConfirm(false)} onConfirm={onExit} />
+      )}
+
+      {showReportModal && (
+        <ReportQuestionModal onCancel={() => setShowReportModal(false)} onSubmit={submitReport} />
       )}
 
       {/* Barra de progresso da lição */}

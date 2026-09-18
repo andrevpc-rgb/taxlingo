@@ -364,43 +364,72 @@ export async function recordQuestionAttempt({ userId, questionId, lessonId, topi
   if (error) throw error;
 }
 
-// "Reportar erro" — 1 clique, sem texto do usuário (ver QuizEngine.jsx).
-export async function reportQuestion({ userId, questionId, questionText, companyId }) {
+// "Reportar erro" — motivo é opcional (ver ReportQuestionModal em
+// QuizEngine.jsx): quem reporta pode descrever o problema ou só enviar em branco.
+export async function reportQuestion({ userId, questionId, questionText, companyId, reason }) {
   const { error } = await supabase.from('question_reports').insert({
     user_id: userId,
     question_id: questionId,
     question_text: questionText,
     company_id: companyId ?? null,
+    reason: reason || null,
   });
   if (error) throw error;
 }
 
 // Painel de Contingência (master) — aba "Questões Reportadas". Lê todo mundo
-// que ainda está 'pending' (RLS já restringe a leitura a master) e agrupa
-// por questão no cliente (contagem + data do último report).
+// que ainda está 'pending' (RLS já restringe a leitura a master), trazendo
+// nome/e-mail de quem reportou via join FK (question_reports.user_id ->
+// users.id — RLS de `users` já deixa master ler qualquer linha), e agrupa
+// por questão no cliente (contagem + lista de reports, mais recente primeiro).
 export async function fetchQuestionReports() {
   const { data, error } = await supabase
     .from('question_reports')
-    .select('question_id, question_text, created_at')
+    .select('id, question_id, question_text, reason, created_at, users(full_name, email)')
     .eq('status', 'pending')
     .order('created_at', { ascending: false });
   if (error) throw error;
 
   const byQuestion = new Map();
   for (const row of data) {
-    const existing = byQuestion.get(row.question_id);
-    if (existing) {
-      existing.count += 1;
-    } else {
-      byQuestion.set(row.question_id, {
-        questionId: row.question_id,
-        questionText: row.question_text,
-        count: 1,
-        lastReportedAt: row.created_at,
-      });
-    }
+    const entry = byQuestion.get(row.question_id) ?? {
+      questionId: row.question_id,
+      questionText: row.question_text,
+      count: 0,
+      lastReportedAt: row.created_at,
+      reports: [],
+    };
+    entry.count += 1;
+    entry.reports.push({
+      id: row.id,
+      reason: row.reason,
+      createdAt: row.created_at,
+      reporterName: row.users?.full_name ?? 'Usuário removido',
+      reporterEmail: row.users?.email ?? null,
+    });
+    byQuestion.set(row.question_id, entry);
   }
   return Array.from(byQuestion.values());
+}
+
+// Modal "Revisar Questão" do Painel de Contingência — busca a questão
+// completa (enunciado, alternativas, gabarito) direto da tabela `questions`
+// pelo id denormalizado guardado em question_reports.
+export async function fetchQuestionById(questionId) {
+  const { data, error } = await supabase.from('questions').select('*').eq('id', questionId).maybeSingle();
+  if (error) throw error;
+  return data ? mapQuestionRow(data) : null;
+}
+
+// "Editar Gabarito" no modal de revisão — grava o novo correct_answer
+// (string | boolean | array, conforme o tipo da questão) direto na tabela
+// `questions`. Exige a policy questions_update_master (ver schema.sql).
+export async function updateQuestionCorrectAnswer(questionId, correctAnswer) {
+  const { error } = await supabase
+    .from('questions')
+    .update({ correct_answer: correctAnswer })
+    .eq('id', questionId);
+  if (error) throw error;
 }
 
 // "Marcar como Corrigida" — arquiva TODOS os reports pendentes dessa questão

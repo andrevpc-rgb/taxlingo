@@ -177,11 +177,12 @@ create table if not exists public.question_reports (
   question_text text not null,
   user_id uuid not null references public.users (id) on delete cascade,
   company_id uuid references public.companies (id) on delete set null,
+  reason text, -- motivo opcional digitado por quem reportou (ver ReportQuestionModal em QuizEngine.jsx)
   created_at timestamptz not null default now(),
   status text not null default 'pending' check (status in ('pending', 'resolved'))
 );
 
-comment on table public.question_reports is 'Reportes de "essa questão está errada" (1 clique, sem texto do usuário) — ver aba "Questões Reportadas" no Painel de Contingência (master).';
+comment on table public.question_reports is 'Reportes de "essa questão está errada" (motivo opcional) — ver aba "Questões Reportadas" no Painel de Contingência (master).';
 
 create index if not exists question_reports_question_id_idx on public.question_reports (question_id);
 create index if not exists question_reports_status_idx on public.question_reports (status);
@@ -621,6 +622,13 @@ create policy lessons_select_authenticated on public.lessons for select
 drop policy if exists questions_select_authenticated on public.questions;
 create policy questions_select_authenticated on public.questions for select
   using (auth.role() = 'authenticated');
+
+-- Só o master edita gabarito (modal "Revisar Questão" da aba Questões
+-- Reportadas, ver QuestionReviewModal.jsx) — colaboradores e gestores só leem.
+drop policy if exists questions_update_master on public.questions;
+create policy questions_update_master on public.questions for update
+  using (public.is_master())
+  with check (public.is_master());
 
 -- user_progress: cada um grava/lê o próprio progresso; admin/master leem o
 -- progresso de quem está na mesma empresa (pro Painel do Gestor).
