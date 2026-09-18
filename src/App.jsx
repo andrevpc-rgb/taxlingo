@@ -284,8 +284,27 @@ function findContinueLesson(modules) {
 function AppShell() {
   // 'home' | 'quiz' | 'leaderboard' | 'admin'
   const [view, setView] = useState('home');
-  const { isAuthenticated, isManager, passwordRecoveryMode, startLesson, startDailyReview, exitLesson, modules } =
-    useGame();
+  const {
+    isAuthenticated,
+    isManager,
+    passwordRecoveryMode,
+    startLesson,
+    startDailyReview,
+    exitLesson,
+    modules,
+    refreshNotifications,
+  } = useGame();
+
+  // Toda vez que a Home é aberta (não só no login), checa de novo se surgiu
+  // alguma notificação nova ("Sua sugestão foi aplicada!") — a sessão do
+  // Supabase Auth persiste por dias, então quem fica logado sem nunca
+  // deslogar só veria o aviso ao voltar pra Home, não só ao entrar no app.
+  useEffect(() => {
+    if (isAuthenticated && view === 'home') {
+      refreshNotifications();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isAuthenticated, view]);
 
   // Ao entrar no app (login, cadastro ou sessão restaurada), fica na Home mas
   // já destaca e rola até o card da lição onde o usuário parou, em vez de

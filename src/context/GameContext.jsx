@@ -1513,25 +1513,32 @@ export function GameProvider({ children }) {
   }, [state.user?.id, state.user?.companyId, state.lessonComplete]);
 
   // Notificações não lidas ("Sua sugestão foi aplicada!", ver
-  // api.resolveQuestionReports) — busca uma vez por login/sessão restaurada
-  // e enfileira pro NotificationModal (App.jsx) mostrar uma por vez.
+  // api.resolveQuestionReports) — busca ao logar/restaurar sessão E toda
+  // vez que a Home é aberta (ver refreshNotifications abaixo/HomeScreen em
+  // App.jsx). Só no login não bastava: a sessão do Supabase Auth persiste
+  // por dias, então quem nunca desloga podia ficar sem ver o aviso mesmo
+  // depois do master resolver o report enquanto ele já estava logado.
+  const notificationsUserIdRef = useRef(null);
   useEffect(() => {
-    if (!isSupabaseConfigured || !state.user) return undefined;
-    let active = true;
-    (async () => {
-      try {
-        const notifications = await api.fetchUnreadNotifications(state.user.id);
-        if (active && notifications.length > 0) {
-          dispatch({ type: 'SET_PENDING_NOTIFICATIONS', payload: notifications });
-        }
-      } catch {
-        // Notificação é informativa — uma falha aqui não deve travar o app.
-      }
-    })();
-    return () => {
-      active = false;
-    };
+    notificationsUserIdRef.current = state.user?.id ?? null;
   }, [state.user?.id]);
+
+  const refreshNotifications = useCallback(async () => {
+    if (!isSupabaseConfigured || !notificationsUserIdRef.current) return;
+    try {
+      const notifications = await api.fetchUnreadNotifications(notificationsUserIdRef.current);
+      if (notifications.length > 0) {
+        dispatch({ type: 'SET_PENDING_NOTIFICATIONS', payload: notifications });
+      }
+    } catch {
+      // Notificação é informativa — uma falha aqui não deve travar o app.
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isSupabaseConfigured || !state.user) return;
+    refreshNotifications();
+  }, [state.user?.id, refreshNotifications]);
 
   // Exposto pro Leaderboard.jsx chamar ao montar (aba "Ranking" aberta) —
   // pega o XP mais recente dos colegas mesmo se ninguém aqui terminou uma
@@ -1963,6 +1970,7 @@ export function GameProvider({ children }) {
       buyStreakFreeze,
       exitLesson,
       dismissNotification,
+      refreshNotifications,
     }),
     [
       state,
@@ -2000,6 +2008,7 @@ export function GameProvider({ children }) {
       buyStreakFreeze,
       exitLesson,
       dismissNotification,
+      refreshNotifications,
     ]
   );
 
