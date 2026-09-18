@@ -698,20 +698,18 @@
     "level": "analista_junior",
     "type": "ordering",
     "scenario": "Uma metalúrgica identificou uma divergência de valor de IBS/CBS numa nota de compra de um equipamento para o ativo imobilizado.",
-    "question": "Ordene o fluxo correto de tratamento dessa divergência:",
+    "question": "Ordene o fluxo correto de tratamento dessa divergência, já identificada:",
     "options": [
       "Confirmar com o setor de compras a natureza exata da aquisição",
       "Ajustar o lançamento contábil e o crédito a apropriar",
-      "Identificar a divergência no valor de IBS/CBS da nota de compra do equipamento",
       "Verificar o cClassTrib informado para bens do ativo imobilizado"
     ],
     "correctAnswer": [
-      "Identificar a divergência no valor de IBS/CBS da nota de compra do equipamento",
       "Verificar o cClassTrib informado para bens do ativo imobilizado",
       "Confirmar com o setor de compras a natureza exata da aquisição",
       "Ajustar o lançamento contábil e o crédito a apropriar"
     ],
-    "explanation": "Identifica-se a divergência, verifica-se o cClassTrib do ativo, confirma-se a natureza da aquisição com compras e só então se ajusta o lançamento contábil.",
+    "explanation": "Com a divergência já identificada, verifica-se o cClassTrib do ativo, confirma-se a natureza da aquisição com compras e só então se ajusta o lançamento contábil.",
     "pacciTip": "Ativo imobilizado exige passo a passo caprichado, amico! Não pula etapa.",
     "topic": "classificacao_fiscal"
   },
@@ -781,15 +779,13 @@
     "level": "analista_junior",
     "type": "ordering",
     "scenario": "Uma gráfica industrial recebeu a confirmação de um fornecedor de que uma nota fiscal anterior havia sido emitida com o cClassTrib incorreto.",
-    "question": "Ordene o processo correto de correção dessa situação:",
+    "question": "Ordene o processo correto de correção dessa situação, já confirmado o erro:",
     "options": [
       "Atualizar o crédito apropriado com base no valor corrigido",
-      "Fornecedor confirma que o cClassTrib estava incorreto na nota original",
       "Conferir se o valor de IBS/CBS na nova nota está correto",
       "Solicitar a emissão de nota fiscal complementar ou de ajuste"
     ],
     "correctAnswer": [
-      "Fornecedor confirma que o cClassTrib estava incorreto na nota original",
       "Solicitar a emissão de nota fiscal complementar ou de ajuste",
       "Conferir se o valor de IBS/CBS na nova nota está correto",
       "Atualizar o crédito apropriado com base no valor corrigido"
@@ -1314,20 +1310,18 @@
     "level": "analista_junior",
     "type": "ordering",
     "scenario": "Um paciente de uma clínica odontológica questiona o valor cobrado numa consulta que passou pelo split payment.",
-    "question": "Ordene o processo correto de tratamento desse questionamento:",
+    "question": "Ordene o processo correto de tratamento desse questionamento, já recebido:",
     "options": [
       "Verificar a classificação tributária usada no procedimento",
       "Responder ao paciente com a explicação ou corrigir o erro identificado",
-      "Receber o questionamento do paciente sobre o valor cobrado",
       "Localizar a transação correspondente no relatório de split payment"
     ],
     "correctAnswer": [
-      "Receber o questionamento do paciente sobre o valor cobrado",
       "Localizar a transação correspondente no relatório de split payment",
       "Verificar a classificação tributária usada no procedimento",
       "Responder ao paciente com a explicação ou corrigir o erro identificado"
     ],
-    "explanation": "O atendimento começa recebendo o questionamento, localizando a transação, verificando a classificação usada e respondendo ao paciente com a conclusão.",
+    "explanation": "Com o questionamento já recebido, localiza-se a transação, verifica-se a classificação usada e responde-se ao paciente com a conclusão.",
     "pacciTip": "Recebe, localiza, verifica, responde. Assim o paciente sai satisfeito, amico!",
     "topic": "split_payment"
   },
@@ -1375,20 +1369,18 @@
     "level": "analista_junior",
     "type": "ordering",
     "scenario": "Um aplicativo de delivery percebe um aumento incomum de divergências no split payment logo após uma atualização do sistema.",
-    "question": "Ordene o processo correto de investigação dessa situação:",
+    "question": "Ordene o processo correto de investigação dessa situação, já percebido o aumento:",
     "options": [
       "Reportar o problema à equipe técnica responsável pelo sistema",
-      "Notar aumento incomum de divergências após uma atualização do sistema",
       "Verificar se a atualização alterou parâmetros de classificação tributária",
       "Isolar as transações realizadas após a atualização"
     ],
     "correctAnswer": [
-      "Notar aumento incomum de divergências após uma atualização do sistema",
       "Isolar as transações realizadas após a atualização",
       "Verificar se a atualização alterou parâmetros de classificação tributária",
       "Reportar o problema à equipe técnica responsável pelo sistema"
     ],
-    "explanation": "A investigação começa notando o aumento, isolando as transações do período afetado, checando se a atualização mexeu em parâmetros e reportando à equipe técnica.",
+    "explanation": "Com o aumento já percebido, a investigação isola as transações do período afetado, checa se a atualização mexeu em parâmetros e reporta à equipe técnica.",
     "pacciTip": "Atualização suspeita? Isola, investiga e chama o time técnico, amico!",
     "topic": "split_payment"
   },

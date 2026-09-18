@@ -1472,22 +1472,20 @@
     "level": "estagiario",
     "type": "ordering",
     "scenario": "Num e-commerce de eletrônicos, o estagiário teve uma dúvida sobre um termo da reforma durante o treinamento e resolveu registrar como ela foi esclarecida.",
-    "question": "Ordene o caminho que a dúvida do estagiário percorreu até virar conteúdo do glossário oficial da empresa:",
+    "question": "Ordene o caminho que a dúvida, já registrada, percorreu até virar conteúdo do glossário oficial da empresa:",
     "options": [
       "Termo é adicionado ao glossário oficial da empresa",
       "Sugere incluir o termo no glossário da equipe",
       "Pergunta ao mentor responsável",
-      "Pesquisa o termo no material de treinamento",
-      "Estagiário tem uma dúvida sobre um termo da reforma"
+      "Pesquisa o termo no material de treinamento"
     ],
     "correctAnswer": [
-      "Estagiário tem uma dúvida sobre um termo da reforma",
       "Pesquisa o termo no material de treinamento",
       "Pergunta ao mentor responsável",
       "Sugere incluir o termo no glossário da equipe",
       "Termo é adicionado ao glossário oficial da empresa"
     ],
-    "explanation": "A dúvida nasce, é pesquisada, depois confirmada com o mentor, sugerida para o glossário e, por fim, oficialmente incorporada a ele.",
+    "explanation": "Com a dúvida já registrada, ela é pesquisada, depois confirmada com o mentor, sugerida para o glossário e, por fim, oficialmente incorporada a ele.",
     "pacciTip": "Nunca joga fora uma dúvida boa, piccolo! Ela pode virar material pra empresa inteira.",
     "topic": "outros"
   },
@@ -1909,20 +1907,18 @@
     "level": "estagiario",
     "type": "ordering",
     "scenario": "Numa operadora de telecom, o time de atendimento recebe uma reclamação de um cliente sobre um novo tributo destacado na fatura de telefone.",
-    "question": "Ordene as etapas do atendimento a essa reclamação sobre o novo tributo na fatura:",
+    "question": "Ordene as etapas do atendimento a essa reclamação, já recebida, sobre o novo tributo na fatura:",
     "options": [
       "Resposta é enviada ao cliente",
       "Time fiscal explica a incidência do novo tributo",
-      "Atendente verifica os tributos destacados na conta",
-      "Cliente entra em contato reclamando do valor da fatura"
+      "Atendente verifica os tributos destacados na conta"
     ],
     "correctAnswer": [
-      "Cliente entra em contato reclamando do valor da fatura",
       "Atendente verifica os tributos destacados na conta",
       "Time fiscal explica a incidência do novo tributo",
       "Resposta é enviada ao cliente"
     ],
-    "explanation": "O atendimento segue a lógica de acolher a reclamação, verificar a fatura, buscar explicação técnica com o time fiscal e só então responder ao cliente.",
+    "explanation": "Com a reclamação já recebida, o atendimento segue a lógica de verificar a fatura, buscar explicação técnica com o time fiscal e só então responder ao cliente.",
     "pacciTip": "Escuta, verifica, entende, responde! Um bom atendimento nunca pula etapa, capisce?",
     "topic": "outros"
   },
@@ -1931,20 +1927,18 @@
     "level": "estagiario",
     "type": "ordering",
     "scenario": "Numa rede de farmácias, um cliente pergunta ao atendente se um determinado produto tem incidência do Imposto Seletivo, e ninguém na loja sabe responder de imediato.",
-    "question": "Ordene o caminho dessa dúvida até a resposta oficial ao cliente:",
+    "question": "Ordene o caminho dessa dúvida, já recebida, até a resposta oficial ao cliente:",
     "options": [
       "Resposta oficial é enviada ao cliente",
       "Time fiscal verifica se o produto se enquadra no IS",
-      "Atendente registra a dúvida",
-      "Cliente pergunta se um produto tem Imposto Seletivo"
+      "Atendente registra a dúvida"
     ],
     "correctAnswer": [
-      "Cliente pergunta se um produto tem Imposto Seletivo",
       "Atendente registra a dúvida",
       "Time fiscal verifica se o produto se enquadra no IS",
       "Resposta oficial é enviada ao cliente"
     ],
-    "explanation": "A dúvida é registrada, encaminhada ao time fiscal para verificação e só depois retorna como resposta oficial ao cliente.",
+    "explanation": "Com a dúvida já recebida, ela é registrada, encaminhada ao time fiscal para verificação e só depois retorna como resposta oficial ao cliente.",
     "pacciTip": "Melhor confirmar com quem entende, tesoro! Assim a resposta sai certa da primeira vez.",
     "topic": "imposto_seletivo"
   },

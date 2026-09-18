@@ -1677,20 +1677,18 @@
     "level": "auxiliar",
     "type": "ordering",
     "scenario": "Ao conferir um pedido recebido numa distribuidora de ferramentas, você percebe que a nota descreve uma furadeira, mas o NCM informado parece ser de outro produto.",
-    "question": "Ordene os passos corretos para tratar essa possível divergência:",
+    "question": "Ordene os passos corretos para tratar essa possível divergência, já percebida:",
     "options": [
       "Registrar a ocorrência para acompanhamento até a correção",
-      "Comparar a descrição do produto com o NCM informado na nota",
       "Comunicar o fornecedor sobre o possível erro",
       "Consultar a tabela de NCM para confirmar a divergência"
     ],
     "correctAnswer": [
-      "Comparar a descrição do produto com o NCM informado na nota",
       "Consultar a tabela de NCM para confirmar a divergência",
       "Comunicar o fornecedor sobre o possível erro",
       "Registrar a ocorrência para acompanhamento até a correção"
     ],
-    "explanation": "Primeiro compara-se descrição e código, confirma-se na tabela oficial, comunica-se o fornecedor e registra-se a ocorrência para acompanhamento.",
+    "explanation": "Com a divergência já percebida, confirma-se na tabela oficial, comunica-se o fornecedor e registra-se a ocorrência para acompanhamento.",
     "pacciTip": "Desconfiou do NCM? Confere na tabela antes de acusar, tesoro! Depois é só avisar e acompanhar.",
     "topic": "classificacao_fiscal"
   },
@@ -1755,20 +1753,18 @@
     "level": "auxiliar",
     "type": "ordering",
     "scenario": "Numa gráfica, você percebe que uma nota já transmitida tem um pequeno erro no campo de classificação tributária e precisa corrigi-la sem cancelar a nota.",
-    "question": "Ordene os passos corretos para essa correção:",
+    "question": "Ordene os passos corretos para essa correção, já identificado o erro:",
     "options": [
       "Arquivar a carta de correção junto com a nota original",
-      "Identificar o campo que contém o erro",
       "Emitir a carta de correção detalhando o ajuste",
       "Verificar se o erro é do tipo que pode ser corrigido por carta de correção"
     ],
     "correctAnswer": [
-      "Identificar o campo que contém o erro",
       "Verificar se o erro é do tipo que pode ser corrigido por carta de correção",
       "Emitir a carta de correção detalhando o ajuste",
       "Arquivar a carta de correção junto com a nota original"
     ],
-    "explanation": "Primeiro identifica-se o erro, avalia-se se cabe carta de correção, emite-se o documento e arquiva-se junto com a nota original.",
+    "explanation": "Com o erro já identificado, avalia-se se cabe carta de correção, emite-se o documento e arquiva-se junto com a nota original.",
     "pacciTip": "Nem todo erro se corrige do mesmo jeito, tesoro! Primeiro avalia, depois corrige.",
     "topic": "outros"
   },
@@ -1926,20 +1922,18 @@
     "level": "auxiliar",
     "type": "ordering",
     "scenario": "Antes de transmitir uma nota de venda para outro Estado numa indústria de móveis, você percebe que o CFOP selecionado é o de operação interna, não interestadual.",
-    "question": "Ordene os passos corretos para corrigir esse erro antes da transmissão:",
+    "question": "Ordene os passos corretos para corrigir esse erro, já identificado, antes da transmissão:",
     "options": [
       "Transmitir a nota corrigida",
-      "Identificar o erro no CFOP selecionado",
       "Revalidar os demais campos da nota",
       "Corrigir para o CFOP de operação interestadual"
     ],
     "correctAnswer": [
-      "Identificar o erro no CFOP selecionado",
       "Corrigir para o CFOP de operação interestadual",
       "Revalidar os demais campos da nota",
       "Transmitir a nota corrigida"
     ],
-    "explanation": "Identifica-se o erro, corrige-se o CFOP, revalida-se a nota inteira e só então se transmite.",
+    "explanation": "Com o erro já identificado, corrige-se o CFOP, revalida-se a nota inteira e só então se transmite.",
     "pacciTip": "Achou o erro antes de transmitir? Sorte grande, tesoro! Corrige, revalida e manda.",
     "topic": "outros"
   },
