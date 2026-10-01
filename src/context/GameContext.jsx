@@ -281,12 +281,21 @@ function applyDailyStreak(user) {
 // segunda-feira da semana em que `weeklyXp` está sendo contado; ao virar a
 // semana, o próximo ganho de XP começa a contagem do zero de novo.
 // ---------------------------------------------------------------------------
+// BUG CORRIGIDO: antes esta função lia o dia da semana em horário LOCAL
+// (getDay/setDate) mas exportava a data via toISOString(), que é sempre UTC.
+// Pra quem está em fuso negativo (Brasil, UTC-3), isso faz a data "vazar"
+// pro dia seguinte toda noite, entre ~21h e meia-noite local (quando em UTC
+// já é o dia seguinte) — o weekStart gravado nessa janela nunca batia com
+// a segunda-feira "de verdade", e o Ranking Semanal zerava na leitura (ver
+// get_global_leaderboard/get_company_leaderboard no schema.sql, que comparam
+// contra date_trunc('week', now()) — sempre em UTC). Agora tudo é calculado
+// só com campos UTC (getUTCDay/Date.UTC), igual ao servidor, sem conversão
+// de fuso no meio do caminho.
 function getWeekStartISO(date = new Date()) {
-  const d = new Date(date);
-  const day = d.getDay(); // 0 = domingo .. 6 = sábado
+  const day = date.getUTCDay(); // 0 = domingo .. 6 = sábado, em UTC
   const diffToMonday = day === 0 ? -6 : 1 - day;
-  d.setDate(d.getDate() + diffToMonday);
-  return d.toISOString().slice(0, 10);
+  const monday = new Date(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate() + diffToMonday));
+  return monday.toISOString().slice(0, 10);
 }
 
 // weeklyXp só é fiel à semana corrente se weekStart bater com a segunda-feira
