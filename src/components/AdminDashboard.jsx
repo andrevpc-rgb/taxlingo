@@ -91,12 +91,10 @@ function SortHeader({ label, sortKey, activeKey, dir, onSort }) {
 
 // ---------------------------------------------------------------------------
 // Dados reais da equipe da empresa do gestor logado.
-// Modo Supabase: busca via api.fetchCompanyTeam/fetchCompanyProgress/
-// fetchCompanyTopicAttempts, tudo protegido pelas policies de RLS
-// (users_select_self_or_company / user_progress_select_self_or_company /
-// question_attempts_select_self_or_company) — nenhuma delas exige RPC, o
-// próprio Postgres já filtra pra "só a própria empresa" quando quem chama é
-// admin/master (ver supabase/schema.sql).
+// Modo Supabase: busca via api.fetchCompanyTeam/fetchCompanyProgress (RLS
+// de users_select_self_or_company/user_progress_select_self_or_company já
+// filtra pra "só a própria empresa") e api.fetchCompanyTopicStats (RPC
+// get_company_topic_stats, agregada — ver schema.sql).
 // Modo mock: usa state.users local, filtrado por empresa (sem progresso por
 // pergunta — o motor local não rastreia isso pergunta a pergunta).
 // ---------------------------------------------------------------------------
@@ -108,7 +106,7 @@ function useCompanyData(companyId) {
     [user, mockUsers]
   );
 
-  const [remote, setRemote] = useState({ loading: true, error: null, team: [], progress: [], topicAttempts: [] });
+  const [remote, setRemote] = useState({ loading: true, error: null, team: [], progress: [], topicStats: [] });
 
   useEffect(() => {
     if (!isSupabaseConfigured || !companyId) return undefined;
@@ -119,12 +117,12 @@ function useCompanyData(companyId) {
       try {
         const team = await api.fetchCompanyTeam(companyId);
         const ids = team.map((u) => u.id);
-        const [progress, topicAttempts] = await Promise.all([
+        const [progress, topicStats] = await Promise.all([
           api.fetchCompanyProgress(ids),
-          api.fetchCompanyTopicAttempts(ids),
+          api.fetchCompanyTopicStats(companyId),
         ]);
         if (!active) return;
-        setRemote({ loading: false, error: null, team, progress, topicAttempts });
+        setRemote({ loading: false, error: null, team, progress, topicStats });
       } catch (err) {
         if (!active) return;
         setRemote({
@@ -132,7 +130,7 @@ function useCompanyData(companyId) {
           error: err.message || 'Não foi possível carregar os dados da equipe.',
           team: [],
           progress: [],
-          topicAttempts: [],
+          topicStats: [],
         });
       }
     })();
@@ -143,7 +141,7 @@ function useCompanyData(companyId) {
   }, [companyId]);
 
   if (!isSupabaseConfigured) {
-    return { loading: false, error: null, team: mockTeam, progress: [], topicAttempts: [] };
+    return { loading: false, error: null, team: mockTeam, progress: [], topicStats: [] };
   }
   return remote;
 }
@@ -155,7 +153,7 @@ export default function AdminDashboard() {
   const [sortDir, setSortDir] = useState('desc');
   const [showSubscription, setShowSubscription] = useState(false);
 
-  const { loading, error, team, progress, topicAttempts } = useCompanyData(user?.companyId);
+  const { loading, error, team, progress, topicStats } = useCompanyData(user?.companyId);
 
   const kpis = useMemo(() => {
     const total = team.length;
@@ -203,21 +201,18 @@ export default function AdminDashboard() {
   }, [team]);
 
   const topicPerformance = useMemo(() => {
-    const buckets = {};
-    topicAttempts.forEach((a) => {
-      const bucket = buckets[a.topic] ?? (buckets[a.topic] = { total: 0, correct: 0 });
-      bucket.total += 1;
-      if (a.isCorrect) bucket.correct += 1;
-    });
-    return Object.entries(buckets)
-      .map(([topic, b]) => ({
-        topic,
-        label: TOPIC_LABELS[topic] ?? topic,
-        total: b.total,
-        accuracy: b.total > 0 ? b.correct / b.total : 0,
+    // topicStats já vem agregado por tópico direto do banco (ver
+    // api.fetchCompanyTopicStats / get_company_topic_stats no schema.sql) —
+    // nada pra somar aqui, só formatar e ordenar.
+    return topicStats
+      .map((s) => ({
+        topic: s.topic,
+        label: TOPIC_LABELS[s.topic] ?? s.topic,
+        total: s.total,
+        accuracy: s.total > 0 ? s.correct / s.total : 0,
       }))
       .sort((a, b) => a.accuracy - b.accuracy); // pior desempenho primeiro — mais acionável pro gestor
-  }, [topicAttempts]);
+  }, [topicStats]);
 
   const tableRows = useMemo(() => {
     const filtered = team.filter((u) => u.name.toLowerCase().includes(search.trim().toLowerCase()));

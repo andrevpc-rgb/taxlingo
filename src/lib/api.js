@@ -679,13 +679,15 @@ export async function fetchCompanyProgress(userIds) {
   }));
 }
 
-// Tentativas por pergunta (com tópico) de uma lista de usuários — alimenta o
-// gráfico de Desempenho por Tema. Mesma RLS de question_attempts.
-export async function fetchCompanyTopicAttempts(userIds) {
-  if (!userIds?.length) return [];
-  const { data, error } = await supabase.from('question_attempts').select('topic, is_correct').in('user_id', userIds);
+// Alimenta o gráfico de Desempenho por Tema — usa a RPC get_company_topic_stats
+// (agregação em SQL, ver schema.sql) em vez de baixar uma linha por tentativa
+// de pergunta: question_attempts só cresce (nunca é limpa) e cresce mais ainda
+// conforme novos cursos somam mais tópicos/perguntas, então agregar no banco
+// evita que esse gráfico fique cada vez mais pesado de carregar com o tempo.
+export async function fetchCompanyTopicStats(companyId) {
+  const { data, error } = await supabase.rpc('get_company_topic_stats', { p_company_id: companyId });
   if (error) throw error;
-  return data.map((row) => ({ topic: row.topic, isCorrect: row.is_correct }));
+  return data.map((row) => ({ topic: row.topic, total: row.total, correct: row.correct }));
 }
 
 // ---------------------------------------------------------------------------

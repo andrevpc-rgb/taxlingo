@@ -187,6 +187,10 @@ comment on table public.question_reports is 'Reportes de "essa questão está er
 
 create index if not exists question_reports_question_id_idx on public.question_reports (question_id);
 create index if not exists question_reports_status_idx on public.question_reports (status);
+-- FK pra `users` sem índice próprio (Postgres não cria automático) — usada
+-- no join embutido de fetchQuestionReports (ver api.js) pra trazer
+-- full_name/email de quem reportou.
+create index if not exists question_reports_user_id_idx on public.question_reports (user_id);
 
 -- -----------------------------------------------------------------------------
 -- 4d. user_notifications ("Sua sugestão foi aplicada!" e futuros avisos
@@ -569,6 +573,37 @@ $$;
 grant execute on function public.get_company_leaderboard(uuid) to authenticated;
 
 comment on function public.get_company_leaderboard(uuid) is 'Ranking da Empresa: qualquer colaborador autenticado pode ver XP dos colegas da PRÓPRIA empresa (guard embutido na query — pedir o company_id de outra empresa sempre volta vazio). Exclui role=master: a conta do fundador não compete no ranking. weekly_xp é recalculado na leitura pra contar como 0 fora da semana corrente (ver week_start).';
+
+-- Desempenho por Tema (Painel do Gestor) — agrega question_attempts por
+-- tópico DIRETO no Postgres em vez de baixar toda tentativa bruta de cada
+-- pergunta pro cliente só pra contar lá (ver auditoria de capacidade do
+-- Free Tier: question_attempts é a tabela que mais cresce — uma linha por
+-- pergunta respondida, pra sempre — e cada curso novo adiciona mais tópicos
+-- e mais tentativas; sem agregação no banco, abrir o Painel do Gestor baixa
+-- cada vez mais dado ao longo do tempo). Mesmo guard de empresa do
+-- get_company_leaderboard.
+drop function if exists public.get_company_topic_stats(uuid);
+
+create or replace function public.get_company_topic_stats(p_company_id uuid)
+returns table (topic text, total integer, correct integer)
+language sql
+security definer set search_path = public
+stable
+as $$
+  select
+    qa.topic,
+    count(*)::integer as total,
+    count(*) filter (where qa.is_correct)::integer as correct
+  from public.question_attempts qa
+  join public.users u on u.id = qa.user_id
+  where u.company_id = p_company_id
+    and (public.is_master() or p_company_id = public.current_user_company_id())
+  group by qa.topic;
+$$;
+
+grant execute on function public.get_company_topic_stats(uuid) to authenticated;
+
+comment on function public.get_company_topic_stats(uuid) is 'Substitui fetchCompanyTopicAttempts (que baixava 1 linha por tentativa) por totais já agregados por tópico — poucas dezenas de linhas, não milhares. Ver src/components/AdminDashboard.jsx (gráfico Desempenho por Tema).';
 
 -- Lead "morno" capturado em public/comece.html (landing de topo de funil
 -- para contadores/donos de escritório vindos do Instagram) — via a Edge
