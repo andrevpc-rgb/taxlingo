@@ -84,22 +84,53 @@ update public.users set current_level_id = 'estagiario' where current_level_id i
 create index if not exists users_company_id_idx on public.users (company_id);
 
 -- -----------------------------------------------------------------------------
--- 3. modules / lessons / questions
+-- 3. courses / lessons / questions
+--
+-- `courses` já foi `modules` (um curso só — Reforma Tributária — mais 6
+-- placeholders "Disponível em breve"). Virou multi-curso de verdade nesta
+-- leva: os blocos "do $$ ... end $$" abaixo fazem o rename com segurança
+-- num banco que ainda tem os nomes antigos (ALTER TABLE/COLUMN RENAME é
+-- metadado só, não reescreve linha — seguro mesmo com o app antigo no ar,
+-- confirmado que nenhum código em produção referenciava `modules`/
+-- `module_id` por nome antes desta migração). Num banco novo (instalação do
+-- zero), os `do $$` simplesmente não encontram `modules` e não fazem nada —
+-- o `create table if not exists public.courses` abaixo já cria do jeito certo.
 -- -----------------------------------------------------------------------------
-create table if not exists public.modules (
+do $$
+begin
+  if exists (select 1 from information_schema.tables where table_schema = 'public' and table_name = 'modules') then
+    alter table public.modules rename to courses;
+  end if;
+end $$;
+
+create table if not exists public.courses (
   id text primary key, -- ex: 'reforma-tributaria'
   title text not null,
   description text,
   icon text,
   color text,
-  is_available boolean not null default false,
+  banner_url text,
+  is_active boolean not null default false,
+  content_version integer not null default 1, -- sobe a cada importação (ver admin_replace_course_content) — carimbo que o cache local (IndexedDB) usa pra saber se precisa rebaixar o curso
   order_index integer not null default 0
 );
 
+do $$
+begin
+  if exists (select 1 from information_schema.columns where table_schema = 'public' and table_name = 'courses' and column_name = 'is_available') then
+    alter table public.courses rename column is_available to is_active;
+  end if;
+end $$;
+
+alter table public.courses add column if not exists banner_url text;
+alter table public.courses add column if not exists content_version integer not null default 1;
+
+comment on column public.courses.content_version is 'Incrementado pela Edge Function de importação (admin-course-import) a cada upsert bem-sucedido — carimbo que o cliente usa pra saber se o cache local (IndexedDB) está desatualizado. Nunca decrementa.';
+
 create table if not exists public.lessons (
   id text primary key, -- ex: 'estagiario-1', 'estagiario-exam'
-  module_id text not null references public.modules (id) on delete cascade,
-  career_level_id text, -- ex: 'estagiario' (null para módulos sem trilha de carreira)
+  course_id text not null references public.courses (id) on delete cascade,
+  career_level_id text, -- ex: 'estagiario' (null para cursos sem trilha de carreira)
   type text not null default 'regular' check (type in ('regular', 'exam')),
   title text not null,
   xp_reward integer not null default 0,
@@ -108,11 +139,20 @@ create table if not exists public.lessons (
   order_index integer not null default 0
 );
 
-create index if not exists lessons_module_id_idx on public.lessons (module_id);
+do $$
+begin
+  if exists (select 1 from information_schema.columns where table_schema = 'public' and table_name = 'lessons' and column_name = 'module_id') then
+    alter table public.lessons rename column module_id to course_id;
+  end if;
+end $$;
+
+drop index if exists lessons_module_id_idx;
+create index if not exists lessons_course_id_idx on public.lessons (course_id);
 
 create table if not exists public.questions (
   id text primary key, -- ex: 'REF-EST-001'
   lesson_id text not null references public.lessons (id) on delete cascade,
+  course_id text references public.courses (id) on delete cascade, -- denormalizado (pedido explícito) — evita join com lessons só pra filtrar questão por curso (ver api.fetchCourseContentBundle)
   level text not null, -- career_level_id da questão (redundante com a lição, útil pra filtro rápido)
   type text not null check (type in ('multiple_choice', 'true_false', 'ordering', 'fill_blank', 'text_input')),
   scenario text,
@@ -121,10 +161,48 @@ create table if not exists public.questions (
   correct_answer jsonb not null, -- string | boolean | array de strings, conforme `type`
   explanation text,
   pacci_tip text,
+  topic text not null default 'outros', -- pro gráfico Desempenho por Tema (ver get_company_topic_stats) — existia só no JSON bundlado antes desta migração, nunca tinha chegado até aqui
   order_index integer not null default 0
 );
 
+alter table public.questions add column if not exists topic text not null default 'outros';
+alter table public.questions add column if not exists course_id text references public.courses (id) on delete cascade;
+
+-- Backfill do course_id denormalizado a partir da lição, pra linhas já
+-- existentes antes desta coluna existir.
+update public.questions q
+set course_id = l.course_id
+from public.lessons l
+where q.lesson_id = l.id and q.course_id is null;
+
+alter table public.questions alter column course_id set not null;
+
 create index if not exists questions_lesson_id_idx on public.questions (lesson_id);
+create index if not exists questions_course_id_idx on public.questions (course_id);
+
+-- -----------------------------------------------------------------------------
+-- 3b. company_course_access — allow-list de curso por empresa. Uma empresa só
+-- vê um curso se tiver uma linha aqui pra ele (master sempre vê/concede
+-- tudo). "Reforma Tributária" recebe backfill logo abaixo pra toda empresa
+-- já existente, senão o curso já homologado "desapareceria" de todo mundo
+-- assim que a RLS (ver "Row Level Security" mais abaixo) entrar em vigor.
+-- -----------------------------------------------------------------------------
+create table if not exists public.company_course_access (
+  company_id uuid not null references public.companies (id) on delete cascade,
+  course_id text not null references public.courses (id) on delete cascade,
+  granted_at timestamptz not null default now(),
+  primary key (company_id, course_id)
+);
+
+comment on table public.company_course_access is 'Allow-list de curso por empresa. Curso SEM linha aqui pra uma empresa = invisível pra ela (allow-list pura — só master vê tudo sempre).';
+
+create index if not exists company_course_access_course_id_idx on public.company_course_access (course_id);
+
+insert into public.company_course_access (company_id, course_id)
+select c.id, 'reforma-tributaria'
+from public.companies c
+where exists (select 1 from public.courses where id = 'reforma-tributaria')
+on conflict (company_id, course_id) do nothing;
 
 -- -----------------------------------------------------------------------------
 -- 4. user_progress (substitui o estado local `state.modules` do GameContext)
@@ -605,6 +683,82 @@ grant execute on function public.get_company_topic_stats(uuid) to authenticated;
 
 comment on function public.get_company_topic_stats(uuid) is 'Substitui fetchCompanyTopicAttempts (que baixava 1 linha por tentativa) por totais já agregados por tópico — poucas dezenas de linhas, não milhares. Ver src/components/AdminDashboard.jsx (gráfico Desempenho por Tema).';
 
+-- Progresso por curso (card "X% concluído" + selo de certificado disponível
+-- na Home) — agregação no banco pra não exigir baixar o bundle pesado de
+-- questões do curso só pra mostrar essa barra. "Concluiu o curso" = passou
+-- no exame da ÚLTIMA lição (maior order_index entre as do tipo 'exam')
+-- daquele curso — mesma regra usada no cliente por hasCompletedTrail (ver
+-- src/utils/certificate.js), só que calculada aqui pros cursos ainda não
+-- abertos pelo usuário nesta sessão.
+drop function if exists public.get_user_course_progress(uuid);
+
+create or replace function public.get_user_course_progress(p_user_id uuid)
+returns table (course_id text, total_lessons integer, completed_lessons integer, final_exam_passed boolean)
+language sql
+security definer set search_path = public
+stable
+as $$
+  select
+    l.course_id,
+    count(*)::integer as total_lessons,
+    count(*) filter (
+      where up.passed is true or (up.passed is null and up.completed_at is not null)
+    )::integer as completed_lessons,
+    coalesce(bool_or(up.passed) filter (
+      where l.type = 'exam' and l.order_index = (
+        select max(l2.order_index) from public.lessons l2 where l2.course_id = l.course_id and l2.type = 'exam'
+      )
+    ), false) as final_exam_passed
+  from public.lessons l
+  left join public.user_progress up on up.lesson_id = l.id and up.user_id = p_user_id
+  where p_user_id = auth.uid() or public.is_master()
+  group by l.course_id;
+$$;
+
+grant execute on function public.get_user_course_progress(uuid) to authenticated;
+
+comment on function public.get_user_course_progress(uuid) is 'Alimenta % de progresso e selo de certificado disponível no card de cada curso na Home — agregação no banco pra não exigir o bundle pesado do curso só pra mostrar essa barra.';
+
+-- Importação atômica de curso (metadado + conteúdo). SECURITY DEFINER mas
+-- SEM grant execute pra authenticated/anon — só a Edge Function
+-- admin-course-import chama isto, usando a service-role key, depois de já
+-- validar o payload inteiro. Tudo roda dentro da transação implícita desta
+-- função: ou o curso inteiro troca de conteúdo e a versão sobe, ou um erro
+-- no meio desfaz tudo (nunca fica um curso "pela metade").
+drop function if exists public.admin_replace_course_content(text, jsonb, jsonb);
+
+create or replace function public.admin_replace_course_content(p_course_id text, p_lessons jsonb, p_questions jsonb)
+returns void
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  delete from public.lessons where course_id = p_course_id;
+
+  insert into public.lessons (id, course_id, career_level_id, type, title, xp_reward, question_count, pass_threshold, order_index)
+  select
+    x.id, p_course_id, x.career_level_id, x.type, x.title,
+    x.xp_reward, x.question_count, x.pass_threshold, x.order_index
+  from jsonb_to_recordset(p_lessons) as x(
+    id text, career_level_id text, type text, title text,
+    xp_reward integer, question_count integer, pass_threshold numeric, order_index integer
+  );
+
+  insert into public.questions (id, lesson_id, course_id, level, type, scenario, question, options, correct_answer, explanation, pacci_tip, topic, order_index)
+  select
+    x.id, x.lesson_id, p_course_id, x.level, x.type, x.scenario, x.question,
+    x.options, x.correct_answer, x.explanation, x.pacci_tip, x.topic, x.order_index
+  from jsonb_to_recordset(p_questions) as x(
+    id text, lesson_id text, level text, type text, scenario text, question text,
+    options jsonb, correct_answer jsonb, explanation text, pacci_tip text, topic text, order_index integer
+  );
+
+  update public.courses set content_version = content_version + 1 where id = p_course_id;
+end;
+$$;
+
+comment on function public.admin_replace_course_content(text, jsonb, jsonb) is 'SECURITY DEFINER, NUNCA exposta a authenticated/anon (sem grant execute pra esses roles) — só a Edge Function admin-course-import chama isto, usando a service-role key. Tudo roda numa transação de função só: ou o curso inteiro troca de conteúdo e a versão sobe, ou nada muda.';
+
 -- Lead "morno" capturado em public/comece.html (landing de topo de funil
 -- para contadores/donos de escritório vindos do Instagram) — via a Edge
 -- Function capture-marketing-lead. Diferente de pending_signups, não tem
@@ -627,9 +781,10 @@ comment on table public.marketing_leads is 'Leads de topo de funil (ex.: landing
 -- =============================================================================
 alter table public.companies enable row level security;
 alter table public.users enable row level security;
-alter table public.modules enable row level security;
+alter table public.courses enable row level security;
 alter table public.lessons enable row level security;
 alter table public.questions enable row level security;
+alter table public.company_course_access enable row level security;
 alter table public.user_progress enable row level security;
 alter table public.question_attempts enable row level security;
 alter table public.question_reports enable row level security;
@@ -668,23 +823,76 @@ create policy users_update_self on public.users for update
   using (id = auth.uid() or public.is_master())
   with check (id = auth.uid() or public.is_master());
 
--- modules/lessons/questions: conteúdo, leitura liberada pra qualquer usuário logado.
-drop policy if exists modules_select_authenticated on public.modules;
-create policy modules_select_authenticated on public.modules for select
-  using (auth.role() = 'authenticated');
+-- courses/lessons/questions: leitura só de curso com allow-list em
+-- company_course_access pra própria empresa (master vê tudo sempre). Antes
+-- da migração multi-curso, isto era liberado pra qualquer autenticado —
+-- agora segue o mesmo padrão self-or-company do resto do arquivo, só que
+-- via tabela de allow-list em vez de comparar company_id diretamente,
+-- porque um curso pode ser liberado pra N empresas, não só uma.
+--
+-- Exceção só em `courses` (metadado): um curso ainda INATIVO (is_active =
+-- false, ex: os placeholders "Disponível em breve") fica visível pra
+-- qualquer autenticado mesmo sem allow-list — é só o card de "em breve",
+-- sem lição/questão nenhuma por trás (preserva o comportamento de antes da
+-- migração). `lessons`/`questions` NÃO têm essa exceção: mesmo um curso
+-- inativo que já tenha conteúdo sendo preparado continua escondido de quem
+-- não tem grant.
+drop policy if exists modules_select_authenticated on public.courses;
+drop policy if exists courses_select_authenticated on public.courses;
+create policy courses_select_authenticated on public.courses for select
+  using (
+    auth.role() = 'authenticated'
+    and (
+      public.is_master()
+      or not courses.is_active
+      or exists (
+        select 1 from public.company_course_access a
+        where a.course_id = courses.id and a.company_id = public.current_user_company_id()
+      )
+    )
+  );
 
 drop policy if exists lessons_select_authenticated on public.lessons;
 create policy lessons_select_authenticated on public.lessons for select
-  using (auth.role() = 'authenticated');
+  using (
+    auth.role() = 'authenticated'
+    and (
+      public.is_master()
+      or exists (
+        select 1 from public.company_course_access a
+        where a.course_id = lessons.course_id and a.company_id = public.current_user_company_id()
+      )
+    )
+  );
 
 drop policy if exists questions_select_authenticated on public.questions;
 create policy questions_select_authenticated on public.questions for select
-  using (auth.role() = 'authenticated');
+  using (
+    auth.role() = 'authenticated'
+    and (
+      public.is_master()
+      or exists (
+        select 1 from public.company_course_access a
+        where a.course_id = questions.course_id and a.company_id = public.current_user_company_id()
+      )
+    )
+  );
 
 -- Só o master edita gabarito (modal "Revisar Questão" da aba Questões
 -- Reportadas, ver QuestionReviewModal.jsx) — colaboradores e gestores só leem.
 drop policy if exists questions_update_master on public.questions;
 create policy questions_update_master on public.questions for update
+  using (public.is_master())
+  with check (public.is_master());
+
+-- company_course_access: master gerencia tudo; gestor só vê os grants da
+-- própria empresa (útil pra entender por que um curso não aparece pra ele).
+drop policy if exists company_course_access_select on public.company_course_access;
+create policy company_course_access_select on public.company_course_access for select
+  using (public.is_master() or (public.is_manager() and company_id = public.current_user_company_id()));
+
+drop policy if exists company_course_access_write_master on public.company_course_access;
+create policy company_course_access_write_master on public.company_course_access for all
   using (public.is_master())
   with check (public.is_master());
 

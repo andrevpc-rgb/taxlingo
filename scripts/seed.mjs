@@ -103,7 +103,7 @@ function buildLevelLessons(level, allQuestions) {
     const lessonId = `${level.id}-${i + 1}`;
     lessons.push({
       id: lessonId,
-      module_id: 'reforma-tributaria',
+      course_id: 'reforma-tributaria',
       career_level_id: level.id,
       type: 'regular',
       title: `${level.title} · Lição ${i + 1}/${regularChunks.length}`,
@@ -119,7 +119,7 @@ function buildLevelLessons(level, allQuestions) {
     const examLessonId = `${level.id}-exam`;
     lessons.push({
       id: examLessonId,
-      module_id: 'reforma-tributaria',
+      course_id: 'reforma-tributaria',
       career_level_id: level.id,
       type: 'exam',
       title: `${level.title} · Exame de Transição`,
@@ -138,6 +138,7 @@ function toQuestionRow(q, lessonId, orderIndex) {
   return {
     id: q.id,
     lesson_id: lessonId,
+    course_id: 'reforma-tributaria',
     level: q.level,
     type: q.type,
     scenario: q.scenario ?? null,
@@ -146,6 +147,7 @@ function toQuestionRow(q, lessonId, orderIndex) {
     correct_answer: q.correctAnswer,
     explanation: q.explanation ?? null,
     pacci_tip: q.pacciTip ?? null,
+    topic: q.topic ?? 'outros',
     order_index: orderIndex,
   };
 }
@@ -159,21 +161,36 @@ async function upsertInBatches(table, rows, batchSize = 500) {
 }
 
 // ---------------------------------------------------------------------------
-// 1. Módulos (7 no total — só "reforma-tributaria" com conteúdo por enquanto)
+// 1. Cursos (7 no total — só "reforma-tributaria" com conteúdo por enquanto)
 // ---------------------------------------------------------------------------
-async function seedModules() {
-  console.log('→ Módulos...');
-  const modules = [
-    { id: 'reforma-tributaria', title: 'Reforma Tributária', description: 'Do Estagiário ao Especialista: IBS, CBS, Imposto Seletivo e a transição da EC 132/2023.', icon: 'Landmark', color: 'emerald', is_available: true, order_index: 0 },
-    { id: 'contabilidade', title: 'Contabilidade', description: 'Fundamentos de escrituração, balanços e demonstrações contábeis.', icon: 'Calculator', color: 'blue', is_available: false, order_index: 1 },
-    { id: 'fiscal', title: 'Fiscal', description: 'Obrigações acessórias, apuração de tributos e SPED.', icon: 'FileSpreadsheet', color: 'amber', is_available: false, order_index: 2 },
-    { id: 'trabalhista', title: 'Trabalhista', description: 'Folha de pagamento, eSocial e legislação trabalhista.', icon: 'Briefcase', color: 'purple', is_available: false, order_index: 3 },
-    { id: 'atendimento-cliente', title: 'Atendimento ao Cliente', description: 'Excelência e comunicação no relacionamento com o cliente.', icon: 'Headset', color: 'sky', is_available: false, order_index: 4 },
-    { id: 'etica-profissional', title: 'Ética Profissional', description: 'Código de ética contábil e conduta profissional.', icon: 'Scale', color: 'rose', is_available: false, order_index: 5 },
-    { id: 'legalizacao', title: 'Legalização', description: 'Abertura, alteração e encerramento de empresas.', icon: 'Stamp', color: 'indigo', is_available: false, order_index: 6 },
+async function seedCourses() {
+  console.log('→ Cursos...');
+  const courses = [
+    { id: 'reforma-tributaria', title: 'Reforma Tributária', description: 'Do Estagiário ao Especialista: IBS, CBS, Imposto Seletivo e a transição da EC 132/2023.', icon: 'Landmark', color: 'emerald', is_active: true, order_index: 0 },
+    { id: 'contabilidade', title: 'Contabilidade', description: 'Fundamentos de escrituração, balanços e demonstrações contábeis.', icon: 'Calculator', color: 'blue', is_active: false, order_index: 1 },
+    { id: 'fiscal', title: 'Fiscal', description: 'Obrigações acessórias, apuração de tributos e SPED.', icon: 'FileSpreadsheet', color: 'amber', is_active: false, order_index: 2 },
+    { id: 'trabalhista', title: 'Trabalhista', description: 'Folha de pagamento, eSocial e legislação trabalhista.', icon: 'Briefcase', color: 'purple', is_active: false, order_index: 3 },
+    { id: 'atendimento-cliente', title: 'Atendimento ao Cliente', description: 'Excelência e comunicação no relacionamento com o cliente.', icon: 'Headset', color: 'sky', is_active: false, order_index: 4 },
+    { id: 'etica-profissional', title: 'Ética Profissional', description: 'Código de ética contábil e conduta profissional.', icon: 'Scale', color: 'rose', is_active: false, order_index: 5 },
+    { id: 'legalizacao', title: 'Legalização', description: 'Abertura, alteração e encerramento de empresas.', icon: 'Stamp', color: 'indigo', is_active: false, order_index: 6 },
   ];
-  await upsertInBatches('modules', modules);
-  console.log(`  ${modules.length} módulos ok.`);
+  await upsertInBatches('courses', courses);
+  console.log(`  ${courses.length} cursos ok.`);
+}
+
+// Libera "reforma-tributaria" pra toda empresa de demonstração — sem isso,
+// a RLS de company_course_access (allow-list pura) esconderia o curso das
+// empresas ALFA/BETA/GAMMA recém-criadas (o backfill do schema.sql só cobre
+// empresas que já existiam NO MOMENTO em que a migração rodou).
+async function seedCourseAccess(companyIdByCode) {
+  console.log('→ Acesso ao curso (allow-list)...');
+  const rows = Object.values(companyIdByCode).map((companyId) => ({
+    company_id: companyId,
+    course_id: 'reforma-tributaria',
+  }));
+  const { error } = await supabase.from('company_course_access').upsert(rows, { onConflict: 'company_id,course_id' });
+  if (error) throw new Error(`Falha ao gravar company_course_access: ${error.message}`);
+  console.log(`  ${rows.length} liberações ok.`);
 }
 
 // ---------------------------------------------------------------------------
@@ -345,7 +362,7 @@ async function seedMasterAccount(companyIdByCode) {
 async function main() {
   const shouldReset = process.argv.includes('--reset');
 
-  await seedModules();
+  await seedCourses();
   await seedContent();
 
   if (shouldReset) {
@@ -353,6 +370,7 @@ async function main() {
   }
 
   const companyIdByCode = await seedCompanies();
+  await seedCourseAccess(companyIdByCode);
   await seedDemoUsers(companyIdByCode);
   await seedMasterAccount(companyIdByCode);
 

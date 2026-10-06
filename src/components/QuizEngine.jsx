@@ -444,6 +444,10 @@ export default function QuizEngine({ onExit }) {
     startAccelerationTest,
     declineAcceleration,
     startDailyReview,
+    loadingCourseId,
+    courseLoadError,
+    clearCourseLoadError,
+    startLesson,
   } = useGame();
 
   // A "Lição de Revisão" não existe no banco de lições — reiniciá-la
@@ -691,6 +695,36 @@ export default function QuizEngine({ onExit }) {
             Continuar
           </button>
         </div>
+      </div>
+    );
+  }
+
+  // Modo Supabase: o curso ainda não tinha bundle de questões cacheado nesta
+  // sessão (ver startLesson em GameContext.jsx) — aparece só na primeira vez
+  // que cada curso é aberto; lições seguintes do mesmo curso não passam por
+  // aqui de novo (bundle já fica em memória + IndexedDB).
+  if (loadingCourseId) {
+    return (
+      <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-16 text-center">
+        <PacciMascot mood="neutral" size="lg" message="Carregando o curso..." />
+      </div>
+    );
+  }
+
+  if (courseLoadError) {
+    return (
+      <div className="mx-auto flex max-w-md flex-col items-center gap-4 px-4 py-16 text-center">
+        <PacciMascot mood="sad" size="lg" message={courseLoadError.message} />
+        <button
+          type="button"
+          onClick={() => {
+            clearCourseLoadError();
+            startLesson(courseLoadError.moduleId, courseLoadError.lessonId);
+          }}
+          className="rounded-2xl bg-emerald-500 px-6 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_4px_0_0_#047857] active:translate-y-0.5 active:shadow-none"
+        >
+          Tentar novamente
+        </button>
       </div>
     );
   }

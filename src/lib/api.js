@@ -82,7 +82,7 @@ function toUserPatch(patch) {
 export function mapLessonRow(row) {
   return {
     id: row.id,
-    moduleId: row.module_id,
+    courseId: row.course_id,
     careerLevelId: row.career_level_id,
     type: row.type,
     title: row.title,
@@ -104,17 +104,20 @@ export function mapQuestionRow(row) {
     correctAnswer: row.correct_answer,
     explanation: row.explanation,
     pacciTip: row.pacci_tip,
+    topic: row.topic,
   };
 }
 
-function mapModuleRow(row) {
+function mapCourseRow(row) {
   return {
     id: row.id,
     title: row.title,
     description: row.description,
     icon: row.icon,
     color: row.color,
-    locked: !row.is_available,
+    bannerUrl: row.banner_url,
+    contentVersion: row.content_version,
+    locked: !row.is_active,
     orderIndex: row.order_index,
   };
 }
@@ -277,26 +280,35 @@ export async function updateProfile(userId, patch) {
 export const updateGameStats = updateProfile;
 
 // ---------------------------------------------------------------------------
-// Conteúdo (módulos / lições / questões)
+// Conteúdo (cursos / lições / questões) — ver src/lib/contentCache.js pra
+// como fetchCourseContentBundle é cacheado em IndexedDB no cliente.
 // ---------------------------------------------------------------------------
-export async function fetchModules() {
-  const { data, error } = await supabase.from('modules').select('*').order('order_index');
+
+// Metadado leve de curso (sem lições/questões) — chamado no login, monta os
+// cards da Home (título/ícone/progresso) sem baixar nenhum conteúdo pesado.
+// RLS já filtra pra só os cursos ativos+liberados pra empresa do usuário.
+export async function fetchCourses() {
+  const { data, error } = await supabase.from('courses').select('*').order('order_index');
   if (error) throw error;
-  return data.map(mapModuleRow);
+  return data.map(mapCourseRow);
 }
 
-export async function fetchLessonsForModule(moduleId) {
+// Lições de um curso, SEM as questões (linhas pequenas) — permite montar
+// "Continuar de onde parei"/applyProgressToModules sem abrir o curso.
+export async function fetchLessonsForCourse(courseId) {
   const { data, error } = await supabase
     .from('lessons')
     .select('*')
-    .eq('module_id', moduleId)
+    .eq('course_id', courseId)
     .order('order_index');
   if (error) throw error;
   return data.map(mapLessonRow);
 }
 
-// Carregada sob demanda (não no login) — 1000 questões de uma vez seria
-// pesado; cada lição só busca suas próprias ~3-20 questões quando é aberta.
+// Carregada sob demanda (não no login) — cada lição busca suas próprias
+// ~3-20 questões quando é aberta. Mantida por compatibilidade/uso pontual;
+// o caminho normal de jogo usa fetchCourseContentBundle (busca o curso
+// inteiro de uma vez, cacheado — ver contentCache.ensureCourseContent).
 export async function fetchQuestionsForLesson(lessonId) {
   const { data, error } = await supabase
     .from('questions')
@@ -307,12 +319,45 @@ export async function fetchQuestionsForLesson(lessonId) {
   return data.map(mapQuestionRow);
 }
 
-// Usada pela "Lição de Manutenção/Revisão" do modo Lenda — sorteia questões
-// de qualquer nível. Com ~1000 linhas o custo de trazer tudo e embaralhar no
-// cliente é irrelevante; se o banco de questões crescer muito, troque por
-// uma function `ORDER BY random() LIMIT n` no Postgres.
-export async function fetchRandomQuestions(count) {
-  const { data, error } = await supabase.from('questions').select('*');
+// Bundle pesado: todas as questões de um curso inteiro (~1,2MB pra Reforma
+// Tributária), agrupadas por lesson_id no formato que startLessonState já
+// espera (questionBank[courseId][lessonId]). 1 query só, via o course_id
+// denormalizado em `questions` — chamado só quando o usuário abre um curso
+// de verdade, nunca no login.
+export async function fetchCourseContentBundle(courseId) {
+  const { data, error } = await supabase
+    .from('questions')
+    .select('*')
+    .eq('course_id', courseId)
+    .order('lesson_id')
+    .order('order_index');
+  if (error) throw error;
+  const questionBank = {};
+  for (const row of data) {
+    (questionBank[row.lesson_id] ??= []).push(mapQuestionRow(row));
+  }
+  return questionBank;
+}
+
+// Carimbo de versão — 1 query de 1 linha, usada pra decidir se o cache local
+// (IndexedDB) de um curso ainda vale ou se precisa rebaixar o bundle pesado.
+export async function fetchCourseContentVersion(courseId) {
+  const { data, error } = await supabase.from('courses').select('content_version').eq('id', courseId).single();
+  if (error) throw error;
+  return data.content_version;
+}
+
+// Pra uma futura "Lição de Manutenção/Revisão" multi-curso em modo Supabase
+// (hoje a Revisão Diária, ver getDailyReviewQuestions em GameContext.jsx,
+// continua só no banco local mockData.js/CAREER_LEVELS nos dois modos — fora
+// do escopo desta leva de mudanças) — `courseIds` já filtra de quais cursos
+// sortear, mas ainda não tem chamador. Com ~1000 linhas por curso o custo de
+// trazer tudo e embaralhar no cliente é irrelevante; se o banco de questões
+// crescer muito, troque por uma function `ORDER BY random() LIMIT n` no Postgres.
+export async function fetchRandomQuestions(count, courseIds) {
+  let query = supabase.from('questions').select('*');
+  if (courseIds?.length) query = query.in('course_id', courseIds);
+  const { data, error } = await query;
   if (error) throw error;
   const shuffled = [...data].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count).map(mapQuestionRow);

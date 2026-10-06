@@ -33,6 +33,7 @@ import {
 } from '../data/mockData';
 import { isSupabaseConfigured } from '../lib/supabase';
 import * as api from '../lib/api';
+import * as contentCache from '../lib/contentCache';
 
 // ---------------------------------------------------------------------------
 // Modo de dados: se VITE_SUPABASE_URL/VITE_SUPABASE_ANON_KEY estiverem
@@ -525,7 +526,7 @@ function applyProgressToModules(modulesState, progressRows) {
     const module = next.find((m) => m.lessons.some((l) => l.id === lessonId));
     if (!module) continue;
     next = updateLessonInModules(next, module.id, lessonId, { completed: true });
-    const nextLevelLesson = getNextLevelFirstLesson(module.id, lessonId);
+    const nextLevelLesson = getNextLevelFirstLesson(next, module.id, lessonId);
     next = nextLevelLesson
       ? updateLessonInModules(next, nextLevelLesson.moduleId, nextLevelLesson.lessonId, { locked: false })
       : unlockNextLesson(next, module.id, lessonId);
@@ -535,17 +536,47 @@ function applyProgressToModules(modulesState, progressRows) {
 }
 
 // Ao passar no Exame de Transição, destrava a primeira lição do próximo
-// nível de carreira dentro do mesmo módulo (Reforma Tributária).
+// nível de carreira do mesmo curso. Dois jeitos de descobrir o nível de uma
+// lição, conforme a origem do dado:
+// - Supabase: cada lição já carrega o próprio careerLevelId (ver
+//   mapLessonRow em api.js) — funciona pra QUALQUER curso, não só Reforma
+//   Tributária, sem depender de CAREER_LEVELS.
+// - Mock: lições não carregam esse campo (buildLevelLessons em mockData.js
+//   só existe pra Reforma Tributária, o único curso jogável nesse modo) —
+//   infere pelo prefixo do id contra CAREER_LEVELS, como sempre foi.
 function getLevelIdFromLessonId(lessonId) {
   return CAREER_LEVELS.find((level) => lessonId.startsWith(`${level.id}-`))?.id ?? null;
 }
 
-function getNextLevelFirstLesson(moduleId, lessonId) {
-  if (moduleId !== MODULE_IDS.REFORMA_TRIBUTARIA) return null;
+function getLessonCareerLevelId(modulesState, courseId, lessonId) {
+  const lesson = findLesson(modulesState, courseId, lessonId);
+  return lesson?.careerLevelId ?? getLevelIdFromLessonId(lessonId);
+}
+
+function getNextLevelFirstLesson(modulesState, courseId, lessonId) {
+  const course = findModule(modulesState, courseId);
+  if (!course) return null;
+
+  const hasExplicitLevels = course.lessons.some((l) => l.careerLevelId);
+  if (hasExplicitLevels) {
+    const currentLevelId = getLessonCareerLevelId(modulesState, courseId, lessonId);
+    if (!currentLevelId) return null;
+    const levelOrder = [];
+    for (const l of course.lessons) {
+      if (l.careerLevelId && !levelOrder.includes(l.careerLevelId)) levelOrder.push(l.careerLevelId);
+    }
+    const nextLevelId = levelOrder[levelOrder.indexOf(currentLevelId) + 1];
+    if (!nextLevelId) return null;
+    const firstLessonOfNextLevel = course.lessons.find((l) => l.careerLevelId === nextLevelId);
+    return firstLessonOfNextLevel ? { moduleId: courseId, lessonId: firstLessonOfNextLevel.id } : null;
+  }
+
+  // Sem careerLevelId explícito (modo mock, ou curso sem trilha de
+  // carreira): jeito antigo, só funciona pra Reforma Tributária.
   const levelIndex = CAREER_LEVELS.findIndex((level) => level.id === getLevelIdFromLessonId(lessonId));
   const nextLevel = CAREER_LEVELS[levelIndex + 1];
   if (!nextLevel) return null;
-  return { moduleId, lessonId: `${nextLevel.id}-1` };
+  return { moduleId: courseId, lessonId: `${nextLevel.id}-1` };
 }
 
 // Checa se o acesso do usuário venceu — dois motivos possíveis, os dois
@@ -586,11 +617,54 @@ async function loadProgressSafely(userId) {
   }
 }
 
+// Modo Supabase: monta o mesmo formato de `modules` que o modo mock sempre
+// teve (cloneModules(), ver mockData.js) a partir do banco — metadado leve
+// de curso (fetchCourses) + lições de cada curso (fetchLessonsForCourse),
+// SEM baixar questão nenhuma ainda (isso só acontece quando o usuário abre
+// uma lição de verdade — ver startLesson/contentCache.ensureCourseContent).
+// Diferente de loadProgressSafely, NÃO é best-effort: sem isso não tem curso
+// nenhum pra mostrar, então uma falha aqui propaga pro catch do efeito de
+// login (AUTH_ERROR), igual uma falha de fetchProfile já fazia.
+async function loadCoursesForUser() {
+  const courses = await api.fetchCourses();
+  const assembled = await Promise.all(
+    courses.map(async (course) => {
+      const lessons = course.locked ? [] : await api.fetchLessonsForCourse(course.id);
+      const lessonsWithDefaults = lessons.map((lesson, i) => ({
+        ...lesson,
+        completed: false,
+        locked: i !== 0, // 1ª lição do curso sempre começa destravada — applyProgressToModules corrige o resto a partir de user_progress logo em seguida
+      }));
+      return {
+        id: course.id,
+        title: course.title,
+        description: course.description,
+        icon: course.icon,
+        color: course.color,
+        locked: course.locked,
+        totalLessons: lessonsWithDefaults.length,
+        completedLessons: 0,
+        progress: 0,
+        lessons: lessonsWithDefaults,
+      };
+    })
+  );
+  return assembled.sort((a, b) => (a.orderIndex ?? 0) - (b.orderIndex ?? 0));
+}
+
 // Campos de estado do "motor de jogo" (lição/quiz em andamento) — os mesmos
 // nos dois modos de dados, independente de onde usuário/rankings vêm.
 function buildSharedGameState() {
   return {
     modules: cloneModules(),
+    // Modo Supabase: bundle de questões por curso, preenchido sob demanda
+    // (ver startLesson/contentCache.ensureCourseContent) — cada curso só
+    // entra aqui na primeira vez que uma lição dele é aberta nesta sessão.
+    // Modo mock nunca usa isto — startLessonState sempre cai no `questionBank`
+    // estático importado de mockData.js quando a chave não existe aqui.
+    supabaseQuestionBank: {},
+    loadingCourseId: null, // id do curso sendo buscado agora, pra UI mostrar um loading (ver startLesson)
+    courseLoadError: null, // mensagem de erro se a busca falhar sem cache local pra cair de volta
     moduleId: null,
     lessonId: null,
     currentLessonType: null, // 'regular' | 'exam' | 'review'
@@ -668,7 +742,11 @@ function buildInitialState() {
 function startLessonState(state, moduleId, lessonId) {
   const user = applyHeartRegen(state.user);
   const lesson = findLesson(state.modules, moduleId, lessonId);
-  const questions = (questionBank[moduleId]?.[lessonId] ?? []).map(withShuffledOptions);
+  // Modo Supabase: usa o bundle já buscado pro curso (ver startLesson,
+  // garante isso ANTES de disparar START_LESSON). Modo mock: cai sempre no
+  // `questionBank` estático — supabaseQuestionBank nunca é populado lá.
+  const bank = state.supabaseQuestionBank?.[moduleId] ?? questionBank[moduleId];
+  const questions = (bank?.[lessonId] ?? []).map(withShuffledOptions);
   return {
     ...state,
     user,
@@ -827,10 +905,15 @@ function gameReducerCore(state, action) {
 
     case 'AUTH_SUCCESS': {
       const shared = buildSharedGameState();
+      // action.payload.modules vem do Supabase (cursos+lições buscados no
+      // efeito de login antes de disparar esta ação — ver GameProvider) só
+      // no modo Supabase; no modo mock continua vindo do cloneModules()
+      // estático de buildSharedGameState(), como sempre.
+      const baseModules = action.payload.modules ?? shared.modules;
       return {
         ...state,
         ...shared,
-        modules: applyProgressToModules(shared.modules, action.payload.progress),
+        modules: applyProgressToModules(baseModules, action.payload.progress),
         user: action.payload.user,
         isAuthenticated: true,
         authLoading: false,
@@ -913,6 +996,29 @@ function gameReducerCore(state, action) {
       if (!state.user) return state;
       const { moduleId, lessonId } = action.payload;
       return { ...startLessonState(state, moduleId, lessonId), pendingAccelerationTest: false };
+    }
+
+    // Modo Supabase: disparado pelo wrapper assíncrono de startLesson antes
+    // de buscar o bundle de um curso ainda não cacheado nesta sessão — só
+    // controla o estado de loading, não mexe em mais nada.
+    case 'SET_LOADING_COURSE': {
+      return { ...state, loadingCourseId: action.payload, courseLoadError: action.payload ? null : state.courseLoadError };
+    }
+
+    case 'SET_COURSE_CONTENT': {
+      return {
+        ...state,
+        supabaseQuestionBank: { ...state.supabaseQuestionBank, [action.payload.courseId]: action.payload.questionBank },
+        loadingCourseId: null,
+      };
+    }
+
+    case 'COURSE_LOAD_ERROR': {
+      return { ...state, loadingCourseId: null, courseLoadError: action.payload };
+    }
+
+    case 'CLEAR_COURSE_LOAD_ERROR': {
+      return { ...state, courseLoadError: null };
     }
 
     case 'START_ACCELERATION_TEST': {
@@ -1113,12 +1219,12 @@ function gameReducerCore(state, action) {
 
         let nextLevelId = null;
         if (passed) {
-          const nextLessonRef = getNextLevelFirstLesson(state.moduleId, state.lessonId);
+          const nextLessonRef = getNextLevelFirstLesson(state.modules, state.moduleId, state.lessonId);
           if (nextLessonRef) {
             nextModules = updateLessonInModules(nextModules, nextLessonRef.moduleId, nextLessonRef.lessonId, {
               locked: false,
             });
-            nextLevelId = getLevelIdFromLessonId(nextLessonRef.lessonId);
+            nextLevelId = getLessonCareerLevelId(nextModules, nextLessonRef.moduleId, nextLessonRef.lessonId);
           }
         }
 
@@ -1134,7 +1240,7 @@ function gameReducerCore(state, action) {
         // Toda tentativa (aprovada ou não) fica registrada no histórico do
         // colaborador — é o que alimenta o Painel do Gestor.
         const attempt = {
-          levelId: getLevelIdFromLessonId(state.lessonId),
+          levelId: getLessonCareerLevelId(state.modules, state.moduleId, state.lessonId),
           lessonId: state.lessonId,
           scorePct,
           passed,
@@ -1464,9 +1570,10 @@ export function GameProvider({ children }) {
             dispatch({ type: 'AUTH_ERROR', payload: ACCESS_EXPIRED_MESSAGE });
             return;
           }
+          const modules = await loadCoursesForUser();
           const progress = await loadProgressSafely(profile.id);
           if (!active) return;
-          dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
+          dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
         } else {
           dispatch({ type: 'AUTH_SIGNED_OUT' });
         }
@@ -1688,8 +1795,9 @@ export function GameProvider({ children }) {
         dispatch({ type: 'AUTH_ERROR', payload: ACCESS_EXPIRED_MESSAGE });
         return;
       }
+      const modules = await loadCoursesForUser();
       const progress = await loadProgressSafely(profile.id);
-      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
+      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
     } catch (err) {
       dispatch({ type: 'AUTH_ERROR', payload: err.message || 'Não foi possível entrar.' });
     }
@@ -1741,8 +1849,9 @@ export function GameProvider({ children }) {
         return;
       }
       const profile = await api.fetchProfile(authUser.id);
+      const modules = await loadCoursesForUser();
       const progress = await loadProgressSafely(profile.id);
-      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
+      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
     } catch (err) {
       dispatch({ type: 'AUTH_ERROR', payload: err.message || 'Não foi possível cadastrar.' });
     }
@@ -1797,8 +1906,9 @@ export function GameProvider({ children }) {
       const session = await api.getCurrentSession();
       if (session?.user) {
         const profile = await api.fetchProfile(session.user.id);
+        const modules = await loadCoursesForUser();
         const progress = await loadProgressSafely(profile.id);
-        dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress } });
+        dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
       } else {
         dispatch({ type: 'PASSWORD_RESET_COMPLETE' });
       }
@@ -1829,9 +1939,40 @@ export function GameProvider({ children }) {
     [state.user]
   );
 
+  // Modo Supabase: antes de iniciar a lição, garante que o bundle de
+  // questões do curso já esteja carregado (buscado uma vez por curso por
+  // sessão, cacheado em IndexedDB entre sessões — ver contentCache.
+  // ensureCourseContent). Modo mock: dispara START_LESSON direto, como
+  // sempre — o `questionBank` estático já está disponível de cara.
   const startLesson = useCallback(
-    (moduleId, lessonId) => dispatch({ type: 'START_LESSON', payload: { moduleId, lessonId } }),
-    []
+    async (moduleId, lessonId) => {
+      if (!isSupabaseConfigured) {
+        dispatch({ type: 'START_LESSON', payload: { moduleId, lessonId } });
+        return;
+      }
+      if (!state.supabaseQuestionBank[moduleId]) {
+        dispatch({ type: 'SET_LOADING_COURSE', payload: moduleId });
+        try {
+          const { questionBank: bundle } = await contentCache.ensureCourseContent(moduleId, {
+            fetchVersion: api.fetchCourseContentVersion,
+            fetchBundle: api.fetchCourseContentBundle,
+          });
+          dispatch({ type: 'SET_COURSE_CONTENT', payload: { courseId: moduleId, questionBank: bundle } });
+        } catch (err) {
+          dispatch({
+            type: 'COURSE_LOAD_ERROR',
+            payload: {
+              message: err.message || 'Não foi possível carregar este curso. Confira sua conexão e tente de novo.',
+              moduleId,
+              lessonId,
+            },
+          });
+          return;
+        }
+      }
+      dispatch({ type: 'START_LESSON', payload: { moduleId, lessonId } });
+    },
+    [state.supabaseQuestionBank]
   );
   const startAccelerationTest = useCallback(() => dispatch({ type: 'START_ACCELERATION_TEST' }), []);
   const declineAcceleration = useCallback(() => dispatch({ type: 'DECLINE_ACCELERATION' }), []);
@@ -1854,6 +1995,11 @@ export function GameProvider({ children }) {
       api.markNotificationRead(notificationId).catch(() => {});
     }
   }, []);
+
+  // "Tentar novamente" na tela de erro de carregamento de curso (ver
+  // startLesson/contentCache) — só limpa o erro; o próximo clique em
+  // startLesson já tenta a busca de novo sozinho.
+  const clearCourseLoadError = useCallback(() => dispatch({ type: 'CLEAR_COURSE_LOAD_ERROR' }), []);
 
   // `currentQuestion` sempre vem da FILA (não do array original de
   // perguntas) — é ela que decide o que aparece na tela a cada passo,
@@ -1981,6 +2127,7 @@ export function GameProvider({ children }) {
       exitLesson,
       dismissNotification,
       refreshNotifications,
+      clearCourseLoadError,
     }),
     [
       state,
@@ -2019,6 +2166,7 @@ export function GameProvider({ children }) {
       exitLesson,
       dismissNotification,
       refreshNotifications,
+      clearCourseLoadError,
     ]
   );
 
