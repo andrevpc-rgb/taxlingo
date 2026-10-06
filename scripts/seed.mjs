@@ -82,9 +82,15 @@ function chunkEvenly(array, partCount) {
   return parts;
 }
 
-function buildLevelLessons(level, allQuestions) {
+// `startOrderIndex` continua de onde o nível anterior parou — order_index
+// precisa ser único pro CURSO INTEIRO (270 lições), não só dentro do nível,
+// senão a Home (que agora ordena pelo order_index vindo do Supabase, ver
+// api.fetchLessonsForCourse) não sabe que "Auxiliar" vem depois de
+// "Estagiário": os dois teriam lições com order_index 0, 1, 2... iguais.
+// Devolve `nextOrderIndex` pra quem chama encadear o próximo nível.
+function buildLevelLessons(level, allQuestions, startOrderIndex) {
   const total = allQuestions.length;
-  if (total === 0) return { lessons: [], questions: [] };
+  if (total === 0) return { lessons: [], questions: [], nextOrderIndex: startOrderIndex };
 
   const rawExamSize = Math.round(total * 0.13) || EXAM_QUESTION_MIN;
   const examSize = Math.min(EXAM_QUESTION_MAX, Math.max(Math.min(EXAM_QUESTION_MIN, total), rawExamSize));
@@ -97,7 +103,7 @@ function buildLevelLessons(level, allQuestions) {
 
   const lessons = [];
   const questionRows = [];
-  let orderIndex = 0;
+  let orderIndex = startOrderIndex;
 
   regularChunks.forEach((qs, i) => {
     const lessonId = `${level.id}-${i + 1}`;
@@ -131,7 +137,7 @@ function buildLevelLessons(level, allQuestions) {
     examQuestions.forEach((q, qi) => questionRows.push(toQuestionRow(q, examLessonId, qi)));
   }
 
-  return { lessons, questions: questionRows };
+  return { lessons, questions: questionRows, nextOrderIndex: orderIndex };
 }
 
 function toQuestionRow(q, lessonId, orderIndex) {
@@ -200,11 +206,13 @@ async function seedContent() {
   console.log('→ Lições e questões (isso demora um pouco, são ~1000 questões)...');
   let totalLessons = 0;
   let totalQuestions = 0;
+  let orderIndex = 0; // encadeado entre níveis — ver comentário em buildLevelLessons
 
   for (const level of CAREER_LEVELS) {
     const raw = readFileSync(join(QUESTIONS_DIR, level.file), 'utf-8');
     const questions = JSON.parse(raw);
-    const { lessons, questions: questionRows } = buildLevelLessons(level, questions);
+    const { lessons, questions: questionRows, nextOrderIndex } = buildLevelLessons(level, questions, orderIndex);
+    orderIndex = nextOrderIndex;
 
     await upsertInBatches('lessons', lessons);
     await upsertInBatches('questions', questionRows);
