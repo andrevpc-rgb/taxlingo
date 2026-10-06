@@ -1,0 +1,1467 @@
+[
+  {
+    "id": "CONT-EST-001",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "É o seu primeiro dia num escritório de contabilidade. No organograma afixado na recepção, você vê os cargos empilhados em níveis, do estagiário até o sócio.",
+    "question": "Qual desses é o caminho de carreira típico, do primeiro ao último degrau, num escritório contábil?",
+    "options": [
+      "Estagiário → Auxiliar → Assistente → Analista → Especialista/Sócio",
+      "Auxiliar → Estagiário → Analista → Assistente → Sócio",
+      "Analista → Estagiário → Auxiliar → Assistente → Sócio",
+      "Estagiário → Analista → Auxiliar → Assistente → Sócio"
+    ],
+    "correctAnswer": "Estagiário → Auxiliar → Assistente → Analista → Especialista/Sócio",
+    "explanation": "A trilha de carreira típica num escritório contábil vai ganhando complexidade e autonomia: estagiário aprende a rotina, auxiliar executa lançamentos, assistente fecha o mês, analista interpreta os números, e o especialista/sócio decide e orienta o cliente.",
+    "pacciTip": "Cada degrau te dá mais responsabilidade, piccolo! Sobe com calma, aprendendo direitinho cada um.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-002",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente liga pedindo informações sobre o faturamento de outro cliente do escritório, dizendo que são \"concorrentes amigáveis\" e só quer \"comparar números\".",
+    "question": "Qual é a atitude correta do estagiário nessa ligação?",
+    "options": [
+      "Explicar educadamente que não pode informar dados de outro cliente e encaminhar a dúvida ao responsável",
+      "Passar um valor aproximado, já que são só números gerais",
+      "Pedir para o cliente ligar direto pro concorrente perguntar",
+      "Informar o faturamento, mas pedir segredo"
+    ],
+    "correctAnswer": "Explicar educadamente que não pode informar dados de outro cliente e encaminhar a dúvida ao responsável",
+    "explanation": "Sigilo profissional é base da contabilidade: dados de um cliente nunca são compartilhados com terceiros, nem 'só um número geral'. A dúvida deve ser educadamente recusada e o caso reportado ao supervisor.",
+    "pacciTip": "Sigilo não tem meio-termo, tesoro! Ou é sigiloso, ou não é — não existe 'contar só um pouquinho'.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-003",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No treinamento de integração, o RH do escritório explica que todo contador e colaborador segue um conjunto de regras de conduta profissional publicado pelo órgão que regula a profissão contábil no Brasil.",
+    "question": "Digite a sigla do órgão federal que regula a profissão de contador no Brasil:",
+    "correctAnswer": "CFC",
+    "explanation": "CFC = Conselho Federal de Contabilidade, responsável pelas normas e pelo Código de Ética Profissional do Contador.",
+    "pacciTip": "CFC: C de Contabilidade, F de Federal, C de Conselho. Guarda essa sigla, vai aparecer bastante!",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-004",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Seu supervisor te explica o fluxo padrão de quando um documento chega fisicamente na recepção do escritório, antes de virar lançamento contábil.",
+    "question": "Ordene o caminho correto de um documento, da chegada até o arquivo:",
+    "options": [
+      "Protocolar a entrada do documento",
+      "Separar por cliente e tipo de documento",
+      "Encaminhar ao setor responsável (fiscal, pessoal ou contábil)",
+      "Arquivar após o processamento"
+    ],
+    "correctAnswer": [
+      "Protocolar a entrada do documento",
+      "Separar por cliente e tipo de documento",
+      "Encaminhar ao setor responsável (fiscal, pessoal ou contábil)",
+      "Arquivar após o processamento"
+    ],
+    "explanation": "Todo documento segue esse fluxo: primeiro é registrado que chegou (protocolo), depois organizado por cliente/tipo, depois vai pro setor certo processar, e só no final é arquivado.",
+    "pacciTip": "Documento sem protocolo é documento perdido, amico! Primeiro registra, depois organiza.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-005",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "O supervisor pede pra você verificar o prazo de entrega de uma obrigação acessória de um cliente, e explica que, se o prazo vence num sábado, domingo ou feriado, a regra geral muda.",
+    "question": "O que normalmente acontece quando o prazo de uma obrigação fiscal cai num dia não útil?",
+    "options": [
+      "O prazo é antecipado para o último dia útil anterior",
+      "O prazo é prorrogado para o próximo dia útil",
+      "A obrigação é automaticamente cancelada",
+      "O prazo continua valendo no dia não útil mesmo"
+    ],
+    "correctAnswer": "O prazo é prorrogado para o próximo dia útil",
+    "explanation": "A regra geral (salvo exceção prevista na norma específica) é que vencimentos em dias não úteis são prorrogados para o próximo dia útil subsequente.",
+    "pacciTip": "Prazo não trabalha no fim de semana, piccolo! Ele espera o próximo dia útil chegar.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-006",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um colega de outro setor pede pra você dar uma 'olhadinha' na senha do sistema contábil de um analista que está de férias, pra adiantar um trabalho urgente.",
+    "question": "Qual é a conduta correta nessa situação?",
+    "options": [
+      "Recusar e sugerir que ele peça acesso formal ao supervisor",
+      "Emprestar a senha só dessa vez, já que é urgente",
+      "Fazer o trabalho usando a senha, mas sem contar pra ninguém",
+      "Trocar a senha do analista pra ele usar depois"
+    ],
+    "correctAnswer": "Recusar e sugerir que ele peça acesso formal ao supervisor",
+    "explanation": "Senhas são pessoais e intransferíveis — usá-las, mesmo com boa intenção, quebra a segurança da informação e a rastreabilidade de quem fez o quê no sistema.",
+    "pacciTip": "Senha emprestada é problema emprestado, tesoro! Sempre peça o acesso certo, pelo caminho certo.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-007",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No manual de boas práticas do escritório, há um capítulo sobre como tratar os dados pessoais de clientes e funcionários (CPF, endereço, salário), citando uma lei brasileira específica.",
+    "question": "Digite a sigla da lei brasileira que regula o tratamento de dados pessoais:",
+    "correctAnswer": "LGPD",
+    "explanation": "LGPD = Lei Geral de Proteção de Dados, que estabelece regras sobre coleta, uso e armazenamento de dados pessoais — inclusive os que o escritório contábil lida todo dia.",
+    "pacciTip": "LGPD é tipo o 'sigilo' em formato de lei, amico! Trata o CPF do cliente com o mesmo cuidado que trataria o seu.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-008",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Durante o cafezinho, um estagiário de outra empresa comenta nas redes sociais sobre 'um cliente problemático' do escritório onde trabalha, sem citar nome, mas dando detalhes que permitem identificar quem é.",
+    "question": "Por que essa atitude é inadequada, mesmo sem citar o nome do cliente?",
+    "options": [
+      "Porque detalhes suficientes já permitem identificar o cliente, quebrando o sigilo",
+      "Porque não é inadequada, já que o nome não foi citado",
+      "Porque só é errado se o cliente ver a postagem",
+      "Porque só conta como quebra de sigilo se for um valor financeiro"
+    ],
+    "correctAnswer": "Porque detalhes suficientes já permitem identificar o cliente, quebrando o sigilo",
+    "explanation": "Sigilo profissional não se limita a não citar nomes — qualquer informação que permita identificar o cliente ou sua situação já configura quebra de confidencialidade.",
+    "pacciTip": "Não citar o nome não é escudo, piccolo! Se dá pra adivinhar quem é, o sigilo já quebrou.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-009",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "No escritório, há uma rotina de onboarding pra todo estagiário novo, explicada pelo RH no primeiro dia.",
+    "question": "Ordene a sequência típica do primeiro dia de um estagiário no escritório:",
+    "options": [
+      "Assinar o termo de confidencialidade",
+      "Receber o treinamento sobre sigilo e LGPD",
+      "Ganhar acesso ao sistema contábil com permissões limitadas",
+      "Ser apresentado à equipe e ao supervisor direto"
+    ],
+    "correctAnswer": [
+      "Assinar o termo de confidencialidade",
+      "Receber o treinamento sobre sigilo e LGPD",
+      "Ser apresentado à equipe e ao supervisor direto",
+      "Ganhar acesso ao sistema contábil com permissões limitadas"
+    ],
+    "explanation": "Primeiro formaliza o compromisso de sigilo, depois treina sobre as regras, depois conhece a equipe, e só então recebe acesso ao sistema — nessa ordem o acesso já nasce consciente das responsabilidades.",
+    "pacciTip": "Confidencialidade vem antes do acesso ao sistema, sempre, amico! Regra número um do escritório.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-010",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que cometeu um pequeno erro ao organizar os documentos de um cliente, trocando a pasta de dois meses diferentes.",
+    "question": "Qual é a atitude mais profissional nesse caso?",
+    "options": [
+      "Avisar o supervisor sobre o erro e corrigir junto com ele",
+      "Corrigir sozinho em silêncio, sem comentar com ninguém",
+      "Deixar como está, já que é só uma troca de pasta",
+      "Esperar alguém perceber pra só então explicar"
+    ],
+    "correctAnswer": "Avisar o supervisor sobre o erro e corrigir junto com ele",
+    "explanation": "Transparência sobre erros é parte da ética profissional — avisar logo evita que o problema cresça (ex: um lançamento no mês errado) e constrói confiança com a equipe.",
+    "pacciTip": "Erro admitido rápido é erro pequeno, tesoro! Erro escondido é que vira bola de neve.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-011",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "No escritório, existem três setores principais que atendem demandas diferentes dos clientes: um cuida de impostos e notas, outro cuida da folha de pagamento dos funcionários do cliente, e outro cuida da escrituração contábil propriamente dita.",
+    "question": "Como esses três setores costumam ser chamados num escritório de contabilidade?",
+    "options": [
+      "Fiscal, Pessoal (DP) e Contábil",
+      "Comercial, Financeiro e Jurídico",
+      "Atendimento, Vendas e Suporte",
+      "Auditoria, Compliance e Jurídico"
+    ],
+    "correctAnswer": "Fiscal, Pessoal (DP) e Contábil",
+    "explanation": "A divisão clássica de um escritório de contabilidade é: Fiscal (impostos, notas, obrigações acessórias), Pessoal/DP (folha de pagamento, eSocial) e Contábil (escrituração, balancetes, demonstrações).",
+    "pacciTip": "Fiscal cuida do imposto, Pessoal cuida da folha, Contábil cuida dos números, piccolo! Os três juntos fazem a engrenagem girar.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-012",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No quadro de avisos, há um cartaz lembrando que todo colaborador deve tratar clientes, colegas e fornecedores com respeito, independente de cargo ou situação — um princípio básico da conduta profissional.",
+    "question": "Complete: tratar todos com respeito, sem distinção, é um princípio de conduta _______:",
+    "correctAnswer": "profissional",
+    "explanation": "Conduta profissional envolve tratar todos — clientes, colegas, fornecedores — com o mesmo respeito, independente de hierarquia ou situação.",
+    "pacciTip": "Respeito não escolhe cargo, amico! Trata todo mundo bem, do estagiário ao sócio.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-013",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pede, num tom informal, pra você 'dar uma força' e emitir uma nota fiscal com data retroativa pra resolver um problema dele.",
+    "question": "Qual é a resposta correta do estagiário?",
+    "options": [
+      "Explicar que não pode fazer isso e encaminhar o pedido ao responsável, que vai orientar sobre a forma correta de resolver",
+      "Fazer a nota com a data que o cliente pediu, já que é um pedido simples",
+      "Ignorar o pedido e não responder nada",
+      "Emitir a nota certa, mas avisar o cliente que 'da próxima vez' ele resolve"
+    ],
+    "correctAnswer": "Explicar que não pode fazer isso e encaminhar o pedido ao responsável, que vai orientar sobre a forma correta de resolver",
+    "explanation": "Pedidos que fogem da conformidade fiscal/contábil nunca devem ser atendidos por conta própria, principalmente por um estagiário — o caminho correto é escalar ao responsável, que vai orientar uma solução dentro da lei.",
+    "pacciTip": "Pedido estranho, encaminha pro chefe, piccolo! Não é sua função dizer sim ou não sozinho.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-014",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você recebe um e-mail de um cliente pedindo a 2ª via do cartão CNPJ da empresa dele, mas o supervisor está em reunião e não pode orientar na hora.",
+    "question": "O que é mais prudente fazer nesse caso, como estagiário iniciante?",
+    "options": [
+      "Responder que vai verificar e retornar assim que o supervisor estiver disponível",
+      "Tentar emitir o documento sozinho, mesmo sem ter feito isso antes",
+      "Ignorar o e-mail até o supervisor voltar da reunião",
+      "Pedir pra outro cliente te ajudar a emitir o documento"
+    ],
+    "correctAnswer": "Responder que vai verificar e retornar assim que o supervisor estiver disponível",
+    "explanation": "Reconhecer os próprios limites e comunicar um prazo realista ao cliente é mais profissional do que tentar algo sem orientação ou simplesmente não responder.",
+    "pacciTip": "'Vou verificar e te retorno' é a frase mágica, tesoro! Melhor que silêncio ou chute no escuro.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-015",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "O supervisor te orienta sobre como agir quando um prazo fiscal de um cliente está próximo de vencer e ainda falta um documento.",
+    "question": "Ordene a sequência correta de ação diante de um prazo apertado com documento faltando:",
+    "options": [
+      "Identificar qual documento está faltando",
+      "Contatar o cliente pedindo o documento com urgência",
+      "Registrar o acompanhamento no sistema/planilha de pendências",
+      "Avisar o supervisor se o prazo estiver em risco real"
+    ],
+    "correctAnswer": [
+      "Identificar qual documento está faltando",
+      "Contatar o cliente pedindo o documento com urgência",
+      "Registrar o acompanhamento no sistema/planilha de pendências",
+      "Avisar o supervisor se o prazo estiver em risco real"
+    ],
+    "explanation": "Primeiro identifica o que falta, depois cobra o cliente, registra o acompanhamento pra não esquecer, e se o risco de perder o prazo for real, escala pro supervisor a tempo de agir.",
+    "pacciTip": "Prazo apertado não é hora de pânico, é hora de processo, piccolo! Segue os passos e avisa cedo.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-016",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um amigo te pergunta, numa conversa informal, 'quanto o cliente X do seu escritório fatura por mês', só por curiosidade.",
+    "question": "Qual é a resposta adequada?",
+    "options": [
+      "Dizer que não pode comentar informações de clientes do escritório",
+      "Dar um valor aproximado, já que é só entre amigos",
+      "Perguntar antes pro supervisor se pode contar",
+      "Contar, mas pedir pro amigo não espalhar"
+    ],
+    "correctAnswer": "Dizer que não pode comentar informações de clientes do escritório",
+    "explanation": "O sigilo profissional vale em QUALQUER contexto, inclusive conversas informais com amigos — não existe exceção por ser 'só curiosidade' ou 'só entre a gente'.",
+    "pacciTip": "Sigilo não tira férias nem nas conversas de amigo, amico! Vale sempre, em qualquer lugar.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-017",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No treinamento, o instrutor explica que o estagiário, mesmo não sendo contador formado, também responde pelas suas ações e deve seguir os princípios éticos da profissão desde o início.",
+    "question": "Digite a palavra que descreve o conjunto de regras de conduta que todo profissional da contabilidade deve seguir:",
+    "correctAnswer": "ética",
+    "explanation": "Ética profissional é o conjunto de princípios de conduta — honestidade, sigilo, respeito, responsabilidade — que guia o trabalho de todos no escritório, do estagiário ao sócio.",
+    "pacciTip": "Ética não é só pros contadores formados, piccolo! Começa a praticar desde o primeiro dia de estágio.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-018",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você está digitalizando documentos de um cliente e percebe, sem querer, um extrato bancário com um valor bem alto de saldo.",
+    "question": "O que você deve fazer com essa informação que viu por acaso?",
+    "options": [
+      "Nada além do trabalho — a informação é confidencial e não deve ser comentada com ninguém",
+      "Comentar com um colega só pra 'compartilhar a surpresa'",
+      "Anotar o valor pra referência futura",
+      "Perguntar ao cliente se ele investe esse dinheiro"
+    ],
+    "correctAnswer": "Nada além do trabalho — a informação é confidencial e não deve ser comentada com ninguém",
+    "explanation": "Qualquer informação do cliente que o colaborador tenha acesso durante o trabalho — mesmo vista 'por acaso' — é confidencial e não deve ser comentada, anotada à parte ou usada para qualquer outro fim.",
+    "pacciTip": "Viu, processou, esqueceu, tesoro! O que é do cliente fica só no trabalho do cliente.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-019",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "O escritório tem uma política de que todo e-mail enviado a um cliente passa por revisão do supervisor antes de sair, durante os primeiros meses de estágio.",
+    "question": "Qual é o principal objetivo dessa política?",
+    "options": [
+      "Garantir que a comunicação com o cliente esteja correta e alinhada antes de o estagiário ganhar mais autonomia",
+      "Atrasar propositalmente o atendimento ao cliente",
+      "Impedir que o estagiário aprenda a se comunicar sozinho",
+      "Dar mais trabalho ao supervisor sem necessidade real"
+    ],
+    "correctAnswer": "Garantir que a comunicação com o cliente esteja correta e alinhada antes de o estagiário ganhar mais autonomia",
+    "explanation": "A revisão inicial de e-mails é uma forma de treinamento supervisionado: garante qualidade na comunicação enquanto o estagiário ainda está aprendendo os termos técnicos e o tom adequado com o cliente.",
+    "pacciTip": "Revisão no começo não é desconfiança, piccolo! É treino pra você voar sozinho depois.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-020",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Durante uma reunião de equipe, o sócio do escritório comenta que a reputação do escritório é construída 'devagar, com cada entrega no prazo e cada informação bem guardada'.",
+    "question": "Essa fala resume quais dois pilares da atuação de um escritório contábil?",
+    "options": [
+      "Cumprimento de prazos e sigilo das informações",
+      "Preço baixo e atendimento rápido",
+      "Quantidade de clientes e tamanho da equipe",
+      "Tecnologia usada e localização do escritório"
+    ],
+    "correctAnswer": "Cumprimento de prazos e sigilo das informações",
+    "explanation": "Prazo e sigilo são dois dos pilares mais valorizados num escritório contábil: entregar no tempo certo e proteger as informações do cliente constroem a confiança que sustenta o relacionamento no longo prazo.",
+    "pacciTip": "Prazo cumprido e boca fechada, piccolo! Essa é a receita da confiança do cliente.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-021",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Você recebe uma tarefa do seu supervisor e, no meio do trabalho, percebe que não entendeu uma parte da instrução.",
+    "question": "Ordene a atitude mais produtiva diante de uma dúvida no meio de uma tarefa:",
+    "options": [
+      "Reler a instrução/anotações para tentar esclarecer sozinho",
+      "Pesquisar no manual interno ou material de treinamento",
+      "Perguntar ao supervisor de forma objetiva, citando o que já tentou",
+      "Continuar a tarefa só depois de ter certeza do próximo passo"
+    ],
+    "correctAnswer": [
+      "Reler a instrução/anotações para tentar esclarecer sozinho",
+      "Pesquisar no manual interno ou material de treinamento",
+      "Perguntar ao supervisor de forma objetiva, citando o que já tentou",
+      "Continuar a tarefa só depois de ter certeza do próximo passo"
+    ],
+    "explanation": "O caminho mais profissional é tentar resolver sozinho primeiro (reler, pesquisar), e só então perguntar — já mostrando o que foi tentado, o que facilita a resposta do supervisor e demonstra proatividade.",
+    "pacciTip": "Pergunta boa é pergunta que já veio com uma tentativa junto, amico! Mostra que você se esforçou antes.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-022",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No contrato de estágio, há uma cláusula específica que proíbe o uso ou divulgação de qualquer informação do escritório ou dos clientes, mesmo após o fim do estágio.",
+    "question": "Digite o nome do documento, assinado no início, que formaliza esse compromisso de sigilo:",
+    "correctAnswer": "termo de confidencialidade",
+    "explanation": "O termo de confidencialidade (também chamado NDA) é o documento que formaliza, por escrito, o compromisso de sigilo do colaborador com as informações do escritório e dos clientes.",
+    "pacciTip": "Assinatura no termo não é formalidade, piccolo! É um compromisso de verdade que vale pra sempre.",
+    "topic": "estrutura_etica"
+  },
+  {
+    "id": "CONT-EST-023",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Chega no seu e-mail um arquivo PDF de uma nota fiscal eletrônica referente à venda de mercadorias de uma loja de roupas, cliente do escritório.",
+    "question": "Esse documento provavelmente é qual tipo de nota fiscal?",
+    "options": [
+      "NF-e (Nota Fiscal Eletrônica de produtos/mercadorias)",
+      "NFS-e (Nota Fiscal de Serviços Eletrônica)",
+      "CT-e (Conhecimento de Transporte Eletrônico)",
+      "MDF-e (Manifesto Eletrônico de Documentos Fiscais)"
+    ],
+    "correctAnswer": "NF-e (Nota Fiscal Eletrônica de produtos/mercadorias)",
+    "explanation": "A NF-e é usada para operações com mercadorias/produtos (como a venda de roupas); já a NFS-e é específica de prestação de serviços.",
+    "pacciTip": "Vendeu produto, é NF-e, piccolo! Prestou serviço, aí sim é NFS-e.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-024",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente que é uma clínica de fisioterapia manda pro escritório o documento referente ao atendimento de um paciente.",
+    "question": "Qual documento fiscal essa clínica provavelmente emite?",
+    "options": [
+      "NFS-e (Nota Fiscal de Serviços Eletrônica)",
+      "NF-e (Nota Fiscal Eletrônica de produtos)",
+      "CT-e (Conhecimento de Transporte Eletrônico)",
+      "NFC-e (Nota Fiscal de Consumidor Eletrônica)"
+    ],
+    "correctAnswer": "NFS-e (Nota Fiscal de Serviços Eletrônica)",
+    "explanation": "Fisioterapia é prestação de serviço, então o documento fiscal correto é a NFS-e, emitida pela prefeitura do município onde o serviço é prestado.",
+    "pacciTip": "Serviço de saúde, educação, consultoria... tudo isso é NFS-e, amico! Serviço sempre puxa pro 'S'.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-025",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "Uma transportadora, cliente do escritório, precisa comprovar que fez o transporte de uma carga entre duas cidades, e emite um documento fiscal específico para isso.",
+    "question": "Digite a sigla do documento fiscal eletrônico emitido para operações de transporte de carga:",
+    "correctAnswer": "CT-e",
+    "explanation": "CT-e = Conhecimento de Transporte Eletrônico, documento fiscal que comprova a prestação de serviço de transporte de cargas.",
+    "pacciTip": "CT-e: C de Carga, T de Transporte, piccolo! Documento de quem leva coisa de um lugar pro outro.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-026",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "No fim do mês, você precisa conferir se todos os pagamentos e recebimentos que passaram pela conta corrente da empresa foram registrados corretamente.",
+    "question": "Qual documento bancário você usa como base para essa conferência?",
+    "options": [
+      "Extrato bancário",
+      "Nota fiscal de serviço",
+      "Contrato social",
+      "Guia de recolhimento de imposto"
+    ],
+    "correctAnswer": "Extrato bancário",
+    "explanation": "O extrato bancário lista todas as movimentações (entradas e saídas) da conta corrente num período, sendo a base pra conferir se tudo que passou pelo banco também está registrado na contabilidade.",
+    "pacciTip": "Extrato é o 'diário' do banco, tesoro! Mostra tudo que entrou e saiu da conta.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-027",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Chegou uma pilha de documentos físicos de um cliente (notas fiscais, extratos e boletos) que precisa ser organizada antes de ir pro setor fiscal.",
+    "question": "Ordene o processo correto de organização desses documentos:",
+    "options": [
+      "Separar por tipo de documento (notas, extratos, boletos)",
+      "Organizar cada tipo em ordem cronológica",
+      "Conferir se não falta nenhum documento do período",
+      "Encaminhar o lote completo ao setor fiscal"
+    ],
+    "correctAnswer": [
+      "Separar por tipo de documento (notas, extratos, boletos)",
+      "Organizar cada tipo em ordem cronológica",
+      "Conferir se não falta nenhum documento do período",
+      "Encaminhar o lote completo ao setor fiscal"
+    ],
+    "explanation": "Primeiro separa por tipo, depois ordena cronologicamente dentro de cada tipo, confere se o período está completo, e só então encaminha — isso evita que o setor fiscal perca tempo organizando o que já devia ter sido organizado.",
+    "pacciTip": "Organiza antes de mandar, piccolo! Documento bagunçado atrasa o trabalho de todo mundo depois.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-028",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, ao vender uma mercadoria diretamente numa loja física pro consumidor final, o sistema emite um tipo de nota diferente da nota usada pra vender pra outra empresa.",
+    "question": "Qual é esse documento, voltado especificamente para venda ao consumidor final no varejo?",
+    "options": [
+      "NFC-e (Nota Fiscal de Consumidor Eletrônica)",
+      "CT-e (Conhecimento de Transporte Eletrônico)",
+      "NFS-e (Nota Fiscal de Serviços Eletrônica)",
+      "MDF-e (Manifesto Eletrônico de Documentos Fiscais)"
+    ],
+    "correctAnswer": "NFC-e (Nota Fiscal de Consumidor Eletrônica)",
+    "explanation": "A NFC-e é o modelo simplificado usado em vendas no varejo diretamente ao consumidor final, substituindo o antigo cupom fiscal.",
+    "pacciTip": "NFC-e é a nota do 'balcão', piccolo! Venda direta pro consumidor final.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-029",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você recebe um documento e precisa verificar se ele ainda é válido ou se já foi cancelado pelo emissor, antes de encaminhar pro lançamento.",
+    "question": "Onde normalmente se consulta a situação de validade de uma nota fiscal eletrônica?",
+    "options": [
+      "No portal da Secretaria da Fazenda (SEFAZ) ou sistema de consulta de notas",
+      "Direto no extrato bancário da empresa",
+      "No contrato social da empresa emissora",
+      "Em uma rede social da empresa emissora"
+    ],
+    "correctAnswer": "No portal da Secretaria da Fazenda (SEFAZ) ou sistema de consulta de notas",
+    "explanation": "A situação de uma NF-e (autorizada, cancelada, denegada) é consultada no portal da SEFAZ do estado emissor, ou em sistemas que integram essa consulta automaticamente.",
+    "pacciTip": "SEFAZ sabe tudo sobre a nota, tesoro! É lá que confirma se ela está valendo mesmo.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-030",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "Um cliente pergunta qual é o nome do arquivo digital que acompanha a nota fiscal eletrônica e contém todos os dados estruturados da operação, lido pelos sistemas.",
+    "question": "Digite o formato de arquivo (sigla de 3 letras) que contém os dados estruturados da nota fiscal eletrônica:",
+    "correctAnswer": "XML",
+    "explanation": "O arquivo XML é o formato estruturado que carrega todos os dados da NF-e — é esse arquivo (não só o PDF visual, chamado DANFE) que alimenta os sistemas contábeis automaticamente.",
+    "pacciTip": "O PDF é só pra humano ler, piccolo! O XML é o que o sistema realmente usa.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-031",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você está conferindo uma pasta de documentos e percebe que o PDF de uma nota fiscal está presente, mas o arquivo XML correspondente não foi enviado pelo cliente.",
+    "question": "Por que isso é um problema para o lançamento contábil correto?",
+    "options": [
+      "Porque o XML tem os dados estruturados que o sistema contábil lê automaticamente; sem ele, o lançamento pode precisar ser feito manualmente e com mais risco de erro",
+      "Porque sem o XML a nota fiscal automaticamente perde a validade",
+      "Porque o PDF nunca pode ser usado para nada",
+      "Porque isso não é um problema real, os dois arquivos são idênticos"
+    ],
+    "correctAnswer": "Porque o XML tem os dados estruturados que o sistema contábil lê automaticamente; sem ele, o lançamento pode precisar ser feito manualmente e com mais risco de erro",
+    "explanation": "O XML permite a importação automática dos dados pro sistema contábil; sem ele, o lançamento manual (digitando os dados do PDF) é mais lento e sujeito a erro de digitação.",
+    "pacciTip": "Pede sempre o XML junto, amico! Sem ele, o trabalho que seria automático vira manual.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-032",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Ao organizar a pasta de um cliente no sistema, você precisa decidir como nomear as subpastas pra facilitar a busca de qualquer colega no futuro.",
+    "question": "Qual critério de organização costuma facilitar mais a busca de documentos por mês?",
+    "options": [
+      "Nomear as pastas por ano e mês (ex: '2026-03')",
+      "Nomear as pastas com nomes aleatórios",
+      "Colocar todos os documentos de todos os meses numa única pasta",
+      "Nomear as pastas só com o nome do funcionário que organizou"
+    ],
+    "correctAnswer": "Nomear as pastas por ano e mês (ex: '2026-03')",
+    "explanation": "Organizar por ano-mês (formato que ordena naturalmente em qualquer sistema) facilita muito a busca posterior, tanto pra você quanto pra qualquer colega que precisar acessar depois.",
+    "pacciTip": "Pasta bem nomeada hoje poupa tempo de todo mundo amanhã, piccolo! Pensa em quem vai procurar depois.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-033",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Um cliente envia por e-mail um boleto de pagamento de fornecedor que precisa ser registrado e arquivado corretamente.",
+    "question": "Ordene o fluxo correto de tratamento desse boleto recebido:",
+    "options": [
+      "Verificar se o boleto é referente a um fornecedor já cadastrado",
+      "Confirmar se o valor e vencimento batem com o combinado",
+      "Registrar o lançamento de contas a pagar",
+      "Arquivar o boleto na pasta do mês correspondente"
+    ],
+    "correctAnswer": [
+      "Verificar se o boleto é referente a um fornecedor já cadastrado",
+      "Confirmar se o valor e vencimento batem com o combinado",
+      "Registrar o lançamento de contas a pagar",
+      "Arquivar o boleto na pasta do mês correspondente"
+    ],
+    "explanation": "Primeiro identifica o fornecedor, confere os dados do boleto, registra a obrigação de pagamento no sistema, e só então arquiva — pular etapas pode gerar pagamento duplicado ou de valor errado.",
+    "pacciTip": "Confere antes de registrar, registra antes de arquivar, tesoro! Cada passo evita um erro lá na frente.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-034",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por quanto tempo ele precisa guardar as notas fiscais e documentos contábeis da empresa dele.",
+    "question": "Qual é a prática recomendada quanto à guarda de documentos fiscais e contábeis?",
+    "options": [
+      "Guardar pelo prazo mínimo legal (em geral 5 anos, podendo variar conforme o tributo), de preferência também em cópia digital",
+      "Guardar só pelo mês corrente, depois pode descartar",
+      "Guardar só em papel, nunca digitalizar",
+      "Não existe prazo nenhum, pode descartar a qualquer momento"
+    ],
+    "correctAnswer": "Guardar pelo prazo mínimo legal (em geral 5 anos, podendo variar conforme o tributo), de preferência também em cópia digital",
+    "explanation": "A legislação fiscal exige a guarda de documentos por prazos que costumam girar em torno de 5 anos (podendo ser maior conforme o tributo ou situação), e manter cópia digital é uma prática segura adicional.",
+    "pacciTip": "Documento não é lixo depois de usado, piccolo! A lei pede pra guardar por um bom tempo.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-035",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Ao digitalizar um lote de notas fiscais em papel antigas, você percebe que uma delas está rasgada e com um valor ilegível.",
+    "question": "O que é mais correto fazer diante desse documento danificado?",
+    "options": [
+      "Avisar o supervisor e tentar obter uma segunda via ou confirmação do valor por outro meio",
+      "Digitalizar do jeito que está e deixar o valor em branco",
+      "Chutar um valor aproximado pra não atrasar o trabalho",
+      "Descartar o documento, já que está ilegível mesmo"
+    ],
+    "correctAnswer": "Avisar o supervisor e tentar obter uma segunda via ou confirmação do valor por outro meio",
+    "explanation": "Documento ilegível não deve ser 'adivinhado' nem descartado — o caminho correto é buscar uma segunda via (com o cliente ou fornecedor) ou confirmar o dado por outra fonte, como o XML da nota.",
+    "pacciTip": "Documento rasgado não vira adivinhação, amico! Busca o dado certo antes de registrar qualquer coisa.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-036",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No sistema do escritório, cada documento recebido ganha um número único no momento em que entra, pra garantir que nada se perca ou duplique.",
+    "question": "Digite a palavra usada para esse registro numerado de entrada de um documento:",
+    "correctAnswer": "protocolo",
+    "explanation": "Protocolo é o registro formal (geralmente numerado) que marca a entrada de um documento, garantindo rastreabilidade de quando e como ele chegou.",
+    "pacciTip": "Protocolo é a 'certidão de nascimento' do documento no sistema, piccolo! Marca o momento exato que ele chegou.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-037",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente do ramo de transporte de cargas pergunta se precisa de algum documento adicional quando o caminhão carrega mercadorias de vários clientes diferentes numa mesma viagem.",
+    "question": "Qual documento reúne e organiza vários CT-e numa mesma viagem de transporte?",
+    "options": [
+      "MDF-e (Manifesto Eletrônico de Documentos Fiscais)",
+      "NFC-e (Nota Fiscal de Consumidor Eletrônica)",
+      "NFS-e (Nota Fiscal de Serviços Eletrônica)",
+      "Extrato bancário"
+    ],
+    "correctAnswer": "MDF-e (Manifesto Eletrônico de Documentos Fiscais)",
+    "explanation": "O MDF-e agrupa as informações de diversos documentos fiscais (como vários CT-e) transportados numa mesma viagem, facilitando a fiscalização em trânsito.",
+    "pacciTip": "MDF-e é tipo a 'lista de passageiros' da carga, tesoro! Junta tudo que vai na mesma viagem.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-038",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Ao organizar a pasta digital de um cliente, você nota que existem notas fiscais de compra (de fornecedores) misturadas com notas de venda (pra clientes) na mesma pasta, sem nenhuma separação.",
+    "question": "Por que é importante separar notas de entrada (compra) e saída (venda) em pastas distintas?",
+    "options": [
+      "Porque elas têm tratamento fiscal e contábil diferentes, e misturadas dificultam a conferência e o lançamento",
+      "Porque notas de compra e venda não podem ficar no mesmo sistema",
+      "Porque é só uma questão estética, sem impacto real no trabalho",
+      "Porque a lei proíbe guardar os dois tipos juntos"
+    ],
+    "correctAnswer": "Porque elas têm tratamento fiscal e contábil diferentes, e misturadas dificultam a conferência e o lançamento",
+    "explanation": "Entradas (compras) e saídas (vendas) geram lançamentos e apurações diferentes — separar facilita a conferência, evita erro de lançamento e agiliza o trabalho de quem for processar depois.",
+    "pacciTip": "Entrada e saída são como mão e luva, piccolo! Parecidas, mas cada uma no seu lugar certo.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-039",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente te envia, por engano, um extrato bancário de uma conta pessoal dele, em vez do extrato da conta empresarial que você pediu.",
+    "question": "Qual é a atitude correta diante desse envio por engano?",
+    "options": [
+      "Avisar o cliente do engano, pedir o documento correto e não usar nem guardar o extrato pessoal recebido indevidamente",
+      "Usar o extrato pessoal mesmo, já que já está em mãos",
+      "Guardar o extrato pessoal 'só por garantia', sem avisar o cliente",
+      "Ignorar o erro e seguir sem o documento"
+    ],
+    "correctAnswer": "Avisar o cliente do engano, pedir o documento correto e não usar nem guardar o extrato pessoal recebido indevidamente",
+    "explanation": "Receber um documento por engano não dá direito de uso — o correto é avisar o cliente, pedir o documento certo, e não reter nem usar a informação que não deveria ter sido enviada.",
+    "pacciTip": "Documento errado que chegou não vira 'achado é roubado', amico! Devolve a atenção pro dono.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-040",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você precisa montar uma planilha de controle de documentos pendentes de um grupo de 15 clientes, pra facilitar o acompanhamento diário do setor.",
+    "question": "Qual informação é essencial incluir nessa planilha de controle?",
+    "options": [
+      "Nome do cliente, tipo de documento pendente, data limite e status (pendente/recebido)",
+      "Só o nome do cliente, sem mais detalhes",
+      "Só a data de hoje, sem relação com os clientes",
+      "O histórico de todas as conversas já tidas com o cliente"
+    ],
+    "correctAnswer": "Nome do cliente, tipo de documento pendente, data limite e status (pendente/recebido)",
+    "explanation": "Uma boa planilha de controle de pendências precisa responder: de quem, o quê, até quando e qual a situação atual — isso permite priorizar e não perder nenhum prazo.",
+    "pacciTip": "Planilha de controle boa responde 'quem, o quê e até quando', piccolo! O resto é detalhe.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-041",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Um XML de nota fiscal chegou duplicado no sistema (o cliente mandou duas vezes sem perceber), e você precisa resolver isso antes de lançar.",
+    "question": "Ordene o procedimento correto diante de uma nota fiscal duplicada:",
+    "options": [
+      "Comparar a chave de acesso dos dois arquivos para confirmar que são idênticos",
+      "Verificar se algum dos dois já foi processado no sistema",
+      "Remover ou ignorar a cópia duplicada, mantendo só uma",
+      "Seguir com o lançamento normal usando apenas o arquivo único"
+    ],
+    "correctAnswer": [
+      "Comparar a chave de acesso dos dois arquivos para confirmar que são idênticos",
+      "Verificar se algum dos dois já foi processado no sistema",
+      "Remover ou ignorar a cópia duplicada, mantendo só uma",
+      "Seguir com o lançamento normal usando apenas o arquivo único"
+    ],
+    "explanation": "Primeiro confirma que é realmente a mesma nota (pela chave de acesso, que é única), verifica se já foi processada, remove a duplicidade, e só então segue o lançamento normal — evitando duplicar o valor na contabilidade.",
+    "pacciTip": "Nota duplicada lançada duas vezes é prejuízo (ou lucro!) que não existe de verdade, tesoro! Confere sempre a chave.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-042",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "Toda nota fiscal eletrônica tem um código único e extenso (44 dígitos) que a identifica de forma inconfundível em todo o sistema nacional.",
+    "question": "Digite o nome dado a esse código único e identificador de uma nota fiscal eletrônica:",
+    "correctAnswer": "chave de acesso",
+    "explanation": "A chave de acesso é o número de 44 dígitos que identifica uma NF-e de forma única em todo o país, usada para consultas, validações e para detectar duplicidades.",
+    "pacciTip": "Chave de acesso é a 'impressão digital' da nota, piccolo! Não existem duas iguais.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-043",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente novo, que trocou de escritório de contabilidade recentemente, chega com uma caixa de documentos físicos de vários meses, totalmente fora de ordem.",
+    "question": "Qual deve ser o primeiro passo diante desse volume desorganizado de documentos?",
+    "options": [
+      "Fazer uma triagem inicial, separando por tipo e por mês antes de processar qualquer coisa",
+      "Começar a lançar os documentos na ordem em que estão na caixa",
+      "Devolver a caixa pro cliente organizar antes",
+      "Escanear tudo sem separar, resolvendo a ordem depois"
+    ],
+    "correctAnswer": "Fazer uma triagem inicial, separando por tipo e por mês antes de processar qualquer coisa",
+    "explanation": "Triagem inicial (separar por tipo e período) antes de processar evita retrabalho e garante que nenhum documento seja perdido ou lançado no período errado.",
+    "pacciTip": "Antes de atacar a montanha de papel, organiza primeiro, amico! Triagem economiza tempo lá na frente.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-044",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um prestador de serviço de consultoria, cliente do escritório, emitiu uma nota de serviço para um cliente dele localizado em outro município.",
+    "question": "Qual órgão é responsável por autorizar e regular a emissão da NFS-e, diferente da NF-e de mercadorias?",
+    "options": [
+      "A prefeitura do município (já que o ISS é um imposto municipal)",
+      "A Secretaria da Fazenda do estado (SEFAZ)",
+      "A Receita Federal do Brasil",
+      "O Banco Central"
+    ],
+    "correctAnswer": "A prefeitura do município (já que o ISS é um imposto municipal)",
+    "explanation": "A NFS-e é regulada pelo município onde o serviço é prestado, já que o ISS (imposto que incide sobre serviços) é de competência municipal — diferente da NF-e de mercadorias, ligada ao estado (ICMS).",
+    "pacciTip": "Serviço, pensa 'prefeitura'. Mercadoria, pensa 'estado', piccolo! Cada nota tem seu dono regulador.",
+    "topic": "documentos_operacionais"
+  },
+  {
+    "id": "CONT-EST-045",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Seu supervisor pede pra você montar uma planilha que calcule automaticamente o total de despesas de um cliente, somando vários lançamentos, sem precisar somar na calculadora.",
+    "question": "Qual recurso do Excel/Planilhas você deve usar para esse cálculo automático?",
+    "options": [
+      "A fórmula SOMA (ou SUM)",
+      "A formatação condicional",
+      "A tabela dinâmica",
+      "O filtro de dados"
+    ],
+    "correctAnswer": "A fórmula SOMA (ou SUM)",
+    "explanation": "A fórmula SOMA/SUM é usada justamente para somar automaticamente um intervalo de células, evitando o cálculo manual e reduzindo erro de digitação.",
+    "pacciTip": "SOMA é a fórmula mais básica e mais usada, tesoro! Domina ela antes de partir pras mais avançadas.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-046",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Numa planilha com centenas de lançamentos, você precisa encontrar rapidamente todas as linhas referentes a um fornecedor específico, sem rolar a tela manualmente.",
+    "question": "Qual recurso é mais indicado para localizar e visualizar só os lançamentos de um fornecedor específico?",
+    "options": [
+      "Aplicar um filtro na coluna de fornecedor",
+      "Apagar as linhas dos outros fornecedores",
+      "Imprimir a planilha inteira e procurar no papel",
+      "Mudar a cor da fonte de todas as células"
+    ],
+    "correctAnswer": "Aplicar um filtro na coluna de fornecedor",
+    "explanation": "O filtro permite exibir só as linhas que atendem a um critério (como um fornecedor específico), sem apagar nem alterar os dados originais da planilha.",
+    "pacciTip": "Filtro é como um holofote, piccolo! Ilumina só o que você quer ver, sem mexer no resto.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-047",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você precisa enviar um e-mail para um cliente anexando três documentos fiscais, explicando de forma clara o que é cada um.",
+    "question": "Qual é a prática recomendada ao escrever esse e-mail profissional?",
+    "options": [
+      "Usar um assunto claro, saudação adequada, explicação objetiva de cada anexo e conferir antes de enviar",
+      "Escrever de forma bem informal, com gírias, pra parecer mais próximo",
+      "Enviar só os anexos, sem nenhum texto no corpo do e-mail",
+      "Copiar sempre todo o escritório como destinatário, só por garantia"
+    ],
+    "correctAnswer": "Usar um assunto claro, saudação adequada, explicação objetiva de cada anexo e conferir antes de enviar",
+    "explanation": "Um e-mail profissional bem escrito — com assunto claro, saudação, explicação objetiva e revisão antes de enviar — evita retrabalho e passa uma imagem de cuidado com o cliente.",
+    "pacciTip": "Lê o e-mail de novo antes de clicar em enviar, amico! Esse segundo olhar evita muita saia justa.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-048",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Você vai enviar pela primeira vez um relatório financeiro sensível para o cliente por e-mail, e quer garantir que só ele consiga ver o conteúdo.",
+    "question": "Ordene os cuidados antes de enviar um e-mail com informação sensível a um cliente:",
+    "options": [
+      "Confirmar que o endereço de e-mail do destinatário está correto",
+      "Verificar se o anexo é realmente o arquivo certo e atualizado",
+      "Considerar proteger o arquivo com senha, se for muito sensível",
+      "Enviar e, em seguida, confirmar o recebimento com o cliente"
+    ],
+    "correctAnswer": [
+      "Confirmar que o endereço de e-mail do destinatário está correto",
+      "Verificar se o anexo é realmente o arquivo certo e atualizado",
+      "Considerar proteger o arquivo com senha, se for muito sensível",
+      "Enviar e, em seguida, confirmar o recebimento com o cliente"
+    ],
+    "explanation": "Confirmar o destinatário certo, checar o anexo certo, proteger se necessário, e confirmar o recebimento depois — essa sequência reduz o risco de vazamento de informação sensível por erro de envio.",
+    "pacciTip": "E-mail errado enviado não tem 'desfazer', piccolo! Confere tudo antes, não depois.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-049",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Ao abrir o sistema contábil do escritório pela primeira vez, você percebe que cada colaborador tem um nível de acesso diferente — alguns só visualizam, outros podem lançar, outros podem aprovar.",
+    "question": "Qual é o principal motivo de existirem níveis de acesso diferentes num sistema contábil?",
+    "options": [
+      "Controlar quem pode ver, alterar ou aprovar cada tipo de informação, reduzindo riscos e erros",
+      "Dificultar o trabalho dos estagiários de propósito",
+      "Economizar licenças do sistema",
+      "Deixar o sistema mais lento para todos"
+    ],
+    "correctAnswer": "Controlar quem pode ver, alterar ou aprovar cada tipo de informação, reduzindo riscos e erros",
+    "explanation": "Níveis de acesso (controle de permissões) existem para garantir que cada colaborador só faça o que está preparado e autorizado a fazer, protegendo a integridade das informações e reduzindo riscos.",
+    "pacciTip": "Nível de acesso não é desconfiança, tesoro! É proteção, tanto sua quanto da informação do cliente.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-050",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "Numa planilha de controle de tarefas, você quer que uma célula mude de cor automaticamente quando uma data de vencimento já passou, pra chamar atenção visualmente.",
+    "question": "Digite o nome do recurso do Excel/Planilhas que muda a aparência de uma célula com base numa condição:",
+    "correctAnswer": "formatação condicional",
+    "explanation": "A formatação condicional aplica cores, ícones ou estilos automaticamente conforme uma regra definida — como destacar em vermelho prazos já vencidos.",
+    "pacciTip": "Formatação condicional é tipo um alarme visual, piccolo! Avisa sem você precisar olhar linha por linha.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-051",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você digitou uma fórmula numa planilha pra calcular o total de uma coluna, mas o resultado aparece como '#REF!' em vez de um número.",
+    "question": "O que esse tipo de erro geralmente indica?",
+    "options": [
+      "Que a fórmula está referenciando uma célula ou intervalo que não existe mais (foi apagado ou movido)",
+      "Que o valor da célula é negativo",
+      "Que a planilha está sem conexão com a internet",
+      "Que o arquivo está protegido por senha"
+    ],
+    "correctAnswer": "Que a fórmula está referenciando uma célula ou intervalo que não existe mais (foi apagado ou movido)",
+    "explanation": "O erro #REF! aparece quando uma fórmula referencia uma célula/intervalo que foi excluído ou movido de forma que a referência original deixou de existir.",
+    "pacciTip": "#REF! é a planilha dizendo 'não achei o que você pediu', amico! Alguém mexeu onde não devia.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-052",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você precisa organizar uma lista de 200 clientes em ordem alfabética antes de distribuir as tarefas da semana entre a equipe.",
+    "question": "Qual recurso do Excel/Planilhas resolve isso rapidamente, sem reorganizar manualmente linha por linha?",
+    "options": [
+      "Classificar/ordenar (A-Z) a coluna de nomes",
+      "Apagar e redigitar a lista na ordem certa",
+      "Usar a formatação condicional",
+      "Congelar painéis"
+    ],
+    "correctAnswer": "Classificar/ordenar (A-Z) a coluna de nomes",
+    "explanation": "A função de classificar (ordenar A-Z ou Z-A) reorganiza automaticamente as linhas com base no conteúdo de uma coluna, sem precisar mover nada manualmente.",
+    "pacciTip": "Ordenar A-Z resolve em 2 cliques o que levaria horas no manual, piccolo! Usa a ferramenta certa.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-053",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um colega te pergunta qual é a diferença entre salvar um arquivo 'localmente no computador' e salvar numa 'nuvem compartilhada' do escritório.",
+    "question": "Qual é a principal vantagem de salvar documentos de trabalho numa nuvem compartilhada do escritório?",
+    "options": [
+      "A equipe toda acessa e colabora no mesmo arquivo, com backup automático, de qualquer lugar",
+      "O arquivo fica mais seguro só porque está na internet",
+      "O arquivo não precisa mais ser organizado em pastas",
+      "Ninguém mais no escritório consegue ver o arquivo"
+    ],
+    "correctAnswer": "A equipe toda acessa e colabora no mesmo arquivo, com backup automático, de qualquer lugar",
+    "explanation": "Armazenamento em nuvem compartilhada permite colaboração em tempo real, acesso remoto e reduz o risco de perda de dados por problema no computador local.",
+    "pacciTip": "Nuvem é tipo um armário que todo mundo autorizado pode abrir, de qualquer lugar, tesoro! Com backup de brinde.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-054",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Você vai montar, do zero, uma planilha de controle mensal de despesas de um cliente, para ser usada pela equipe inteira.",
+    "question": "Ordene o processo recomendado para criar essa planilha de controle:",
+    "options": [
+      "Definir quais colunas/informações são realmente necessárias",
+      "Criar o cabeçalho e formatar as colunas",
+      "Inserir fórmulas de soma e totalizações",
+      "Testar com dados reais e ajustar o que não funcionou bem"
+    ],
+    "correctAnswer": [
+      "Definir quais colunas/informações são realmente necessárias",
+      "Criar o cabeçalho e formatar as colunas",
+      "Inserir fórmulas de soma e totalizações",
+      "Testar com dados reais e ajustar o que não funcionou bem"
+    ],
+    "explanation": "Planejar antes de montar (definir colunas), depois estruturar visualmente, depois automatizar com fórmulas, e por fim testar com dados reais — isso evita refazer a planilha do zero depois de já estar em uso.",
+    "pacciTip": "Planeja antes de montar, amico! Planilha feita sem pensar vira retrabalho na certa.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-055",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Ao digitar um valor numa célula da planilha, você percebe que ele aparece alinhado à esquerda, enquanto os outros valores numéricos da coluna aparecem à direita.",
+    "question": "O que esse alinhamento diferente geralmente indica?",
+    "options": [
+      "Que o valor foi digitado ou reconhecido como texto, não como número",
+      "Que o valor é negativo",
+      "Que a célula está com erro de fórmula",
+      "Que a planilha está desatualizada"
+    ],
+    "correctAnswer": "Que o valor foi digitado ou reconhecido como texto, não como número",
+    "explanation": "Por padrão, números se alinham à direita e texto à esquerda — se um valor 'numérico' aparece à esquerda, provavelmente está formatado como texto, o que impede cálculos corretos com ele.",
+    "pacciTip": "Número desalinhado é pista de que algo está formatado errado, piccolo! Fica de olho nesse detalhe.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-056",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "O sistema contábil do escritório trava no meio do seu trabalho, e você está com medo de ter perdido tudo o que fez na última hora.",
+    "question": "Qual boa prática de produtividade ajuda a evitar perda de trabalho em situações como essa?",
+    "options": [
+      "Salvar o trabalho com frequência, ou usar sistemas com salvamento automático",
+      "Nunca salvar até terminar o trabalho inteiro",
+      "Trabalhar sempre em apenas uma aba aberta",
+      "Desligar o computador sempre que travar"
+    ],
+    "correctAnswer": "Salvar o trabalho com frequência, ou usar sistemas com salvamento automático",
+    "explanation": "Salvar com frequência (ou confiar em sistemas com autosave) é um hábito simples que evita perder horas de trabalho quando um sistema trava ou falha inesperadamente.",
+    "pacciTip": "Salva sempre, piccolo, ctrl+S é seu melhor amigo! Trabalho perdido é tempo que não volta.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-057",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No calendário compartilhado do escritório, cada colaborador marca os compromissos e prazos da semana, visíveis para toda a equipe.",
+    "question": "Digite a palavra que descreve essa ferramenta digital usada para organizar compromissos e prazos de forma visível à equipe:",
+    "correctAnswer": "calendário",
+    "explanation": "Um calendário compartilhado é uma ferramenta de produtividade que torna compromissos e prazos visíveis a toda a equipe, facilitando o planejamento coletivo.",
+    "pacciTip": "Calendário compartilhado é como um mural digital, tesoro! Todo mundo vê o que está por vir.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-058",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você recebeu diversas planilhas de clientes diferentes num único dia e está com dificuldade de lembrar qual já conferiu e qual ainda falta.",
+    "question": "Qual é uma boa prática de produtividade pra esse tipo de situação?",
+    "options": [
+      "Manter uma lista de tarefas (to-do list) marcando o que já foi concluído",
+      "Confiar só na memória, sem anotar nada",
+      "Fazer tudo ao mesmo tempo, sem ordem definida",
+      "Deixar pra decidir a ordem no fim do dia"
+    ],
+    "correctAnswer": "Manter uma lista de tarefas (to-do list) marcando o que já foi concluído",
+    "explanation": "Uma lista de tarefas simples, com itens marcados conforme concluídos, reduz o risco de esquecer ou repetir trabalho — essencial quando há múltiplas demandas no mesmo dia.",
+    "pacciTip": "Lista de tarefas é memória de fora, piccolo! Não confia tudo na cabeça, escreve.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-059",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Ao copiar uma fórmula de uma célula para outras linhas da planilha, você percebe que o resultado de algumas linhas ficou errado, referenciando células que não deveriam.",
+    "question": "O que provavelmente causou esse problema ao copiar a fórmula?",
+    "options": [
+      "A referência da célula não foi fixada (com $) quando deveria ser fixa, e se moveu junto com a cópia",
+      "O Excel não permite copiar fórmulas",
+      "A planilha está com vírus",
+      "O computador está sem memória suficiente"
+    ],
+    "correctAnswer": "A referência da célula não foi fixada (com $) quando deveria ser fixa, e se moveu junto com a cópia",
+    "explanation": "Quando uma referência precisa permanecer fixa ao copiar uma fórmula (como um valor de imposto fixo), ela deve ser travada com o símbolo $ — sem isso, a referência 'anda' junto com a cópia e gera erro.",
+    "pacciTip": "O símbolo $ trava a célula no lugar, amico! Sem ele, a referência viaja sozinha e bagunça tudo.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-060",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Seu supervisor te pede pra 'exportar o relatório em PDF' antes de enviar pro cliente, em vez de mandar a planilha editável.",
+    "question": "Qual é a principal razão para enviar um relatório em PDF, e não na planilha original?",
+    "options": [
+      "O PDF preserva a formatação e evita que o cliente altere os dados por engano",
+      "O PDF é sempre um arquivo menor que a planilha",
+      "A planilha original nunca pode ser compartilhada",
+      "O PDF permite que o cliente edite os valores com mais facilidade"
+    ],
+    "correctAnswer": "O PDF preserva a formatação e evita que o cliente altere os dados por engano",
+    "explanation": "Exportar para PDF 'trava' a visualização final — o cliente vê exatamente o que foi enviado, sem risco de alteração acidental das fórmulas ou dados originais.",
+    "pacciTip": "PDF é a 'foto final' do documento, piccolo! Ninguém mexe sem querer depois.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-061",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você precisa comparar os valores de duas planilhas diferentes de um mesmo cliente (uma do escritório, outra enviada por ele) pra ver se batem.",
+    "question": "Qual abordagem é mais eficiente para comparar grandes volumes de dados entre duas planilhas?",
+    "options": [
+      "Usar uma fórmula de comparação/busca (como PROCV/VLOOKUP) para cruzar os dados automaticamente",
+      "Imprimir as duas planilhas e comparar item por item visualmente",
+      "Confiar que os valores estão certos sem conferir",
+      "Comparar só o total final, ignorando os detalhes"
+    ],
+    "correctAnswer": "Usar uma fórmula de comparação/busca (como PROCV/VLOOKUP) para cruzar os dados automaticamente",
+    "explanation": "Fórmulas de busca como PROCV/VLOOKUP cruzam dados entre planilhas automaticamente, tornando a conferência de grandes volumes muito mais rápida e confiável que a comparação visual manual.",
+    "pacciTip": "PROCV é tipo um detetive de planilha, tesoro! Encontra a informação certa sem você precisar procurar linha por linha.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-062",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Você recebeu um e-mail de um cliente pedindo uma informação que você não sabe responder sozinho ainda.",
+    "question": "Ordene a sequência mais produtiva para responder esse e-mail:",
+    "options": [
+      "Ler o e-mail com atenção para entender exatamente o que está sendo pedido",
+      "Verificar se a resposta já está disponível em algum material/sistema interno",
+      "Perguntar ao supervisor se não encontrar a resposta sozinho",
+      "Responder ao cliente com a informação correta e dentro do prazo"
+    ],
+    "correctAnswer": [
+      "Ler o e-mail com atenção para entender exatamente o que está sendo pedido",
+      "Verificar se a resposta já está disponível em algum material/sistema interno",
+      "Perguntar ao supervisor se não encontrar a resposta sozinho",
+      "Responder ao cliente com a informação correta e dentro do prazo"
+    ],
+    "explanation": "Entender bem o pedido, tentar resolver com os recursos disponíveis, escalar se necessário, e só então responder com segurança — essa sequência evita respostas erradas ou incompletas ao cliente.",
+    "pacciTip": "Entende primeiro, pesquisa depois, responde por último, piccolo! Pressa de responder errado custa mais caro.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-063",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "No sistema contábil, cada lançamento feito fica registrado com o nome do usuário, data e hora de quem fez — mesmo que alguém tente apagar depois.",
+    "question": "Qual é o principal benefício desse tipo de registro (log) de ações no sistema?",
+    "options": [
+      "Permite rastrear quem fez cada alteração, facilitando a correção de erros e a responsabilização adequada",
+      "Deixa o sistema mais lento sem nenhum benefício real",
+      "Serve só para fins decorativos no sistema",
+      "Impede qualquer tipo de correção de lançamento"
+    ],
+    "correctAnswer": "Permite rastrear quem fez cada alteração, facilitando a correção de erros e a responsabilização adequada",
+    "explanation": "O registro de log (trilha de auditoria) permite saber exatamente quem fez o quê e quando, o que ajuda tanto a corrigir erros com precisão quanto a manter a integridade e confiança no sistema.",
+    "pacciTip": "O sistema tem memória boa, piccolo! Todo lançamento tem uma 'assinatura' de quem fez.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-064",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você está participando da sua primeira reunião de equipe por videochamada, e o supervisor pede que todos liguem a câmera e cheguem no horário.",
+    "question": "Por que essas duas práticas (câmera ligada e pontualidade) são importantes em reuniões profissionais remotas?",
+    "options": [
+      "Mostram engajamento e respeito pelo tempo dos outros participantes",
+      "São exigências sem motivo real, só formalidade",
+      "Servem só para controlar quem está trabalhando",
+      "Só importam em reuniões com clientes externos"
+    ],
+    "correctAnswer": "Mostram engajamento e respeito pelo tempo dos outros participantes",
+    "explanation": "Pontualidade e presença de câmera numa reunião remota transmitem profissionalismo e respeito pelo tempo da equipe, mantendo o mesmo padrão de uma reunião presencial.",
+    "pacciTip": "Reunião remota merece o mesmo respeito da presencial, amico! Pontualidade conta em qualquer formato.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-065",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "Antes de enviar um relatório importante, seu supervisor sempre pede pra alguém da equipe dar uma segunda olhada no conteúdo, só pra garantir que não ficou nenhum erro.",
+    "question": "Digite a palavra que descreve essa prática de checar o trabalho antes de finalizar:",
+    "correctAnswer": "revisão",
+    "explanation": "Revisão é o processo de conferir um trabalho antes de considerá-lo pronto — uma prática simples que evita erros, principalmente antes de enviar algo ao cliente.",
+    "pacciTip": "Revisão é o último degrau antes de considerar o trabalho pronto, tesoro! Não pula ele nunca.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-066",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que está gastando muito tempo repetindo manualmente o mesmo tipo de cálculo toda semana, pra clientes diferentes, sempre do mesmo jeito.",
+    "question": "Qual é a melhor abordagem de produtividade pra esse tipo de tarefa repetitiva?",
+    "options": [
+      "Criar um modelo/planilha padrão com fórmulas prontas, reaproveitável a cada semana",
+      "Continuar fazendo manualmente, já que 'sempre foi assim'",
+      "Pedir pra outro colega fazer no seu lugar toda semana",
+      "Ignorar a tarefa quando estiver sem tempo"
+    ],
+    "correctAnswer": "Criar um modelo/planilha padrão com fórmulas prontas, reaproveitável a cada semana",
+    "explanation": "Padronizar uma tarefa repetitiva num modelo reaproveitável economiza tempo a cada repetição e reduz o risco de erro por refazer tudo do zero sempre.",
+    "pacciTip": "Tarefa repetida sem molde é tempo jogado fora, piccolo! Cria o modelo uma vez, usa pra sempre.",
+    "topic": "informatica_produtividade"
+  },
+  {
+    "id": "CONT-EST-067",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "No treinamento inicial, o instrutor desenha um quadro mostrando tudo que a empresa possui (dinheiro, máquinas, estoque) de um lado, e tudo que a empresa deve a terceiros do outro.",
+    "question": "Como se chamam, respectivamente, esses dois grupos na contabilidade?",
+    "options": [
+      "Ativo (o que a empresa possui) e Passivo (o que a empresa deve)",
+      "Receita e Despesa",
+      "Débito e Crédito",
+      "Lucro e Prejuízo"
+    ],
+    "correctAnswer": "Ativo (o que a empresa possui) e Passivo (o que a empresa deve)",
+    "explanation": "Ativo representa os bens e direitos da empresa (o que ela tem), enquanto Passivo representa as obrigações (o que ela deve a terceiros) — essa é a base da equação patrimonial.",
+    "pacciTip": "Ativo é o que 'entra no bolso da empresa', Passivo é o que ela 'deve pra fora', amico!",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-068",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "O instrutor explica que, na contabilidade, todo lançamento afeta pelo menos duas contas: uma recebe um valor de um lado, outra recebe do outro lado, pra manter tudo em equilíbrio.",
+    "question": "Como se chamam esses dois lados de um lançamento contábil?",
+    "options": [
+      "Débito e Crédito",
+      "Ativo e Passivo",
+      "Entrada e Saída",
+      "Receita e Custo"
+    ],
+    "correctAnswer": "Débito e Crédito",
+    "explanation": "Todo lançamento contábil usa o método das partidas dobradas: um valor em débito numa conta e o mesmo valor em crédito em outra, mantendo o equilíbrio do sistema.",
+    "pacciTip": "Débito de um lado, crédito do outro, sempre em equilíbrio, piccolo! É a dança das partidas dobradas.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-069",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "O instrutor explica que a soma de tudo que a empresa possui deve ser sempre igual à soma do que ela deve a terceiros mais o que pertence aos sócios — uma igualdade que nunca pode ser quebrada.",
+    "question": "Digite o nome dado a essa igualdade fundamental da contabilidade (Ativo = Passivo + Patrimônio Líquido):",
+    "correctAnswer": "equação patrimonial",
+    "explanation": "A equação patrimonial (Ativo = Passivo + Patrimônio Líquido) é a base de toda a contabilidade: tudo que a empresa tem é financiado por terceiros (passivo) ou pelos próprios sócios (patrimônio líquido).",
+    "pacciTip": "Essa equação é a espinha dorsal da contabilidade, tesoro! Nunca pode ficar desequilibrada.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-070",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de pequeno porte, cliente do escritório, compra uma máquina para usar na produção por vários anos.",
+    "question": "No balanço patrimonial, em qual grupo essa máquina é classificada?",
+    "options": [
+      "Ativo (um bem da empresa)",
+      "Passivo (uma obrigação da empresa)",
+      "Despesa (um gasto do período)",
+      "Receita (uma entrada de dinheiro)"
+    ],
+    "correctAnswer": "Ativo (um bem da empresa)",
+    "explanation": "A máquina é um bem que a empresa possui e usa para gerar resultado ao longo do tempo, sendo classificada como Ativo (mais especificamente, Ativo Imobilizado).",
+    "pacciTip": "Bem que a empresa tem e usa pra trabalhar é Ativo, piccolo! Guarda essa associação.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-071",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Essa mesma empresa comprou a máquina financiada, e ainda deve 10 parcelas ao banco que financiou a compra.",
+    "question": "Essa dívida com o banco pelas parcelas restantes é classificada como:",
+    "options": [
+      "Passivo (uma obrigação da empresa)",
+      "Ativo (um bem da empresa)",
+      "Patrimônio Líquido",
+      "Despesa já paga"
+    ],
+    "correctAnswer": "Passivo (uma obrigação da empresa)",
+    "explanation": "O valor ainda devido ao banco é uma obrigação futura da empresa — exatamente a definição de Passivo, independente de já ter 'o bem' (a máquina) no Ativo.",
+    "pacciTip": "A máquina é Ativo, a dívida por ela é Passivo, amico! As duas pontas da mesma operação.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-072",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "O instrutor explica o raciocínio passo a passo de como registrar uma venda à vista: a empresa vende uma mercadoria e recebe o dinheiro na hora.",
+    "question": "Ordene o raciocínio lógico desse lançamento de venda à vista:",
+    "options": [
+      "Identificar que houve uma venda (fato que gera o lançamento)",
+      "Reconhecer que o Caixa/Banco aumentou (débito no Ativo)",
+      "Reconhecer que houve uma Receita de vendas (crédito)",
+      "Registrar os dois lados no sistema, mantendo o equilíbrio"
+    ],
+    "correctAnswer": [
+      "Identificar que houve uma venda (fato que gera o lançamento)",
+      "Reconhecer que o Caixa/Banco aumentou (débito no Ativo)",
+      "Reconhecer que houve uma Receita de vendas (crédito)",
+      "Registrar os dois lados no sistema, mantendo o equilíbrio"
+    ],
+    "explanation": "Primeiro identifica o fato gerador (a venda), depois reconhece o efeito no Ativo (dinheiro entrou), depois reconhece a Receita gerada, e por fim registra os dois lados — esse é o raciocínio básico das partidas dobradas.",
+    "pacciTip": "Todo lançamento começa com 'o que aconteceu de verdade', piccolo! O resto é consequência lógica.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-073",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa prestou um serviço em dezembro, mas só vai receber o pagamento do cliente em janeiro do ano seguinte.",
+    "question": "Segundo o princípio contábil mais usado no Brasil, em qual mês essa receita deve ser reconhecida na contabilidade?",
+    "options": [
+      "Em dezembro (quando o serviço foi efetivamente prestado), mesmo sem o recebimento",
+      "Em janeiro (quando o dinheiro efetivamente entrar)",
+      "Só reconhece quando o cliente confirmar por escrito",
+      "Nunca precisa reconhecer, só quando é à vista"
+    ],
+    "correctAnswer": "Em dezembro (quando o serviço foi efetivamente prestado), mesmo sem o recebimento",
+    "explanation": "O regime de competência (o princípio padrão da contabilidade) reconhece receitas e despesas no momento em que o fato gerador ocorre, independente de quando o dinheiro efetivamente entra ou sai.",
+    "pacciTip": "Competência olha pro 'fato', não pro 'dinheiro na mão', tesoro! Prestou o serviço, já conta.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-074",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um colega te pergunta a diferença entre o regime de competência (usado na contabilidade) e o regime de caixa (que considera só a entrada/saída efetiva de dinheiro).",
+    "question": "Qual é a principal diferença entre esses dois regimes?",
+    "options": [
+      "Competência reconhece o fato no momento em que ocorre; caixa reconhece só quando o dinheiro efetivamente entra ou sai",
+      "Os dois regimes são exatamente iguais, só com nomes diferentes",
+      "Competência só é usada por grandes empresas; caixa só por pequenas",
+      "Caixa é mais completo e detalhado que competência"
+    ],
+    "correctAnswer": "Competência reconhece o fato no momento em que ocorre; caixa reconhece só quando o dinheiro efetivamente entra ou sai",
+    "explanation": "Competência registra o fato gerador no momento em que acontece (venda, prestação de serviço), enquanto o regime de caixa só considera o momento do efetivo recebimento/pagamento.",
+    "pacciTip": "Competência é 'quando aconteceu', Caixa é 'quando o dinheiro mudou de mão', piccolo! Mundos diferentes.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-075",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "Na aula de fundamentos, o instrutor explica que o valor que sobra pros sócios, depois de descontar tudo que a empresa deve a terceiros do que ela possui, tem um nome específico.",
+    "question": "Digite o nome dado à parcela do patrimônio que pertence aos sócios (Ativo menos Passivo):",
+    "correctAnswer": "patrimônio líquido",
+    "explanation": "Patrimônio Líquido é o que sobra para os sócios depois de descontar todas as obrigações (Passivo) do total de bens e direitos (Ativo) — é a 'parte dos donos' na equação patrimonial.",
+    "pacciTip": "Patrimônio Líquido é a 'fatia dos sócios' no bolo da empresa, amico!",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-076",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa paga o aluguel do escritório todo mês, independente de ter vendido muito ou pouco naquele período.",
+    "question": "Essa despesa de aluguel é classificada, na Demonstração do Resultado, como:",
+    "options": [
+      "Despesa (um gasto que reduz o resultado do período)",
+      "Receita (uma entrada que aumenta o resultado)",
+      "Ativo (um bem da empresa)",
+      "Patrimônio Líquido"
+    ],
+    "correctAnswer": "Despesa (um gasto que reduz o resultado do período)",
+    "explanation": "Aluguel é um gasto necessário pra manter a operação, classificado como Despesa — reduz o resultado (lucro) do período em que ocorre.",
+    "pacciTip": "Despesa é o que 'sai' pra empresa continuar funcionando, piccolo! Sem ela, nada opera.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-077",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "No fim do mês, o resultado de uma empresa mostrou que as Receitas foram maiores que as Despesas.",
+    "question": "Esse resultado positivo é chamado de:",
+    "options": [
+      "Lucro",
+      "Prejuízo",
+      "Patrimônio Líquido negativo",
+      "Passivo circulante"
+    ],
+    "correctAnswer": "Lucro",
+    "explanation": "Quando as Receitas superam as Despesas num período, o resultado é positivo e é chamado de Lucro. Quando é o contrário (Despesas maiores), é Prejuízo.",
+    "pacciTip": "Receita maior que despesa é lucro, tesoro! Simples assim, a matemática básica do resultado.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-078",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Uma pequena indústria, cliente do escritório, mantém um estoque de matéria-prima guardado no depósito, pronto para ser usado na produção.",
+    "question": "Esse estoque de matéria-prima é classificado, no balanço, como:",
+    "options": [
+      "Ativo (um bem da empresa que será usado ou vendido)",
+      "Passivo (uma dívida da empresa)",
+      "Despesa já consumida",
+      "Patrimônio Líquido"
+    ],
+    "correctAnswer": "Ativo (um bem da empresa que será usado ou vendido)",
+    "explanation": "Estoque é um bem que a empresa possui, com potencial de uso (na produção) ou venda futura — por isso é classificado como Ativo, mais especificamente como Ativo Circulante.",
+    "pacciTip": "Estoque parado no depósito ainda é 'ter', não 'gastar', piccolo! Por isso é Ativo.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-079",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "O instrutor pede pra organizar, em ordem lógica, o raciocínio usado pra montar a equação patrimonial de uma empresa nova, recém-criada pelos sócios.",
+    "question": "Ordene o raciocínio para montar a equação patrimonial de uma empresa nova:",
+    "options": [
+      "Os sócios investem dinheiro na empresa (capital social)",
+      "Esse valor aparece no Ativo (dinheiro em caixa/banco)",
+      "O mesmo valor aparece no Patrimônio Líquido (capital dos sócios)",
+      "A equação Ativo = Passivo + Patrimônio Líquido permanece equilibrada"
+    ],
+    "correctAnswer": [
+      "Os sócios investem dinheiro na empresa (capital social)",
+      "Esse valor aparece no Ativo (dinheiro em caixa/banco)",
+      "O mesmo valor aparece no Patrimônio Líquido (capital dos sócios)",
+      "A equação Ativo = Passivo + Patrimônio Líquido permanece equilibrada"
+    ],
+    "explanation": "Quando sócios investem capital, o dinheiro entra no Ativo (caixa/banco) e, ao mesmo tempo, aparece no Patrimônio Líquido como capital social — a equação se mantém equilibrada desde o primeiro lançamento da empresa.",
+    "pacciTip": "Até o primeiro real investido já respeita a equação, amico! Ela nunca se quebra, nem no início.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-080",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um estagiário pergunta por que, mesmo numa venda parcelada (a prazo), a contabilidade já reconhece a receita inteira no momento da venda, antes de receber todas as parcelas.",
+    "question": "Qual princípio contábil explica esse reconhecimento no momento da venda, independente do recebimento futuro?",
+    "options": [
+      "Regime de competência",
+      "Regime de caixa",
+      "Princípio da prudência extrema",
+      "Princípio da entidade"
+    ],
+    "correctAnswer": "Regime de competência",
+    "explanation": "Pelo regime de competência, a receita é reconhecida quando o fato gerador (a venda) ocorre, independente de quando o dinheiro efetivamente entra — mesmo que seja parcelado.",
+    "pacciTip": "Vendeu, já é receita, mesmo que o dinheiro venha aos poucos, piccolo! Competência não espera o caixa.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-081",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Num treinamento sobre contas contábeis, o instrutor explica que cada conta (como 'Caixa', 'Fornecedores', 'Receita de Vendas') tem um comportamento esperado: algumas aumentam com débito, outras aumentam com crédito.",
+    "question": "De forma geral, contas do Ativo (como Caixa) aumentam com qual tipo de lançamento?",
+    "options": [
+      "Débito",
+      "Crédito",
+      "Nem débito nem crédito, só se altera por auditoria",
+      "Depende só do humor do contador"
+    ],
+    "correctAnswer": "Débito",
+    "explanation": "Contas do Ativo têm natureza devedora: aumentam com débito e diminuem com crédito — é a regra básica de como o dinheiro em caixa, por exemplo, sobe ou desce.",
+    "pacciTip": "Ativo cresce com débito, tesoro! Decora essa regra, ela aparece o tempo todo.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-082",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Seguindo a mesma lógica da pergunta anterior, o instrutor pergunta sobre o comportamento das contas do Passivo (como 'Fornecedores a Pagar').",
+    "question": "De forma geral, contas do Passivo aumentam com qual tipo de lançamento?",
+    "options": [
+      "Crédito",
+      "Débito",
+      "Só aumentam por decisão judicial",
+      "Nunca aumentam, só diminuem"
+    ],
+    "correctAnswer": "Crédito",
+    "explanation": "Contas do Passivo têm natureza credora: aumentam com crédito e diminuem com débito — o espelho exato do comportamento das contas do Ativo.",
+    "pacciTip": "Passivo cresce com crédito, o oposto do Ativo, piccolo! Os dois lados da moeda.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-083",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "O instrutor pede pra você completar a famosa frase que resume o método usado na escrituração contábil desde a Idade Média, em que todo lançamento tem dois lados equivalentes.",
+    "question": "Complete o nome do método contábil: 'Método das Partidas _______' (os dois lados de todo lançamento):",
+    "correctAnswer": "dobradas",
+    "explanation": "O método das Partidas Dobradas estabelece que todo lançamento contábil afeta pelo menos duas contas, com valores iguais em débito e crédito, mantendo o equilíbrio.",
+    "pacciTip": "Partidas Dobradas: um lançamento, dois lados, sempre equilibrados, amico! A base de tudo.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-084",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, dono de uma pequena loja, confunde o dinheiro da empresa com o dinheiro pessoal dele, retirando valores do caixa da loja pra pagar contas de casa sem nenhum registro.",
+    "question": "Qual princípio contábil básico esse cliente está desrespeitando?",
+    "options": [
+      "Princípio da entidade (separação entre patrimônio da empresa e dos sócios)",
+      "Regime de competência",
+      "Princípio da materialidade",
+      "Princípio da continuidade"
+    ],
+    "correctAnswer": "Princípio da entidade (separação entre patrimônio da empresa e dos sócios)",
+    "explanation": "O princípio da entidade estabelece que o patrimônio da empresa é totalmente separado do patrimônio pessoal dos sócios — misturar os dois, mesmo informalmente, fere esse princípio fundamental.",
+    "pacciTip": "Empresa e dono são 'pessoas' diferentes pra contabilidade, piccolo! Dinheiro de um não é dinheiro do outro.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-085",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "Você está ajudando a montar o relatório mensal e precisa separar os bens da empresa entre os que vão virar dinheiro rapidamente (como estoque) e os que vão durar anos (como máquinas e imóveis).",
+    "question": "Essa separação, dentro do Ativo, costuma usar quais dois grandes grupos?",
+    "options": [
+      "Ativo Circulante e Ativo Não Circulante",
+      "Ativo Positivo e Ativo Negativo",
+      "Ativo Fiscal e Ativo Contábil",
+      "Ativo Antigo e Ativo Novo"
+    ],
+    "correctAnswer": "Ativo Circulante e Ativo Não Circulante",
+    "explanation": "O Ativo Circulante reúne bens e direitos com expectativa de realização em curto prazo (até 12 meses), enquanto o Ativo Não Circulante reúne os de longo prazo, como imobilizado.",
+    "pacciTip": "Circulante é o que 'circula rápido', Não Circulante fica mais tempo com a empresa, tesoro!",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-086",
+    "level": "cont_estagiario",
+    "type": "multiple_choice",
+    "scenario": "O instrutor explica que, por padrão, a contabilidade assume que a empresa vai continuar funcionando por tempo indeterminado, a não ser que haja evidência clara do contrário (como falência decretada).",
+    "question": "Qual princípio contábil descreve essa premissa de continuidade do negócio?",
+    "options": [
+      "Princípio da continuidade",
+      "Princípio da competência",
+      "Princípio da entidade",
+      "Princípio da prudência"
+    ],
+    "correctAnswer": "Princípio da continuidade",
+    "explanation": "O princípio da continuidade parte do pressuposto de que a empresa vai continuar operando indefinidamente, o que influencia, por exemplo, como os bens são avaliados no balanço.",
+    "pacciTip": "A contabilidade sempre aposta que a empresa 'vai continuar', piccolo! Só muda se tiver prova forte do contrário.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-087",
+    "level": "cont_estagiario",
+    "type": "ordering",
+    "scenario": "Você está ajudando a explicar pra um cliente novo, de forma bem simples, como funciona o ciclo básico da contabilidade dentro de um mês.",
+    "question": "Ordene o ciclo básico mensal da contabilidade, do início ao fim:",
+    "options": [
+      "Os documentos do mês (notas, extratos) chegam ao escritório",
+      "Os fatos são registrados como lançamentos contábeis (débito e crédito)",
+      "Os lançamentos são conferidos e consolidados",
+      "São gerados os relatórios/demonstrações do período"
+    ],
+    "correctAnswer": [
+      "Os documentos do mês (notas, extratos) chegam ao escritório",
+      "Os fatos são registrados como lançamentos contábeis (débito e crédito)",
+      "Os lançamentos são conferidos e consolidados",
+      "São gerados os relatórios/demonstrações do período"
+    ],
+    "explanation": "O ciclo contábil básico parte dos documentos (a matéria-prima), passa pelo registro em lançamentos, depois pela conferência, e termina nos relatórios que mostram a situação da empresa no período.",
+    "pacciTip": "Documento vira lançamento, lançamento vira relatório, amico! Esse é o ciclo que se repete todo mês.",
+    "topic": "fundamentos_contabeis"
+  },
+  {
+    "id": "CONT-EST-088",
+    "level": "cont_estagiario",
+    "type": "text_input",
+    "scenario": "No fim do treinamento de fundamentos, o instrutor resume: 'Decorem essas duas palavras, porque toda a contabilidade gira em torno delas: o lado que aumenta o Ativo e diminui o Passivo, e o lado oposto'.",
+    "question": "Digite a palavra que representa o lado esquerdo de um lançamento contábil, que aumenta contas do Ativo:",
+    "correctAnswer": "débito",
+    "explanation": "Débito é o lado esquerdo do lançamento contábil, que aumenta contas de natureza devedora (como o Ativo) e diminui contas de natureza credora (como o Passivo).",
+    "pacciTip": "Débito aumenta o que a empresa TEM, tesoro! Essa é a trave mestra de tudo que vem depois.",
+    "topic": "fundamentos_contabeis"
+  }
+]

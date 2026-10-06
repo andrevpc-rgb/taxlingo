@@ -56,14 +56,31 @@ const EXAM_QUESTION_MIN = 15;
 const EXAM_QUESTION_MAX = 20;
 const MIN_QUESTIONS_PER_LESSON = 3;
 
-const CAREER_LEVELS = [
-  { id: 'estagiario', title: 'Estagiário', xpReward: 20, lessonCount: 39, file: 'reforma_tributaria_estagiario.json' },
-  { id: 'auxiliar', title: 'Auxiliar', xpReward: 25, lessonCount: 39, file: 'reforma_tributaria_auxiliar.json' },
-  { id: 'assistente', title: 'Assistente', xpReward: 30, lessonCount: 39, file: 'reforma_tributaria_assistente.json' },
-  { id: 'analista_junior', title: 'Analista Júnior', xpReward: 35, lessonCount: 39, file: 'reforma_tributaria_analista_junior.json' },
-  { id: 'analista_pleno', title: 'Analista Pleno', xpReward: 40, lessonCount: 38, file: 'reforma_tributaria_analista_pleno.json' },
-  { id: 'analista_senior', title: 'Analista Sênior', xpReward: 45, lessonCount: 38, file: 'reforma_tributaria_analista_senior.json' },
-  { id: 'especialista', title: 'Especialista', xpReward: 50, lessonCount: 38, file: 'reforma_tributaria_especialista.json' },
+// Um item por curso com conteúdo pronto pra semear. Cada nível tem seu
+// próprio `id` (precisa ser ÚNICO em todo o banco — é usado como prefixo do
+// id das lições, ex: '${level.id}-1' — por isso cursos diferentes não podem
+// reusar o mesmo id de nível, mesmo com nomes parecidos como "Estagiário").
+const COURSES_CONTENT = [
+  {
+    courseId: 'reforma-tributaria',
+    levels: [
+      { id: 'estagiario', title: 'Estagiário', xpReward: 20, lessonCount: 39, file: 'reforma_tributaria_estagiario.json' },
+      { id: 'auxiliar', title: 'Auxiliar', xpReward: 25, lessonCount: 39, file: 'reforma_tributaria_auxiliar.json' },
+      { id: 'assistente', title: 'Assistente', xpReward: 30, lessonCount: 39, file: 'reforma_tributaria_assistente.json' },
+      { id: 'analista_junior', title: 'Analista Júnior', xpReward: 35, lessonCount: 39, file: 'reforma_tributaria_analista_junior.json' },
+      { id: 'analista_pleno', title: 'Analista Pleno', xpReward: 40, lessonCount: 38, file: 'reforma_tributaria_analista_pleno.json' },
+      { id: 'analista_senior', title: 'Analista Sênior', xpReward: 45, lessonCount: 38, file: 'reforma_tributaria_analista_senior.json' },
+      { id: 'especialista', title: 'Especialista', xpReward: 50, lessonCount: 38, file: 'reforma_tributaria_especialista.json' },
+    ],
+  },
+  {
+    courseId: 'contabilidade',
+    // Só o Nível 1 (piloto) por enquanto — Auxiliar/Assistente/Analista/
+    // Especialista entram aqui conforme forem gerados e aprovados.
+    levels: [
+      { id: 'cont_estagiario', title: 'Estagiário Contábil', xpReward: 20, lessonCount: 18, file: 'contabilidade_estagiario.json' },
+    ],
+  },
 ];
 
 function chunkEvenly(array, partCount) {
@@ -88,7 +105,7 @@ function chunkEvenly(array, partCount) {
 // api.fetchLessonsForCourse) não sabe que "Auxiliar" vem depois de
 // "Estagiário": os dois teriam lições com order_index 0, 1, 2... iguais.
 // Devolve `nextOrderIndex` pra quem chama encadear o próximo nível.
-function buildLevelLessons(level, allQuestions, startOrderIndex) {
+function buildLevelLessons(courseId, level, allQuestions, startOrderIndex) {
   const total = allQuestions.length;
   if (total === 0) return { lessons: [], questions: [], nextOrderIndex: startOrderIndex };
 
@@ -109,7 +126,7 @@ function buildLevelLessons(level, allQuestions, startOrderIndex) {
     const lessonId = `${level.id}-${i + 1}`;
     lessons.push({
       id: lessonId,
-      course_id: 'reforma-tributaria',
+      course_id: courseId,
       career_level_id: level.id,
       type: 'regular',
       title: `${level.title} · Lição ${i + 1}/${regularChunks.length}`,
@@ -118,14 +135,14 @@ function buildLevelLessons(level, allQuestions, startOrderIndex) {
       pass_threshold: null,
       order_index: orderIndex++,
     });
-    qs.forEach((q, qi) => questionRows.push(toQuestionRow(q, lessonId, qi)));
+    qs.forEach((q, qi) => questionRows.push(toQuestionRow(q, courseId, lessonId, qi)));
   });
 
   if (examQuestions.length > 0) {
     const examLessonId = `${level.id}-exam`;
     lessons.push({
       id: examLessonId,
-      course_id: 'reforma-tributaria',
+      course_id: courseId,
       career_level_id: level.id,
       type: 'exam',
       title: `${level.title} · Exame de Transição`,
@@ -134,17 +151,17 @@ function buildLevelLessons(level, allQuestions, startOrderIndex) {
       pass_threshold: EXAM_PASS_THRESHOLD,
       order_index: orderIndex++,
     });
-    examQuestions.forEach((q, qi) => questionRows.push(toQuestionRow(q, examLessonId, qi)));
+    examQuestions.forEach((q, qi) => questionRows.push(toQuestionRow(q, courseId, examLessonId, qi)));
   }
 
   return { lessons, questions: questionRows, nextOrderIndex: orderIndex };
 }
 
-function toQuestionRow(q, lessonId, orderIndex) {
+function toQuestionRow(q, courseId, lessonId, orderIndex) {
   return {
     id: q.id,
     lesson_id: lessonId,
-    course_id: 'reforma-tributaria',
+    course_id: courseId,
     level: q.level,
     type: q.type,
     scenario: q.scenario ?? null,
@@ -167,13 +184,19 @@ async function upsertInBatches(table, rows, batchSize = 500) {
 }
 
 // ---------------------------------------------------------------------------
-// 1. Cursos (7 no total — só "reforma-tributaria" com conteúdo por enquanto)
+// 1. Cursos — "contabilidade" ativado com o Nível 1 piloto (Formação de
+// Analista Contábil): is_active:true já deixa visível pra quem tiver grant
+// em company_course_access (as 3 empresas de demo) E pro master (RLS libera
+// is_master() sempre, mas o CLIENTE também respeita `locked` vindo de
+// is_active, então precisa estar ativo pro master conseguir abrir uma lição
+// de verdade, não só ver o card). Nenhuma empresa real ganha acesso
+// automático — só quem está na allow-list.
 // ---------------------------------------------------------------------------
 async function seedCourses() {
   console.log('→ Cursos...');
   const courses = [
     { id: 'reforma-tributaria', title: 'Reforma Tributária', description: 'Do Estagiário ao Especialista: IBS, CBS, Imposto Seletivo e a transição da EC 132/2023.', icon: 'Landmark', color: 'emerald', is_active: true, order_index: 0 },
-    { id: 'contabilidade', title: 'Contabilidade', description: 'Fundamentos de escrituração, balanços e demonstrações contábeis.', icon: 'Calculator', color: 'blue', is_active: false, order_index: 1 },
+    { id: 'contabilidade', title: 'Formação de Analista Contábil', description: 'Do Estagiário ao Especialista: rotina de escritório, lançamentos, fechamento, análise de balanço e consultoria ao cliente.', icon: 'Calculator', color: 'blue', is_active: true, order_index: 1 },
     { id: 'fiscal', title: 'Fiscal', description: 'Obrigações acessórias, apuração de tributos e SPED.', icon: 'FileSpreadsheet', color: 'amber', is_active: false, order_index: 2 },
     { id: 'trabalhista', title: 'Trabalhista', description: 'Folha de pagamento, eSocial e legislação trabalhista.', icon: 'Briefcase', color: 'purple', is_active: false, order_index: 3 },
     { id: 'atendimento-cliente', title: 'Atendimento ao Cliente', description: 'Excelência e comunicação no relacionamento com o cliente.', icon: 'Headset', color: 'sky', is_active: false, order_index: 4 },
@@ -184,42 +207,48 @@ async function seedCourses() {
   console.log(`  ${courses.length} cursos ok.`);
 }
 
-// Libera "reforma-tributaria" pra toda empresa de demonstração — sem isso,
-// a RLS de company_course_access (allow-list pura) esconderia o curso das
-// empresas ALFA/BETA/GAMMA recém-criadas (o backfill do schema.sql só cobre
-// empresas que já existiam NO MOMENTO em que a migração rodou).
+// Libera cada curso com conteúdo (ver COURSES_CONTENT) pra toda empresa de
+// demonstração — sem isso, a RLS de company_course_access (allow-list pura)
+// esconderia o curso das empresas ALFA/BETA/GAMMA recém-criadas (o backfill
+// do schema.sql só cobre empresas que já existiam NO MOMENTO em que a
+// migração rodou, e só pra "reforma-tributaria" — qualquer curso novo
+// precisa ser liberado aqui).
 async function seedCourseAccess(companyIdByCode) {
-  console.log('→ Acesso ao curso (allow-list)...');
-  const rows = Object.values(companyIdByCode).map((companyId) => ({
-    company_id: companyId,
-    course_id: 'reforma-tributaria',
-  }));
+  console.log('→ Acesso aos cursos (allow-list)...');
+  const rows = [];
+  for (const companyId of Object.values(companyIdByCode)) {
+    for (const { courseId } of COURSES_CONTENT) {
+      rows.push({ company_id: companyId, course_id: courseId });
+    }
+  }
   const { error } = await supabase.from('company_course_access').upsert(rows, { onConflict: 'company_id,course_id' });
   if (error) throw new Error(`Falha ao gravar company_course_access: ${error.message}`);
   console.log(`  ${rows.length} liberações ok.`);
 }
 
 // ---------------------------------------------------------------------------
-// 2. Lições + questões (lidas de src/data/questions/*.json)
+// 2. Lições + questões (lidas de src/data/questions/*.json), curso por curso
 // ---------------------------------------------------------------------------
 async function seedContent() {
-  console.log('→ Lições e questões (isso demora um pouco, são ~1000 questões)...');
+  console.log('→ Lições e questões (isso demora um pouco)...');
   let totalLessons = 0;
   let totalQuestions = 0;
-  let orderIndex = 0; // encadeado entre níveis — ver comentário em buildLevelLessons
 
-  for (const level of CAREER_LEVELS) {
-    const raw = readFileSync(join(QUESTIONS_DIR, level.file), 'utf-8');
-    const questions = JSON.parse(raw);
-    const { lessons, questions: questionRows, nextOrderIndex } = buildLevelLessons(level, questions, orderIndex);
-    orderIndex = nextOrderIndex;
+  for (const { courseId, levels } of COURSES_CONTENT) {
+    let orderIndex = 0; // encadeado entre níveis DO MESMO CURSO — ver comentário em buildLevelLessons
+    for (const level of levels) {
+      const raw = readFileSync(join(QUESTIONS_DIR, level.file), 'utf-8');
+      const questions = JSON.parse(raw);
+      const { lessons, questions: questionRows, nextOrderIndex } = buildLevelLessons(courseId, level, questions, orderIndex);
+      orderIndex = nextOrderIndex;
 
-    await upsertInBatches('lessons', lessons);
-    await upsertInBatches('questions', questionRows);
+      await upsertInBatches('lessons', lessons);
+      await upsertInBatches('questions', questionRows);
 
-    totalLessons += lessons.length;
-    totalQuestions += questionRows.length;
-    console.log(`  ${level.title}: ${lessons.length} lições, ${questionRows.length} questões.`);
+      totalLessons += lessons.length;
+      totalQuestions += questionRows.length;
+      console.log(`  [${courseId}] ${level.title}: ${lessons.length} lições, ${questionRows.length} questões.`);
+    }
   }
 
   console.log(`  Total: ${totalLessons} lições, ${totalQuestions} questões.`);
