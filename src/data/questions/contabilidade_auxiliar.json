@@ -1,0 +1,1861 @@
+[
+  {
+    "id": "CONT-AUX-001",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao lançar o pagamento de uma conta de energia elétrica, você escreve no campo de histórico apenas 'pagamento'.",
+    "question": "Por que esse histórico é considerado fraco para um lançamento contábil?",
+    "options": [
+      "Porque não identifica o quê, pra quem e por quê — dificulta auditoria e conferência futura",
+      "Porque o sistema não aceita históricos curtos",
+      "Porque todo histórico precisa ter mais de 100 caracteres",
+      "Porque históricos curtos geram multa fiscal"
+    ],
+    "correctAnswer": "Porque não identifica o quê, pra quem e por quê — dificulta auditoria e conferência futura",
+    "explanation": "Um bom histórico contábil responde: o quê (conta de energia), pra quem (a concessionária) e referente a quê (mês/competência) — isso facilita qualquer conferência futura, inclusive auditoria.",
+    "pacciTip": "Histórico bom é aquele que até você, daqui 6 meses, entende sem esforço, piccolo!",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-002",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você vai lançar o pagamento do aluguel do escritório de um cliente, referente ao mês de competência.",
+    "question": "Qual seria um histórico contábil claro e completo para esse lançamento?",
+    "options": [
+      "'Pagamento aluguel sede, referente a [mês/ano], conforme contrato de locação'",
+      "'Pagamento diversos'",
+      "'Saída de caixa'",
+      "'Despesa do mês'"
+    ],
+    "correctAnswer": "'Pagamento aluguel sede, referente a [mês/ano], conforme contrato de locação'",
+    "explanation": "Um histórico completo identifica a natureza do gasto, a competência e, se possível, a referência documental — tudo o que alguém precisaria pra entender o lançamento sem perguntar a mais ninguém.",
+    "pacciTip": "Quanto mais detalhe útil no histórico, menos pergunta você recebe depois, tesoro!",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-003",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa cliente pagou o salário de um funcionário administrativo e também pagou uma comissão para o vendedor, no mesmo dia.",
+    "question": "Essas duas despesas, embora ambas sejam 'pessoal', costumam ser classificadas de forma diferente. Por quê?",
+    "options": [
+      "Porque uma é despesa administrativa (área de apoio) e a outra é despesa com vendas (área comercial), afetando a análise por natureza da operação",
+      "Porque o salário é sempre maior que a comissão",
+      "Porque comissão nunca é considerada uma despesa",
+      "Porque salário é sempre pago em dinheiro e comissão sempre por PIX"
+    ],
+    "correctAnswer": "Porque uma é despesa administrativa (área de apoio) e a outra é despesa com vendas (área comercial), afetando a análise por natureza da operação",
+    "explanation": "Separar despesas por área (administrativas, comerciais, financeiras) ajuda a empresa a entender onde o dinheiro está sendo gasto e permite análises gerenciais mais precisas.",
+    "pacciTip": "Mesma 'família' (pessoal), áreas diferentes, piccolo! A classificação reflete onde o gasto realmente acontece.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-004",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa pagou juros sobre um empréstimo bancário atrasado, além do valor da parcela normal.",
+    "question": "Esses juros pagos são classificados, na Demonstração do Resultado, como:",
+    "options": [
+      "Despesa financeira",
+      "Despesa administrativa",
+      "Despesa com vendas",
+      "Receita financeira"
+    ],
+    "correctAnswer": "Despesa financeira",
+    "explanation": "Juros, multas e encargos bancários são classificados como Despesas Financeiras — um grupo separado das despesas operacionais (administrativas, comerciais), já que têm natureza de custo do dinheiro, não da operação em si.",
+    "pacciTip": "Juro é o 'preço' de usar dinheiro emprestado, tesoro! Sempre cai no grupo financeiro.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-005",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Uma empresa contraiu um empréstimo bancário de R$ 50.000, a ser pago em parcelas mensais com juros.",
+    "question": "Ordene o raciocínio para lançar a obtenção desse empréstimo:",
+    "options": [
+      "Identificar que o dinheiro do empréstimo entrou na conta bancária da empresa",
+      "Reconhecer o aumento do Ativo (Caixa/Banco)",
+      "Reconhecer o aumento do Passivo (Empréstimos a pagar)",
+      "Registrar os dois lados, mantendo o equilíbrio da equação patrimonial"
+    ],
+    "correctAnswer": [
+      "Identificar que o dinheiro do empréstimo entrou na conta bancária da empresa",
+      "Reconhecer o aumento do Ativo (Caixa/Banco)",
+      "Reconhecer o aumento do Passivo (Empréstimos a pagar)",
+      "Registrar os dois lados, mantendo o equilíbrio da equação patrimonial"
+    ],
+    "explanation": "O empréstimo aumenta o dinheiro disponível (Ativo) e, ao mesmo tempo, cria uma obrigação de pagar de volta (Passivo) — os dois lados crescem juntos, mantendo a equação patrimonial equilibrada.",
+    "pacciTip": "Empréstimo é dinheiro que chega com uma 'etiqueta de devolver', piccolo! Ativo sobe, Passivo sobe junto.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-006",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao pagar uma parcela de empréstimo que inclui amortização (parte do valor principal) e juros, você percebe que o valor total pago é maior do que a redução da dívida no Passivo.",
+    "question": "Por que a parcela paga não reduz o Passivo no mesmo valor total pago?",
+    "options": [
+      "Porque parte do valor pago é juros (despesa do período), e só a parte de amortização reduz efetivamente a dívida",
+      "Porque o sistema calculou errado",
+      "Porque juros não existem em empréstimos bancários",
+      "Porque toda parcela paga sempre reduz o Passivo no valor total"
+    ],
+    "correctAnswer": "Porque parte do valor pago é juros (despesa do período), e só a parte de amortização reduz efetivamente a dívida",
+    "explanation": "Uma parcela de empréstimo normalmente se divide em amortização (reduz o saldo devedor no Passivo) e juros (vira despesa financeira do período) — só a parte de amortização de fato 'abate' a dívida.",
+    "pacciTip": "Parcela paga tem duas partes, tesoro! Uma abate a dívida, a outra é o custo de ter usado o dinheiro.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-007",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que, antes de lançar qualquer despesa, o auxiliar deve confirmar o documento comprobatório e a data exata do fato gerador, nunca lançar 'de cabeça'.",
+    "question": "Digite a palavra que descreve o documento que comprova e dá suporte a um lançamento contábil:",
+    "correctAnswer": "comprobatório",
+    "explanation": "Todo lançamento contábil deve ter um documento comprobatório (nota fiscal, recibo, extrato, contrato) que sustenta a informação registrada — sem isso, o lançamento fica sem respaldo.",
+    "pacciTip": "Lançamento sem documento é lançamento no chute, piccolo! Sempre tenha o papel (ou arquivo) que comprova.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-008",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que lançou um pagamento de fornecedor na conta errada (usou 'Despesas com Água' em vez de 'Despesas com Energia'), mas o valor total e a data estavam certos.",
+    "question": "Qual é o procedimento correto para corrigir esse erro de classificação?",
+    "options": [
+      "Fazer um lançamento de estorno/ajuste, movendo o valor da conta errada para a conta correta",
+      "Deixar como está, já que o valor total da empresa não muda",
+      "Apagar o lançamento do sistema sem deixar rastro",
+      "Esperar o fechamento anual para corrigir tudo de uma vez"
+    ],
+    "correctAnswer": "Fazer um lançamento de estorno/ajuste, movendo o valor da conta errada para a conta correta",
+    "explanation": "Mesmo quando o valor total não muda, a classificação errada distorce a análise por conta/natureza — o correto é fazer um ajuste rastreável, nunca apagar silenciosamente um lançamento já registrado.",
+    "pacciTip": "O total pode até bater, mas a 'foto' de cada conta fica errada se não corrigir, amico! Ajusta sempre com rastro.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-009",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma pequena indústria comprou matéria-prima para usar na produção e pagará o fornecedor em 30 dias.",
+    "question": "No momento da compra (antes do pagamento), qual conta do Passivo é afetada?",
+    "options": [
+      "Fornecedores a pagar",
+      "Clientes a receber",
+      "Caixa",
+      "Capital social"
+    ],
+    "correctAnswer": "Fornecedores a pagar",
+    "explanation": "Uma compra a prazo gera uma obrigação futura com o fornecedor — essa obrigação é registrada na conta de Passivo 'Fornecedores a Pagar', até o efetivo pagamento.",
+    "pacciTip": "Comprou e ainda não pagou? Isso é Fornecedores a Pagar, piccolo! A conta clássica da compra a prazo.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-010",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Chegou no seu e-mail uma despesa de viagem de um funcionário (passagem + hospedagem), que precisa ser lançada corretamente.",
+    "question": "Ordene o processo de tratamento de uma despesa de viagem recebida para lançamento:",
+    "options": [
+      "Conferir os comprovantes (passagem, hospedagem, recibos)",
+      "Identificar a conta contábil correta (ex: Despesas com Viagens)",
+      "Lançar o valor total, com histórico detalhado",
+      "Arquivar os comprovantes junto ao lançamento"
+    ],
+    "correctAnswer": [
+      "Conferir os comprovantes (passagem, hospedagem, recibos)",
+      "Identificar a conta contábil correta (ex: Despesas com Viagens)",
+      "Lançar o valor total, com histórico detalhado",
+      "Arquivar os comprovantes junto ao lançamento"
+    ],
+    "explanation": "Primeiro confere o que foi gasto, depois decide a conta certa, lança com histórico claro, e arquiva o comprovante junto — isso garante rastreabilidade completa da despesa.",
+    "pacciTip": "Despesa de viagem sem comprovante guardado é dor de cabeça garantida depois, tesoro!",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-011",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No sistema contábil, você está procurando a conta certa para lançar a compra de um computador novo para o escritório administrativo, que vai durar vários anos.",
+    "question": "Esse computador deve ser lançado em qual grupo de contas?",
+    "options": [
+      "Ativo Imobilizado (bem de uso duradouro)",
+      "Despesa administrativa do mês",
+      "Fornecedores a pagar",
+      "Receita operacional"
+    ],
+    "correctAnswer": "Ativo Imobilizado (bem de uso duradouro)",
+    "explanation": "Bens de uso duradouro (máquinas, computadores, móveis) que vão gerar benefício por mais de um exercício são classificados como Ativo Imobilizado, não como despesa do mês da compra.",
+    "pacciTip": "Se vai durar anos, é Ativo, não despesa do mês, piccolo! Memoriza essa diferença.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-012",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No treinamento sobre o plano de contas do escritório, o analista explica que as contas são organizadas numa estrutura hierárquica: grupos grandes se dividem em subgrupos, que se dividem em contas específicas.",
+    "question": "Qual é a principal vantagem de organizar as contas de forma hierárquica num plano de contas?",
+    "options": [
+      "Permite analisar o resultado tanto de forma resumida (por grupo) quanto detalhada (por conta específica)",
+      "Deixa o sistema contábil mais lento de propósito",
+      "É só uma exigência burocrática sem utilidade prática",
+      "Serve apenas para decorar o manual do sistema"
+    ],
+    "correctAnswer": "Permite analisar o resultado tanto de forma resumida (por grupo) quanto detalhada (por conta específica)",
+    "explanation": "A hierarquia do plano de contas permite que um gestor veja o total de 'Despesas Administrativas' de forma resumida, e um analista veja o detalhe de cada conta específica dentro desse grupo — dois níveis de análise com a mesma estrutura.",
+    "pacciTip": "Plano de contas bem feito é tipo um mapa com zoom, tesoro! Dá pra ver o geral ou o detalhe, como preferir.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-013",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você precisa classificar a conta 'Caixa' e a conta 'Receita de Vendas' dentro do plano de contas.",
+    "question": "Qual classificação está correta?",
+    "options": [
+      "'Caixa' é conta patrimonial (Ativo); 'Receita de Vendas' é conta de resultado",
+      "As duas são contas patrimoniais",
+      "As duas são contas de resultado",
+      "'Caixa' é conta de resultado; 'Receita de Vendas' é conta patrimonial"
+    ],
+    "correctAnswer": "'Caixa' é conta patrimonial (Ativo); 'Receita de Vendas' é conta de resultado",
+    "explanation": "Contas patrimoniais (Ativo, Passivo, PL) aparecem no Balanço Patrimonial e representam posição em um momento; contas de resultado (Receitas, Despesas) aparecem na DRE e representam o fluxo de um período.",
+    "pacciTip": "Patrimonial é 'o que tenho agora', Resultado é 'o que aconteceu no período', piccolo!",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-014",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No fim do ano, as contas de Receita e Despesa são 'zeradas' (encerradas) para começar o próximo ano do zero, enquanto as contas de Ativo, Passivo e Patrimônio Líquido mantêm seus saldos.",
+    "question": "Por que as contas de resultado são zeradas a cada novo exercício, diferente das contas patrimoniais?",
+    "options": [
+      "Porque elas medem o desempenho de UM período específico, e esse período 'reinicia' a cada novo ano",
+      "Porque é uma regra sem motivo real, só tradição",
+      "Porque contas patrimoniais nunca têm saldo nenhum",
+      "Porque o sistema contábil obriga por limitação técnica"
+    ],
+    "correctAnswer": "Porque elas medem o desempenho de UM período específico, e esse período 'reinicia' a cada novo ano",
+    "explanation": "Contas de resultado respondem 'quanto vendemos/gastamos NESTE período' — faz sentido zerar a cada novo exercício. Já as contas patrimoniais respondem 'o que temos/devemos AGORA', um saldo acumulado que continua existindo.",
+    "pacciTip": "Resultado é 'o filme do ano', Patrimônio é 'a foto de agora', tesoro! Por isso um reinicia e o outro não.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-015",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No manual do plano de contas, você vê que as contas são agrupadas em grandes categorias, sendo as duas principais 'contas que entram no Balanço' e 'contas que entram na Demonstração do Resultado'.",
+    "question": "Digite a palavra que classifica as contas que aparecem no Balanço Patrimonial (Ativo, Passivo, PL):",
+    "correctAnswer": "patrimoniais",
+    "explanation": "Contas patrimoniais são as que compõem o Balanço Patrimonial — Ativo, Passivo e Patrimônio Líquido — representando a posição financeira da empresa num dado momento.",
+    "pacciTip": "Patrimonial vem de 'patrimônio', o que a empresa tem e deve, piccolo! Fácil de lembrar pela raiz da palavra.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-016",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um colega novo pergunta qual é a diferença entre uma 'conta sintética' e uma 'conta analítica' no plano de contas.",
+    "question": "Qual é a explicação correta?",
+    "options": [
+      "Conta sintética agrupa/totaliza várias contas analíticas; a analítica é a conta de detalhe onde o lançamento realmente acontece",
+      "São exatamente a mesma coisa, só com nomes diferentes",
+      "Conta analítica serve só para o fisco; sintética só para o cliente",
+      "Conta sintética é usada só em empresas grandes, nunca em pequenas"
+    ],
+    "correctAnswer": "Conta sintética agrupa/totaliza várias contas analíticas; a analítica é a conta de detalhe onde o lançamento realmente acontece",
+    "explanation": "Contas analíticas recebem o lançamento diretamente (nível mais detalhado); contas sintéticas são 'totalizadoras', somando o que está nas analíticas abaixo delas na hierarquia.",
+    "pacciTip": "Lançamento vai sempre na analítica, piccolo! A sintética só soma o que já está lá embaixo.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-017",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Você está aprendendo o raciocínio para decidir em qual conta lançar uma despesa nova, que ainda não tem uma conta óbvia no plano de contas do cliente.",
+    "question": "Ordene o raciocínio correto para classificar uma despesa nova no plano de contas:",
+    "options": [
+      "Entender a natureza real da despesa (o que ela representa)",
+      "Verificar se já existe uma conta parecida no plano de contas",
+      "Confirmar com o analista responsável se a classificação faz sentido",
+      "Lançar na conta definida, documentando o critério usado"
+    ],
+    "correctAnswer": [
+      "Entender a natureza real da despesa (o que ela representa)",
+      "Verificar se já existe uma conta parecida no plano de contas",
+      "Confirmar com o analista responsável se a classificação faz sentido",
+      "Lançar na conta definida, documentando o critério usado"
+    ],
+    "explanation": "Entender a natureza, procurar conta compatível, confirmar com quem tem mais experiência, e só então lançar documentando o critério — isso evita criar contas desnecessárias ou classificar errado por pressa.",
+    "pacciTip": "Despesa nova e sem conta óbvia? Não inventa sozinho, amico! Confirma antes de criar algo novo.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-018",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que o plano de contas dele é 'personalizado', diferente do plano de contas padrão que ele viu na internet.",
+    "question": "Por que é comum um plano de contas ser adaptado para cada empresa, em vez de usar um modelo genérico fixo?",
+    "options": [
+      "Porque cada empresa tem particularidades no seu negócio que merecem contas específicas para uma análise gerencial útil",
+      "Porque a lei exige um plano de contas diferente para cada CNPJ",
+      "Porque planos de contas genéricos são sempre proibidos",
+      "Porque personalizar é só uma forma de cobrar mais caro do cliente"
+    ],
+    "correctAnswer": "Porque cada empresa tem particularidades no seu negócio que merecem contas específicas para uma análise gerencial útil",
+    "explanation": "Um plano de contas bem adaptado reflete a realidade operacional da empresa (seus produtos, despesas típicas, estrutura) — isso torna os relatórios mais úteis pra gestão do que um modelo genérico.",
+    "pacciTip": "Plano de contas sob medida é como um terno feito pra você, piccolo! Serve muito melhor do que um de prateleira.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-019",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você está conferindo o plano de contas de um cliente e encontra duas contas muito parecidas: 'Despesas com Material de Escritório' e 'Despesas com Material de Limpeza', ambas pouco usadas.",
+    "question": "Qual seria uma boa prática ao perceber contas pouco usadas e muito específicas no plano de contas?",
+    "options": [
+      "Avaliar com o analista se vale simplificar, agrupando em uma conta mais ampla, se isso não prejudicar a análise",
+      "Excluir as duas contas imediatamente sem consultar ninguém",
+      "Criar ainda mais contas específicas para cada tipo de material",
+      "Ignorar, já que plano de contas nunca deve ser revisado"
+    ],
+    "correctAnswer": "Avaliar com o analista se vale simplificar, agrupando em uma conta mais ampla, se isso não prejudicar a análise",
+    "explanation": "Um plano de contas excessivamente fragmentado pode dificultar a análise — revisar periodicamente, sempre com validação de quem tem mais experiência, ajuda a manter a estrutura útil e enxuta.",
+    "pacciTip": "Plano de contas também precisa de faxina de vez em quando, tesoro! Mas sempre com aprovação de quem entende.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-020",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um estagiário te pergunta se a conta 'Capital Social' é uma conta patrimonial ou de resultado.",
+    "question": "Qual é a resposta correta?",
+    "options": [
+      "Patrimonial — faz parte do Patrimônio Líquido, representando o investimento dos sócios",
+      "De resultado — aparece na Demonstração do Resultado todo mês",
+      "Nenhuma das duas — é uma conta fora do plano de contas",
+      "É uma conta de Passivo Circulante"
+    ],
+    "correctAnswer": "Patrimonial — faz parte do Patrimônio Líquido, representando o investimento dos sócios",
+    "explanation": "Capital Social é uma conta do Patrimônio Líquido (patrimonial), representando o valor investido pelos sócios na empresa — não tem relação direta com o resultado de um período específico.",
+    "pacciTip": "Capital Social é 'o que os sócios colocaram', piccolo! Mora lá no Patrimônio Líquido, não na DRE.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-021",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista pede pra você decorar que toda conta no plano de contas pertence a um dos 5 grandes grupos: Ativo, Passivo, Patrimônio Líquido, Receita ou Despesa.",
+    "question": "Digite a palavra que descreve a estrutura organizada de todas as contas usadas por uma empresa:",
+    "correctAnswer": "plano de contas",
+    "explanation": "Plano de contas é a estrutura organizada (e hierárquica) de todas as contas contábeis usadas por uma empresa, servindo de base para todos os lançamentos e relatórios.",
+    "pacciTip": "Plano de contas é o 'dicionário' da contabilidade de cada empresa, amico! Toda conta tem seu lugar certo nele.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-022",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao revisar o plano de contas de um novo cliente, você percebe que a conta 'Salários a Pagar' está classificada, por engano, dentro do grupo de Despesas.",
+    "question": "Por que essa classificação está incorreta?",
+    "options": [
+      "Porque 'Salários a Pagar' é uma obrigação ainda não paga (Passivo), diferente de 'Despesa com Salários', que é o gasto reconhecido no resultado",
+      "Porque salários nunca podem ser lançados em nenhuma conta",
+      "Porque a classificação está correta, não há erro nenhum",
+      "Porque 'Salários a Pagar' deveria estar no Ativo"
+    ],
+    "correctAnswer": "Porque 'Salários a Pagar' é uma obrigação ainda não paga (Passivo), diferente de 'Despesa com Salários', que é o gasto reconhecido no resultado",
+    "explanation": "'Salários a Pagar' é a obrigação de pagar (Passivo), enquanto 'Despesa com Salários' é o reconhecimento do gasto no resultado — são contas diferentes, uma patrimonial e outra de resultado, mesmo tratando do mesmo assunto.",
+    "pacciTip": "'A pagar' quase sempre é Passivo, piccolo! Já a 'despesa' em si mora no resultado.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-023",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao comparar o extrato bancário do mês com o livro razão da empresa, você percebe que o saldo final de cada um é diferente.",
+    "question": "Qual é o nome do processo mensal que serve justamente para comparar e ajustar essas duas fontes de informação?",
+    "options": [
+      "Conciliação bancária",
+      "Apuração de impostos",
+      "Fechamento de folha",
+      "Depreciação de ativos"
+    ],
+    "correctAnswer": "Conciliação bancária",
+    "explanation": "Conciliação bancária é o processo de comparar o extrato do banco com os registros contábeis (livro razão), identificando e explicando qualquer diferença entre os dois saldos.",
+    "pacciTip": "Conciliação bancária é o 'detetive do mês', tesoro! Encontra por que os dois saldos não batem.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-024",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Na conciliação bancária, você percebe que um cheque emitido pela empresa no fim do mês ainda não foi descontado pelo banco até a data do extrato.",
+    "question": "Como se chama esse tipo de diferença, comum em conciliações bancárias?",
+    "options": [
+      "Cheque não compensado (ou em trânsito)",
+      "Erro de digitação do banco",
+      "Fraude bancária",
+      "Imposto retido na fonte"
+    ],
+    "correctAnswer": "Cheque não compensado (ou em trânsito)",
+    "explanation": "Um cheque não compensado é aquele já registrado na contabilidade da empresa, mas que ainda não foi processado/descontado pelo banco — uma causa clássica e normal de diferença temporária na conciliação.",
+    "pacciTip": "Cheque em trânsito é só uma questão de tempo, piccolo! Vai compensar, só ainda não compensou.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-025",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao conferir o extrato bancário, você encontra uma tarifa de manutenção de conta debitada pelo banco, que ainda não foi lançada na contabilidade da empresa.",
+    "question": "Qual é a ação correta diante dessa tarifa não lançada?",
+    "options": [
+      "Registrar a tarifa como despesa bancária na contabilidade, pra alinhar com o extrato",
+      "Ignorar, já que é um valor pequeno",
+      "Pedir ao banco para estornar a tarifa automaticamente",
+      "Esperar o cliente perceber e avisar o escritório"
+    ],
+    "correctAnswer": "Registrar a tarifa como despesa bancária na contabilidade, pra alinhar com o extrato",
+    "explanation": "Toda movimentação real do extrato que ainda não está na contabilidade precisa ser lançada — tarifas bancárias são despesas reais e devem ser reconhecidas, mesmo sendo valores pequenos.",
+    "pacciTip": "Valor pequeno também é valor, amico! A conciliação não despreza nada, só porque é 'baratinho'.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-026",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "É o fim do mês e você vai fazer a conciliação bancária de um cliente, comparando o extrato do banco com o razão contábil.",
+    "question": "Ordene o processo correto de uma conciliação bancária mensal:",
+    "options": [
+      "Reunir o extrato bancário do período e o razão contábil da conta Caixa/Banco",
+      "Comparar os lançamentos de ambos, identificando os que batem",
+      "Investigar e explicar cada diferença encontrada (tarifas, cheques em trânsito, etc)",
+      "Ajustar a contabilidade para refletir o que realmente aconteceu, se necessário"
+    ],
+    "correctAnswer": [
+      "Reunir o extrato bancário do período e o razão contábil da conta Caixa/Banco",
+      "Comparar os lançamentos de ambos, identificando os que batem",
+      "Investigar e explicar cada diferença encontrada (tarifas, cheques em trânsito, etc)",
+      "Ajustar a contabilidade para refletir o que realmente aconteceu, se necessário"
+    ],
+    "explanation": "Reunir as duas fontes, comparar linha a linha, investigar cada diferença e ajustar o que for necessário — essa é a sequência padrão de qualquer conciliação bancária bem feita.",
+    "pacciTip": "Conciliação boa não deixa diferença sem explicação, piccolo! Toda discrepância tem uma causa a ser achada.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-027",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que um depósito feito pelo cliente no último dia do mês já está registrado na contabilidade, mas ainda não aparece no extrato bancário (que só vai processar no dia seguinte).",
+    "question": "Como se chama esse tipo de diferença temporária na conciliação?",
+    "options": [
+      "Depósito em trânsito",
+      "Cheque sem fundo",
+      "Imposto retido",
+      "Erro de lançamento contábil"
+    ],
+    "correctAnswer": "Depósito em trânsito",
+    "explanation": "Um depósito em trânsito é um valor já reconhecido pela empresa, mas ainda não processado pelo banco — assim como o cheque não compensado, é uma diferença temporária e esperada, não um erro.",
+    "pacciTip": "Depósito em trânsito é dinheiro 'a caminho' de aparecer no extrato, tesoro! Questão de dias, não de erro.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-028",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Depois de investigar todas as diferenças, a conciliação bancária de um cliente ainda apresenta uma diferença de R$ 350 sem explicação aparente.",
+    "question": "Qual é a atitude correta diante de uma diferença não explicada na conciliação?",
+    "options": [
+      "Continuar investigando (revisar lançamentos duplicados, valores trocados) e, se persistir, escalar ao analista responsável",
+      "Ajustar o saldo contábil manualmente pra 'fechar' a diferença sem explicação",
+      "Ignorar, já que é um valor relativamente pequeno",
+      "Lançar a diferença como 'lucro extra' do período"
+    ],
+    "correctAnswer": "Continuar investigando (revisar lançamentos duplicados, valores trocados) e, se persistir, escalar ao analista responsável",
+    "explanation": "Uma diferença sem explicação nunca deve ser simplesmente 'forçada a fechar' — é preciso continuar investigando (lançamento duplicado, valor trocado, erro de digitação) e, se não resolver, pedir ajuda de quem tem mais experiência.",
+    "pacciTip": "Diferença sem explicação é uma pista que ainda não foi seguida até o fim, piccolo! Nunca força o fechamento.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-029",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No manual do escritório, há uma recomendação de que a conciliação bancária de todo cliente seja feita com que frequência, para evitar o acúmulo de diferenças difíceis de rastrear.",
+    "question": "Digite a frequência recomendada (uma palavra) para a conciliação bancária ser feita:",
+    "correctAnswer": "mensal",
+    "explanation": "A conciliação bancária é recomendada mensalmente — fazer com menos frequência acumula diferenças, tornando a investigação muito mais trabalhosa depois.",
+    "pacciTip": "Conciliação deixada pra depois vira bola de neve, tesoro! Mês a mês é o ritmo certo.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-030",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa recebeu um PIX de um cliente, mas o valor que entrou na conta é menor do que o valor da nota fiscal emitida, por causa de uma taxa descontada pelo intermediador de pagamento.",
+    "question": "Como tratar essa diferença entre o valor da nota e o valor efetivamente recebido na conciliação?",
+    "options": [
+      "Registrar a diferença como despesa (taxa de intermediação), mantendo a receita pelo valor total da nota",
+      "Registrar a receita apenas pelo valor líquido recebido, ignorando a taxa",
+      "Ignorar a diferença, já que é pequena",
+      "Pedir ao cliente para pagar a diferença separadamente"
+    ],
+    "correctAnswer": "Registrar a diferença como despesa (taxa de intermediação), mantendo a receita pelo valor total da nota",
+    "explanation": "A receita deve ser reconhecida pelo valor total da operação (da nota fiscal); a taxa cobrada pelo intermediador é uma despesa separada — misturar os dois distorce tanto a receita quanto a despesa real da empresa.",
+    "pacciTip": "Receita é o valor cheio, taxa é despesa à parte, piccolo! Não mistura os dois numa conta só.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-031",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente te pergunta por que, mesmo com o saldo do extrato bancário positivo, o relatório contábil mostra uma situação financeira diferente da que ele imagina.",
+    "question": "Qual é uma explicação possível para o saldo bancário não refletir sozinho a real situação financeira da empresa?",
+    "options": [
+      "Porque o saldo bancário não considera contas a pagar e a receber futuras, nem outros ativos e passivos da empresa",
+      "Porque o extrato bancário sempre está errado",
+      "Porque a contabilidade nunca usa informações do banco",
+      "Porque bancos sempre escondem informações dos clientes"
+    ],
+    "correctAnswer": "Porque o saldo bancário não considera contas a pagar e a receber futuras, nem outros ativos e passivos da empresa",
+    "explanation": "O saldo bancário é só uma peça do quebra-cabeça — a situação financeira completa envolve também contas a pagar, a receber, estoques e outras obrigações, não só o que está 'na conta corrente agora'.",
+    "pacciTip": "Saldo do banco é só uma foto de um ângulo, tesoro! A contabilidade mostra o quadro inteiro.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-032",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Você encontrou, durante a conciliação, uma movimentação bancária estranha, de um valor alto, que não reconhece nenhuma origem para ela.",
+    "question": "Ordene a sequência correta diante de uma movimentação bancária não identificada:",
+    "options": [
+      "Verificar com atenção a descrição e data exata da movimentação no extrato",
+      "Checar se não é um lançamento já feito em outra data/forma (duplicidade)",
+      "Perguntar ao cliente se ele reconhece essa movimentação",
+      "Reportar ao supervisor caso pareça suspeita ou não identificada"
+    ],
+    "correctAnswer": [
+      "Verificar com atenção a descrição e data exata da movimentação no extrato",
+      "Checar se não é um lançamento já feito em outra data/forma (duplicidade)",
+      "Perguntar ao cliente se ele reconhece essa movimentação",
+      "Reportar ao supervisor caso pareça suspeita ou não identificada"
+    ],
+    "explanation": "Investigação cuidadosa antes de alarmar: confere os detalhes, descarta duplicidade, pergunta ao cliente, e só reporta como suspeita se nada disso esclarecer — movimentações não identificadas merecem atenção redobrada.",
+    "pacciTip": "Movimentação estranha não identificada merece atenção total, piccolo! Investiga com calma antes de concluir qualquer coisa.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-033",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente possui duas contas bancárias diferentes (Banco A e Banco B) para a mesma empresa.",
+    "question": "Como a conciliação bancária deve tratar essas duas contas?",
+    "options": [
+      "Cada conta deve ter sua própria conciliação separada, já que são fontes distintas",
+      "As duas contas podem ser conciliadas juntas, somando os extratos",
+      "Só é preciso conciliar a conta com maior movimentação",
+      "Contas bancárias diferentes nunca precisam de conciliação"
+    ],
+    "correctAnswer": "Cada conta deve ter sua própria conciliação separada, já que são fontes distintas",
+    "explanation": "Cada conta bancária representa uma fonte de informação distinta e deve ser conciliada individualmente contra o respectivo razão contábil — misturar contas diferentes dificulta identificar a origem de qualquer diferença.",
+    "pacciTip": "Cada banco, sua própria conciliação, tesoro! Misturar só dificulta achar onde está o problema.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-034",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Na conciliação bancária, você percebe que um pagamento de fornecedor foi lançado duas vezes na contabilidade por engano, mas só saiu uma vez do banco.",
+    "question": "Qual é a ação correta diante dessa duplicidade de lançamento?",
+    "options": [
+      "Estornar o lançamento duplicado na contabilidade, mantendo só o lançamento correto",
+      "Deixar os dois lançamentos, já que 'mais registro não faz mal'",
+      "Pedir ao banco para fazer um segundo pagamento pra 'bater' com os dois lançamentos",
+      "Ignorar, já que o saldo final pode coincidentemente estar certo"
+    ],
+    "correctAnswer": "Estornar o lançamento duplicado na contabilidade, mantendo só o lançamento correto",
+    "explanation": "Lançamento duplicado na contabilidade (sem duplicidade real no banco) deve ser estornado — manter os dois distorce as despesas e o saldo da conta, mesmo que por acaso 'pareça' fechar em algum momento.",
+    "pacciTip": "Duplicidade de lançamento é erro, não 'segurança extra', piccolo! Estorna e segue com só um registro certo.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-035",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um colega mais experiente comenta que, quanto mais organizado estiver o lançamento mensal de despesas e receitas, mais rápida fica a conciliação bancária no fim do mês.",
+    "question": "Por que essa relação entre organização dos lançamentos e velocidade da conciliação faz sentido?",
+    "options": [
+      "Porque com lançamentos já corretos e completos, menos diferenças inesperadas aparecem na hora de comparar com o extrato",
+      "Porque conciliação bancária não tem relação nenhuma com os lançamentos do mês",
+      "Porque quanto mais lançamentos, mais rápida é sempre a conciliação",
+      "Porque a velocidade da conciliação depende só da velocidade da internet"
+    ],
+    "correctAnswer": "Porque com lançamentos já corretos e completos, menos diferenças inesperadas aparecem na hora de comparar com o extrato",
+    "explanation": "Um trabalho bem feito durante o mês (lançamentos corretos e no tempo certo) reduz drasticamente as surpresas na conciliação — ela deixa de ser uma 'caça ao tesouro' e vira só uma conferência rápida.",
+    "pacciTip": "Mês bem lançado é conciliação rápida no fim, tesoro! O trabalho de hoje facilita o de amanhã.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-036",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pagou um boleto de fornecedor, mas esqueceu de te avisar e de mandar o comprovante — você só percebeu o pagamento ao olhar o extrato bancário do mês.",
+    "question": "Qual é o próximo passo correto depois de identificar esse pagamento não avisado?",
+    "options": [
+      "Confirmar com o cliente os detalhes do pagamento (a quem, referente a quê) e então lançar corretamente",
+      "Lançar o valor como 'despesa diversa', sem identificar a origem",
+      "Ignorar o pagamento, já que não foi avisado formalmente",
+      "Esperar o cliente perceber sozinho e te avisar depois"
+    ],
+    "correctAnswer": "Confirmar com o cliente os detalhes do pagamento (a quem, referente a quê) e então lançar corretamente",
+    "explanation": "Mesmo sem aviso prévio, um pagamento real precisa ser lançado — mas antes de registrar, é importante confirmar os detalhes com o cliente pra classificar corretamente, em vez de chutar numa conta genérica.",
+    "pacciTip": "Extrato bancário às vezes avisa antes do próprio cliente, piccolo! Mas sempre confirma antes de lançar.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-037",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "Uma movimentação do extrato que já está lançada na contabilidade, mas que o banco ainda não processou (seja um cheque ou um depósito), é chamada de item 'em' algum lugar específico.",
+    "question": "Complete a expressão: um cheque ou depósito que ainda não foi processado pelo banco está 'em _______':",
+    "correctAnswer": "trânsito",
+    "explanation": "'Em trânsito' é a expressão usada para itens (cheques, depósitos) já reconhecidos pela empresa, mas ainda não processados pelo banco — uma diferença temporária e esperada na conciliação.",
+    "pacciTip": "'Em trânsito' é tipo uma encomenda a caminho, tesoro! Vai chegar, só ainda não chegou.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-038",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao conferir o extrato, você percebe um estorno de uma compra no cartão da empresa, referente a uma compra cancelada pelo fornecedor no mês anterior.",
+    "question": "Como esse estorno deve ser tratado na contabilidade?",
+    "options": [
+      "Registrar a entrada do estorno, revertendo a despesa originalmente lançada",
+      "Ignorar, já que estornos não têm efeito contábil",
+      "Lançar como uma nova receita de vendas",
+      "Somar ao valor da despesa original, dobrando o lançamento"
+    ],
+    "correctAnswer": "Registrar a entrada do estorno, revertendo a despesa originalmente lançada",
+    "explanation": "Um estorno de compra cancelada deve reverter o efeito do lançamento original — a despesa reconhecida antes precisa ser 'desfeita' contabilmente, refletindo que o gasto não se concretizou.",
+    "pacciTip": "Estorno é a contabilidade 'voltando atrás' numa operação que não aconteceu de verdade, piccolo!",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-039",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você está fazendo a conciliação de um cliente que tem uma conta poupança, além da conta corrente, e nota que os rendimentos de juros da poupança não aparecem na contabilidade.",
+    "question": "Como esse rendimento de juros deve ser classificado quando lançado?",
+    "options": [
+      "Receita financeira",
+      "Despesa financeira",
+      "Receita operacional de vendas",
+      "Ativo imobilizado"
+    ],
+    "correctAnswer": "Receita financeira",
+    "explanation": "Rendimentos de aplicações financeiras (como juros de poupança) são classificados como Receita Financeira — o espelho da Despesa Financeira, representando ganhos relacionados ao dinheiro em si, não à operação principal.",
+    "pacciTip": "Dinheiro rendendo juros é receita financeira, tesoro! O contrário dos juros pagos num empréstimo.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-040",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Seu supervisor pede pra você montar uma planilha padrão de conciliação bancária, reutilizável todo mês para qualquer cliente do escritório.",
+    "question": "Qual coluna é essencial nessa planilha padrão de conciliação?",
+    "options": [
+      "Uma coluna de 'diferença' que calcula automaticamente o saldo do extrato menos o saldo contábil",
+      "Uma coluna com o nome de todos os funcionários do cliente",
+      "Uma coluna só com a cor favorita do analista responsável",
+      "Uma coluna com o histórico de todas as reuniões do ano"
+    ],
+    "correctAnswer": "Uma coluna de 'diferença' que calcula automaticamente o saldo do extrato menos o saldo contábil",
+    "explanation": "A coluna de diferença (extrato menos razão) é o coração de uma planilha de conciliação — é ela que revela instantaneamente se e quanto os dois saldos divergem, guiando a investigação.",
+    "pacciTip": "A coluna de diferença é o 'alarme' da planilha, piccolo! Se der zero, conciliação tranquila.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-041",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você está organizando os boletos de fornecedores de um cliente, separando os que já foram pagos dos que ainda estão pendentes.",
+    "question": "Qual é o termo contábil usado para o ato de marcar um título (fatura/boleto) como pago no sistema?",
+    "options": [
+      "Baixa",
+      "Provisão",
+      "Depreciação",
+      "Rateio"
+    ],
+    "correctAnswer": "Baixa",
+    "explanation": "'Dar baixa' num título é o ato de registrar sua liquidação (pagamento ou recebimento), encerrando a pendência daquele documento no controle de contas a pagar/receber.",
+    "pacciTip": "Baixa é tipo um 'check' na lista de tarefas, tesoro! Confirma que aquele título já foi resolvido.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-042",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta como a equipe controla quais faturas de clientes dele ainda não foram pagas, e há quanto tempo estão em aberto.",
+    "question": "Qual ferramenta/relatório é normalmente usado para esse controle de contas a receber em atraso?",
+    "options": [
+      "Relatório de aging (idade) de recebíveis, organizado por faixa de atraso",
+      "Balanço Patrimonial do ano anterior",
+      "Contrato social da empresa",
+      "Planilha de férias dos funcionários"
+    ],
+    "correctAnswer": "Relatório de aging (idade) de recebíveis, organizado por faixa de atraso",
+    "explanation": "O relatório de aging organiza os valores a receber por faixas de atraso (ex: 0-30 dias, 31-60 dias, acima de 90 dias), ajudando a priorizar cobranças e avaliar o risco de inadimplência.",
+    "pacciTip": "Aging é tipo organizar a fila por quem está esperando há mais tempo, piccolo! Prioriza quem está mais atrasado.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-043",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente de uma loja de roupas está com vários clientes dele em atraso há mais de 90 dias, sem sinal de pagamento.",
+    "question": "Como esses valores em atraso prolongado costumam ser chamados?",
+    "options": [
+      "Inadimplência (ou crédito de liquidação duvidosa)",
+      "Receita antecipada",
+      "Despesa financeira",
+      "Capital de giro"
+    ],
+    "correctAnswer": "Inadimplência (ou crédito de liquidação duvidosa)",
+    "explanation": "Inadimplência é o não pagamento de uma obrigação no prazo; quando o atraso é muito prolongado e a cobrança parece improvável, a contabilidade pode classificar como crédito de liquidação duvidosa.",
+    "pacciTip": "Atraso que já virou 'quase certeza de não pagar' tem um nome técnico, tesoro: liquidação duvidosa!",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-044",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Um cliente avisa que um dos clientes dele atrasou o pagamento de uma fatura pela terceira vez seguida.",
+    "question": "Ordene o fluxo típico de acompanhamento de uma fatura em atraso:",
+    "options": [
+      "Identificar a fatura vencida e confirmar a data original de vencimento",
+      "Registrar/atualizar o status de 'em atraso' no controle de contas a receber",
+      "Comunicar o cliente (ou orientar o cliente a cobrar o devedor dele)",
+      "Acompanhar até a efetiva baixa (pagamento) ou escalar como inadimplência"
+    ],
+    "correctAnswer": [
+      "Identificar a fatura vencida e confirmar a data original de vencimento",
+      "Registrar/atualizar o status de 'em atraso' no controle de contas a receber",
+      "Comunicar o cliente (ou orientar o cliente a cobrar o devedor dele)",
+      "Acompanhar até a efetiva baixa (pagamento) ou escalar como inadimplência"
+    ],
+    "explanation": "Identifica o atraso, atualiza o controle, comunica quem precisa agir, e acompanha até resolver — esse ciclo evita que uma fatura atrasada 'se perca' sem acompanhamento.",
+    "pacciTip": "Fatura atrasada sem acompanhamento vira fatura esquecida, piccolo! Segue o fluxo até o fim.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-045",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um restaurante, cliente do escritório, recebe boa parte das vendas por cartão de crédito, mas o dinheiro só cai na conta alguns dias depois da venda.",
+    "question": "Esse prazo entre a venda no cartão e o dinheiro cair na conta é chamado de:",
+    "options": [
+      "Prazo de repasse (ou liquidação) da operadora de cartão",
+      "Inadimplência do cliente final",
+      "Imposto retido na fonte",
+      "Depreciação acelerada"
+    ],
+    "correctAnswer": "Prazo de repasse (ou liquidação) da operadora de cartão",
+    "explanation": "O prazo de repasse é o tempo que a operadora de cartão leva para transferir o valor da venda para a conta do lojista, geralmente alguns dias após a transação.",
+    "pacciTip": "Vendeu no cartão não é o mesmo que já ter o dinheiro na mão, tesoro! Tem um prazo de repasse no meio.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-046",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao conferir o relatório da operadora de cartão de um cliente, você percebe que o valor líquido recebido é menor que o valor total das vendas no cartão naquele mês.",
+    "question": "Qual é a explicação mais provável para essa diferença entre vendas no cartão e valor líquido recebido?",
+    "options": [
+      "A taxa de administração cobrada pela operadora de cartão sobre cada transação",
+      "Um erro de cálculo do cliente ao somar as vendas",
+      "O sistema do escritório está desatualizado",
+      "O cliente vendeu menos do que realmente vendeu"
+    ],
+    "correctAnswer": "A taxa de administração cobrada pela operadora de cartão sobre cada transação",
+    "explanation": "Operadoras de cartão cobram uma taxa (percentual) sobre cada venda — a diferença entre o valor bruto vendido e o valor líquido recebido é justamente essa taxa, que deve ser reconhecida como despesa.",
+    "pacciTip": "Operadora de cartão sempre 'fica com uma fatia', piccolo! É a taxa pelo serviço de intermediar o pagamento.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-047",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No controle de contas a pagar e receber, cada documento (boleto, fatura) tem uma data limite para pagamento ou recebimento, que organiza toda a prioridade do setor financeiro.",
+    "question": "Digite a palavra que descreve essa data limite de um título a pagar ou receber:",
+    "correctAnswer": "vencimento",
+    "explanation": "Vencimento é a data limite estabelecida para o pagamento ou recebimento de um título — a referência central de qualquer controle de contas a pagar e a receber.",
+    "pacciTip": "Vencimento é o 'prazo final' do título, amico! Tudo no financeiro gira em torno dessa data.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-048",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que é importante separar, no controle financeiro, os valores já recebidos dos valores ainda pendentes, mesmo que ambos se refiram ao mesmo mês de vendas.",
+    "question": "Qual é a principal razão para manter essa separação clara entre recebido e pendente?",
+    "options": [
+      "Permite saber exatamente quanto dinheiro está disponível de verdade, diferente do que ainda é só uma expectativa de recebimento",
+      "Não existe razão real, é só uma formalidade sem utilidade",
+      "Serve apenas para fins decorativos no relatório",
+      "A separação só importa para empresas de grande porte"
+    ],
+    "correctAnswer": "Permite saber exatamente quanto dinheiro está disponível de verdade, diferente do que ainda é só uma expectativa de recebimento",
+    "explanation": "Separar recebido de pendente evita que a empresa confunda 'vendas feitas' com 'dinheiro disponível' — uma confusão comum que pode levar a problemas sérios de caixa.",
+    "pacciTip": "Vender não é o mesmo que já ter o dinheiro, piccolo! Essa separação evita sustos no caixa.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-049",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um fornecedor envia um boleto com vencimento para amanhã, mas o sistema do escritório mostra que esse mesmo fornecedor já tem um pagamento registrado para esse mês, de valor idêntico.",
+    "question": "Qual é a atitude correta antes de pagar esse novo boleto?",
+    "options": [
+      "Verificar se não é uma duplicidade (o mesmo boleto enviado duas vezes) antes de efetuar o pagamento",
+      "Pagar os dois boletos, já que 'é melhor prevenir'",
+      "Ignorar o novo boleto, assumindo que já está pago",
+      "Pagar sem verificar, já que o vencimento está próximo"
+    ],
+    "correctAnswer": "Verificar se não é uma duplicidade (o mesmo boleto enviado duas vezes) antes de efetuar o pagamento",
+    "explanation": "Antes de qualquer pagamento, é essencial confirmar que não se trata de uma cobrança duplicada — pagar duas vezes o mesmo boleto gera prejuízo real e difícil de reverter rapidamente.",
+    "pacciTip": "Antes de pagar, sempre confere se já não foi pago, tesoro! Pagamento em dobro é difícil de desfazer.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-050",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente quer saber se vale a pena oferecer desconto para pagamento à vista aos clientes dele, em vez de parcelar tudo.",
+    "question": "Do ponto de vista financeiro, qual é um benefício direto de receber à vista em vez de parcelado?",
+    "options": [
+      "Reduz o risco de inadimplência e melhora o fluxo de caixa imediato da empresa",
+      "Não existe benefício nenhum, à vista e parcelado são sempre iguais",
+      "Só beneficia o cliente final, nunca a empresa vendedora",
+      "Aumenta automaticamente o lucro líquido da empresa"
+    ],
+    "correctAnswer": "Reduz o risco de inadimplência e melhora o fluxo de caixa imediato da empresa",
+    "explanation": "Receber à vista elimina o risco de não receber no futuro (inadimplência) e dá à empresa dinheiro disponível imediatamente, o que pode compensar um eventual desconto oferecido.",
+    "pacciTip": "Dinheiro na mão hoje vale mais que a promessa de dinheiro amanhã, piccolo! Por isso o desconto pode valer a pena.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-051",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Chegou o relatório mensal da operadora de cartão de crédito de um cliente, e você precisa conciliar esse valor com o que entrou de fato na conta bancária.",
+    "question": "Ordene o processo de conciliação de recebíveis de cartão de crédito:",
+    "options": [
+      "Somar o total bruto vendido no cartão no período",
+      "Identificar as taxas e descontos aplicados pela operadora",
+      "Calcular o valor líquido esperado a receber",
+      "Comparar com o valor que efetivamente caiu na conta bancária"
+    ],
+    "correctAnswer": [
+      "Somar o total bruto vendido no cartão no período",
+      "Identificar as taxas e descontos aplicados pela operadora",
+      "Calcular o valor líquido esperado a receber",
+      "Comparar com o valor que efetivamente caiu na conta bancária"
+    ],
+    "explanation": "Primeiro soma o bruto vendido, identifica as taxas descontadas, calcula o líquido esperado, e só então compara com o que realmente entrou — isso detecta qualquer divergência na operadora.",
+    "pacciTip": "Cartão de crédito tem camadas (bruto, taxa, líquido), piccolo! Confere cada uma antes de fechar a conta.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-052",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se deveria aceitar pagamento em cheque pré-datado de um novo comprador, que ele não conhece bem.",
+    "question": "Qual é um risco direto de aceitar cheques pré-datados de clientes pouco conhecidos?",
+    "options": [
+      "O risco de o cheque não ter fundos (ser devolvido) quando for apresentado no banco",
+      "Não existe risco nenhum em aceitar cheques pré-datados",
+      "Cheques pré-datados são sempre garantidos pelo banco emissor",
+      "O único risco é o cheque ficar com a tinta borrada"
+    ],
+    "correctAnswer": "O risco de o cheque não ter fundos (ser devolvido) quando for apresentado no banco",
+    "explanation": "Um cheque pré-datado não tem garantia de pagamento — o risco de devolução por falta de fundos existe até o momento da efetiva compensação, especialmente com clientes pouco conhecidos.",
+    "pacciTip": "Cheque pré-datado é uma promessa, não uma garantia, tesoro! O risco só se resolve quando compensa de verdade.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-053",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No controle financeiro de um cliente, há uma coluna chamada 'status' com valores possíveis como 'Em aberto', 'Pago' e 'Vencido'.",
+    "question": "Por que ter esse campo de status é importante no controle de contas a pagar e receber?",
+    "options": [
+      "Permite visualizar rapidamente a situação de cada título, sem precisar analisar documento por documento",
+      "É só uma exigência estética da planilha, sem utilidade real",
+      "Serve apenas para impressionar o cliente",
+      "Só é necessário em empresas com mais de 1000 funcionários"
+    ],
+    "correctAnswer": "Permite visualizar rapidamente a situação de cada título, sem precisar analisar documento por documento",
+    "explanation": "Um campo de status bem mantido transforma uma lista de títulos numa ferramenta de gestão visual — dá pra saber de relance quantos estão pagos, pendentes ou vencidos, sem reler cada documento.",
+    "pacciTip": "Status bem atualizado é visão rápida da real situação, piccolo! Economiza tempo de análise.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-054",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um fornecedor oferece desconto de 5% se a empresa cliente pagar o boleto 10 dias antes do vencimento original.",
+    "question": "Do ponto de vista financeiro, antecipar esse pagamento para ganhar o desconto pode ser vantajoso quando:",
+    "options": [
+      "A empresa tem caixa disponível e o desconto obtido supera o custo de oportunidade de usar esse dinheiro em outra finalidade",
+      "Nunca vale a pena antecipar pagamento, em nenhuma situação",
+      "Só vale a pena se o fornecedor for parente do dono da empresa",
+      "Sempre vale a pena, independente da situação de caixa da empresa"
+    ],
+    "correctAnswer": "A empresa tem caixa disponível e o desconto obtido supera o custo de oportunidade de usar esse dinheiro em outra finalidade",
+    "explanation": "A decisão de antecipar um pagamento por desconto depende de comparar o ganho do desconto com o que a empresa deixaria de ganhar usando aquele dinheiro de outra forma (ou o risco de ficar sem caixa).",
+    "pacciTip": "Desconto bom só é bom se a empresa tiver caixa sobrando pra aproveitar, tesoro! Não vale travar o caixa por isso.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-055",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de serviços tem um cliente antigo que está devendo há mais de 6 meses, e a empresa decide que provavelmente nunca vai receber esse valor.",
+    "question": "Como a contabilidade costuma reconhecer essa perda praticamente certa de um valor a receber?",
+    "options": [
+      "Como perda com créditos incobráveis (baixa da inadimplência irrecuperável)",
+      "Como uma nova receita, já que o valor 'sobrou' no caixa",
+      "Como Ativo Imobilizado",
+      "Simplesmente removendo o cliente do cadastro, sem nenhum lançamento"
+    ],
+    "correctAnswer": "Como perda com créditos incobráveis (baixa da inadimplência irrecuperável)",
+    "explanation": "Quando um valor a receber se torna praticamente incobrável, a contabilidade reconhece essa perda (créditos incobráveis/liquidação duvidosa), refletindo a realidade de que aquele direito provavelmente não será convertido em dinheiro.",
+    "pacciTip": "Quando a chance de receber vira quase zero, a contabilidade reconhece a perda, piccolo! Não fica fingindo que o dinheiro ainda vem.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-056",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No jargão do escritório, quando um cliente não paga uma dívida no prazo combinado, diz-se que ele está em situação de qual palavra, que também dá nome a essa categoria de risco?",
+    "question": "Digite a palavra que descreve a situação de quem não paga uma dívida no prazo:",
+    "correctAnswer": "inadimplência",
+    "explanation": "Inadimplência é o termo usado para descrever o não cumprimento de uma obrigação de pagamento dentro do prazo combinado — um risco constante no controle de contas a receber.",
+    "pacciTip": "Inadimplência é a palavra mais usada (e mais temida!) no controle de contas a receber, amico!",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-057",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Seu supervisor pede pra você montar um relatório semanal que mostre, de forma resumida, quanto a empresa tem a pagar e a receber nos próximos 30 dias.",
+    "question": "Qual é a principal utilidade desse tipo de relatório para a gestão da empresa?",
+    "options": [
+      "Ajuda a antecipar a necessidade de caixa e evitar surpresas com falta de dinheiro disponível",
+      "Serve só para cumprir uma formalidade sem uso real",
+      "É usado apenas para fins de marketing da empresa",
+      "Só tem utilidade se a empresa for multinacional"
+    ],
+    "correctAnswer": "Ajuda a antecipar a necessidade de caixa e evitar surpresas com falta de dinheiro disponível",
+    "explanation": "Um relatório de previsão de pagamentos e recebimentos (fluxo de caixa projetado) permite à gestão se planejar com antecedência, evitando aperto financeiro de última hora.",
+    "pacciTip": "Ver o futuro próximo do caixa evita sustos, tesoro! Antecipar é sempre melhor que correr atrás depois.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-058",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao organizar o controle de contas a pagar, você percebe que um fornecedor tem o mesmo nome cadastrado de duas formas diferentes no sistema ('Fornecedor ABC' e 'ABC Fornecedor Ltda'), gerando confusão nos relatórios.",
+    "question": "Qual é a melhor prática diante desse cadastro duplicado de fornecedor?",
+    "options": [
+      "Padronizar e unificar o cadastro, evitando que a mesma entidade apareça de formas diferentes",
+      "Manter os dois cadastros, já que mais informação nunca atrapalha",
+      "Excluir o fornecedor do sistema completamente",
+      "Ignorar, já que o nome não afeta os valores financeiros"
+    ],
+    "correctAnswer": "Padronizar e unificar o cadastro, evitando que a mesma entidade apareça de formas diferentes",
+    "explanation": "Cadastros duplicados/inconsistentes de um mesmo fornecedor dificultam relatórios e análises (o sistema 'não sabe' que são a mesma entidade) — padronizar o cadastro é essencial pra dados confiáveis.",
+    "pacciTip": "Fornecedor com nome duplicado é como ter duas gavetas pro mesmo assunto, piccolo! Junta tudo numa só.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-059",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se é melhor pagar todos os fornecedores assim que o boleto chega, ou esperar até a data de vencimento.",
+    "question": "Do ponto de vista de gestão de caixa, qual costuma ser a orientação mais comum?",
+    "options": [
+      "Pagar próximo da data de vencimento (sem atrasar), mantendo o dinheiro disponível na empresa o máximo de tempo possível",
+      "Sempre pagar no mesmo dia em que o boleto chega, independente do vencimento",
+      "Atrasar todos os pagamentos de propósito, sem considerar o vencimento",
+      "A data de pagamento nunca importa para a gestão financeira"
+    ],
+    "correctAnswer": "Pagar próximo da data de vencimento (sem atrasar), mantendo o dinheiro disponível na empresa o máximo de tempo possível",
+    "explanation": "Pagar próximo ao vencimento (sem atrasar e gerar multa/juros) é uma prática comum de gestão de caixa, já que mantém o dinheiro disponível na empresa pelo maior tempo possível dentro do combinado.",
+    "pacciTip": "Pagar no vencimento, nem antes nem depois, é o equilíbrio ideal, tesoro! Nem perde desconto, nem atrasa.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-060",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que um boleto de fornecedor venceu ontem e ainda não foi pago, porque ninguém tinha percebido o prazo.",
+    "question": "Além de providenciar o pagamento o quanto antes, o que mais deve ser verificado nessa situação de atraso?",
+    "options": [
+      "Se há multa e juros de atraso a considerar no valor a ser pago",
+      "Apenas ignorar o atraso, já que é só um dia",
+      "Se o fornecedor já faliu por causa desse atraso",
+      "Nada mais precisa ser verificado além do pagamento"
+    ],
+    "correctAnswer": "Se há multa e juros de atraso a considerar no valor a ser pago",
+    "explanation": "Um pagamento atrasado, mesmo que por um dia, pode gerar multa e juros — é importante verificar o valor atualizado antes de efetuar o pagamento, pra não pagar a menos (ou surpreender o cliente depois).",
+    "pacciTip": "Atraso de pagamento quase sempre tem um custo extra, piccolo! Confere o valor atualizado antes de pagar.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-061",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você recebeu o XML de uma nota fiscal de venda de um cliente e precisa transformar essa informação num lançamento contábil de receita.",
+    "question": "Qual informação da nota fiscal é essencial para o lançamento correto da receita e dos tributos envolvidos?",
+    "options": [
+      "O valor total da operação, os tributos destacados e a data de emissão",
+      "Apenas o nome do motorista que entregou a mercadoria",
+      "A cor da embalagem do produto vendido",
+      "O número de telefone do comprador"
+    ],
+    "correctAnswer": "O valor total da operação, os tributos destacados e a data de emissão",
+    "explanation": "O lançamento contábil de uma venda precisa do valor da operação, dos tributos envolvidos (pra registrar corretamente as obrigações fiscais) e da data, que define a competência do lançamento.",
+    "pacciTip": "Nota fiscal tem tudo que você precisa pra lançar certo, tesoro! Só precisa saber onde olhar.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-062",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa prestou um serviço e, na nota fiscal emitida, há um valor de ISS retido pelo próprio tomador do serviço (quem contratou), que não repassa esse valor à empresa prestadora.",
+    "question": "Como essa retenção de ISS afeta o valor líquido recebido pela empresa prestadora do serviço?",
+    "options": [
+      "O valor líquido recebido é menor, já que o ISS retido é recolhido diretamente pelo tomador ao município",
+      "Não afeta em nada o valor recebido",
+      "O valor recebido sempre aumenta com a retenção",
+      "A retenção de ISS é sempre devolvida integralmente à empresa prestadora"
+    ],
+    "correctAnswer": "O valor líquido recebido é menor, já que o ISS retido é recolhido diretamente pelo tomador ao município",
+    "explanation": "Na retenção na fonte, o tomador do serviço desconta o imposto do pagamento e recolhe diretamente ao fisco — por isso o prestador recebe um valor líquido, menor que o valor total da nota.",
+    "pacciTip": "Imposto retido na fonte é tipo um desconto automático, piccolo! Quem paga já manda a parte do imposto direto pro governo.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-063",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Chegou a folha de pagamento de um cliente, mostrando o salário bruto de um funcionário, os descontos (INSS, IR) e o valor líquido que ele efetivamente recebe.",
+    "question": "Qual é a diferença entre o 'salário bruto' e o 'salário líquido' de um funcionário?",
+    "options": [
+      "Salário bruto é o valor total antes dos descontos; salário líquido é o que o funcionário efetivamente recebe após os descontos",
+      "São exatamente o mesmo valor, com nomes diferentes",
+      "Salário líquido é sempre maior que o salário bruto",
+      "A diferença só existe para funcionários que ganham acima de um certo valor"
+    ],
+    "correctAnswer": "Salário bruto é o valor total antes dos descontos; salário líquido é o que o funcionário efetivamente recebe após os descontos",
+    "explanation": "O salário bruto é o valor contratual total; dele são descontados itens como INSS e Imposto de Renda, resultando no salário líquido, que é o valor que realmente cai na conta do funcionário.",
+    "pacciTip": "Bruto é o 'valor cheio', líquido é o que sobra depois dos descontos, tesoro! A diferença nunca desaparece sozinha.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-064",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Além do salário, a empresa precisa recolher um percentual sobre a folha de pagamento para o Fundo de Garantia do funcionário, depositado mensalmente numa conta vinculada a ele.",
+    "question": "Digite... quer dizer, qual é a sigla desse fundo obrigatório, depositado mensalmente pela empresa?",
+    "options": [
+      "FGTS",
+      "INSS",
+      "IRPF",
+      "ISS"
+    ],
+    "correctAnswer": "FGTS",
+    "explanation": "FGTS = Fundo de Garantia do Tempo de Serviço, um depósito mensal obrigatório feito pela empresa numa conta vinculada ao funcionário, servindo como uma espécie de poupança compulsória.",
+    "pacciTip": "FGTS é o 'guardadinho' que a empresa faz todo mês pro funcionário, piccolo! Obrigatório por lei.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-065",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Chegou a folha de pagamento fechada de um cliente, e você precisa transformar essa informação em lançamentos contábeis do mês.",
+    "question": "Ordene o fluxo de tratamento contábil da folha de pagamento recebida:",
+    "options": [
+      "Conferir o relatório da folha, validando os totais de salários e encargos",
+      "Identificar as contas corretas (Despesa com Salários, FGTS a recolher, INSS a recolher)",
+      "Lançar os valores nas respectivas contas de despesa e passivo",
+      "Guardar o relatório original junto à documentação do mês"
+    ],
+    "correctAnswer": [
+      "Conferir o relatório da folha, validando os totais de salários e encargos",
+      "Identificar as contas corretas (Despesa com Salários, FGTS a recolher, INSS a recolher)",
+      "Lançar os valores nas respectivas contas de despesa e passivo",
+      "Guardar o relatório original junto à documentação do mês"
+    ],
+    "explanation": "Conferir o relatório, classificar corretamente nas contas certas, lançar e arquivar — essa sequência garante que a folha vire um registro contábil completo e rastreável, não só um PDF guardado solto.",
+    "pacciTip": "Folha de pagamento também tem um fluxo certo de lançamento, amico! Não é só 'jogar um valor' numa conta qualquer.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-066",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No fechamento da folha, o salário bruto do funcionário vira Despesa, mas o valor do INSS e FGTS que a empresa deve recolher ainda não foi pago, só reconhecido.",
+    "question": "Enquanto o INSS e o FGTS da folha não forem efetivamente pagos ao governo, onde eles ficam registrados?",
+    "options": [
+      "No Passivo, como obrigações a recolher",
+      "No Ativo, como um bem da empresa",
+      "Como Receita do período",
+      "Em nenhum lugar, só aparecem quando pagos"
+    ],
+    "correctAnswer": "No Passivo, como obrigações a recolher",
+    "explanation": "Encargos sobre a folha (INSS, FGTS) que ainda não foram pagos representam uma obrigação futura da empresa com o governo/funcionário — exatamente a definição de Passivo, até o efetivo recolhimento.",
+    "pacciTip": "Reconheceu mas não pagou ainda? Fica no Passivo esperando, piccolo! Mesma lógica de qualquer outra obrigação.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-067",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, mesmo pagando o salário líquido ao funcionário no quinto dia útil, a empresa registra o custo total (incluindo os encargos) já no mês da competência do trabalho.",
+    "question": "Qual princípio contábil explica esse reconhecimento no mês trabalhado, independente das datas de pagamento dos encargos?",
+    "options": [
+      "Regime de competência",
+      "Regime de caixa",
+      "Princípio da entidade",
+      "Princípio da continuidade"
+    ],
+    "correctAnswer": "Regime de competência",
+    "explanation": "Pelo regime de competência, a despesa com o trabalho realizado é reconhecida no mês em que o funcionário efetivamente trabalhou, independente de quando o salário líquido e os encargos são pagos.",
+    "pacciTip": "Trabalhou no mês, a despesa é desse mês, tesoro! Não importa a data exata de cada pagamento.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-068",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao digitalizar um lote de notas fiscais de serviço de um cliente, você percebe que uma delas tem destacado um valor de 'retenção de IR' sobre o serviço prestado.",
+    "question": "O que significa, na prática, essa retenção de Imposto de Renda destacada na nota?",
+    "options": [
+      "Parte do valor do serviço foi retida pelo tomador e recolhida diretamente à Receita Federal, reduzindo o valor líquido recebido pelo prestador",
+      "A empresa prestadora está isenta de Imposto de Renda esse ano",
+      "O valor retido será devolvido em dobro no mês seguinte",
+      "A retenção não tem nenhuma relação com o valor recebido"
+    ],
+    "correctAnswer": "Parte do valor do serviço foi retida pelo tomador e recolhida diretamente à Receita Federal, reduzindo o valor líquido recebido pelo prestador",
+    "explanation": "Assim como a retenção de ISS, a retenção de IR na fonte significa que o tomador do serviço já recolhe parte do imposto diretamente, entregando ao prestador um valor líquido menor que o total da nota.",
+    "pacciTip": "Toda retenção na fonte segue a mesma lógica, piccolo! O imposto já sai 'descontado' antes de chegar em você.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-069",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "Todo mês, a empresa precisa recolher ao INSS um percentual sobre a folha de pagamento, tanto a parte descontada do funcionário quanto a parte que é obrigação direta da empresa (patronal).",
+    "question": "Digite a sigla do órgão/instituto para o qual são recolhidas as contribuições previdenciárias sobre a folha:",
+    "correctAnswer": "INSS",
+    "explanation": "INSS = Instituto Nacional do Seguro Social, responsável pela previdência social — recebe tanto a contribuição descontada do funcionário quanto a parte patronal (obrigação da empresa).",
+    "pacciTip": "INSS tem duas 'fatias': uma do funcionário, outra da empresa, tesoro! As duas vão pro mesmo lugar.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-070",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, dono de uma pequena gráfica, pergunta por que a folha de pagamento dos funcionários é tão importante para a contabilidade dele, já que ele 'só paga o salário direto no banco'.",
+    "question": "Como você explicaria, de forma simples, por que a folha é mais do que 'só pagar o salário'?",
+    "options": [
+      "Porque a folha gera obrigações fiscais e trabalhistas (INSS, FGTS, férias, 13º) que precisam ser corretamente calculadas, provisionadas e recolhidas, não só o salário líquido",
+      "Porque a folha só serve pra arquivo, sem nenhum impacto real",
+      "Porque a folha é só uma formalidade que pode ser ignorada por pequenas empresas",
+      "Porque pagar o salário e fazer a folha são exatamente a mesma coisa, sem diferença"
+    ],
+    "correctAnswer": "Porque a folha gera obrigações fiscais e trabalhistas (INSS, FGTS, férias, 13º) que precisam ser corretamente calculadas, provisionadas e recolhidas, não só o salário líquido",
+    "explanation": "A folha de pagamento é a base para várias obrigações além do salário líquido — encargos, provisões de férias e 13º, FGTS — tudo isso precisa ser corretamente contabilizado, não só o valor que cai na conta do funcionário.",
+    "pacciTip": "O salário é só a ponta visível do iceberg da folha, piccolo! Tem muito mais obrigação por trás.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-071",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um colega te explica que, mesmo sem o funcionário ter tirado férias ainda, a empresa já reconhece mensalmente uma 'fatia' desse custo futuro na contabilidade.",
+    "question": "Como se chama esse reconhecimento antecipado e gradual de um custo futuro certo, como as férias?",
+    "options": [
+      "Provisão",
+      "Depreciação",
+      "Conciliação",
+      "Retenção"
+    ],
+    "correctAnswer": "Provisão",
+    "explanation": "Provisão é o reconhecimento contábil antecipado de uma obrigação futura praticamente certa (como férias e 13º salário), distribuindo o custo ao longo dos meses em que o direito vai sendo adquirido.",
+    "pacciTip": "Provisão é a contabilidade 'guardando' o custo aos poucos, antes da hora de pagar de verdade, tesoro!",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-072",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se é verdade que a empresa dele já deveria estar 'guardando' uma parte do dinheiro todo mês para pagar o décimo terceiro salário dos funcionários em dezembro.",
+    "question": "Por que provisionar o 13º mês a mês, em vez de reconhecer tudo de uma vez em dezembro, é considerado mais correto?",
+    "options": [
+      "Porque reflete o custo real sendo gerado mês a mês pelo trabalho prestado, em vez de concentrar tudo artificialmente num único mês",
+      "Porque a lei não permite pagar 13º de nenhuma forma",
+      "Porque dezembro é sempre um mês sem nenhuma despesa",
+      "Porque provisionar é apenas uma opção estética, sem fundamento real"
+    ],
+    "correctAnswer": "Porque reflete o custo real sendo gerado mês a mês pelo trabalho prestado, em vez de concentrar tudo artificialmente num único mês",
+    "explanation": "O 13º salário é um direito que vai sendo construído mês a mês de trabalho — provisionar gradualmente reflete melhor a realidade econômica do que 'explodir' o custo todo de uma vez em dezembro.",
+    "pacciTip": "13º não nasce em dezembro, ele é construído o ano inteiro, piccolo! A provisão só reconhece isso com justiça.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-073",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma nota fiscal de compra de mercadoria chegou com destaque de um tributo que a empresa compradora pode usar depois como crédito, abatendo de impostos futuros a pagar.",
+    "question": "Esse direito de usar um valor pago como abatimento futuro é chamado, de forma geral, de:",
+    "options": [
+      "Crédito tributário",
+      "Débito tributário",
+      "Provisão trabalhista",
+      "Depreciação acumulada"
+    ],
+    "correctAnswer": "Crédito tributário",
+    "explanation": "Crédito tributário é o direito que a empresa adquire de abater, em apurações futuras, valores de tributos já pagos em etapas anteriores — um mecanismo comum para evitar a cobrança cumulativa de certos impostos.",
+    "pacciTip": "Crédito tributário é tipo um 'vale-desconto' pra impostos futuros, tesoro! Usa pra abater o que ainda vai pagar.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-074",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você está organizando a documentação fiscal de um cliente para o fechamento do mês, reunindo notas de entrada, notas de saída e a folha de pagamento processada.",
+    "question": "Por que é importante reunir TODOS esses documentos antes de considerar o mês 'fechado' na contabilidade?",
+    "options": [
+      "Porque o fechamento mensal precisa refletir todas as operações reais do período, e documentos faltando geram um resultado incompleto ou incorreto",
+      "Porque é só uma formalidade burocrática, sem efeito no resultado",
+      "Porque documentos de folha nunca afetam o fechamento contábil",
+      "Porque só as notas de saída importam para o fechamento"
+    ],
+    "correctAnswer": "Porque o fechamento mensal precisa refletir todas as operações reais do período, e documentos faltando geram um resultado incompleto ou incorreto",
+    "explanation": "Um fechamento contábil confiável depende de ter todos os documentos do período — faltando algum (seja nota fiscal ou folha), o resultado apurado fica incompleto e pode levar a decisões erradas.",
+    "pacciTip": "Fechamento com documento faltando é como quebra-cabeça com peça perdida, piccolo! A imagem nunca fica completa.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-075",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Chegou o fim do mês e você precisa consolidar as informações fiscais (notas) e de pessoal (folha) de um cliente antes do fechamento contábil geral.",
+    "question": "Ordene o processo de consolidação de documentos fiscais e de folha antes do fechamento:",
+    "options": [
+      "Conferir se todas as notas fiscais do período foram recebidas e lançadas",
+      "Conferir se a folha de pagamento do mês foi processada e lançada",
+      "Verificar se as obrigações (impostos, FGTS, INSS) do período estão corretamente provisionadas",
+      "Validar que não há documento pendente antes de liberar o fechamento do mês"
+    ],
+    "correctAnswer": [
+      "Conferir se todas as notas fiscais do período foram recebidas e lançadas",
+      "Conferir se a folha de pagamento do mês foi processada e lançada",
+      "Verificar se as obrigações (impostos, FGTS, INSS) do período estão corretamente provisionadas",
+      "Validar que não há documento pendente antes de liberar o fechamento do mês"
+    ],
+    "explanation": "Conferir notas, conferir folha, verificar provisões, e só então validar que nada está pendente — essa checagem final evita que o fechamento do mês seja 'liberado' com informação faltando.",
+    "pacciTip": "Antes de fechar o mês, confere tudo igual quem confere a mala antes de viajar, amico! Nada pode ficar pra trás.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-076",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se o escritório pode garantir que ele nunca vai receber nenhuma multa fiscal, já que agora conta com apoio contábil profissional.",
+    "question": "Qual é a resposta mais honesta e profissional para essa pergunta?",
+    "options": [
+      "Explicar que o escritório trabalha para minimizar riscos e cumprir prazos, mas que multas podem ocorrer por fatores fora do controle total (ex: atraso do próprio cliente em enviar documentos)",
+      "Garantir 100% que nunca haverá nenhuma multa, sem ressalva nenhuma",
+      "Dizer que multas são sempre culpa exclusiva do escritório",
+      "Evitar responder a pergunta de qualquer forma"
+    ],
+    "correctAnswer": "Explicar que o escritório trabalha para minimizar riscos e cumprir prazos, mas que multas podem ocorrer por fatores fora do controle total (ex: atraso do próprio cliente em enviar documentos)",
+    "explanation": "Uma resposta honesta reconhece que o escritório reduz riscos e cuida dos prazos, mas não pode garantir 100% de ausência de multas, já que depende também da colaboração do cliente (envio de documentos a tempo, por exemplo).",
+    "pacciTip": "Honestidade com o cliente é sempre o melhor caminho, tesoro! Promessa impossível de cumprir só traz problema depois.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-077",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma pequena clínica, cliente do escritório, tem só dois funcionários na folha, mas ainda assim precisa cumprir diversas obrigações trabalhistas e previdenciárias mensalmente.",
+    "question": "Por que mesmo uma empresa pequena, com poucos funcionários, tem obrigações relacionadas à folha de pagamento?",
+    "options": [
+      "Porque as obrigações trabalhistas e previdenciárias valem para qualquer empresa com funcionário registrado, independente do tamanho",
+      "Porque só empresas grandes precisam seguir a legislação trabalhista",
+      "Porque empresas pequenas estão automaticamente isentas de FGTS e INSS",
+      "Porque com menos de 5 funcionários não existe obrigação nenhuma"
+    ],
+    "correctAnswer": "Porque as obrigações trabalhistas e previdenciárias valem para qualquer empresa com funcionário registrado, independente do tamanho",
+    "explanation": "A legislação trabalhista e previdenciária se aplica a qualquer empresa com funcionário registrado, não importa o porte — mesmo com poucos funcionários, FGTS, INSS e demais obrigações continuam valendo.",
+    "pacciTip": "Tamanho da empresa não isenta ninguém das obrigações trabalhistas, piccolo! A regra vale pra todo mundo.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-078",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao revisar o lançamento de uma nota fiscal de compra, você percebe que o valor do frete foi incluído separadamente, além do valor da mercadoria.",
+    "question": "Como o valor do frete, quando destacado numa compra, costuma ser tratado contabilmente?",
+    "options": [
+      "Normalmente é incorporado ao custo de aquisição do bem/mercadoria comprada",
+      "É sempre ignorado, nunca lançado em nenhuma conta",
+      "É sempre lançado como receita da empresa compradora",
+      "Nunca pode ser somado ao valor da mercadoria"
+    ],
+    "correctAnswer": "Normalmente é incorporado ao custo de aquisição do bem/mercadoria comprada",
+    "explanation": "O frete pago para trazer a mercadoria/bem até a empresa normalmente compõe o custo total de aquisição — faz parte do que foi necessário gastar para ter aquele item disponível para uso ou venda.",
+    "pacciTip": "Frete pra trazer a mercadoria é parte do custo dela, tesoro! Não é uma despesa separada e solta.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-079",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente novo, que nunca teve funcionários registrados antes, está prestes a contratar seu primeiro colaborador e pergunta ao escritório o que precisa providenciar.",
+    "question": "Qual é um dos primeiros passos que o escritório de contabilidade orienta ao preparar a folha de um novo funcionário?",
+    "options": [
+      "Coletar os dados cadastrais do funcionário e formalizar o registro conforme a legislação trabalhista",
+      "Pedir pro funcionário mesmo calcular seu próprio salário líquido",
+      "Ignorar qualquer formalização até o funcionário completar um ano de empresa",
+      "Registrar o funcionário só depois do primeiro pagamento de salário"
+    ],
+    "correctAnswer": "Coletar os dados cadastrais do funcionário e formalizar o registro conforme a legislação trabalhista",
+    "explanation": "Antes de processar qualquer folha, é necessário formalizar o registro do funcionário (dados cadastrais, admissão) seguindo a legislação trabalhista — a base de tudo que vem depois no processamento da folha.",
+    "pacciTip": "Todo funcionário começa com um bom cadastro, piccolo! Sem isso, a folha nem consegue nascer direito.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-080",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao final do mês, o setor de pessoal informa ao contábil o total de salários, encargos e provisões da folha, para que sejam lançados corretamente.",
+    "question": "Por que a comunicação entre o setor Pessoal (DP) e o setor Contábil precisa ser bem alinhada dentro do escritório?",
+    "options": [
+      "Porque os valores calculados na folha pelo DP precisam ser corretamente refletidos nos lançamentos contábeis, sem erro de transcrição ou atraso",
+      "Porque os dois setores trabalham de forma totalmente independente, sem necessidade de comunicação",
+      "Porque o setor contábil recalcula a folha do zero, ignorando o trabalho do DP",
+      "Porque a comunicação entre setores nunca afeta a qualidade do trabalho final"
+    ],
+    "correctAnswer": "Porque os valores calculados na folha pelo DP precisam ser corretamente refletidos nos lançamentos contábeis, sem erro de transcrição ou atraso",
+    "explanation": "O setor de Pessoal calcula a folha (valores, encargos); o setor Contábil precisa lançar exatamente esses valores — qualquer falha de comunicação entre eles gera lançamentos errados ou atrasados.",
+    "pacciTip": "DP e Contábil são como dois dançarinos no mesmo ritmo, tesoro! Um passo errado de comunicação derruba os dois.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-081",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se os valores de vale-transporte e vale-refeição dados aos funcionários também entram na contabilidade como despesa.",
+    "question": "Qual é a resposta correta sobre benefícios como vale-transporte e vale-refeição?",
+    "options": [
+      "Sim, são despesas da empresa relacionadas a pessoal, mesmo não sendo parte do salário em si",
+      "Não, benefícios nunca são registrados contabilmente",
+      "Só são registrados se o funcionário pedir expressamente por escrito",
+      "Só contam como despesa se forem pagos em dinheiro, nunca em vale/cartão"
+    ],
+    "correctAnswer": "Sim, são despesas da empresa relacionadas a pessoal, mesmo não sendo parte do salário em si",
+    "explanation": "Benefícios como vale-transporte e vale-refeição são custos reais relacionados aos funcionários e devem ser reconhecidos como despesa de pessoal, mesmo não compondo o salário contratual diretamente.",
+    "pacciTip": "Benefício custa dinheiro de verdade pra empresa, piccolo! Por isso também vira despesa na contabilidade.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-082",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No treinamento sobre documentos fiscais e folha, o analista resume: 'Documento fiscal mostra o que a empresa compra e vende; a folha mostra o custo de quem trabalha pra empresa. Juntos, formam a base de quase todo o fechamento mensal'.",
+    "question": "Digite a palavra que descreve o processo mensal de consolidar todas essas informações para apurar o resultado do período:",
+    "correctAnswer": "fechamento",
+    "explanation": "Fechamento é o processo mensal de consolidar todas as informações (documentos fiscais, folha, conciliações) para apurar corretamente o resultado e a posição patrimonial da empresa naquele período.",
+    "pacciTip": "Fechamento é a 'reunião final' de tudo que aconteceu no mês, tesoro! Documentos fiscais e folha são peças essenciais dele.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-083",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, recém-chegado ao escritório, trouxe uma caixa com notas fiscais de compra e venda do último trimestre, completamente misturadas e sem nenhuma folha de pagamento junto.",
+    "question": "Depois de organizar as notas fiscais, qual é a próxima informação essencial a buscar com esse cliente antes de fechar os três meses?",
+    "options": [
+      "Os dados da folha de pagamento do período, já que faltam para completar o fechamento",
+      "Nenhuma informação a mais é necessária além das notas fiscais",
+      "Apenas o extrato bancário, ignorando a folha",
+      "O contrato social da empresa, sem necessidade da folha"
+    ],
+    "correctAnswer": "Os dados da folha de pagamento do período, já que faltam para completar o fechamento",
+    "explanation": "Sem a folha de pagamento, o fechamento fica incompleto — documentos fiscais mostram compras/vendas, mas o custo com pessoal é outra peça essencial que precisa ser buscada antes de fechar qualquer período.",
+    "pacciTip": "Nota fiscal sem folha é só metade da história do mês, piccolo! Sempre busca as duas partes.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-084",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um estagiário pergunta por que, além do salário e dos encargos, a empresa também precisa se preocupar com o controle de ponto dos funcionários.",
+    "question": "Qual é a relação entre o controle de ponto e a folha de pagamento?",
+    "options": [
+      "O controle de ponto registra a jornada efetivamente trabalhada, servindo de base para cálculos como horas extras e faltas na folha",
+      "O controle de ponto não tem nenhuma relação com a folha de pagamento",
+      "O controle de ponto só serve para fins de segurança do prédio",
+      "O controle de ponto substitui completamente a necessidade de processar a folha"
+    ],
+    "correctAnswer": "O controle de ponto registra a jornada efetivamente trabalhada, servindo de base para cálculos como horas extras e faltas na folha",
+    "explanation": "O controle de ponto é a fonte de informação sobre jornada efetivamente cumprida — horas extras, atrasos e faltas registrados ali impactam diretamente os cálculos feitos na folha de pagamento.",
+    "pacciTip": "Ponto registrado é a 'matéria-prima' de boa parte do cálculo da folha, tesoro! Sem ele, fica tudo baseado em achismo.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-085",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Você está ajudando a organizar o fechamento mensal completo de um cliente, reunindo tudo que foi trabalhado ao longo do mês.",
+    "question": "Ordene a sequência lógica de um fechamento mensal completo, do início ao fim:",
+    "options": [
+      "Lançamento de todos os documentos fiscais e de folha do período",
+      "Conciliação bancária do mês",
+      "Conferência geral dos lançamentos e saldos das contas",
+      "Geração dos relatórios/demonstrações finais do período"
+    ],
+    "correctAnswer": [
+      "Lançamento de todos os documentos fiscais e de folha do período",
+      "Conciliação bancária do mês",
+      "Conferência geral dos lançamentos e saldos das contas",
+      "Geração dos relatórios/demonstrações finais do período"
+    ],
+    "explanation": "Primeiro lança tudo (fiscal e folha), concilia o banco, confere o conjunto, e só então gera os relatórios finais — essa é a sequência lógica de um fechamento mensal bem feito, nada pulado.",
+    "pacciTip": "Fechamento de verdade segue uma ordem, piccolo! Pular etapa é abrir brecha pra erro passar despercebido.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-086",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente comenta que, desde que começou a trabalhar com o escritório, sente mais segurança porque sabe exatamente quais documentos precisa enviar e quando.",
+    "question": "Qual boa prática do escritório provavelmente gerou essa sensação de segurança e previsibilidade para o cliente?",
+    "options": [
+      "Ter um fluxo claro e comunicado sobre quais documentos são necessários e os prazos de envio",
+      "Nunca pedir documento nenhum ao cliente",
+      "Pedir documentos de forma aleatória, sem nenhum padrão",
+      "Deixar o cliente adivinhar sozinho o que precisa enviar"
+    ],
+    "correctAnswer": "Ter um fluxo claro e comunicado sobre quais documentos são necessários e os prazos de envio",
+    "explanation": "Comunicação clara sobre o que é esperado (quais documentos, quais prazos) reduz a ansiedade do cliente e melhora a qualidade e pontualidade do trabalho do escritório — um ganha-ganha.",
+    "pacciTip": "Cliente que sabe o que esperar colabora muito mais, tesoro! Clareza constrói confiança.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-087",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um auxiliar comenta que, para ele, o mês só está 'realmente fechado' quando os relatórios (balancete, DRE) saem batendo com tudo que foi conferido durante o processo.",
+    "question": "Por que a consistência entre os relatórios finais e o trabalho de conferência do mês é tão valorizada?",
+    "options": [
+      "Porque mostra que o processo foi seguido corretamente, sem atalhos que possam gerar erro no resultado final",
+      "Porque relatórios inconsistentes nunca causam problema real",
+      "Porque a consistência só importa para fins estéticos",
+      "Porque relatórios sempre batem automaticamente, sem depender do trabalho feito"
+    ],
+    "correctAnswer": "Porque mostra que o processo foi seguido corretamente, sem atalhos que possam gerar erro no resultado final",
+    "explanation": "Quando os relatórios finais refletem fielmente o trabalho de lançamento e conferência feito ao longo do mês, isso confirma que o processo foi seguido com cuidado — relatórios 'batendo' são sinal de um fechamento bem feito.",
+    "pacciTip": "Relatório bonito não serve de nada se o processo por trás foi mal feito, piccolo! A consistência é o que realmente importa.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-088",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao final do treinamento de auxiliar, o analista resume que o trabalho da área de 'Lançamentos' se conecta diretamente com 'Plano de Contas', 'Conciliação' e 'Documentos Fiscais e Folha' — tudo trabalhando junto para um mesmo objetivo.",
+    "question": "Qual é esse objetivo final comum a todas essas frentes de trabalho do auxiliar contábil?",
+    "options": [
+      "Produzir uma contabilidade fiel à realidade da empresa, que sirva de base confiável para relatórios e decisões",
+      "Preencher o máximo de planilhas possível, independente da utilidade",
+      "Cumprir tarefas isoladas, sem nenhuma conexão entre elas",
+      "Evitar qualquer contato com documentos fiscais ou bancários"
+    ],
+    "correctAnswer": "Produzir uma contabilidade fiel à realidade da empresa, que sirva de base confiável para relatórios e decisões",
+    "explanation": "Lançamentos corretos, plano de contas bem organizado, conciliação em dia e documentos fiscais/folha bem tratados — tudo isso converge para o mesmo objetivo: uma contabilidade que reflita a realidade e sirva de base confiável para decisões.",
+    "pacciTip": "Cada peça do trabalho do auxiliar é parte de um quadro maior, tesoro! Juntas, constroem uma contabilidade de confiança.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-089",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma microempresa de prestação de serviços pagou uma multa de trânsito do carro usado pelo sócio, mas pediu para lançar como 'despesa de combustível' pra não 'aparecer' no relatório.",
+    "question": "Qual é a atitude correta do auxiliar diante desse pedido de lançamento incorreto?",
+    "options": [
+      "Explicar que o lançamento deve refletir a real natureza da despesa e encaminhar a situação ao responsável, sem fazer a classificação solicitada",
+      "Atender ao pedido do cliente, já que é só um valor pequeno",
+      "Lançar como combustível sem questionar, para não desagradar o cliente",
+      "Ignorar a multa completamente, sem lançar em nenhuma conta"
+    ],
+    "correctAnswer": "Explicar que o lançamento deve refletir a real natureza da despesa e encaminhar a situação ao responsável, sem fazer a classificação solicitada",
+    "explanation": "Classificar uma despesa de forma incorreta, mesmo a pedido do cliente, fere a fidelidade da contabilidade — o correto é explicar a importância da classificação real e escalar ao responsável se o cliente insistir.",
+    "pacciTip": "Lançamento não é 'o que o cliente quer parecer', é o que realmente aconteceu, piccolo! Fidelidade sempre em primeiro lugar.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-090",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um colega comenta que, antes de lançar qualquer despesa nova, ele sempre se pergunta: 'essa despesa é recorrente (todo mês) ou é algo pontual/extraordinário?'",
+    "question": "Por que essa distinção entre despesa recorrente e pontual é útil na hora de analisar os resultados da empresa?",
+    "options": [
+      "Porque ajuda a entender se um aumento de despesa é uma tendência que vai continuar ou um evento isolado que não deve se repetir",
+      "Porque não existe nenhuma diferença prática entre os dois tipos",
+      "Porque despesas pontuais nunca precisam ser lançadas",
+      "Porque só despesas recorrentes afetam o resultado da empresa"
+    ],
+    "correctAnswer": "Porque ajuda a entender se um aumento de despesa é uma tendência que vai continuar ou um evento isolado que não deve se repetir",
+    "explanation": "Entender se uma despesa é recorrente (padrão mensal) ou pontual (evento isolado) ajuda a interpretar corretamente o resultado — evita, por exemplo, que um gestor se assuste com uma despesa extraordinária achando que ela vai se repetir todo mês.",
+    "pacciTip": "Despesa pontual é um 'evento', despesa recorrente é 'o padrão', tesoro! Saber diferenciar ajuda muito na análise.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-091",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que um cliente, ao preencher a planilha de despesas, sempre classifica tudo na mesma conta genérica chamada 'Despesas Diversas', mesmo tendo gastos bem diferentes entre si.",
+    "question": "Por que esse hábito de usar sempre uma conta genérica prejudica a qualidade da informação contábil?",
+    "options": [
+      "Porque impede uma análise detalhada de onde o dinheiro está realmente sendo gasto, misturando tudo numa só categoria",
+      "Porque contas genéricas são sempre proibidas por lei",
+      "Porque isso não causa nenhum prejuízo real à análise",
+      "Porque 'Despesas Diversas' é sempre a classificação mais correta possível"
+    ],
+    "correctAnswer": "Porque impede uma análise detalhada de onde o dinheiro está realmente sendo gasto, misturando tudo numa só categoria",
+    "explanation": "Usar sempre uma conta genérica 'esconde' a real composição das despesas — dificulta saber, por exemplo, se o gasto com material superou o esperado, porque tudo está misturado numa única categoria vaga.",
+    "pacciTip": "Conta genérica demais é como guardar tudo numa gaveta bagunçada, piccolo! Depois ninguém acha nada específico.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-092",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um auxiliar novo pergunta por que, ao abrir o plano de contas de diferentes clientes do escritório, ele percebe uma estrutura parecida de grupos principais, mesmo em empresas de ramos bem diferentes.",
+    "question": "Por que os grandes grupos do plano de contas (Ativo, Passivo, PL, Receita, Despesa) costumam se repetir, mesmo entre empresas de ramos diferentes?",
+    "options": [
+      "Porque esses grupos representam categorias contábeis universais, aplicáveis a qualquer tipo de negócio",
+      "Porque é só uma coincidência sem explicação",
+      "Porque todas as empresas são legalmente obrigadas a ter o ramo idêntico",
+      "Porque esses grupos só existem em empresas de serviços"
+    ],
+    "correctAnswer": "Porque esses grupos representam categorias contábeis universais, aplicáveis a qualquer tipo de negócio",
+    "explanation": "Ativo, Passivo, Patrimônio Líquido, Receita e Despesa são categorias contábeis fundamentais e universais — o que muda entre ramos de negócio são as contas específicas dentro de cada grupo, não a estrutura básica.",
+    "pacciTip": "A 'casa' (os grandes grupos) é sempre parecida, tesoro! O que muda é a 'decoração' (as contas específicas) de cada ramo.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-093",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Durante a conciliação, você percebe que o saldo da conta bancária no sistema contábil está positivo, mas o extrato real do banco mostra um saldo negativo (cheque especial usado).",
+    "question": "O que essa diferença pode sinalizar, além de uma simples diferença temporária?",
+    "options": [
+      "Pode indicar que algum lançamento de saída não foi registrado na contabilidade, merecendo investigação mais cuidadosa",
+      "Sempre significa que o banco cometeu um erro",
+      "Nunca precisa ser investigado, já que saldo negativo é normal",
+      "Significa automaticamente que houve fraude"
+    ],
+    "correctAnswer": "Pode indicar que algum lançamento de saída não foi registrado na contabilidade, merecendo investigação mais cuidadosa",
+    "explanation": "Uma diferença grande e na direção oposta ao esperado (contabilidade positiva, banco negativo) é um sinal de alerta — pode haver uma saída de dinheiro não lançada, que precisa ser investigada com atenção redobrada.",
+    "pacciTip": "Diferença grande merece atenção redobrada, piccolo! Pode ser só atraso, mas também pode ser algo não lançado.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-094",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, dono de uma pequena distribuidora, está preocupado porque vários clientes dele atrasaram o pagamento no mesmo mês, afetando o caixa da empresa.",
+    "question": "Qual é uma boa orientação prática para reduzir o risco de inadimplência em vendas futuras?",
+    "options": [
+      "Avaliar critérios de concessão de crédito antes de vender a prazo para novos clientes, e acompanhar de perto os prazos de pagamento",
+      "Parar completamente de vender a prazo para qualquer cliente, sempre",
+      "Ignorar o risco, já que inadimplência nunca pode ser reduzida",
+      "Aumentar os preços para todos os clientes, sem relação com o risco de crédito"
+    ],
+    "correctAnswer": "Avaliar critérios de concessão de crédito antes de vender a prazo para novos clientes, e acompanhar de perto os prazos de pagamento",
+    "explanation": "Avaliar o risco antes de conceder prazo (histórico do cliente, valor da venda) e acompanhar de perto os vencimentos são práticas que ajudam a reduzir — embora nunca eliminar completamente — o risco de inadimplência.",
+    "pacciTip": "Prevenir é sempre melhor que remediar, tesoro! Avaliar antes de vender a prazo evita muita dor de cabeça depois.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-095",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de pequeno porte, cliente do escritório, contratou seu primeiro estagiário e quer saber se precisa recolher FGTS e INSS sobre a bolsa-estágio dele.",
+    "question": "Qual é a situação típica do contrato de estágio em relação a encargos trabalhistas como FGTS e INSS?",
+    "options": [
+      "Contrato de estágio regular (dentro da Lei do Estágio) normalmente não gera vínculo empregatício nem os mesmos encargos de um funcionário CLT",
+      "Estágio sempre gera os mesmos encargos de um funcionário CLT comum",
+      "Estagiário nunca pode receber nenhuma bolsa-auxílio",
+      "FGTS é sempre obrigatório para qualquer tipo de estágio"
+    ],
+    "correctAnswer": "Contrato de estágio regular (dentro da Lei do Estágio) normalmente não gera vínculo empregatício nem os mesmos encargos de um funcionário CLT",
+    "explanation": "O estágio, quando segue corretamente a Lei do Estágio, tem natureza diferente do vínculo empregatício CLT, com regras próprias — normalmente não gera os mesmos encargos (FGTS, INSS) de um contrato de trabalho comum.",
+    "pacciTip": "Estágio tem regras próprias, diferentes da CLT, piccolo! Por isso os encargos também são tratados de forma diferente.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-096",
+    "level": "cont_auxiliar",
+    "type": "ordering",
+    "scenario": "Você está treinando um colega mais novo sobre como decidir, na prática, em qual grupo (Ativo, Passivo, Receita ou Despesa) lançar uma operação nova que ele nunca viu antes.",
+    "question": "Ordene o raciocínio prático que você ensinaria a esse colega:",
+    "options": [
+      "Perguntar: essa operação aumenta algo que a empresa possui, ou uma obrigação que ela tem?",
+      "Se for um bem/direito, verificar se é patrimonial (Ativo); se for obrigação, verificar se é Passivo",
+      "Se não for nem bem nem obrigação, verificar se é um ganho (Receita) ou um gasto (Despesa) do período",
+      "Confirmar a classificação final com alguém mais experiente antes de lançar, em caso de dúvida"
+    ],
+    "correctAnswer": [
+      "Perguntar: essa operação aumenta algo que a empresa possui, ou uma obrigação que ela tem?",
+      "Se for um bem/direito, verificar se é patrimonial (Ativo); se for obrigação, verificar se é Passivo",
+      "Se não for nem bem nem obrigação, verificar se é um ganho (Receita) ou um gasto (Despesa) do período",
+      "Confirmar a classificação final com alguém mais experiente antes de lançar, em caso de dúvida"
+    ],
+    "explanation": "Esse raciocínio passo a passo — bem/obrigação? patrimonial ou resultado? confirma com alguém experiente — é uma forma prática de ensinar um colega novo a classificar operações desconhecidas com segurança.",
+    "pacciTip": "Ensinar o raciocínio é melhor que decorar casos isolados, tesoro! Assim o colega aprende a pensar sozinho depois.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-097",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao revisar o controle de contas a pagar de um cliente, você percebe vários títulos marcados como 'pago' sem nenhum comprovante anexado no sistema.",
+    "question": "Por que isso é considerado um problema de controle, mesmo que os pagamentos tenham realmente sido feitos?",
+    "options": [
+      "Porque sem o comprovante anexado, fica difícil auditar ou confirmar posteriormente que o pagamento realmente ocorreu como registrado",
+      "Porque não é um problema real, já que o título já está marcado como pago",
+      "Porque comprovantes nunca são necessários depois da baixa",
+      "Porque o sistema sempre gera o comprovante automaticamente, sem necessidade de anexar"
+    ],
+    "correctAnswer": "Porque sem o comprovante anexado, fica difícil auditar ou confirmar posteriormente que o pagamento realmente ocorreu como registrado",
+    "explanation": "Marcar como 'pago' sem o comprovante correspondente enfraquece o controle — numa auditoria ou conferência futura, não há como comprovar facilmente que a baixa reflete a realidade.",
+    "pacciTip": "Baixa sem comprovante é afirmação sem prova, piccolo! Sempre anexa o documento que sustenta o pagamento.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-098",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, mesmo pagando corretamente os salários todo mês, ele ainda precisa se preocupar com 'provisão de férias' separadamente.",
+    "question": "Qual é a melhor forma de explicar essa diferença entre 'pagar o salário' e 'provisionar férias'?",
+    "options": [
+      "O salário é o custo do trabalho do mês; a provisão de férias reconhece, aos poucos, um direito futuro do funcionário que ainda não foi pago",
+      "Provisão de férias e pagamento de salário são exatamente a mesma coisa",
+      "Provisão de férias só existe para empresas com mais de 100 funcionários",
+      "Provisionar férias significa que o funcionário já tirou as férias naquele mês"
+    ],
+    "correctAnswer": "O salário é o custo do trabalho do mês; a provisão de férias reconhece, aos poucos, um direito futuro do funcionário que ainda não foi pago",
+    "explanation": "O salário remunera o trabalho do mês corrente; a provisão de férias é o reconhecimento gradual de um direito que o funcionário está acumulando, mas que só será efetivamente pago quando ele de fato tirar férias.",
+    "pacciTip": "Salário é 'o agora', provisão de férias é 'o que está sendo construído pro futuro', tesoro! Duas coisas diferentes, igualmente importantes.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-099",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Você percebe que, num mesmo cliente, as despesas administrativas aumentaram muito de um mês para o outro, sem nenhuma explicação óbvia à primeira vista.",
+    "question": "Qual é a atitude mais produtiva do auxiliar diante dessa variação inesperada, antes de simplesmente lançar tudo normalmente?",
+    "options": [
+      "Investigar a composição da variação (quais contas específicas aumentaram) e, se necessário, confirmar com o cliente ou o analista",
+      "Ignorar a variação, já que lançamentos sempre devem ser feitos sem questionamento",
+      "Reduzir artificialmente o valor lançado pra 'suavizar' a variação",
+      "Lançar tudo numa conta só, pra esconder qual despesa específica variou"
+    ],
+    "correctAnswer": "Investigar a composição da variação (quais contas específicas aumentaram) e, se necessário, confirmar com o cliente ou o analista",
+    "explanation": "Uma variação inesperada merece curiosidade profissional — investigar a composição e confirmar com quem tem mais contexto ajuda a garantir que o lançamento reflete a realidade, não um erro passando despercebido.",
+    "pacciTip": "Número estranho é sempre uma pista, piccolo! Vale a pena investigar antes de só aceitar e seguir em frente.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-100",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No fim do treinamento de Auxiliar Contábil, o analista resume que o profissional dessa função já não é mais só quem 'segue instruções', mas também quem começa a questionar e entender o 'porquê' por trás de cada lançamento.",
+    "question": "Qual é a principal evolução esperada de um Auxiliar Contábil em relação ao Estagiário?",
+    "options": [
+      "Maior autonomia na execução de lançamentos e maior entendimento do raciocínio contábil por trás de cada operação",
+      "Fazer exatamente as mesmas tarefas do estagiário, sem nenhuma diferença",
+      "Deixar de precisar seguir qualquer orientação do supervisor",
+      "Focar exclusivamente em tarefas administrativas, sem nenhum lançamento contábil"
+    ],
+    "correctAnswer": "Maior autonomia na execução de lançamentos e maior entendimento do raciocínio contábil por trás de cada operação",
+    "explanation": "A evolução de Estagiário para Auxiliar envolve ganhar mais autonomia na execução prática (lançamentos, conciliações, controle de contas) e um entendimento mais profundo do raciocínio contábil, não só seguir instruções.",
+    "pacciTip": "Auxiliar já começa a entender o 'porquê', não só o 'como', tesoro! Esse é o próximo degrau da sua jornada.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-101",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, dono de uma oficina mecânica, pergunta por que o escritório pediu para ele separar as peças compradas para revenda das peças usadas internamente na manutenção dos próprios equipamentos da oficina.",
+    "question": "Por que essa separação é relevante para a contabilidade da oficina?",
+    "options": [
+      "Porque peças para revenda são Estoque (Ativo), enquanto peças usadas internamente tendem a ser Despesa (manutenção) — naturezas contábeis diferentes",
+      "Porque não existe diferença contábil nenhuma entre os dois casos",
+      "Porque peças para revenda nunca entram na contabilidade",
+      "Porque peças usadas internamente sempre viram Receita"
+    ],
+    "correctAnswer": "Porque peças para revenda são Estoque (Ativo), enquanto peças usadas internamente tendem a ser Despesa (manutenção) — naturezas contábeis diferentes",
+    "explanation": "A mesma peça física pode ter tratamento contábil diferente dependendo da destinação: pra vender, é Estoque (Ativo); pra uso interno/manutenção, normalmente é Despesa — a finalidade muda a classificação.",
+    "pacciTip": "A mesma peça pode ser Ativo ou Despesa, dependendo de pra onde ela vai, piccolo! A finalidade é que decide.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-102",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Durante a conciliação, você percebe uma transferência entre duas contas do MESMO cliente (de uma conta corrente para a conta poupança dele), registrada como se fosse uma despesa.",
+    "question": "Por que essa transferência entre contas do mesmo titular NÃO deveria ser lançada como despesa?",
+    "options": [
+      "Porque o dinheiro continua sendo da empresa, só mudou de 'onde' está guardado — não houve gasto nem redução de patrimônio",
+      "Porque transferências entre contas nunca podem ser registradas de nenhuma forma",
+      "Porque toda movimentação bancária é sempre uma despesa",
+      "Porque só contas poupança podem receber lançamentos contábeis"
+    ],
+    "correctAnswer": "Porque o dinheiro continua sendo da empresa, só mudou de 'onde' está guardado — não houve gasto nem redução de patrimônio",
+    "explanation": "Uma transferência entre contas do mesmo titular não representa uma despesa real — é só uma movimentação interna de Ativo (de uma conta bancária para outra), sem redução do patrimônio da empresa.",
+    "pacciTip": "Trocar de bolso não é gastar, tesoro! O dinheiro continua seu, só mudou de lugar.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-103",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se vale a pena negociar com um cliente inadimplente, oferecendo parcelar a dívida antiga em vez de insistir no pagamento integral à vista.",
+    "question": "Qual é um possível benefício de negociar (mesmo com desconto ou parcelamento) uma dívida antiga em atraso?",
+    "options": [
+      "Aumenta a chance de recuperar pelo menos parte do valor, em vez de correr o risco de nunca receber nada",
+      "Negociar sempre piora a situação financeira da empresa credora",
+      "Parcelamento de dívida antiga é sempre proibido por lei",
+      "Não existe nenhum benefício possível em negociar dívidas atrasadas"
+    ],
+    "correctAnswer": "Aumenta a chance de recuperar pelo menos parte do valor, em vez de correr o risco de nunca receber nada",
+    "explanation": "Negociar uma dívida antiga (com desconto ou parcelamento) pode ser mais vantajoso do que insistir no valor total e correr o risco de nunca receber nada — 'parte do valor' é melhor que 'nada do valor'.",
+    "pacciTip": "Receber uma parte é sempre melhor que não receber nada, piccolo! Negociação às vezes é o caminho mais esperto.",
+    "topic": "contas_pagar_receber"
+  },
+  {
+    "id": "CONT-AUX-104",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "No resumo final do treinamento de Auxiliar, o analista pede para você completar a frase: 'Toda vez que eu classifico uma conta, eu penso primeiro se ela é patrimonial ou de _______'.",
+    "question": "Complete a frase, pensando na segunda grande categoria de contas contábeis (Receitas e Despesas):",
+    "correctAnswer": "resultado",
+    "explanation": "As duas grandes categorias de classificação contábil são: contas patrimoniais (Ativo, Passivo, PL) e contas de resultado (Receitas, Despesas) — essa é a primeira pergunta que todo profissional faz ao classificar qualquer lançamento.",
+    "pacciTip": "Patrimonial ou resultado: essa pergunta nunca sai da sua cabeça na contabilidade, tesoro! Decora ela bem.",
+    "topic": "plano_de_contas"
+  },
+  {
+    "id": "CONT-AUX-105",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um colega comenta que, para ele, a parte mais difícil do trabalho de Auxiliar não é o cálculo em si, mas sim manter a disciplina de documentar e organizar tudo direito, todos os dias.",
+    "question": "Por que a disciplina de documentação diária é tão valorizada no trabalho contábil, mesmo sendo uma tarefa aparentemente simples?",
+    "options": [
+      "Porque pequenas falhas de organização acumuladas ao longo do mês se tornam grandes problemas na hora do fechamento",
+      "Porque documentação não tem nenhuma relação com a qualidade do trabalho final",
+      "Porque só importa documentar no último dia do mês",
+      "Porque a disciplina de documentação é só uma preferência pessoal, sem impacto real"
+    ],
+    "correctAnswer": "Porque pequenas falhas de organização acumuladas ao longo do mês se tornam grandes problemas na hora do fechamento",
+    "explanation": "Documentar e organizar diariamente evita que pequenos deslizes se acumulem — um mês bem documentado dia a dia se transforma num fechamento tranquilo; um mês desorganizado vira uma corrida contra o tempo no fim.",
+    "pacciTip": "Disciplina todo dia é o segredo de um fechamento sem sufoco, piccolo! Poupa muito estresse lá no fim do mês.",
+    "topic": "lancamentos_praticos"
+  },
+  {
+    "id": "CONT-AUX-106",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa de consultoria, cliente do escritório, pediu demissão de um colaborador no meio do mês e precisa calcular as verbas rescisórias dele.",
+    "question": "Verbas rescisórias (como saldo de salário, férias proporcionais, aviso prévio) representam, para a empresa, um tipo de:",
+    "options": [
+      "Despesa/obrigação de pessoal, decorrente do encerramento do vínculo empregatício",
+      "Receita extraordinária do período",
+      "Ativo Imobilizado",
+      "Capital social adicional"
+    ],
+    "correctAnswer": "Despesa/obrigação de pessoal, decorrente do encerramento do vínculo empregatício",
+    "explanation": "As verbas rescisórias são direitos do funcionário que se tornam uma obrigação de pagamento da empresa no momento do desligamento, classificadas como despesa/obrigação de pessoal, assim como salários e demais encargos.",
+    "pacciTip": "Desligamento também gera obrigação, tesoro! A rescisão é só mais um tipo de custo de pessoal, só que concentrado no fim do vínculo.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-107",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Ao final de uma conciliação bancária bem-sucedida, o saldo do extrato e o saldo contábil ficaram exatamente iguais, sem nenhuma diferença pendente.",
+    "question": "O que esse resultado (diferença igual a zero) indica sobre a qualidade do trabalho realizado no mês?",
+    "options": [
+      "Que os lançamentos do período foram feitos de forma completa e correta, refletindo fielmente a movimentação bancária real",
+      "Que a conciliação não precisava ter sido feita, já que o resultado é zero",
+      "Que houve algum erro no processo, já que diferença zero é incomum",
+      "Que o cliente não teve nenhuma movimentação bancária no mês"
+    ],
+    "correctAnswer": "Que os lançamentos do período foram feitos de forma completa e correta, refletindo fielmente a movimentação bancária real",
+    "explanation": "Uma conciliação sem diferença pendente é o resultado desejado — sinaliza que todos os lançamentos do período foram feitos corretamente e de forma completa, sem nada esquecido ou duplicado.",
+    "pacciTip": "Diferença zero na conciliação é o 'objetivo' de todo esse trabalho, piccolo! Sinal de que tudo foi bem feito.",
+    "topic": "conciliacao_bancaria"
+  },
+  {
+    "id": "CONT-AUX-108",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do Nível de Auxiliar Contábil, o analista pergunta qual conceito foi o 'fio condutor' entre lançamentos, plano de contas, conciliação, contas a pagar/receber e documentos fiscais/folha.",
+    "question": "Qual conceito atravessa todas essas áreas, garantindo que a contabilidade reflita a realidade da empresa?",
+    "options": [
+      "A fidelidade e a precisão da informação registrada, sempre baseada em documentos e critérios corretos",
+      "A velocidade de digitação dos lançamentos, acima de qualquer outro critério",
+      "A quantidade de contas criadas no plano de contas",
+      "O volume de e-mails trocados com o cliente"
+    ],
+    "correctAnswer": "A fidelidade e a precisão da informação registrada, sempre baseada em documentos e critérios corretos",
+    "explanation": "Em todas as frentes do trabalho de Auxiliar — lançamentos, classificação, conciliação, controle financeiro, documentos — o fio condutor é sempre a fidelidade da informação: registrar a realidade com precisão, baseado em documentos e critérios consistentes.",
+    "pacciTip": "Fidelidade é a palavra-chave de tudo que você aprendeu nesse nível, tesoro! Leva ela pro próximo degrau da carreira.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-109",
+    "level": "cont_auxiliar",
+    "type": "multiple_choice",
+    "scenario": "Um cliente elogia o trabalho do escritório, dizendo que 'nunca mais precisou se preocupar' com prazos e documentos desde que contratou o serviço.",
+    "question": "Esse tipo de feedback do cliente reflete, principalmente, qual qualidade do trabalho da equipe?",
+    "options": [
+      "Confiabilidade e consistência na execução do trabalho contábil ao longo do tempo",
+      "Apenas sorte, sem relação com o trabalho realizado",
+      "O fato de o cliente nunca mais precisar enviar nenhum documento",
+      "Um desconto financeiro oferecido pelo escritório"
+    ],
+    "correctAnswer": "Confiabilidade e consistência na execução do trabalho contábil ao longo do tempo",
+    "explanation": "Quando um cliente sente que 'pode relaxar' em relação às obrigações contábeis, isso normalmente reflete confiabilidade e consistência do escritório — exatamente o resultado que todo o cuidado técnico (lançamentos, conciliação, prazos) constrói ao longo do tempo.",
+    "pacciTip": "Cliente tranquilo é o maior elogio que existe pro seu trabalho, piccolo! Confiança se constrói com consistência, mês após mês.",
+    "topic": "documentos_fiscais_folha"
+  },
+  {
+    "id": "CONT-AUX-110",
+    "level": "cont_auxiliar",
+    "type": "text_input",
+    "scenario": "Para fechar o Nível de Auxiliar Contábil, o analista faz uma última pergunta de resumo: 'Qual processo mensal junta documentos fiscais, folha, conciliação bancária e conferência de saldos, resultando nos relatórios finais do período?'",
+    "question": "Digite a palavra (já vista neste nível) que nomeia esse processo mensal consolidado:",
+    "correctAnswer": "fechamento",
+    "explanation": "Fechamento é o processo mensal que consolida tudo — documentos fiscais, folha, conciliação bancária, conferência de saldos — resultando nos relatórios finais que mostram a real situação da empresa naquele período.",
+    "pacciTip": "Fechamento bem feito é a prova de que você dominou tudo desse nível, tesoro! Parabéns por chegar até aqui!",
+    "topic": "documentos_fiscais_folha"
+  }
+]

@@ -75,10 +75,11 @@ const COURSES_CONTENT = [
   },
   {
     courseId: 'contabilidade',
-    // Só o Nível 1 (piloto) por enquanto — Auxiliar/Assistente/Analista/
-    // Especialista entram aqui conforme forem gerados e aprovados.
+    // Níveis 1-2 aprovados. Assistente/Analista/Especialista entram aqui
+    // conforme forem gerados e aprovados (um nível por vez).
     levels: [
       { id: 'cont_estagiario', title: 'Estagiário Contábil', xpReward: 20, lessonCount: 18, file: 'contabilidade_estagiario.json' },
+      { id: 'cont_auxiliar', title: 'Auxiliar Contábil', xpReward: 25, lessonCount: 22, file: 'contabilidade_auxiliar.json' },
     ],
   },
 ];
