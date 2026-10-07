@@ -97,17 +97,26 @@ function LessonRow({ lesson, onStart, isHighlighted, highlightRef }) {
   );
 }
 
-function ModuleCard({ module, onStartLesson, highlightLessonId, highlightRef }) {
+// Card recolhido de curso, usado só na lista de seleção (HomeScreen) — não
+// mostra lições, só identifica o curso. Ver CourseScreen para a trilha aberta.
+function CourseCard({ module, onSelect, isContinue }) {
   const Icon = MODULE_ICONS[module.icon] ?? BookOpen;
   const colorClasses = MODULE_COLOR_CLASSES[module.color] ?? 'bg-slate-100 text-slate-600';
 
   return (
-    <div
-      className={`rounded-3xl border-2 p-5 ${
-        module.locked ? 'border-slate-100 bg-slate-50 opacity-70' : 'border-slate-200 bg-white'
+    <button
+      type="button"
+      disabled={module.locked}
+      onClick={onSelect}
+      className={`w-full rounded-3xl border-2 p-5 text-left transition-colors active:scale-[0.99] disabled:cursor-not-allowed disabled:active:scale-100 ${
+        module.locked
+          ? 'border-slate-100 bg-slate-50 opacity-70'
+          : isContinue
+          ? 'border-emerald-400 bg-emerald-50 ring-4 ring-emerald-200'
+          : 'border-slate-200 bg-white hover:border-emerald-300'
       }`}
     >
-      <div className="mb-3 flex items-start gap-3">
+      <div className="flex items-start gap-3">
         <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${colorClasses}`}>
           <Icon className="h-6 w-6" />
         </div>
@@ -118,28 +127,69 @@ function ModuleCard({ module, onStartLesson, highlightLessonId, highlightRef }) 
           </h3>
           <p className="text-xs font-medium text-slate-400">{module.description}</p>
         </div>
+        {isContinue && (
+          <span className="shrink-0 rounded-full bg-emerald-500 px-2 py-1 text-[10px] font-extrabold uppercase tracking-wide text-white">
+            Continuar
+          </span>
+        )}
       </div>
 
-      {!module.locked && (
-        <>
-          <div className="mb-3 h-2 overflow-hidden rounded-full bg-slate-100">
-            <div className="h-full rounded-full bg-emerald-400" style={{ width: `${module.progress}%` }} />
-          </div>
-          <div className="space-y-2">
-            {module.lessons.map((lesson) => (
-              <LessonRow
-                key={lesson.id}
-                lesson={lesson}
-                onStart={(lessonId) => onStartLesson(module.id, lessonId)}
-                isHighlighted={lesson.id === highlightLessonId}
-                highlightRef={highlightRef}
-              />
-            ))}
-          </div>
-        </>
+      {!module.locked ? (
+        <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
+          <div className="h-full rounded-full bg-emerald-400" style={{ width: `${module.progress}%` }} />
+        </div>
+      ) : (
+        <p className="mt-3 text-xs font-bold text-slate-300">Disponível em breve</p>
       )}
+    </button>
+  );
+}
 
-      {module.locked && <p className="text-xs font-bold text-slate-300">Disponível em breve</p>}
+// Trilha aberta de um curso (lista de lições) — tela própria, acessada ao
+// tocar num CourseCard na Home. Mesmo padrão visual de LeaderboardScreen/
+// AdminDashboardScreen: botão "Voltar" + conteúdo.
+function CourseScreen({ module, onBack, onStartLesson, highlightLessonId, highlightRef }) {
+  const Icon = MODULE_ICONS[module.icon] ?? BookOpen;
+  const colorClasses = MODULE_COLOR_CLASSES[module.color] ?? 'bg-slate-100 text-slate-600';
+
+  return (
+    <div className="pb-24">
+      <div className="mx-auto max-w-md px-4 pt-4 pb-6 sm:max-w-2xl">
+        <button
+          type="button"
+          onClick={onBack}
+          className="flex min-h-[2.75rem] items-center gap-1 text-sm font-bold text-slate-400 hover:text-slate-600"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Voltar
+        </button>
+
+        <div className="mb-4 mt-4 flex items-start gap-3">
+          <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ${colorClasses}`}>
+            <Icon className="h-6 w-6" />
+          </div>
+          <div className="flex-1">
+            <h2 className="text-lg font-extrabold text-slate-800">{module.title}</h2>
+            <p className="text-xs font-medium text-slate-400">{module.description}</p>
+          </div>
+        </div>
+
+        <div className="mb-4 h-2 overflow-hidden rounded-full bg-slate-100">
+          <div className="h-full rounded-full bg-emerald-400" style={{ width: `${module.progress}%` }} />
+        </div>
+
+        <div className="space-y-2">
+          {module.lessons.map((lesson) => (
+            <LessonRow
+              key={lesson.id}
+              lesson={lesson}
+              onStart={(lessonId) => onStartLesson(module.id, lessonId)}
+              isHighlighted={lesson.id === highlightLessonId}
+              highlightRef={highlightRef}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
@@ -166,29 +216,24 @@ function LegendModeBanner({ onStartDailyReview }) {
   );
 }
 
-function HomeScreen({ onStartLesson, onStartDailyReview, highlightLessonId, highlightRef }) {
+function HomeScreen({ onSelectCourse, onStartDailyReview, continueCourseId }) {
   const { modules, isModuleMastered } = useGame();
 
   return (
     <div className="mx-auto max-w-md px-4 py-6 pb-24 sm:max-w-2xl">
-      <PacciMascot
-        mood="happy"
-        size="md"
-        message="Ciao! Pronto para dominar a Reforma Tributária comigo? Bora treinar!"
-      />
+      <PacciMascot mood="happy" size="md" message="Ciao! Escolha uma trilha para continuar treinando comigo!" />
       <h1 className="mb-1 mt-6 text-xl font-extrabold text-slate-800">Trilhas de treinamento</h1>
-      <p className="mb-6 text-sm text-slate-400">Escolha uma lição para continuar sua jornada.</p>
+      <p className="mb-6 text-sm text-slate-400">Escolha um curso para ver as lições.</p>
 
       {isModuleMastered && <LegendModeBanner onStartDailyReview={onStartDailyReview} />}
 
       <div className="space-y-4">
         {modules.map((module) => (
-          <ModuleCard
+          <CourseCard
             key={module.id}
             module={module}
-            onStartLesson={onStartLesson}
-            highlightLessonId={highlightLessonId}
-            highlightRef={highlightRef}
+            onSelect={() => onSelectCourse(module.id)}
+            isContinue={module.id === continueCourseId}
           />
         ))}
       </div>
@@ -247,7 +292,9 @@ function BottomNav({ view, onNavigate, isManager }) {
       <div className="mx-auto flex max-w-md justify-around py-1 sm:max-w-2xl">
         {items.map((item) => {
           const Icon = item.icon;
-          const isActive = view === item.id;
+          // 'course' (trilha aberta) conta como "Início" pro destaque do nav —
+          // é uma sub-tela da lista de cursos, não uma aba própria.
+          const isActive = view === item.id || (item.id === 'home' && view === 'course');
           return (
             <button
               key={item.id}
@@ -267,25 +314,33 @@ function BottomNav({ view, onNavigate, isManager }) {
   );
 }
 
-// Acha a próxima lição não concluída e destravada, na ordem dos módulos —
-// é "onde o usuário parou". Usada pra destacar/rolar até ela na Home ao
-// entrar no app (ver efeito de auto-destaque em AppShell); a navegação
-// manual pela Home continua funcionando normalmente depois disso.
+// Acha a próxima lição não concluída e destravada DENTRO de um curso só —
+// usada tanto por findContinueLesson (abaixo) quanto pra recalcular o
+// destaque dentro da CourseScreen depois de concluir/sair de uma lição.
+function findContinueLessonInModule(module) {
+  if (!module || module.locked) return null;
+  for (const lesson of module.lessons) {
+    if (!lesson.locked && !lesson.completed) return lesson.id;
+  }
+  return null;
+}
+
+// Acha "onde o usuário parou" entre TODOS os cursos — qual curso e qual
+// lição. Usada só pra decidir qual CourseCard ganha o selo "Continuar" na
+// Home; abrir a lição em si continua exigindo que o usuário toque no curso
+// (ver handleSelectCourse em AppShell — ninguém pula a tela de escolha).
 function findContinueLesson(modules) {
   for (const module of modules) {
-    if (module.locked) continue;
-    for (const lesson of module.lessons) {
-      if (!lesson.locked && !lesson.completed) {
-        return { moduleId: module.id, lessonId: lesson.id };
-      }
-    }
+    const lessonId = findContinueLessonInModule(module);
+    if (lessonId) return { moduleId: module.id, lessonId };
   }
   return null;
 }
 
 function AppShell() {
-  // 'home' | 'quiz' | 'leaderboard' | 'admin'
+  // 'home' (lista de cursos) | 'course' (trilha de um curso) | 'quiz' | 'leaderboard' | 'admin'
   const [view, setView] = useState('home');
+  const [selectedCourseId, setSelectedCourseId] = useState(null);
   const {
     isAuthenticated,
     isManager,
@@ -294,6 +349,7 @@ function AppShell() {
     startDailyReview,
     exitLesson,
     modules,
+    moduleId: activeLessonCourseId, // curso da lição em andamento (state.moduleId) — só não-nulo durante o quiz
     refreshNotifications,
     user,
     updateProfile,
@@ -315,36 +371,38 @@ function AppShell() {
     updateProfile({ lastSeenChangelogVersion: CURRENT_CHANGELOG_VERSION });
   };
 
-  // Toda vez que a Home é aberta (não só no login), checa de novo se surgiu
-  // alguma notificação nova ("Sua sugestão foi aplicada!") — a sessão do
-  // Supabase Auth persiste por dias, então quem fica logado sem nunca
-  // deslogar só veria o aviso ao voltar pra Home, não só ao entrar no app.
+  // Toda vez que volta pra lista de cursos OU pra trilha de um curso (não só
+  // no login), checa de novo se surgiu notificação nova ("Sua sugestão foi
+  // aplicada!") — a sessão do Supabase Auth persiste por dias, então quem
+  // fica logado sem nunca deslogar só veria o aviso ao sair da lição, não só
+  // ao entrar no app. Sair de uma lição agora pode cair direto em 'course'
+  // (ver handleExitQuiz), não só em 'home', então os dois contam.
   useEffect(() => {
-    if (isAuthenticated && view === 'home') {
+    if (isAuthenticated && (view === 'home' || view === 'course')) {
       refreshNotifications();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated, view]);
 
-  // Ao entrar no app (login, cadastro ou sessão restaurada), fica na Home mas
-  // já destaca e rola até o card da lição onde o usuário parou, em vez de
-  // pular direto pro exercício. Dispara só uma vez por sessão autenticada — o
-  // ref garante isso mesmo que `modules` mude depois (ex.: ao concluir uma
-  // lição), e é resetado quando desloga, pra disparar de novo no próximo login.
+  // Ao entrar no app (login, cadastro ou sessão restaurada), descobre onde o
+  // usuário parou — qual curso e qual lição — pra marcar o selo "Continuar"
+  // no CourseCard certo na Home. Não pula direto pro curso/lição: o usuário
+  // sempre escolhe o curso primeiro (ver handleSelectCourse). Dispara só uma
+  // vez por sessão autenticada — o ref garante isso mesmo que `modules` mude
+  // depois (ex.: ao concluir uma lição), e é resetado quando desloga, pra
+  // disparar de novo no próximo login.
+  const [continueTarget, setContinueTarget] = useState(null);
   const [highlightLessonId, setHighlightLessonId] = useState(null);
   const hasAutoContinuedRef = useRef(false);
   useEffect(() => {
     if (!isAuthenticated) {
       hasAutoContinuedRef.current = false;
+      setContinueTarget(null);
       return;
     }
     if (hasAutoContinuedRef.current) return;
     hasAutoContinuedRef.current = true;
-
-    const target = findContinueLesson(modules);
-    if (target) {
-      setHighlightLessonId(target.lessonId);
-    }
+    setContinueTarget(findContinueLesson(modules));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated]);
 
@@ -367,6 +425,15 @@ function AppShell() {
     return <AuthModal />;
   }
 
+  // Usuário tocou num CourseCard na Home: abre a trilha daquele curso. Se for
+  // justamente o curso com "onde eu parei", já chega com a lição certa
+  // destacada/rolada; senão abre sem nenhum destaque.
+  const handleSelectCourse = (courseId) => {
+    setSelectedCourseId(courseId);
+    setHighlightLessonId(continueTarget?.moduleId === courseId ? continueTarget.lessonId : null);
+    setView('course');
+  };
+
   const handleStartLesson = (moduleId, lessonId) => {
     setHighlightLessonId(null);
     startLesson(moduleId, lessonId);
@@ -379,16 +446,29 @@ function AppShell() {
   };
 
   const handleExitQuiz = () => {
+    const exitedCourseId = activeLessonCourseId; // precisa ser lido ANTES de exitLesson() zerar state.moduleId
     exitLesson();
-    setView('home');
-    // Recalcula o destaque/scroll pra próxima lição — sem isso, voltar da
-    // lição (concluída ou abandonada) jogava a Home sempre pro topo, sem
-    // focar onde o usuário realmente está agora. `modules` já reflete o
-    // estado pós-conclusão nesse ponto (a lição terminou/desbloqueou a
-    // próxima ANTES do usuário clicar em "Continuar"/"Sair").
-    const target = findContinueLesson(modules);
-    setHighlightLessonId(target ? target.lessonId : null);
+
+    // `modules` já reflete o estado pós-conclusão nesse ponto (a lição
+    // terminou/desbloqueou a próxima ANTES do usuário clicar em
+    // "Continuar"/"Sair"), então recalcular aqui pega o destaque certo tanto
+    // pro selo da Home quanto pra trilha que vamos reabrir a seguir.
+    setContinueTarget(findContinueLesson(modules));
+
+    if (!exitedCourseId) {
+      setView('home');
+      setHighlightLessonId(null);
+      return;
+    }
+    // Volta direto pra trilha do curso que a lição pertencia, não pra lista
+    // de cursos — sair de uma lição não deveria forçar escolher o curso de novo.
+    setSelectedCourseId(exitedCourseId);
+    setView('course');
+    const course = modules.find((m) => m.id === exitedCourseId);
+    setHighlightLessonId(findContinueLessonInModule(course));
   };
+
+  const selectedCourse = modules.find((m) => m.id === selectedCourseId) ?? null;
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -398,8 +478,16 @@ function AppShell() {
 
       {view === 'home' && (
         <HomeScreen
-          onStartLesson={handleStartLesson}
+          onSelectCourse={handleSelectCourse}
           onStartDailyReview={handleStartDailyReview}
+          continueCourseId={continueTarget?.moduleId ?? null}
+        />
+      )}
+      {view === 'course' && selectedCourse && (
+        <CourseScreen
+          module={selectedCourse}
+          onBack={() => setView('home')}
+          onStartLesson={handleStartLesson}
           highlightLessonId={highlightLessonId}
           highlightRef={highlightRef}
         />

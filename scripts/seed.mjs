@@ -250,9 +250,25 @@ async function seedContent() {
       totalQuestions += questionRows.length;
       console.log(`  [${courseId}] ${level.title}: ${lessons.length} lições, ${questionRows.length} questões.`);
     }
+
+    // Bumpa content_version sempre que o curso é re-semeado, mesmo que nada
+    // tenha mudado de fato: o cache local (IndexedDB, ver src/lib/contentCache.js)
+    // só invalida por carimbo de versão, nunca por TTL — sem isso, quem já
+    // abriu uma lição deste curso antes (ex.: o master testando o nível
+    // anterior) continua preso ao bundle antigo pra sempre, mesmo depois de
+    // reimportar/re-seedar o curso com lições novas.
+    await bumpContentVersion(courseId);
   }
 
   console.log(`  Total: ${totalLessons} lições, ${totalQuestions} questões.`);
+}
+
+async function bumpContentVersion(courseId) {
+  const { data, error } = await supabase.from('courses').select('content_version').eq('id', courseId).single();
+  if (error) throw new Error(`Falha ao ler content_version de ${courseId}: ${error.message}`);
+  const next = (data?.content_version ?? 1) + 1;
+  const { error: updateError } = await supabase.from('courses').update({ content_version: next }).eq('id', courseId);
+  if (updateError) throw new Error(`Falha ao atualizar content_version de ${courseId}: ${updateError.message}`);
 }
 
 // ---------------------------------------------------------------------------
