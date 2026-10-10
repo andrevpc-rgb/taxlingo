@@ -314,32 +314,6 @@ export async function adminUpsertCourse(course) {
   return mapCourseRow(data);
 }
 
-// Painel "Acesso por Empresa" (master): lista/concede/revoga o grant de
-// curso×empresa (allow-list pura, ver company_course_access no
-// schema.sql). Escrita direta via supabase-js, protegida pela policy
-// company_course_access_write_master (RLS), já existente desde a Fase 1.
-export async function fetchCourseAccessGrants() {
-  const { data, error } = await supabase.from('company_course_access').select('company_id, course_id');
-  if (error) throw error;
-  return data;
-}
-
-export async function grantCourseAccess({ companyId, courseId }) {
-  const { error } = await supabase
-    .from('company_course_access')
-    .upsert({ company_id: companyId, course_id: courseId }, { onConflict: 'company_id,course_id' });
-  if (error) throw error;
-}
-
-export async function revokeCourseAccess({ companyId, courseId }) {
-  const { error } = await supabase
-    .from('company_course_access')
-    .delete()
-    .eq('company_id', companyId)
-    .eq('course_id', courseId);
-  if (error) throw error;
-}
-
 // Lições de um curso, SEM as questões (linhas pequenas) — permite montar
 // "Continuar de onde parei"/applyProgressToModules sem abrir o curso.
 export async function fetchLessonsForCourse(courseId) {

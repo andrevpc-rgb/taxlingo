@@ -14,7 +14,6 @@ import { isSupabaseConfigured } from '../lib/supabase.js';
 import ManageUsersPanel from './ManageUsersPanel';
 import ReportedQuestionsPanel from './ReportedQuestionsPanel';
 import CourseMetadataPanel from './CourseMetadataPanel';
-import CourseAccessPanel from './CourseAccessPanel';
 import ImportCoursePanel from './ImportCoursePanel';
 
 function ResultCard({ result }) {
@@ -406,9 +405,6 @@ export default function MasterContingencyPanel() {
           </div>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             <CourseMetadataPanel />
-            <CourseAccessPanel />
-          </div>
-          <div className="mt-4 grid gap-4">
             <ImportCoursePanel />
           </div>
         </>

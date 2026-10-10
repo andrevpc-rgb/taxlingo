@@ -109,7 +109,8 @@ export default function CourseMetadataPanel() {
         Metadados do Curso
       </p>
       <p className="mb-3 text-[11px] text-slate-400">
-        Cadastre um curso aqui antes de liberar acesso por empresa ou importar conteúdo pra ele.
+        Cadastre um curso aqui antes de importar conteúdo pra ele. Assim que marcado "Ativo", fica visível pra
+        qualquer usuário autenticado — não existe liberação por empresa.
       </p>
 
       {listError && (
@@ -234,8 +235,8 @@ export default function CourseMetadataPanel() {
           </label>
         </div>
         <p className="text-[10px] text-slate-400">
-          Curso inativo aparece pra todo mundo como "Disponível em breve" (nenhuma lição fica acessível). Mesmo
-          ativo, uma empresa só enxerga o curso se tiver acesso liberado no painel ao lado.
+          Curso inativo aparece pra todo mundo como "Disponível em breve" (nenhuma lição fica acessível). Assim que
+          marcado como ativo, fica disponível pra qualquer usuário autenticado, de qualquer empresa.
         </p>
 
         {error && (
