@@ -112,8 +112,11 @@ create table if not exists public.courses (
   banner_url text,
   is_active boolean not null default false,
   content_version integer not null default 1, -- sobe a cada importação (ver admin_replace_course_content) — carimbo que o cache local (IndexedDB) usa pra saber se precisa rebaixar o curso
-  order_index integer not null default 0
+  order_index integer not null default 0,
+  auto_grant boolean not null default false -- toda empresa NOVA ganha acesso automático a este curso na criação (ver grant_auto_courses_to_new_company) — reservado pro curso "carro-chefe" incluído em todo plano (reforma-tributaria), nunca pra cursos novos/opcionais, que continuam exigindo liberação manual no painel "Acesso por Empresa"
 );
+
+alter table public.courses add column if not exists auto_grant boolean not null default false;
 
 do $$
 begin
@@ -198,11 +201,43 @@ comment on table public.company_course_access is 'Allow-list de curso por empres
 
 create index if not exists company_course_access_course_id_idx on public.company_course_access (course_id);
 
+update public.courses set auto_grant = true where id = 'reforma-tributaria';
+
+-- Backfill pra toda empresa que já existe (cobre tanto a migração original
+-- quanto qualquer empresa criada DEPOIS da Fase 1 mas ANTES do trigger
+-- abaixo existir — foi exatamente essa lacuna que deixou empresas reais
+-- criadas nesse intervalo sem acesso a NENHUM curso, nem o já homologado).
+-- Idempotente: seguro de rodar de novo a qualquer momento.
 insert into public.company_course_access (company_id, course_id)
-select c.id, 'reforma-tributaria'
+select c.id, courses.id
 from public.companies c
-where exists (select 1 from public.courses where id = 'reforma-tributaria')
+cross join public.courses
+where courses.auto_grant = true
 on conflict (company_id, course_id) do nothing;
+
+-- Dali pra frente: toda empresa NOVA ganha automaticamente acesso aos
+-- cursos marcados auto_grant=true (hoje só reforma-tributaria) assim que é
+-- criada — sem isso, cada caminho de criação de empresa (admin-provision,
+-- create-corporate-lead, asaas-webhook, nitrus-webhook, public-register)
+-- precisaria lembrar de inserir essa linha manualmente, e era exatamente
+-- esse "lembrar manualmente" que já tinha falhado silenciosamente.
+create or replace function public.grant_auto_courses_to_new_company()
+returns trigger
+language plpgsql
+security definer set search_path = public
+as $$
+begin
+  insert into public.company_course_access (company_id, course_id)
+  select new.id, c.id from public.courses c where c.auto_grant = true
+  on conflict (company_id, course_id) do nothing;
+  return new;
+end;
+$$;
+
+drop trigger if exists on_company_created_grant_courses on public.companies;
+create trigger on_company_created_grant_courses
+  after insert on public.companies
+  for each row execute function public.grant_auto_courses_to_new_company();
 
 -- -----------------------------------------------------------------------------
 -- 4. user_progress (substitui o estado local `state.modules` do GameContext)
