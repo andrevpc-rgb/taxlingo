@@ -75,11 +75,16 @@ const COURSES_CONTENT = [
   },
   {
     courseId: 'contabilidade',
-    // Níveis 1-2 aprovados. Assistente/Analista/Especialista entram aqui
-    // conforme forem gerados e aprovados (um nível por vez).
+    // Todos os 5 níveis da Formação de Analista Contábil (curso piloto
+    // completo — ver ids/prefixos: cont_estagiario/CONT-EST-,
+    // cont_auxiliar/CONT-AUX-, cont_assistente/CONT-ASS-,
+    // cont_analista/CONT-ANL-, cont_especialista/CONT-ESP-).
     levels: [
       { id: 'cont_estagiario', title: 'Estagiário Contábil', xpReward: 20, lessonCount: 18, file: 'contabilidade_estagiario.json' },
       { id: 'cont_auxiliar', title: 'Auxiliar Contábil', xpReward: 25, lessonCount: 22, file: 'contabilidade_auxiliar.json' },
+      { id: 'cont_assistente', title: 'Assistente Contábil', xpReward: 30, lessonCount: 15, file: 'contabilidade_assistente.json' },
+      { id: 'cont_analista', title: 'Analista Contábil', xpReward: 35, lessonCount: 12, file: 'contabilidade_analista.json' },
+      { id: 'cont_especialista', title: 'Especialista Contábil', xpReward: 40, lessonCount: 6, file: 'contabilidade_especialista.json' },
     ],
   },
 ];

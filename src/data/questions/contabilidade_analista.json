@@ -1,0 +1,1100 @@
+[
+  {
+    "id": "CONT-ANL-001",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Ao analisar o balancete de um cliente, você compara o saldo de 'Despesas com Marketing' deste mês com o mesmo mês do ano anterior, calculando a variação percentual.",
+    "question": "Esse tipo de comparação, mês atual contra o mesmo período de referência, é chamado de:",
+    "options": [
+      "Análise horizontal",
+      "Análise vertical",
+      "Análise de liquidez",
+      "Análise de rentabilidade"
+    ],
+    "correctAnswer": "Análise horizontal",
+    "explanation": "Análise horizontal compara um mesmo item ao longo do tempo (ex: mês atual vs. mês anterior, ou vs. mesmo mês do ano passado), revelando tendências de crescimento ou queda.",
+    "pacciTip": "Horizontal é olhar pro lado, no tempo, piccolo! Comparando o mesmo item em períodos diferentes.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-002",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Ao analisar a DRE de um cliente, você calcula que 'Despesas Administrativas' representam 18% da Receita Líquida do mês, e compara essa proporção entre contas.",
+    "question": "Esse tipo de análise, que calcula cada item como percentual de uma base comum (ex: Receita), é chamado de:",
+    "options": [
+      "Análise vertical",
+      "Análise horizontal",
+      "Análise de ciclo",
+      "Análise de SPED"
+    ],
+    "correctAnswer": "Análise vertical",
+    "explanation": "Análise vertical calcula cada item como percentual de uma base comum (geralmente a Receita Líquida na DRE, ou o Ativo Total no Balanço), facilitando comparar a composição e o peso relativo de cada conta.",
+    "pacciTip": "Vertical é olhar de cima pra baixo, dentro do mesmo período, tesoro! Cada conta como fatia de um total.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-003",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Ao revisar o balancete, você percebe que a conta 'Fornecedores a Pagar', que normalmente tem saldo credor, está aparecendo com saldo devedor.",
+    "question": "O que esse tipo de 'saldo invertido' geralmente sinaliza?",
+    "options": [
+      "Um possível erro de lançamento ou uma situação atípica que merece investigação, já que o sentido do saldo foge do esperado para aquela natureza de conta",
+      "É sempre um comportamento normal e esperado dessa conta",
+      "Significa que o fornecedor deixou de existir",
+      "É sempre sinal de fraude grave, sem outra explicação possível"
+    ],
+    "correctAnswer": "Um possível erro de lançamento ou uma situação atípica que merece investigação, já que o sentido do saldo foge do esperado para aquela natureza de conta",
+    "explanation": "Um saldo invertido (devedor onde se espera credor, ou vice-versa) não significa automaticamente fraude, mas é um forte sinal de alerta — pode ser um erro de lançamento, um pagamento duplicado, ou uma situação legítima mas incomum que precisa ser entendida.",
+    "pacciTip": "Saldo invertido é uma bandeira amarela, piccolo! Nem sempre é erro, mas sempre merece uma olhada.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-004",
+    "level": "cont_analista",
+    "type": "ordering",
+    "scenario": "Você está revisando o balancete mensal de um cliente, buscando saldos invertidos e variações incomuns antes de liberar o relatório.",
+    "question": "Ordene o processo de revisão analítica de um balancete:",
+    "options": [
+      "Rodar a análise horizontal, comparando com períodos anteriores",
+      "Rodar a análise vertical, verificando a composição percentual",
+      "Identificar contas com saldo no sentido invertido do esperado",
+      "Investigar e documentar as causas das variações e saldos atípicos encontrados"
+    ],
+    "correctAnswer": [
+      "Rodar a análise horizontal, comparando com períodos anteriores",
+      "Rodar a análise vertical, verificando a composição percentual",
+      "Identificar contas com saldo no sentido invertido do esperado",
+      "Investigar e documentar as causas das variações e saldos atípicos encontrados"
+    ],
+    "explanation": "Horizontal, vertical, saldos invertidos, e investigação documentada — essa sequência de análise é o que transforma um balancete bruto numa peça revisada e confiável para entrega ao cliente.",
+    "pacciTip": "Análise de balancete é como uma checagem de raio-x, tesoro! Horizontal, vertical, e depois os pontos suspeitos.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-005",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "A conta 'Despesas com Viagens' de um cliente saltou de 2% para 15% da Receita Líquida em um único mês, segundo a análise vertical.",
+    "question": "O que essa variação relevante na análise vertical sugere como próximo passo?",
+    "options": [
+      "Investigar a causa específica dessa conta — pode ser um evento pontual legítimo (ex: uma grande viagem de negócios) ou um erro de classificação",
+      "Ignorar, já que análise vertical nunca aponta nada relevante",
+      "Assumir automaticamente que é fraude, sem investigar mais",
+      "Reduzir o valor lançado artificialmente para 'normalizar' a porcentagem"
+    ],
+    "correctAnswer": "Investigar a causa específica dessa conta — pode ser um evento pontual legítimo (ex: uma grande viagem de negócios) ou um erro de classificação",
+    "explanation": "Uma variação relevante captada pela análise vertical não deve ser presumida como erro nem ignorada — é um ponto de partida para investigação, que pode confirmar algo legítimo ou revelar um problema real.",
+    "pacciTip": "Número que salta aos olhos é sempre uma pergunta, nunca uma resposta pronta, piccolo!",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-006",
+    "level": "cont_analista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que comparar o mesmo item ao longo de vários períodos (mês a mês, ou ano a ano) revela tendências de crescimento ou queda.",
+    "question": "Digite o tipo de análise (uma palavra) que compara o mesmo item ao longo do tempo:",
+    "correctAnswer": "horizontal",
+    "explanation": "Análise horizontal é a comparação de um mesmo item ao longo do tempo — revela tendências de crescimento, queda ou estabilidade de uma conta específica.",
+    "pacciTip": "Horizontal = tempo, vertical = composição, tesoro! Duas ferramentas, dois propósitos diferentes.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-007",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que a análise vertical e a horizontal, usadas juntas, dão uma visão mais completa do que usar só uma delas.",
+    "question": "Por que combinar as duas análises é mais poderoso do que usar apenas uma?",
+    "options": [
+      "Porque a vertical mostra a composição em um momento, e a horizontal mostra a evolução ao longo do tempo — juntas, revelam tanto 'o quê' quanto 'como mudou'",
+      "Porque uma delas é sempre mais importante e a outra é dispensável",
+      "Porque análise vertical e horizontal sempre chegam exatamente à mesma conclusão",
+      "Porque usar as duas juntas é proibido pelas normas contábeis"
+    ],
+    "correctAnswer": "Porque a vertical mostra a composição em um momento, e a horizontal mostra a evolução ao longo do tempo — juntas, revelam tanto 'o quê' quanto 'como mudou'",
+    "explanation": "A análise vertical responde 'qual o peso dessa conta agora', e a horizontal responde 'como essa conta mudou ao longo do tempo' — combinadas, dão uma visão muito mais rica do que isoladas.",
+    "pacciTip": "Uma pergunta 'o quê', a outra pergunta 'como mudou', piccolo! Juntas contam a história completa.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-008",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um analista percebe que, mês após mês, o mesmo tipo de erro (um fornecedor lançado na conta errada) se repete no balancete de um cliente.",
+    "question": "Qual é o valor de identificar esse padrão recorrente, em vez de só corrigir o erro pontualmente todo mês?",
+    "options": [
+      "Permite atacar a causa raiz (ex: treinar quem lança, ou corrigir o cadastro do fornecedor), evitando que o mesmo erro se repita indefinidamente",
+      "Não existe valor nenhum em identificar padrões, só em corrigir cada erro isolado",
+      "Padrões recorrentes de erro são sempre impossíveis de evitar",
+      "O ideal é nunca investigar a causa, só corrigir o sintoma todo mês"
+    ],
+    "correctAnswer": "Permite atacar a causa raiz (ex: treinar quem lança, ou corrigir o cadastro do fornecedor), evitando que o mesmo erro se repita indefinidamente",
+    "explanation": "Revisão analítica recorrente revela não só erros pontuais, mas padrões — e um padrão identificado permite corrigir a causa raiz, em vez de ficar sempre consertando o mesmo sintoma mês após mês.",
+    "pacciTip": "Erro que se repete pede uma solução que se repita também — na causa, não no sintoma, tesoro!",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-009",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um analista revisa o 'ciclo de compras' de uma empresa — desde o pedido até o pagamento do fornecedor — verificando se cada etapa está sendo corretamente registrada.",
+    "question": "Por que revisar um ciclo contábil inteiro (não só uma conta isolada) é uma abordagem mais robusta de verificação?",
+    "options": [
+      "Porque revela se as etapas conectadas (pedido, recebimento, nota fiscal, pagamento) estão consistentes entre si, não só se uma conta específica parece 'certa' isoladamente",
+      "Porque revisar ciclos inteiros é sempre mais rápido do que revisar uma conta isolada",
+      "Porque ciclos contábeis nunca têm relação entre as etapas",
+      "Porque revisar por ciclo é uma exigência legal obrigatória para toda empresa"
+    ],
+    "correctAnswer": "Porque revela se as etapas conectadas (pedido, recebimento, nota fiscal, pagamento) estão consistentes entre si, não só se uma conta específica parece 'certa' isoladamente",
+    "explanation": "Revisar por ciclo (compras, vendas, folha) verifica a consistência entre etapas conectadas — um erro pode não aparecer numa conta isolada, mas fica evidente quando se olha o fluxo completo de um processo.",
+    "pacciTip": "Olhar só uma conta é ver uma foto; olhar o ciclo inteiro é ver o filme, piccolo!",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-010",
+    "level": "cont_analista",
+    "type": "ordering",
+    "scenario": "Você está fazendo um teste de consistência no ciclo de vendas de um cliente, verificando se o que foi vendido bate com o que foi faturado e recebido.",
+    "question": "Ordene o teste de consistência do ciclo de vendas:",
+    "options": [
+      "Verificar se toda venda registrada tem uma nota fiscal correspondente",
+      "Conferir se o valor faturado bate com o valor contabilizado como receita",
+      "Checar se o recebimento (ou o saldo a receber) reflete corretamente a venda",
+      "Investigar qualquer divergência encontrada entre essas três etapas"
+    ],
+    "correctAnswer": [
+      "Verificar se toda venda registrada tem uma nota fiscal correspondente",
+      "Conferir se o valor faturado bate com o valor contabilizado como receita",
+      "Checar se o recebimento (ou o saldo a receber) reflete corretamente a venda",
+      "Investigar qualquer divergência encontrada entre essas três etapas"
+    ],
+    "explanation": "Venda, nota fiscal, receita contabilizada e recebimento/saldo a receber precisam estar consistentes entre si — testar essa cadeia completa revela inconsistências que uma checagem isolada não pegaria.",
+    "pacciTip": "Teste de consistência é perseguir a mesma operação por todas as suas etapas, tesoro, até o fim!",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-011",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um analista percebe que o ciclo de 'folha de pagamento' de um cliente tem uma etapa onde o valor líquido pago aos funcionários não bate com o valor líquido calculado pelo sistema de folha.",
+    "question": "Qual é a atitude correta diante dessa inconsistência entre o calculado e o efetivamente pago?",
+    "options": [
+      "Investigar a causa da diferença (erro de cálculo, pagamento a menor/maior, ajuste não lançado) antes de considerar o ciclo validado",
+      "Ignorar, já que pequenas diferenças na folha nunca importam",
+      "Assumir que o valor pago está sempre certo, sem questionar o sistema",
+      "Assumir que o valor calculado está sempre certo, sem verificar o pagamento real"
+    ],
+    "correctAnswer": "Investigar a causa da diferença (erro de cálculo, pagamento a menor/maior, ajuste não lançado) antes de considerar o ciclo validado",
+    "explanation": "Uma inconsistência entre o calculado e o pago no ciclo de folha é um sinal de que algo não está registrado corretamente — pode ser um erro de cálculo, um ajuste manual não lançado, ou um erro no pagamento em si. Precisa ser investigada, não presumida.",
+    "pacciTip": "Calculado e pago deveriam sempre bater, piccolo! Diferença entre eles é sinal de algo a resolver.",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-012",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta a diferença entre o Balanço Patrimonial (BP) e a Demonstração do Resultado do Exercício (DRE).",
+    "question": "Qual é a diferença essencial entre essas duas demonstrações?",
+    "options": [
+      "O BP mostra a posição patrimonial num momento específico (foto); a DRE mostra o desempenho ao longo de um período (filme)",
+      "São exatamente a mesma informação, apresentada de formas diferentes",
+      "O BP mostra só receitas; a DRE mostra só despesas",
+      "A DRE é usada só por empresas do Lucro Real, nunca por outras"
+    ],
+    "correctAnswer": "O BP mostra a posição patrimonial num momento específico (foto); a DRE mostra o desempenho ao longo de um período (filme)",
+    "explanation": "O Balanço Patrimonial é uma 'foto' — posição em um instante (Ativo, Passivo, PL); a DRE é um 'filme' — o desempenho (receitas menos despesas) ao longo de um período. Demonstrações complementares, não equivalentes.",
+    "pacciTip": "BP é foto, DRE é filme, tesoro! As duas juntas contam a história completa da empresa.",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-013",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente vê que o lucro líquido da DRE foi positivo, mas o saldo de caixa da empresa diminuiu no mesmo período, e fica confuso.",
+    "question": "Qual demonstração ajuda a explicar essa aparente contradição entre lucro e caixa?",
+    "options": [
+      "Demonstração dos Fluxos de Caixa (DFC)",
+      "Demonstração das Mutações do Patrimônio Líquido (DMPL)",
+      "Notas Explicativas apenas",
+      "Balanço Patrimonial isoladamente"
+    ],
+    "correctAnswer": "Demonstração dos Fluxos de Caixa (DFC)",
+    "explanation": "A DFC explica justamente essa diferença entre lucro contábil e variação de caixa — mostra para onde o dinheiro realmente foi (investimentos, pagamento de dívidas, distribuição de lucros) mesmo com lucro positivo na DRE.",
+    "pacciTip": "Lucro não é a mesma coisa que caixa, piccolo! A DFC é quem explica essa diferença.",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-014",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, além do BP e da DRE, o contador também menciona uma 'DMPL' nos relatórios anuais.",
+    "question": "O que a Demonstração das Mutações do Patrimônio Líquido (DMPL) mostra?",
+    "options": [
+      "Como o Patrimônio Líquido mudou ao longo do período — lucro retido, distribuição de dividendos, aportes de capital, entre outros movimentos",
+      "O fluxo de caixa detalhado mês a mês",
+      "Apenas o valor total de impostos pagos no período",
+      "A lista de todos os funcionários da empresa"
+    ],
+    "correctAnswer": "Como o Patrimônio Líquido mudou ao longo do período — lucro retido, distribuição de dividendos, aportes de capital, entre outros movimentos",
+    "explanation": "A DMPL detalha a movimentação do Patrimônio Líquido ao longo do período — de onde veio o aumento (lucro, aporte) e para onde foi uma eventual redução (prejuízo, distribuição de dividendos).",
+    "pacciTip": "DMPL conta a história de como o patrimônio dos sócios mudou no ano, tesoro!",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-015",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que algumas informações importantes (como um processo judicial relevante ou um critério de depreciação usado) não aparecem diretamente nos números do BP ou da DRE.",
+    "question": "Onde esse tipo de informação complementar, que não cabe só em números, costuma ser divulgada?",
+    "options": [
+      "Nas Notas Explicativas",
+      "No Balanço Patrimonial, misturado aos números",
+      "Em nenhum lugar, já que não é obrigatório divulgar",
+      "Apenas verbalmente, em reunião com o cliente"
+    ],
+    "correctAnswer": "Nas Notas Explicativas",
+    "explanation": "As Notas Explicativas complementam as demonstrações contábeis com informações qualitativas e detalhes que os números sozinhos não conseguem transmitir — critérios usados, contingências, detalhamento de contas relevantes.",
+    "pacciTip": "Número sozinho às vezes não conta a história toda, piccolo! As Notas Explicativas preenchem essa lacuna.",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-016",
+    "level": "cont_analista",
+    "type": "ordering",
+    "scenario": "Um analista está montando o conjunto completo de demonstrações contábeis de um cliente para entrega anual.",
+    "question": "Ordene o raciocínio lógico de como as demonstrações contábeis se conectam entre si:",
+    "options": [
+      "A DRE apura o resultado (lucro ou prejuízo) do período",
+      "Esse resultado impacta o Patrimônio Líquido, detalhado na DMPL",
+      "O Balanço Patrimonial mostra a posição final, incluindo o PL já atualizado",
+      "A DFC explica a movimentação real de caixa associada a tudo isso"
+    ],
+    "correctAnswer": [
+      "A DRE apura o resultado (lucro ou prejuízo) do período",
+      "Esse resultado impacta o Patrimônio Líquido, detalhado na DMPL",
+      "O Balanço Patrimonial mostra a posição final, incluindo o PL já atualizado",
+      "A DFC explica a movimentação real de caixa associada a tudo isso"
+    ],
+    "explanation": "As demonstrações não são peças isoladas — o resultado da DRE flui para o PL (detalhado na DMPL), que aparece no BP, enquanto a DFC complementa mostrando o que aconteceu de fato com o caixa.",
+    "pacciTip": "As demonstrações contábeis conversam entre si, tesoro! Nenhuma delas conta a história sozinha.",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-017",
+    "level": "cont_analista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista pede para completar: a demonstração que explica para onde foi o dinheiro da empresa — operacional, investimento ou financiamento — tem a sigla de três letras.",
+    "question": "Digite a sigla da demonstração que detalha a movimentação de caixa da empresa:",
+    "correctAnswer": "DFC",
+    "explanation": "DFC = Demonstração dos Fluxos de Caixa, que detalha as entradas e saídas de dinheiro classificadas em atividades operacionais, de investimento e de financiamento.",
+    "pacciTip": "DFC é a sigla que explica pra onde o dinheiro realmente foi, piccolo! Decora bem.",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-018",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se a empresa dele consegue pagar as contas que vencem nos próximos 30 dias, usando apenas o que já tem disponível e a receber no curto prazo.",
+    "question": "Qual indicador financeiro ajuda a responder diretamente essa pergunta sobre capacidade de pagamento de curto prazo?",
+    "options": [
+      "Liquidez corrente",
+      "Margem líquida",
+      "Giro do Ativo",
+      "Retorno sobre o Patrimônio Líquido (ROE)"
+    ],
+    "correctAnswer": "Liquidez corrente",
+    "explanation": "A liquidez corrente (Ativo Circulante dividido pelo Passivo Circulante) mede diretamente a capacidade da empresa de honrar suas obrigações de curto prazo com seus recursos também de curto prazo.",
+    "pacciTip": "Liquidez corrente responde 'dá pra pagar o que vence logo?', tesoro! Um indicador bem direto.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-019",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa tem Ativo Circulante de R$ 120.000 e Passivo Circulante de R$ 80.000.",
+    "question": "Qual é o índice de liquidez corrente dessa empresa?",
+    "options": [
+      "1,5",
+      "0,67",
+      "40.000",
+      "200.000"
+    ],
+    "correctAnswer": "1,5",
+    "explanation": "Liquidez Corrente = Ativo Circulante ÷ Passivo Circulante = 120.000 ÷ 80.000 = 1,5 — ou seja, para cada R$ 1 de dívida de curto prazo, a empresa tem R$ 1,50 em recursos de curto prazo disponíveis.",
+    "pacciTip": "Liquidez acima de 1 geralmente é bom sinal, piccolo! Significa mais recurso do que dívida de curto prazo.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-020",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta a diferença entre 'margem bruta' e 'margem líquida' como indicadores de rentabilidade.",
+    "question": "Qual é a diferença essencial entre essas duas margens?",
+    "options": [
+      "Margem bruta considera só a Receita menos o CMV; margem líquida considera o resultado final, após todas as despesas, impostos e custos financeiros",
+      "São exatamente o mesmo indicador, com nomes diferentes",
+      "Margem líquida é sempre maior que a margem bruta",
+      "Margem bruta só existe em empresas industriais"
+    ],
+    "correctAnswer": "Margem bruta considera só a Receita menos o CMV; margem líquida considera o resultado final, após todas as despesas, impostos e custos financeiros",
+    "explanation": "Margem bruta mede a rentabilidade da operação pura de venda (Receita menos CMV); margem líquida mede o quanto efetivamente sobra depois de todos os custos e despesas da empresa — uma visão mais completa e geralmente menor do que a margem bruta.",
+    "pacciTip": "Margem bruta é o primeiro filtro, margem líquida é o resultado final, tesoro! Sempre menor ou igual à bruta.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-021",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que a empresa dele, mesmo tendo vendas crescentes, sempre parece precisar de mais capital de giro conforme cresce.",
+    "question": "O conceito de 'Necessidade de Capital de Giro' (NCG) ajuda a explicar essa situação. O que esse conceito mede, de forma geral?",
+    "options": [
+      "A diferença entre o que a empresa tem investido em contas a receber e estoque, e o que ela consegue financiar com fornecedores e outras obrigações operacionais de curto prazo",
+      "O valor total de lucro acumulado da empresa desde a fundação",
+      "O valor total de Ativo Imobilizado da empresa",
+      "A quantidade de funcionários necessários para operar a empresa"
+    ],
+    "correctAnswer": "A diferença entre o que a empresa tem investido em contas a receber e estoque, e o que ela consegue financiar com fornecedores e outras obrigações operacionais de curto prazo",
+    "explanation": "A NCG mede o quanto a operação do dia a dia (estoque + contas a receber, menos o financiamento natural de fornecedores) 'exige' de capital — uma empresa que cresce vendendo a prazo e com estoque tende a precisar de mais capital de giro conforme cresce.",
+    "pacciTip": "Crescer vendendo a prazo custa capital de giro, piccolo! A NCG mede exatamente esse efeito.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-022",
+    "level": "cont_analista",
+    "type": "ordering",
+    "scenario": "Você está montando uma análise econômico-financeira resumida de um cliente para apresentar numa reunião trimestral.",
+    "question": "Ordene a sequência lógica de uma análise econômico-financeira básica:",
+    "options": [
+      "Avaliar a liquidez (capacidade de pagamento de curto prazo)",
+      "Avaliar a rentabilidade (margens e retorno sobre o investimento)",
+      "Avaliar a necessidade de capital de giro (NCG)",
+      "Resumir os achados em uma conclusão clara para o cliente"
+    ],
+    "correctAnswer": [
+      "Avaliar a liquidez (capacidade de pagamento de curto prazo)",
+      "Avaliar a rentabilidade (margens e retorno sobre o investimento)",
+      "Avaliar a necessidade de capital de giro (NCG)",
+      "Resumir os achados em uma conclusão clara para o cliente"
+    ],
+    "explanation": "Liquidez, rentabilidade, NCG e uma conclusão resumida — essa sequência cobre as principais perguntas financeiras que um cliente normalmente quer ver respondidas numa análise periódica.",
+    "pacciTip": "Análise financeira boa termina com uma conclusão clara, tesoro! Não só números soltos.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-023",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa optante pelo Simples Nacional pergunta por que seu regime tributário é diferente do Lucro Presumido, usado por outra empresa do mesmo setor.",
+    "question": "Qual é uma diferença fundamental do Simples Nacional em relação a outros regimes?",
+    "options": [
+      "Unifica vários tributos numa única guia de recolhimento, com alíquota geralmente baseada na faixa de faturamento da empresa",
+      "O Simples Nacional sempre cobra mais impostos do que qualquer outro regime",
+      "O Simples Nacional é obrigatório para toda empresa, sem exceção",
+      "O Simples Nacional elimina totalmente a necessidade de contabilidade"
+    ],
+    "correctAnswer": "Unifica vários tributos numa única guia de recolhimento, com alíquota geralmente baseada na faixa de faturamento da empresa",
+    "explanation": "O Simples Nacional simplifica o recolhimento ao unificar diversos tributos numa guia só, com alíquota geralmente progressiva conforme a faixa de faturamento — um regime pensado para simplificar a vida de pequenas e médias empresas.",
+    "pacciTip": "Simples por nome e por proposta, piccolo! Unifica o que, nos outros regimes, vem separado.",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-024",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa do Lucro Presumido paga imposto sobre um percentual presumido do faturamento, independente do lucro real que ela teve naquele período.",
+    "question": "Qual é a implicação prática dessa característica do Lucro Presumido para uma empresa com margem de lucro muito baixa?",
+    "options": [
+      "A empresa pode acabar pagando imposto sobre um lucro 'presumido' maior do que o lucro real que ela obteve, tornando o regime potencialmente desvantajoso",
+      "A empresa nunca paga nenhum imposto nesse regime",
+      "O Lucro Presumido sempre resulta em menos imposto do que qualquer outro regime, sem exceção",
+      "A margem real da empresa não tem nenhuma relação com o imposto pago no Lucro Presumido"
+    ],
+    "correctAnswer": "A empresa pode acabar pagando imposto sobre um lucro 'presumido' maior do que o lucro real que ela obteve, tornando o regime potencialmente desvantajoso",
+    "explanation": "No Lucro Presumido, o imposto incide sobre uma margem fixa presumida pela lei, não sobre o lucro real — para empresas com margem real menor que a presumida, isso pode significar pagar proporcionalmente mais imposto do que pagariam no Lucro Real.",
+    "pacciTip": "Presumido é uma aposta na média, tesoro! Quem tem margem real menor que a presumida paga a mais.",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-025",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa do Lucro Real precisa ajustar o lucro contábil através de um livro específico antes de calcular o Imposto de Renda devido.",
+    "question": "Qual é esse livro usado para ajustar o lucro contábil (adições e exclusões) na apuração do Lucro Real?",
+    "options": [
+      "LALUR (Livro de Apuração do Lucro Real)",
+      "SPED Fiscal",
+      "Livro Razão",
+      "Livro Caixa"
+    ],
+    "correctAnswer": "LALUR (Livro de Apuração do Lucro Real)",
+    "explanation": "O LALUR registra os ajustes (adições e exclusões) que transformam o lucro contábil no lucro fiscal usado para calcular o Imposto de Renda devido por empresas do Lucro Real.",
+    "pacciTip": "LALUR é a ponte entre o lucro contábil e o lucro que o fisco realmente tributa, piccolo!",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-026",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma despesa de multa de trânsito foi lançada contabilmente, mas não pode ser deduzida do lucro para fins de cálculo do Imposto de Renda no Lucro Real.",
+    "question": "Esse tipo de ajuste, onde uma despesa contábil precisa ser 'somada de volta' ao lucro para fins fiscais, é chamado de:",
+    "options": [
+      "Adição no LALUR",
+      "Exclusão no LALUR",
+      "Compensação de prejuízo",
+      "Retenção na fonte"
+    ],
+    "correctAnswer": "Adição no LALUR",
+    "explanation": "Uma despesa contábil que não é dedutível para fins fiscais (como certas multas) precisa ser 'adicionada de volta' ao lucro contábil no LALUR, aumentando a base de cálculo do imposto — por isso é chamada de adição.",
+    "pacciTip": "Despesa que a contabilidade aceita, mas o fisco não — isso é adição no LALUR, tesoro!",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-027",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que a escolha do regime tributário (Simples, Presumido ou Real) é uma decisão tão importante para o resultado financeiro da empresa.",
+    "question": "Qual é a explicação mais clara para a importância dessa escolha?",
+    "options": [
+      "Cada regime tem regras diferentes de cálculo de imposto, podendo gerar uma carga tributária muito diferente para a mesma empresa, dependendo do seu perfil de margem e faturamento",
+      "A escolha do regime nunca afeta o valor final de impostos pagos",
+      "Todos os regimes tributários cobram exatamente o mesmo valor de imposto",
+      "A escolha do regime é sempre decidida pelo governo, sem opção da empresa"
+    ],
+    "correctAnswer": "Cada regime tem regras diferentes de cálculo de imposto, podendo gerar uma carga tributária muito diferente para a mesma empresa, dependendo do seu perfil de margem e faturamento",
+    "explanation": "O regime tributário certo depende do perfil específico da empresa (margem, faturamento, estrutura de custos) — a mesma empresa pode pagar valores bem diferentes de imposto dependendo do regime escolhido, por isso essa decisão é tão relevante.",
+    "pacciTip": "Regime tributário certo pode significar economia real, piccolo! Por isso merece análise cuidadosa.",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-028",
+    "level": "cont_analista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que o regime tributário que unifica vários tributos numa guia só, com alíquota baseada no faturamento, é muito usado por pequenas e médias empresas.",
+    "question": "Digite o nome (duas palavras) desse regime tributário simplificado:",
+    "correctAnswer": "Simples Nacional",
+    "explanation": "O Simples Nacional é o regime tributário simplificado, voltado para micro e pequenas empresas, que unifica vários tributos numa única guia de recolhimento.",
+    "pacciTip": "Simples Nacional, o regime que carrega o nome da sua própria proposta, tesoro!",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-029",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, mesmo em dia com todos os impostos pagos, o escritório ainda insiste tanto na entrega correta de declarações como o SPED.",
+    "question": "Qual é a diferença entre 'pagar o imposto' e 'cumprir as obrigações acessórias'?",
+    "options": [
+      "São obrigações distintas — pagar o imposto é a obrigação principal; entregar declarações como o SPED é uma obrigação acessória, que informa ao fisco os dados que sustentam esse pagamento",
+      "São exatamente a mesma coisa, sem nenhuma diferença prática",
+      "Obrigações acessórias são sempre opcionais, nunca obrigatórias",
+      "Pagar o imposto elimina automaticamente qualquer necessidade de declaração"
+    ],
+    "correctAnswer": "São obrigações distintas — pagar o imposto é a obrigação principal; entregar declarações como o SPED é uma obrigação acessória, que informa ao fisco os dados que sustentam esse pagamento",
+    "explanation": "A obrigação principal é o pagamento do tributo; as obrigações acessórias (declarações, SPED) são o meio pelo qual a empresa presta contas ao fisco sobre os dados que sustentam aquele pagamento — mesmo em dia com o imposto, não entregar a declaração é uma infração separada.",
+    "pacciTip": "Pagar o imposto é uma coisa, declarar corretamente é outra, piccolo! As duas são obrigatórias.",
+    "topic": "obrigacoes_acessorias"
+  },
+  {
+    "id": "CONT-ANL-030",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "O escritório mantém um calendário detalhado de todas as obrigações acessórias de cada cliente, com datas de entrega e responsável designado.",
+    "question": "Qual é o principal risco de não ter um controle sistemático de prazos de obrigações acessórias?",
+    "options": [
+      "Entregas em atraso podem gerar multas automáticas e significativas, mesmo quando os impostos em si estão corretamente pagos",
+      "Não existe risco nenhum em perder prazos de obrigações acessórias",
+      "Obrigações acessórias nunca têm prazo definido",
+      "Multas por atraso de obrigação acessória são sempre simbólicas e sem impacto real"
+    ],
+    "correctAnswer": "Entregas em atraso podem gerar multas automáticas e significativas, mesmo quando os impostos em si estão corretamente pagos",
+    "explanation": "Muitas obrigações acessórias geram multa automática por atraso, independentemente do imposto estar em dia — um controle sistemático de prazos é essencial para evitar penalidades totalmente evitáveis.",
+    "pacciTip": "Multa de obrigação acessória atrasada é dinheiro jogado fora, totalmente evitável, tesoro!",
+    "topic": "obrigacoes_acessorias"
+  },
+  {
+    "id": "CONT-ANL-031",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta o que é o 'SPED', termo que o escritório menciona com frequência nas conversas sobre obrigações fiscais.",
+    "question": "O que é o SPED, de forma resumida?",
+    "options": [
+      "Um sistema do governo que recebe, de forma digital e padronizada, diversas informações fiscais e contábeis das empresas",
+      "Um tipo de imposto cobrado apenas de empresas do Lucro Real",
+      "Um software de contabilidade vendido por empresas privadas",
+      "Um tipo específico de nota fiscal eletrônica"
+    ],
+    "correctAnswer": "Um sistema do governo que recebe, de forma digital e padronizada, diversas informações fiscais e contábeis das empresas",
+    "explanation": "SPED (Sistema Público de Escrituração Digital) é a plataforma do governo que recebe, de forma padronizada e digital, informações contábeis e fiscais das empresas — substituindo diversas declarações em papel por arquivos digitais estruturados.",
+    "pacciTip": "SPED é o 'correio digital' entre a empresa e o fisco, piccolo! Tudo padronizado e eletrônico.",
+    "topic": "obrigacoes_acessorias"
+  },
+  {
+    "id": "CONT-ANL-032",
+    "level": "cont_analista",
+    "type": "ordering",
+    "scenario": "Você está organizando o processo de controle de prazos de obrigações acessórias para um conjunto de clientes do escritório.",
+    "question": "Ordene o processo de controle de obrigações acessórias:",
+    "options": [
+      "Mapear todas as obrigações acessórias aplicáveis a cada cliente",
+      "Registrar a data limite de cada uma num calendário centralizado",
+      "Designar um responsável e acompanhar o andamento da preparação",
+      "Confirmar a entrega e arquivar o comprovante de protocolo"
+    ],
+    "correctAnswer": [
+      "Mapear todas as obrigações acessórias aplicáveis a cada cliente",
+      "Registrar a data limite de cada uma num calendário centralizado",
+      "Designar um responsável e acompanhar o andamento da preparação",
+      "Confirmar a entrega e arquivar o comprovante de protocolo"
+    ],
+    "explanation": "Mapear, registrar prazos, designar responsável e acompanhar, confirmar e arquivar — esse processo sistemático é o que evita que uma obrigação acessória 'escape' do radar do escritório.",
+    "pacciTip": "Obrigação acessória sem dono responsável é obrigação com risco de atraso, tesoro!",
+    "topic": "obrigacoes_acessorias"
+  },
+  {
+    "id": "CONT-ANL-033",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um analista percebe que uma obrigação acessória de um cliente foi entregue, mas com informações divergentes das que constam na contabilidade.",
+    "question": "Por que essa divergência entre o que foi declarado e o que está na contabilidade é um problema sério, mesmo com a entrega feita no prazo?",
+    "options": [
+      "Porque pode gerar inconsistências perante o fisco, risco de autuação, e revela uma falha de controle entre a contabilidade e a área que prepara a declaração",
+      "Porque não é um problema real, já que a entrega foi feita no prazo",
+      "Porque divergências em declarações nunca têm nenhuma consequência",
+      "Porque o fisco nunca cruza informações entre diferentes declarações"
+    ],
+    "correctAnswer": "Porque pode gerar inconsistências perante o fisco, risco de autuação, e revela uma falha de controle entre a contabilidade e a área que prepara a declaração",
+    "explanation": "O fisco frequentemente cruza informações entre diferentes declarações e a escrituração contábil — uma divergência pode gerar questionamentos, autuações, e revela que algo no processo de preparação da declaração não está bem controlado.",
+    "pacciTip": "Entregue no prazo mas errado ainda é um problema, piccolo! O conteúdo importa tanto quanto o prazo.",
+    "topic": "obrigacoes_acessorias"
+  },
+  {
+    "id": "CONT-ANL-034",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório implementa um controle de 'quatro olhos' — toda obrigação acessória relevante é revisada por uma segunda pessoa antes de ser transmitida ao fisco.",
+    "question": "Qual é a principal vantagem desse tipo de controle de dupla revisão?",
+    "options": [
+      "Reduz a chance de um erro passar despercebido, já que uma segunda pessoa, com outra perspectiva, revisa antes do envio definitivo",
+      "Não traz nenhuma vantagem real sobre uma revisão única",
+      "Serve só para atrasar o processo de entrega das obrigações",
+      "Só é necessário em empresas com mais de 1.000 funcionários"
+    ],
+    "correctAnswer": "Reduz a chance de um erro passar despercebido, já que uma segunda pessoa, com outra perspectiva, revisa antes do envio definitivo",
+    "explanation": "Um controle de dupla revisão ('quatro olhos') é uma prática clássica de controle interno — reduz significativamente a chance de um erro passar despercebido antes de uma transmissão que, uma vez feita, pode ser difícil ou custosa de corrigir.",
+    "pacciTip": "Dois pares de olhos pegam mais erro do que um só, tesoro! Simples e eficaz.",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-035",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório decide que a mesma pessoa que aprova um pagamento não deveria ser a mesma que o executa, mesmo em casos de confiança total na equipe.",
+    "question": "Qual princípio de controle interno justifica essa separação de funções (quem aprova não é quem executa)?",
+    "options": [
+      "Segregação de funções — reduz o risco de erro ou fraude ao distribuir etapas críticas de um processo entre pessoas diferentes",
+      "Economia de tempo — serve apenas para agilizar o processo",
+      "Hierarquia — serve apenas para reforçar quem manda mais na empresa",
+      "Nenhum princípio específico, é apenas uma preferência pessoal"
+    ],
+    "correctAnswer": "Segregação de funções — reduz o risco de erro ou fraude ao distribuir etapas críticas de um processo entre pessoas diferentes",
+    "explanation": "A segregação de funções é um princípio clássico de controle interno — distribuir etapas críticas (aprovar, executar, registrar) entre pessoas diferentes reduz tanto o risco de erro não detectado quanto a oportunidade de fraude.",
+    "pacciTip": "Quem aprova não deveria ser quem executa, piccolo! Esse princípio protege a todos, inclusive quem é confiável.",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-036",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório identifica um risco recorrente: clientes que enviam documentos incompletos, atrasando o fechamento todo mês.",
+    "question": "Qual é uma boa abordagem de gestão de risco operacional diante desse problema recorrente?",
+    "options": [
+      "Mapear a causa raiz, criar um processo padronizado de checklist de documentos pendentes, e comunicar claramente o que é esperado do cliente",
+      "Aceitar que o problema é inevitável e nunca tentar resolvê-lo estruturalmente",
+      "Culpar individualmente cada cliente, sem mudar nenhum processo interno",
+      "Ignorar o padrão, tratando cada atraso como um evento isolado e não relacionado"
+    ],
+    "correctAnswer": "Mapear a causa raiz, criar um processo padronizado de checklist de documentos pendentes, e comunicar claramente o que é esperado do cliente",
+    "explanation": "Um risco operacional recorrente merece uma resposta estrutural — mapear a causa, padronizar um processo (checklist, comunicação clara de prazos) resolve o problema de forma sistemática, em vez de apagar incêndios todo mês.",
+    "pacciTip": "Risco que se repete pede solução que resolva de vez, tesoro, não um remendo mensal!",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-037",
+    "level": "cont_analista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que distribuir etapas críticas de um processo (aprovar, executar, registrar) entre pessoas diferentes é um princípio clássico de controle interno.",
+    "question": "Digite o nome (duas palavras) desse princípio de controle interno:",
+    "correctAnswer": "segregação de funções",
+    "explanation": "Segregação de funções é o princípio que distribui etapas críticas de um processo entre pessoas diferentes, reduzindo o risco de erro não detectado e a oportunidade de fraude.",
+    "pacciTip": "Segregação de funções protege até quem é totalmente confiável, piccolo! O princípio existe pra reduzir risco estrutural.",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-038",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório revisa periodicamente quais funcionários têm acesso a quais sistemas e informações, removendo acessos de quem já não precisa mais deles.",
+    "question": "Por que revisar periodicamente os acessos aos sistemas é uma boa prática de controle interno?",
+    "options": [
+      "Reduz o risco de um acesso desnecessário (de um funcionário que mudou de função, por exemplo) ser usado indevidamente, por erro ou má-fé",
+      "Não traz nenhum benefício real, é só burocracia desnecessária",
+      "Serve apenas para dificultar o trabalho dos próprios funcionários",
+      "Só é relevante em empresas de tecnologia"
+    ],
+    "correctAnswer": "Reduz o risco de um acesso desnecessário (de um funcionário que mudou de função, por exemplo) ser usado indevidamente, por erro ou má-fé",
+    "explanation": "Revisar acessos periodicamente (princípio de 'menor privilégio necessário') reduz a superfície de risco — quanto menos pessoas com acesso desnecessário, menor a chance de um uso indevido, intencional ou não.",
+    "pacciTip": "Acesso que ninguém mais precisa é um risco esperando acontecer, tesoro! Revisão periódica fecha essa porta.",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-039",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um analista percebe que, numa auditoria interna informal, vários lançamentos relevantes do mês não tinham nenhuma evidência documental de aprovação.",
+    "question": "Qual é a recomendação mais adequada diante dessa ausência de trilha de aprovação?",
+    "options": [
+      "Implementar um processo formal de aprovação documentada para lançamentos acima de um valor relevante, criando uma trilha auditável",
+      "Ignorar, já que trilha de aprovação é apenas um detalhe sem importância real",
+      "Proibir qualquer lançamento relevante dali em diante, paralisando a operação",
+      "Assumir que a ausência de aprovação documentada nunca representa um risco real"
+    ],
+    "correctAnswer": "Implementar um processo formal de aprovação documentada para lançamentos acima de um valor relevante, criando uma trilha auditável",
+    "explanation": "A ausência de trilha de aprovação para lançamentos relevantes é uma fragilidade de controle interno — formalizar um processo de aprovação documentada (mesmo que simples) cria uma trilha auditável que protege tanto a empresa quanto quem realiza os lançamentos.",
+    "pacciTip": "Lançamento relevante sem aprovação registrada é uma lacuna de controle, piccolo! Formalizar resolve isso.",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-040",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do Nível de Analista Contábil, o analista pergunta qual é a diferença central entre o papel do Analista e o do Assistente Contábil.",
+    "question": "Qual é essa diferença central de atuação entre Analista e Assistente?",
+    "options": [
+      "O Analista interpreta o significado dos números (análises, demonstrações, riscos tributários e de controle), enquanto o Assistente foca mais na execução e organização dos lançamentos",
+      "Não existe nenhuma diferença real entre as duas funções",
+      "O Analista faz exatamente as mesmas tarefas mecânicas do Assistente, sem nenhuma diferença",
+      "O Analista nunca tem contato com números, só com documentos administrativos"
+    ],
+    "correctAnswer": "O Analista interpreta o significado dos números (análises, demonstrações, riscos tributários e de controle), enquanto o Assistente foca mais na execução e organização dos lançamentos",
+    "explanation": "O salto do Assistente para o Analista é o salto da execução para a interpretação — entender o que os números significam, quais riscos eles escondem, e como orientar decisões, não só lançar e organizar corretamente.",
+    "pacciTip": "Assistente organiza os números, Analista entende o que eles estão dizendo, tesoro! Esse é o grande salto desse nível.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-041",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Ao comparar o balancete de dois meses seguidos, o analista percebe que 'Contas a Receber' cresceu 40% enquanto a Receita de Vendas cresceu só 5%.",
+    "question": "O que esse descompasso entre o crescimento de Contas a Receber e da Receita pode sugerir?",
+    "options": [
+      "Um possível problema de recebimento (clientes pagando mais devagar), que merece investigação além do simples crescimento de vendas",
+      "Que a empresa está automaticamente mais lucrativa",
+      "Que não existe nenhuma relação entre essas duas contas",
+      "Que o CMV da empresa caiu proporcionalmente"
+    ],
+    "correctAnswer": "Um possível problema de recebimento (clientes pagando mais devagar), que merece investigação além do simples crescimento de vendas",
+    "explanation": "Quando Contas a Receber cresce muito mais rápido que a Receita, é um sinal clássico de que o prazo médio de recebimento está aumentando — os clientes podem estar demorando mais para pagar, o que pode indicar um problema de crédito ou cobrança.",
+    "pacciTip": "Receita e Contas a Receber deveriam crescer de forma parecida, piccolo! Descompasso grande merece uma segunda olhada.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-042",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um analista está revisando a análise vertical da DRE de um cliente e percebe que 'Despesas Financeiras' representa 22% da Receita Líquida, bem acima da média do setor.",
+    "question": "Qual é um bom próximo passo diante desse percentual de despesa financeira fora do padrão?",
+    "options": [
+      "Investigar se a empresa está excessivamente endividada ou pagando juros elevados, e discutir isso com o cliente como ponto de atenção",
+      "Ignorar, já que despesas financeiras nunca são relevantes para a saúde da empresa",
+      "Assumir automaticamente que há fraude na contabilização dos juros",
+      "Reclassificar a despesa para outra conta, só para reduzir o percentual"
+    ],
+    "correctAnswer": "Investigar se a empresa está excessivamente endividada ou pagando juros elevados, e discutir isso com o cliente como ponto de atenção",
+    "explanation": "Uma despesa financeira muito acima da média setorial é um sinal relevante de possível endividamento excessivo ou condições de crédito ruins — vale a pena investigar e trazer essa informação ao cliente como um ponto de atenção real.",
+    "pacciTip": "Despesa financeira fora do padrão conta uma história sobre dívida, tesoro! Vale a pena ouvir essa história.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-043",
+    "level": "cont_analista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que calcular cada conta como percentual de uma base comum (como a Receita Líquida na DRE) revela o peso relativo de cada item num único período.",
+    "question": "Digite o tipo de análise (uma palavra) que calcula cada item como percentual de uma base comum:",
+    "correctAnswer": "vertical",
+    "explanation": "Análise vertical calcula cada item como percentual de uma base comum num único período — revela a composição e o peso relativo de cada conta.",
+    "pacciTip": "Vertical de novo, piccolo! Essa palavra e a 'horizontal' são as duas ferramentas básicas de qualquer analista.",
+    "topic": "analise_balancete"
+  },
+  {
+    "id": "CONT-ANL-044",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, ao analisar o ciclo de 'contas a pagar', o analista também confere se os pagamentos efetuados têm nota fiscal correspondente arquivada.",
+    "question": "Por que essa conferência (pagamento x nota fiscal) faz parte da revisão do ciclo de contas a pagar?",
+    "options": [
+      "Porque garante que todo pagamento feito tem um documento que sustenta sua natureza e legitimidade, fechando o ciclo de forma consistente",
+      "Porque notas fiscais nunca têm relação com pagamentos efetuados",
+      "Porque essa conferência só é necessária uma vez por ano",
+      "Porque pagamentos sem nota fiscal são sempre proibidos por lei, sem exceção"
+    ],
+    "correctAnswer": "Porque garante que todo pagamento feito tem um documento que sustenta sua natureza e legitimidade, fechando o ciclo de forma consistente",
+    "explanation": "O ciclo de contas a pagar só está realmente 'fechado' quando cada pagamento tem seu documento comprobatório correspondente — essa conferência cruzada é o que garante a integridade do ciclo como um todo.",
+    "pacciTip": "Pagamento sem nota é um ciclo com uma ponta solta, tesoro! A revisão por ciclo pega exatamente isso.",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-045",
+    "level": "cont_analista",
+    "type": "ordering",
+    "scenario": "Você está testando a consistência do ciclo de imobilizado de um cliente, desde a aquisição de um bem até sua depreciação mensal.",
+    "question": "Ordene o teste de consistência do ciclo de Ativo Imobilizado:",
+    "options": [
+      "Confirmar que o bem foi corretamente registrado na ficha de ativo, com valor e vida útil definidos",
+      "Verificar se a depreciação mensal está sendo calculada e lançada conforme a taxa esperada",
+      "Checar se o valor contábil líquido do bem está consistente com a ficha",
+      "Validar que uma eventual baixa ou venda do bem foi corretamente registrada"
+    ],
+    "correctAnswer": [
+      "Confirmar que o bem foi corretamente registrado na ficha de ativo, com valor e vida útil definidos",
+      "Verificar se a depreciação mensal está sendo calculada e lançada conforme a taxa esperada",
+      "Checar se o valor contábil líquido do bem está consistente com a ficha",
+      "Validar que uma eventual baixa ou venda do bem foi corretamente registrada"
+    ],
+    "explanation": "Registro inicial, depreciação mensal, valor líquido consistente, e baixa/venda corretamente tratada — esse teste de consistência acompanha o bem do início ao fim do seu ciclo de vida contábil.",
+    "pacciTip": "Ciclo de ativo acompanha o bem do nascimento até a baixa, piccolo! Testar cada etapa evita surpresas.",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-046",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um analista percebe que, no ciclo de estoque de um cliente, o valor de compras registradas é bem maior do que o aumento real do estoque físico no período, sem explicação de vendas suficientes para justificar.",
+    "question": "Qual é uma hipótese razoável a investigar diante dessa inconsistência no ciclo de estoque?",
+    "options": [
+      "Pode haver perdas não registradas, erro de contagem, ou vendas não lançadas corretamente — qualquer uma dessas hipóteses merece ser checada",
+      "É sempre sinal de que a empresa está prosperando rapidamente",
+      "Não existe nenhuma explicação possível para esse tipo de diferença",
+      "A diferença sempre se resolve sozinha no mês seguinte, sem necessidade de investigação"
+    ],
+    "correctAnswer": "Pode haver perdas não registradas, erro de contagem, ou vendas não lançadas corretamente — qualquer uma dessas hipóteses merece ser checada",
+    "explanation": "Uma inconsistência no ciclo de estoque (compras muito maiores que o aumento físico, sem vendas suficientes) pode ter várias causas — perdas, erro de contagem, vendas não lançadas — e cada uma merece ser investigada antes de se chegar a uma conclusão.",
+    "pacciTip": "Inconsistência no ciclo de estoque tem várias explicações possíveis, tesoro! Investiga antes de concluir qualquer uma.",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-047",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que o contador menciona tanto a importância de revisar 'ciclos' (compras, vendas, folha) e não só contas isoladas.",
+    "question": "Qual é a vantagem central de uma revisão orientada a ciclos, em vez de conta por conta isoladamente?",
+    "options": [
+      "Revela inconsistências que só aparecem quando se olha a conexão entre etapas diferentes de um mesmo processo de negócio",
+      "Revisão por ciclo é sempre mais rápida do que revisar conta por conta",
+      "Revisão por ciclo nunca encontra nenhum problema real",
+      "Não existe diferença prática entre revisar por ciclo ou por conta isolada"
+    ],
+    "correctAnswer": "Revela inconsistências que só aparecem quando se olha a conexão entre etapas diferentes de um mesmo processo de negócio",
+    "explanation": "Uma conta isolada pode parecer perfeitamente normal — o problema só aparece quando se conecta com as etapas relacionadas (pedido, nota, pagamento, por exemplo). Revisão por ciclo captura esse tipo de inconsistência estrutural.",
+    "pacciTip": "O problema às vezes só aparece na conexão entre as peças, piccolo! Por isso revisar por ciclo vale tanto a pena.",
+    "topic": "ciclos_contabeis"
+  },
+  {
+    "id": "CONT-ANL-048",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, mesmo tendo lucro positivo na DRE, o Patrimônio Líquido dele no Balanço não aumentou na mesma proporção.",
+    "question": "Qual demonstração ajuda a explicar exatamente essa relação entre o lucro apurado e a mudança no Patrimônio Líquido?",
+    "options": [
+      "Demonstração das Mutações do Patrimônio Líquido (DMPL)",
+      "Demonstração dos Fluxos de Caixa (DFC)",
+      "Notas Explicativas, isoladamente",
+      "Balanço Patrimonial do ano anterior apenas"
+    ],
+    "correctAnswer": "Demonstração das Mutações do Patrimônio Líquido (DMPL)",
+    "explanation": "A DMPL detalha exatamente essa relação — mostra como o lucro do período impactou o PL, e se houve distribuição de dividendos ou outros movimentos que explicam por que o aumento do PL não foi idêntico ao lucro apurado.",
+    "pacciTip": "DMPL é quem explica pra onde foi o lucro dentro do Patrimônio Líquido, tesoro!",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-049",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se as Notas Explicativas são realmente necessárias, ou se são só um 'adicional' sem muita importância prática.",
+    "question": "Por que as Notas Explicativas são consideradas parte integrante das demonstrações contábeis, não um extra opcional?",
+    "options": [
+      "Porque fornecem contexto essencial (critérios usados, riscos, detalhamento) sem o qual os números das demonstrações podem ser mal interpretados",
+      "Porque são apenas uma formalidade decorativa, sem nenhuma utilidade real",
+      "Porque substituem completamente a necessidade do Balanço Patrimonial",
+      "Porque só são exigidas para empresas com mais de 10 anos de existência"
+    ],
+    "correctAnswer": "Porque fornecem contexto essencial (critérios usados, riscos, detalhamento) sem o qual os números das demonstrações podem ser mal interpretados",
+    "explanation": "As Notas Explicativas dão contexto que os números sozinhos não transmitem — um número sem o contexto certo pode ser mal interpretado por quem lê o relatório, por isso elas são parte integrante, não um extra opcional.",
+    "pacciTip": "Número sem contexto pode enganar, piccolo! As Notas Explicativas são o contexto que falta.",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-050",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que a Demonstração do Resultado de sua empresa separa 'Resultado Operacional' de 'Resultado Financeiro' e de itens não-recorrentes.",
+    "question": "Qual é o valor analítico dessa separação dentro da DRE?",
+    "options": [
+      "Permite entender separadamente quanto a empresa ganha com sua operação principal, quanto vem de efeitos financeiros, e o que é pontual/não-recorrente",
+      "Não existe valor analítico real nessa separação, é só uma formalidade",
+      "A separação serve apenas para confundir quem lê o relatório",
+      "Essa separação só é obrigatória para empresas com capital aberto"
+    ],
+    "correctAnswer": "Permite entender separadamente quanto a empresa ganha com sua operação principal, quanto vem de efeitos financeiros, e o que é pontual/não-recorrente",
+    "explanation": "Separar o resultado operacional do financeiro e de itens não-recorrentes permite entender a verdadeira saúde do negócio principal — sem essa separação, um ganho financeiro pontual poderia mascarar uma operação deficitária, por exemplo.",
+    "pacciTip": "Separar as fontes do resultado é entender de onde o dinheiro realmente vem, tesoro!",
+    "topic": "demonstracoes_contabeis"
+  },
+  {
+    "id": "CONT-ANL-051",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa tem Passivo Circulante de R$ 100.000, mas apenas R$ 30.000 em Caixa e equivalentes, sem contas a receber relevantes no curto prazo.",
+    "question": "O que essa situação sugere sobre a liquidez imediata dessa empresa?",
+    "options": [
+      "Uma possível fragilidade de liquidez — recursos imediatamente disponíveis cobrem só uma fração das obrigações de curto prazo",
+      "Uma situação financeira excelente, sem nenhum motivo de preocupação",
+      "Não é possível tirar nenhuma conclusão com essas informações",
+      "A empresa certamente está em processo de falência"
+    ],
+    "correctAnswer": "Uma possível fragilidade de liquidez — recursos imediatamente disponíveis cobrem só uma fração das obrigações de curto prazo",
+    "explanation": "Com R$ 30.000 disponíveis contra R$ 100.000 de obrigações de curto prazo, a empresa pode ter dificuldade real de honrar compromissos imediatos — um sinal de alerta de liquidez que merece atenção, embora não seja necessariamente falência iminente.",
+    "pacciTip": "Caixa bem menor que as obrigações de curto prazo é um sinal pra ficar de olho, piccolo!",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-052",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Duas empresas do mesmo setor têm a mesma Receita, mas uma tem margem líquida de 5% e a outra de 15%.",
+    "question": "O que essa diferença de margem líquida, com receita igual, geralmente indica?",
+    "options": [
+      "Diferenças na eficiência de custos e despesas entre as duas empresas, não na capacidade de vender",
+      "Que a empresa com margem menor vendeu menos produtos",
+      "Que as duas empresas têm exatamente o mesmo nível de eficiência",
+      "Que a margem líquida nunca tem relação com custos ou despesas"
+    ],
+    "correctAnswer": "Diferenças na eficiência de custos e despesas entre as duas empresas, não na capacidade de vender",
+    "explanation": "Com receita igual, a diferença de margem líquida reflete diferenças em como cada empresa gerencia seus custos e despesas — a capacidade de vender é a mesma, mas a eficiência em converter venda em lucro é bem diferente.",
+    "pacciTip": "Vender igual não significa lucrar igual, tesoro! A margem conta a história da eficiência.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-053",
+    "level": "cont_analista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que a diferença entre o que a empresa tem investido em estoque e contas a receber, menos o que consegue financiar com fornecedores, mede quanto capital a operação do dia a dia exige.",
+    "question": "Digite a sigla (3 letras) desse indicador de capital de giro operacional:",
+    "correctAnswer": "NCG",
+    "explanation": "NCG = Necessidade de Capital de Giro, o indicador que mede quanto capital a operação do dia a dia (estoque, contas a receber, menos fornecedores) exige da empresa.",
+    "pacciTip": "NCG é a sigla que explica por que crescer às vezes exige mais capital, piccolo!",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-054",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, além da liquidez corrente, o analista também calcula a 'liquidez seca', excluindo o estoque do cálculo.",
+    "question": "Por que excluir o estoque pode dar uma visão mais conservadora da liquidez de curto prazo?",
+    "options": [
+      "Porque o estoque pode não ser convertido rapidamente em dinheiro (depende de venda), então excluí-lo mostra a capacidade de pagamento com ativos mais líquidos",
+      "Porque o estoque nunca tem valor contábil relevante",
+      "Porque a liquidez seca sempre é um indicador menos confiável que a corrente",
+      "Porque excluir o estoque sempre aumenta o índice de liquidez"
+    ],
+    "correctAnswer": "Porque o estoque pode não ser convertido rapidamente em dinheiro (depende de venda), então excluí-lo mostra a capacidade de pagamento com ativos mais líquidos",
+    "explanation": "A liquidez seca (Ativo Circulante menos Estoque, dividido pelo Passivo Circulante) é mais conservadora porque remove um ativo que depende de ser vendido para virar dinheiro — mostra a capacidade de pagamento com recursos já líquidos ou quase líquidos.",
+    "pacciTip": "Liquidez seca é a versão 'sem otimismo' da liquidez corrente, tesoro! Tira o estoque da conta.",
+    "topic": "analise_financeira"
+  },
+  {
+    "id": "CONT-ANL-055",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa prestadora de serviços (sem estoque de mercadorias) está decidindo se migra do Lucro Presumido para o Lucro Real, já que sua margem de lucro real é historicamente baixa.",
+    "question": "Qual seria um argumento técnico razoável a favor de considerar essa migração?",
+    "options": [
+      "Se a margem real é consistentemente menor que a margem presumida pela lei para o Lucro Presumido, o Lucro Real pode resultar em menos imposto pago",
+      "Migrar de regime nunca afeta o valor final de imposto pago",
+      "O Lucro Real é sempre pior financeiramente do que o Presumido, sem exceção",
+      "A decisão de regime tributário não deveria considerar a margem de lucro da empresa"
+    ],
+    "correctAnswer": "Se a margem real é consistentemente menor que a margem presumida pela lei para o Lucro Presumido, o Lucro Real pode resultar em menos imposto pago",
+    "explanation": "Quando a margem real de uma empresa é consistentemente menor do que a margem presumida pela legislação, ela pode estar pagando mais imposto no Presumido do que pagaria no Real — um bom motivo técnico para avaliar a migração com cuidado.",
+    "pacciTip": "Margem real baixa é um sinal pra comparar os regimes com calma, piccolo! Pode valer a pena migrar.",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-056",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa do Lucro Real teve prejuízo fiscal em um ano, e no ano seguinte teve lucro — mas só uma parte desse lucro pode ser 'abatida' pelo prejuízo anterior.",
+    "question": "Esse mecanismo de usar prejuízo de anos anteriores para reduzir o imposto de um ano com lucro é chamado de:",
+    "options": [
+      "Compensação de prejuízo fiscal",
+      "Adição no LALUR",
+      "Retenção na fonte",
+      "Substituição tributária"
+    ],
+    "correctAnswer": "Compensação de prejuízo fiscal",
+    "explanation": "A compensação de prejuízo fiscal permite usar prejuízos de períodos anteriores para reduzir a base de cálculo do imposto num período com lucro, normalmente limitada a um percentual do lucro do ano (trava de 30%, por exemplo).",
+    "pacciTip": "Prejuízo de ontem pode aliviar o imposto de hoje, tesoro, dentro do limite permitido!",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-057",
+    "level": "cont_analista",
+    "type": "ordering",
+    "scenario": "Um cliente está avaliando, com ajuda do escritório, se deve migrar de regime tributário no próximo ano.",
+    "question": "Ordene o processo de análise para uma decisão de mudança de regime tributário:",
+    "options": [
+      "Levantar o histórico de faturamento e margem real da empresa",
+      "Simular o valor de imposto devido em cada regime tributário possível",
+      "Comparar os resultados simulados, considerando também obrigações acessórias de cada regime",
+      "Apresentar a recomendação ao cliente com a justificativa técnica"
+    ],
+    "correctAnswer": [
+      "Levantar o histórico de faturamento e margem real da empresa",
+      "Simular o valor de imposto devido em cada regime tributário possível",
+      "Comparar os resultados simulados, considerando também obrigações acessórias de cada regime",
+      "Apresentar a recomendação ao cliente com a justificativa técnica"
+    ],
+    "explanation": "Levantar dados reais, simular cada regime, comparar considerando todos os fatores (não só o valor do imposto), e apresentar com justificativa — essa é a sequência de uma análise tributária responsável, não um 'achismo'.",
+    "pacciTip": "Decisão de regime tributário merece simulação de verdade, piccolo, não só intuição!",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-058",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se a 'substituição tributária' significa que ele está isento de pagar determinado imposto.",
+    "question": "O que realmente significa a substituição tributária, de forma resumida?",
+    "options": [
+      "Um terceiro da cadeia (geralmente o fabricante ou importador) recolhe antecipadamente o imposto que seria devido pelas etapas seguintes, não uma isenção",
+      "Significa que a empresa está completamente isenta daquele imposto",
+      "Significa que o imposto nunca mais precisa ser considerado por ninguém na cadeia",
+      "É um benefício fiscal disponível apenas para o Simples Nacional"
+    ],
+    "correctAnswer": "Um terceiro da cadeia (geralmente o fabricante ou importador) recolhe antecipadamente o imposto que seria devido pelas etapas seguintes, não uma isenção",
+    "explanation": "Na substituição tributária, um elo da cadeia (geralmente o fabricante/importador) recolhe antecipadamente o imposto que seria devido pelas etapas seguintes de venda — não é uma isenção, é uma antecipação de recolhimento.",
+    "pacciTip": "Substituição tributária é 'alguém paga antes por todo mundo', tesoro, não 'ninguém paga'!",
+    "topic": "tributos_impactos"
+  },
+  {
+    "id": "CONT-ANL-059",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório recebe uma intimação fiscal pedindo esclarecimentos sobre uma divergência entre o SPED Contábil e o SPED Fiscal de um cliente.",
+    "question": "Por que esse tipo de divergência entre diferentes módulos do SPED é algo sério a resolver rapidamente?",
+    "options": [
+      "Porque o fisco cruza automaticamente as informações entre os módulos, e uma divergência não resolvida pode evoluir para uma autuação formal",
+      "Porque intimações fiscais nunca têm prazo para resposta",
+      "Porque divergências no SPED nunca têm consequência prática real",
+      "Porque o SPED Contábil e o Fiscal nunca são comparados pelo fisco"
+    ],
+    "correctAnswer": "Porque o fisco cruza automaticamente as informações entre os módulos, e uma divergência não resolvida pode evoluir para uma autuação formal",
+    "explanation": "O cruzamento automático de informações entre diferentes declarações do SPED é uma das formas mais comuns do fisco identificar inconsistências — ignorar uma intimação sobre isso pode evoluir rapidamente para uma autuação com multa.",
+    "pacciTip": "Intimação sobre divergência no SPED não é pra ignorar, piccolo! O fisco já está de olho nisso.",
+    "topic": "obrigacoes_acessorias"
+  },
+  {
+    "id": "CONT-ANL-060",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório usa um software que gera automaticamente um alerta sempre que uma obrigação acessória está a 5 dias do vencimento e ainda não foi entregue.",
+    "question": "Qual é o benefício desse tipo de automação para a gestão de obrigações acessórias?",
+    "options": [
+      "Reduz a dependência da memória humana, dando um alerta sistemático antes que o prazo se torne crítico",
+      "Elimina completamente a necessidade de qualquer responsável humano acompanhar prazos",
+      "Serve apenas como um recurso estético do software, sem utilidade prática",
+      "Só funciona corretamente para empresas do Lucro Real"
+    ],
+    "correctAnswer": "Reduz a dependência da memória humana, dando um alerta sistemático antes que o prazo se torne crítico",
+    "explanation": "Automação de alertas reduz o risco de depender só da memória da equipe — mas não substitui o acompanhamento humano responsável, só complementa com um sistema de segurança adicional antes do prazo apertar.",
+    "pacciTip": "Alerta automático é uma rede de segurança, tesoro, mas não substitui o acompanhamento humano!",
+    "topic": "obrigacoes_acessorias"
+  },
+  {
+    "id": "CONT-ANL-061",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório implementa uma política de que todo lançamento acima de R$ 10.000 precisa de aprovação de um analista sênior antes de ser efetivado.",
+    "question": "Esse tipo de política, baseada num limite de valor para exigir aprovação adicional, é um exemplo de:",
+    "options": [
+      "Controle baseado em alçada (limite de valor que define o nível de aprovação necessário)",
+      "Segregação de funções",
+      "Análise horizontal",
+      "Regime de competência"
+    ],
+    "correctAnswer": "Controle baseado em alçada (limite de valor que define o nível de aprovação necessário)",
+    "explanation": "Um controle de alçada define limites de valor que determinam quem precisa aprovar uma operação — operações maiores exigem aprovação de nível mais alto, um mecanismo clássico de controle interno para operações relevantes.",
+    "pacciTip": "Alçada é o 'quanto maior o valor, mais olhos precisa', piccolo!",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-062",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório percebe que um mesmo tipo de erro de digitação em valores vem se repetindo entre diferentes assistentes, mesmo depois de treinamento individual.",
+    "question": "Diante de um erro recorrente que sobrevive a treinamentos individuais, qual abordagem de controle interno tende a ser mais eficaz?",
+    "options": [
+      "Investigar se existe uma falha estrutural no processo ou sistema (ex: um campo confuso, falta de validação automática) em vez de insistir só em mais treinamento",
+      "Continuar repetindo o mesmo treinamento individual indefinidamente, sem mudar nada no processo",
+      "Demitir os assistentes envolvidos, assumindo que o problema é só de competência pessoal",
+      "Ignorar o padrão, já que erros de digitação nunca têm causa estrutural"
+    ],
+    "correctAnswer": "Investigar se existe uma falha estrutural no processo ou sistema (ex: um campo confuso, falta de validação automática) em vez de insistir só em mais treinamento",
+    "explanation": "Quando um erro sobrevive a treinamento individual repetido, geralmente há uma causa estrutural (processo confuso, falta de validação) — atacar a causa raiz no processo costuma ser mais eficaz do que insistir indefinidamente em treinar pessoas.",
+    "pacciTip": "Erro que resiste a treinamento pede uma olhada no processo, não só na pessoa, tesoro!",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-063",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que o escritório sempre guarda cópias de segurança (backup) de toda a documentação e dos lançamentos contábeis.",
+    "question": "Qual risco operacional a prática de backup regular ajuda a mitigar?",
+    "options": [
+      "A perda de informações críticas por falha técnica, acidente ou outro imprevisto, que poderia comprometer gravemente a continuidade do trabalho contábil",
+      "Não existe risco real relacionado à ausência de backup",
+      "Backup serve apenas para cumprir uma formalidade sem utilidade prática",
+      "Backup só é relevante para empresas de tecnologia"
+    ],
+    "correctAnswer": "A perda de informações críticas por falha técnica, acidente ou outro imprevisto, que poderia comprometer gravemente a continuidade do trabalho contábil",
+    "explanation": "Backup regular é uma proteção contra a perda de dados críticos — sem ele, uma falha técnica ou acidente poderia apagar meses (ou anos) de trabalho contábil, comprometendo gravemente a continuidade da operação do escritório e dos clientes.",
+    "pacciTip": "Backup é o seguro contra o pior cenário, piccolo! Nunca se sabe quando vai precisar.",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-064",
+    "level": "cont_analista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que limites de valor que determinam qual nível hierárquico precisa aprovar uma operação são chamados de 'alçada'.",
+    "question": "Digite a palavra (já vista nesta aula) que nomeia esse limite de valor para definir o nível de aprovação necessário:",
+    "correctAnswer": "alçada",
+    "explanation": "Alçada é o limite de valor (ou tipo de operação) que determina qual nível hierárquico tem autoridade para aprovar — quanto maior o valor envolvido, maior a alçada exigida.",
+    "pacciTip": "Alçada é sobre quem tem autoridade pra aprovar o quê, tesoro! Controle clássico de qualquer empresa organizada.",
+    "topic": "controles_internos"
+  },
+  {
+    "id": "CONT-ANL-065",
+    "level": "cont_analista",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do Nível de Analista Contábil, o analista resume que a diferença entre 'processar números corretamente' e 'entender o que os números significam' é o que distingue esse nível dos anteriores.",
+    "question": "Como essa distinção se conecta com tudo que foi estudado em análise de balancete, ciclos, demonstrações, indicadores, tributos e controles internos?",
+    "options": [
+      "Todas essas frentes exigem interpretar criticamente a informação contábil, identificando riscos e oportunidades que não são óbvios apenas olhando um único número isolado",
+      "Todas essas frentes são completamente independentes entre si, sem nenhuma conexão real",
+      "Essas frentes só importam para empresas de capital aberto",
+      "Interpretar números é desnecessário se os lançamentos já estiverem tecnicamente corretos"
+    ],
+    "correctAnswer": "Todas essas frentes exigem interpretar criticamente a informação contábil, identificando riscos e oportunidades que não são óbvios apenas olhando um único número isolado",
+    "explanation": "Análise de balancete, ciclos, demonstrações, indicadores financeiros, impactos tributários e controles internos — todas essas frentes convergem para uma mesma habilidade central: interpretar criticamente os números, não só processá-los corretamente.",
+    "pacciTip": "Esse é o nível em que você aprende a 'ler nas entrelinhas' dos números, piccolo! Parabéns por ter chegado até aqui.",
+    "topic": "controles_internos"
+  }
+]

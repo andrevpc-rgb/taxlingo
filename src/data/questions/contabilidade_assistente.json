@@ -1,0 +1,1356 @@
+[
+  {
+    "id": "CONT-ASS-001",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No fim de cada mês, o escritório segue uma sequência de passos — lançar tudo, conciliar, apropriar, revisar e só então liberar os relatórios — antes de considerar o mês 'fechado'.",
+    "question": "O que caracteriza o 'fechamento contábil mensal' como um processo, e não só uma data no calendário?",
+    "options": [
+      "É a sequência organizada de passos que garante que o resultado e o patrimônio do mês estejam completos e corretos antes de virar relatório oficial",
+      "É apenas o dia em que o sistema contábil bloqueia lançamentos antigos",
+      "É só uma formalidade sem relação com a qualidade da informação",
+      "É o nome de um relatório específico, sem nenhum processo por trás"
+    ],
+    "correctAnswer": "É a sequência organizada de passos que garante que o resultado e o patrimônio do mês estejam completos e corretos antes de virar relatório oficial",
+    "explanation": "O fechamento mensal é um processo — lançar, conciliar, apropriar, revisar — que transforma um amontoado de lançamentos soltos num conjunto de relatórios confiáveis sobre o mês.",
+    "pacciTip": "Fechamento não é um botão, piccolo, é um caminho com várias paradas obrigatórias!",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-002",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No dia 28, o escritório ainda não recebeu a nota fiscal de um serviço de manutenção já prestado em novembro, mas sabe o valor aproximado pelo orçamento aprovado.",
+    "question": "O que é 'apropriar' essa despesa, mesmo sem a nota em mãos?",
+    "options": [
+      "Reconhecer a despesa no mês de novembro (quando o serviço ocorreu), com base na melhor estimativa disponível, respeitando a competência",
+      "Esperar a nota chegar, nem que seja em março, e lançar só então",
+      "Ignorar a despesa até ter o documento físico em mãos",
+      "Lançar a despesa como receita, já que o valor ainda é uma estimativa"
+    ],
+    "correctAnswer": "Reconhecer a despesa no mês de novembro (quando o serviço ocorreu), com base na melhor estimativa disponível, respeitando a competência",
+    "explanation": "Apropriar é reconhecer o fato no período em que ele realmente ocorreu, mesmo sem o documento definitivo em mãos — a essência do regime de competência aplicada na prática do fechamento.",
+    "pacciTip": "O serviço já aconteceu, tesoro! A nota pode atrasar, mas a competência não espera.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-003",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "O aluguel do escritório compartilhado por três setores (Fiscal, Contábil e Pessoal) precisa ser dividido entre os centros de custo de cada um.",
+    "question": "Por que dividir (ratear) essa despesa entre os setores, em vez de lançar tudo num só centro de custo?",
+    "options": [
+      "Porque cada setor se beneficia do espaço, e o rateio reflete melhor o custo real de operar cada área",
+      "Porque a lei exige rateio para qualquer despesa compartilhada",
+      "Porque ratear sempre reduz o valor total da despesa",
+      "Porque sem rateio o aluguel não pode ser lançado de forma alguma"
+    ],
+    "correctAnswer": "Porque cada setor se beneficia do espaço, e o rateio reflete melhor o custo real de operar cada área",
+    "explanation": "O rateio distribui uma despesa compartilhada entre quem efetivamente se beneficia dela, segundo um critério razoável (ex: metragem ocupada, nº de funcionários) — isso dá uma visão mais precisa do custo de cada centro.",
+    "pacciTip": "Rateio é dividir o bolo conforme quem realmente comeu uma fatia, piccolo!",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-004",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "Você está treinando um novo assistente no checklist padrão de fechamento mensal do escritório.",
+    "question": "Ordene a sequência típica de um checklist de fechamento contábil mensal:",
+    "options": [
+      "Garantir que todos os lançamentos de rotina do mês foram feitos",
+      "Realizar as conciliações (bancária, de contas a pagar/receber)",
+      "Lançar apropriações e provisões pendentes",
+      "Revisar saldos e investigar variações inesperadas",
+      "Liberar os relatórios finais do período"
+    ],
+    "correctAnswer": [
+      "Garantir que todos os lançamentos de rotina do mês foram feitos",
+      "Realizar as conciliações (bancária, de contas a pagar/receber)",
+      "Lançar apropriações e provisões pendentes",
+      "Revisar saldos e investigar variações inesperadas",
+      "Liberar os relatórios finais do período"
+    ],
+    "explanation": "Rotina completa, conciliações feitas, apropriações lançadas, saldos revisados, e só então os relatórios saem — pular uma etapa dessas é abrir espaço para erro no resultado final.",
+    "pacciTip": "Checklist de fechamento é como receita de bolo, tesoro! Pular um passo estraga o resultado.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-005",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente novo lança uma despesa de consultoria só quando a nota fiscal chega, mesmo que o serviço já tenha sido prestado dois meses antes.",
+    "question": "Qual é o risco contábil dessa prática de esperar o documento chegar para reconhecer qualquer despesa?",
+    "options": [
+      "O resultado de cada mês fica distorcido, já que despesas aparecem no mês errado, não no mês em que realmente ocorreram",
+      "Não existe risco nenhum, já que o valor total do ano continua o mesmo",
+      "A prática é sempre a mais correta, independente da competência",
+      "O risco só existe se a empresa for do Lucro Real"
+    ],
+    "correctAnswer": "O resultado de cada mês fica distorcido, já que despesas aparecem no mês errado, não no mês em que realmente ocorreram",
+    "explanation": "Mesmo que o total anual 'feche' corretamente, cada mês individual fica com um resultado artificial — um mês parece melhor do que foi, outro parece pior, prejudicando qualquer análise mensal.",
+    "pacciTip": "Competência errada não muda o total do ano, mas bagunça a história de cada mês, piccolo!",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-006",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No fechamento, o assistente reconhece a despesa de energia elétrica de dezembro mesmo que a fatura só chegue em janeiro, baseado no consumo médio histórico.",
+    "question": "Digite a palavra (já vista no nível anterior) que nomeia esse reconhecimento antecipado de uma despesa, mesmo sem o documento definitivo:",
+    "correctAnswer": "apropriação",
+    "explanation": "Apropriação é o reconhecimento de uma despesa (ou receita) no período correto de competência, mesmo que o documento formal só chegue depois.",
+    "pacciTip": "Apropriação de novo, tesoro! Essa palavra vai te acompanhar em todo fechamento que você fizer.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-007",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa com duas filiais compartilha o custo de um sistema de gestão (ERP) entre elas, proporcionalmente ao número de usuários de cada filial.",
+    "question": "O critério 'número de usuários' usado nesse rateio é um exemplo de:",
+    "options": [
+      "Um critério de rateio razoável, que reflete o uso real do recurso compartilhado por cada filial",
+      "Um critério proibido por lei para qualquer tipo de rateio",
+      "Um critério que só pode ser usado para despesas de pessoal",
+      "Um critério aleatório, sem nenhuma lógica contábil"
+    ],
+    "correctAnswer": "Um critério de rateio razoável, que reflete o uso real do recurso compartilhado por cada filial",
+    "explanation": "Um bom critério de rateio reflete o uso efetivo do recurso — número de usuários do sistema é um proxy razoável para medir o quanto cada filial se beneficia do ERP compartilhado.",
+    "pacciTip": "Critério de rateio bom é aquele que faz sentido pra quem olha de fora, piccolo! Número de usuários é um ótimo exemplo.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-008",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente revisando o checklist de fechamento pergunta se 'atualizar o cadastro de clientes novos no CRM' faz parte do fechamento contábil mensal.",
+    "question": "Por que essa tarefa, embora importante para a empresa, NÃO faz parte do checklist de fechamento contábil?",
+    "options": [
+      "Porque não afeta diretamente os saldos contábeis ou o resultado do período — é uma tarefa administrativa de outra natureza",
+      "Porque cadastro de clientes é sempre proibido durante o fechamento",
+      "Porque toda tarefa do escritório faz parte do fechamento, sem exceção",
+      "Porque CRM é incompatível com sistemas contábeis"
+    ],
+    "correctAnswer": "Porque não afeta diretamente os saldos contábeis ou o resultado do período — é uma tarefa administrativa de outra natureza",
+    "explanation": "O checklist de fechamento foca no que impacta os saldos e o resultado contábil do período — tarefas administrativas sem relação direta com isso, mesmo que importantes, ficam fora dele.",
+    "pacciTip": "Nem toda tarefa do escritório é tarefa de fechamento, tesoro! Foca no que mexe com números.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-009",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "Um colega pergunta como você decide, na prática, se uma variação de saldo encontrada durante a revisão do fechamento precisa ser investigada ou pode ser ignorada.",
+    "question": "Ordene o raciocínio para avaliar uma variação de saldo durante o fechamento:",
+    "options": [
+      "Comparar o saldo atual com o saldo do mês anterior (ou com o esperado)",
+      "Avaliar se a diferença é relevante (materialidade) dado o porte da empresa",
+      "Se for relevante, investigar a causa antes de liberar o relatório",
+      "Documentar a explicação encontrada, mesmo que a variação seja normal"
+    ],
+    "correctAnswer": [
+      "Comparar o saldo atual com o saldo do mês anterior (ou com o esperado)",
+      "Avaliar se a diferença é relevante (materialidade) dado o porte da empresa",
+      "Se for relevante, investigar a causa antes de liberar o relatório",
+      "Documentar a explicação encontrada, mesmo que a variação seja normal"
+    ],
+    "explanation": "Comparar, avaliar relevância, investigar se necessário, e documentar o achado — esse fluxo evita tanto ignorar um erro real quanto perder tempo investigando uma variação sem importância.",
+    "pacciTip": "Nem toda variação é um problema, piccolo, mas toda variação relevante merece uma explicação registrada!",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-010",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Depois do fechamento de outubro já estar liberado, chega uma nota fiscal de um serviço prestado em outubro, mas com valor bem diferente do que foi estimado na apropriação.",
+    "question": "Qual é a prática mais correta diante dessa diferença relevante, descoberta após o fechamento já liberado?",
+    "options": [
+      "Avaliar o impacto e, se for relevante, fazer um ajuste formal (retificação), documentando o motivo, em vez de simplesmente lançar a diferença no mês corrente sem explicação",
+      "Ignorar a diferença, já que o mês já está fechado e não pode ser mais tocado",
+      "Lançar a diferença inteira como receita do mês atual, sem relação com outubro",
+      "Reabrir outubro e apagar todos os lançamentos daquele mês"
+    ],
+    "correctAnswer": "Avaliar o impacto e, se for relevante, fazer um ajuste formal (retificação), documentando o motivo, em vez de simplesmente lançar a diferença no mês corrente sem explicação",
+    "explanation": "Uma diferença relevante descoberta depois do fechamento merece um ajuste documentado e rastreável — não um lançamento silencioso no mês seguinte nem a ilusão de que 'mês fechado não pode mais mudar'.",
+    "pacciTip": "Mês fechado não significa mês imutável pra sempre, tesoro! Ajuste relevante precisa de tratamento formal.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-011",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "O escritório usa um calendário compartilhado mostrando a data limite de fechamento de cada cliente, com alertas automáticos alguns dias antes.",
+    "question": "Qual é o principal benefício de manter um calendário de prazos de fechamento, em vez de confiar só na memória da equipe?",
+    "options": [
+      "Reduz o risco de atrasos e de fechamentos feitos às pressas, no 'susto', sem o cuidado necessário",
+      "Serve só para fins estéticos, sem utilidade real",
+      "Substitui completamente a necessidade de fazer o checklist de fechamento",
+      "Só é útil para escritórios com mais de 50 clientes"
+    ],
+    "correctAnswer": "Reduz o risco de atrasos e de fechamentos feitos às pressas, no 'susto', sem o cuidado necessário",
+    "explanation": "Um calendário de prazos visível ajuda a equipe a se planejar com antecedência — evita o cenário de 'fechamento corrido de última hora', que é quando mais erros costumam acontecer.",
+    "pacciTip": "Prazo lembrado com antecedência vira fechamento tranquilo, piccolo! Prazo esquecido vira correria.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-012",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente pergunta por que algumas empresas fazem um 'fechamento preliminar' alguns dias antes do 'fechamento definitivo'.",
+    "question": "Qual é a utilidade de ter uma etapa preliminar antes do fechamento final?",
+    "options": [
+      "Permite revisar e corrigir pendências com folga, antes do prazo final, reduzindo o risco de erros de última hora",
+      "O fechamento preliminar sempre substitui o definitivo, tornando este último desnecessário",
+      "Não existe diferença real entre os dois tipos de fechamento",
+      "O fechamento preliminar é proibido pela legislação contábil"
+    ],
+    "correctAnswer": "Permite revisar e corrigir pendências com folga, antes do prazo final, reduzindo o risco de erros de última hora",
+    "explanation": "Um fechamento preliminar funciona como um 'ensaio geral' — dá tempo de encontrar e corrigir problemas antes que o prazo real aperte, reduzindo erros de pressa no fechamento definitivo.",
+    "pacciTip": "Fechamento preliminar é o ensaio antes da estreia, tesoro! Dá tempo de corrigir o que não estava certo.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-013",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No resumo da aula, o analista explica: 'Antes de confiar em qualquer relatório final, sempre valide se o total do Ativo é igual ao total do Passivo mais Patrimônio Líquido — essa é a verificação mais básica de todas'.",
+    "question": "Digite o nome do relatório (balanço) onde essa igualdade Ativo = Passivo + PL deve sempre se confirmar:",
+    "correctAnswer": "balanço patrimonial",
+    "explanation": "O Balanço Patrimonial é onde essa equação fundamental (Ativo = Passivo + Patrimônio Líquido) sempre precisa fechar — é a verificação mais básica antes de liberar qualquer fechamento.",
+    "pacciTip": "Se o balanço não bate, nada mais deveria ser liberado, piccolo! Essa é a primeira verificação de todas.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-014",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "Antes de considerar os relatórios prontos para o cliente, o assistente faz uma validação final do balancete.",
+    "question": "Ordene os passos de uma validação final de balancete antes de liberar os relatórios:",
+    "options": [
+      "Conferir se o total de débitos é igual ao total de créditos",
+      "Verificar se o Ativo é igual ao Passivo mais Patrimônio Líquido",
+      "Checar se nenhuma conta ficou com saldo no sentido invertido sem explicação",
+      "Confirmar que todas as apropriações e provisões do mês foram lançadas"
+    ],
+    "correctAnswer": [
+      "Conferir se o total de débitos é igual ao total de créditos",
+      "Verificar se o Ativo é igual ao Passivo mais Patrimônio Líquido",
+      "Checar se nenhuma conta ficou com saldo no sentido invertido sem explicação",
+      "Confirmar que todas as apropriações e provisões do mês foram lançadas"
+    ],
+    "explanation": "Débito igual a crédito, balanço fechando, saldos no sentido certo, apropriações completas — essa sequência de validação é o que separa um balancete 'pronto' de um balancete 'parece pronto'.",
+    "pacciTip": "Validação final é a última chance de pegar um erro antes do cliente ver, tesoro! Não pula ela.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-015",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pequeno acha que 'fechamento mensal' é um exagero para o tamanho da empresa dele, já que ele só olha os números uma vez por ano.",
+    "question": "Qual seria um argumento honesto para explicar o valor do fechamento mensal, mesmo para uma empresa pequena?",
+    "options": [
+      "Fechar mensalmente evita que pequenos erros se acumulem ao longo do ano e permite decisões de gestão mais rápidas, não só uma 'foto' no fim do ano",
+      "Fechamento mensal é só uma exigência burocrática sem nenhum valor real",
+      "Fechamento mensal só faz sentido para empresas com mais de 100 funcionários",
+      "Não existe vantagem nenhuma em fechar mensalmente em vez de anualmente"
+    ],
+    "correctAnswer": "Fechar mensalmente evita que pequenos erros se acumulem ao longo do ano e permite decisões de gestão mais rápidas, não só uma 'foto' no fim do ano",
+    "explanation": "O fechamento mensal dá ao dono da empresa informação tempestiva pra decidir — esperar o ano inteiro pra descobrir um problema é tarde demais pra corrigir o rumo.",
+    "pacciTip": "Esperar o ano inteiro pra ver os números é dirigir de olhos fechados, piccolo! Fechamento mensal é o retrovisor sempre ligado.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-016",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Durante o fechamento, o assistente percebe que uma despesa de R$ 15.000 foi lançada na conta errada, mas uma de R$ 8 foi lançada com a data errada.",
+    "question": "Qual critério ajuda a decidir qual dos dois problemas merece atenção prioritária durante o fechamento?",
+    "options": [
+      "Materialidade — o valor de R$ 15.000 tem impacto relevante na análise, enquanto R$ 8 provavelmente não altera nenhuma decisão",
+      "A ordem alfabética do nome da conta envolvida",
+      "Sempre o problema que foi encontrado primeiro, independente do valor",
+      "O horário do dia em que cada erro foi identificado"
+    ],
+    "correctAnswer": "Materialidade — o valor de R$ 15.000 tem impacto relevante na análise, enquanto R$ 8 provavelmente não altera nenhuma decisão",
+    "explanation": "Materialidade é o critério que ajuda a priorizar: um erro de valor relevante merece correção imediata; um erro de valor insignificante, embora idealmente corrigido também, não deveria travar a liberação do fechamento.",
+    "pacciTip": "Nem todo erro pesa igual, tesoro! Materialidade ajuda a escolher a batalha certa pra lutar primeiro.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-017",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente, pressionado pelo prazo, pensa em pular a etapa de conciliação bancária 'só esse mês' para conseguir entregar o fechamento a tempo.",
+    "question": "Por que pular uma etapa do checklist, mesmo sob pressão de prazo, é uma prática arriscada?",
+    "options": [
+      "Porque etapas puladas são exatamente onde erros não detectados costumam se esconder, comprometendo a confiabilidade de todo o fechamento",
+      "Porque não existe risco nenhum em pular etapas ocasionalmente",
+      "Porque a conciliação bancária é a única etapa do checklist que realmente importa",
+      "Porque pular etapas sempre acelera o fechamento sem nenhuma desvantagem"
+    ],
+    "correctAnswer": "Porque etapas puladas são exatamente onde erros não detectados costumam se esconder, comprometendo a confiabilidade de todo o fechamento",
+    "explanation": "O checklist existe justamente para capturar erros que passariam despercebidos — pular uma etapa 'só dessa vez' é abrir uma brecha específica para o tipo de problema que aquela etapa foi desenhada pra encontrar.",
+    "pacciTip": "A etapa que você pula é sempre aquela que esconderia o erro, piccolo! Prazo apertado não é desculpa pra atalho.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-018",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No resumo da aula sobre fechamento, o analista explica que o critério usado para decidir se um erro ou diferença merece investigação detalhada é baseado no quanto ele pode influenciar a análise de quem lê o relatório.",
+    "question": "Digite a palavra (termo contábil) que nomeia esse critério de relevância:",
+    "correctAnswer": "materialidade",
+    "explanation": "Materialidade é o critério que avalia se uma diferença ou erro é relevante o suficiente para influenciar a análise de quem usa a informação contábil — guia onde investir o esforço de revisão.",
+    "pacciTip": "Materialidade é a bússola que te diz onde focar a energia de revisão, tesoro!",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-019",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um escritório decide documentar, mês a mês, cada ajuste relevante feito durante o fechamento, com a explicação do motivo.",
+    "question": "Qual é o benefício dessa prática de documentar cada ajuste relevante ao longo do tempo?",
+    "options": [
+      "Cria um histórico rastreável que facilita auditorias futuras e ajuda a entender padrões recorrentes de ajuste",
+      "Não traz nenhum benefício real, é apenas trabalho extra sem propósito",
+      "Serve só para cumprir uma exigência estética do sistema",
+      "Só tem utilidade se a empresa for auditada todo mês"
+    ],
+    "correctAnswer": "Cria um histórico rastreável que facilita auditorias futuras e ajuda a entender padrões recorrentes de ajuste",
+    "explanation": "Documentar ajustes relevantes cria uma trilha de auditoria natural — além de ajudar numa revisão futura, também revela padrões (ex: um fornecedor que sempre atrasa a nota) que podem virar melhorias de processo.",
+    "pacciTip": "Ajuste documentado hoje é resposta pronta pra pergunta de amanhã, piccolo!",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-020",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do módulo de Fechamento Contábil Mensal, o analista pergunta qual é a 'promessa' que um fechamento bem feito cumpre para quem vai usar os relatórios depois.",
+    "question": "Qual é essa promessa central de um fechamento contábil mensal bem executado?",
+    "options": [
+      "Os relatórios refletem, com razoável confiança, a real situação patrimonial e o resultado da empresa naquele período",
+      "Os relatórios estão sempre 100% livres de qualquer erro, sem exceção",
+      "Os relatórios servem apenas para fins de arquivo, sem uso prático",
+      "Os relatórios só são confiáveis se auditados por terceiros"
+    ],
+    "correctAnswer": "Os relatórios refletem, com razoável confiança, a real situação patrimonial e o resultado da empresa naquele período",
+    "explanation": "Um fechamento bem feito não promete perfeição absoluta, mas sim confiança razoável de que os relatórios refletem a realidade — exatamente o que todo o checklist, as conciliações e as apropriações constroem juntos.",
+    "pacciTip": "Confiança razoável é a meta, tesoro, não perfeição impossível! Um bom fechamento entrega exatamente isso.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-021",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um dos sócios da empresa cliente fez um empréstimo pessoal para a própria empresa, que precisa ser pago de volta no futuro.",
+    "question": "Como esse valor emprestado pelo sócio costuma ser classificado na contabilidade da empresa?",
+    "options": [
+      "Como um passivo (obrigação com sócios), já que a empresa deve esse valor de volta",
+      "Como receita da empresa",
+      "Como despesa do período",
+      "Como Capital Social adicional, automaticamente"
+    ],
+    "correctAnswer": "Como um passivo (obrigação com sócios), já que a empresa deve esse valor de volta",
+    "explanation": "Um empréstimo de sócio para a empresa gera uma obrigação de devolução — diferente de um aporte de capital, que não precisa ser devolvido, esse valor é registrado como passivo (conta corrente de sócios).",
+    "pacciTip": "Emprestou pra empresa? Isso é dívida da empresa com o sócio, piccolo, não é capital dele!",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-022",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Ao conciliar a conta 'Adiantamento a Sócios', você percebe que um sócio retirou dinheiro da empresa há 3 meses 'por conta' do pró-labore futuro, mas isso nunca foi formalizado.",
+    "question": "Por que é importante formalizar esse tipo de retirada como um adiantamento contábil, mesmo que o sócio tenha boas intenções?",
+    "options": [
+      "Porque sem o registro formal, a empresa perde o controle de quanto já foi retirado e corre o risco de distorcer o resultado e a posição patrimonial",
+      "Porque retiradas de sócios nunca precisam de nenhum registro contábil",
+      "Porque o valor deixa de existir contabilmente até ser formalizado",
+      "Porque isso é sempre tratado como receita da empresa"
+    ],
+    "correctAnswer": "Porque sem o registro formal, a empresa perde o controle de quanto já foi retirado e corre o risco de distorcer o resultado e a posição patrimonial",
+    "explanation": "Toda retirada de dinheiro por um sócio, mesmo informal, representa um direito da empresa de receber de volta (ou compensar) — não registrar isso esconde uma posição patrimonial real que existe, só não está documentada.",
+    "pacciTip": "Dinheiro que saiu sem registro é dinheiro que a contabilidade 'não sabe' que existe, tesoro! Sempre formaliza.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-023",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa provisiona, todo mês, uma estimativa de imposto que só será apurado e pago com certeza no mês seguinte.",
+    "question": "Por que provisionar esse imposto antes mesmo de saber o valor exato final?",
+    "options": [
+      "Porque reflete uma obrigação praticamente certa que já existe no período, mesmo que o valor final só seja confirmado depois",
+      "Porque provisionar impostos é sempre proibido pela contabilidade",
+      "Porque o valor provisionado nunca precisa ser ajustado depois",
+      "Porque provisões só existem para despesas de pessoal, nunca para impostos"
+    ],
+    "correctAnswer": "Porque reflete uma obrigação praticamente certa que já existe no período, mesmo que o valor final só seja confirmado depois",
+    "explanation": "Uma provisão reconhece uma obrigação que já existe e é praticamente certa, mesmo que o valor exato só seja confirmado mais tarde — o imposto do mês já é devido, só falta o número final.",
+    "pacciTip": "Provisão é reconhecer o que já é quase certeza, piccolo, mesmo antes do número fechar de vez!",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-024",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "Você está conciliando a conta 'Adiantamento a Fornecedores' de um cliente, que tem vários valores pagos antecipadamente por mercadorias ainda não entregues.",
+    "question": "Ordene o processo de conciliação da conta de adiantamento a fornecedores:",
+    "options": [
+      "Listar todos os adiantamentos pagos e ainda não baixados",
+      "Verificar quais mercadorias/serviços já foram efetivamente entregues/prestados",
+      "Baixar (zerar) o adiantamento correspondente ao que já foi entregue",
+      "Manter em aberto só o que ainda está genuinamente pendente de entrega"
+    ],
+    "correctAnswer": [
+      "Listar todos os adiantamentos pagos e ainda não baixados",
+      "Verificar quais mercadorias/serviços já foram efetivamente entregues/prestados",
+      "Baixar (zerar) o adiantamento correspondente ao que já foi entregue",
+      "Manter em aberto só o que ainda está genuinamente pendente de entrega"
+    ],
+    "explanation": "Listar, verificar o que já foi entregue, baixar o que corresponde, e manter em aberto só o realmente pendente — esse processo evita que a conta de adiantamentos vire um 'depósito' de valores esquecidos.",
+    "pacciTip": "Adiantamento esquecido vira bagunça na conta, tesoro! Conciliar é dar baixa no que já foi resolvido.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-025",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Ao revisar a conta 'Adiantamento a Fornecedores' de um cliente, você encontra um valor pago há 8 meses que nunca foi baixado, mesmo a mercadoria já tendo sido entregue há tempos.",
+    "question": "Qual é o problema de deixar esse adiantamento 'parado' na conta, mesmo depois da entrega já ter ocorrido?",
+    "options": [
+      "A conta fica com um saldo que não reflete mais a realidade — a empresa não tem mais nada 'a receber' daquele fornecedor sobre essa operação",
+      "Não existe problema nenhum em deixar adiantamentos antigos sem baixa",
+      "O adiantamento se transforma automaticamente em lucro depois de 6 meses",
+      "A mercadoria precisa ser devolvida ao fornecedor nesse caso"
+    ],
+    "correctAnswer": "A conta fica com um saldo que não reflete mais a realidade — a empresa não tem mais nada 'a receber' daquele fornecedor sobre essa operação",
+    "explanation": "Um adiantamento não baixado, mesmo após a entrega, infla artificialmente a conta — o saldo deveria refletir só o que genuinamente ainda está pendente, não operações já concluídas há meses.",
+    "pacciTip": "Adiantamento velho sem baixa é sujeira acumulada na conta, piccolo! Baixa assim que a mercadoria chega.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-026",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se é normal que a conta corrente de um dos sócios, na contabilidade da empresa, às vezes fique 'devedora' e às vezes 'credora' ao longo do tempo.",
+    "question": "Por que a conta corrente de sócios pode alternar entre devedora (sócio deve à empresa) e credora (empresa deve ao sócio)?",
+    "options": [
+      "Porque reflete o fluxo real de retiradas e aportes do sócio ao longo do tempo — pode variar conforme ele retira ou injeta dinheiro na empresa",
+      "Porque isso é sempre sinal de erro contábil grave",
+      "Porque a conta de sócios nunca pode ficar devedora, por lei",
+      "Porque esse tipo de conta não deveria existir na contabilidade"
+    ],
+    "correctAnswer": "Porque reflete o fluxo real de retiradas e aportes do sócio ao longo do tempo — pode variar conforme ele retira ou injeta dinheiro na empresa",
+    "explanation": "A conta corrente de sócios é dinâmica por natureza — quando o sócio retira mais do que aportou, fica devedora; quando empresta dinheiro à empresa, fica credora. Alternar é normal, desde que bem documentado.",
+    "pacciTip": "Conta de sócio é um vaivém natural, tesoro! O importante é que cada movimento esteja documentado.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-027",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Durante a revisão mensal, o assistente percebe que a provisão de um processo judicial trabalhista não foi ajustada há 6 meses, mesmo o valor estimado pelo advogado tendo mudado.",
+    "question": "Por que é importante revisar periodicamente o valor de uma provisão, e não só lançá-la uma vez e esquecer?",
+    "options": [
+      "Porque a estimativa da obrigação pode mudar ao longo do tempo, e a provisão deve refletir a melhor estimativa disponível em cada momento",
+      "Porque provisões, uma vez lançadas, nunca podem ser alteradas",
+      "Porque revisar provisões é opcional e raramente necessário",
+      "Porque o valor da provisão é sempre fixo por lei, independente do processo"
+    ],
+    "correctAnswer": "Porque a estimativa da obrigação pode mudar ao longo do tempo, e a provisão deve refletir a melhor estimativa disponível em cada momento",
+    "explanation": "Uma provisão não é 'lançar e esquecer' — ela precisa ser revisada periodicamente para continuar refletindo a melhor estimativa disponível, especialmente quando novas informações (como um parecer jurídico atualizado) surgem.",
+    "pacciTip": "Provisão é uma estimativa viva, piccolo! Atualiza sempre que a informação muda.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-028",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que a conta usada para registrar valores retirados ou emprestados entre a empresa e seus sócios é chamada de 'conta corrente de' quem?",
+    "question": "Complete: 'conta corrente de _______', a conta que controla as movimentações financeiras entre a empresa e seus sócios:",
+    "correctAnswer": "sócios",
+    "explanation": "A 'conta corrente de sócios' controla todas as movimentações financeiras entre a empresa e seus sócios — retiradas, aportes, empréstimos — mantendo clara a posição de quem deve a quem.",
+    "pacciTip": "Conta corrente de sócios é o 'extrato' da relação financeira entre empresa e dono, tesoro!",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-029",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se pode simplesmente 'zerar' a conta corrente de sócios todo fim de ano, transferindo qualquer saldo pra uma conta de lucro, só pra simplificar o balanço.",
+    "question": "Por que essa prática de 'zerar' artificialmente a conta corrente de sócios é problemática?",
+    "options": [
+      "Porque mascara a real posição financeira entre a empresa e o sócio, podendo inclusive ter implicações tributárias se não refletir a operação verdadeira",
+      "Porque é sempre a prática mais recomendada para simplificar relatórios",
+      "Porque contas de sócios precisam ser zeradas por lei todo ano",
+      "Porque não existe nenhum problema nisso, desde que o cliente concorde"
+    ],
+    "correctAnswer": "Porque mascara a real posição financeira entre a empresa e o sócio, podendo inclusive ter implicações tributárias se não refletir a operação verdadeira",
+    "explanation": "Zerar artificialmente uma conta sem que a operação real tenha ocorrido distorce a contabilidade e pode até gerar problema tributário (ex: parecer distribuição de lucro disfarçada) — o saldo deve refletir a realidade, não uma conveniência de relatório.",
+    "pacciTip": "Zerar conta sem motivo real é maquiagem contábil, piccolo! E maquiagem contábil sempre aparece depois.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-030",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Ao revisar provisões no fechamento, o assistente encontra uma provisão de garantia de produto que parece superestimada, comparada ao histórico real de acionamentos de garantia dos últimos anos.",
+    "question": "Qual é a atitude correta diante de uma provisão que parece desalinhada com o histórico real?",
+    "options": [
+      "Revisar a metodologia de cálculo com o responsável, ajustando a provisão para refletir melhor a experiência histórica, se for o caso",
+      "Ignorar a discrepância, já que provisões nunca precisam bater com o histórico",
+      "Zerar a provisão imediatamente, sem consultar ninguém",
+      "Dobrar o valor da provisão 'por precaução', sem nenhuma base de cálculo"
+    ],
+    "correctAnswer": "Revisar a metodologia de cálculo com o responsável, ajustando a provisão para refletir melhor a experiência histórica, se for o caso",
+    "explanation": "Uma provisão superestimada (ou subestimada) distorce o resultado tanto quanto uma inexistente — revisar a metodologia com base em dados históricos reais é o caminho correto para calibrá-la.",
+    "pacciTip": "Provisão desalinhada do histórico merece uma segunda olhada, tesoro! Nem toda 'precaução' é justificada.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-031",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma empresa compra uma máquina industrial por R$ 80.000, que vai ser usada na produção por vários anos.",
+    "question": "Por que essa máquina não é lançada como despesa total no mês da compra?",
+    "options": [
+      "Porque ela vai gerar benefício econômico por vários anos — o custo deve ser distribuído ao longo da vida útil, não concentrado no mês da compra",
+      "Porque máquinas nunca podem ser lançadas em nenhuma conta contábil",
+      "Porque compras acima de R$ 50.000 são sempre proibidas de lançar",
+      "Porque máquinas são sempre classificadas como despesa financeira"
+    ],
+    "correctAnswer": "Porque ela vai gerar benefício econômico por vários anos — o custo deve ser distribuído ao longo da vida útil, não concentrado no mês da compra",
+    "explanation": "Um bem que gera benefício por vários anos (Ativo Imobilizado) tem seu custo distribuído ao longo da vida útil estimada, através da depreciação — lançar tudo de uma vez distorceria o resultado do mês da compra.",
+    "pacciTip": "Benefício de vários anos, custo espalhado por vários anos, piccolo! Essa é a lógica da depreciação.",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-032",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "A máquina de R$ 80.000 tem vida útil estimada de 10 anos, sem valor residual.",
+    "question": "Usando depreciação linear (a mais simples), qual seria aproximadamente o valor depreciado por ano?",
+    "options": [
+      "R$ 8.000 por ano",
+      "R$ 80.000 por ano",
+      "R$ 800 por ano",
+      "R$ 80 por ano"
+    ],
+    "correctAnswer": "R$ 8.000 por ano",
+    "explanation": "Na depreciação linear simples, divide-se o valor do bem pela vida útil: R$ 80.000 ÷ 10 anos = R$ 8.000 de despesa de depreciação por ano, distribuindo o custo uniformemente.",
+    "pacciTip": "Depreciação linear é a divisão mais simples que existe, tesoro! Valor dividido pelos anos de vida útil.",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-033",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, mesmo sem vender ou usar menos a máquina, o valor contábil dela na empresa vai diminuindo todo ano no balanço.",
+    "question": "Qual é a explicação correta para essa redução anual do valor contábil do bem?",
+    "options": [
+      "A depreciação reconhece, ano a ano, o desgaste/consumo do benefício econômico do bem, reduzindo seu valor contábil líquido",
+      "O valor cai porque o bem está sendo furtado aos poucos",
+      "O valor contábil de um Ativo Imobilizado nunca pode mudar",
+      "A redução é só um erro do sistema contábil, sem explicação real"
+    ],
+    "correctAnswer": "A depreciação reconhece, ano a ano, o desgaste/consumo do benefício econômico do bem, reduzindo seu valor contábil líquido",
+    "explanation": "A depreciação reflete o consumo gradual do potencial de benefício econômico do bem ao longo da vida útil — o valor contábil líquido (custo menos depreciação acumulada) cai a cada período, mesmo sem venda.",
+    "pacciTip": "O bem está lá, funcionando, mas seu 'valor de livro' vai encolhendo com o tempo, piccolo! É assim que funciona.",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-034",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "Uma empresa comprou um veículo novo para a equipe de vendas e você precisa cadastrá-lo corretamente como Ativo Imobilizado.",
+    "question": "Ordene o processo de cadastro de um bem novo na ficha de Ativo Imobilizado:",
+    "options": [
+      "Registrar o valor de aquisição (incluindo custos necessários para colocar o bem em uso)",
+      "Definir a vida útil estimada do bem, conforme sua natureza",
+      "Calcular a taxa de depreciação mensal/anual correspondente",
+      "Iniciar o lançamento periódico da despesa de depreciação a partir do uso"
+    ],
+    "correctAnswer": [
+      "Registrar o valor de aquisição (incluindo custos necessários para colocar o bem em uso)",
+      "Definir a vida útil estimada do bem, conforme sua natureza",
+      "Calcular a taxa de depreciação mensal/anual correspondente",
+      "Iniciar o lançamento periódico da despesa de depreciação a partir do uso"
+    ],
+    "explanation": "Registrar o custo, definir a vida útil, calcular a taxa, e começar a depreciar — essa sequência garante que o bem entre corretamente na ficha de Ativo Imobilizado desde o primeiro dia de uso.",
+    "pacciTip": "Ficha de ativo bem montada desde o início evita retrabalho depois, tesoro!",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-035",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se o frete e a instalação de uma máquina nova devem entrar no valor do Ativo Imobilizado, ou se são despesas separadas.",
+    "question": "Qual é o tratamento correto para custos de frete e instalação necessários para colocar um bem em condição de uso?",
+    "options": [
+      "Normalmente são incorporados ao custo de aquisição do Ativo Imobilizado, já que são necessários para o bem ficar pronto para uso",
+      "São sempre lançados como despesa do mês, separados do valor do bem",
+      "São sempre ignorados, sem nenhum lançamento contábil",
+      "São lançados como receita da empresa"
+    ],
+    "correctAnswer": "Normalmente são incorporados ao custo de aquisição do Ativo Imobilizado, já que são necessários para o bem ficar pronto para uso",
+    "explanation": "Custos necessários para colocar o bem em condições de uso (frete, instalação, montagem) normalmente compõem o custo de aquisição do Ativo Imobilizado — fazem parte do que foi preciso gastar para o bem estar pronto para gerar benefício.",
+    "pacciTip": "Tudo que foi preciso pra deixar o bem 'pronto pra usar' entra no custo dele, piccolo!",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-036",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma máquina totalmente depreciada (valor contábil zero) ainda está em uso na fábrica, funcionando normalmente.",
+    "question": "O que significa, na prática, uma máquina estar 'totalmente depreciada' mas ainda em uso?",
+    "options": [
+      "O custo dela já foi completamente reconhecido como despesa ao longo da vida útil estimada, mesmo que o bem continue fisicamente funcional",
+      "A máquina precisa ser descartada imediatamente, por lei",
+      "A máquina deixou de existir fisicamente",
+      "A empresa deve vender a máquina obrigatoriamente nesse momento"
+    ],
+    "correctAnswer": "O custo dela já foi completamente reconhecido como despesa ao longo da vida útil estimada, mesmo que o bem continue fisicamente funcional",
+    "explanation": "'Totalmente depreciada' é um conceito contábil — significa que o custo já foi todo reconhecido como despesa ao longo da vida útil estimada. Isso não impede o bem de continuar funcionando fisicamente além dessa estimativa.",
+    "pacciTip": "Vida útil contábil e vida útil física nem sempre coincidem, tesoro! Uma máquina pode 'durar mais' do que a estimativa.",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-037",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que o lançamento mensal que reduz gradualmente o valor contábil de um bem do Ativo Imobilizado, refletindo seu desgaste ao longo do tempo, tem um nome específico.",
+    "question": "Digite o nome desse lançamento contábil periódico:",
+    "correctAnswer": "depreciação",
+    "explanation": "Depreciação é o reconhecimento periódico, como despesa, do desgaste/consumo do benefício econômico de um bem do Ativo Imobilizado ao longo de sua vida útil estimada.",
+    "pacciTip": "Depreciação é a palavra-chave de todo esse módulo, piccolo! Não esquece dela.",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-038",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente vendeu uma máquina usada por um valor maior do que o valor contábil líquido dela (custo menos depreciação acumulada) no momento da venda.",
+    "question": "Como essa diferença positiva entre o valor de venda e o valor contábil líquido costuma ser tratada?",
+    "options": [
+      "Como um ganho na baixa do Ativo Imobilizado, reconhecido no resultado do período da venda",
+      "Como uma simples devolução de depreciação já lançada",
+      "Como um aumento automático do Capital Social",
+      "Como uma receita de vendas operacional comum"
+    ],
+    "correctAnswer": "Como um ganho na baixa do Ativo Imobilizado, reconhecido no resultado do período da venda",
+    "explanation": "Quando o valor de venda de um Ativo Imobilizado supera seu valor contábil líquido, a diferença é reconhecida como um ganho na baixa — um resultado não-operacional, distinto da receita de vendas do negócio principal.",
+    "pacciTip": "Vendeu por mais do que valia nos livros? Isso é ganho na baixa, tesoro, não receita de vendas normal!",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-039",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um escritório mantém uma 'ficha de ativo' individual para cada bem do Ativo Imobilizado de um cliente, com data de compra, valor, vida útil e depreciação acumulada.",
+    "question": "Qual é a principal vantagem de manter uma ficha individual por bem, em vez de só um valor total agregado de Ativo Imobilizado?",
+    "options": [
+      "Permite controlar cada bem individualmente — saber exatamente quanto já foi depreciado, quando vai zerar, e rastrear uma venda ou baixa específica",
+      "Não traz nenhuma vantagem real sobre um valor agregado único",
+      "Serve só para fins estéticos do relatório",
+      "Só é necessário para bens de valor acima de R$ 1 milhão"
+    ],
+    "correctAnswer": "Permite controlar cada bem individualmente — saber exatamente quanto já foi depreciado, quando vai zerar, e rastrear uma venda ou baixa específica",
+    "explanation": "A ficha individual de ativo é o que permite controle granular — sem ela, seria impossível saber qual bem específico já está totalmente depreciado ou precisa ser baixado numa venda.",
+    "pacciTip": "Ficha por bem é como prontuário médico, piccolo! Cada um com sua própria história registrada.",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-040",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se um computador de R$ 2.500 comprado para o escritório precisa, obrigatoriamente, seguir todo o processo de Ativo Imobilizado com ficha e depreciação.",
+    "question": "O que normalmente determina se um bem deve ser tratado como Ativo Imobilizado (com ficha e depreciação) ou lançado direto como despesa?",
+    "options": [
+      "Critérios como valor relevante e vida útil superior a um ano, muitas vezes com um limite de valor mínimo definido pela política da empresa",
+      "A cor do bem comprado",
+      "O dia da semana em que a compra foi feita",
+      "Apenas a opinião pessoal do assistente no momento do lançamento"
+    ],
+    "correctAnswer": "Critérios como valor relevante e vida útil superior a um ano, muitas vezes com um limite de valor mínimo definido pela política da empresa",
+    "explanation": "Empresas costumam definir uma política de valor mínimo para tratar um bem como Ativo Imobilizado (evitando o esforço de depreciar itens de baixo valor) — abaixo desse limite, mesmo um bem durável pode ser lançado direto como despesa, por simplicidade e materialidade.",
+    "pacciTip": "Nem todo bem durável vira ficha de ativo, tesoro! Valor e política da empresa ajudam a decidir.",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-041",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma loja de materiais de construção precisa saber o valor do estoque que ainda não foi vendido no fim do mês, para apurar corretamente o resultado.",
+    "question": "Por que o valor do estoque final é essencial para calcular corretamente o Custo da Mercadoria Vendida (CMV) do período?",
+    "options": [
+      "Porque o CMV representa só o custo do que foi efetivamente vendido — sem saber o que ainda está em estoque, não dá pra isolar corretamente esse valor",
+      "Porque o estoque final não tem nenhuma relação com o cálculo do CMV",
+      "Porque o CMV é sempre igual ao valor total comprado no mês, independente do estoque",
+      "Porque o estoque final só importa para fins de seguro contra incêndio"
+    ],
+    "correctAnswer": "Porque o CMV representa só o custo do que foi efetivamente vendido — sem saber o que ainda está em estoque, não dá pra isolar corretamente esse valor",
+    "explanation": "O CMV mede o custo do que foi vendido, não do que foi comprado — a fórmula (Estoque Inicial + Compras − Estoque Final) só funciona corretamente se o valor do estoque final for conhecido com precisão.",
+    "pacciTip": "O que ainda está na prateleira não foi vendido, piccolo! Por isso o estoque final é peça-chave do cálculo.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-042",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma loja começou o mês com R$ 10.000 em estoque, comprou mais R$ 15.000 em mercadorias, e terminou o mês com R$ 8.000 em estoque.",
+    "question": "Qual é o Custo da Mercadoria Vendida (CMV) desse mês?",
+    "options": [
+      "R$ 17.000",
+      "R$ 25.000",
+      "R$ 7.000",
+      "R$ 33.000"
+    ],
+    "correctAnswer": "R$ 17.000",
+    "explanation": "CMV = Estoque Inicial + Compras − Estoque Final = R$ 10.000 + R$ 15.000 − R$ 8.000 = R$ 17.000 — o custo do que efetivamente saiu do estoque via venda no período.",
+    "pacciTip": "Fórmula do CMV sempre na ponta da língua, tesoro: inicial mais compras, menos o que sobrou!",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-043",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, dono de uma distribuidora, pergunta por que o lucro bruto dele cai se o estoque final for contado com um valor menor do que realmente existe fisicamente.",
+    "question": "Por que um estoque final subavaliado reduz artificialmente o lucro bruto do período?",
+    "options": [
+      "Porque um estoque final menor aumenta matematicamente o CMV calculado, reduzindo o lucro bruto (Receita menos CMV)",
+      "Porque estoque subavaliado nunca afeta o cálculo do lucro",
+      "Porque o lucro bruto depende só do valor das vendas, nunca do estoque",
+      "Porque estoque subavaliado sempre aumenta o lucro, nunca reduz"
+    ],
+    "correctAnswer": "Porque um estoque final menor aumenta matematicamente o CMV calculado, reduzindo o lucro bruto (Receita menos CMV)",
+    "explanation": "Pela fórmula do CMV, um estoque final menor (mesmo que por erro de contagem) aumenta o CMV calculado — e como Lucro Bruto = Receita − CMV, isso reduz artificialmente o lucro apurado, mesmo sem nenhuma mudança real nas vendas.",
+    "pacciTip": "Contagem errada do estoque mexe direto no lucro, piccolo! Por isso o inventário físico é tão importante.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-044",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "No fim do mês, o escritório precisa validar o valor do estoque de um cliente antes de calcular o CMV e liberar o resultado do período.",
+    "question": "Ordene o processo de validação do estoque antes do fechamento mensal:",
+    "options": [
+      "Obter a contagem física (ou relatório do sistema) do estoque no fim do período",
+      "Comparar o valor obtido com o estoque esperado pelo controle contábil",
+      "Investigar e explicar qualquer diferença relevante encontrada",
+      "Ajustar o valor contábil do estoque, se necessário, antes de calcular o CMV"
+    ],
+    "correctAnswer": [
+      "Obter a contagem física (ou relatório do sistema) do estoque no fim do período",
+      "Comparar o valor obtido com o estoque esperado pelo controle contábil",
+      "Investigar e explicar qualquer diferença relevante encontrada",
+      "Ajustar o valor contábil do estoque, se necessário, antes de calcular o CMV"
+    ],
+    "explanation": "Obter a contagem, comparar com o esperado, investigar diferenças, e ajustar se necessário — esse processo garante que o CMV calculado reflita a realidade física do estoque, não só o que o sistema 'acha' que existe.",
+    "pacciTip": "Estoque no papel e estoque na prateleira nem sempre batem, tesoro! Por isso vale a pena conferir.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-045",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma distribuidora de alimentos percebe que parte do estoque venceu e precisa ser descartada, sem nenhuma venda associada.",
+    "question": "Como esse estoque vencido e descartado deve ser tratado contabilmente?",
+    "options": [
+      "Como uma perda (baixa de estoque), reconhecida no resultado, já que o valor não vai mais gerar receita",
+      "Como uma venda normal, pelo valor de custo",
+      "Como um ativo que continua tendo o mesmo valor de antes",
+      "Ignorado completamente, sem nenhum lançamento contábil"
+    ],
+    "correctAnswer": "Como uma perda (baixa de estoque), reconhecida no resultado, já que o valor não vai mais gerar receita",
+    "explanation": "Estoque vencido/descartado não vai mais gerar receita — contabilmente, isso é reconhecido como uma perda, com a baixa do valor correspondente do estoque, refletindo a realidade de que aquele ativo não existe mais com valor econômico.",
+    "pacciTip": "Estoque que não vai mais virar venda é perda, não é mais ativo, piccolo! Precisa sair dos livros.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-046",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta a diferença entre 'custo da mercadoria vendida' (CMV) e 'despesa operacional' da empresa dele.",
+    "question": "Qual é a diferença conceitual entre essas duas categorias na Demonstração do Resultado?",
+    "options": [
+      "CMV é o custo diretamente ligado ao produto vendido; despesas operacionais são os gastos para manter a empresa funcionando (administrativo, vendas), não ligados diretamente ao produto em si",
+      "São exatamente a mesma coisa, só com nomes diferentes",
+      "CMV é sempre maior que qualquer despesa operacional, por definição",
+      "Despesas operacionais só existem em empresas de serviços, nunca em lojas"
+    ],
+    "correctAnswer": "CMV é o custo diretamente ligado ao produto vendido; despesas operacionais são os gastos para manter a empresa funcionando (administrativo, vendas), não ligados diretamente ao produto em si",
+    "explanation": "O CMV mede o custo direto do que foi vendido (o produto em si); despesas operacionais são os gastos da estrutura da empresa (aluguel, salários administrativos, marketing) — categorias diferentes, ambas reduzindo o resultado, mas de naturezas distintas.",
+    "pacciTip": "CMV é 'o custo do produto', despesa operacional é 'o custo de existir como empresa', tesoro!",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-047",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista ensina a sigla usada para o custo direto das mercadorias que efetivamente saíram do estoque via venda no período.",
+    "question": "Digite a sigla (3 letras) para 'Custo da Mercadoria Vendida':",
+    "correctAnswer": "CMV",
+    "explanation": "CMV = Custo da Mercadoria Vendida, o custo direto associado às mercadorias que saíram do estoque via venda no período — peça central do cálculo do lucro bruto em empresas comerciais.",
+    "pacciTip": "CMV é uma das siglas mais usadas em contabilidade comercial, piccolo! Decora ela bem.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-048",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se é possível ter um lucro bruto positivo, mesmo que a empresa tenha prejuízo no resultado final do mês.",
+    "question": "Como isso é possível, do ponto de vista contábil?",
+    "options": [
+      "Sim — o lucro bruto (Receita menos CMV) pode ser positivo, mas se as despesas operacionais, financeiras e outros custos forem altos o suficiente, o resultado final pode virar negativo",
+      "Não, é impossível ter lucro bruto positivo e prejuízo no resultado final ao mesmo tempo",
+      "Só é possível se a empresa não tiver nenhuma despesa",
+      "Lucro bruto e resultado final são sempre exatamente o mesmo valor"
+    ],
+    "correctAnswer": "Sim — o lucro bruto (Receita menos CMV) pode ser positivo, mas se as despesas operacionais, financeiras e outros custos forem altos o suficiente, o resultado final pode virar negativo",
+    "explanation": "O lucro bruto é só uma etapa intermediária da DRE — depois dele vêm despesas operacionais, financeiras e outros itens que podem consumir todo o lucro bruto (e mais), resultando em prejuízo final mesmo com uma 'venda saudável'.",
+    "pacciTip": "Lucro bruto bom não garante resultado final bom, tesoro! O caminho até o fim da DRE importa muito.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-049",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente com uma pequena loja pergunta se vale a pena fazer contagem física do estoque todo mês, ou se isso é exagero.",
+    "question": "Qual é um bom argumento a favor de contagens físicas periódicas do estoque, mesmo em empresas pequenas?",
+    "options": [
+      "Ajuda a detectar divergências (perdas, furtos, erros de lançamento) cedo, evitando que se acumulem e distorçam o resultado por muito tempo",
+      "Contagem física nunca encontra nenhuma diferença relevante",
+      "É apenas uma formalidade exigida sem nenhuma utilidade prática",
+      "Só é necessária uma vez a cada cinco anos"
+    ],
+    "correctAnswer": "Ajuda a detectar divergências (perdas, furtos, erros de lançamento) cedo, evitando que se acumulem e distorçam o resultado por muito tempo",
+    "explanation": "Contagens físicas periódicas funcionam como um 'alarme precoce' — detectam divergências entre o estoque físico e o contábil antes que se acumulem e distorçam significativamente os resultados ao longo de vários meses.",
+    "pacciTip": "Diferença pequena pega cedo é fácil de resolver, piccolo! Diferença acumulada vira dor de cabeça.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-050",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do módulo de Estoques e Custos, o analista resume que entender o CMV é essencial para qualquer análise de rentabilidade de uma empresa comercial ou industrial.",
+    "question": "Por que o CMV é tão central para analisar a rentabilidade de um negócio que vende produtos?",
+    "options": [
+      "Porque ele determina diretamente o lucro bruto, a primeira e mais básica medida de quão rentável é a operação de vender produtos",
+      "Porque o CMV é o único número que aparece na Demonstração do Resultado",
+      "Porque o CMV é sempre fixo, independente do volume de vendas",
+      "Porque o CMV não tem nenhuma relação com a análise de rentabilidade"
+    ],
+    "correctAnswer": "Porque ele determina diretamente o lucro bruto, a primeira e mais básica medida de quão rentável é a operação de vender produtos",
+    "explanation": "O CMV é o primeiro grande filtro entre receita e lucro — ele define o lucro bruto, que é a base de toda análise de rentabilidade subsequente numa empresa que vende produtos.",
+    "pacciTip": "Entender CMV é abrir a primeira porta pra entender se o negócio é rentável, tesoro!",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-051",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No fechamento de dezembro, o assistente precisa calcular quanto cada funcionário já 'acumulou' de direito a férias, mesmo sem ninguém ter tirado férias ainda naquele mês.",
+    "question": "Qual é o nome do lançamento mensal que reconhece gradualmente esse direito futuro de férias dos funcionários?",
+    "options": [
+      "Provisão de férias",
+      "Baixa de férias",
+      "Conciliação de férias",
+      "Retenção de férias"
+    ],
+    "correctAnswer": "Provisão de férias",
+    "explanation": "A provisão de férias reconhece, mês a mês, o direito que o funcionário vai acumulando ao longo do ano — reflete o custo real sendo gerado ao longo do tempo, não só no mês em que as férias efetivamente são tiradas.",
+    "pacciTip": "Provisão de férias de novo, tesoro! Esse conceito acompanha você desde o nível anterior.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-052",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Além do salário das férias, a empresa também precisa provisionar um valor adicional de um terço, garantido por lei.",
+    "question": "Esse adicional de um terço sobre o valor das férias é popularmente conhecido como:",
+    "options": [
+      "Terço constitucional de férias",
+      "13º salário",
+      "Aviso prévio",
+      "Adicional noturno"
+    ],
+    "correctAnswer": "Terço constitucional de férias",
+    "explanation": "O terço constitucional é um adicional de 1/3 sobre o valor das férias, garantido pela Constituição — deve ser incluído no cálculo da provisão de férias, junto com o salário correspondente ao período.",
+    "pacciTip": "Férias sempre vêm com o 'bônus' de um terço a mais, piccolo! Não esquece dele na provisão.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-053",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, além de provisionar o salário do 13º, a empresa também precisa provisionar os encargos (INSS, FGTS) sobre esse valor.",
+    "question": "Por que os encargos sobre o 13º também precisam ser provisionados, e não só o salário em si?",
+    "options": [
+      "Porque os encargos são uma obrigação adicional e certa, ligada diretamente ao pagamento do 13º, e também representam um custo real da empresa",
+      "Porque encargos nunca incidem sobre o 13º salário",
+      "Porque só o INSS do funcionário precisa ser considerado, nunca a parte da empresa",
+      "Porque encargos sobre o 13º são sempre pagos pelo próprio funcionário"
+    ],
+    "correctAnswer": "Porque os encargos são uma obrigação adicional e certa, ligada diretamente ao pagamento do 13º, e também representam um custo real da empresa",
+    "explanation": "Encargos como INSS patronal e FGTS incidem também sobre o 13º salário — ignorar essa parte na provisão subestimaria o custo total real que a empresa vai ter quando o 13º for efetivamente pago.",
+    "pacciTip": "13º não vem sozinho, tesoro! Os encargos são companhia obrigatória dele.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-054",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "Você está calculando a provisão mensal de férias e 13º de um funcionário para incluir no fechamento do mês.",
+    "question": "Ordene o raciocínio para calcular a provisão mensal de férias e 13º de um funcionário:",
+    "options": [
+      "Identificar o salário base do funcionário no período",
+      "Calcular a fração do direito (férias + 1/3, 13º) acumulada naquele mês específico",
+      "Somar os encargos (INSS patronal, FGTS) proporcionais sobre esse valor",
+      "Registrar o total como despesa de provisão do mês, no Passivo correspondente"
+    ],
+    "correctAnswer": [
+      "Identificar o salário base do funcionário no período",
+      "Calcular a fração do direito (férias + 1/3, 13º) acumulada naquele mês específico",
+      "Somar os encargos (INSS patronal, FGTS) proporcionais sobre esse valor",
+      "Registrar o total como despesa de provisão do mês, no Passivo correspondente"
+    ],
+    "explanation": "Salário base, fração do direito acumulado, encargos proporcionais, e registro final — essa sequência garante que a provisão mensal reflita o custo real sendo construído mês a mês, não só uma estimativa grosseira.",
+    "pacciTip": "Provisão bem calculada é fração por fração, mês a mês, tesoro! Não é um chute no fim do ano.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-055",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um funcionário pediu demissão e tinha 8 meses de férias já acumuladas (proporcionais), que precisam ser pagas na rescisão.",
+    "question": "Como a provisão de férias já constituída ao longo desses 8 meses se relaciona com o pagamento feito na rescisão?",
+    "options": [
+      "A provisão acumulada é justamente o que vai 'cobrir' o pagamento das férias proporcionais na rescisão — o custo já vinha sendo reconhecido mês a mês",
+      "A provisão acumulada não tem nenhuma relação com o valor pago na rescisão",
+      "A empresa precisa reconhecer o custo total das férias só no mês da rescisão, ignorando a provisão anterior",
+      "Férias proporcionais nunca são pagas na rescisão, só em caso de férias completas"
+    ],
+    "correctAnswer": "A provisão acumulada é justamente o que vai 'cobrir' o pagamento das férias proporcionais na rescisão — o custo já vinha sendo reconhecido mês a mês",
+    "explanation": "A provisão de férias existe exatamente para isso: quando a rescisão acontece, o valor já provisionado mês a mês é baixado (usado) para cobrir o pagamento, em vez de gerar um 'susto' de despesa toda de uma vez no mês da saída.",
+    "pacciTip": "A provisão é a 'poupança' que a empresa já vinha fazendo pra esse momento, piccolo! Por isso a rescisão não pega de surpresa.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-056",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que, mesmo sem nenhum funcionário tirando férias em janeiro, a empresa ainda reconhece uma despesa de provisão de férias naquele mês.",
+    "question": "Qual é a explicação mais clara para essa despesa reconhecida mesmo sem férias efetivamente tiradas?",
+    "options": [
+      "Porque o direito às férias está sendo construído mês a mês pelo trabalho prestado, independente de quando elas serão efetivamente gozadas",
+      "Porque é um erro do sistema contábil que precisa ser corrigido",
+      "Porque todo mês de janeiro, por lei, tem que ter uma despesa extra lançada",
+      "Porque a provisão de férias só existe nos meses em que ninguém tira férias"
+    ],
+    "correctAnswer": "Porque o direito às férias está sendo construído mês a mês pelo trabalho prestado, independente de quando elas serão efetivamente gozadas",
+    "explanation": "O direito a férias se acumula com o trabalho prestado mês a mês — a provisão reconhece esse custo sendo gerado ao longo do tempo, não só no mês em que as férias são efetivamente tiradas pelo funcionário.",
+    "pacciTip": "O direito nasce todo mês, tesoro, mesmo que o descanso só venha depois!",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-057",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente percebe que a provisão de 13º salário de uma empresa com 20 funcionários nunca foi ajustada depois de contratações e demissões ao longo do ano.",
+    "question": "Por que é importante revisar a provisão de 13º sempre que o quadro de funcionários muda significativamente?",
+    "options": [
+      "Porque a provisão precisa refletir o número real de funcionários e seus salários atuais, não um quadro desatualizado do início do ano",
+      "Porque a provisão de 13º nunca muda, independente do número de funcionários",
+      "Porque revisar a provisão é opcional e raramente traz diferença relevante",
+      "Porque demissões sempre aumentam automaticamente a provisão de 13º"
+    ],
+    "correctAnswer": "Porque a provisão precisa refletir o número real de funcionários e seus salários atuais, não um quadro desatualizado do início do ano",
+    "explanation": "Uma provisão de folha (férias, 13º) baseada num quadro de funcionários desatualizado superestima ou subestima a obrigação real — contratações e demissões precisam ser refletidas para manter a provisão precisa.",
+    "pacciTip": "Quadro de funcionários muda, a provisão precisa acompanhar, piccolo!",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-058",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que o adicional obrigatório de um terço sobre o valor das férias tem um nome específico, derivado de sua origem legal.",
+    "question": "Complete: 'terço _______ de férias' — o nome do adicional obrigatório de 1/3 sobre as férias:",
+    "correctAnswer": "constitucional",
+    "explanation": "O 'terço constitucional' de férias é chamado assim porque sua origem é a própria Constituição Federal, que garante esse adicional de 1/3 sobre o valor das férias de todo trabalhador.",
+    "pacciTip": "Constitucional porque vem direto da Constituição, tesoro! Esse direito é bem forte.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-059",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente está conferindo se a provisão total de férias e 13º no balancete de um cliente parece razoável, comparando com o total da folha de salários mensal.",
+    "question": "Por que comparar a provisão acumulada com a folha mensal é uma boa forma de checar se o valor parece razoável?",
+    "options": [
+      "Porque a provisão de férias e 13º deve ter uma relação proporcional esperada com a folha, servindo como uma verificação rápida de consistência (análise horizontal simplificada)",
+      "Porque a provisão nunca tem nenhuma relação com o valor da folha mensal",
+      "Porque a comparação só é válida para empresas com mais de 500 funcionários",
+      "Porque a provisão deveria ser sempre idêntica, em valor, à folha mensal"
+    ],
+    "correctAnswer": "Porque a provisão de férias e 13º deve ter uma relação proporcional esperada com a folha, servindo como uma verificação rápida de consistência (análise horizontal simplificada)",
+    "explanation": "Como férias e 13º são frações do salário acumuladas ao longo do ano, a provisão total deve guardar uma proporção razoável com a folha mensal — uma discrepância grande é um sinal de alerta para investigar.",
+    "pacciTip": "Comparar provisão com folha é um 'teste de sanidade' rápido, piccolo! Não substitui o cálculo, mas ajuda a pegar erro grosseiro.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-060",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do módulo de Folha de Pagamento na Contabilidade, o analista resume que provisionar corretamente férias, 13º e encargos é o que evita 'sustos' financeiros em certas épocas do ano.",
+    "question": "Por que a ausência de uma boa provisão de férias/13º pode gerar 'sustos' financeiros em determinados meses do ano?",
+    "options": [
+      "Porque, sem provisão prévia, o custo todo (férias de muitos funcionários, 13º em dezembro) aparece concentrado de uma vez, em vez de distribuído ao longo do ano",
+      "Porque provisão nunca tem relação nenhuma com o fluxo de caixa da empresa",
+      "Porque sem provisão, a empresa automaticamente deixa de pagar férias e 13º",
+      "Porque 'sustos' financeiros nunca têm relação com decisões contábeis"
+    ],
+    "correctAnswer": "Porque, sem provisão prévia, o custo todo (férias de muitos funcionários, 13º em dezembro) aparece concentrado de uma vez, em vez de distribuído ao longo do ano",
+    "explanation": "A provisão distribui o reconhecimento do custo ao longo do ano — sem ela, o gestor só vê o impacto financeiro total concentrado no mês em que as férias/13º são efetivamente pagos, o que pode ser um choque de caixa evitável com planejamento.",
+    "pacciTip": "Provisão bem feita transforma um 'susto' de dezembro numa surpresa nenhuma, tesoro! Planejamento é tudo.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-061",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente envia uma mensagem irritada perguntando por que o relatório deste mês demorou mais do que o normal para ficar pronto.",
+    "question": "Qual é a atitude mais profissional diante de uma reclamação de atraso, mesmo quando a causa foi legítima (ex: documentos entregues com atraso pelo próprio cliente)?",
+    "options": [
+      "Explicar com transparência e educação o motivo do atraso, sem acusar o cliente de forma hostil, e combinar um plano para evitar que se repita",
+      "Ignorar a mensagem até o cliente se acalmar sozinho",
+      "Responder de forma defensiva, culpando o cliente abertamente pela demora",
+      "Prometer que isso nunca mais vai acontecer, mesmo sem ter controle total sobre a causa"
+    ],
+    "correctAnswer": "Explicar com transparência e educação o motivo do atraso, sem acusar o cliente de forma hostil, e combinar um plano para evitar que se repita",
+    "explanation": "Uma resposta transparente e educada, com um plano concreto de melhoria, resolve a reclamação sem gerar confronto — mesmo quando a causa raiz envolveu o próprio cliente, a forma de comunicar isso importa muito.",
+    "pacciTip": "Explicar com calma resolve muito mais do que se defender com raiva, piccolo!",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-062",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pede, por e-mail, para 'ajustar' um lançamento de forma que não reflete a realidade da operação, só para melhorar a aparência do resultado daquele mês.",
+    "question": "Qual é a atitude correta do assistente diante desse pedido?",
+    "options": [
+      "Explicar educadamente por que o lançamento precisa refletir a realidade, e escalar a situação ao responsável se o cliente insistir",
+      "Atender ao pedido, já que o cliente está pagando pelo serviço",
+      "Ignorar o pedido sem dar nenhuma explicação ao cliente",
+      "Fazer o ajuste solicitado, mas sem documentar nada sobre ele"
+    ],
+    "correctAnswer": "Explicar educadamente por que o lançamento precisa refletir a realidade, e escalar a situação ao responsável se o cliente insistir",
+    "explanation": "Mesmo sob pressão do cliente, a integridade da informação contábil não é negociável — a resposta correta é explicar o porquê com transparência e, se necessário, levar a situação para quem tem mais autoridade decidir como conduzir.",
+    "pacciTip": "Cliente pede, mas a verdade contábil não é negociável, tesoro! Explica com respeito e escala se precisar.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-063",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente percebe que um cliente está há semanas sem responder a uma solicitação de documentos necessários para o fechamento, colocando o prazo em risco.",
+    "question": "Qual é uma boa prática de gestão de pendências diante de um cliente que não responde?",
+    "options": [
+      "Fazer follow-ups periódicos e claros, registrando as tentativas de contato, e escalar internamente se o prazo estiver realmente em risco",
+      "Esperar indefinidamente sem fazer nenhum contato adicional",
+      "Desistir de pedir os documentos e fechar o mês sem eles, sem avisar ninguém",
+      "Mandar uma única mensagem e nunca mais tocar no assunto"
+    ],
+    "correctAnswer": "Fazer follow-ups periódicos e claros, registrando as tentativas de contato, e escalar internamente se o prazo estiver realmente em risco",
+    "explanation": "Gestão de pendências ativa — follow-ups registrados e escalonamento quando necessário — evita tanto o fechamento incompleto quanto a surpresa de um prazo perdido sem que ninguém tenha tentado resolver antes.",
+    "pacciTip": "Pendência esquecida vira prazo perdido, piccolo! Follow-up registrado é sua proteção.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-064",
+    "level": "cont_assistente",
+    "type": "ordering",
+    "scenario": "Um cliente está demorando a enviar um documento essencial para o fechamento, e o prazo está se aproximando.",
+    "question": "Ordene a sequência de ações para gerenciar essa pendência com o cliente:",
+    "options": [
+      "Enviar um lembrete claro, explicando a importância e o prazo do documento",
+      "Registrar a tentativa de contato e aguardar um tempo razoável de resposta",
+      "Fazer um segundo follow-up se não houver resposta, com urgência crescente",
+      "Escalar ao responsável interno se o prazo estiver realmente em risco"
+    ],
+    "correctAnswer": [
+      "Enviar um lembrete claro, explicando a importância e o prazo do documento",
+      "Registrar a tentativa de contato e aguardar um tempo razoável de resposta",
+      "Fazer um segundo follow-up se não houver resposta, com urgência crescente",
+      "Escalar ao responsável interno se o prazo estiver realmente em risco"
+    ],
+    "explanation": "Lembrete claro, registro da tentativa, follow-up com urgência crescente, e escalonamento se necessário — essa sequência profissional maximiza a chance de resolver a pendência sem comprometer o prazo nem a relação com o cliente.",
+    "pacciTip": "Follow-up bem feito é insistência educada, não implicância, tesoro!",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-065",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, pouco familiarizado com termos contábeis, pergunta por que o 'resultado' da empresa dele piorou, mesmo as vendas tendo aumentado no mês.",
+    "question": "Qual é a melhor forma de explicar essa situação a um cliente sem formação contábil?",
+    "options": [
+      "Usar linguagem simples e concreta, mostrando que despesas específicas (ex: uma provisão ou um imposto) cresceram mais do que as vendas naquele mês",
+      "Usar o máximo de termos técnicos possível, para parecer mais profissional",
+      "Dizer apenas 'é assim mesmo' sem nenhuma explicação adicional",
+      "Evitar responder à pergunta, dizendo que o assunto é complicado demais"
+    ],
+    "correctAnswer": "Usar linguagem simples e concreta, mostrando que despesas específicas (ex: uma provisão ou um imposto) cresceram mais do que as vendas naquele mês",
+    "explanation": "Traduzir conceitos contábeis para uma linguagem acessível, com exemplos concretos do que realmente aconteceu, é o que transforma um número abstrato numa explicação que o cliente consegue entender e confiar.",
+    "pacciTip": "Traduzir contabilidade pra linguagem simples é uma habilidade tão importante quanto calcular certo, piccolo!",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-066",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente percebe um erro próprio num relatório já enviado ao cliente, antes que o cliente tenha notado.",
+    "question": "Qual é a atitude mais profissional diante de um erro próprio identificado antes do cliente perceber?",
+    "options": [
+      "Avisar proativamente o cliente e/ou o responsável, corrigindo o erro com transparência, em vez de esperar que ninguém note",
+      "Ficar em silêncio, torcendo para que o erro nunca seja percebido",
+      "Corrigir o erro silenciosamente, sem avisar o cliente nem o responsável",
+      "Esperar o cliente reclamar antes de admitir qualquer problema"
+    ],
+    "correctAnswer": "Avisar proativamente o cliente e/ou o responsável, corrigindo o erro com transparência, em vez de esperar que ninguém note",
+    "explanation": "Admitir e corrigir um erro proativamente constrói mais confiança do que esperar ser pego — a transparência sobre falhas próprias é parte essencial de uma relação profissional de longo prazo com o cliente.",
+    "pacciTip": "Erro admitido cedo é problema pequeno, tesoro! Erro escondido que aparece depois é problema grande.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-067",
+    "level": "cont_assistente",
+    "type": "text_input",
+    "scenario": "No treinamento sobre comunicação com o cliente, o analista ensina que a prática de entrar em contato novamente sobre uma pendência que ainda não foi resolvida tem um nome específico em inglês, muito usado no ambiente profissional.",
+    "question": "Digite o termo (em inglês, usado no dia a dia do escritório) para esse contato de acompanhamento de uma pendência:",
+    "correctAnswer": "follow-up",
+    "explanation": "'Follow-up' é o termo usado para o contato de acompanhamento de uma pendência ainda não resolvida — uma prática essencial de gestão de pendências com clientes.",
+    "pacciTip": "Follow-up é palavra do dia a dia de qualquer escritório, piccolo! Pratica usar ela com naturalidade.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-068",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um escritório mantém uma planilha compartilhada com todas as pendências abertas de cada cliente, incluindo data de solicitação e status.",
+    "question": "Qual é o principal benefício de manter um controle centralizado de pendências com clientes?",
+    "options": [
+      "Evita que pendências 'se percam' na memória individual de cada funcionário, garantindo visibilidade e acompanhamento sistemático",
+      "Não traz nenhum benefício real sobre confiar na memória da equipe",
+      "Serve só para fins estéticos do escritório",
+      "Só é útil em escritórios com mais de 20 funcionários"
+    ],
+    "correctAnswer": "Evita que pendências 'se percam' na memória individual de cada funcionário, garantindo visibilidade e acompanhamento sistemático",
+    "explanation": "Um controle centralizado de pendências transforma um conhecimento disperso (na cabeça de cada funcionário) em um sistema visível e rastreável — reduz drasticamente o risco de algo importante ser esquecido.",
+    "pacciTip": "Memória da equipe falha, planilha compartilhada não, tesoro! Centralizar é proteger contra esquecimento.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-069",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente insiste em discutir, por mensagens de WhatsApp tarde da noite, um assunto que exige análise cuidadosa e não uma resposta imediata.",
+    "question": "Qual é uma boa forma de lidar com essa expectativa de resposta imediata, fora do horário comercial, sobre um assunto complexo?",
+    "options": [
+      "Confirmar educadamente o recebimento e combinar um horário adequado, dentro do expediente, para dar uma resposta completa e bem pensada",
+      "Responder de qualquer jeito, só para 'desocupar' a mensagem rapidamente",
+      "Ignorar a mensagem completamente, sem nenhuma confirmação de recebimento",
+      "Responder de forma grosseira, reclamando do horário da mensagem"
+    ],
+    "correctAnswer": "Confirmar educadamente o recebimento e combinar um horário adequado, dentro do expediente, para dar uma resposta completa e bem pensada",
+    "explanation": "Confirmar o recebimento mantém o cliente tranquilo sem comprometer a qualidade da resposta — uma resposta apressada sobre um assunto complexo é pior do que uma resposta bem pensada entregue um pouco mais tarde, dentro de um prazo razoável.",
+    "pacciTip": "Resposta rápida nem sempre é resposta boa, piccolo! Confirma o recebimento e caprica na resposta certa.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-070",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do Nível de Assistente Contábil, o analista pergunta qual habilidade, além do conhecimento técnico, se torna cada vez mais importante nessa etapa da carreira.",
+    "question": "Qual habilidade complementar ao conhecimento técnico ganha mais peso no papel de Assistente Contábil?",
+    "options": [
+      "Comunicação clara e profissional, tanto para explicar números ao cliente quanto para gerenciar pendências e prazos com organização",
+      "Trabalhar completamente sozinho, sem nenhuma interação com clientes",
+      "Memorizar o máximo possível de leis, sem nenhuma habilidade de comunicação",
+      "Evitar qualquer contato direto com o cliente, deixando isso só para o analista"
+    ],
+    "correctAnswer": "Comunicação clara e profissional, tanto para explicar números ao cliente quanto para gerenciar pendências e prazos com organização",
+    "explanation": "No papel de Assistente, o profissional começa a interagir mais diretamente com o cliente — comunicação clara, gestão de pendências e profissionalismo se tornam tão importantes quanto o domínio técnico dos números.",
+    "pacciTip": "Número certo explicado de forma confusa vale menos do que deveria, tesoro! Comunicação é parte do trabalho, não um extra.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-071",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente percebe, durante o fechamento, que a conta 'Despesas Diversas' cresceu muito em relação aos meses anteriores, sem nenhuma explicação óbvia.",
+    "question": "Qual seria a atitude mais adequada diante dessa variação relevante e sem explicação aparente?",
+    "options": [
+      "Investigar a composição da conta, identificar o que mudou, e documentar a explicação encontrada antes de liberar o fechamento",
+      "Ignorar a variação, já que 'Despesas Diversas' nunca precisa de explicação",
+      "Reduzir o valor lançado artificialmente para 'normalizar' a conta",
+      "Renomear a conta para evitar que a variação chame atenção"
+    ],
+    "correctAnswer": "Investigar a composição da conta, identificar o que mudou, e documentar a explicação encontrada antes de liberar o fechamento",
+    "explanation": "Uma variação relevante sem explicação é exatamente o tipo de sinal que o fechamento mensal deveria capturar — investigar e documentar a causa é parte do trabalho, não um passo opcional.",
+    "pacciTip": "Variação sem explicação é uma pergunta esperando resposta, piccolo! Investiga antes de seguir em frente.",
+    "topic": "fechamento_mensal"
+  },
+  {
+    "id": "CONT-ASS-072",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um sócio fez um aporte de capital adicional na empresa, diferente de um simples empréstimo, com a intenção de reforçar o patrimônio da empresa permanentemente.",
+    "question": "Como esse aporte de capital, diferente de um empréstimo de sócio, é classificado na contabilidade?",
+    "options": [
+      "Como aumento do Capital Social, no Patrimônio Líquido, já que não há intenção de devolução",
+      "Como Passivo (obrigação com sócios), igual a um empréstimo comum",
+      "Como Receita do período",
+      "Como Despesa financeira"
+    ],
+    "correctAnswer": "Como aumento do Capital Social, no Patrimônio Líquido, já que não há intenção de devolução",
+    "explanation": "Um aporte de capital, diferente de um empréstimo, não tem intenção de devolução — ele reforça o Patrimônio Líquido da empresa (Capital Social), ao contrário do empréstimo de sócio, que é uma obrigação (Passivo) a ser devolvida.",
+    "pacciTip": "Aporte reforça o patrimônio pra sempre, empréstimo é uma dívida temporária, tesoro! A intenção muda tudo.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-073",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um equipamento de informática usado há 4 anos apresenta defeito irreparável e precisa ser baixado do Ativo Imobilizado antes do fim da vida útil estimada de 5 anos.",
+    "question": "Como essa baixa antecipada, por perda total do bem, costuma ser tratada contabilmente?",
+    "options": [
+      "O valor contábil líquido restante é reconhecido como uma perda no resultado do período da baixa",
+      "O bem continua no Ativo Imobilizado pelo valor original, mesmo inutilizável",
+      "A baixa antecipada é sempre proibida antes do fim da vida útil estimada",
+      "O valor total original do bem vira automaticamente uma despesa de depreciação"
+    ],
+    "correctAnswer": "O valor contábil líquido restante é reconhecido como uma perda no resultado do período da baixa",
+    "explanation": "Quando um bem perde totalmente sua utilidade antes do fim da vida útil estimada, o valor contábil líquido que ainda não tinha sido depreciado é reconhecido como uma perda no resultado — o bem não pode mais gerar o benefício que justificava mantê-lo no Ativo.",
+    "pacciTip": "Bem quebrado antes da hora vira perda, não fica 'pendurado' no Ativo pra sempre, piccolo!",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-074",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Uma confeitaria precisa calcular quanto de ingredientes (farinha, açúcar, manteiga) foi efetivamente usado na produção dos bolos vendidos no mês, para apurar seu CMV.",
+    "question": "Para uma empresa que fabrica (não apenas revende) o que vende, o CMV costuma ser chamado tecnicamente de qual outro nome, considerando que envolve produção?",
+    "options": [
+      "Custo do Produto Vendido (CPV)",
+      "Custo de Venda Imediata (CVI)",
+      "Despesa de Fabricação Total (DFT)",
+      "Receita de Produção Vendida (RPV)"
+    ],
+    "correctAnswer": "Custo do Produto Vendido (CPV)",
+    "explanation": "Empresas industriais (que fabricam o que vendem) costumam usar o termo CPV (Custo do Produto Vendido) em vez de CMV, já que o custo envolve não só a compra de insumos, mas todo o processo de produção.",
+    "pacciTip": "CMV é pra quem revende, CPV é pra quem fabrica, tesoro! A lógica do cálculo é parecida, mas o nome muda.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-075",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se precisa provisionar algo relacionado ao aviso prévio de um funcionário que está prestes a ser demitido.",
+    "question": "O aviso prévio (quando indenizado) é um exemplo de custo que também pode exigir:",
+    "options": [
+      "Reconhecimento/provisão, já que representa uma obrigação relacionada ao desligamento do funcionário",
+      "Nenhum tipo de registro contábil, já que não é um custo real",
+      "Classificação como receita extraordinária",
+      "Lançamento direto no Ativo Imobilizado"
+    ],
+    "correctAnswer": "Reconhecimento/provisão, já que representa uma obrigação relacionada ao desligamento do funcionário",
+    "explanation": "O aviso prévio indenizado, assim como outras verbas rescisórias, representa uma obrigação real da empresa relacionada ao desligamento — deve ser corretamente reconhecido/provisionado conforme a situação específica do desligamento.",
+    "pacciTip": "Desligamento de funcionário sempre traz obrigações a considerar, piccolo! Aviso prévio é uma delas.",
+    "topic": "folha_provisoes"
+  },
+  {
+    "id": "CONT-ASS-076",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, insatisfeito com um aumento nos honorários do escritório, ameaça trocar de contador se o valor não for revisado.",
+    "question": "Qual é a abordagem mais profissional diante dessa situação de insatisfação com preço?",
+    "options": [
+      "Ouvir a preocupação do cliente com empatia, explicar com transparência o que justifica o valor, e escalar a negociação ao responsável comercial, se for o caso",
+      "Ignorar a reclamação, assumindo que o cliente está blefando",
+      "Oferecer um desconto grande imediatamente, sem consultar ninguém",
+      "Responder de forma defensiva, dizendo que o cliente não entende o valor do trabalho"
+    ],
+    "correctAnswer": "Ouvir a preocupação do cliente com empatia, explicar com transparência o que justifica o valor, e escalar a negociação ao responsável comercial, se for o caso",
+    "explanation": "Situações de insatisfação com preço exigem escuta, transparência sobre o que está incluído no serviço, e envolvimento de quem tem autoridade para negociar — reações defensivas ou concessões precipitadas raramente são a melhor resposta.",
+    "pacciTip": "Insatisfação de cliente pede escuta antes de resposta, tesoro! E decisão de preço raramente é só sua, sozinho.",
+    "topic": "comunicacao_cliente"
+  },
+  {
+    "id": "CONT-ASS-077",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No fim de um trimestre, o escritório revisa todas as provisões (férias, 13º, processos, impostos estimados) de um cliente para garantir que ainda fazem sentido.",
+    "question": "Por que revisar provisões periodicamente, mesmo quando nada parece ter mudado drasticamente?",
+    "options": [
+      "Porque pequenas mudanças acumuladas (novos funcionários, processos resolvidos, mudanças de estimativa) podem, com o tempo, tornar uma provisão desatualizada sem ninguém perceber",
+      "Porque revisar provisões é só uma formalidade sem nenhuma utilidade real",
+      "Porque provisões nunca mudam depois de lançadas pela primeira vez",
+      "Porque revisão de provisões só é necessária uma vez a cada 5 anos"
+    ],
+    "correctAnswer": "Porque pequenas mudanças acumuladas (novos funcionários, processos resolvidos, mudanças de estimativa) podem, com o tempo, tornar uma provisão desatualizada sem ninguém perceber",
+    "explanation": "Provisões são estimativas vivas — pequenas mudanças que parecem irrelevantes isoladamente podem, acumuladas ao longo de meses, tornar uma provisão significativamente desalinhada da realidade se nunca forem revisadas.",
+    "pacciTip": "Provisão esquecida por muito tempo vira estimativa desatualizada, piccolo! Revisão periódica é cuidado básico.",
+    "topic": "conciliacoes_patrimoniais"
+  },
+  {
+    "id": "CONT-ASS-078",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um assistente está montando a ficha de um novo Ativo Imobilizado e tem dúvida sobre qual vida útil usar: a que o fabricante recomenda, ou uma mais curta, pensando no ritmo de uso intenso da empresa.",
+    "question": "Qual critério deveria prevalecer na definição da vida útil estimada de um bem para fins contábeis?",
+    "options": [
+      "A expectativa real de uso econômico do bem por aquela empresa específica, que pode ser diferente da recomendação genérica do fabricante",
+      "Sempre a recomendação exata do fabricante, sem nenhum ajuste",
+      "Sempre o prazo máximo permitido por lei, independente do uso real",
+      "A vida útil nunca precisa ser definida, só o valor de compra do bem"
+    ],
+    "correctAnswer": "A expectativa real de uso econômico do bem por aquela empresa específica, que pode ser diferente da recomendação genérica do fabricante",
+    "explanation": "A vida útil contábil deve refletir a expectativa real de uso econômico do bem naquela empresa — um uso mais intenso pode justificar uma vida útil menor do que a recomendação genérica do fabricante, e vice-versa.",
+    "pacciTip": "Vida útil é sobre a realidade daquela empresa específica, tesoro, não uma regra genérica de manual!",
+    "topic": "ativo_imobilizado"
+  },
+  {
+    "id": "CONT-ASS-079",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se é normal o estoque de uma empresa de serviços (como um escritório de advocacia) ser praticamente zero.",
+    "question": "Por que empresas de serviços puros costumam ter pouco ou nenhum estoque de mercadorias?",
+    "options": [
+      "Porque elas vendem conhecimento/trabalho, não produtos físicos — não há mercadoria para estocar e revender",
+      "Porque é sempre proibido para empresas de serviços ter qualquer estoque",
+      "Porque empresas de serviços nunca compram nada para suas operações",
+      "Porque o estoque dessas empresas aparece escondido em outra conta sem nenhuma explicação"
+    ],
+    "correctAnswer": "Porque elas vendem conhecimento/trabalho, não produtos físicos — não há mercadoria para estocar e revender",
+    "explanation": "Empresas de serviços puros não têm produto físico para revender — o que elas vendem é trabalho/conhecimento, então não há conceito de 'estoque de mercadorias' nem de CMV da mesma forma que numa empresa comercial.",
+    "pacciTip": "Sem produto físico pra vender, não tem estoque pra controlar, piccolo! Faz todo sentido.",
+    "topic": "estoques_custos"
+  },
+  {
+    "id": "CONT-ASS-080",
+    "level": "cont_assistente",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do Nível de Assistente Contábil, o analista pergunta qual foi o 'tema comum' entre fechamento, conciliações avançadas, ativo imobilizado, estoques, folha e comunicação com o cliente.",
+    "question": "Qual é esse tema comum que conecta todas essas frentes de trabalho do Assistente Contábil?",
+    "options": [
+      "A busca por precisão e consistência na informação contábil, revisando e questionando o que não parece coerente, em vez de apenas lançar e seguir em frente",
+      "A velocidade de digitação dos lançamentos, acima de qualquer outro critério",
+      "A quantidade de relatórios gerados por mês",
+      "A ausência completa de contato com clientes"
+    ],
+    "correctAnswer": "A busca por precisão e consistência na informação contábil, revisando e questionando o que não parece coerente, em vez de apenas lançar e seguir em frente",
+    "explanation": "Do fechamento às provisões, do Ativo Imobilizado aos estoques e à comunicação com o cliente — o fio condutor do papel de Assistente é revisar com cuidado e questionar o que não faz sentido, não só executar tarefas mecanicamente.",
+    "pacciTip": "Assistente que questiona o que não bate é um assistente que está crescendo de verdade, tesoro! Parabéns por chegar até aqui.",
+    "topic": "comunicacao_cliente"
+  }
+]

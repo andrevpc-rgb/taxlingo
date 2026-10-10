@@ -1,0 +1,604 @@
+[
+  {
+    "id": "CONT-ESP-001",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Antes de assinar o fechamento anual de um cliente, o especialista revisa não só os lançamentos, mas também o julgamento por trás das principais estimativas (provisões, depreciação, valor de estoque).",
+    "question": "Por que essa revisão de julgamento, e não só de lançamentos, é característica de uma auditoria de fechamento avançada?",
+    "options": [
+      "Porque muitos números contábeis dependem de estimativas e julgamento profissional, não só de regras mecânicas — e é aí que erros mais sutis e relevantes costumam se esconder",
+      "Porque lançamentos nunca contêm erros relevantes, só estimativas",
+      "Porque julgamento profissional nunca deveria ser revisado por outra pessoa",
+      "Porque essa revisão é apenas uma formalidade sem impacto real no resultado"
+    ],
+    "correctAnswer": "Porque muitos números contábeis dependem de estimativas e julgamento profissional, não só de regras mecânicas — e é aí que erros mais sutis e relevantes costumam se esconder",
+    "explanation": "Lançamentos mecânicos são relativamente fáceis de conferir; é no julgamento por trás das estimativas (quanto provisionar, que vida útil usar) que erros mais sutis e potencialmente mais relevantes se escondem — por isso a revisão avançada foca também aí.",
+    "pacciTip": "O número fácil de errar não é sempre o lançamento simples, piccolo! Às vezes é a estimativa por trás dele.",
+    "topic": "revisao_avancada"
+  },
+  {
+    "id": "CONT-ESP-002",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista está decidindo se um erro de R$ 500 encontrado numa empresa com faturamento de R$ 50 milhões merece ser corrigido antes de liberar o relatório anual.",
+    "question": "Como o conceito de materialidade se aplica a essa decisão específica?",
+    "options": [
+      "Dado o porte da empresa, R$ 500 provavelmente não é material — não altera nenhuma decisão de quem usa o relatório, então o esforço de correção pode não valer a pena nesse nível",
+      "Todo erro, independente do valor, sempre precisa ser corrigido imediatamente, sem exceção",
+      "Materialidade nunca deveria ser considerada em decisões de correção de erro",
+      "O valor de R$ 500 é sempre material, independente do porte da empresa"
+    ],
+    "correctAnswer": "Dado o porte da empresa, R$ 500 provavelmente não é material — não altera nenhuma decisão de quem usa o relatório, então o esforço de correção pode não valer a pena nesse nível",
+    "explanation": "Materialidade é sempre relativa ao contexto — R$ 500 numa empresa de R$ 50 milhões é insignificante; o mesmo valor numa microempresa poderia ser altamente relevante. A decisão de corrigir ou não deve considerar esse contexto.",
+    "pacciTip": "Materialidade é sempre relativa, tesoro! O mesmo valor pode ser irrelevante aqui e crucial ali.",
+    "topic": "revisao_avancada"
+  },
+  {
+    "id": "CONT-ESP-003",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista está revisando o fechamento anual de uma empresa e decide aplicar 'ceticismo profissional' antes de aceitar as explicações dadas pelo cliente para uma variação incomum.",
+    "question": "O que significa, na prática, aplicar 'ceticismo profissional' numa revisão de fechamento?",
+    "options": [
+      "Buscar evidências objetivas que sustentem a explicação dada, em vez de simplesmente aceitá-la porque parece razoável ou porque veio de uma fonte confiável",
+      "Desconfiar automaticamente de tudo que o cliente diz, sem nenhuma base",
+      "Ignorar completamente as explicações do cliente, sempre",
+      "Aceitar qualquer explicação, desde que dada com confiança pelo cliente"
+    ],
+    "correctAnswer": "Buscar evidências objetivas que sustentem a explicação dada, em vez de simplesmente aceitá-la porque parece razoável ou porque veio de uma fonte confiável",
+    "explanation": "Ceticismo profissional não é desconfiança automática — é a prática de buscar evidência objetiva que sustente uma explicação, em vez de aceitá-la só porque soa razoável ou vem de alguém confiável.",
+    "pacciTip": "Ceticismo profissional é 'mostra a evidência', não 'eu não acredito em você', piccolo!",
+    "topic": "revisao_avancada"
+  },
+  {
+    "id": "CONT-ESP-004",
+    "level": "cont_especialista",
+    "type": "ordering",
+    "scenario": "Você está conduzindo uma revisão avançada de fechamento anual de um cliente de médio porte, antes da entrega final ao sócio-diretor da empresa.",
+    "question": "Ordene a sequência de uma revisão avançada de fechamento anual:",
+    "options": [
+      "Revisar o julgamento por trás das principais estimativas (provisões, depreciação, estoque)",
+      "Avaliar a materialidade de qualquer diferença ou erro encontrado",
+      "Buscar evidências objetivas para explicações dadas sobre itens atípicos",
+      "Consolidar os achados e decidir quais merecem ajuste antes da entrega final"
+    ],
+    "correctAnswer": [
+      "Revisar o julgamento por trás das principais estimativas (provisões, depreciação, estoque)",
+      "Avaliar a materialidade de qualquer diferença ou erro encontrado",
+      "Buscar evidências objetivas para explicações dadas sobre itens atípicos",
+      "Consolidar os achados e decidir quais merecem ajuste antes da entrega final"
+    ],
+    "explanation": "Revisar julgamento, avaliar materialidade, buscar evidência, e consolidar os achados — essa é a espinha dorsal de uma revisão avançada de fechamento, muito além de uma simples conferência de lançamentos.",
+    "pacciTip": "Revisão avançada vai fundo onde a revisão básica já parou, tesoro!",
+    "topic": "revisao_avancada"
+  },
+  {
+    "id": "CONT-ESP-005",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista percebe que um cliente, pressionado por um empréstimo bancário que exige certos índices financeiros mínimos, parece ter forte interesse em que o resultado do ano 'pareça' melhor do que é.",
+    "question": "Como esse incentivo específico do cliente deveria influenciar o nível de ceticismo profissional do especialista?",
+    "options": [
+      "Deveria aumentar a atenção a estimativas e julgamentos que poderiam ser usados para inflar artificialmente o resultado, dado o incentivo identificado",
+      "Não deveria influenciar em nada, já que incentivos do cliente nunca são relevantes para a revisão",
+      "Deveria levar o especialista a ajudar o cliente a 'melhorar' os números para o banco",
+      "Deveria fazer o especialista encerrar o trabalho imediatamente, sem mais análise"
+    ],
+    "correctAnswer": "Deveria aumentar a atenção a estimativas e julgamentos que poderiam ser usados para inflar artificialmente o resultado, dado o incentivo identificado",
+    "explanation": "Identificar um incentivo real para distorcer o resultado (como uma cláusula de empréstimo) é parte da análise de risco de uma revisão avançada — isso justifica um nível maior de ceticismo profissional sobre estimativas que poderiam ser manipuladas, sem nunca ajudar a distorcer o resultado.",
+    "pacciTip": "Incentivo pra maquiar o resultado identificado é sinal pra olhar com mais cuidado, piccolo, nunca pra ajudar a maquiar!",
+    "topic": "revisao_avancada"
+  },
+  {
+    "id": "CONT-ESP-006",
+    "level": "cont_especialista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que o critério usado para decidir se um erro ou diferença é relevante o suficiente para influenciar a análise de quem lê o relatório tem um nome já estudado em níveis anteriores.",
+    "question": "Digite a palavra (termo contábil, já visto antes) que nomeia esse critério de relevância:",
+    "correctAnswer": "materialidade",
+    "explanation": "Materialidade continua sendo o critério central em qualquer nível de revisão — da básica à mais avançada, sempre ajuda a decidir onde investir o esforço de investigação e correção.",
+    "pacciTip": "Materialidade te acompanha desde o nível de Assistente até aqui, tesoro! Um conceito que nunca sai de moda.",
+    "topic": "revisao_avancada"
+  },
+  {
+    "id": "CONT-ESP-007",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que o escritório menciona tanto os 'CPCs' quando discute como tratar uma operação contábil mais complexa.",
+    "question": "O que são os CPCs (Pronunciamentos do Comitê de Pronunciamentos Contábeis)?",
+    "options": [
+      "Normas técnicas que padronizam como diversas operações e situações devem ser contabilizadas no Brasil, alinhadas às práticas internacionais",
+      "Um tipo específico de imposto federal",
+      "Um sistema de declaração fiscal, como o SPED",
+      "Um órgão exclusivo de fiscalização trabalhista"
+    ],
+    "correctAnswer": "Normas técnicas que padronizam como diversas operações e situações devem ser contabilizadas no Brasil, alinhadas às práticas internacionais",
+    "explanation": "Os CPCs são pronunciamentos técnicos que definem como contabilizar diversas situações (arrendamentos, instrumentos financeiros, reconhecimento de receita, entre outros), buscando alinhar a contabilidade brasileira às normas internacionais (IFRS).",
+    "pacciTip": "CPC é o 'manual de regras' da contabilidade brasileira moderna, piccolo! Alinhado ao padrão internacional.",
+    "topic": "normas_contabeis"
+  },
+  {
+    "id": "CONT-ESP-008",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que uma pequena ou média empresa (PME) não precisa seguir exatamente as mesmas normas completas usadas por uma grande companhia aberta.",
+    "question": "O que é o 'CPC PME', mencionado especificamente para empresas de menor porte?",
+    "options": [
+      "Uma versão simplificada das normas contábeis, pensada para reduzir a complexidade de aplicação em empresas de menor porte, sem perder a essência dos princípios",
+      "Uma isenção completa de qualquer norma contábil para pequenas empresas",
+      "Um regime tributário específico para pequenas empresas",
+      "Uma obrigação acessória exclusiva de empresas do Simples Nacional"
+    ],
+    "correctAnswer": "Uma versão simplificada das normas contábeis, pensada para reduzir a complexidade de aplicação em empresas de menor porte, sem perder a essência dos princípios",
+    "explanation": "O CPC PME (Pequenas e Médias Empresas) simplifica a aplicação das normas contábeis completas, reconhecendo que o custo-benefício de aplicar todas as regras detalhadas de uma grande companhia não faz sentido para empresas menores — mas os princípios essenciais continuam valendo.",
+    "pacciTip": "CPC PME é a versão 'sem excesso de complexidade' das normas, tesoro, pensada pro porte certo de empresa!",
+    "topic": "normas_contabeis"
+  },
+  {
+    "id": "CONT-ESP-009",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente assina um contrato de aluguel de longo prazo para um imóvel comercial, e o especialista explica que esse contrato agora precisa ser reconhecido de forma diferente do que era feito há alguns anos.",
+    "question": "Qual é a mudança conceitual trazida pelas normas modernas de arrendamento (leasing) para contratos como esse?",
+    "options": [
+      "Muitos contratos de arrendamento de longo prazo passam a ser reconhecidos no Balanço Patrimonial, como um direito de uso (Ativo) e uma obrigação correspondente (Passivo), em vez de ficarem só 'fora do balanço'",
+      "Contratos de aluguel nunca precisam ser reconhecidos contabilmente, independente do prazo",
+      "A mudança afeta apenas o valor do aluguel pago mensalmente, sem relação com o Balanço",
+      "Contratos de arrendamento sempre foram tratados exatamente da mesma forma, sem nenhuma mudança"
+    ],
+    "correctAnswer": "Muitos contratos de arrendamento de longo prazo passam a ser reconhecidos no Balanço Patrimonial, como um direito de uso (Ativo) e uma obrigação correspondente (Passivo), em vez de ficarem só 'fora do balanço'",
+    "explanation": "As normas modernas de arrendamento (CPC 06 / IFRS 16) trouxeram uma mudança significativa — muitos contratos antes tratados apenas como despesa mensal (fora do balanço) passam a gerar um Ativo de direito de uso e um Passivo correspondente, refletindo melhor a obrigação econômica assumida.",
+    "pacciTip": "Arrendamento de longo prazo hoje entra no balanço de verdade, piccolo! Uma mudança importante das normas modernas.",
+    "topic": "normas_contabeis"
+  },
+  {
+    "id": "CONT-ESP-010",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta por que o momento de reconhecer uma receita de venda não é sempre simplesmente 'quando o dinheiro entra na conta'.",
+    "question": "Qual é o princípio moderno (CPC 47 / IFRS 15) que orienta o reconhecimento de receita?",
+    "options": [
+      "A receita deve ser reconhecida quando o controle do bem ou serviço é efetivamente transferido ao cliente, podendo ser diferente do momento do recebimento financeiro",
+      "A receita só pode ser reconhecida no momento exato em que o dinheiro entra na conta bancária",
+      "A receita deve ser reconhecida sempre no primeiro dia do mês da venda, independente de qualquer outro fator",
+      "O momento de reconhecimento de receita nunca segue nenhum critério padronizado"
+    ],
+    "correctAnswer": "A receita deve ser reconhecida quando o controle do bem ou serviço é efetivamente transferido ao cliente, podendo ser diferente do momento do recebimento financeiro",
+    "explanation": "O princípio moderno de reconhecimento de receita foca na transferência de controle do bem/serviço ao cliente, não no momento do recebimento financeiro — um contrato de longo prazo, por exemplo, pode reconhecer receita progressivamente conforme o serviço é prestado.",
+    "pacciTip": "Receita acompanha a transferência de controle, tesoro, não necessariamente o dinheiro entrando na conta!",
+    "topic": "normas_contabeis"
+  },
+  {
+    "id": "CONT-ESP-011",
+    "level": "cont_especialista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista explica que as normas contábeis brasileiras, especialmente após a convergência internacional, se baseiam fortemente nos padrões conhecidos globalmente pela sigla em inglês.",
+    "question": "Digite a sigla (em inglês) dos padrões contábeis internacionais usados como referência para os CPCs brasileiros:",
+    "correctAnswer": "IFRS",
+    "explanation": "IFRS (International Financial Reporting Standards) são os padrões contábeis internacionais que serviram de base para a convergência das normas contábeis brasileiras (os CPCs) nas últimas décadas.",
+    "pacciTip": "IFRS é a referência global, piccolo! Os CPCs brasileiros são, em grande parte, uma tradução adaptada dela.",
+    "topic": "normas_contabeis"
+  },
+  {
+    "id": "CONT-ESP-012",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente pergunta se é obrigatório, para toda empresa, seguir rigorosamente todos os CPCs completos, mesmo sendo uma pequena empresa familiar.",
+    "question": "Qual é uma orientação razoável a dar a esse cliente sobre a aplicação prática das normas?",
+    "options": [
+      "Depende do porte e da obrigação legal da empresa — muitas pequenas empresas podem aplicar a versão simplificada (CPC PME), enquanto companhias de capital aberto seguem as normas completas",
+      "Toda empresa, de qualquer porte, é sempre obrigada a seguir exatamente as mesmas normas completas",
+      "Nenhuma empresa no Brasil é obrigada a seguir CPCs, só empresas internacionais",
+      "A aplicação das normas nunca depende do porte da empresa, só do seu setor de atuação"
+    ],
+    "correctAnswer": "Depende do porte e da obrigação legal da empresa — muitas pequenas empresas podem aplicar a versão simplificada (CPC PME), enquanto companhias de capital aberto seguem as normas completas",
+    "explanation": "A aplicação das normas contábeis varia conforme o porte e a natureza legal da empresa — pequenas e médias empresas costumam ter a opção de usar a versão simplificada, enquanto companhias de capital aberto seguem as normas completas de forma obrigatória.",
+    "pacciTip": "Norma certa pro porte certo de empresa, tesoro! Simplificação existe por um bom motivo.",
+    "topic": "normas_contabeis"
+  },
+  {
+    "id": "CONT-ESP-013",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista está se preparando para uma reunião trimestral de resultados com o dono de uma empresa cliente, que não tem formação técnica em contabilidade.",
+    "question": "Qual é a abordagem mais eficaz para conduzir essa reunião de forma realmente consultiva?",
+    "options": [
+      "Focar nos poucos números e tendências mais relevantes para o negócio, traduzindo o que eles significam em termos de decisão prática, em vez de apresentar todos os detalhes técnicos",
+      "Apresentar absolutamente todos os detalhes técnicos possíveis, sem priorização nenhuma",
+      "Evitar qualquer discussão sobre números, falando apenas de assuntos genéricos",
+      "Entregar só o relatório em PDF, sem nenhuma conversa ou explicação adicional"
+    ],
+    "correctAnswer": "Focar nos poucos números e tendências mais relevantes para o negócio, traduzindo o que eles significam em termos de decisão prática, em vez de apresentar todos os detalhes técnicos",
+    "explanation": "Uma reunião verdadeiramente consultiva prioriza o que é relevante para a decisão do cliente, traduzido em linguagem acessível — sobrecarregar com detalhes técnicos desnecessários prejudica a comunicação, mesmo que os números estejam tecnicamente corretos.",
+    "pacciTip": "Reunião consultiva é sobre o que importa pro cliente decidir, piccolo, não sobre mostrar tudo que você sabe!",
+    "topic": "contabilidade_consultiva"
+  },
+  {
+    "id": "CONT-ESP-014",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Durante uma reunião de resultados, um cliente pergunta diretamente: 'Devo contratar mais dois funcionários esse trimestre ou não?' — uma decisão de negócio, não puramente contábil.",
+    "question": "Qual é uma boa forma de responder a esse tipo de pergunta, mantendo a postura consultiva sem ultrapassar os limites da função contábil?",
+    "options": [
+      "Trazer os dados e indicadores relevantes (capacidade de caixa, margem, NCG) que ajudam o cliente a tomar essa decisão com mais informação, deixando claro que a decisão final é dele",
+      "Decidir pelo cliente, dizendo exatamente o que ele deve fazer sem nenhuma ressalva",
+      "Recusar-se a comentar qualquer coisa relacionada a decisões de negócio",
+      "Responder apenas 'eu não sei', sem agregar nenhuma informação útil"
+    ],
+    "correctAnswer": "Trazer os dados e indicadores relevantes (capacidade de caixa, margem, NCG) que ajudam o cliente a tomar essa decisão com mais informação, deixando claro que a decisão final é dele",
+    "explanation": "Uma postura consultiva saudável informa a decisão com dados relevantes, sem tomar a decisão pelo cliente — o especialista contábil contribui com uma visão informada, mas a decisão de negócio final continua sendo do empresário.",
+    "pacciTip": "Informar a decisão é diferente de tomar a decisão pelo cliente, tesoro! A linha é sutil, mas importante.",
+    "topic": "contabilidade_consultiva"
+  },
+  {
+    "id": "CONT-ESP-015",
+    "level": "cont_especialista",
+    "type": "ordering",
+    "scenario": "Você está preparando uma reunião trimestral de resultados para um cliente, que espera uma visão clara e acionável sobre o desempenho da empresa.",
+    "question": "Ordene o processo de preparação de uma reunião de resultados consultiva:",
+    "options": [
+      "Identificar os poucos indicadores e tendências mais relevantes para aquele cliente específico",
+      "Traduzir esses números em linguagem acessível, com contexto do que mudou e por quê",
+      "Preparar recomendações práticas baseadas nos dados, sem decidir pelo cliente",
+      "Conduzir a reunião com espaço para perguntas e esclarecimentos"
+    ],
+    "correctAnswer": [
+      "Identificar os poucos indicadores e tendências mais relevantes para aquele cliente específico",
+      "Traduzir esses números em linguagem acessível, com contexto do que mudou e por quê",
+      "Preparar recomendações práticas baseadas nos dados, sem decidir pelo cliente",
+      "Conduzir a reunião com espaço para perguntas e esclarecimentos"
+    ],
+    "explanation": "Priorizar o relevante, traduzir em linguagem acessível, preparar recomendações sem decidir pelo cliente, e deixar espaço para diálogo — esse processo transforma uma reunião de números numa reunião realmente consultiva.",
+    "pacciTip": "Reunião consultiva bem preparada é meio caminho andado pro sucesso dela, piccolo!",
+    "topic": "contabilidade_consultiva"
+  },
+  {
+    "id": "CONT-ESP-016",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um cliente, satisfeito com uma análise detalhada do especialista, começa a pedir recomendações sobre investimentos pessoais, fora do escopo da empresa.",
+    "question": "Qual é a resposta profissionalmente correta diante desse tipo de pedido fora do escopo?",
+    "options": [
+      "Explicar com transparência que essa área foge do escopo e da expertise do trabalho contábil, sugerindo buscar um profissional especializado nessa finalidade",
+      "Dar a recomendação de investimento mesmo assim, já que o cliente está pedindo",
+      "Ignorar o pedido completamente, sem nenhuma explicação",
+      "Fingir ter conhecimento especializado em investimentos pessoais para parecer mais útil"
+    ],
+    "correctAnswer": "Explicar com transparência que essa área foge do escopo e da expertise do trabalho contábil, sugerindo buscar um profissional especializado nessa finalidade",
+    "explanation": "Reconhecer os limites da própria expertise é parte da postura profissional — dar uma recomendação sem a qualificação adequada (especialmente numa área regulada como investimentos) pode prejudicar o cliente e gerar responsabilidade indevida.",
+    "pacciTip": "Saber até onde vai seu escopo é tão importante quanto saber o que está dentro dele, tesoro!",
+    "topic": "contabilidade_consultiva"
+  },
+  {
+    "id": "CONT-ESP-017",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório decide medir o tempo médio que leva, desde o recebimento de todos os documentos de um cliente até a entrega do fechamento mensal.",
+    "question": "Esse tipo de medição de tempo-padrão de entrega é um exemplo de:",
+    "options": [
+      "Um indicador de SLA (Service Level Agreement / Acordo de Nível de Serviço)",
+      "Um indicador de liquidez",
+      "Uma provisão trabalhista",
+      "Um critério de materialidade"
+    ],
+    "correctAnswer": "Um indicador de SLA (Service Level Agreement / Acordo de Nível de Serviço)",
+    "explanation": "SLA é o acordo (ou meta) de nível de serviço — nesse caso, o tempo padrão esperado entre o recebimento de documentos e a entrega do fechamento. Medir isso ajuda o escritório a monitorar e melhorar sua própria produtividade e qualidade de serviço.",
+    "pacciTip": "SLA é a 'promessa de tempo' que o escritório faz pra si mesmo cumprir, piccolo!",
+    "topic": "gestao_processos"
+  },
+  {
+    "id": "CONT-ESP-018",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório cria um Procedimento Operacional Padrão (POP) documentado para o processo de fechamento mensal, detalhando cada etapa esperada.",
+    "question": "Qual é o principal benefício de ter um POP documentado para um processo recorrente como o fechamento mensal?",
+    "options": [
+      "Garante consistência na execução, independente de quem realiza a tarefa, e facilita o treinamento de novos membros da equipe",
+      "Não traz nenhum benefício real sobre deixar cada pessoa decidir seu próprio jeito de trabalhar",
+      "Serve só para cumprir uma exigência burocrática sem utilidade prática",
+      "Só é útil em escritórios com mais de 100 funcionários"
+    ],
+    "correctAnswer": "Garante consistência na execução, independente de quem realiza a tarefa, e facilita o treinamento de novos membros da equipe",
+    "explanation": "Um POP documentado padroniza a forma como um processo é executado — isso reduz a variação de qualidade entre diferentes pessoas e torna o treinamento de novos membros da equipe muito mais rápido e consistente.",
+    "pacciTip": "POP bem feito é o processo 'ensinando a si mesmo' pra quem chega novo, tesoro!",
+    "topic": "gestao_processos"
+  },
+  {
+    "id": "CONT-ESP-019",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório percebe que o indicador de produtividade de um assistente específico está consistentemente abaixo da média da equipe, mesmo com bom conhecimento técnico.",
+    "question": "Qual é uma abordagem construtiva de gestão diante desse indicador individual abaixo da média?",
+    "options": [
+      "Investigar a causa com uma conversa aberta — pode ser sobrecarga de trabalho, falta de clareza sobre prioridades, ou um processo que precisa de ajuste — antes de qualquer julgamento",
+      "Demitir imediatamente a pessoa, sem nenhuma investigação da causa",
+      "Ignorar completamente o indicador, já que produtividade nunca deveria ser medida",
+      "Aumentar a carga de trabalho da pessoa, sem nenhuma conversa sobre a causa"
+    ],
+    "correctAnswer": "Investigar a causa com uma conversa aberta — pode ser sobrecarga de trabalho, falta de clareza sobre prioridades, ou um processo que precisa de ajuste — antes de qualquer julgamento",
+    "explanation": "Um indicador de produtividade abaixo da média é um ponto de partida para investigação, não uma conclusão automática sobre a pessoa — pode haver causas de processo, sobrecarga ou falta de clareza que, resolvidas, melhoram o resultado sem necessidade de medidas drásticas.",
+    "pacciTip": "Indicador baixo é uma pergunta a ser feita com cuidado, piccolo, não um veredito já dado!",
+    "topic": "gestao_processos"
+  },
+  {
+    "id": "CONT-ESP-020",
+    "level": "cont_especialista",
+    "type": "ordering",
+    "scenario": "Um escritório decide implementar um novo POP para o processo de atendimento a solicitações de clientes, buscando melhorar a consistência do serviço.",
+    "question": "Ordene o processo de criação e implementação de um novo POP:",
+    "options": [
+      "Mapear como o processo é executado atualmente, na prática",
+      "Identificar oportunidades de padronização e melhoria nas etapas",
+      "Documentar o POP de forma clara, com responsáveis e prazos definidos",
+      "Treinar a equipe e acompanhar a adoção do novo processo"
+    ],
+    "correctAnswer": [
+      "Mapear como o processo é executado atualmente, na prática",
+      "Identificar oportunidades de padronização e melhoria nas etapas",
+      "Documentar o POP de forma clara, com responsáveis e prazos definidos",
+      "Treinar a equipe e acompanhar a adoção do novo processo"
+    ],
+    "explanation": "Mapear a prática atual, identificar melhorias, documentar claramente, e treinar a equipe — essa sequência garante que o POP reflita a realidade e seja efetivamente adotado, não apenas um documento esquecido numa gaveta.",
+    "pacciTip": "POP que ninguém usa é só um papel bonito, tesoro! Treinamento e acompanhamento são essenciais.",
+    "topic": "gestao_processos"
+  },
+  {
+    "id": "CONT-ESP-021",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório adota um sistema de automação que importa automaticamente notas fiscais eletrônicas direto do ambiente nacional, sem digitação manual.",
+    "question": "Qual é o principal benefício dessa automação para a qualidade do trabalho contábil?",
+    "options": [
+      "Reduz erros de digitação manual e libera tempo da equipe para atividades de maior valor, como análise e revisão",
+      "Elimina completamente a necessidade de qualquer supervisão humana sobre os lançamentos",
+      "Não traz nenhum benefício real sobre a digitação manual tradicional",
+      "Serve apenas para reduzir o número de funcionários do escritório, sem outro objetivo"
+    ],
+    "correctAnswer": "Reduz erros de digitação manual e libera tempo da equipe para atividades de maior valor, como análise e revisão",
+    "explanation": "Automação de tarefas repetitivas (como importação de notas fiscais) reduz erros humanos de digitação e libera tempo da equipe para atividades que exigem julgamento e análise — o verdadeiro valor agregado do trabalho contábil.",
+    "pacciTip": "Automação boa tira o trabalho chato e repetitivo, piccolo, pra deixar espaço pro trabalho que exige pensar!",
+    "topic": "tecnologia_automacao"
+  },
+  {
+    "id": "CONT-ESP-022",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório implementa uma política de governança de dados, definindo quem pode acessar, alterar e exportar informações sensíveis de clientes.",
+    "question": "Por que a governança de dados se tornou um tema relevante para escritórios de contabilidade modernos?",
+    "options": [
+      "Porque escritórios de contabilidade lidam com informações financeiras sensíveis de clientes, e falhas de segurança podem ter consequências legais (como a LGPD) e de confiança",
+      "Porque governança de dados nunca tem relação com o trabalho contábil",
+      "Porque é apenas uma tendência passageira sem impacto real",
+      "Porque só empresas de tecnologia precisam se preocupar com esse tema"
+    ],
+    "correctAnswer": "Porque escritórios de contabilidade lidam com informações financeiras sensíveis de clientes, e falhas de segurança podem ter consequências legais (como a LGPD) e de confiança",
+    "explanation": "Escritórios contábeis lidam com dados financeiros e pessoais sensíveis — governança de dados bem estruturada protege contra vazamentos, atende exigências legais (como a LGPD) e preserva a confiança essencial na relação com o cliente.",
+    "pacciTip": "Dado de cliente é ativo valioso e sensível ao mesmo tempo, tesoro! Governança protege os dois lados.",
+    "topic": "tecnologia_automacao"
+  },
+  {
+    "id": "CONT-ESP-023",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um escritório está avaliando se deve implementar uma nova ferramenta de automação, que promete reduzir pela metade o tempo de conciliação bancária.",
+    "question": "Qual é uma pergunta importante a se fazer antes de adotar qualquer nova automação no processo contábil?",
+    "options": [
+      "A automação realmente reduz o risco de erro e mantém (ou melhora) a qualidade da revisão, ou ela só acelera o processo às custas de menos controle?",
+      "Qual é a cor da interface do novo sistema?",
+      "A automação é a mais recente lançada no mercado, independente de qualquer outro critério?",
+      "Automação nunca precisa ser avaliada antes de ser adotada"
+    ],
+    "correctAnswer": "A automação realmente reduz o risco de erro e mantém (ou melhora) a qualidade da revisão, ou ela só acelera o processo às custas de menos controle?",
+    "explanation": "Avaliar uma automação não deveria focar só em velocidade — é essencial entender se ela mantém (ou melhora) a qualidade do controle, já que automação mal avaliada pode acelerar a produção de erros, não só de resultados corretos.",
+    "pacciTip": "Automação rápida que piora o controle não é uma boa troca, piccolo! Velocidade sem qualidade é armadilha.",
+    "topic": "tecnologia_automacao"
+  },
+  {
+    "id": "CONT-ESP-024",
+    "level": "cont_especialista",
+    "type": "text_input",
+    "scenario": "No treinamento, o analista menciona a lei brasileira que regula como empresas devem tratar os dados pessoais que coletam e armazenam, incluindo dados de clientes em escritórios de contabilidade.",
+    "question": "Digite a sigla dessa lei brasileira de proteção de dados:",
+    "correctAnswer": "LGPD",
+    "explanation": "LGPD = Lei Geral de Proteção de Dados, a legislação brasileira que regula o tratamento de dados pessoais — relevante para escritórios de contabilidade, que lidam com informações sensíveis de clientes e funcionários.",
+    "pacciTip": "LGPD é sigla que todo escritório moderno precisa conhecer bem, tesoro!",
+    "topic": "tecnologia_automacao"
+  },
+  {
+    "id": "CONT-ESP-025",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista, agora líder de uma pequena equipe de assistentes e auxiliares, percebe que um membro novo da equipe está com dificuldade numa tarefa, mas não pede ajuda.",
+    "question": "Qual é uma abordagem de liderança eficaz diante dessa situação?",
+    "options": [
+      "Criar um ambiente onde pedir ajuda seja visto como normal, e verificar proativamente como a pessoa está indo, sem esperar que ela peça ajuda sozinha",
+      "Ignorar a situação até que a pessoa cometa um erro grave",
+      "Criticar publicamente a pessoa por não ter pedido ajuda",
+      "Assumir que a pessoa não tem capacidade para o cargo, sem nenhuma conversa"
+    ],
+    "correctAnswer": "Criar um ambiente onde pedir ajuda seja visto como normal, e verificar proativamente como a pessoa está indo, sem esperar que ela peça ajuda sozinha",
+    "explanation": "Um bom líder não espera passivamente que alguém peça ajuda — cria um ambiente onde isso é normal e verifica proativamente como a equipe está indo, especialmente com membros mais novos que podem ter receio de parecer incapazes.",
+    "pacciTip": "Liderança boa percebe a dificuldade antes mesmo de ser pedida ajuda, piccolo!",
+    "topic": "lideranca_equipe"
+  },
+  {
+    "id": "CONT-ESP-026",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista precisa dar um feedback sobre um erro recorrente de um assistente, que está afetando a qualidade do trabalho entregue aos clientes.",
+    "question": "Qual é uma estrutura eficaz para dar esse tipo de feedback de forma construtiva?",
+    "options": [
+      "Descrever o comportamento específico observado, o impacto que ele gera, e trabalhar juntos numa solução concreta para o futuro",
+      "Criticar a pessoa de forma genérica, sem exemplos específicos do comportamento",
+      "Evitar dar qualquer feedback, esperando que a pessoa perceba sozinha",
+      "Dar o feedback na frente de outros colegas, para 'servir de exemplo'"
+    ],
+    "correctAnswer": "Descrever o comportamento específico observado, o impacto que ele gera, e trabalhar juntos numa solução concreta para o futuro",
+    "explanation": "Feedback eficaz é específico (o que aconteceu), conecta com o impacto real, e termina numa solução colaborativa — críticas vagas ou feitas publicamente tendem a gerar defensividade em vez de melhoria real.",
+    "pacciTip": "Feedback bom é específico, sobre o comportamento, e feito em particular, tesoro! Não sobre a pessoa, em público.",
+    "topic": "lideranca_equipe"
+  },
+  {
+    "id": "CONT-ESP-027",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista, acostumado a revisar pessoalmente cada detalhe do trabalho da equipe, percebe que isso está limitando sua capacidade de assumir mais clientes consultivos.",
+    "question": "Qual é um passo importante de desenvolvimento de liderança diante dessa situação?",
+    "options": [
+      "Aprender a delegar com confiança, treinando a equipe adequadamente e criando mecanismos de revisão por amostragem, em vez de revisar tudo pessoalmente",
+      "Continuar revisando cada detalhe pessoalmente para sempre, sem mudar nada",
+      "Parar de revisar completamente o trabalho da equipe, sem nenhum controle",
+      "Recusar novos clientes consultivos, para manter o controle total sobre a equipe atual"
+    ],
+    "correctAnswer": "Aprender a delegar com confiança, treinando a equipe adequadamente e criando mecanismos de revisão por amostragem, em vez de revisar tudo pessoalmente",
+    "explanation": "Delegação eficaz não significa abandonar o controle — significa treinar bem a equipe e usar mecanismos de revisão mais inteligentes (como amostragem em vez de revisão total), liberando capacidade para atividades de maior valor, como atendimento consultivo.",
+    "pacciTip": "Delegar bem não é perder controle, piccolo! É trocar 'revisar tudo' por 'revisar com inteligência'.",
+    "topic": "lideranca_equipe"
+  },
+  {
+    "id": "CONT-ESP-028",
+    "level": "cont_especialista",
+    "type": "ordering",
+    "scenario": "Você está se preparando para dar um feedback de desenvolvimento a um membro da equipe que tem potencial, mas comete erros recorrentes num tipo específico de tarefa.",
+    "question": "Ordene a estrutura de uma conversa de feedback de desenvolvimento eficaz:",
+    "options": [
+      "Descrever o comportamento específico observado, com exemplos concretos",
+      "Explicar o impacto real que esse comportamento gera no trabalho da equipe",
+      "Ouvir a perspectiva da pessoa sobre a situação",
+      "Definir juntos um plano de ação concreto para melhorar"
+    ],
+    "correctAnswer": [
+      "Descrever o comportamento específico observado, com exemplos concretos",
+      "Explicar o impacto real que esse comportamento gera no trabalho da equipe",
+      "Ouvir a perspectiva da pessoa sobre a situação",
+      "Definir juntos um plano de ação concreto para melhorar"
+    ],
+    "explanation": "Comportamento específico, impacto real, escuta ativa, e plano de ação conjunto — essa estrutura transforma uma crítica potencialmente desconfortável numa conversa de desenvolvimento genuinamente construtiva.",
+    "pacciTip": "Feedback que também escuta é feedback que realmente funciona, tesoro!",
+    "topic": "lideranca_equipe"
+  },
+  {
+    "id": "CONT-ESP-029",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista percebe que dois membros da equipe estão em conflito sobre como dividir as tarefas de um cliente específico, afetando o clima da equipe.",
+    "question": "Qual é uma abordagem de liderança adequada diante desse conflito interno?",
+    "options": [
+      "Mediar uma conversa entre as partes, buscando entender cada perspectiva e chegar a um acordo claro sobre responsabilidades, em vez de ignorar o conflito",
+      "Ignorar completamente o conflito, esperando que se resolva sozinho",
+      "Tomar partido de um dos lados sem ouvir a outra pessoa",
+      "Demitir uma das pessoas envolvidas, sem tentar resolver o conflito antes"
+    ],
+    "correctAnswer": "Mediar uma conversa entre as partes, buscando entender cada perspectiva e chegar a um acordo claro sobre responsabilidades, em vez de ignorar o conflito",
+    "explanation": "Conflitos de equipe não resolvidos tendem a piorar o clima e a produtividade — mediar uma conversa estruturada, ouvindo as duas partes e chegando a um acordo claro, é a abordagem de liderança mais eficaz nesse tipo de situação.",
+    "pacciTip": "Conflito ignorado não desaparece, piccolo, só cresce! Mediação ativa resolve de verdade.",
+    "topic": "lideranca_equipe"
+  },
+  {
+    "id": "CONT-ESP-030",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista é responsável por uma carteira de 15 clientes diferentes, cada um com necessidades e níveis de risco diferentes.",
+    "question": "Qual é uma boa prática de gestão de risco ao lidar com uma carteira diversa de clientes?",
+    "options": [
+      "Classificar os clientes por nível de risco (complexidade, histórico, urgência) e priorizar atenção proporcionalmente, em vez de tratar todos exatamente da mesma forma",
+      "Dedicar exatamente o mesmo tempo e atenção a todos os clientes, independente do risco",
+      "Ignorar completamente diferenças de risco entre clientes diferentes",
+      "Focar atenção só no cliente que paga os honorários mais altos, ignorando os demais"
+    ],
+    "correctAnswer": "Classificar os clientes por nível de risco (complexidade, histórico, urgência) e priorizar atenção proporcionalmente, em vez de tratar todos exatamente da mesma forma",
+    "explanation": "Uma carteira de clientes diversa se beneficia de uma classificação de risco — clientes mais complexos ou com histórico de problemas merecem atenção proporcionalmente maior, em vez de uma distribuição uniforme de esforço que ignora o risco real de cada um.",
+    "pacciTip": "Nem todo cliente pede o mesmo nível de atenção, tesoro! Risco bem classificado orienta onde focar.",
+    "topic": "gestao_riscos_carteira"
+  },
+  {
+    "id": "CONT-ESP-031",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista percebe que um cliente específico da carteira atrasa pagamentos de honorários com frequência, além de entregar documentos sempre no último momento.",
+    "question": "Qual é uma boa prática de gestão de risco diante de um cliente com esse padrão repetido?",
+    "options": [
+      "Documentar o padrão, conversar abertamente sobre as expectativas, e avaliar se a relação com esse cliente ainda faz sentido para o escritório, caso o padrão persista",
+      "Ignorar completamente o padrão, continuando a atender exatamente como qualquer outro cliente",
+      "Encerrar a relação imediatamente, sem nenhuma conversa prévia",
+      "Aumentar o prazo de entrega de todos os outros clientes, para compensar esse atraso"
+    ],
+    "correctAnswer": "Documentar o padrão, conversar abertamente sobre as expectativas, e avaliar se a relação com esse cliente ainda faz sentido para o escritório, caso o padrão persista",
+    "explanation": "Um padrão repetido de risco (atraso de pagamento, documentos de última hora) merece ser documentado e discutido abertamente — e, se persistir mesmo após a conversa, uma avaliação honesta sobre manter ou não a relação é uma prática saudável de gestão de carteira.",
+    "pacciTip": "Cliente de risco recorrente merece uma conversa honesta, piccolo, antes de qualquer decisão maior!",
+    "topic": "gestao_riscos_carteira"
+  },
+  {
+    "id": "CONT-ESP-032",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista está decidindo se aceita um novo cliente numa área de negócio que ele não conhece muito bem (ex: criptoativos), mesmo tendo boa reputação geral.",
+    "question": "Qual é uma abordagem responsável diante dessa oportunidade de negócio fora da zona de conforto técnico?",
+    "options": [
+      "Avaliar honestamente a lacuna de conhecimento, buscar capacitação específica ou apoio especializado antes de aceitar, em vez de assumir o cliente sem a preparação necessária",
+      "Aceitar o cliente imediatamente, aprendendo 'no improviso' durante o trabalho real",
+      "Recusar automaticamente qualquer cliente fora da zona de conforto técnico, sem nenhuma avaliação",
+      "Aceitar o cliente, mas sem informar a ele sobre a lacuna de conhecimento existente"
+    ],
+    "correctAnswer": "Avaliar honestamente a lacuna de conhecimento, buscar capacitação específica ou apoio especializado antes de aceitar, em vez de assumir o cliente sem a preparação necessária",
+    "explanation": "Aceitar um cliente numa área técnica desconhecida sem preparação é um risco real tanto para o cliente quanto para o profissional — a abordagem responsável é avaliar a lacuna, buscar capacitação ou apoio especializado antes de assumir a responsabilidade completa.",
+    "pacciTip": "Área nova exige preparação antes de aceitar o desafio, tesoro! Honestidade sobre o que você ainda não sabe é profissionalismo.",
+    "topic": "gestao_riscos_carteira"
+  },
+  {
+    "id": "CONT-ESP-033",
+    "level": "cont_especialista",
+    "type": "ordering",
+    "scenario": "Você está estruturando um processo de avaliação de risco para novos clientes antes de aceitá-los na carteira do escritório.",
+    "question": "Ordene o processo de avaliação de risco de um novo cliente em potencial:",
+    "options": [
+      "Entender o ramo de atuação e a complexidade das operações do potencial cliente",
+      "Avaliar se o escritório tem a expertise necessária para atendê-lo adequadamente",
+      "Verificar sinais de risco (histórico de problemas, urgência extrema, red flags)",
+      "Decidir formalmente se aceita o cliente e sob quais condições"
+    ],
+    "correctAnswer": [
+      "Entender o ramo de atuação e a complexidade das operações do potencial cliente",
+      "Avaliar se o escritório tem a expertise necessária para atendê-lo adequadamente",
+      "Verificar sinais de risco (histórico de problemas, urgência extrema, red flags)",
+      "Decidir formalmente se aceita o cliente e sob quais condições"
+    ],
+    "explanation": "Entender o negócio, avaliar a própria expertise, checar sinais de risco, e decidir formalmente — esse processo evita aceitar clientes que o escritório não está preparado para atender bem, protegendo tanto o cliente quanto a reputação do escritório.",
+    "pacciTip": "Nem todo cliente que bate à porta deveria ser aceito sem avaliação, piccolo! Processo de entrada importa.",
+    "topic": "gestao_riscos_carteira"
+  },
+  {
+    "id": "CONT-ESP-034",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "Um especialista percebe que um cliente específico está pedindo para que determinadas operações sejam registradas de forma que claramente não reflete a realidade, mesmo depois de uma primeira conversa explicando por que isso é inadequado.",
+    "question": "Qual é a atitude profissional correta diante da insistência de um cliente em registrar algo que não reflete a realidade?",
+    "options": [
+      "Recusar-se formalmente a fazer o lançamento solicitado, documentar a situação, e avaliar — com apoio do escritório — se a relação com esse cliente deve continuar",
+      "Atender ao pedido, já que o cliente é quem paga pelos serviços",
+      "Ignorar o pedido silenciosamente, sem nenhuma conversa ou documentação",
+      "Fazer o lançamento solicitado, mas sem nenhum registro da objeção original"
+    ],
+    "correctAnswer": "Recusar-se formalmente a fazer o lançamento solicitado, documentar a situação, e avaliar — com apoio do escritório — se a relação com esse cliente deve continuar",
+    "explanation": "A integridade da informação contábil não é negociável, mesmo sob pressão repetida de um cliente — recusar formalmente, documentar a situação, e avaliar a continuidade da relação protege tanto a ética profissional quanto a reputação do escritório.",
+    "pacciTip": "Integridade não é negociável, tesoro, nem pelo cliente mais importante da carteira!",
+    "topic": "gestao_riscos_carteira"
+  },
+  {
+    "id": "CONT-ESP-035",
+    "level": "cont_especialista",
+    "type": "multiple_choice",
+    "scenario": "No encerramento do curso 'Formação de Analista Contábil', o Pacci faz uma última pergunta de reflexão sobre toda a jornada, do Estagiário ao Especialista.",
+    "question": "Qual é o fio condutor que conecta todos os níveis dessa jornada, do Estagiário ao Especialista?",
+    "options": [
+      "A evolução de executar tarefas com cuidado para, progressivamente, interpretar, questionar e orientar com responsabilidade crescente — sempre com a fidelidade da informação como base",
+      "A memorização de regras fixas que nunca mudam ao longo da carreira",
+      "A substituição completa do trabalho técnico por atividades apenas administrativas",
+      "A eliminação total da necessidade de revisão e cuidado, conforme se sobe de nível"
+    ],
+    "correctAnswer": "A evolução de executar tarefas com cuidado para, progressivamente, interpretar, questionar e orientar com responsabilidade crescente — sempre com a fidelidade da informação como base",
+    "explanation": "Do Estagiário (aprender a estrutura e os cuidados básicos) ao Especialista (liderar, revisar com julgamento avançado, orientar consultivamente), a jornada é uma evolução de responsabilidade — mas a base de tudo, em todo nível, continua sendo a fidelidade e a precisão da informação contábil.",
+    "pacciTip": "Mamma mia, que jornada, piccolo! Do primeiro lançamento até a liderança de uma carteira inteira — parabéns por ter chegado até aqui comigo!",
+    "topic": "gestao_riscos_carteira"
+  }
+]
