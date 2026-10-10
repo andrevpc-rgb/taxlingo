@@ -108,7 +108,7 @@ export function mapQuestionRow(row) {
   };
 }
 
-function mapCourseRow(row) {
+export function mapCourseRow(row) {
   return {
     id: row.id,
     title: row.title,
@@ -291,6 +291,53 @@ export async function fetchCourses() {
   const { data, error } = await supabase.from('courses').select('*').order('order_index');
   if (error) throw error;
   return data.map(mapCourseRow);
+}
+
+// Painel "Metadados do Curso" (master): cria/edita o registro do curso em
+// si — título, descrição, ícone, cor, banner, ativo. Escrita direta via
+// supabase-js, protegida pela policy courses_write_master (RLS) — sem Edge
+// Function, mesmo padrão de updateProfile. Não mexe em lições/questões
+// (ver adminImportCourseContent para isso).
+export async function adminUpsertCourse(course) {
+  const payload = {
+    id: course.id,
+    title: course.title,
+    description: course.description || null,
+    icon: course.icon || null,
+    color: course.color || null,
+    banner_url: course.bannerUrl || null,
+    is_active: Boolean(course.isActive),
+    order_index: course.orderIndex ?? 0,
+  };
+  const { data, error } = await supabase.from('courses').upsert(payload, { onConflict: 'id' }).select().single();
+  if (error) throw error;
+  return mapCourseRow(data);
+}
+
+// Painel "Acesso por Empresa" (master): lista/concede/revoga o grant de
+// curso×empresa (allow-list pura, ver company_course_access no
+// schema.sql). Escrita direta via supabase-js, protegida pela policy
+// company_course_access_write_master (RLS), já existente desde a Fase 1.
+export async function fetchCourseAccessGrants() {
+  const { data, error } = await supabase.from('company_course_access').select('company_id, course_id');
+  if (error) throw error;
+  return data;
+}
+
+export async function grantCourseAccess({ companyId, courseId }) {
+  const { error } = await supabase
+    .from('company_course_access')
+    .upsert({ company_id: companyId, course_id: courseId }, { onConflict: 'company_id,course_id' });
+  if (error) throw error;
+}
+
+export async function revokeCourseAccess({ companyId, courseId }) {
+  const { error } = await supabase
+    .from('company_course_access')
+    .delete()
+    .eq('company_id', companyId)
+    .eq('course_id', courseId);
+  if (error) throw error;
 }
 
 // Lições de um curso, SEM as questões (linhas pequenas) — permite montar
@@ -847,6 +894,18 @@ export async function adminUpdateUserCompany({ userId, companyId }) {
   });
   if (error) {
     throw new Error(await functionErrorMessage(error, 'Não foi possível trocar a empresa desse usuário.'));
+  }
+  return data;
+}
+
+// Painel "Importar Curso" (master): substitui TODO o conteúdo (lições +
+// questões) de um curso de uma vez, a partir de um JSON preparado — ver
+// admin-course-import/index.ts para o formato aceito e a validação. O
+// payload inteiro (já parseado de JSON para objeto) é repassado como body.
+export async function adminImportCourseContent(payload) {
+  const { data, error } = await supabase.functions.invoke('admin-course-import', { body: payload });
+  if (error) {
+    throw new Error(await functionErrorMessage(error, 'Não foi possível importar o conteúdo do curso.'));
   }
   return data;
 }

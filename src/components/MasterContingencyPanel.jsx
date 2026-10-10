@@ -13,6 +13,9 @@ import * as api from '../lib/api';
 import { isSupabaseConfigured } from '../lib/supabase.js';
 import ManageUsersPanel from './ManageUsersPanel';
 import ReportedQuestionsPanel from './ReportedQuestionsPanel';
+import CourseMetadataPanel from './CourseMetadataPanel';
+import CourseAccessPanel from './CourseAccessPanel';
+import ImportCoursePanel from './ImportCoursePanel';
 
 function ResultCard({ result }) {
   const [copied, setCopied] = useState(false);
@@ -400,6 +403,13 @@ export default function MasterContingencyPanel() {
           <div className="mt-4 grid gap-4 md:grid-cols-2">
             <ManageUsersPanel />
             <ReportedQuestionsPanel />
+          </div>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <CourseMetadataPanel />
+            <CourseAccessPanel />
+          </div>
+          <div className="mt-4 grid gap-4">
+            <ImportCoursePanel />
           </div>
         </>
       )}

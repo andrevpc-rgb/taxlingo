@@ -852,6 +852,16 @@ create policy courses_select_authenticated on public.courses for select
     )
   );
 
+-- Metadados do curso (título/descrição/ícone/cor/banner/ativo) são
+-- cadastrados/editados direto pelo painel "Metadados do Curso" (só master,
+-- ver CourseMetadataPanel.jsx) — escrita direta via supabase-js, sem Edge
+-- Function, mesmo padrão de updateProfile. Conteúdo (lições/questões)
+-- continua um caminho à parte, só pela RPC admin_replace_course_content.
+drop policy if exists courses_write_master on public.courses;
+create policy courses_write_master on public.courses for all
+  using (public.is_master())
+  with check (public.is_master());
+
 drop policy if exists lessons_select_authenticated on public.lessons;
 create policy lessons_select_authenticated on public.lessons for select
   using (
