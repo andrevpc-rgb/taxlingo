@@ -11,10 +11,6 @@
 // sentido inflar o bundle inicial de todo mundo com ela.
 
 const WORKLOAD_HOURS = 20;
-const COURSE_TITLE = 'Treinamento e Atualização em Reforma Tributária (IBS, CBS e IS)';
-// Última lição da trilha (ver buildLevelLessons em src/data/mockData.js e
-// scripts/seed.mjs — todo nível ganha um "<id>-exam", inclusive o último).
-const FINAL_EXAM_LESSON_ID = 'especialista-exam';
 
 const EMERALD = [16, 185, 129];
 const EMERALD_DARK = [4, 120, 87];
@@ -22,15 +18,22 @@ const AMBER = [180, 83, 9];
 const SLATE = [51, 65, 85];
 const SLATE_LIGHT = [100, 116, 139];
 
-// A trilha inteira só conta como concluída quando o Exame de Transição do
-// ÚLTIMO nível (Especialista) está com completed=true — chegar a esse
-// nível não basta, é preciso ter passado no exame dele também.
-// `modules` já reflete isso em qualquer modo (mock ou Supabase — ver
-// applyProgressToModules em GameContext.jsx), então essa checagem funciona
-// igual nos dois.
-export function hasCompletedTrail(modules) {
-  const finalExam = (modules ?? []).flatMap((m) => m.lessons ?? []).find((l) => l.id === FINAL_EXAM_LESSON_ID);
-  return Boolean(finalExam?.completed);
+// A trilha de um curso só conta como concluída quando o Exame de Transição
+// do ÚLTIMO nível está com completed=true — chegar a esse nível não basta,
+// é preciso ter passado no exame dele também. Em vez de comparar por
+// orderIndex (que o modo mock nunca preenche — ver buildLevelLessons em
+// mockData.js), basta varrer de trás pra frente: todo nível termina com um
+// "<id>-exam" como última lição (ver buildLevelLessons em mockData.js e
+// scripts/seed.mjs), então o último item de type 'exam' no array já é,
+// por construção, o exame do último nível — funciona igual em ambos os
+// modos, já que os dois entregam `lessons` na ordem certa da trilha.
+export function hasCompletedTrail(modules, courseId) {
+  const course = (modules ?? []).find((m) => m.id === courseId);
+  const lessons = course?.lessons ?? [];
+  for (let i = lessons.length - 1; i >= 0; i--) {
+    if (lessons[i].type === 'exam') return Boolean(lessons[i].completed);
+  }
+  return false;
 }
 
 // Código determinístico (não é um hash criptográfico — só precisa ser
@@ -54,12 +57,15 @@ function companySlug(company) {
   return (slug || 'TAXLINGO').slice(0, 8);
 }
 
-function buildValidationCode(userId, company) {
-  const suffix = hashToBase36(String(userId)).padStart(5, '0').slice(0, 5);
+// Inclui o courseId no hash para que o mesmo colaborador, concluindo
+// trilhas diferentes, não gere o mesmo código de validação para cursos
+// distintos — cada certificado precisa de uma "impressão digital" própria.
+function buildValidationCode(userId, courseId, company) {
+  const suffix = hashToBase36(`${userId}:${courseId}`).padStart(5, '0').slice(0, 5);
   return `TL-${companySlug(company)}-${suffix}`;
 }
 
-export async function downloadCertificate({ user, company }) {
+export async function downloadCertificate({ user, company, course }) {
   const { default: jsPDF } = await import('jspdf');
   const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
   const pageWidth = doc.internal.pageSize.getWidth();
@@ -117,7 +123,7 @@ export async function downloadCertificate({ user, company }) {
 
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(15);
-  doc.text(COURSE_TITLE, centerX, 126, { align: 'center', maxWidth: pageWidth - 70 });
+  doc.text(course.title, centerX, 126, { align: 'center', maxWidth: pageWidth - 70 });
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(12);
@@ -134,7 +140,7 @@ export async function downloadCertificate({ user, company }) {
     month: 'long',
     year: 'numeric',
   });
-  const validationCode = buildValidationCode(user.id, company);
+  const validationCode = buildValidationCode(user.id, course.id, company);
 
   doc.setFontSize(10);
   doc.setTextColor(...SLATE_LIGHT);
@@ -142,5 +148,6 @@ export async function downloadCertificate({ user, company }) {
   doc.text(`Código de validação: ${validationCode}`, centerX + 55, pageHeight - 24, { align: 'center' });
 
   const safeName = user.name.trim().replace(/\s+/g, '_');
-  doc.save(`Certificado_TaxLingo_${safeName}.pdf`);
+  const safeCourse = course.title.trim().replace(/\s+/g, '_');
+  doc.save(`Certificado_TaxLingo_${safeCourse}_${safeName}.pdf`);
 }

@@ -19,10 +19,21 @@ const AVATAR_TABS = Object.entries(AVATAR_CATEGORIES).map(([key, category]) => (
 
 export default function UserProfile({ onClose }) {
   const { user, currentCompany, modules, updateProfile, logout } = useGame();
-  // Master (founder/QA) sempre vê liberado — é a conta de contingência,
-  // não faz sentido ela precisar terminar a trilha inteira pra testar o
-  // certificado (mesma lógica de isAccessExpired/leaderboard em GameContext.jsx).
-  const certificateUnlocked = user?.role === 'master' || hasCompletedTrail(modules);
+  // Um certificado por curso, não um só pra trilha inteira do produto —
+  // cada curso real (não travado) vira uma linha na lista, liberada quando
+  // o Exame de Transição do último nível DAQUELE curso está concluído.
+  // Master (founder/QA) sempre vê tudo liberado — é a conta de
+  // contingência, não faz sentido ela precisar terminar nenhuma trilha pra
+  // testar o certificado (mesma lógica de isAccessExpired/leaderboard em
+  // GameContext.jsx).
+  const certificateCourses = modules
+    .filter((m) => !m.locked)
+    .map((m) => ({
+      id: m.id,
+      title: m.title,
+      unlocked: user?.role === 'master' || hasCompletedTrail(modules, m.id),
+    }));
+  const hasAnyCertificateUnlocked = certificateCourses.some((c) => c.unlocked);
 
   const [name, setName] = useState(user?.name ?? '');
   const [jobTitle, setJobTitle] = useState(user?.jobTitle ?? '');
@@ -33,7 +44,7 @@ export default function UserProfile({ onClose }) {
   const [error, setError] = useState(null);
   const [saved, setSaved] = useState(false);
   const [saving, setSaving] = useState(false);
-  const [generatingCertificate, setGeneratingCertificate] = useState(false);
+  const [generatingCourseId, setGeneratingCourseId] = useState(null);
 
   if (!user) return null;
 
@@ -73,13 +84,13 @@ export default function UserProfile({ onClose }) {
     onClose?.();
   };
 
-  const handleDownloadCertificate = async () => {
-    if (!certificateUnlocked || generatingCertificate) return;
-    setGeneratingCertificate(true);
+  const handleDownloadCertificate = async (course) => {
+    if (!course.unlocked || generatingCourseId) return;
+    setGeneratingCourseId(course.id);
     try {
-      await downloadCertificate({ user, company: currentCompany });
+      await downloadCertificate({ user, company: currentCompany, course: { id: course.id, title: course.title } });
     } finally {
-      setGeneratingCertificate(false);
+      setGeneratingCourseId(null);
     }
   };
 
@@ -173,30 +184,40 @@ export default function UserProfile({ onClose }) {
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={handleDownloadCertificate}
-            disabled={!certificateUnlocked || generatingCertificate}
-            title={
-              certificateUnlocked
-                ? 'Baixar seu certificado em PDF'
-                : 'Conclua o Exame de Transição de Especialista (o último nível da trilha) para liberar'
-            }
-            className={`flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-extrabold uppercase tracking-wide transition-transform active:translate-y-0.5 ${
-              certificateUnlocked
-                ? 'bg-amber-500 text-white shadow-[0_4px_0_0_#b45309] active:shadow-none disabled:cursor-wait disabled:opacity-70'
-                : 'cursor-not-allowed bg-slate-100 text-slate-400'
-            }`}
-          >
-            {!certificateUnlocked && <Lock className="h-4 w-4 shrink-0" />}
-            {generatingCertificate ? 'Gerando PDF...' : '🎓 Baixar Meu Certificado'}
-          </button>
-          {!certificateUnlocked && (
-            <p className="-mt-3 flex items-center gap-1.5 text-[11px] font-medium text-slate-400">
-              <GraduationCap className="h-3.5 w-3.5 shrink-0" />
-              Libera ao concluir o Exame de Transição de Especialista, o último nível da trilha.
-            </p>
-          )}
+          <div>
+            <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">Certificados</p>
+            <div className="space-y-2">
+              {certificateCourses.map((course) => (
+                <button
+                  key={course.id}
+                  type="button"
+                  onClick={() => handleDownloadCertificate(course)}
+                  disabled={!course.unlocked || Boolean(generatingCourseId)}
+                  title={
+                    course.unlocked
+                      ? `Baixar o certificado de ${course.title} em PDF`
+                      : `Conclua o Exame de Transição do último nível de ${course.title} para liberar`
+                  }
+                  className={`flex w-full items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-extrabold uppercase tracking-wide transition-transform active:translate-y-0.5 ${
+                    course.unlocked
+                      ? 'bg-amber-500 text-white shadow-[0_4px_0_0_#b45309] active:shadow-none disabled:cursor-wait disabled:opacity-70'
+                      : 'cursor-not-allowed bg-slate-100 text-slate-400'
+                  }`}
+                >
+                  {!course.unlocked && <Lock className="h-4 w-4 shrink-0" />}
+                  <span className="truncate">
+                    {generatingCourseId === course.id ? 'Gerando PDF...' : `🎓 ${course.title}`}
+                  </span>
+                </button>
+              ))}
+            </div>
+            {!hasAnyCertificateUnlocked && (
+              <p className="mt-2 flex items-center gap-1.5 text-[11px] font-medium text-slate-400">
+                <GraduationCap className="h-3.5 w-3.5 shrink-0" />
+                Libera ao concluir o Exame de Transição do último nível de um curso.
+              </p>
+            )}
+          </div>
 
           <div className="grid gap-2">
             <label htmlFor="profile-new-password" className="text-xs font-bold uppercase tracking-wide text-slate-400">
