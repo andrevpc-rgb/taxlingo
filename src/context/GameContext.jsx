@@ -336,43 +336,68 @@ function addXp(user, amount) {
 // de um timer rodando em memória.
 // ---------------------------------------------------------------------------
 const HEART_REGEN_MS = HEART_REGEN_MINUTES * 60 * 1000;
+const DEFAULT_LIVES = 5;
 
-function applyHeartRegen(user) {
-  if (!user) return user;
+// Vidas são por CURSO (user.heartsByCourse[courseId] = { lives, maxLives,
+// lastHeartLostAt }), não mais um placar único pra conta inteira — foi
+// exatamente o placar único que deixava um usuário sem conseguir treinar um
+// segundo curso só porque tinha zerado as vidas no primeiro (bug reportado
+// por usuários reais com os dois cursos em andamento ao mesmo tempo).
+// getCourseHearts devolve um default (vidas cheias) pra qualquer curso que
+// ainda não tenha entrada no mapa — cobre tanto conta nova quanto curso
+// nunca jogado antes por uma conta já existente.
+export function getCourseHearts(user, courseId) {
+  return user?.heartsByCourse?.[courseId] ?? { lives: DEFAULT_LIVES, maxLives: DEFAULT_LIVES, lastHeartLostAt: null };
+}
+
+function setCourseHearts(user, courseId, heartsPatch) {
+  const current = getCourseHearts(user, courseId);
+  return {
+    ...user,
+    heartsByCourse: {
+      ...user.heartsByCourse,
+      [courseId]: { ...current, ...heartsPatch },
+    },
+  };
+}
+
+function applyHeartRegen(user, courseId) {
+  if (!user || !courseId) return user;
+  const hearts = getCourseHearts(user, courseId);
   // Master (fundador/QA) sempre com vidas cheias — cobre também quem já
   // estava com vidas baixas/zeradas de ANTES desta regra existir (dado
   // antigo persistido), sem precisar de nenhum botão manual de restaurar.
-  if (user.role === 'master' && (user.lives < user.maxLives || user.lastHeartLostAt)) {
-    return { ...user, lives: user.maxLives, lastHeartLostAt: null };
+  if (user.role === 'master' && (hearts.lives < hearts.maxLives || hearts.lastHeartLostAt)) {
+    return setCourseHearts(user, courseId, { lives: hearts.maxLives, lastHeartLostAt: null });
   }
-  if (user.lives >= user.maxLives || !user.lastHeartLostAt) return user;
+  if (hearts.lives >= hearts.maxLives || !hearts.lastHeartLostAt) return user;
 
-  const lostAt = new Date(user.lastHeartLostAt).getTime();
+  const lostAt = new Date(hearts.lastHeartLostAt).getTime();
   const elapsed = Date.now() - lostAt;
   const regenerated = Math.floor(elapsed / HEART_REGEN_MS);
   if (regenerated <= 0) return user;
 
-  const newLives = Math.min(user.maxLives, user.lives + regenerated);
-  const isFull = newLives >= user.maxLives;
-  return {
-    ...user,
+  const newLives = Math.min(hearts.maxLives, hearts.lives + regenerated);
+  const isFull = newLives >= hearts.maxLives;
+  return setCourseHearts(user, courseId, {
     lives: newLives,
     lastHeartLostAt: isFull ? null : new Date(lostAt + regenerated * HEART_REGEN_MS).toISOString(),
-  };
+  });
 }
 
 // Pura e sem efeitos colaterais — usada pela UI (Header/QuizEngine) pra
 // mostrar "faltam Xh Ymin pro próximo coração" sem precisar ficar
 // dispatchando ações a cada tick; o componente que exibe o contador é quem
 // decide de quanto em quanto tempo re-renderizar.
-export function getHeartRegenInfo(user) {
-  if (!user) return { missing: 0, msUntilNext: 0 };
-  const missing = Math.max(0, user.maxLives - user.lives);
+export function getHeartRegenInfo(user, courseId) {
+  if (!user || !courseId) return { missing: 0, msUntilNext: null };
+  const hearts = getCourseHearts(user, courseId);
+  const missing = Math.max(0, hearts.maxLives - hearts.lives);
   // Sem `lastHeartLostAt` não há relógio rodando pra essa vida faltante
   // (ex.: dado de demonstração antigo) — não dá pra mostrar uma contagem
   // regressiva sem um ponto de partida real.
-  if (missing <= 0 || !user.lastHeartLostAt) return { missing, msUntilNext: null };
-  const elapsed = Date.now() - new Date(user.lastHeartLostAt).getTime();
+  if (missing <= 0 || !hearts.lastHeartLostAt) return { missing, msUntilNext: null };
+  const elapsed = Date.now() - new Date(hearts.lastHeartLostAt).getTime();
   const msUntilNext = Math.max(0, HEART_REGEN_MS - elapsed);
   return { missing, msUntilNext };
 }
@@ -617,6 +642,22 @@ async function loadProgressSafely(userId) {
   }
 }
 
+// Vidas (heartsByCourse) são buscadas à parte de fetchProfile desde que
+// deixaram de ser colunas soltas em public.users (lives/max_lives/
+// last_heart_lost_at) e passaram a ser uma linha por curso em
+// public.user_course_hearts — ver getCourseHearts/applyHeartRegen. Mesma
+// filosofia best-effort de loadProgressSafely: se a rede falhar aqui, o
+// login ainda funciona, só que com vidas cheias por padrão (getCourseHearts
+// devolve um default quando heartsByCourse não tem entrada pro curso) até a
+// próxima vez que a busca der certo.
+async function loadHeartsSafely(userId) {
+  try {
+    return await api.fetchUserCourseHearts(userId);
+  } catch {
+    return {};
+  }
+}
+
 // Modo Supabase: monta o mesmo formato de `modules` que o modo mock sempre
 // teve (cloneModules(), ver mockData.js) a partir do banco — metadado leve
 // de curso (fetchCourses) + lições de cada curso (fetchLessonsForCourse),
@@ -740,7 +781,7 @@ function buildInitialState() {
 }
 
 function startLessonState(state, moduleId, lessonId) {
-  const user = applyHeartRegen(state.user);
+  const user = applyHeartRegen(state.user, moduleId);
   const lesson = findLesson(state.modules, moduleId, lessonId);
   // Modo Supabase: usa o bundle já buscado pro curso (ver startLesson,
   // garante isso ANTES de disparar START_LESSON). Modo mock: cai sempre no
@@ -763,7 +804,7 @@ function startLessonState(state, moduleId, lessonId) {
     wrongCount: 0,
     combo: 0,
     lessonComplete: false,
-    gameOver: user.lives <= 0,
+    gameOver: getCourseHearts(user, moduleId).lives <= 0,
     pacciMood: lesson?.type === LESSON_TYPES.EXAM ? 'hint' : 'neutral',
     accelerationResult: null,
     skippedLessonIds: [],
@@ -840,9 +881,7 @@ function gameReducerCore(state, action) {
         avatarUrl: AVATAR_CHOICES[Math.floor(Math.random() * AVATAR_CHOICES.length)],
         xp: 0,
         level: 1,
-        lives: 5,
-        maxLives: 5,
-        lastHeartLostAt: null,
+        heartsByCourse: {}, // getCourseHearts aplica o default (5/5, cheias) pra qualquer curso ainda sem entrada aqui
         streak: 0,
         lastStudyDate: null,
         streakFreezes: 0,
@@ -1038,7 +1077,7 @@ function gameReducerCore(state, action) {
 
     case 'START_DAILY_REVIEW': {
       if (!state.user) return state;
-      const user = applyHeartRegen(state.user);
+      const user = applyHeartRegen(state.user, MODULE_IDS.REFORMA_TRIBUTARIA);
       const reviewQuestions = getDailyReviewQuestions().map(withShuffledOptions);
       return {
         ...state,
@@ -1056,7 +1095,7 @@ function gameReducerCore(state, action) {
         wrongCount: 0,
         combo: 0,
         lessonComplete: false,
-        gameOver: user.lives <= 0,
+        gameOver: getCourseHearts(user, MODULE_IDS.REFORMA_TRIBUTARIA).lives <= 0,
         pacciMood: 'neutral',
         isDailyReview: true,
         pendingAccelerationTest: false,
@@ -1091,15 +1130,15 @@ function gameReducerCore(state, action) {
       // Master (fundador/QA) nunca perde vida — é a conta de contingência,
       // não pode ficar bloqueada testando o app por falta de coração.
       const livesAreAtStake = state.currentLessonType !== LESSON_TYPES.EXAM && state.user.role !== 'master';
-      const nextLives =
-        isCorrect || !livesAreAtStake ? state.user.lives : Math.max(0, state.user.lives - 1);
-      const lostAHeart = nextLives < state.user.lives;
+      const hearts = getCourseHearts(state.user, state.moduleId);
+      const nextLives = isCorrect || !livesAreAtStake ? hearts.lives : Math.max(0, hearts.lives - 1);
+      const lostAHeart = nextLives < hearts.lives;
 
       // Repare que `gameOver` NÃO é setado aqui mesmo que as vidas zerem: o
       // usuário ainda precisa ver o feedback (resposta certa, explicação,
       // dica do Pacci) da pergunta fatal antes de cair na tela de "sem
       // vidas" — isso só acontece quando ele toca em "Continuar" e o
-      // NEXT_QUESTION detecta `lives <= 0`.
+      // NEXT_QUESTION detecta `lives <= 0` (do CURSO ativo, state.moduleId).
       return {
         ...state,
         isAnswered: true,
@@ -1109,15 +1148,13 @@ function gameReducerCore(state, action) {
         wrongCount: state.wrongCount + (isCorrect ? 0 : 1),
         combo: isCorrect ? state.combo + 1 : 0,
         pacciMood: isCorrect ? 'happy' : 'sad',
-        user: {
-          ...state.user,
-          ...addXp(state.user, xpGain),
+        user: setCourseHearts({ ...state.user, ...addXp(state.user, xpGain) }, state.moduleId, {
           lives: nextLives,
           // Só marca o início da contagem se não houver uma já em andamento
           // (senão, tomar vários erros seguidos ficaria empurrando o
           // relógio pra sempre e o coração nunca recarregaria).
-          lastHeartLostAt: lostAHeart && !state.user.lastHeartLostAt ? new Date().toISOString() : state.user.lastHeartLostAt,
-        },
+          lastHeartLostAt: lostAHeart && !hearts.lastHeartLostAt ? new Date().toISOString() : hearts.lastHeartLostAt,
+        }),
       };
     }
 
@@ -1131,7 +1168,7 @@ function gameReducerCore(state, action) {
       // vidas". Nenhum progresso na trilha é concedido, e o XP ganho
       // nesta tentativa (creditado pergunta a pergunta em CHECK_ANSWER) é
       // devolvido, já que a lição não foi concluída.
-      if (state.user.lives <= 0) {
+      if (getCourseHearts(state.user, state.moduleId).lives <= 0) {
         // Mesmo numa lição não concluída, o dia conta como "estudado" pra
         // ofensiva (e pode bater um marco de 7 dias) — só não há gema de
         // lição nenhuma, já que ela não foi finalizada.
@@ -1413,36 +1450,45 @@ function gameReducerCore(state, action) {
     // voltam com o tempo (HEART_REGEN_MINUTES por coração) ou gastando gemas.
     case 'BUY_HEART_REFILL': {
       if (!state.user) return state;
-      const missing = state.user.maxLives - state.user.lives;
+      const { amount, courseId } = action.payload; // amount: 'one' | 'full'
+      if (!courseId) return state;
+      const hearts = getCourseHearts(state.user, courseId);
+      const missing = hearts.maxLives - hearts.lives;
       if (missing <= 0) return state;
-      const amount = action.payload; // 'one' | 'full'
       const cost = amount === 'full' ? HEART_REFILL_FULL_COST : HEART_REFILL_ONE_COST;
       if (state.user.gems < cost) return state;
-      const newLives = amount === 'full' ? state.user.maxLives : state.user.lives + 1;
-      const isFull = newLives >= state.user.maxLives;
+      const newLives = amount === 'full' ? hearts.maxLives : hearts.lives + 1;
+      const isFull = newLives >= hearts.maxLives;
       return {
         ...state,
-        gameOver: newLives > 0 ? false : state.gameOver,
-        user: {
-          ...state.user,
-          gems: state.user.gems - cost,
+        // Só limpa o "sem vidas" se o curso recarregado for o que está
+        // ativo agora (comprar recarga do curso B não deveria tirar a tela
+        // de game over de uma lição em andamento do curso A).
+        gameOver: courseId === state.moduleId && newLives > 0 ? false : state.gameOver,
+        user: setCourseHearts({ ...state.user, gems: state.user.gems - cost }, courseId, {
           lives: newLives,
-          lastHeartLostAt: isFull ? null : state.user.lastHeartLostAt,
-        },
+          lastHeartLostAt: isFull ? null : hearts.lastHeartLostAt,
+        }),
       };
     }
 
-    // Recomputa vidas regeneradas pelo tempo — chamada tanto por um
-    // intervalo periódico no Provider (mantém Header/tela de game over
-    // atualizados mesmo sem o usuário interagir) quanto sob demanda.
+    // Recomputa vidas regeneradas pelo tempo, pra TODO curso que o usuário já
+    // tenha tocado (não só o ativo agora) — chamada tanto por um intervalo
+    // periódico no Provider (mantém Header/tela de game over atualizados
+    // mesmo sem o usuário interagir) quanto sob demanda. Regenerar todos de
+    // uma vez é o que permite o curso B continuar recarregando vidas em
+    // segundo plano enquanto o usuário treina o curso A.
     case 'APPLY_HEART_REGEN': {
-      if (!state.user) return state;
-      const regenUser = applyHeartRegen(state.user);
-      if (regenUser === state.user) return state;
+      if (!state.user?.heartsByCourse) return state;
+      let nextUser = state.user;
+      for (const courseId of Object.keys(state.user.heartsByCourse)) {
+        nextUser = applyHeartRegen(nextUser, courseId);
+      }
+      if (nextUser === state.user) return state;
       return {
         ...state,
-        gameOver: regenUser.lives > 0 ? false : state.gameOver,
-        user: regenUser,
+        gameOver: state.moduleId && getCourseHearts(nextUser, state.moduleId).lives > 0 ? false : state.gameOver,
+        user: nextUser,
       };
     }
 
@@ -1539,18 +1585,24 @@ export function GameProvider({ children }) {
   // assim que mudam (não só ao concluir a lição) — senão fechar o navegador
   // no meio de uma lição, depois de perder um coração, perderia o
   // `last_heart_lost_at` e a contagem de recarga reiniciaria do zero errado.
-  const lastPersistedHeartsRef = useRef(null);
+  // Como vidas agora são por curso (heartsByCourse), persiste CADA curso que
+  // mudou desde a última vez — inclusive um curso que o usuário não está
+  // jogando agora, mas que regenerou vida em segundo plano via o ticker de
+  // APPLY_HEART_REGEN (ver efeito acima): sem isso, aquela regeneração só
+  // existiria em memória e "sumiria" no próximo login.
+  const lastPersistedHeartsRef = useRef({});
   useEffect(() => {
-    if (!isSupabaseConfigured || !state.user) return;
-    const key = `${state.user.id}:${state.user.lives}:${state.user.lastHeartLostAt}`;
-    if (lastPersistedHeartsRef.current === key) return;
-    lastPersistedHeartsRef.current = key;
-    api
-      .updateProfile(state.user.id, { lives: state.user.lives, lastHeartLostAt: state.user.lastHeartLostAt })
-      .catch(() => {
+    if (!isSupabaseConfigured || !state.user?.id || !state.user.heartsByCourse) return;
+    const userId = state.user.id;
+    for (const [courseId, hearts] of Object.entries(state.user.heartsByCourse)) {
+      const key = `${userId}:${courseId}:${hearts.lives}:${hearts.lastHeartLostAt}`;
+      if (lastPersistedHeartsRef.current[courseId] === key) continue;
+      lastPersistedHeartsRef.current[courseId] = key;
+      api.upsertUserCourseHearts(userId, courseId, { lives: hearts.lives, lastHeartLostAt: hearts.lastHeartLostAt }).catch(() => {
         // Best-effort — mesma lógica do efeito de conclusão de lição abaixo.
       });
-  }, [state.user?.id, state.user?.lives, state.user?.lastHeartLostAt]);
+    }
+  }, [state.user?.id, state.user?.heartsByCourse]);
 
   // Modo Supabase: ao montar, checa se já existe uma sessão válida (o
   // Supabase Auth já persiste isso sozinho em localStorage) e mantém em
@@ -1572,8 +1624,9 @@ export function GameProvider({ children }) {
           }
           const modules = await loadCoursesForUser();
           const progress = await loadProgressSafely(profile.id);
+          const heartsByCourse = await loadHeartsSafely(profile.id);
           if (!active) return;
-          dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
+          dispatch({ type: 'AUTH_SUCCESS', payload: { user: { ...profile, heartsByCourse }, progress, modules } });
         } else {
           dispatch({ type: 'AUTH_SIGNED_OUT' });
         }
@@ -1694,8 +1747,9 @@ export function GameProvider({ children }) {
           streak: state.user.streak,
           streakFreezes: state.user.streakFreezes,
           gems: state.user.gems,
-          lives: state.user.lives,
-          lastHeartLostAt: state.user.lastHeartLostAt,
+          // vidas (lives/lastHeartLostAt) deixaram de ser colunas soltas em
+          // public.users — agora são por curso, persistidas à parte pelo
+          // efeito de heartsByCourse logo acima, não aqui.
           lastStudyDate: state.user.lastStudyDate,
           currentLevelId: state.user.currentLevelId,
           currentLevelSince: state.user.currentLevelSince,
@@ -1797,7 +1851,8 @@ export function GameProvider({ children }) {
       }
       const modules = await loadCoursesForUser();
       const progress = await loadProgressSafely(profile.id);
-      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
+      const heartsByCourse = await loadHeartsSafely(profile.id);
+      dispatch({ type: 'AUTH_SUCCESS', payload: { user: { ...profile, heartsByCourse }, progress, modules } });
     } catch (err) {
       dispatch({ type: 'AUTH_ERROR', payload: err.message || 'Não foi possível entrar.' });
     }
@@ -1851,7 +1906,8 @@ export function GameProvider({ children }) {
       const profile = await api.fetchProfile(authUser.id);
       const modules = await loadCoursesForUser();
       const progress = await loadProgressSafely(profile.id);
-      dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
+      const heartsByCourse = await loadHeartsSafely(profile.id);
+      dispatch({ type: 'AUTH_SUCCESS', payload: { user: { ...profile, heartsByCourse }, progress, modules } });
     } catch (err) {
       dispatch({ type: 'AUTH_ERROR', payload: err.message || 'Não foi possível cadastrar.' });
     }
@@ -1908,7 +1964,8 @@ export function GameProvider({ children }) {
         const profile = await api.fetchProfile(session.user.id);
         const modules = await loadCoursesForUser();
         const progress = await loadProgressSafely(profile.id);
-        dispatch({ type: 'AUTH_SUCCESS', payload: { user: profile, progress, modules } });
+        const heartsByCourse = await loadHeartsSafely(profile.id);
+        dispatch({ type: 'AUTH_SUCCESS', payload: { user: { ...profile, heartsByCourse }, progress, modules } });
       } else {
         dispatch({ type: 'PASSWORD_RESET_COMPLETE' });
       }
@@ -1982,7 +2039,10 @@ export function GameProvider({ children }) {
   const submitAnswer = useCallback(() => dispatch({ type: 'CHECK_ANSWER' }), []);
   const nextQuestion = useCallback(() => dispatch({ type: 'NEXT_QUESTION' }), []);
   const restartLesson = useCallback(() => dispatch({ type: 'RESTART_LESSON' }), []);
-  const buyHeartRefill = useCallback((amount) => dispatch({ type: 'BUY_HEART_REFILL', payload: amount }), []);
+  const buyHeartRefill = useCallback(
+    (amount, courseId) => dispatch({ type: 'BUY_HEART_REFILL', payload: { amount, courseId } }),
+    []
+  );
   const buyStreakFreeze = useCallback(() => dispatch({ type: 'BUY_STREAK_FREEZE' }), []);
   const exitLesson = useCallback(() => dispatch({ type: 'EXIT_LESSON' }), []);
 

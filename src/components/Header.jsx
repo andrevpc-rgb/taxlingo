@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import React, { useEffect, useState } from 'react';
 import { Heart, Flame, Star, Diamond, Snowflake, ShieldCheck, Clock, X, Volume2, VolumeX, Infinity as InfinityIcon } from 'lucide-react';
-import { useGame, getHeartRegenInfo } from '../context/GameContext.jsx';
+import { useGame, getHeartRegenInfo, getCourseHearts } from '../context/GameContext.jsx';
 import { STREAK_FREEZE_COST, MAX_STREAK_FREEZES, HEART_REFILL_ONE_COST, HEART_REFILL_FULL_COST } from '../data/mockData';
 import { isSoundMuted, setSoundMuted } from '../utils/sound';
 import UserProfile from './UserProfile';
@@ -77,7 +77,7 @@ function formatCountdown(ms) {
   return hours > 0 ? `${hours}h ${minutes}min` : `${minutes}min`;
 }
 
-function HeartsPill({ onOpen }) {
+function HeartsPill({ courseId, onOpen }) {
   const { user } = useGame();
   const [, setTick] = useState(0);
 
@@ -90,7 +90,8 @@ function HeartsPill({ onOpen }) {
     return () => clearInterval(interval);
   }, []);
 
-  const { missing, msUntilNext } = getHeartRegenInfo(user);
+  const { lives, maxLives } = getCourseHearts(user, courseId);
+  const { missing, msUntilNext } = getHeartRegenInfo(user, courseId);
   const isMaster = user.role === 'master';
 
   return (
@@ -99,11 +100,11 @@ function HeartsPill({ onOpen }) {
       onClick={onOpen}
       className="flex min-h-[2.75rem] shrink-0 items-center gap-1 rounded-2xl border-2 border-rose-200 bg-rose-50 px-1.5 py-1 font-extrabold text-rose-600 transition-colors hover:border-rose-300 sm:gap-1.5 sm:px-3 sm:py-1.5"
       aria-label="Vidas — toque para recarregar"
-      title={isMaster ? 'Vidas infinitas (conta Master)' : 'Vidas — toque para recarregar'}
+      title={isMaster ? 'Vidas infinitas (conta Master)' : 'Vidas do curso atual — toque para recarregar'}
     >
       <Heart className="h-4 w-4 shrink-0 fill-rose-500 text-rose-500 sm:h-5 sm:w-5" />
       <span className="text-xs tabular-nums sm:text-sm">
-        {isMaster ? <InfinityIcon className="h-3.5 w-3.5" /> : `${user.lives}/${user.maxLives}`}
+        {isMaster ? <InfinityIcon className="h-3.5 w-3.5" /> : `${lives}/${maxLives}`}
       </span>
       {!isMaster && missing > 0 && msUntilNext !== null && (
         <span className="hidden items-center gap-0.5 text-[10px] font-bold text-rose-400 sm:inline-flex">
@@ -115,7 +116,7 @@ function HeartsPill({ onOpen }) {
   );
 }
 
-function HeartRefillModal({ onClose }) {
+function HeartRefillModal({ courseId, onClose }) {
   const { user, buyHeartRefill } = useGame();
   const [, setTick] = useState(0);
 
@@ -124,7 +125,8 @@ function HeartRefillModal({ onClose }) {
     return () => clearInterval(interval);
   }, []);
 
-  const { missing, msUntilNext } = getHeartRegenInfo(user);
+  const { lives, maxLives } = getCourseHearts(user, courseId);
+  const { missing, msUntilNext } = getHeartRegenInfo(user, courseId);
   const isMaster = user.role === 'master';
   const canBuyOne = !isMaster && missing > 0 && user.gems >= HEART_REFILL_ONE_COST;
   const canBuyFull = !isMaster && missing > 0 && user.gems >= HEART_REFILL_FULL_COST;
@@ -143,7 +145,7 @@ function HeartRefillModal({ onClose }) {
 
         <Heart className="mx-auto mb-2 h-10 w-10 fill-rose-500 text-rose-500" />
         <h2 className="text-lg font-extrabold text-slate-800">
-          {isMaster ? 'Vidas infinitas' : `${user.lives}/${user.maxLives} vidas`}
+          {isMaster ? 'Vidas infinitas' : `${lives}/${maxLives} vidas`}
         </h2>
 
         {isMaster ? (
@@ -164,7 +166,7 @@ function HeartRefillModal({ onClose }) {
             <button
               type="button"
               disabled={!canBuyOne}
-              onClick={() => buyHeartRefill('one')}
+              onClick={() => buyHeartRefill('one', courseId)}
               className="w-full rounded-2xl bg-rose-500 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_4px_0_0_#be123c] transition-transform active:translate-y-0.5 active:shadow-none disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
             >
               Recarregar 1 vida — {HEART_REFILL_ONE_COST}💎
@@ -173,7 +175,7 @@ function HeartRefillModal({ onClose }) {
               <button
                 type="button"
                 disabled={!canBuyFull}
-                onClick={() => buyHeartRefill('full')}
+                onClick={() => buyHeartRefill('full', courseId)}
                 className="w-full rounded-2xl border-2 border-rose-200 bg-rose-50 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-rose-600 transition-transform active:translate-y-0.5 disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-400"
               >
                 Recarregar todas — {HEART_REFILL_FULL_COST}💎
@@ -187,7 +189,7 @@ function HeartRefillModal({ onClose }) {
   );
 }
 
-export default function Header() {
+export default function Header({ activeCourseId }) {
   const { user, isManager } = useGame();
   const [showProfile, setShowProfile] = useState(false);
   const [showHeartRefill, setShowHeartRefill] = useState(false);
@@ -227,7 +229,7 @@ export default function Header() {
             colorClass="border-sky-200 bg-sky-50 text-sky-600"
             label="Pontos de XP"
           />
-          <HeartsPill onOpen={() => setShowHeartRefill(true)} />
+          <HeartsPill courseId={activeCourseId} onOpen={() => setShowHeartRefill(true)} />
         </div>
 
         <SoundToggle />
@@ -252,7 +254,7 @@ export default function Header() {
       </div>
 
       {showProfile && <UserProfile onClose={() => setShowProfile(false)} />}
-      {showHeartRefill && <HeartRefillModal onClose={() => setShowHeartRefill(false)} />}
+      {showHeartRefill && <HeartRefillModal courseId={activeCourseId} onClose={() => setShowHeartRefill(false)} />}
     </header>
   );
 }

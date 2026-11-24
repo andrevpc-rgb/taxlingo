@@ -470,9 +470,18 @@ function AppShell() {
 
   const selectedCourse = modules.find((m) => m.id === selectedCourseId) ?? null;
 
+  // Vidas (Header) são por curso agora — não existe mais "o" placar único
+  // pra mostrar. Usa o curso da lição em andamento (quiz), senão o curso
+  // cuja trilha está aberta, senão o curso de "Continuar" (onde o usuário
+  // parou), senão o primeiro curso desbloqueado — sempre um candidato
+  // razoável pra exibir, mesmo na Home/Ranking/Painel do Gestor onde não há
+  // um curso "ativo" de verdade.
+  const activeCourseId =
+    activeLessonCourseId ?? selectedCourseId ?? continueTarget?.moduleId ?? modules.find((m) => !m.locked)?.id ?? null;
+
   return (
     <div className="min-h-screen bg-slate-50">
-      <Header />
+      <Header activeCourseId={activeCourseId} />
       <NotificationModal />
       {showChangelog && <ChangelogModal onDismiss={handleDismissChangelog} />}
 

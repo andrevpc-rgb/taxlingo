@@ -45,9 +45,13 @@ create table if not exists public.users (
   avatar_url text default '🙂',
   xp integer not null default 0,
   level integer not null default 1,
+  -- lives/max_lives/last_heart_lost_at: VESTIGIAIS — vidas eram um placar
+  -- único por conta até virarem por curso (ver public.user_course_hearts,
+  -- seção 4b). Mantidas só por não haver motivo pra apagar dado histórico;
+  -- nada no app lê/escreve estas 3 colunas mais.
   lives integer not null default 5,
   max_lives integer not null default 5,
-  last_heart_lost_at timestamptz, -- início da contagem de recarga (10min) do próximo coração; null = vidas cheias
+  last_heart_lost_at timestamptz,
   streak integer not null default 0,
   streak_freezes integer not null default 0,
   gems integer not null default 1000, -- todo usuário novo já começa com saldo pra recarregar vidas na loja
@@ -289,6 +293,45 @@ comment on table public.user_notifications is 'Avisos pontuais pro colaborador (
 
 create index if not exists user_notifications_user_id_idx on public.user_notifications (user_id);
 create index if not exists user_notifications_unread_idx on public.user_notifications (user_id) where not read;
+
+-- -----------------------------------------------------------------------------
+-- 4e. user_course_hearts — vidas POR CURSO. Substitui users.lives/max_lives/
+-- last_heart_lost_at (agora vestigiais, ver comentário na seção 2): um
+-- placar único de vidas pra conta inteira deixava um usuário sem conseguir
+-- treinar um segundo curso só porque tinha zerado as vidas no primeiro —
+-- bug reportado por usuários reais com dois cursos em andamento ao mesmo
+-- tempo. Cada curso agora tem seu próprio pool de vidas, independente.
+-- -----------------------------------------------------------------------------
+create table if not exists public.user_course_hearts (
+  user_id uuid not null references public.users (id) on delete cascade,
+  course_id text not null references public.courses (id) on delete cascade,
+  lives integer not null default 5,
+  max_lives integer not null default 5,
+  last_heart_lost_at timestamptz, -- início da contagem de recarga (10min) do próximo coração DESTE curso; null = vidas cheias
+  primary key (user_id, course_id)
+);
+
+comment on table public.user_course_hearts is 'Vidas por curso (um pool de 5 por curso, independente entre cursos). Lida/gravada pelo GameContext via fetchUserCourseHearts/upsertUserCourseHearts — nunca pela UPDATE genérica de perfil (updateProfile).';
+
+alter table public.user_course_hearts enable row level security;
+
+drop policy if exists user_course_hearts_self on public.user_course_hearts;
+create policy user_course_hearts_self on public.user_course_hearts for all
+  using (user_id = auth.uid() or public.is_master())
+  with check (user_id = auth.uid() or public.is_master());
+
+-- Migra o estado atual de cada usuário (users.lives/max_lives/
+-- last_heart_lost_at) pra uma linha por curso ATIVO — preserva exatamente
+-- as vidas que cada um tinha no momento da migração, em vez de resetar todo
+-- mundo pra "cheias" (o que seria generoso demais) ou pra zero (o que
+-- puniria quem só não tinha perdido vida ainda). Idempotente (on conflict
+-- do nothing) — rodar de novo não sobrescreve progresso já migrado.
+insert into public.user_course_hearts (user_id, course_id, lives, max_lives, last_heart_lost_at)
+select u.id, c.id, u.lives, u.max_lives, u.last_heart_lost_at
+from public.users u
+cross join public.courses c
+where c.is_active = true
+on conflict (user_id, course_id) do nothing;
 
 create index if not exists user_progress_user_id_idx on public.user_progress (user_id);
 create index if not exists user_progress_lesson_id_idx on public.user_progress (lesson_id);

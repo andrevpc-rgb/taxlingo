@@ -26,14 +26,14 @@ export function mapUserRow(row) {
     avatarUrl: row.avatar_url,
     xp: row.xp,
     level: row.level,
-    lives: row.lives,
-    maxLives: row.max_lives,
+    // Vidas (lives/maxLives/lastHeartLostAt) NÃO vêm mais daqui — são por
+    // curso agora, buscadas à parte via fetchUserCourseHearts e mescladas em
+    // user.heartsByCourse pelo GameContext (ver loadHeartsSafely).
     streak: row.streak,
     streakFreezes: row.streak_freezes,
     gems: row.gems,
     weeklyXp: row.weekly_xp,
     weekStart: row.week_start,
-    lastHeartLostAt: row.last_heart_lost_at,
     lastStudyDate: row.last_study_date,
     currentLevelId: row.current_level_id,
     currentLevelSince: row.current_level_since,
@@ -56,14 +56,11 @@ function toUserPatch(patch) {
     avatarUrl: 'avatar_url',
     xp: 'xp',
     level: 'level',
-    lives: 'lives',
-    maxLives: 'max_lives',
     streak: 'streak',
     streakFreezes: 'streak_freezes',
     gems: 'gems',
     weeklyXp: 'weekly_xp',
     weekStart: 'week_start',
-    lastHeartLostAt: 'last_heart_lost_at',
     lastStudyDate: 'last_study_date',
     currentLevelId: 'current_level_id',
     currentLevelSince: 'current_level_since',
@@ -382,6 +379,35 @@ export async function fetchRandomQuestions(count, courseIds) {
   if (error) throw error;
   const shuffled = [...data].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count).map(mapQuestionRow);
+}
+
+// ---------------------------------------------------------------------------
+// Vidas por curso (public.user_course_hearts) — substituiu as colunas soltas
+// lives/max_lives/last_heart_lost_at em public.users: um placar único por
+// conta deixava um usuário sem conseguir treinar um segundo curso só porque
+// tinha zerado as vidas no primeiro. Agora cada curso tem seu próprio pool.
+// ---------------------------------------------------------------------------
+export async function fetchUserCourseHearts(userId) {
+  const { data, error } = await supabase
+    .from('user_course_hearts')
+    .select('course_id, lives, max_lives, last_heart_lost_at')
+    .eq('user_id', userId);
+  if (error) throw error;
+  const map = {};
+  for (const row of data) {
+    map[row.course_id] = { lives: row.lives, maxLives: row.max_lives, lastHeartLostAt: row.last_heart_lost_at };
+  }
+  return map;
+}
+
+export async function upsertUserCourseHearts(userId, courseId, { lives, lastHeartLostAt }) {
+  const { error } = await supabase
+    .from('user_course_hearts')
+    .upsert(
+      { user_id: userId, course_id: courseId, lives, last_heart_lost_at: lastHeartLostAt },
+      { onConflict: 'user_id,course_id' }
+    );
+  if (error) throw error;
 }
 
 // ---------------------------------------------------------------------------

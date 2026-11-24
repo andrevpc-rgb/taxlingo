@@ -293,7 +293,7 @@ function formatCountdown(ms) {
 // Opções de recarga com gemas — usadas na tela de "sem vidas" (a recarga
 // instantânea e grátis foi removida; agora só volta com o tempo ou gemas).
 function HeartRefillOptions() {
-  const { user, buyHeartRefill } = useGame();
+  const { user, buyHeartRefill, moduleId } = useGame();
   const [, setTick] = useState(0);
 
   useEffect(() => {
@@ -301,7 +301,7 @@ function HeartRefillOptions() {
     return () => clearInterval(interval);
   }, []);
 
-  const { missing, msUntilNext } = getHeartRegenInfo(user);
+  const { missing, msUntilNext } = getHeartRegenInfo(user, moduleId);
   const canBuyOne = missing > 0 && user.gems >= HEART_REFILL_ONE_COST;
   const canBuyFull = missing > 0 && user.gems >= HEART_REFILL_FULL_COST;
 
@@ -320,7 +320,7 @@ function HeartRefillOptions() {
       <button
         type="button"
         disabled={!canBuyOne}
-        onClick={() => buyHeartRefill('one')}
+        onClick={() => buyHeartRefill('one', moduleId)}
         className="w-full rounded-2xl bg-rose-500 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-white shadow-[0_4px_0_0_#be123c] transition-transform active:translate-y-0.5 active:shadow-none disabled:cursor-not-allowed disabled:bg-slate-200 disabled:text-slate-400 disabled:shadow-none"
       >
         Recarregar 1 vida — {HEART_REFILL_ONE_COST}💎
@@ -329,7 +329,7 @@ function HeartRefillOptions() {
         <button
           type="button"
           disabled={!canBuyFull}
-          onClick={() => buyHeartRefill('full')}
+          onClick={() => buyHeartRefill('full', moduleId)}
           className="w-full rounded-2xl border-2 border-rose-200 bg-rose-50 px-4 py-3 text-sm font-extrabold uppercase tracking-wide text-rose-600 transition-transform active:translate-y-0.5 disabled:cursor-not-allowed disabled:border-slate-200 disabled:bg-slate-50 disabled:text-slate-400"
         >
           Recarregar todas — {HEART_REFILL_FULL_COST}💎
