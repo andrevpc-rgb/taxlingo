@@ -338,20 +338,40 @@ export async function fetchQuestionsForLesson(lessonId) {
 }
 
 // Bundle pesado: todas as questões de um curso inteiro (~1,2MB pra Reforma
-// Tributária), agrupadas por lesson_id no formato que startLessonState já
-// espera (questionBank[courseId][lessonId]). 1 query só, via o course_id
-// denormalizado em `questions` — chamado só quando o usuário abre um curso
-// de verdade, nunca no login.
+// Tributária, 1275 linhas sozinha), agrupadas por lesson_id no formato que
+// startLessonState já espera (questionBank[courseId][lessonId]). Chamado só
+// quando o usuário abre um curso de verdade, nunca no login.
+//
+// Paginado em blocos de 1000 via .range() — um .select('*') sem range()
+// fica sujeito ao limite padrão de linhas por requisição do PostgREST
+// (db-max-rows do projeto, comumente 1000), que corta o resultado em
+// silêncio, sem erro nenhum: a query simplesmente devolve menos linhas do
+// que existem. Com um curso já passando de 1000 questões (Reforma
+// Tributária sozinha), isso fazia lições inteiras "sumirem" do bundle
+// (ver bug relatado: "Nenhuma questão disponível" numa lição que o banco
+// comprovadamente tinha questão cadastrada). O laço continua pedindo o
+// próximo bloco a partir de quantas linhas já foram acumuladas — não do
+// tamanho fixo pedido — e só para quando um bloco volta vazio, então
+// funciona corretamente mesmo que o limite real do projeto seja menor que
+// os 1000 por página que pedimos aqui.
 export async function fetchCourseContentBundle(courseId) {
-  const { data, error } = await supabase
-    .from('questions')
-    .select('*')
-    .eq('course_id', courseId)
-    .order('lesson_id')
-    .order('order_index');
-  if (error) throw error;
+  const PAGE_SIZE = 1000;
+  let rows = [];
+  for (;;) {
+    const from = rows.length;
+    const { data, error } = await supabase
+      .from('questions')
+      .select('*')
+      .eq('course_id', courseId)
+      .order('lesson_id')
+      .order('order_index')
+      .range(from, from + PAGE_SIZE - 1);
+    if (error) throw error;
+    if (!data || data.length === 0) break;
+    rows = rows.concat(data);
+  }
   const questionBank = {};
-  for (const row of data) {
+  for (const row of rows) {
     (questionBank[row.lesson_id] ??= []).push(mapQuestionRow(row));
   }
   return questionBank;
